@@ -103,11 +103,4 @@ This library is derived from immutable source documents and implementation exper
 3. All identifying information is removed (anonymized)
 4. Patterns are reusable and applicable across different implementations
 
-## License
-
-[Add your license information here]
-
-## Support
-
-For questions or issues related to this knowledge library, please [add your support channel information here].
 
