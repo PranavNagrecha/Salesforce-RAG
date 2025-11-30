@@ -25,13 +25,13 @@
       "file": "event-driven-architecture.md",
       "path": "rag/architecture/event-driven-architecture.md",
       "whenToRetrieve": [
-        "Questions about event-driven integration",
-        "Platform Events implementation",
-        "Asynchronous processing patterns",
-        "Event bus patterns",
-        "Decoupling Salesforce from external systems"
+        "How to implement Platform Events for asynchronous integration",
+        "Designing event-driven architecture to decouple systems",
+        "Publishing events from Flows or Apex",
+        "Integrating with external event buses (e.g., AWS EventBridge)",
+        "Designing event payloads and handling event errors"
       ],
-      "summary": "Comprehensive guide to event-driven architecture using Platform Events. Covers event publication patterns, external event bus integration (EventBridge reference), payload design, error handling, and best practices. Includes when to use events vs. APIs vs. ETL.",
+      "summary": "Guide to implementing event-driven architecture with Platform Events. Teaches how to publish events from Flows and Apex, design self-contained event payloads, integrate with external event buses, consume events internally, and handle errors. Includes decision framework for when to use events vs. APIs vs. ETL.",
       "keyTopics": [
         "Platform Events publication from Flows and Apex",
         "External event bus patterns (EventBridge)",
@@ -46,12 +46,12 @@
       "file": "portal-architecture.md",
       "path": "rag/architecture/portal-architecture.md",
       "whenToRetrieve": [
-        "Questions about Experience Cloud portal architecture",
-        "Multi-tenant portal implementations",
-        "Portal user experience design",
-        "Identity-aware portal routing"
+        "Designing Experience Cloud portals for multiple user communities",
+        "Supporting different user types (students, partners, citizens) in one portal",
+        "Implementing identity-aware routing and behavior",
+        "Designing portal security and sharing models"
       ],
-      "summary": "Experience Cloud portal architecture patterns for supporting multiple user types (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns.",
+      "summary": "Architecture patterns for Experience Cloud portals that support multiple user communities (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns. Covers identity-aware routing, sharing models, and portal design patterns.",
       "keyTopics": [
         "Student/applicant portal patterns",
         "External partner/provider portal patterns",
@@ -66,11 +66,11 @@
       "file": "etl-vs-api-vs-events.md",
       "path": "rag/integrations/etl-vs-api-vs-events.md",
       "whenToRetrieve": [
-        "Choosing between ETL, API, or Events integration patterns",
-        "Understanding tradeoffs between integration approaches",
-        "Decision framework for integration pattern selection"
+        "Deciding whether to use ETL, API, or Events for an integration",
+        "Understanding tradeoffs between batch, synchronous, and asynchronous patterns",
+        "Selecting the right integration pattern for a use case"
       ],
-      "summary": "Decision framework for selecting integration patterns. Covers when to use ETL (batch), API (synchronous), or Events (asynchronous), with implementation patterns, best practices, and tradeoffs for each approach.",
+      "summary": "Decision framework for choosing integration patterns. Explains when to use ETL (high-volume batch), API (real-time request/response), or Events (asynchronous publish-subscribe), with implementation patterns, best practices, and tradeoffs for each approach.",
       "keyTopics": [
         "ETL pattern for high-volume batch synchronization",
         "API pattern for real-time request/response",
@@ -85,12 +85,12 @@
       "file": "integration-platform-patterns.md",
       "path": "rag/integrations/integration-platform-patterns.md",
       "whenToRetrieve": [
-        "Questions about MuleSoft or Dell Boomi integration platforms",
-        "Security boundaries for integrations",
-        "Transformation layers",
-        "High-volume ETL operations"
+        "Implementing integrations with MuleSoft or Dell Boomi",
+        "Using integration platforms as security boundaries",
+        "Designing transformation layers for data mapping",
+        "Handling high-volume ETL operations with integration platforms"
       ],
-      "summary": "Patterns for using integration platforms (MuleSoft and Dell Boomi). Covers MuleSoft as security boundary and transformation layer, Boomi for high-volume ETL, file-based staging, dynamic SQL batching, and best practices for both platforms.",
+      "summary": "Patterns for implementing integrations using MuleSoft and Dell Boomi platforms. Covers using MuleSoft as a security boundary (VPN, IP whitelisting) and transformation layer (DataWeave), using Boomi for high-volume batch processing, file-based staging patterns, and best practices for both platforms.",
       "keyTopics": [
         "MuleSoft as security boundary (VPN, IP whitelisting)",
         "MuleSoft transformation layer (DataWeave)",
@@ -105,12 +105,12 @@
       "file": "sis-sync-patterns.md",
       "path": "rag/integrations/sis-sync-patterns.md",
       "whenToRetrieve": [
-        "Questions about SIS synchronization",
-        "High-volume batch integration patterns",
-        "File-based staging for large data sets",
-        "Student data synchronization"
+        "Synchronizing large volumes of data from Student Information Systems (SIS)",
+        "Implementing high-volume batch integrations (hundreds of thousands of records)",
+        "Using file-based staging for very large data sets",
+        "Designing idempotent batch synchronization patterns"
       ],
-      "summary": "High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS). Covers file-based staging, dynamic SQL batching, and idempotent upserts.",
+      "summary": "High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems. Teaches file-based staging for large ID lists, dynamic SQL IN-clause batching, idempotent upserts using external IDs, integration job tracking, and error handling with retry logic.",
       "keyTopics": [
         "File-based staging for large ID lists",
         "Dynamic SQL IN-clause batching",
@@ -125,12 +125,12 @@
       "file": "multi-tenant-identity-architecture.md",
       "path": "rag/identity-sso/multi-tenant-identity-architecture.md",
       "whenToRetrieve": [
-        "Questions about multi-tenant identity",
-        "Multiple identity providers (OIDC, SAML, organization tenant)",
-        "Login handlers",
-        "Supporting different user types in a single org"
+        "Supporting multiple identity providers (OIDC, SAML, organization tenant) in one org",
+        "Implementing login handlers to route users by identity type",
+        "Designing multi-tenant identity for different user communities",
+        "Separating user types using Record Types and sharing models"
       ],
-      "summary": "Comprehensive guide to multi-tenant identity architecture supporting multiple user communities (citizens, external partner organizations, internal staff) with different identity providers. Covers OIDC, SAML, organization tenant identity, login handler patterns, Record Type-based separation, and sharing models.",
+      "summary": "Guide to multi-tenant identity architecture supporting multiple user communities (citizens, external partner organizations, internal staff) with different identity providers. Covers implementing OIDC for external users, SAML for internal staff, organization tenant identity for partners, login handler patterns, Record Type-based separation, and sharing models.",
       "keyTopics": [
         "OIDC for external users (citizens/clients)",
         "SAML for internal staff",
@@ -146,13 +146,12 @@
       "file": "external-ids-and-integration-keys.md",
       "path": "rag/data-modeling/external-ids-and-integration-keys.md",
       "whenToRetrieve": [
-        "Questions about external IDs",
-        "Integration keys",
-        "Composite external IDs",
-        "Idempotent upserts",
-        "Integration job tracking"
+        "Designing external ID fields for stable record mapping",
+        "Creating composite external IDs for multi-column keys",
+        "Implementing idempotent upsert operations",
+        "Tracking integration job status and timestamps"
       ],
-      "summary": "Comprehensive guide to external ID strategies for stable record mapping between Salesforce and external systems. Covers external ID design principles, composite external IDs, integration job tracking fields, idempotent upsert patterns, and best practices.",
+      "summary": "Guide to external ID strategies for stable record mapping between Salesforce and external systems. Covers external ID design principles (stable, unique, mirror external keys), composite external IDs for multi-column keys, integration job tracking fields (Last_Sync_Timestamp, Last_Sync_Status), idempotent upsert patterns, and managing external IDs across multiple systems.",
       "keyTopics": [
         "External ID design principles (stable, unique, mirror external keys)",
         "Composite external IDs for multi-column keys",
@@ -167,12 +166,12 @@
       "file": "student-lifecycle-data-model.md",
       "path": "rag/data-modeling/student-lifecycle-data-model.md",
       "whenToRetrieve": [
-        "Questions about Education Cloud data modeling",
-        "Student and applicant data models",
-        "Program enrollment modeling",
-        "SIS integration data models"
+        "Modeling student and applicant data in Education Cloud",
+        "Designing Program Enrollment and Course Enrollment objects",
+        "Integrating Education Cloud with Student Information Systems (SIS)",
+        "Understanding Education Data Architecture (EDA) data model"
       ],
-      "summary": "Salesforce Education Cloud (EDA) data model supporting higher education institutions. Covers Contact as core student record, Program Enrollment objects, Application objects, and SIS integration patterns.",
+      "summary": "Salesforce Education Cloud (EDA) data model patterns for higher education institutions. Covers using Contact as the core student/applicant record, Program Enrollment and Course Enrollment object design, Application object patterns, SIS integration data model, and derived fields from SIS data.",
       "keyTopics": [
         "Contact as core student/applicant record",
         "Program Enrollment and Course Enrollment objects",
@@ -187,12 +186,12 @@
       "file": "case-management-data-model.md",
       "path": "rag/data-modeling/case-management-data-model.md",
       "whenToRetrieve": [
-        "Questions about public sector case management",
-        "Multi-tenant case data models",
-        "Notice and transaction objects",
-        "Client-external partner relationship modeling"
+        "Designing case management data models for public sector",
+        "Modeling multi-tenant case data in a single org",
+        "Designing Notice and Transaction objects",
+        "Modeling relationships between clients and external partner organizations"
       ],
-      "summary": "Comprehensive data model for public sector case management, supporting multi-agency public benefits and services portals. Covers clients, external partner organizations, staff, cases, notices, and transactions within a single Salesforce org.",
+      "summary": "Data model patterns for public sector case management supporting multi-agency public benefits and services portals. Covers Client Accounts/Contacts modeling, External Partner (Provider) Accounts, case management model, Notice and Transaction objects, and multi-tenant data isolation patterns.",
       "keyTopics": [
         "Client Accounts/Contacts modeling",
         "External Partner (Provider) Accounts",
@@ -207,11 +206,12 @@
       "file": "permission-set-architecture.md",
       "path": "rag/security/permission-set-architecture.md",
       "whenToRetrieve": [
-        "Questions about permission set-driven security",
-        "Transitioning from profile-centric to permission set-based access control",
-        "Managing permissions at scale"
+        "Implementing permission set-driven security architecture",
+        "Migrating from profile-centric to permission set-based access control",
+        "Managing permissions at scale using Permission Set Groups",
+        "Designing security models for community users"
       ],
-      "summary": "Guide to permission set-driven security architecture. Covers profile structure (minimal UI configuration), permission set structure (comprehensive access control), permission set groups, migration strategy, and best practices for managing permissions at scale.",
+      "summary": "Guide to permission set-driven security architecture. Teaches using Profiles for UI configuration only, Permission Sets for comprehensive access control, Permission Set Groups for role-based assignment, migration strategy from profile-centric model, and best practices for managing permissions at scale. Includes restrictions for community users.",
       "keyTopics": [
         "Profiles = UI configuration only",
         "Permission Sets = Access control",
@@ -226,13 +226,12 @@
       "file": "error-handling-and-logging.md",
       "path": "rag/development/error-handling-and-logging.md",
       "whenToRetrieve": [
-        "Questions about error handling",
-        "Logging frameworks",
-        "Compliance logging",
-        "Troubleshooting",
-        "Audit trails"
+        "Implementing error handling and logging frameworks",
+        "Creating structured logging for compliance and audit trails",
+        "Integrating with external logging platforms (OpenSearch, Splunk)",
+        "Handling logging failures with platform event fallbacks"
       ],
-      "summary": "Comprehensive error handling and logging framework using custom LOG_LogMessage__c object. Covers logging utility classes, platform event fallbacks, structured logging, integration with external logging platforms, and compliance requirements.",
+      "summary": "Error handling and logging framework using custom LOG_LogMessage__c object. Covers implementing logging utility classes, platform event fallback patterns for DML failures, structured logging format, integration with centralized logging platforms (OpenSearch, Splunk), and compliance/audit trail requirements.",
       "keyTopics": [
         "Custom logging object (LOG_LogMessage__c)",
         "LOG_LogMessageUtility class",
@@ -248,13 +247,13 @@
       "file": "apex-patterns.md",
       "path": "rag/development/apex-patterns.md",
       "whenToRetrieve": [
-        "Questions about Apex design patterns",
-        "When to choose Apex over Flow",
-        "Apex class layering",
-        "SOQL optimization",
-        "Apex testing strategies"
+        "Deciding when to use Apex vs. Flow",
+        "Implementing Apex class layering (Service, Domain, Selector, Integration)",
+        "Optimizing SOQL queries and managing governor limits",
+        "Designing asynchronous Apex (Queueable, Batchable, Scheduled)",
+        "Integrating Apex with Lightning Web Components"
       ],
-      "summary": "Apex design patterns and best practices. Covers when to choose Apex, class layering (Service, Domain, Selector, Integration), SOQL design, asynchronous patterns, Apex+LWC integration, error handling, and testing strategies.",
+      "summary": "Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration), SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies.",
       "keyTopics": [
         "When to choose Apex over Flow",
         "Apex class layering (Service, Domain, Selector, Integration)",
@@ -270,13 +269,13 @@
       "file": "flow-patterns.md",
       "path": "rag/development/flow-patterns.md",
       "whenToRetrieve": [
-        "Questions about Flow design",
-        "Record-triggered Flow patterns",
-        "Screen Flow design",
-        "Flow + Apex integration",
-        "Flow performance optimization"
+        "Selecting the right Flow type for automation",
+        "Designing Record-Triggered Flows with proper structure",
+        "Building Screen Flows for user interactions",
+        "Integrating Flows with Apex for complex logic",
+        "Optimizing Flow performance and handling errors"
       ],
-      "summary": "Flow design and orchestration patterns. Covers Flow type selection, Record-Triggered Flow structure, Screen Flow design, Flow+Apex integration, naming conventions, error handling, and performance optimization.",
+      "summary": "Flow design and orchestration patterns. Covers Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched), Record-Triggered Flow structure patterns, Screen Flow design patterns, Flow+Apex integration patterns, naming conventions, error handling, and performance optimization.",
       "keyTopics": [
         "Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched)",
         "Record-Triggered Flow structure patterns",
@@ -292,13 +291,13 @@
       "file": "lwc-patterns.md",
       "path": "rag/development/lwc-patterns.md",
       "whenToRetrieve": [
-        "Questions about Lightning Web Component patterns",
-        "Console-style LWCs",
-        "Program selection components",
-        "Fraud/risk scoring components",
-        "LWC performance optimization"
+        "Building console-style Lightning Web Components",
+        "Implementing complex business logic in LWCs",
+        "Designing service-layer patterns for LWCs",
+        "Creating config-driven UI components",
+        "Optimizing LWC performance and accessibility"
       ],
-      "summary": "Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWCs, fraud/risk scoring components, program-selection components, service-layer patterns, config-driven UI, and performance optimization.",
+      "summary": "Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations.",
       "keyTopics": [
         "Console-style LWC patterns",
         "Fraud/risk scoring LWC implementation",
@@ -314,13 +313,13 @@
       "file": "omnistudio-patterns.md",
       "path": "rag/development/omnistudio-patterns.md",
       "whenToRetrieve": [
-        "Questions about OmniStudio",
-        "OmniScript design patterns",
-        "FlexCard patterns",
-        "Grant management workflows",
-        "OmniStudio performance optimization"
+        "Designing OmniScripts for guided workflows",
+        "Creating FlexCards for reusable UI components",
+        "Implementing grant management workflows with OmniStudio",
+        "Integrating OmniStudio with Salesforce data model",
+        "Optimizing OmniStudio performance and error handling"
       ],
-      "summary": "OmniStudio (OmniScripts and FlexCards) patterns for guided workflows and reusable UI components. Covers OmniScript design, FlexCard design, grant management workflows, integration patterns, and performance optimization.",
+      "summary": "OmniStudio (OmniScripts and FlexCards) patterns for guided workflows and reusable UI components. Covers OmniScript design patterns for guided processes, FlexCard design for reusable UI, grant management workflow patterns, integration with Salesforce data model, and performance optimization with error handling.",
       "keyTopics": [
         "OmniScripts for guided processes",
         "FlexCards for reusable UI components",
@@ -335,13 +334,13 @@
       "file": "integration-debugging.md",
       "path": "rag/troubleshooting/integration-debugging.md",
       "whenToRetrieve": [
-        "Questions about integration troubleshooting",
-        "SOQL debugging patterns",
-        "Root cause analysis",
-        "Integration error analysis",
-        "Data quality debugging"
+        "Troubleshooting integration failures and errors",
+        "Using SOQL debugging patterns to investigate issues",
+        "Performing root cause analysis for data synchronization problems",
+        "Querying history objects to track data changes",
+        "Analyzing integration errors and data quality issues"
       ],
-      "summary": "Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues. Covers SOQL debugging, history object queries, error investigation, and metadata analysis.",
+      "summary": "Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues. Covers SOQL debugging patterns, history object queries for change tracking, root cause analysis techniques, integration error analysis, and data quality debugging methods.",
       "keyTopics": [
         "SOQL debugging patterns",
         "History object queries for change tracking",
@@ -356,13 +355,13 @@
       "file": "data-reconciliation.md",
       "path": "rag/troubleshooting/data-reconciliation.md",
       "whenToRetrieve": [
-        "Questions about data reconciliation",
-        "External ID-based reconciliation",
-        "Field-level reconciliation",
-        "Discrepancy identification",
-        "Reconciliation reporting"
+        "Reconciling data between Salesforce and external systems",
+        "Using external IDs to identify and match records",
+        "Performing field-level reconciliation to find discrepancies",
+        "Building reconciliation reporting and alerting",
+        "Ensuring data consistency across systems"
       ],
-      "summary": "Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency. Covers external ID-based reconciliation, integration job tracking, and reconciliation workflows.",
+      "summary": "Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency. Covers external ID-based reconciliation, integration job tracking reconciliation, field-level reconciliation, discrepancy identification, and reconciliation reporting with alerting.",
       "keyTopics": [
         "External ID-based reconciliation",
         "Integration job tracking reconciliation",
@@ -377,13 +376,13 @@
       "file": "delivery-framework.md",
       "path": "rag/project-methods/delivery-framework.md",
       "whenToRetrieve": [
-        "Questions about sprint-based delivery",
-        "Stakeholder coordination",
-        "Quality standards",
-        "Change management",
-        "Project delivery methodology"
+        "Managing complex multi-stakeholder Salesforce projects",
+        "Implementing sprint-based delivery structure",
+        "Coordinating stakeholders and testing windows",
+        "Establishing quality standards and change management",
+        "Planning project delivery methodology"
       ],
-      "summary": "Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Covers sprint structure, stakeholder coordination, testing window coordination, change management, and comprehensive quality standards.",
+      "summary": "Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Covers sprint structure, stakeholder coordination practices, testing window coordination, change management and documentation alignment, and comprehensive quality standards.",
       "keyTopics": [
         "Sprint-based delivery structure",
         "Stakeholder coordination practices",
@@ -398,13 +397,13 @@
       "file": "testing-strategy.md",
       "path": "rag/project-methods/testing-strategy.md",
       "whenToRetrieve": [
-        "Questions about testing strategies",
-        "Integration testing",
-        "Data quality testing",
-        "User migration testing",
-        "User acceptance testing"
+        "Planning comprehensive testing strategies for Salesforce projects",
+        "Designing integration testing (connectivity, transformation, error handling)",
+        "Implementing data quality testing (matching, deduplication, error capture)",
+        "Testing user migration and login handlers",
+        "Conducting user acceptance testing (UAT)"
       ],
-      "summary": "Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and user acceptance testing. Validates Salesforce configurations, integrations, and portal functionality across multiple environments.",
+      "summary": "Comprehensive testing strategies for Salesforce implementations. Covers integration testing (connectivity, data transformation, error handling), data quality testing (matching, deduplication, error capture), user migration and login handler testing, user acceptance testing (UAT), and test environment management.",
       "keyTopics": [
         "Integration testing (connectivity, data transformation, error handling)",
         "Data quality testing (matching, deduplication, error capture)",
@@ -419,13 +418,13 @@
       "file": "cross-cutting-patterns.md",
       "path": "rag/patterns/cross-cutting-patterns.md",
       "whenToRetrieve": [
-        "Questions about reusable patterns across domains",
-        "Governor limit management",
-        "Bulkification patterns",
-        "Cross-cutting design patterns",
-        "Patterns that span multiple domains"
+        "Finding reusable patterns that apply across multiple domains",
+        "Managing governor limits across Apex, Flow, and integrations",
+        "Implementing bulkification patterns",
+        "Applying cross-cutting design patterns",
+        "Understanding patterns that span architecture, development, and integration"
       ],
-      "summary": "Summary of cross-cutting patterns that appear across multiple domains. Covers governor limit management, bulkification, external ID patterns, error handling, data quality, security patterns, integration pattern selection, portal design, and testing patterns. Links to detailed domain-specific documentation.",
+      "summary": "Summary of cross-cutting patterns that appear across multiple domains. Covers governor limit management patterns, bulkification across Apex/Flow/integrations, external ID and integration key patterns, error handling and logging patterns, data quality and deduplication patterns, security and sharing patterns, integration pattern selection framework, portal design patterns, and testing/quality patterns. Links to detailed domain-specific documentation.",
       "keyTopics": [
         "Governor limit management patterns",
         "Bulkification across Apex, Flow, and integrations",
@@ -444,12 +443,12 @@
       "file": "core-terminology.md",
       "path": "rag/glossary/core-terminology.md",
       "whenToRetrieve": [
-        "Questions about terminology definitions",
-        "Clarifying what a term means",
-        "Understanding acronyms and abbreviations",
-        "Core concepts and definitions"
+        "Looking up definitions of Salesforce and integration terminology",
+        "Understanding acronyms and abbreviations (ETL, SIS, OIDC, SAML, LWC, etc.)",
+        "Clarifying core concepts used in the knowledge library",
+        "Finding domain-specific terminology definitions"
       ],
-      "summary": "Core terminology and definitions used throughout the RAG knowledge library. Covers integration terms (ETL, API, Platform Events, External ID), identity terms (OIDC, SAML, Login Handler), data model terms (SIS, EDA, Record Type), security terms (Permission Set, Sharing Set), platform terms (Experience Cloud, GovCloud), development terms (LWC, OmniStudio, Flow, Apex), and project method terms.",
+      "summary": "Core terminology and definitions used throughout the RAG knowledge library. Covers integration terms (ETL, API, Platform Events, External ID), identity terms (OIDC, SAML, Login Handler, Organization Tenant Identity), data model terms (SIS, EDA, Record Type), security terms (Permission Set, Permission Set Group, Sharing Set), platform terms (Experience Cloud, GovCloud), development terms (LWC, OmniStudio, Flow, Apex), integration platform terms (MuleSoft, Dell Boomi), data quality terms (Idempotent Operation, Reconciliation), and project method terms (Sprint-Based Delivery, UAT).",
       "keyTopics": [
         "Integration terminology (ETL, API, Platform Events, External ID)",
         "Identity and SSO terminology (OIDC, SAML, Organization Tenant Identity)",
