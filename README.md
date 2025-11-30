@@ -55,8 +55,8 @@ rag/
 
 See the [`examples/`](examples/) directory for detailed usage examples:
 
-- **Cursor IDE**: How to use this library with Cursor's RAG features
-- **Generic RAG**: How to integrate with other RAG frameworks (LangChain, LlamaIndex, etc.)
+- **[Cursor IDE Usage](examples/cursor-usage.md)**: Step-by-step guide for using this library with Cursor's RAG features, including prompt patterns and workflows
+- **[Generic RAG Integration](examples/generic-rag-usage.md)**: Integration examples for LangChain, LlamaIndex, and other RAG frameworks with complete code samples
 
 ## Content Characteristics
 

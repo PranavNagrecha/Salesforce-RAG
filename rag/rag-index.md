@@ -8,7 +8,7 @@ This RAG (Retrieval-Augmented Generation) knowledge library contains structured 
 
 - **LLMs or tools** can use this file to decide which `rag/**` docs to retrieve for a given question.
 - **Humans** can skim domains to understand what knowledge is available.
-- **See the README** for details on using this repository with Cursor or other RAG frameworks.
+- **See the README** and `examples/` folder for details on using this repository with Cursor and other RAG frameworks.
 
 ## Directory Structure
 
@@ -30,6 +30,9 @@ rag/
 ## Architecture Patterns
 
 Architecture patterns for designing system structure, integration patterns, multi-tenant solutions, and portal architecture.
+
+- [event-driven-architecture.md](rag/architecture/event-driven-architecture.md) — Guide to implementing event-driven architecture with Platform Events, including event publication, payload design, and integration with external event buses
+- [portal-architecture.md](rag/architecture/portal-architecture.md) — Experience Cloud portal architecture patterns for multiple user communities with different identity providers and security requirements
 
 ### event-driven-architecture.md
 
@@ -60,6 +63,10 @@ Architecture patterns for designing system structure, integration patterns, mult
 ## Integration Patterns
 
 Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, and integration platforms like MuleSoft and Dell Boomi.
+
+- [etl-vs-api-vs-events.md](rag/integrations/etl-vs-api-vs-events.md) — Decision framework for choosing between ETL (batch), API (synchronous), or Events (asynchronous) integration patterns
+- [integration-platform-patterns.md](rag/integrations/integration-platform-patterns.md) — Patterns for implementing integrations using MuleSoft and Dell Boomi platforms as security boundaries and transformation layers
+- [sis-sync-patterns.md](rag/integrations/sis-sync-patterns.md) — High-volume batch synchronization patterns for integrating with Student Information Systems using file-based staging and idempotent upserts
 
 ### etl-vs-api-vs-events.md
 
@@ -104,6 +111,8 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 
 Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.
 
+- [multi-tenant-identity-architecture.md](rag/identity-sso/multi-tenant-identity-architecture.md) — Guide to multi-tenant identity architecture supporting multiple user communities with different identity providers (OIDC, SAML, organization tenant)
+
 ### multi-tenant-identity-architecture.md
 
 **When to Retrieve**: Supporting multiple identity providers (OIDC, SAML, organization tenant) in one org, implementing login handlers to route users by identity type, designing multi-tenant identity for different user communities, or separating user types using Record Types and sharing models.
@@ -121,6 +130,10 @@ Identity and SSO patterns for implementing SSO, multi-identity provider architec
 ## Data Modeling
 
 Data modeling patterns for designing external IDs, integration keys, student lifecycle models, and case management models.
+
+- [external-ids-and-integration-keys.md](rag/data-modeling/external-ids-and-integration-keys.md) — Guide to external ID strategies for stable record mapping, composite external IDs, and integration job tracking
+- [student-lifecycle-data-model.md](rag/data-modeling/student-lifecycle-data-model.md) — Salesforce Education Cloud (EDA) data model patterns for higher education institutions
+- [case-management-data-model.md](rag/data-modeling/case-management-data-model.md) — Data model patterns for public sector case management supporting multi-agency portals
 
 ### external-ids-and-integration-keys.md
 
@@ -165,6 +178,8 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 
 Security and access control patterns for implementing permission set-driven security and managing access control.
 
+- [permission-set-architecture.md](rag/security/permission-set-architecture.md) — Guide to permission set-driven security architecture with Profiles for UI configuration and Permission Sets for access control
+
 ### permission-set-architecture.md
 
 **When to Retrieve**: Implementing permission set-driven security architecture, migrating from profile-centric to permission set-based access control, managing permissions at scale using Permission Set Groups, or designing security models for community users.
@@ -181,6 +196,12 @@ Security and access control patterns for implementing permission set-driven secu
 ## Development
 
 Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, and troubleshooting patterns.
+
+- [error-handling-and-logging.md](rag/development/error-handling-and-logging.md) — Error handling and logging framework using custom logging objects with platform event fallbacks and external logging integration
+- [apex-patterns.md](rag/development/apex-patterns.md) — Apex design patterns including class layering (Service, Domain, Selector, Integration), SOQL optimization, and asynchronous patterns
+- [flow-patterns.md](rag/development/flow-patterns.md) — Flow design and orchestration patterns for Record-Triggered, Screen, and other Flow types with Apex integration
+- [lwc-patterns.md](rag/development/lwc-patterns.md) — Lightning Web Component patterns for complex business logic, console-style components, and service-layer patterns
+- [omnistudio-patterns.md](rag/development/omnistudio-patterns.md) — OmniStudio patterns for OmniScripts and FlexCards in guided workflows and reusable UI components
 
 ### error-handling-and-logging.md
 
@@ -255,6 +276,9 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 Debugging and troubleshooting approaches for integration debugging, data reconciliation, and root cause analysis.
 
+- [integration-debugging.md](rag/troubleshooting/integration-debugging.md) — Systematic approaches to troubleshooting integration failures using SOQL debugging, history object queries, and root cause analysis
+- [data-reconciliation.md](rag/troubleshooting/data-reconciliation.md) — Approaches to reconciling data between Salesforce and external systems using external IDs and integration job tracking
+
 ### integration-debugging.md
 
 **When to Retrieve**: Troubleshooting integration failures and errors, using SOQL debugging patterns to investigate issues, performing root cause analysis for data synchronization problems, querying history objects to track data changes, or analyzing integration errors and data quality issues.
@@ -285,6 +309,8 @@ Debugging and troubleshooting approaches for integration debugging, data reconci
 
 Reusable design patterns that span multiple domains, including governor limit management, bulkification, and cross-cutting design patterns.
 
+- [cross-cutting-patterns.md](rag/patterns/cross-cutting-patterns.md) — Summary of cross-cutting patterns including governor limit management, bulkification, external IDs, error handling, and security patterns
+
 ### cross-cutting-patterns.md
 
 **When to Retrieve**: Finding reusable patterns that apply across multiple domains, managing governor limits across Apex/Flow/integrations, implementing bulkification patterns, applying cross-cutting design patterns, or understanding patterns that span architecture/development/integration.
@@ -306,6 +332,8 @@ Reusable design patterns that span multiple domains, including governor limit ma
 
 Terminology and definitions for clarifying what terms mean and understanding core concepts.
 
+- [core-terminology.md](rag/glossary/core-terminology.md) — Core terminology and definitions for integration, identity, data modeling, security, platform, development, and project method terms
+
 ### core-terminology.md
 
 **When to Retrieve**: Looking up definitions of Salesforce and integration terminology, understanding acronyms and abbreviations (ETL, SIS, OIDC, SAML, LWC, etc.), clarifying core concepts used in the knowledge library, or finding domain-specific terminology definitions.
@@ -326,6 +354,9 @@ Terminology and definitions for clarifying what terms mean and understanding cor
 ## Project Methods
 
 Project delivery and methodology for sprint-based delivery, testing strategies, and quality standards.
+
+- [delivery-framework.md](rag/project-methods/delivery-framework.md) — Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects
+- [testing-strategy.md](rag/project-methods/testing-strategy.md) — Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
 
 ### delivery-framework.md
 
