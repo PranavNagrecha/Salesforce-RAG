@@ -1,0 +1,316 @@
+# Apex Design Patterns and Best Practices
+
+## Overview
+
+Apex is used strategically when Flows are insufficient or need optimization/bulkification. The approach emphasizes proper layering, bulkification, comprehensive testing, and integration with declarative automation.
+
+## When to Choose Apex
+
+Apex is selected when:
+
+- **Flows are insufficient** for complex logic or performance requirements
+- **Heavy reuse** is needed by LWCs, external APIs, or other Apex
+- **Tight control** over performance and governor limits is required
+- **Complex branching or algorithms** that are difficult in Flow
+- **Integration with external APIs** needing complex authentication and error handling
+
+## Apex Class Layering
+
+Apex classes are structured in layers:
+
+### Service Layer
+
+Business logic and orchestration:
+
+- Coordinates between domain, selector, and integration layers
+- Exposes clean method signatures for Flows and LWCs
+- Handles business rules and workflow orchestration
+- Example: `ContactRetryUpdateService`, `ContactUpdateService`, `RestIntegrationService`
+
+### Domain Layer
+
+Object-specific logic and validation:
+
+- Object-specific business rules
+- Validation logic
+- Helper methods for specific objects
+- Example: Account helper classes
+
+### Selector Layer
+
+SOQL queries and data access:
+
+- Centralized SOQL queries
+- Data access abstraction
+- Query optimization
+- Governor limit awareness
+
+### Integration Layer
+
+External API callouts and transformations:
+
+- External API integration
+- Data transformation
+- Authentication handling
+- Error handling for external systems
+- Example: `RestIntegrationService`
+
+### Utility Classes
+
+Reusable functionality:
+
+- Cross-cutting concerns
+- Logging utilities
+- Common helper methods
+- Example: `LOG_LogMessageUtility`
+
+## SOQL Design in Apex
+
+### Selective WHERE Clauses
+
+- Use indexed fields in WHERE clauses
+- Avoid querying ID fields unnecessarily
+- Use selective filters to reduce query scope
+- Monitor query performance
+
+### Bulkification
+
+- Always process collections, not single records
+- Avoid DML and SOQL in loops
+- Use bulk DML operations (insert, update, upsert with collections)
+- Handle governor limits proactively
+- Test with maximum data volumes (200+ records minimum)
+
+### Query Optimization
+
+- Combine queries where possible using relationship syntax
+- Use aggregate queries for counts and summaries
+- Leverage subqueries for related data
+- Avoid unnecessary field queries
+- Use `WITH SECURITY_ENFORCED` or `WITH USER_MODE` for security
+
+### Security Enforcement
+
+- ALL SOQL queries MUST use `WITH SECURITY_ENFORCED` or `WITH USER_MODE`
+- Respect field-level and object-level security
+- Document security decisions when using `without sharing`
+
+## Asynchronous Apex Patterns
+
+### Queueable
+
+Use for:
+
+- Chaining jobs
+- Callouts after DML
+- Lightweight async processing
+- Jobs that need to be chained together
+
+### Batchable
+
+Use for:
+
+- Large data processing
+- Scheduled batch jobs
+- Processing thousands of records
+- Operations that exceed synchronous limits
+
+### Scheduled
+
+Use for:
+
+- Time-based automation
+- Periodic maintenance
+- Scheduled data processing
+- Recurring tasks
+
+## Apex + LWC Integration
+
+### @AuraEnabled Methods
+
+- Use for imperative calls from LWCs
+- Support both cacheable and non-cacheable methods
+- Use `@AuraEnabled(cacheable=true)` for read-only operations
+- Provide clean method signatures with DTO-style payloads
+
+### @wire Adapters
+
+- Use for reactive data access
+- Support automatic data refresh
+- Handle loading and error states
+- Abstract SOQL details from components
+
+### Service Layer Pattern
+
+- Apex classes expose clean methods for LWCs
+- Methods like `getXXXViewModel(Id recordId)` and `performAction(...)`
+- LWCs don't "know" SOQL details; they deal with DTO-style payloads
+- Encapsulates business logic and data access
+
+## Error Handling in Apex
+
+### Try-Catch Blocks
+
+- Wrap DML operations in try-catch blocks
+- Handle specific exception types when possible
+- Provide meaningful error messages
+- Log all errors to custom logging object
+
+### Custom Exceptions
+
+- Create custom exceptions for specific scenarios
+- Provide context in exception messages
+- Support error recovery workflows
+- Enable better error handling in calling code
+
+### Error Logging
+
+- ALL exceptions MUST be logged to custom log object using logging utility class
+- NO System.debug statements in production code
+- Use proper logging instead of System.debug
+- Log errors before showing messages to users
+
+### Graceful Degradation
+
+- Handle errors gracefully when possible
+- Provide fallback mechanisms
+- Support partial success scenarios
+- Enable error recovery workflows
+
+## Code Quality Standards
+
+### Documentation
+
+- ALL Apex classes MUST have proper ApexDoc documentation
+- Document public methods with purpose, parameters, and return values
+- Include file headers specifying purpose and ownership
+- Write self-documenting code; avoid relying solely on comments
+
+### Code Cleanliness
+
+- Remove unused code promptly
+- Avoid hardcoding IDs; use schema methods or constants
+- Replace repeated strings with constants
+- Remove System.debug statements before deployment
+- Clean up commented code
+
+### Security
+
+- ALL SOQL queries MUST use `WITH SECURITY_ENFORCED` or `WITH USER_MODE`
+- Use `without sharing` only when necessary and document why
+- Handle field-level security appropriately
+- Validate input data before processing
+
+### Performance
+
+- Optimize SOQL queries (combine queries where possible)
+- NO SOQL queries in loops
+- Use bulk DML operations
+- Monitor governor limit usage
+- Profile code to identify bottlenecks
+
+## Testing Strategy
+
+### Test Coverage
+
+- Aim for 100% code coverage (minimum 90%)
+- Test both positive and negative scenarios
+- Test with bulk data (200 records minimum)
+- Use `Test.startTest()` and `Test.stopTest()` to reset governor limits
+
+### Test Data
+
+- Use test data factories for consistent test data
+- Avoid `@SeeAllData` annotation
+- ALL test classes MUST create their own test data
+- Create realistic test scenarios
+
+### Test Structure
+
+- Test classes should be private
+- Minimize logic within `Test.startTest()` and `Test.stopTest()` blocks
+- Include both positive and negative test cases
+- Test error handling and edge cases
+
+### Mocking
+
+- Use callout mocks for testing integrations
+- Mock external dependencies when possible
+- Use dependency injection for testability
+- Test integration error scenarios
+
+## Invocable Methods
+
+### Flow Integration
+
+- Build invocable methods for Flow integration
+- Use clean request/response objects
+- Handle errors gracefully
+- Support both single and bulk operations
+
+### Examples
+
+- `SendSMSMagicEU` - SMS sending functionality
+- `ContactRetryUpdateService` - Contact update with retry logic
+- Methods that can be called from Flows and LWCs
+
+## Common Patterns
+
+### Retry Logic
+
+- Implement retry logic for transient failures
+- Use exponential backoff
+- Configurable retry counts via Custom Metadata
+- Handle row locking errors (UNABLE_TO_LOCK_ROW)
+
+### Row Locking Error Handling
+
+- Built `ContactRetryUpdateService` with configurable retry logic
+- Exponential backoff for high-concurrency scenarios
+- Handles UNABLE_TO_LOCK_ROW errors gracefully
+- Supports configurable retry attempts
+
+### Configuration Management
+
+- Use Custom Metadata Types for configuration
+- Avoid hardcoded values (IDs, counts, URLs, etc.)
+- Support environment-specific configuration
+- Enable runtime configuration changes
+
+## Best Practices Summary
+
+### Code Structure
+
+- Use layered architecture (Service, Domain, Selector, Integration)
+- Keep classes focused on single responsibility
+- Use dependency injection where appropriate
+- Follow naming conventions consistently
+
+### Performance
+
+- Always bulkify operations
+- Optimize SOQL queries
+- Monitor governor limits
+- Test with maximum data volumes
+
+### Security
+
+- Enforce security in SOQL queries
+- Validate input data
+- Handle field-level security
+- Document security decisions
+
+### Testing
+
+- Achieve minimum 90% code coverage
+- Test with bulk data
+- Create test data factories
+- Test error scenarios
+
+### Integration
+
+- Use invocable methods for Flow integration
+- Support both cacheable and non-cacheable methods
+- Provide clean method signatures
+- Abstract SOQL details from callers
+

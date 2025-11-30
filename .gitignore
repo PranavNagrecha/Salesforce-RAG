@@ -1,0 +1,12 @@
+# Private knowledge sources (never publish)
+Knowledge/
+archive/
+
+# Private authoring prompts / outputs
+cursor/prompts/RAG Command .md
+cursor/outputs/
+
+# Misc local files
+*.log
+.DS_Store
+
