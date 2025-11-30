@@ -202,6 +202,57 @@
       "status": "completed"
     },
     {
+      "domain": "data-modeling",
+      "file": "object-setup-and-configuration.md",
+      "path": "rag/data-modeling/object-setup-and-configuration.md",
+      "whenToRetrieve": [
+        "Setting up custom objects in Salesforce",
+        "Configuring object fields, page layouts, and related lists",
+        "Setting up tabs, actions, and Lightning Record Pages",
+        "Configuring field-level security and object permissions",
+        "Setting up search layouts and compact layouts",
+        "Completing object configuration checklist before deployment"
+      ],
+      "summary": "Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce. Covers complete object configuration from initial creation through Lightning Experience optimization, including field setup, page layouts, tabs, actions, search layouts, permissions, and testing procedures.",
+      "keyTopics": [
+        "Object creation and basic configuration",
+        "Field configuration with help text and FLS",
+        "Page layout and compact layout setup",
+        "Search layout configuration",
+        "Tab creation and app assignment",
+        "Action configuration (Create, Update)",
+        "Lightning Record Page setup",
+        "Field-level security best practices",
+        "Object setup testing procedures",
+        "Community/portal object configuration"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "file-management-patterns.md",
+      "path": "rag/data-modeling/file-management-patterns.md",
+      "whenToRetrieve": [
+        "Choosing between ContentVersion, Attachments, and Documents",
+        "Implementing file storage and management in Salesforce",
+        "Designing file upload and sharing patterns",
+        "Managing file storage limits and cleanup",
+        "Migrating from Attachments to ContentVersion",
+        "Implementing file versioning and collaboration"
+      ],
+      "summary": "File management patterns for Salesforce implementations. Covers ContentVersion (Files) vs Attachments vs Documents decision framework, file upload patterns, file sharing and versioning, storage management, security and access control, and integration patterns including external file storage and migration strategies.",
+      "keyTopics": [
+        "ContentVersion (Files) vs Attachments vs Documents",
+        "File upload and storage patterns",
+        "File sharing and versioning",
+        "Storage management and cleanup",
+        "File-level security and access control",
+        "External file storage integration",
+        "File migration patterns"
+      ],
+      "status": "completed"
+    },
+    {
       "domain": "security",
       "file": "permission-set-architecture.md",
       "path": "rag/security/permission-set-architecture.md",
@@ -273,16 +324,43 @@
         "Designing Record-Triggered Flows with proper structure",
         "Building Screen Flows for user interactions",
         "Integrating Flows with Apex for complex logic",
-        "Optimizing Flow performance and handling errors"
+        "Optimizing Flow performance and handling errors",
+        "Migrating from Flow User permission before Winter '26"
       ],
-      "summary": "Flow design and orchestration patterns. Covers Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched), Record-Triggered Flow structure patterns, Screen Flow design patterns, Flow+Apex integration patterns, naming conventions, error handling, and performance optimization.",
+      "summary": "Flow design and orchestration patterns. Covers Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched), Record-Triggered Flow structure patterns, Screen Flow design patterns, Flow+Apex integration patterns, naming conventions, error handling, performance optimization, and Flow User permission deprecation migration guidance.",
       "keyTopics": [
         "Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched)",
         "Record-Triggered Flow structure patterns",
         "Screen Flow design patterns",
         "Flow + Apex integration patterns",
         "Flow naming and documentation",
-        "Error handling and performance"
+        "Error handling and performance",
+        "Flow User permission deprecation (Winter '26)"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "order-of-execution.md",
+      "path": "rag/development/order-of-execution.md",
+      "whenToRetrieve": [
+        "Understanding when triggers, flows, and validation rules execute",
+        "Designing automation with execution order in mind",
+        "Debugging issues related to execution timing",
+        "Choosing between before-save and after-save automation",
+        "Understanding trigger execution order and context",
+        "Designing field value modifications and related record operations"
+      ],
+      "summary": "Complete guide to Salesforce order of execution. Covers the full execution sequence for save operations, before-save vs after-save decision framework, Flow execution timing, validation rule timing, trigger execution order, common patterns and pitfalls, performance considerations, and debugging techniques.",
+      "keyTopics": [
+        "Complete order of execution sequence",
+        "Before-save vs after-save decision framework",
+        "Flow execution timing (before-save and after-save)",
+        "Validation rule timing",
+        "Trigger execution order and context",
+        "Common patterns and pitfalls",
+        "Performance considerations",
+        "Debugging execution order issues"
       ],
       "status": "completed"
     },
@@ -468,9 +546,9 @@
       "Architecture Questions: Designing system architecture, integration patterns, multi-tenant solutions, or portal architecture",
       "Integration Questions: Implementing ETL, API, or event-driven integrations, SIS synchronization, or integration platforms",
       "Identity Questions: Implementing SSO, multi-identity provider architectures, or login handlers",
-      "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, or case management models",
+      "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, setting up custom objects with fields, layouts, and permissions, or choosing file storage mechanisms (ContentVersion, Attachments, Documents)",
       "Security Questions: Implementing permission set-driven security or managing access control",
-      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, or troubleshooting patterns",
+      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, or choosing between before-save and after-save automation",
       "Project Methods Questions: Sprint-based delivery, testing strategies, or quality standards",
       "Troubleshooting Questions: Integration debugging, data reconciliation, or root cause analysis",
       "Pattern Questions: Looking for reusable patterns or best practices"
@@ -507,8 +585,8 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 21,
-    "completedFiles": 21,
+    "totalFiles": 24,
+    "completedFiles": 24,
     "plannedFiles": 0,
     "domains": 10,
     "domainsWithFiles": 10
@@ -517,10 +595,10 @@
     "architecture": 2,
     "integrations": 3,
     "identity-sso": 1,
-    "data-modeling": 3,
+    "data-modeling": 5,
     "security": 1,
     "project-methods": 2,
-    "development": 5,
+    "development": 6,
     "troubleshooting": 2,
     "patterns": 1,
     "glossary": 1

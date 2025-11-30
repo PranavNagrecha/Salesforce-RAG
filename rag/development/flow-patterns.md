@@ -272,6 +272,58 @@ Invocable Apex handles:
 - Update documentation when Flows change
 - Communicate changes to stakeholders
 
+## Flow User Permission Deprecation (Winter '26)
+
+### Overview
+
+The "Flow User" user permission is being deprecated in Winter '26 (2025). This affects how Flows execute and which users can run Flows.
+
+### Deprecation Timeline
+
+- **Winter '26 (2025)**: Flow User permission deprecated
+- **Migration Required**: All orgs must migrate before Winter '26
+- **Impact**: Flows will execute based on object and field permissions instead
+
+### Migration Requirements
+
+**Before Winter '26**:
+1. Review all users with Flow User permission
+2. Ensure users have appropriate object and field permissions
+3. Test Flows with users who will lose Flow User permission
+4. Update permission sets and profiles as needed
+5. Document any changes required
+
+**After Migration**:
+- Flows execute based on object/field permissions
+- Users need Read/Edit permissions on objects and fields used in Flows
+- Flow execution context determines permissions
+
+### Best Practices
+
+1. **Audit Current Usage**: Identify all users with Flow User permission
+2. **Review Flow Permissions**: Ensure Flows use appropriate object/field permissions
+3. **Test Migration**: Test Flows with users who will lose Flow User permission
+4. **Update Documentation**: Document permission requirements for Flows
+5. **Plan Migration**: Create migration plan before Winter '26
+
+### Permission Requirements
+
+**For Flow Execution**:
+- Users need Read/Edit permissions on objects used in Flows
+- Users need Read/Edit permissions on fields used in Flows
+- Flow execution context determines effective permissions
+- System context may be required for certain operations
+
+**For Screen Flows**:
+- Users need appropriate object and field permissions
+- Screen Flow visibility controlled by object permissions
+- Field-level security applies to Flow fields
+
+### Related Patterns
+
+- See `rag/security/permission-set-architecture.md` for permission management
+- See `rag/development/order-of-execution.md` for Flow execution timing
+
 ## Best Practices Summary
 
 ### Flow Type Selection

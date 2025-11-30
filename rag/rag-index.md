@@ -134,6 +134,8 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - [external-ids-and-integration-keys.md](rag/data-modeling/external-ids-and-integration-keys.md) — Guide to external ID strategies for stable record mapping, composite external IDs, and integration job tracking
 - [student-lifecycle-data-model.md](rag/data-modeling/student-lifecycle-data-model.md) — Salesforce Education Cloud (EDA) data model patterns for higher education institutions
 - [case-management-data-model.md](rag/data-modeling/case-management-data-model.md) — Data model patterns for public sector case management supporting multi-agency portals
+- [object-setup-and-configuration.md](rag/data-modeling/object-setup-and-configuration.md) — Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
+- [file-management-patterns.md](rag/data-modeling/file-management-patterns.md) — File management patterns covering ContentVersion vs Attachments vs Documents, file storage, sharing, versioning, and migration strategies
 
 ### external-ids-and-integration-keys.md
 
@@ -174,6 +176,40 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - Notice and Transaction objects
 - Multi-tenant data isolation
 
+### object-setup-and-configuration.md
+
+**When to Retrieve**: Setting up custom objects in Salesforce, configuring object fields, page layouts, and related lists, setting up tabs, actions, and Lightning Record Pages, configuring field-level security and object permissions, setting up search layouts and compact layouts, or completing object configuration checklist before deployment.
+
+**Summary**: Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce. Covers complete object configuration from initial creation through Lightning Experience optimization, including field setup, page layouts, tabs, actions, search layouts, permissions, field naming conventions, and testing procedures.
+
+**Key Topics**:
+- Object creation and basic configuration
+- Field configuration with help text and FLS
+- Page layout and compact layout setup
+- Search layout configuration
+- Tab creation and app assignment
+- Action configuration (Create, Update)
+- Lightning Record Page setup
+- Field-level security best practices
+- Field naming conventions and API name stability
+- Object setup testing procedures
+- Community/portal object configuration
+
+### file-management-patterns.md
+
+**When to Retrieve**: Choosing between ContentVersion, Attachments, and Documents, implementing file storage and management in Salesforce, designing file upload and sharing patterns, managing file storage limits and cleanup, migrating from Attachments to ContentVersion, or implementing file versioning and collaboration.
+
+**Summary**: File management patterns for Salesforce implementations. Covers ContentVersion (Files) vs Attachments vs Documents decision framework, file upload patterns, file sharing and versioning, storage management, security and access control, and integration patterns including external file storage and migration strategies.
+
+**Key Topics**:
+- ContentVersion (Files) vs Attachments vs Documents
+- File upload and storage patterns
+- File sharing and versioning
+- Storage management and cleanup
+- File-level security and access control
+- External file storage integration
+- File migration patterns
+
 ## Security
 
 Security and access control patterns for implementing permission set-driven security and managing access control.
@@ -199,7 +235,8 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 - [error-handling-and-logging.md](rag/development/error-handling-and-logging.md) — Error handling and logging framework using custom logging objects with platform event fallbacks and external logging integration
 - [apex-patterns.md](rag/development/apex-patterns.md) — Apex design patterns including class layering (Service, Domain, Selector, Integration), SOQL optimization, and asynchronous patterns
-- [flow-patterns.md](rag/development/flow-patterns.md) — Flow design and orchestration patterns for Record-Triggered, Screen, and other Flow types with Apex integration
+- [flow-patterns.md](rag/development/flow-patterns.md) — Flow design and orchestration patterns for Record-Triggered, Screen, and other Flow types with Apex integration, including Flow User permission deprecation guidance
+- [order-of-execution.md](rag/development/order-of-execution.md) — Complete guide to Salesforce order of execution, covering before-save vs after-save decision framework, trigger and flow execution timing, and debugging techniques
 - [lwc-patterns.md](rag/development/lwc-patterns.md) — Lightning Web Component patterns for complex business logic, console-style components, and service-layer patterns
 - [omnistudio-patterns.md](rag/development/omnistudio-patterns.md) — OmniStudio patterns for OmniScripts and FlexCards in guided workflows and reusable UI components
 
@@ -233,9 +270,9 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 ### flow-patterns.md
 
-**When to Retrieve**: Selecting the right Flow type for automation, designing Record-Triggered Flows with proper structure, building Screen Flows for user interactions, integrating Flows with Apex for complex logic, or optimizing Flow performance and handling errors.
+**When to Retrieve**: Selecting the right Flow type for automation, designing Record-Triggered Flows with proper structure, building Screen Flows for user interactions, integrating Flows with Apex for complex logic, optimizing Flow performance and handling errors, or migrating from Flow User permission before Winter '26.
 
-**Summary**: Flow design and orchestration patterns. Covers Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched), Record-Triggered Flow structure patterns, Screen Flow design patterns, Flow+Apex integration patterns, naming conventions, error handling, and performance optimization.
+**Summary**: Flow design and orchestration patterns. Covers Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched), Record-Triggered Flow structure patterns, Screen Flow design patterns, Flow+Apex integration patterns, naming conventions, error handling, performance optimization, and Flow User permission deprecation migration guidance.
 
 **Key Topics**:
 - Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched)
@@ -244,6 +281,23 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Flow + Apex integration patterns
 - Flow naming and documentation
 - Error handling and performance
+- Flow User permission deprecation (Winter '26)
+
+### order-of-execution.md
+
+**When to Retrieve**: Understanding when triggers, flows, and validation rules execute, designing automation with execution order in mind, debugging issues related to execution timing, choosing between before-save and after-save automation, understanding trigger execution order and context, or designing field value modifications and related record operations.
+
+**Summary**: Complete guide to Salesforce order of execution. Covers the full execution sequence for save operations, before-save vs after-save decision framework, Flow execution timing, validation rule timing, trigger execution order, common patterns and pitfalls, performance considerations, and debugging techniques.
+
+**Key Topics**:
+- Complete order of execution sequence
+- Before-save vs after-save decision framework
+- Flow execution timing (before-save and after-save)
+- Validation rule timing
+- Trigger execution order and context
+- Common patterns and pitfalls
+- Performance considerations
+- Debugging execution order issues
 
 ### lwc-patterns.md
 
@@ -443,7 +497,7 @@ See individual RAG files for domain-specific terminology and definitions.
 
 ## File Status
 
-### Completed Files (21 total)
+### Completed Files (24 total)
 
 **Architecture (2 files)**:
 - ✅ `architecture/event-driven-architecture.md`
@@ -457,18 +511,21 @@ See individual RAG files for domain-specific terminology and definitions.
 **Identity & SSO (1 file)**:
 - ✅ `identity-sso/multi-tenant-identity-architecture.md`
 
-**Data Modeling (3 files)**:
+**Data Modeling (5 files)**:
 - ✅ `data-modeling/external-ids-and-integration-keys.md`
 - ✅ `data-modeling/student-lifecycle-data-model.md`
 - ✅ `data-modeling/case-management-data-model.md`
+- ✅ `data-modeling/object-setup-and-configuration.md`
+- ✅ `data-modeling/file-management-patterns.md`
 
 **Security (1 file)**:
 - ✅ `security/permission-set-architecture.md`
 
-**Development (5 files)**:
+**Development (6 files)**:
 - ✅ `development/error-handling-and-logging.md`
 - ✅ `development/apex-patterns.md`
 - ✅ `development/flow-patterns.md`
+- ✅ `development/order-of-execution.md`
 - ✅ `development/lwc-patterns.md`
 - ✅ `development/omnistudio-patterns.md`
 
