@@ -4,16 +4,48 @@ Cursor IDE supports RAG (Retrieval-Augmented Generation) through its knowledge b
 
 ## Setup
 
-### Option 1: Add RAG Directory to Cursor
+### Option 1: Enable Codebase Indexing
 
-1. Open Cursor Settings (Cmd/Ctrl + ,)
-2. Navigate to "Features" → "Knowledge Base" or "RAG"
-3. Add the `rag/` directory to your knowledge base paths
-4. Cursor will index the markdown files automatically
+1. Open Cursor Settings:
+   - Click the gear icon in the lower-left corner, or
+   - Use the shortcut `Cmd + ,` (Mac) / `Ctrl + ,` (Windows)
+
+2. In the left sidebar, go to **"Indexing & Docs"**.
+
+3. Under **Codebase Indexing**:
+   - Make sure indexing is enabled for this workspace
+   - If an index already exists, you should see a progress bar and a **"Sync"** button
+   - Cursor will automatically index all files in your workspace, including the `rag/` directory
+
+4. Under **Docs** (optional):
+   - Use **"Add Doc"** to attach external documentation if needed, such as Markdown files outside the main repo or API docs
+   - For this RAG library, the `rag/` directory is part of your workspace, so it will be indexed automatically via Codebase Indexing
+
+### How to verify indexing is working
+
+1. Open **Settings** (gear icon → **Indexing & Docs**)
+
+2. Under **Codebase Indexing**, confirm:
+   - The index status shows 100% or is progressing, not disabled
+   - The workspace path in the card matches this repo
+
+3. In the same panel, if available, check that:
+   - The `rag/` directory and key Markdown files (e.g., `rag/architecture/...`, `rag/integrations/...`) are being indexed
+   - Files are not excluded by `.cursorignore` or `.gitignore`
+
+4. Back in a normal editor tab:
+   - Type `@rag/` and see if Cursor auto-completes paths to your RAG files
+   - If you can `@`-reference files like `rag/architecture/event-driven-architecture.md`, indexing is correctly picking them up
+
+**Troubleshooting:**
+- If `rag/**` files do not show up in `@`-completion:
+  - Check `.cursorignore` and `.gitignore` to make sure `rag/` is not ignored
+  - Go back to **Settings → Indexing & Docs** and hit **"Sync"** to rebuild the index
+  - Wait for indexing to complete (you'll see a progress indicator)
 
 ### Option 2: Reference in Prompts
 
-You can reference specific knowledge files in your Cursor prompts:
+Once indexing is working, you can reference specific knowledge files in your Cursor prompts:
 
 ```
 @rag/development/apex-patterns.md How should I structure my Apex service layer?
