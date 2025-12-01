@@ -207,6 +207,29 @@ LWCs are surgical tools for complex UI needs when:
 - Lazy loading for large data sets
 - Progressive disclosure of information
 
+### Performance-Optimized LWC Controller Pattern
+
+**When to use**: When building Lightning Web Component controllers that need to fetch and process data efficiently.
+
+**Implementation approach**:
+- Don't auto-calculate on page load (user must click button) - prevents unnecessary Apex calls
+- Use `@AuraEnabled(cacheable=true)` for read-only operations
+- Implement cache busting with random parameter when fresh data needed (e.g., `System.currentTimeMillis()`)
+- Fetch all required data in single Apex call (not multiple separate queries)
+- Use relationship queries to combine data in single query
+- Only select necessary fields (not entire objects)
+- Use lazy loading for detailed breakdowns (hidden in tabs, loaded when expanded)
+
+**Why it's recommended**: Auto-calculating on page load creates unnecessary Apex calls and slows page load times. Cacheable methods with cache busting provide best of both worlds (performance + fresh data). Single Apex calls reduce network latency. Lazy loading improves perceived performance.
+
+**Real example**: Fraud score calculation component. Doesn't auto-calculate on load - user must click "Calculate" button. Uses cacheable methods with cache busting. Fetches all required data in single call. Lazy loads detailed breakdown in tabs.
+
+**Lessons learned**:
+- Not auto-calculating on load significantly improves page load times
+- Cacheable methods with cache busting provide best of both worlds (performance + fresh data)
+- User control over when to calculate improves perceived performance
+- Single Apex calls reduce network latency
+
 ### Optimize Data Queries
 
 - Optimize data queries in Apex

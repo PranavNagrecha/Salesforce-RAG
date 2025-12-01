@@ -189,6 +189,44 @@ Comprehensive testing strategies covering integration testing, data quality test
 - Validate integration platform configuration per environment
 - Document environment-specific differences
 
+## Test Class Anti-Patterns and Security
+
+### Test Class Security Anti-Pattern
+
+**When NOT to do**: Including test classes in permission sets or profiles accessible to end users.
+
+**Why it's a problem**: Test classes can expose test logic, data, and potentially sensitive information to unauthorized users. This is a security risk and violates best practices.
+
+**Real example**: Found test classes (`CommunitiesLandingControllerTest`, `CommunitiesLoginControllerTest`) in permission sets during code review. Removed them immediately.
+
+**Prevention**:
+- Test classes should never be included in permission sets
+- Test classes should never be accessible to end users
+- Always review permission sets for test classes during security reviews
+- Remove test classes from permission sets if found
+
+### Test Class Design Anti-Patterns
+
+**Anti-pattern: Using @SeeAllData**
+- **Problem**: Test classes that use `@IsTest(SeeAllData=true)` depend on org-specific data
+- **Solution**: ALL test classes MUST create their own test data (no `@IsTest(SeeAllData=true)`)
+- **Why**: Tests must be self-contained and reliable, not dependent on org-specific data
+
+**Anti-pattern: Single-record tests**
+- **Problem**: Testing with single records doesn't catch bulkification issues
+- **Solution**: Always test with bulk data (200+ records minimum)
+- **Why**: Production code must handle bulk operations correctly
+
+**Anti-pattern: Testing only successful scenarios**
+- **Problem**: Only testing positive scenarios misses error handling and edge cases
+- **Solution**: Test both positive and negative scenarios, error handling, and edge cases
+- **Why**: Real-world scenarios include failures and edge cases
+
+**Anti-pattern: Complex logic in Test.startTest() blocks**
+- **Problem**: Complex logic within `Test.startTest()` and `Test.stopTest()` blocks can mask limit issues
+- **Solution**: Minimize logic within these blocks, keep it focused on the operation being tested
+- **Why**: These blocks reset governor limits, but complex logic can hide limit problems
+
 ## Test Coverage Requirements
 
 ### Code Coverage
@@ -261,6 +299,20 @@ Comprehensive testing strategies covering integration testing, data quality test
 - Create test data factories for consistent test scenarios
 - Isolate test data between test environments
 - Document test data requirements and sources
+
+### Test Class Design Best Practices
+
+**Design for testability from the start**:
+- Use dependency injection patterns
+- Define interfaces for dependencies (e.g., `IContactSelector`, `IExternalApiService`)
+- Inject dependencies through constructors or setter methods
+- Enable mocking in test classes
+
+**Test integration error scenarios**:
+- Use callout mocks to test error scenarios (network failures, timeouts, invalid responses)
+- Don't just test successful scenarios
+- Test error handling and retry logic
+- Validate error messages and recovery workflows
 
 ## Tradeoffs
 

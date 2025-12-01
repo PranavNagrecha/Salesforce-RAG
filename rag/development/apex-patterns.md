@@ -211,9 +211,9 @@ Use for:
 
 - Remove unused code promptly
 - Avoid hardcoding IDs; use schema methods or constants
-- Replace repeated strings with constants
+- Replace repeated strings with constants (repeated strings are error-prone and hard to maintain)
 - Remove System.debug statements before deployment
-- Clean up commented code
+- Clean up commented code (commented code creates confusion - remove it or convert to proper documentation)
 
 ### Security
 
@@ -263,6 +263,12 @@ Use for:
 - Provide mock implementations for testing
 - Test integration error scenarios
 
+### Test Class Security
+
+- **Test classes should NEVER be accessible to end users**: Test classes should never be included in permission sets or profiles accessible to end users. This is a security risk and can expose test logic to unauthorized users.
+- Always review permission sets for test classes during security reviews
+- Remove test classes from permission sets if found
+
 ## Invocable Methods
 
 ### Flow Integration
@@ -294,6 +300,13 @@ Use for:
 - Handles UNABLE_TO_LOCK_ROW errors gracefully
 - Supports configurable retry attempts
 
+**Lessons Learned from Real Implementations:**
+
+- **Retry logic must be intelligent**: Only retry errors that are likely to succeed on retry (e.g., row locking errors). Don't retry validation errors - they won't succeed on retry.
+- **Always consider governor limits in retry logic**: Check CPU time and other limits before retrying. Fail fast if approaching limits.
+- **Document trade-offs and future improvements**: When implementing a solution with known limitations (e.g., busy-wait retry logic), document these in code comments. This helps future developers understand why decisions were made.
+- **Consider async alternatives for high-volume scenarios**: Busy-wait retry logic works but isn't ideal for high-volume scenarios. Consider Queueable or Platform Events for async retries.
+
 ### Configuration Management
 
 - Use Custom Metadata Types for configuration
@@ -301,6 +314,128 @@ Use for:
 - Support environment-specific configuration
 - Enable runtime configuration changes
 
+**Lessons Learned from Real Implementations:**
+
+- **Externalize all configuration**: Never hardcode environment-specific values (URLs, IDs, counts). Use Custom Metadata Types or Custom Settings for configuration that varies by environment. This enables environment-specific configuration without code changes.
+- **Use Named Credentials for all external URLs**: All HTTP callouts should use Named Credentials, not hardcoded URLs. This centralizes credential management and enables environment-specific endpoints.
+- **Centralize integration patterns**: When multiple classes make HTTP callouts, centralize the pattern in an abstract service class. This makes maintenance and auditing easier.
+
+
+## Detailed Pattern Implementations
+
+### Pattern 1: Logging Utility with Fallback Mechanism
+
+**When to use**: When you need comprehensive error logging for compliance and troubleshooting, but System.debug isn't sufficient.
+
+**Implementation approach**:
+- Create utility class implementing `Callable` interface (enables calling from Flows)
+- Implement different log levels (Debug, Info, Error, Warning, Fatal)
+- Build methods that accept log level, source, source function, message, payload
+- Check log settings (can filter by level)
+- Truncate payloads if too large (prevents DML errors)
+- Can queue DML requests or execute immediately
+- On DML exception, publish Platform Event as fallback
+
+**Why it's recommended**: System.debug statements don't persist and can't be used for production troubleshooting. A logging utility with fallback ensures critical errors are captured even when DML fails. The Callable interface enables use from both Flows and Apex.
+
+**Real example**: `LOG_LogMessageUtility` class built for enterprise-scale public sector portal serving 40,000+ concurrent users. Implemented `Callable` interface, different log levels, truncation for large payloads, and Platform Event fallback when DML fails.
+
+**Lessons learned**:
+- Always have a fallback mechanism for critical logging
+- Consider storage implications at scale (use log settings to filter)
+- Make utilities flexible (queue vs immediate, filtering options)
+- Truncation prevents DML errors from large payloads
+
+### Pattern 2: Integration Service with Configuration Management
+
+**When to use**: When you have multiple Apex classes making HTTP callouts with hardcoded URLs and inconsistent error handling patterns.
+
+**Implementation approach**:
+- Create abstract class implementing interface
+- Use Custom Metadata Type to configure endpoints, methods, headers, timeouts
+- Use Named Credentials for URLs (externalized, credentials managed by Salesforce)
+- Centralize request generation and execution
+- Standardize error handling patterns
+
+**Why it's recommended**: Hardcoded URLs make environment management difficult and create security risks. Centralizing integration patterns makes maintenance and auditing easier. Custom Metadata enables environment-specific configuration without code changes.
+
+**Real example**: `RestIntegrationService` abstract class built to solve problem of multiple Apex classes with hardcoded URLs. Uses Custom Metadata Type (`IEE_MS_Interface_Detail__mdt`) to configure endpoints, methods, headers, timeouts. Named Credentials externalize URLs and credentials.
+
+**Lessons learned**:
+- Externalize all configuration - never hardcode environment-specific values
+- Use Named Credentials for all external URLs
+- Centralize integration patterns - easier to maintain and audit
+- Abstract classes enable reuse while allowing specific implementations
+
+### Pattern 3: Retry Logic with Intelligent Error Detection
+
+**When to use**: When operations may encounter transient errors (e.g., row locking errors) that should be retried, but permanent errors (e.g., validation errors) should not be retried.
+
+**Implementation approach**:
+- Create service class with `@InvocableMethod` (callable from Flows)
+- Implement configurable retry logic (default: 3 retries with exponential backoff)
+- Detect retryable errors (check error status code AND error message)
+- Only retry on retryable errors (e.g., `UNABLE_TO_LOCK_ROW`), not validation errors
+- Check governor limits before retry (fail fast if approaching limits)
+- Document trade-offs (e.g., busy-wait limitation, future async improvements)
+
+**Why it's recommended**: Retry logic must be intelligent - only retry errors that are likely to succeed on retry. Retrying validation errors wastes resources and doesn't solve the problem. Governor limit awareness prevents retry logic from causing limit exceptions.
+
+**Real example**: `ContactRetryUpdateService` built to solve row locking errors in high-concurrency scenarios. Implements configurable retry logic with exponential backoff, intelligent error detection (only retries row locking errors), and governor limit awareness.
+
+**Lessons learned**:
+- Retry logic must be intelligent (only retry retryable errors)
+- Always consider governor limits in retry logic
+- Document trade-offs and future improvements in code
+- Busy-wait works but isn't ideal for high-volume scenarios (consider async alternatives)
+
+### Pattern 4: Scoring Model with Business Rule Overrides
+
+**When to use**: When implementing automated scoring or decision-making systems where business rules can override model calculations.
+
+**Implementation approach**:
+- Check override conditions first (before model calculation)
+- If override conditions met, return override result immediately
+- If no overrides, perform model calculation
+- Return detailed breakdown showing how decision was made
+- Provide feedback mechanism for model improvement
+
+**Why it's recommended**: Business rules should always take precedence over model calculations. Checking overrides first prevents unnecessary computation and ensures business rules are respected. Detailed breakdowns build user trust and enable feedback for model improvement.
+
+**Real example**: Fraud score calculation system for application review. Checks override conditions first (Active Duty Military, Nursing Programs, Completed Courses → fraud score = 0). If no overrides, calculates score using logistic regression model with 16 factors. Returns detailed breakdown with field values and scores for display.
+
+**Lessons learned**:
+- Business rules (overrides) should be checked before model calculation
+- Users need transparency in scoring models
+- Feedback mechanisms are valuable for model improvement
+- Detailed breakdowns help users understand and trust the system
+
+## Lessons Learned from Real Implementations
+
+### Logging Utilities
+
+- **Always implement fallback mechanisms**: When building logging utilities, always have a fallback (e.g., Platform Events) if primary mechanism fails. This prevents loss of critical information when DML fails due to governor limits or validation rules.
+- **Consider storage implications at scale**: At enterprise scale (40K+ concurrent users), logging everything creates massive storage. Use log settings to filter by level.
+- **Make utilities flexible**: Support both queue and immediate execution, filtering options, and different log levels.
+
+### Integration Services
+
+- **Externalize all configuration**: Never hardcode environment-specific values. Use Custom Metadata Types for configuration that varies by environment.
+- **Use Named Credentials for all external URLs**: Centralizes credential management and enables environment-specific endpoints.
+- **Centralize integration patterns**: When multiple classes make HTTP callouts, centralize the pattern in an abstract service class. This makes maintenance and auditing easier.
+
+### Performance Optimization
+
+- **Don't auto-calculate on page load**: For LWC controllers, don't auto-calculate on page load. User must click button. This prevents unnecessary Apex calls and significantly improves page load times.
+- **Use cacheable methods with cache busting**: Use `@AuraEnabled(cacheable=true)` for read-only operations, but implement cache busting with random parameter when fresh data is needed.
+- **Fetch all required data in single Apex call**: Reduce network latency by fetching all required data in one call rather than multiple separate queries.
+- **Use lazy loading for detailed breakdowns**: Hide detailed breakdowns in tabs, only load when user expands. This improves perceived performance.
+
+### Scoring Models and Automated Decisions
+
+- **Check business rules before complex calculations**: When implementing scoring models, check override conditions first (e.g., business rules that override the model). This prevents unnecessary computation.
+- **Provide transparency in automated decisions**: When implementing scoring models or automated decision-making, provide detailed breakdowns showing how decisions were made. This builds user trust.
+- **Enable feedback mechanisms**: Provide feedback mechanisms for model improvement. Users can provide feedback on scores, which is valuable for model refinement.
 
 ## Best Practices Summary
 
@@ -332,6 +467,7 @@ Use for:
 - Test with bulk data
 - Create test data factories
 - Test error scenarios
+- Design for testability from the start (use dependency injection patterns, define interfaces for dependencies)
 
 ### Integration
 
@@ -339,3 +475,41 @@ Use for:
 - Support both cacheable and non-cacheable methods
 - Provide clean method signatures
 - Abstract SOQL details from callers
+
+## Tradeoffs and Implementation Decisions
+
+### Synchronous vs Asynchronous Retry Logic
+
+**Tradeoff**: Some patterns retry synchronously in the same transaction (e.g., `ContactRetryUpdateService` with busy-wait), while others defer to Queueable jobs.
+
+**Decision guidance**:
+- Use synchronous for quick retries (1-2 attempts) - simpler implementation
+- Use asynchronous for longer retries or high-volume scenarios - better resource efficiency
+- Consider Queueable or Platform Events for async retries when governor limits are a concern
+
+### Auto-Calculation vs User-Initiated Calculation
+
+**Tradeoff**: Some components auto-calculate on page load for convenience, while others require user action.
+
+**Decision guidance**:
+- User-initiated calculation significantly improves page load times and perceived performance
+- Auto-calculation creates unnecessary Apex calls when users just view records
+- Give users control over when to calculate for expensive operations
+
+### Cacheable Methods with Cache Busting
+
+**Tradeoff**: Some implementations use cacheable methods without cache busting (better performance, but stale data risk), while others use cache busting (fresh data, but more server round trips).
+
+**Decision guidance**:
+- Use cacheable methods with cache busting when fresh data is needed
+- Accept cached data when acceptable for better performance
+- Implement cache busting with random parameter (e.g., `System.currentTimeMillis()`) when fresh data required
+
+### Detailed Breakdowns vs Simple Scores
+
+**Tradeoff**: Some scoring systems return only final scores, while others return detailed breakdowns.
+
+**Decision guidance**:
+- Detailed breakdowns build user trust and enable feedback for model improvement
+- Transparency in automated decisions helps users understand and trust the system
+- Balance complexity with user needs and compliance requirements
