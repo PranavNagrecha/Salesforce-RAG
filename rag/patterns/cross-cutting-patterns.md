@@ -15,6 +15,7 @@ Governor limits are a fundamental constraint in Salesforce. All code and automat
 ### Where This Pattern Appears
 
 - **Apex Development**: See `rag/development/apex-patterns.md` for SOQL optimization, bulkification, and asynchronous patterns
+- **Governor Limits**: See `rag/development/governor-limits-and-optimization.md` for comprehensive limit monitoring, selective query optimization, and resource management
 - **Flow Development**: See `rag/development/flow-patterns.md` for bulk Flow patterns and collection processing
 - **Integration Patterns**: See `rag/integrations/etl-vs-api-vs-events.md` for batch processing patterns
 - **Troubleshooting**: See `rag/troubleshooting/integration-debugging.md` for limit-related debugging
@@ -22,10 +23,11 @@ Governor limits are a fundamental constraint in Salesforce. All code and automat
 ### Key Principles
 
 - Always process collections, never single records in loops
-- Use selective WHERE clauses with indexed fields
+- Use selective WHERE clauses with indexed fields (queries returning <10% of records)
 - Leverage asynchronous processing (Queueable, Batchable, Scheduled) for large operations
 - Test with maximum data volumes (200+ records minimum)
-- Monitor and log limit usage for optimization
+- Monitor and log limit usage for optimization using `Limits` class methods
+- Implement proactive limit checking before expensive operations
 
 ### Common Anti-Patterns
 
@@ -33,6 +35,8 @@ Governor limits are a fundamental constraint in Salesforce. All code and automat
 - Processing records one at a time
 - Not testing with bulk data
 - Ignoring query selectivity warnings
+- Not monitoring governor limit usage
+- Queries returning more than 10% of records without indexed fields
 
 ## Bulkification Patterns
 
@@ -96,6 +100,7 @@ Comprehensive error handling and logging ensures all errors are captured, logged
 ### Where This Pattern Appears
 
 - **Development**: See `rag/development/error-handling-and-logging.md` for complete logging framework
+- **Concurrency**: See `rag/development/locking-and-concurrency-strategies.md` for row locking error handling and retry patterns
 - **Integration Patterns**: See `rag/integrations/integration-platform-patterns.md` for integration error handling
 - **Troubleshooting**: See `rag/troubleshooting/integration-debugging.md` for error investigation patterns
 

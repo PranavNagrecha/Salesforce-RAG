@@ -121,6 +121,26 @@
       "status": "completed"
     },
     {
+      "domain": "integrations",
+      "file": "salesforce-to-llm-data-pipelines.md",
+      "path": "rag/integrations/salesforce-to-llm-data-pipelines.md",
+      "whenToRetrieve": [
+        "Moving Salesforce data into LLM/RAG systems",
+        "Designing data extraction pipelines for LLM systems",
+        "Implementing transformation and chunking strategies for Salesforce data",
+        "Understanding architectural variants for Salesforce to LLM data pipelines"
+      ],
+      "summary": "High-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems. Covers batch export, event-driven, and on-demand query patterns, extraction APIs (REST, Bulk, Metadata, CDC), transformation and chunking strategies, and interaction with manifest-style descriptions.",
+      "keyTopics": [
+        "Batch export vs event-driven vs on-demand query patterns",
+        "REST API, Bulk API, Metadata API, and CDC extraction patterns",
+        "Per-record vs aggregated chunking strategies",
+        "Field selection and redaction patterns",
+        "Relationship context preservation in chunks"
+      ],
+      "status": "completed"
+    },
+    {
       "domain": "identity-sso",
       "file": "multi-tenant-identity-architecture.md",
       "path": "rag/identity-sso/multi-tenant-identity-architecture.md",
@@ -203,6 +223,30 @@
     },
     {
       "domain": "data-modeling",
+      "file": "lead-management-patterns.md",
+      "path": "rag/data-modeling/lead-management-patterns.md",
+      "whenToRetrieve": [
+        "Implementing lead management and conversion processes",
+        "Configuring duplicate rules and matching rules for leads",
+        "Setting up lead assignment rules",
+        "Designing lead scoring models",
+        "Managing lead-to-opportunity conversion workflows",
+        "Field mapping during lead conversion"
+      ],
+      "summary": "Comprehensive data model and process guide for Salesforce lead management. Covers lead object structure, conversion field mapping (Lead → Contact/Account/Opportunity), duplicate rules configuration, lead assignment rules, lead status management, lead scoring, data quality patterns, and integration patterns.",
+      "keyTopics": [
+        "Lead conversion field mapping (Lead → Contact/Account/Opportunity)",
+        "Duplicate rules and matching rules configuration",
+        "Lead assignment rules and round-robin patterns",
+        "Lead status management and progression",
+        "Lead scoring models and thresholds",
+        "Data quality and standardization patterns",
+        "Web-to-Lead and marketing automation integration"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "data-modeling",
       "file": "object-setup-and-configuration.md",
       "path": "rag/data-modeling/object-setup-and-configuration.md",
       "whenToRetrieve": [
@@ -269,6 +313,27 @@
         "Permission Set Groups for role-based assignment",
         "No delete permissions for community users",
         "Migration strategy from profile-centric model"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "security",
+      "file": "salesforce-llm-data-governance.md",
+      "path": "rag/security/salesforce-llm-data-governance.md",
+      "whenToRetrieve": [
+        "Choosing what data to expose from Salesforce to LLMs",
+        "Implementing security model evaluation (FLS, OLS, sharing rules) in LLM data extraction",
+        "Designing data masking and redaction strategies",
+        "Implementing governance and compliance for Salesforce to LLM data pipelines"
+      ],
+      "summary": "Security and governance patterns for Salesforce to LLM data pipelines. Covers data scoping principles, mapping Salesforce security to LLM access, data masking and redaction strategies, RAG security enforcement patterns (separate indexes, attribute-based filtering), and governance lifecycle management (refresh cadence, retention, compliance, audit trails).",
+      "keyTopics": [
+        "Data scoping principles (relevance, sensitivity, volume constraints)",
+        "FLS/OLS evaluation and sharing rule understanding",
+        "Service account vs user context extraction patterns",
+        "Separate indexes per role vs attribute-based filtering",
+        "Data masking and redaction strategies",
+        "Governance and compliance (GDPR, CCPA, HIPAA, FERPA)"
       ],
       "status": "completed"
     },
@@ -415,6 +480,50 @@
       "status": "completed"
     },
     {
+      "domain": "development",
+      "file": "locking-and-concurrency-strategies.md",
+      "path": "rag/development/locking-and-concurrency-strategies.md",
+      "whenToRetrieve": [
+        "Handling UNABLE_TO_LOCK_ROW exceptions",
+        "Implementing retry logic with exponential backoff",
+        "Designing idempotent operations for safe retries",
+        "Preventing deadlocks",
+        "Optimizing high-concurrency scenarios"
+      ],
+      "summary": "Comprehensive guidance on Salesforce row locking, concurrency control patterns, retry strategies with exponential backoff, deadlock prevention, and high-concurrency optimization. Covers retry logic patterns, idempotent operations with External IDs, Queueable-based retry patterns, lock-free design patterns, and deadlock prevention strategies.",
+      "keyTopics": [
+        "Retry logic with exponential backoff for UNABLE_TO_LOCK_ROW",
+        "Idempotent operations with External IDs",
+        "Queueable-based retry patterns",
+        "Lock-free design patterns (Platform Events, queue-based processing)",
+        "Deadlock prevention and detection",
+        "Transaction scope optimization"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "governor-limits-and-optimization.md",
+      "path": "rag/development/governor-limits-and-optimization.md",
+      "whenToRetrieve": [
+        "Monitoring governor limit usage",
+        "Optimizing SOQL queries for selectivity",
+        "Implementing query result pagination",
+        "Using asynchronous processing for large operations",
+        "Optimizing heap size usage"
+      ],
+      "summary": "Comprehensive guidance on Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management. Covers governor limits monitoring, selective query optimization (10% threshold, indexed fields), query result pagination, asynchronous processing patterns, and heap size optimization.",
+      "keyTopics": [
+        "Governor limits monitoring and proactive checking",
+        "Selective query optimization (10% threshold, indexed fields)",
+        "Query result pagination (OFFSET vs cursor-based)",
+        "Asynchronous processing (Batch, Queueable, Scheduled)",
+        "Heap size optimization patterns",
+        "Resource management best practices"
+      ],
+      "status": "completed"
+    },
+    {
       "domain": "troubleshooting",
       "file": "integration-debugging.md",
       "path": "rag/troubleshooting/integration-debugging.md",
@@ -553,9 +662,9 @@
       "Architecture Questions: Designing system architecture, integration patterns, multi-tenant solutions, or portal architecture",
       "Integration Questions: Implementing ETL, API, or event-driven integrations, SIS synchronization, or integration platforms",
       "Identity Questions: Implementing SSO, multi-identity provider architectures, or login handlers",
-      "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, setting up custom objects with fields, layouts, and permissions, or choosing file storage mechanisms (ContentVersion, Attachments, Documents)",
-      "Security Questions: Implementing permission set-driven security or managing access control",
-      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, or choosing between before-save and after-save automation",
+      "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, lead management and conversion patterns, setting up custom objects with fields, layouts, and permissions, or choosing file storage mechanisms (ContentVersion, Attachments, Documents)",
+      "Security Questions: Implementing permission set-driven security, managing access control, or securing Salesforce data for LLM systems",
+      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, or optimizing governor limits and performance",
       "Project Methods Questions: Sprint-based delivery, testing strategies, or quality standards",
       "Troubleshooting Questions: Integration debugging, data reconciliation, or root cause analysis",
       "Pattern Questions: Looking for reusable patterns or best practices"
@@ -592,20 +701,20 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 24,
-    "completedFiles": 24,
+    "totalFiles": 29,
+    "completedFiles": 29,
     "plannedFiles": 0,
     "domains": 10,
     "domainsWithFiles": 10
   },
   "coverage": {
     "architecture": 2,
-    "integrations": 3,
+    "integrations": 4,
     "identity-sso": 1,
-    "data-modeling": 5,
-    "security": 1,
+    "data-modeling": 6,
+    "security": 2,
     "project-methods": 2,
-    "development": 6,
+    "development": 8,
     "troubleshooting": 2,
     "patterns": 1,
     "glossary": 1

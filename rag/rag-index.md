@@ -62,11 +62,12 @@ Architecture patterns for designing system structure, integration patterns, mult
 
 ## Integration Patterns
 
-Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, and integration platforms like MuleSoft and Dell Boomi.
+Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.
 
 - [etl-vs-api-vs-events.md](rag/integrations/etl-vs-api-vs-events.md) — Decision framework for choosing between ETL (batch), API (synchronous), or Events (asynchronous) integration patterns
 - [integration-platform-patterns.md](rag/integrations/integration-platform-patterns.md) — Patterns for implementing integrations using MuleSoft and Dell Boomi platforms as security boundaries and transformation layers
 - [sis-sync-patterns.md](rag/integrations/sis-sync-patterns.md) — High-volume batch synchronization patterns for integrating with Student Information Systems using file-based staging and idempotent upserts
+- [salesforce-to-llm-data-pipelines.md](rag/integrations/salesforce-to-llm-data-pipelines.md) — Pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
 
 ### etl-vs-api-vs-events.md
 
@@ -107,6 +108,19 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 - Integration job tracking
 - Error handling and retry logic
 
+### salesforce-to-llm-data-pipelines.md
+
+**When to Retrieve**: Moving Salesforce data into LLM/RAG systems, designing data extraction pipelines for LLM systems, implementing transformation and chunking strategies for Salesforce data, or understanding architectural variants for Salesforce to LLM data pipelines.
+
+**Summary**: High-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems. Covers batch export, event-driven, and on-demand query patterns, extraction APIs (REST, Bulk, Metadata, CDC), transformation and chunking strategies, and interaction with manifest-style descriptions.
+
+**Key Topics**:
+- Batch export vs event-driven vs on-demand query patterns
+- REST API, Bulk API, Metadata API, and CDC extraction patterns
+- Per-record vs aggregated chunking strategies
+- Field selection and redaction patterns
+- Relationship context preservation in chunks
+
 ## Identity and SSO
 
 Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.
@@ -134,6 +148,7 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - [external-ids-and-integration-keys.md](rag/data-modeling/external-ids-and-integration-keys.md) — Guide to external ID strategies for stable record mapping, composite external IDs, and integration job tracking
 - [student-lifecycle-data-model.md](rag/data-modeling/student-lifecycle-data-model.md) — Salesforce Education Cloud (EDA) data model patterns for higher education institutions
 - [case-management-data-model.md](rag/data-modeling/case-management-data-model.md) — Data model patterns for public sector case management supporting multi-agency portals
+- [lead-management-patterns.md](rag/data-modeling/lead-management-patterns.md) — Comprehensive data model and process guide for Salesforce lead management, conversion, duplicate rules, and assignment patterns
 - [object-setup-and-configuration.md](rag/data-modeling/object-setup-and-configuration.md) — Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
 - [file-management-patterns.md](rag/data-modeling/file-management-patterns.md) — File management patterns covering ContentVersion vs Attachments vs Documents, file storage, sharing, versioning, and migration strategies
 
@@ -176,6 +191,21 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - Notice and Transaction objects
 - Multi-tenant data isolation
 
+### lead-management-patterns.md
+
+**When to Retrieve**: Implementing lead management and conversion processes, configuring duplicate rules and matching rules for leads, setting up lead assignment rules, designing lead scoring models, or managing lead-to-opportunity conversion workflows.
+
+**Summary**: Comprehensive data model and process guide for Salesforce lead management. Covers lead object structure, conversion field mapping, duplicate rules configuration, lead assignment rules, lead status management, lead scoring, data quality patterns, and integration patterns.
+
+**Key Topics**:
+- Lead conversion field mapping (Lead → Contact/Account/Opportunity)
+- Duplicate rules and matching rules configuration
+- Lead assignment rules and round-robin patterns
+- Lead status management and progression
+- Lead scoring models and thresholds
+- Data quality and standardization patterns
+- Web-to-Lead and marketing automation integration
+
 ### object-setup-and-configuration.md
 
 **When to Retrieve**: Setting up custom objects in Salesforce, configuring object fields, page layouts, and related lists, setting up tabs, actions, and Lightning Record Pages, configuring field-level security and object permissions, setting up search layouts and compact layouts, or completing object configuration checklist before deployment.
@@ -212,9 +242,10 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 
 ## Security
 
-Security and access control patterns for implementing permission set-driven security and managing access control.
+Security and access control patterns for implementing permission set-driven security, managing access control, and securing Salesforce data for LLM systems.
 
 - [permission-set-architecture.md](rag/security/permission-set-architecture.md) — Guide to permission set-driven security architecture with Profiles for UI configuration and Permission Sets for access control
+- [salesforce-llm-data-governance.md](rag/security/salesforce-llm-data-governance.md) — Security and governance patterns for choosing what data to expose from Salesforce to LLMs and how to do that safely
 
 ### permission-set-architecture.md
 
@@ -229,9 +260,23 @@ Security and access control patterns for implementing permission set-driven secu
 - No delete permissions for community users
 - Migration strategy from profile-centric model
 
+### salesforce-llm-data-governance.md
+
+**When to Retrieve**: Choosing what data to expose from Salesforce to LLMs, implementing security model evaluation (FLS, OLS, sharing rules) in LLM data extraction, designing data masking and redaction strategies, or implementing governance and compliance for Salesforce to LLM data pipelines.
+
+**Summary**: Security and governance patterns for Salesforce to LLM data pipelines. Covers data scoping principles, mapping Salesforce security to LLM access, data masking and redaction strategies, RAG security enforcement patterns (separate indexes, attribute-based filtering), and governance lifecycle management (refresh cadence, retention, compliance, audit trails).
+
+**Key Topics**:
+- Data scoping principles (relevance, sensitivity, volume constraints)
+- FLS/OLS evaluation and sharing rule understanding
+- Service account vs user context extraction patterns
+- Separate indexes per role vs attribute-based filtering
+- Data masking and redaction strategies
+- Governance and compliance (GDPR, CCPA, HIPAA, FERPA)
+
 ## Development
 
-Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, and troubleshooting patterns.
+Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, concurrency control, and performance optimization.
 
 - [error-handling-and-logging.md](rag/development/error-handling-and-logging.md) — Error handling and logging framework using custom logging objects with platform event fallbacks and external logging integration
 - [apex-patterns.md](rag/development/apex-patterns.md) — Apex design patterns including class layering (Service, Domain, Selector, Integration), SOQL optimization, and asynchronous patterns
@@ -239,6 +284,8 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - [order-of-execution.md](rag/development/order-of-execution.md) — Complete guide to Salesforce order of execution, covering before-save vs after-save decision framework, trigger and flow execution timing, and debugging techniques
 - [lwc-patterns.md](rag/development/lwc-patterns.md) — Lightning Web Component patterns for complex business logic, console-style components, and service-layer patterns
 - [omnistudio-patterns.md](rag/development/omnistudio-patterns.md) — OmniStudio patterns for OmniScripts and FlexCards in guided workflows and reusable UI components
+- [locking-and-concurrency-strategies.md](rag/development/locking-and-concurrency-strategies.md) — Row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, and deadlock prevention
+- [governor-limits-and-optimization.md](rag/development/governor-limits-and-optimization.md) — Governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management
 
 ### error-handling-and-logging.md
 
@@ -325,6 +372,34 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Grant management workflows
 - Integration with Salesforce data model
 - Performance optimization and error handling
+
+### locking-and-concurrency-strategies.md
+
+**When to Retrieve**: Handling UNABLE_TO_LOCK_ROW exceptions, implementing retry logic with exponential backoff, designing idempotent operations for safe retries, preventing deadlocks, or optimizing high-concurrency scenarios.
+
+**Summary**: Comprehensive guidance on Salesforce row locking, concurrency control patterns, retry strategies with exponential backoff, deadlock prevention, and high-concurrency optimization. Covers retry logic patterns, idempotent operations with External IDs, Queueable-based retry patterns, lock-free design patterns, and deadlock prevention strategies.
+
+**Key Topics**:
+- Retry logic with exponential backoff for UNABLE_TO_LOCK_ROW
+- Idempotent operations with External IDs
+- Queueable-based retry patterns
+- Lock-free design patterns (Platform Events, queue-based processing)
+- Deadlock prevention and detection
+- Transaction scope optimization
+
+### governor-limits-and-optimization.md
+
+**When to Retrieve**: Monitoring governor limit usage, optimizing SOQL queries for selectivity, implementing query result pagination, using asynchronous processing for large operations, or optimizing heap size usage.
+
+**Summary**: Comprehensive guidance on Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management. Covers governor limits monitoring, selective query optimization (10% threshold, indexed fields), query result pagination, asynchronous processing patterns, and heap size optimization.
+
+**Key Topics**:
+- Governor limits monitoring and proactive checking
+- Selective query optimization (10% threshold, indexed fields)
+- Query result pagination (OFFSET vs cursor-based)
+- Asynchronous processing (Batch, Queueable, Scheduled)
+- Heap size optimization patterns
+- Resource management best practices
 
 ## Troubleshooting
 
@@ -497,37 +572,42 @@ See individual RAG files for domain-specific terminology and definitions.
 
 ## File Status
 
-### Completed Files (24 total)
+### Completed Files (29 total)
 
 **Architecture (2 files)**:
 - ✅ `architecture/event-driven-architecture.md`
 - ✅ `architecture/portal-architecture.md`
 
-**Integrations (3 files)**:
+**Integrations (4 files)**:
 - ✅ `integrations/etl-vs-api-vs-events.md`
 - ✅ `integrations/integration-platform-patterns.md`
 - ✅ `integrations/sis-sync-patterns.md`
+- ✅ `integrations/salesforce-to-llm-data-pipelines.md`
 
 **Identity & SSO (1 file)**:
 - ✅ `identity-sso/multi-tenant-identity-architecture.md`
 
-**Data Modeling (5 files)**:
+**Data Modeling (6 files)**:
 - ✅ `data-modeling/external-ids-and-integration-keys.md`
 - ✅ `data-modeling/student-lifecycle-data-model.md`
 - ✅ `data-modeling/case-management-data-model.md`
+- ✅ `data-modeling/lead-management-patterns.md`
 - ✅ `data-modeling/object-setup-and-configuration.md`
 - ✅ `data-modeling/file-management-patterns.md`
 
-**Security (1 file)**:
+**Security (2 files)**:
 - ✅ `security/permission-set-architecture.md`
+- ✅ `security/salesforce-llm-data-governance.md`
 
-**Development (6 files)**:
+**Development (8 files)**:
 - ✅ `development/error-handling-and-logging.md`
 - ✅ `development/apex-patterns.md`
 - ✅ `development/flow-patterns.md`
 - ✅ `development/order-of-execution.md`
 - ✅ `development/lwc-patterns.md`
 - ✅ `development/omnistudio-patterns.md`
+- ✅ `development/locking-and-concurrency-strategies.md`
+- ✅ `development/governor-limits-and-optimization.md`
 
 **Troubleshooting (2 files)**:
 - ✅ `troubleshooting/integration-debugging.md`

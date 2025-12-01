@@ -160,6 +160,38 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Related Patterns**: See `rag/development/lwc-patterns.md` for LWC patterns.
 
+### UNABLE_TO_LOCK_ROW
+
+**Definition**: Salesforce exception status code indicating a row locking conflict when multiple processes attempt to update the same record simultaneously.
+
+**Context**: Occurs in high-concurrency scenarios where multiple processes update the same records. Requires retry logic with exponential backoff to handle transient locking conflicts gracefully.
+
+**Related Patterns**: See `rag/development/locking-and-concurrency-strategies.md` for row locking and retry patterns.
+
+### Exponential Backoff
+
+**Definition**: Retry strategy that increases delay between retry attempts exponentially (e.g., 1 second, 2 seconds, 4 seconds) to reduce contention and allow locks to clear.
+
+**Context**: Used for handling transient errors like `UNABLE_TO_LOCK_ROW`. Prevents retry storms where multiple processes retry simultaneously, making the problem worse.
+
+**Related Patterns**: See `rag/development/locking-and-concurrency-strategies.md` for retry logic patterns.
+
+### Governor Limits
+
+**Definition**: Salesforce runtime limits that constrain resource usage (SOQL queries, DML operations, CPU time, heap size, callouts) to ensure fair resource allocation.
+
+**Context**: Limits apply per transaction context. Synchronous limits are lower than asynchronous limits. Must be monitored and managed to prevent exceptions.
+
+**Related Patterns**: See `rag/development/governor-limits-and-optimization.md` for limit monitoring and optimization patterns.
+
+### Selective Query
+
+**Definition**: SOQL query that uses indexed fields in WHERE clauses and returns less than 10% of records in an object, ensuring efficient index usage.
+
+**Context**: Non-selective queries (returning more than 10%) can cause performance issues and may be blocked in production. Selective queries use indexes efficiently, reducing query time and database load.
+
+**Related Patterns**: See `rag/development/governor-limits-and-optimization.md` for query optimization patterns.
+
 ### OmniStudio
 
 **Definition**: Salesforce OmniStudio for guided workflows (OmniScripts) and reusable UI components (FlexCards).
@@ -202,6 +234,22 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Related Patterns**: See `rag/integrations/integration-platform-patterns.md` for Boomi patterns.
 
+### Bulk API
+
+**Definition**: Salesforce API for asynchronous, high-volume data operations (millions of records) using job-based processing.
+
+**Context**: Used for initial RAG index population, periodic full refresh of LLM knowledge bases, and large-scale data migration. Supports CSV, JSON, or XML output formats.
+
+**Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for Bulk API extraction patterns.
+
+### Change Data Capture (CDC)
+
+**Definition**: Salesforce mechanism for real-time or near-real-time data change notifications via event-driven architecture.
+
+**Context**: Used for incremental RAG updates, event-driven LLM knowledge base refresh, and maintaining LLM systems in sync with Salesforce. Captures create, update, delete, and undelete operations.
+
+**Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for CDC extraction patterns.
+
 ## Data Quality Terms
 
 ### Idempotent Operation
@@ -238,13 +286,47 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Related Patterns**: See `rag/project-methods/testing-strategy.md` for testing strategies.
 
+## LLM and RAG Terms
+
+### RAG (Retrieval-Augmented Generation)
+
+**Definition**: AI pattern that combines retrieval of relevant context from a knowledge base with LLM generation to produce accurate, context-aware responses.
+
+**Context**: Used for LLM-powered systems that need access to Salesforce data. Involves extracting Salesforce data, transforming it into chunks, indexing in vector databases, and retrieving relevant context for LLM queries.
+
+**Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for RAG pipeline patterns.
+
+### LLM (Large Language Model)
+
+**Definition**: AI model capable of understanding and generating human-like text, used in conjunction with RAG systems for context-aware responses.
+
+**Context**: Used in Salesforce contexts for support agents, sales assistants, and knowledge base systems. Requires structured data extraction and transformation from Salesforce.
+
+**Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for LLM integration patterns.
+
+### Chunking
+
+**Definition**: Process of breaking Salesforce data into smaller, manageable pieces (chunks) for indexing in vector databases and retrieval by RAG systems.
+
+**Context**: Can be per-record (one chunk per Salesforce record) or aggregated (multiple related records in one chunk). Includes field selection, redaction, and relationship context preservation.
+
+**Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for chunking strategies.
+
+### Vector Database
+
+**Definition**: Database optimized for storing and querying vector embeddings generated from text chunks for similarity search in RAG systems.
+
+**Context**: Used to store Salesforce data chunks as embeddings, enabling semantic search and retrieval of relevant context for LLM queries.
+
+**Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for indexing strategies.
+
 ## Related Documentation
 
 For domain-specific terminology and definitions, see:
 
-- **Integration Terms**: `rag/integrations/etl-vs-api-vs-events.md`
+- **Integration Terms**: `rag/integrations/etl-vs-api-vs-events.md`, `rag/integrations/salesforce-to-llm-data-pipelines.md`
 - **Identity Terms**: `rag/identity-sso/multi-tenant-identity-architecture.md`
 - **Data Model Terms**: `rag/data-modeling/student-lifecycle-data-model.md`
-- **Security Terms**: `rag/security/permission-set-architecture.md`
-- **Development Terms**: `rag/development/apex-patterns.md`, `rag/development/flow-patterns.md`, `rag/development/lwc-patterns.md`
+- **Security Terms**: `rag/security/permission-set-architecture.md`, `rag/security/salesforce-llm-data-governance.md`
+- **Development Terms**: `rag/development/apex-patterns.md`, `rag/development/flow-patterns.md`, `rag/development/lwc-patterns.md`, `rag/development/locking-and-concurrency-strategies.md`, `rag/development/governor-limits-and-optimization.md`
 
