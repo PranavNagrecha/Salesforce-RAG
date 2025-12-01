@@ -369,9 +369,14 @@
         "Using dependency injection for testability",
         "Optimizing SOQL queries and managing governor limits",
         "Designing asynchronous Apex (Queueable, Batchable, Scheduled)",
-        "Integrating Apex with Lightning Web Components"
+        "Integrating Apex with Lightning Web Components",
+        "Implementing logging utilities with fallback mechanisms",
+        "Building integration services with configuration management",
+        "Implementing retry logic with intelligent error detection",
+        "Building scoring models with business rule overrides",
+        "Understanding tradeoffs and implementation decisions"
       ],
-      "summary": "Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration) with layer boundaries and delegation guidance, dependency injection for testability, SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies.",
+      "summary": "Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration) with layer boundaries and delegation guidance, dependency injection for testability, SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies. Includes detailed pattern implementations: Logging Utility with Fallback Mechanism, Integration Service with Configuration Management, Retry Logic with Intelligent Error Detection, and Scoring Model with Business Rule Overrides. Also covers tradeoffs and implementation decisions.",
       "keyTopics": [
         "When to choose Apex over Flow",
         "Apex class layering (Service, Domain, Selector, Integration)",
@@ -383,7 +388,12 @@
         "SOQL design and optimization",
         "Asynchronous Apex patterns (Queueable, Batchable, Scheduled)",
         "Apex + LWC integration patterns",
-        "Error handling and testing strategies"
+        "Error handling and testing strategies",
+        "Logging Utility with Fallback Mechanism pattern",
+        "Integration Service with Configuration Management pattern",
+        "Retry Logic with Intelligent Error Detection pattern",
+        "Scoring Model with Business Rule Overrides pattern",
+        "Tradeoffs and implementation decisions"
       ],
       "status": "completed"
     },
@@ -445,16 +455,22 @@
         "Implementing complex business logic in LWCs",
         "Designing service-layer patterns for LWCs",
         "Creating config-driven UI components",
-        "Optimizing LWC performance and accessibility"
+        "Optimizing LWC performance and accessibility",
+        "Implementing performance-optimized LWC controller patterns",
+        "Using cache busting and lazy loading strategies"
       ],
-      "summary": "Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations.",
+      "summary": "Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations. Includes detailed Performance-Optimized LWC Controller Pattern with cache busting, lazy loading, and single Apex call strategies.",
       "keyTopics": [
         "Console-style LWC patterns",
         "Fraud/risk scoring LWC implementation",
         "Program-selection LWC patterns",
         "Service-layer pattern for LWCs",
         "Config-driven UI patterns",
-        "Performance optimization and accessibility"
+        "Performance optimization and accessibility",
+        "Performance-Optimized LWC Controller Pattern",
+        "Cache busting with random parameters",
+        "Lazy loading for detailed breakdowns",
+        "Single Apex call strategies"
       ],
       "status": "completed"
     },
@@ -595,15 +611,20 @@
         "Designing integration testing (connectivity, transformation, error handling)",
         "Implementing data quality testing (matching, deduplication, error capture)",
         "Testing user migration and login handlers",
-        "Conducting user acceptance testing (UAT)"
+        "Conducting user acceptance testing (UAT)",
+        "Understanding test class security anti-patterns",
+        "Implementing test class design best practices"
       ],
-      "summary": "Comprehensive testing strategies for Salesforce implementations. Covers integration testing (connectivity, data transformation, error handling), data quality testing (matching, deduplication, error capture), user migration and login handler testing, user acceptance testing (UAT), and test environment management.",
+      "summary": "Comprehensive testing strategies for Salesforce implementations. Covers integration testing (connectivity, data transformation, error handling), data quality testing (matching, deduplication, error capture), user migration and login handler testing, user acceptance testing (UAT), and test environment management. Includes test class security anti-patterns, test class design anti-patterns, and design for testability best practices.",
       "keyTopics": [
         "Integration testing (connectivity, data transformation, error handling)",
         "Data quality testing (matching, deduplication, error capture)",
         "User migration and login handler testing",
         "User acceptance testing (UAT)",
-        "Test environment management"
+        "Test environment management",
+        "Test class security anti-patterns",
+        "Test class design anti-patterns (@SeeAllData, single-record tests, etc.)",
+        "Design for testability best practices"
       ],
       "status": "completed"
     },

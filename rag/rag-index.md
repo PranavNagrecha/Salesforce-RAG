@@ -303,9 +303,9 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 ### apex-patterns.md
 
-**When to Retrieve**: Deciding when to use Apex vs. Flow, implementing Apex class layering (Service, Domain, Selector, Integration), optimizing SOQL queries and managing governor limits, designing asynchronous Apex (Queueable, Batchable, Scheduled), or integrating Apex with Lightning Web Components.
+**When to Retrieve**: Deciding when to use Apex vs. Flow, implementing Apex class layering (Service, Domain, Selector, Integration), optimizing SOQL queries and managing governor limits, designing asynchronous Apex (Queueable, Batchable, Scheduled), integrating Apex with Lightning Web Components, implementing logging utilities with fallback mechanisms, building integration services with configuration management, implementing retry logic with intelligent error detection, or building scoring models with business rule overrides.
 
-**Summary**: Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration), SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies.
+**Summary**: Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration), SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies. Includes detailed pattern implementations: Logging Utility with Fallback Mechanism, Integration Service with Configuration Management, Retry Logic with Intelligent Error Detection, and Scoring Model with Business Rule Overrides. Also covers tradeoffs and implementation decisions.
 
 **Key Topics**:
 - When to choose Apex over Flow
@@ -314,6 +314,11 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Asynchronous Apex patterns (Queueable, Batchable, Scheduled)
 - Apex + LWC integration patterns
 - Error handling and testing strategies
+- Logging Utility with Fallback Mechanism pattern
+- Integration Service with Configuration Management pattern
+- Retry Logic with Intelligent Error Detection pattern
+- Scoring Model with Business Rule Overrides pattern
+- Tradeoffs and implementation decisions
 
 ### flow-patterns.md
 
@@ -348,9 +353,9 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 ### lwc-patterns.md
 
-**When to Retrieve**: Building console-style Lightning Web Components, implementing complex business logic in LWCs, designing service-layer patterns for LWCs, creating config-driven UI components, or optimizing LWC performance and accessibility.
+**When to Retrieve**: Building console-style Lightning Web Components, implementing complex business logic in LWCs, designing service-layer patterns for LWCs, creating config-driven UI components, optimizing LWC performance and accessibility, or implementing performance-optimized LWC controller patterns with cache busting and lazy loading.
 
-**Summary**: Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations.
+**Summary**: Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations. Includes detailed Performance-Optimized LWC Controller Pattern with cache busting, lazy loading, and single Apex call strategies.
 
 **Key Topics**:
 - Console-style LWC patterns
@@ -359,6 +364,10 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Service-layer pattern for LWCs
 - Config-driven UI patterns
 - Performance optimization and accessibility
+- Performance-Optimized LWC Controller Pattern
+- Cache busting with random parameters
+- Lazy loading for detailed breakdowns
+- Single Apex call strategies
 
 ### omnistudio-patterns.md
 
@@ -502,9 +511,9 @@ Project delivery and methodology for sprint-based delivery, testing strategies, 
 
 ### testing-strategy.md
 
-**When to Retrieve**: Planning comprehensive testing strategies for Salesforce projects, designing integration testing (connectivity, transformation, error handling), implementing data quality testing (matching, deduplication, error capture), testing user migration and login handlers, or conducting user acceptance testing (UAT).
+**When to Retrieve**: Planning comprehensive testing strategies for Salesforce projects, designing integration testing (connectivity, transformation, error handling), implementing data quality testing (matching, deduplication, error capture), testing user migration and login handlers, conducting user acceptance testing (UAT), understanding test class security anti-patterns, or implementing test class design best practices.
 
-**Summary**: Comprehensive testing strategies for Salesforce implementations. Covers integration testing (connectivity, data transformation, error handling), data quality testing (matching, deduplication, error capture), user migration and login handler testing, user acceptance testing (UAT), and test environment management.
+**Summary**: Comprehensive testing strategies for Salesforce implementations. Covers integration testing (connectivity, data transformation, error handling), data quality testing (matching, deduplication, error capture), user migration and login handler testing, user acceptance testing (UAT), and test environment management. Includes test class security anti-patterns, test class design anti-patterns, and design for testability best practices.
 
 **Key Topics**:
 - Integration testing (connectivity, data transformation, error handling)
@@ -512,6 +521,9 @@ Project delivery and methodology for sprint-based delivery, testing strategies, 
 - User migration and login handler testing
 - User acceptance testing (UAT)
 - Test environment management
+- Test class security anti-patterns
+- Test class design anti-patterns (@SeeAllData, single-record tests, etc.)
+- Design for testability best practices
 
 ## Retrieval Guidelines
 

@@ -14,11 +14,12 @@ Governor limits are a fundamental constraint in Salesforce. All code and automat
 
 ### Where This Pattern Appears
 
-- **Apex Development**: See `rag/development/apex-patterns.md` for SOQL optimization, bulkification, and asynchronous patterns
+- **Apex Development**: See `rag/development/apex-patterns.md` for SOQL optimization, bulkification, asynchronous patterns, detailed pattern implementations, and tradeoffs
 - **Governor Limits**: See `rag/development/governor-limits-and-optimization.md` for comprehensive limit monitoring, selective query optimization, and resource management
 - **Flow Development**: See `rag/development/flow-patterns.md` for bulk Flow patterns and collection processing
 - **Integration Patterns**: See `rag/integrations/etl-vs-api-vs-events.md` for batch processing patterns
 - **Troubleshooting**: See `rag/troubleshooting/integration-debugging.md` for limit-related debugging
+- **LWC Development**: See `rag/development/lwc-patterns.md` for performance-optimized LWC controller patterns with cache busting and lazy loading
 
 ### Key Principles
 
@@ -238,8 +239,8 @@ Comprehensive testing strategies validate configurations, integrations, and func
 
 ### Where This Pattern Appears
 
-- **Project Methods**: See `rag/project-methods/testing-strategy.md` for complete testing framework
-- **Development**: See `rag/development/apex-patterns.md` for Apex testing patterns
+- **Project Methods**: See `rag/project-methods/testing-strategy.md` for complete testing framework, test class security anti-patterns, and test class design best practices
+- **Development**: See `rag/development/apex-patterns.md` for Apex testing patterns, detailed pattern implementations, and tradeoffs
 - **Troubleshooting**: See `rag/troubleshooting/integration-debugging.md` for testing-related debugging
 
 ### Key Principles
@@ -250,6 +251,9 @@ Comprehensive testing strategies validate configurations, integrations, and func
 - Validate data quality (matching, deduplication, error capture)
 - Test user migration and login handlers
 - Coordinate testing windows across stakeholders
+- Test classes should never be accessible to end users (security risk)
+- Design for testability from the start (dependency injection, interfaces)
+- Test integration error scenarios (network failures, timeouts, invalid responses)
 
 ### Testing Checklist
 
@@ -258,6 +262,10 @@ Comprehensive testing strategies validate configurations, integrations, and func
 - [ ] Data quality tests for matching and deduplication
 - [ ] User migration tests for identity providers
 - [ ] Portal functionality tests for all user types
+- [ ] Test classes removed from permission sets (security review)
+- [ ] Test classes create their own test data (no @SeeAllData)
+- [ ] Test both positive and negative scenarios
+- [ ] Test integration error scenarios with callout mocks
 
 ## Related Patterns
 
