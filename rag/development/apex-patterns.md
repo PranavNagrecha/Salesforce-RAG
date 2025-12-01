@@ -25,6 +25,13 @@ Business logic and orchestration:
 - Coordinates between domain, selector, and integration layers
 - Exposes clean method signatures for Flows and LWCs
 - Handles business rules and workflow orchestration
+- Orchestrates complex workflows (queries → validation → DML → notifications)
+- Delegates object-specific logic to Domain layer
+- Delegates data access to Selector layer
+- Delegates external calls to Integration layer
+- Should NOT contain SOQL queries (delegate to Selector)
+- Should NOT contain object-specific validation (delegate to Domain)
+- Should NOT contain external API callouts (delegate to Integration)
 - Example: `ContactRetryUpdateService`, `ContactUpdateService`, `RestIntegrationService`
 
 ### Domain Layer
@@ -34,7 +41,12 @@ Object-specific logic and validation:
 - Object-specific business rules
 - Validation logic
 - Helper methods for specific objects
-- Example: Account helper classes
+- Encapsulates business rules for a specific Salesforce object
+- Can be called from triggers OR from Service layer
+- Should NOT contain SOQL queries (delegate to Selector layer)
+- Should NOT contain external callouts (delegate to Integration layer)
+- Use directly in triggers for simple validation; use through Service layer for complex workflows
+- Example: Account helper classes, `ContactDomain`, `AccountDomain`
 
 ### Selector Layer
 
@@ -44,6 +56,11 @@ SOQL queries and data access:
 - Data access abstraction
 - Query optimization
 - Governor limit awareness
+- Provide reusable query methods (e.g., `selectById(Set<Id> ids)`, `selectByExternalId(Set<String> externalIds)`)
+- Use specific method names rather than abstract criteria methods
+- Enforce security using `WITH SECURITY_ENFORCED` or `WITH USER_MODE` in all queries
+- Should NOT contain business logic (delegate to Domain layer)
+- Should NOT contain external callouts (delegate to Integration layer)
 
 ### Integration Layer
 
@@ -53,6 +70,10 @@ External API callouts and transformations:
 - Data transformation
 - Authentication handling
 - Error handling for external systems
+- Use Named Credentials for endpoints (NO hardcoded URLs)
+- Centralize error handling and retry logic for external systems
+- Should NOT contain business logic (delegate to Service layer)
+- Should NOT contain SOQL queries (delegate to Selector layer)
 - Example: `RestIntegrationService`
 
 ### Utility Classes
@@ -237,6 +258,9 @@ Use for:
 - Use callout mocks for testing integrations
 - Mock external dependencies when possible
 - Use dependency injection for testability
+- Define interfaces for dependencies (e.g., `IContactSelector`, `IExternalApiService`)
+- Inject dependencies through constructors or setter methods
+- Provide mock implementations for testing
 - Test integration error scenarios
 
 ## Invocable Methods
@@ -250,7 +274,7 @@ Use for:
 
 ### Examples
 
-- `SendSMSMagicEU` - SMS sending functionality
+- `SendSMSMagic` - SMS sending functionality
 - `ContactRetryUpdateService` - Contact update with retry logic
 - Methods that can be called from Flows and LWCs
 
@@ -277,6 +301,7 @@ Use for:
 - Support environment-specific configuration
 - Enable runtime configuration changes
 
+
 ## Best Practices Summary
 
 ### Code Structure
@@ -285,6 +310,7 @@ Use for:
 - Keep classes focused on single responsibility
 - Use dependency injection where appropriate
 - Follow naming conventions consistently
+- Lower layers should NOT depend on higher layers (prevents circular dependencies)
 
 ### Performance
 
@@ -313,4 +339,3 @@ Use for:
 - Support both cacheable and non-cacheable methods
 - Provide clean method signatures
 - Abstract SOQL details from callers
-

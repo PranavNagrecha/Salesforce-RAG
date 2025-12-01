@@ -300,14 +300,21 @@
       "whenToRetrieve": [
         "Deciding when to use Apex vs. Flow",
         "Implementing Apex class layering (Service, Domain, Selector, Integration)",
+        "Understanding layer boundaries and delegation patterns",
+        "Using dependency injection for testability",
         "Optimizing SOQL queries and managing governor limits",
         "Designing asynchronous Apex (Queueable, Batchable, Scheduled)",
         "Integrating Apex with Lightning Web Components"
       ],
-      "summary": "Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration), SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies.",
+      "summary": "Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration) with layer boundaries and delegation guidance, dependency injection for testability, SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies.",
       "keyTopics": [
         "When to choose Apex over Flow",
         "Apex class layering (Service, Domain, Selector, Integration)",
+        "Layer boundaries and delegation patterns",
+        "Dependency injection for testability",
+        "Selector layer query method patterns",
+        "Integration layer patterns (Named Credentials)",
+        "Domain layer usage in triggers vs Service layer",
         "SOQL design and optimization",
         "Asynchronous Apex patterns (Queueable, Batchable, Scheduled)",
         "Apex + LWC integration patterns",
