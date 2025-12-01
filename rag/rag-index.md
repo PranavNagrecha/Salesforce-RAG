@@ -286,6 +286,7 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - [omnistudio-patterns.md](rag/development/omnistudio-patterns.md) — OmniStudio patterns for OmniScripts and FlexCards in guided workflows and reusable UI components
 - [locking-and-concurrency-strategies.md](rag/development/locking-and-concurrency-strategies.md) — Row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, and deadlock prevention
 - [governor-limits-and-optimization.md](rag/development/governor-limits-and-optimization.md) — Governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management
+- [soql-query-patterns.md](rag/development/soql-query-patterns.md) — Practical SOQL query patterns and examples for common scenarios, including relationship queries, aggregate queries, subqueries, maintenance queries, and cursor-based pagination
 
 ### error-handling-and-logging.md
 
@@ -409,6 +410,23 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Asynchronous processing (Batch, Queueable, Scheduled)
 - Heap size optimization patterns
 - Resource management best practices
+
+### soql-query-patterns.md
+
+**When to Retrieve**: Need practical SOQL query examples for common scenarios, looking for maintenance queries to clean up orgs, need relationship query/aggregate query/subquery examples, want quick reference for query patterns, or building queries for troubleshooting or data analysis.
+
+**Summary**: Practical SOQL query patterns and examples for common Salesforce data retrieval scenarios. Provides concrete, copy-paste-ready query examples including basic SOQL structure, relationship queries, aggregate queries, subqueries, maintenance queries (unused permission sets, roles, profiles, reports, email templates), cursor-based pagination, date/time queries, and common query patterns. Includes quick reference guide for LLMs.
+
+**Key Topics**:
+- Basic SOQL syntax and structure
+- Relationship queries (parent object fields, child object subqueries)
+- Aggregate queries (COUNT, SUM, AVG, GROUP BY)
+- Maintenance query patterns (unused components, org cleanup)
+- Cursor-based pagination for large datasets
+- Date and time query functions
+- Selective query patterns with indexed fields
+- Security enforcement in Apex queries
+- Common query patterns (IN, LIKE, NULL checks, comparisons)
 
 ## Troubleshooting
 

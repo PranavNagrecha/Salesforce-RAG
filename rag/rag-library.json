@@ -2,11 +2,6 @@
   "version": "2.0",
   "lastUpdated": "2024",
   "description": "RAG Knowledge Library - Structured knowledge derived from real Salesforce implementation experience. All content sanitized and organized for efficient AI retrieval.",
-  "sourceDocuments": {
-    "gptKnowledgeDump": "Knowledge/GPT Response ",
-    "cursorKnowledgeDump": "Knowledge/cursor-responses.md",
-    "status": "read-only"
-  },
   "directoryStructure": {
     "architecture": "System architecture patterns",
     "integrations": "Integration patterns and platforms",
@@ -540,6 +535,33 @@
       "status": "completed"
     },
     {
+      "domain": "development",
+      "file": "soql-query-patterns.md",
+      "path": "rag/development/soql-query-patterns.md",
+      "whenToRetrieve": [
+        "Building dynamic SOQL queries with user input",
+        "Implementing relationship queries to combine related data",
+        "Optimizing queries for performance and governor limits",
+        "Debugging integration failures and data issues",
+        "Performing org maintenance and cleanup",
+        "Building cascading load patterns for LWC components",
+        "Need practical SOQL query examples for common scenarios",
+        "Looking for maintenance queries to clean up orgs"
+      ],
+      "summary": "Practical SOQL query patterns and examples derived from real implementation experience. Covers dynamic SOQL with proper escaping, relationship queries, cascading load patterns, query optimizations, SOQL debugging patterns, security enforcement, bulkification patterns, and maintenance queries for org cleanup.",
+      "keyTopics": [
+        "Dynamic SOQL with proper escaping (String.escapeSingleQuotes)",
+        "Relationship queries using dot notation",
+        "Cascading load pattern with cacheable methods",
+        "Query optimizations (minimal field selection, selective WHERE clauses, LIMIT clauses)",
+        "SOQL debugging patterns (history objects, error fields, root cause analysis)",
+        "Security enforcement (WITH SECURITY_ENFORCED)",
+        "Bulkification patterns (avoid SOQL in loops)",
+        "Maintenance queries (unused permission sets, roles, profiles, reports, email templates)"
+      ],
+      "status": "completed"
+    },
+    {
       "domain": "troubleshooting",
       "file": "integration-debugging.md",
       "path": "rag/troubleshooting/integration-debugging.md",
@@ -685,7 +707,7 @@
       "Identity Questions: Implementing SSO, multi-identity provider architectures, or login handlers",
       "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, lead management and conversion patterns, setting up custom objects with fields, layouts, and permissions, or choosing file storage mechanisms (ContentVersion, Attachments, Documents)",
       "Security Questions: Implementing permission set-driven security, managing access control, or securing Salesforce data for LLM systems",
-      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, or optimizing governor limits and performance",
+      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, optimizing governor limits and performance, building dynamic SOQL queries, implementing relationship queries, or performing org maintenance",
       "Project Methods Questions: Sprint-based delivery, testing strategies, or quality standards",
       "Troubleshooting Questions: Integration debugging, data reconciliation, or root cause analysis",
       "Pattern Questions: Looking for reusable patterns or best practices"
@@ -722,8 +744,8 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 29,
-    "completedFiles": 29,
+    "totalFiles": 30,
+    "completedFiles": 30,
     "plannedFiles": 0,
     "domains": 10,
     "domainsWithFiles": 10
@@ -735,7 +757,7 @@
     "data-modeling": 6,
     "security": 2,
     "project-methods": 2,
-    "development": 8,
+    "development": 9,
     "troubleshooting": 2,
     "patterns": 1,
     "glossary": 1
