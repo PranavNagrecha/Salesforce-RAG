@@ -12,7 +12,12 @@
     "development": "Development patterns and practices",
     "troubleshooting": "Debugging and troubleshooting",
     "patterns": "Reusable design patterns",
-    "glossary": "Terminology and definitions"
+    "glossary": "Terminology and definitions",
+    "code-examples": "Complete, working code examples",
+    "testing": "Testing patterns and examples",
+    "quick-start": "Quick-start guides",
+    "api-reference": "API references and method signatures",
+    "mcp-knowledge": "MCP-extracted knowledge"
   },
   "files": [
     {
@@ -698,19 +703,973 @@
         "Project method terminology (Sprint-Based Delivery, UAT)"
       ],
       "status": "completed"
+    },
+    {
+      "domain": "troubleshooting",
+      "file": "common-apex-errors.md",
+      "path": "rag/troubleshooting/common-apex-errors.md",
+      "whenToRetrieve": [
+        "Troubleshooting common Apex errors",
+        "Handling UNABLE_TO_LOCK_ROW exceptions",
+        "Fixing NULL_POINTER_EXCEPTION errors",
+        "Resolving QUERY_EXCEPTION errors",
+        "Handling DML_EXCEPTION errors",
+        "Fixing LIMIT_EXCEPTION errors"
+      ],
+      "summary": "Troubleshooting guide for common Apex errors with solutions and prevention strategies. Covers UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION with before/after code examples.",
+      "keyTopics": [
+        "UNABLE_TO_LOCK_ROW solutions",
+        "NULL_POINTER_EXCEPTION prevention",
+        "QUERY_EXCEPTION fixes",
+        "DML_EXCEPTION handling",
+        "LIMIT_EXCEPTION solutions"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "troubleshooting",
+      "file": "common-lwc-errors.md",
+      "path": "rag/troubleshooting/common-lwc-errors.md",
+      "whenToRetrieve": [
+        "Troubleshooting common LWC errors",
+        "Fixing property access errors",
+        "Resolving wire adapter errors",
+        "Fixing event handling errors",
+        "Handling LWC compilation errors"
+      ],
+      "summary": "Troubleshooting guide for common Lightning Web Component errors with solutions and prevention strategies. Covers property access errors, wire adapter errors, event handling errors, and LWC compilation errors.",
+      "keyTopics": [
+        "Property access errors",
+        "Wire adapter errors",
+        "Event handling errors",
+        "LWC compilation errors"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "troubleshooting",
+      "file": "governor-limit-errors.md",
+      "path": "rag/troubleshooting/governor-limit-errors.md",
+      "whenToRetrieve": [
+        "Troubleshooting governor limit errors",
+        "Fixing too many SOQL queries",
+        "Resolving too many DML statements",
+        "Handling CPU time limit exceeded",
+        "Fixing heap size limit exceeded"
+      ],
+      "summary": "Troubleshooting guide for Salesforce governor limit errors with solutions and optimization strategies. Covers SOQL query limits, DML statement limits, CPU time limits, heap size limits, and callout limits.",
+      "keyTopics": [
+        "SOQL query limit solutions",
+        "DML statement limit solutions",
+        "CPU time limit optimization",
+        "Heap size limit optimization",
+        "Callout limit solutions"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "testing",
+      "file": "apex-testing-patterns.md",
+      "path": "rag/testing/apex-testing-patterns.md",
+      "whenToRetrieve": [
+        "Writing Apex test classes",
+        "Creating test data factories",
+        "Testing with bulk data",
+        "Testing error scenarios",
+        "Implementing mocking patterns"
+      ],
+      "summary": "Comprehensive testing patterns and examples for Apex development. Covers test class structure, test data factories, bulk testing, error scenario testing, mocking, and test coverage strategies.",
+      "keyTopics": [
+        "Test class structure",
+        "Test data factories",
+        "Bulk testing patterns",
+        "Error scenario testing",
+        "Mocking and dependency injection",
+        "Test coverage strategies"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "testing",
+      "file": "test-data-factories.md",
+      "path": "rag/testing/test-data-factories.md",
+      "whenToRetrieve": [
+        "Creating reusable test data",
+        "Building test data factories",
+        "Creating related test records",
+        "Generating bulk test data"
+      ],
+      "summary": "Patterns and examples for creating reusable test data factories in Apex. Covers basic factories, relationship factories, customization patterns, and bulk data creation.",
+      "keyTopics": [
+        "Basic factory methods",
+        "Relationship factories",
+        "Customization patterns",
+        "Bulk data creation"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "quick-start",
+      "file": "apex-quick-start.md",
+      "path": "rag/quick-start/apex-quick-start.md",
+      "whenToRetrieve": [
+        "Getting started with Apex",
+        "Creating first Apex classes",
+        "Learning Apex class layering",
+        "Writing first test classes"
+      ],
+      "summary": "Step-by-step guide for getting started with Apex development. Covers creating Service, Selector, Domain, and Test classes with complete working examples.",
+      "keyTopics": [
+        "Service class creation",
+        "Selector class creation",
+        "Domain class creation",
+        "Test class creation",
+        "Deployment and testing"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "quick-start",
+      "file": "lwc-quick-start.md",
+      "path": "rag/quick-start/lwc-quick-start.md",
+      "whenToRetrieve": [
+        "Getting started with LWC",
+        "Creating first Lightning Web Component",
+        "Learning LWC data access",
+        "Adding interactivity to LWC"
+      ],
+      "summary": "Step-by-step guide for getting started with Lightning Web Component development. Covers creating components, data access with LDS, and adding interactivity.",
+      "keyTopics": [
+        "Component creation",
+        "Data access with LDS",
+        "Interactivity patterns",
+        "Deployment and testing"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "api-reference",
+      "file": "apex-api-reference.md",
+      "path": "rag/api-reference/apex-api-reference.md",
+      "whenToRetrieve": [
+        "Looking up Apex method signatures",
+        "Finding API usage examples",
+        "Understanding method parameters",
+        "Quick reference for Apex patterns"
+      ],
+      "summary": "Quick reference for common Apex classes, methods, and patterns. Provides method signatures, parameters, return types, and usage examples for Service, Domain, Selector, Integration, and Utility layers.",
+      "keyTopics": [
+        "Service layer methods",
+        "Domain layer methods",
+        "Selector layer methods",
+        "Integration layer methods",
+        "Utility class methods"
+      ],
+      "status": "completed",
+      "hasApiReference": true,
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "api-reference",
+      "file": "lwc-api-reference.md",
+      "path": "rag/api-reference/lwc-api-reference.md",
+      "whenToRetrieve": [
+        "Looking up LWC module APIs",
+        "Finding decorator usage",
+        "Understanding wire adapters",
+        "Quick reference for LWC patterns"
+      ],
+      "summary": "Quick reference for Lightning Web Component modules, decorators, and wire adapters. Provides API signatures, parameters, and usage examples for core LWC modules.",
+      "keyTopics": [
+        "Core modules",
+        "Lightning Data Service",
+        "Lightning Message Service",
+        "Schema imports",
+        "Decorators"
+      ],
+      "status": "completed",
+      "hasApiReference": true,
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "api-reference",
+      "file": "lds-api-reference.md",
+      "path": "rag/api-reference/lds-api-reference.md",
+      "whenToRetrieve": [
+        "Looking up LDS wire adapters",
+        "Finding LDS method signatures",
+        "Understanding cache management",
+        "Quick reference for LDS patterns"
+      ],
+      "summary": "Quick reference for Lightning Data Service wire adapters and methods. Provides API signatures, parameters, and usage examples for record access, mutations, and cache management.",
+      "keyTopics": [
+        "Record access",
+        "Record mutations",
+        "Object metadata",
+        "List views",
+        "Cache management"
+      ],
+      "status": "completed",
+      "hasApiReference": true,
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "api-reference",
+      "file": "soql-reference.md",
+      "path": "rag/api-reference/soql-reference.md",
+      "whenToRetrieve": [
+        "Looking up SOQL syntax",
+        "Finding SOQL function examples",
+        "Understanding relationship queries",
+        "Quick reference for SOQL patterns"
+      ],
+      "summary": "Quick reference for SOQL syntax, functions, and common query patterns. Provides SOQL syntax, relationship queries, aggregate queries, date/time functions, and common query patterns.",
+      "keyTopics": [
+        "Basic SOQL syntax",
+        "Relationship queries",
+        "Aggregate queries",
+        "Date and time functions",
+        "Security enforcement",
+        "Common query patterns"
+      ],
+      "status": "completed",
+      "hasApiReference": true,
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "api-reference",
+      "file": "platform-events-api.md",
+      "path": "rag/api-reference/platform-events-api.md",
+      "whenToRetrieve": [
+        "Looking up Platform Events APIs",
+        "Finding event publishing patterns",
+        "Understanding event subscription",
+        "Quick reference for Platform Events"
+      ],
+      "summary": "Quick reference for Platform Events publication, subscription, and payload patterns. Provides API signatures, parameters, and usage examples for publishing and subscribing to events.",
+      "keyTopics": [
+        "Publishing events",
+        "Subscribing to events",
+        "Event payload design",
+        "Error handling"
+      ],
+      "status": "completed",
+      "hasApiReference": true,
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lwc-development-guide.md",
+      "path": "rag/mcp-knowledge/lwc-development-guide.md",
+      "whenToRetrieve": [
+        "LWC development guidance",
+        "Understanding LWC technical stack",
+        "Learning LWC best practices",
+        "Understanding LWC project structure"
+      ],
+      "summary": "Comprehensive guidance for Lightning Web Components development, covering core principles, technical stack, best practices, and development workflows. Extracted from Salesforce MCP Service tools.",
+      "keyTopics": [
+        "Core principles",
+        "Technical stack",
+        "Best practices",
+        "Project structure",
+        "Quality standards"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lwc-best-practices.md",
+      "path": "rag/mcp-knowledge/lwc-best-practices.md",
+      "whenToRetrieve": [
+        "LWC best practices",
+        "Custom event patterns",
+        "Property naming conventions",
+        "Decorator usage",
+        "Lightning Message Service"
+      ],
+      "summary": "Comprehensive best practices for Lightning Web Components development, focusing on event handling, property naming, decorator usage, and component structure. Extracted from Salesforce MCP Service tools.",
+      "keyTopics": [
+        "Custom events",
+        "Property and attribute naming",
+        "Decorators",
+        "Lightning Message Service",
+        "Template directives",
+        "Error handling"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lwc-accessibility.md",
+      "path": "rag/mcp-knowledge/lwc-accessibility.md",
+      "whenToRetrieve": [
+        "LWC accessibility requirements",
+        "WCAG compliance",
+        "Accessibility patterns",
+        "Keyboard navigation",
+        "Screen reader support"
+      ],
+      "summary": "Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2.2 standards. Covers images, lists, form labels, keyboard accessibility, and accessibility patterns. Extracted from Salesforce MCP Service tools.",
+      "keyTopics": [
+        "WCAG 2.2 compliance",
+        "Image accessibility",
+        "Form label accessibility",
+        "Keyboard navigation",
+        "Screen reader support"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lds-patterns.md",
+      "path": "rag/mcp-knowledge/lds-patterns.md",
+      "whenToRetrieve": [
+        "Lightning Data Service patterns",
+        "Data consistency patterns",
+        "Referential integrity",
+        "Choosing UIAPI vs Apex"
+      ],
+      "summary": "Guidelines for building Lightning Web Components that interact with Salesforce's Lightning Data Service. Focuses on data consistency, referential integrity, and choosing UIAPI vs Apex. Extracted from Salesforce MCP Service tools.",
+      "keyTopics": [
+        "Data consistency",
+        "Referential integrity",
+        "Choosing UIAPI vs Apex",
+        "Base components",
+        "Schema imports"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "design-system-patterns.md",
+      "path": "rag/mcp-knowledge/design-system-patterns.md",
+      "whenToRetrieve": [
+        "Salesforce Lightning Design System patterns",
+        "SLDS component usage",
+        "Visual design patterns",
+        "Interaction patterns",
+        "Accessibility in SLDS"
+      ],
+      "summary": "Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software. Covers UX principles, visual design, component usage, interaction patterns, and accessibility. Extracted from Salesforce MCP Service tools.",
+      "keyTopics": [
+        "UX principles",
+        "Visual design",
+        "Component usage",
+        "Interaction patterns",
+        "Accessibility",
+        "Form design"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "service-layer-examples.md",
+      "path": "rag/code-examples/apex/service-layer-examples.md",
+      "whenToRetrieve": [
+        "Need Service class code examples",
+        "Implementing service layer patterns",
+        "Looking for copy-paste ready code"
+      ],
+      "summary": "Complete, working code examples for Apex Service Layer patterns. All examples are copy-paste ready and include tests.",
+      "keyTopics": [
+        "Service class examples",
+        "Domain and selector delegation",
+        "Error handling",
+        "Logging patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "domain-layer-examples.md",
+      "path": "rag/code-examples/apex/domain-layer-examples.md",
+      "whenToRetrieve": [
+        "Need Domain class code examples",
+        "Implementing domain layer patterns",
+        "Looking for validation examples"
+      ],
+      "summary": "Complete, working code examples for Apex Domain Layer patterns. All examples are copy-paste ready and include tests.",
+      "keyTopics": [
+        "Domain class examples",
+        "Validation patterns",
+        "Business rule application",
+        "Custom exceptions"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "selector-layer-examples.md",
+      "path": "rag/code-examples/apex/selector-layer-examples.md",
+      "whenToRetrieve": [
+        "Need Selector class code examples",
+        "Implementing selector layer patterns",
+        "Looking for SOQL query examples"
+      ],
+      "summary": "Complete, working code examples for Apex Selector Layer patterns. All examples are copy-paste ready and include tests.",
+      "keyTopics": [
+        "Selector class examples",
+        "SOQL query patterns",
+        "Security enforcement",
+        "Relationship queries"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "integration-examples.md",
+      "path": "rag/code-examples/apex/integration-examples.md",
+      "whenToRetrieve": [
+        "Need Integration class code examples",
+        "Implementing REST API callouts",
+        "Looking for Named Credentials patterns"
+      ],
+      "summary": "Complete, working code examples for Apex Integration Layer patterns. All examples are copy-paste ready and include tests.",
+      "keyTopics": [
+        "REST API callouts",
+        "Named Credentials",
+        "Error handling",
+        "Retry logic"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "trigger-examples.md",
+      "path": "rag/code-examples/apex/trigger-examples.md",
+      "whenToRetrieve": [
+        "Need Trigger handler code examples",
+        "Implementing trigger patterns",
+        "Looking for bulkification examples"
+      ],
+      "summary": "Complete, working code examples for Apex Trigger Handler patterns. All examples are copy-paste ready and include tests.",
+      "keyTopics": [
+        "Trigger handler examples",
+        "Bulkification patterns",
+        "Recursion prevention",
+        "Domain and Service delegation"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-service-template.md",
+      "path": "rag/code-examples/templates/apex-service-template.md",
+      "whenToRetrieve": [
+        "Need Service class template",
+        "Creating new service class",
+        "Looking for boilerplate code"
+      ],
+      "summary": "Service class template with error handling and logging. Copy-paste ready template for creating new service classes.",
+      "keyTopics": [
+        "Service class template",
+        "Error handling",
+        "Logging patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-domain-template.md",
+      "path": "rag/code-examples/templates/apex-domain-template.md",
+      "whenToRetrieve": [
+        "Need Domain class template",
+        "Creating new domain class",
+        "Looking for validation template"
+      ],
+      "summary": "Domain class template with validation and business rules. Copy-paste ready template for creating new domain classes.",
+      "keyTopics": [
+        "Domain class template",
+        "Validation patterns",
+        "Business rules"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-selector-template.md",
+      "path": "rag/code-examples/templates/apex-selector-template.md",
+      "whenToRetrieve": [
+        "Need Selector class template",
+        "Creating new selector class",
+        "Looking for SOQL template"
+      ],
+      "summary": "Selector class template with security enforcement. Copy-paste ready template for creating new selector classes.",
+      "keyTopics": [
+        "Selector class template",
+        "Security enforcement",
+        "SOQL patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-trigger-template.md",
+      "path": "rag/code-examples/templates/apex-trigger-template.md",
+      "whenToRetrieve": [
+        "Need Trigger handler template",
+        "Creating new trigger handler",
+        "Looking for trigger template"
+      ],
+      "summary": "Trigger handler template with Domain layer delegation. Copy-paste ready template for creating new trigger handlers.",
+      "keyTopics": [
+        "Trigger handler template",
+        "Domain delegation",
+        "Bulkification"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "test-class-template.md",
+      "path": "rag/code-examples/templates/test-class-template.md",
+      "whenToRetrieve": [
+        "Need test class template",
+        "Creating new test class",
+        "Looking for test template"
+      ],
+      "summary": "Test class template with test data factory and assertions. Copy-paste ready template for creating new test classes.",
+      "keyTopics": [
+        "Test class template",
+        "Test data factory",
+        "Assertions"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "development",
+      "file": "asynchronous-apex-patterns.md",
+      "path": "rag/development/asynchronous-apex-patterns.md",
+      "whenToRetrieve": [
+        "Implementing Batch Apex, Queueable, or Scheduled Apex",
+        "Choosing between async Apex types",
+        "Designing async processing patterns",
+        "Implementing batch chaining or Queueable chaining",
+        "Monitoring async job execution"
+      ],
+      "summary": "Comprehensive guide to asynchronous Apex patterns covering Batch, Queueable, Scheduled, and @future methods. Includes decision frameworks, implementation patterns, error handling, monitoring, and tradeoffs.",
+      "keyTopics": [
+        "Batch Apex patterns (stateless, stateful, chaining)",
+        "Queueable patterns (chaining, callouts, retry)",
+        "Scheduled Apex patterns (cron expressions, monitoring)",
+        "@future methods and migration to Queueable",
+        "Error handling and retry strategies",
+        "Job monitoring and status tracking"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "development",
+      "file": "custom-settings-metadata-patterns.md",
+      "path": "rag/development/custom-settings-metadata-patterns.md",
+      "whenToRetrieve": [
+        "Choosing between Custom Settings and Custom Metadata",
+        "Implementing configuration management",
+        "Using Hierarchical Custom Settings",
+        "Using Custom Metadata Types",
+        "Migrating from Custom Settings to Custom Metadata"
+      ],
+      "summary": "Guide to Custom Settings and Custom Metadata patterns for configuration management. Covers decision framework, usage patterns, migration strategies, and best practices.",
+      "keyTopics": [
+        "Custom Settings vs Custom Metadata decision framework",
+        "Hierarchical Custom Settings patterns",
+        "List Custom Settings patterns",
+        "Custom Metadata Type patterns",
+        "Migration from Custom Settings to Custom Metadata",
+        "Configuration management best practices"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "integrations",
+      "file": "change-data-capture-patterns.md",
+      "path": "rag/integrations/change-data-capture-patterns.md",
+      "whenToRetrieve": [
+        "Implementing Change Data Capture (CDC)",
+        "Processing CDC events",
+        "Combining CDC with Platform Events",
+        "Handling CDC errors and replay",
+        "Real-time integration with CDC"
+      ],
+      "summary": "Change Data Capture patterns for real-time change tracking. Covers CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns.",
+      "keyTopics": [
+        "Trigger-based CDC processing",
+        "CDC with Platform Events",
+        "CDC error handling and replay",
+        "CDC for real-time integrations",
+        "CDC monitoring and observability",
+        "CDC vs Platform Events tradeoffs"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "data-modeling",
+      "file": "data-migration-patterns.md",
+      "path": "rag/data-modeling/data-migration-patterns.md",
+      "whenToRetrieve": [
+        "Planning data migrations",
+        "Importing data into Salesforce",
+        "Transforming data during migration",
+        "Validating data during migration",
+        "Implementing rollback strategies"
+      ],
+      "summary": "Data migration patterns covering import strategies, transformation patterns, validation approaches, rollback strategies, and migration best practices.",
+      "keyTopics": [
+        "Data import strategies (Data Import Wizard, Data Loader, Bulk API)",
+        "Data transformation patterns",
+        "Data validation (pre, during, post migration)",
+        "Rollback strategies and backup procedures",
+        "Migration planning and testing"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "project-methods",
+      "file": "deployment-patterns.md",
+      "path": "rag/project-methods/deployment-patterns.md",
+      "whenToRetrieve": [
+        "Planning Salesforce deployments",
+        "Choosing deployment methods",
+        "Implementing source control strategies",
+        "Using Metadata API",
+        "Developing packages"
+      ],
+      "summary": "Deployment and CI/CD patterns covering deployment methods, source control strategies, Metadata API usage, package development, and deployment best practices.",
+      "keyTopics": [
+        "Deployment methods (Change Sets, Metadata API, SFDX)",
+        "Source control strategies and Git workflows",
+        "Metadata API patterns",
+        "Package development (Unlocked, Managed)",
+        "Deployment best practices and rollback strategies"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "project-methods",
+      "file": "sfdx-patterns.md",
+      "path": "rag/project-methods/sfdx-patterns.md",
+      "whenToRetrieve": [
+        "Using Salesforce DX",
+        "Setting up SFDX projects",
+        "Working with scratch orgs",
+        "Implementing CI/CD with SFDX",
+        "Managing source tracking"
+      ],
+      "summary": "Salesforce DX patterns covering project structure, commands, scratch org patterns, source tracking, and CI/CD integration.",
+      "keyTopics": [
+        "SFDX project structure",
+        "SFDX commands and workflows",
+        "Scratch org patterns",
+        "Source tracking and conflict resolution",
+        "CI/CD integration with SFDX"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "batch-examples.md",
+      "path": "rag/code-examples/apex/batch-examples.md",
+      "whenToRetrieve": [
+        "Need Batch Apex code examples",
+        "Implementing batch processing",
+        "Looking for batch chaining examples"
+      ],
+      "summary": "Complete Batch Apex code examples: stateless, stateful, chaining, error handling, and monitoring patterns.",
+      "keyTopics": [
+        "Stateless Batch Apex",
+        "Stateful Batch with state management",
+        "Batch chaining patterns",
+        "Batch error handling and retry",
+        "Batch monitoring patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "queueable-examples.md",
+      "path": "rag/code-examples/apex/queueable-examples.md",
+      "whenToRetrieve": [
+        "Need Queueable code examples",
+        "Implementing Queueable jobs",
+        "Looking for Queueable chaining examples"
+      ],
+      "summary": "Complete Queueable Apex code examples: basic, chaining, callouts, retry logic, and monitoring patterns.",
+      "keyTopics": [
+        "Basic Queueable",
+        "Chained Queueable jobs",
+        "Queueable with callouts",
+        "Queueable retry pattern",
+        "Queueable monitoring"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "scheduled-examples.md",
+      "path": "rag/code-examples/apex/scheduled-examples.md",
+      "whenToRetrieve": [
+        "Need Scheduled Apex code examples",
+        "Implementing scheduled jobs",
+        "Looking for cron expression examples"
+      ],
+      "summary": "Complete Scheduled Apex code examples: basic scheduled, cron expressions, scheduled batch jobs, error handling, and monitoring.",
+      "keyTopics": [
+        "Basic Scheduled Apex",
+        "Cron expression examples",
+        "Scheduled batch job",
+        "Scheduled with error handling",
+        "Scheduled job monitoring"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "cdc-examples.md",
+      "path": "rag/code-examples/integrations/cdc-examples.md",
+      "whenToRetrieve": [
+        "Need CDC code examples",
+        "Implementing CDC event processing",
+        "Looking for CDC integration patterns"
+      ],
+      "summary": "Complete Change Data Capture code examples: trigger handlers, Platform Event integration, error handling, and replay patterns.",
+      "keyTopics": [
+        "Basic CDC trigger handler",
+        "CDC with Platform Events",
+        "CDC error handling and retry",
+        "CDC event replay pattern",
+        "CDC monitoring pattern"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "custom-settings-examples.md",
+      "path": "rag/code-examples/utilities/custom-settings-examples.md",
+      "whenToRetrieve": [
+        "Need Custom Settings code examples",
+        "Using Hierarchical Custom Settings",
+        "Using List Custom Settings"
+      ],
+      "summary": "Complete Custom Settings code examples: hierarchical and list custom settings usage in Apex and Flows.",
+      "keyTopics": [
+        "Hierarchical Custom Settings usage",
+        "List Custom Settings usage",
+        "Custom Settings in Apex",
+        "Custom Settings in Flows"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "custom-metadata-examples.md",
+      "path": "rag/code-examples/utilities/custom-metadata-examples.md",
+      "whenToRetrieve": [
+        "Need Custom Metadata code examples",
+        "Using Custom Metadata in Apex",
+        "Using Custom Metadata in Flows"
+      ],
+      "summary": "Complete Custom Metadata code examples: configuration patterns, Apex queries, Flow integration, and migration from Custom Settings.",
+      "keyTopics": [
+        "Custom Metadata in Apex",
+        "Custom Metadata in Flows",
+        "Custom Metadata for configuration",
+        "Migration from Custom Settings"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "metadata-api-examples.md",
+      "path": "rag/code-examples/utilities/metadata-api-examples.md",
+      "whenToRetrieve": [
+        "Need Metadata API code examples",
+        "Implementing metadata deployment",
+        "Automating metadata operations"
+      ],
+      "summary": "Metadata API code examples: deployment, retrieval, and automation patterns.",
+      "keyTopics": [
+        "Metadata API deployment",
+        "Metadata API retrieval",
+        "Metadata API automation"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "sfdx-examples.md",
+      "path": "rag/code-examples/utilities/sfdx-examples.md",
+      "whenToRetrieve": [
+        "Need SFDX code examples",
+        "Setting up SFDX projects",
+        "Implementing CI/CD with SFDX"
+      ],
+      "summary": "Salesforce DX code examples: project setup, deployment scripts, and CI/CD integration patterns.",
+      "keyTopics": [
+        "SFDX project setup",
+        "SFDX deployment scripts",
+        "SFDX CI/CD patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "data-migration-examples.md",
+      "path": "rag/code-examples/utilities/data-migration-examples.md",
+      "whenToRetrieve": [
+        "Need data migration code examples",
+        "Implementing data import with validation",
+        "Looking for migration error handling"
+      ],
+      "summary": "Data migration code examples: import with validation, transformation patterns, error handling, and rollback patterns.",
+      "keyTopics": [
+        "Data import with validation",
+        "Data transformation patterns",
+        "Migration error handling",
+        "Rollback patterns",
+        "Migration monitoring"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-batch-template.md",
+      "path": "rag/code-examples/templates/apex-batch-template.md",
+      "whenToRetrieve": [
+        "Need Batch Apex template",
+        "Creating new batch class",
+        "Looking for batch template"
+      ],
+      "summary": "Batch Apex template for bulk processing. Copy-paste ready template for creating new batch classes.",
+      "keyTopics": [
+        "Batch Apex template",
+        "Stateless and stateful patterns",
+        "Error handling"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-queueable-template.md",
+      "path": "rag/code-examples/templates/apex-queueable-template.md",
+      "whenToRetrieve": [
+        "Need Queueable template",
+        "Creating new Queueable class",
+        "Looking for Queueable template"
+      ],
+      "summary": "Queueable Apex template for async processing. Copy-paste ready template for creating new Queueable classes.",
+      "keyTopics": [
+        "Queueable template",
+        "Chaining patterns",
+        "Callout patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-scheduled-template.md",
+      "path": "rag/code-examples/templates/apex-scheduled-template.md",
+      "whenToRetrieve": [
+        "Need Scheduled Apex template",
+        "Creating new scheduled class",
+        "Looking for scheduled template"
+      ],
+      "summary": "Scheduled Apex template for time-based automation. Copy-paste ready template for creating new scheduled classes.",
+      "keyTopics": [
+        "Scheduled Apex template",
+        "Cron expressions",
+        "Error handling"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "sfdx-project-template.md",
+      "path": "rag/code-examples/templates/sfdx-project-template.md",
+      "whenToRetrieve": [
+        "Need SFDX project template",
+        "Setting up new SFDX project",
+        "Looking for project structure"
+      ],
+      "summary": "SFDX project template for initializing new projects. Copy-paste ready template for project setup.",
+      "keyTopics": [
+        "SFDX project structure",
+        "Scratch org configuration",
+        "Project setup"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "ci-cd-template.md",
+      "path": "rag/code-examples/templates/ci-cd-template.md",
+      "whenToRetrieve": [
+        "Need CI/CD template",
+        "Setting up CI/CD pipeline",
+        "Looking for deployment automation"
+      ],
+      "summary": "CI/CD pipeline template for Salesforce deployment automation. Copy-paste ready template for CI/CD setup.",
+      "keyTopics": [
+        "CI/CD pipeline template",
+        "GitHub Actions example",
+        "Automated deployment"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
     }
   ],
   "retrievalGuidelines": {
     "whenToUse": [
       "Architecture Questions: Designing system architecture, integration patterns, multi-tenant solutions, or portal architecture",
-      "Integration Questions: Implementing ETL, API, or event-driven integrations, SIS synchronization, or integration platforms",
+      "Integration Questions: Implementing ETL, API, or event-driven integrations, SIS synchronization, integration platforms, or Change Data Capture (CDC) patterns",
       "Identity Questions: Implementing SSO, multi-identity provider architectures, or login handlers",
-      "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, lead management and conversion patterns, setting up custom objects with fields, layouts, and permissions, or choosing file storage mechanisms (ContentVersion, Attachments, Documents)",
+      "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, lead management and conversion patterns, setting up custom objects with fields, layouts, and permissions, choosing file storage mechanisms (ContentVersion, Attachments, Documents), or planning data migrations",
       "Security Questions: Implementing permission set-driven security, managing access control, or securing Salesforce data for LLM systems",
-      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, optimizing governor limits and performance, building dynamic SOQL queries, implementing relationship queries, or performing org maintenance",
-      "Project Methods Questions: Sprint-based delivery, testing strategies, or quality standards",
-      "Troubleshooting Questions: Integration debugging, data reconciliation, or root cause analysis",
-      "Pattern Questions: Looking for reusable patterns or best practices"
+      "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, optimizing governor limits and performance, building dynamic SOQL queries, implementing relationship queries, performing org maintenance, implementing asynchronous Apex (Batch, Queueable, Scheduled), or using Custom Settings and Custom Metadata",
+      "Project Methods Questions: Sprint-based delivery, testing strategies, quality standards, deployment patterns, or Salesforce DX workflows",
+      "Troubleshooting Questions: Integration debugging, data reconciliation, common errors, or root cause analysis",
+      "Pattern Questions: Looking for reusable patterns or best practices",
+      "Code Generation Questions: Need complete, working code examples, implementing specific patterns, or looking for copy-paste ready code",
+      "Testing Questions: Writing test classes, creating test data factories, testing patterns, or test coverage strategies",
+      "Quick Start Questions: Getting started with Apex, LWC, or other Salesforce technologies",
+      "API Reference Questions: Looking up method signatures, API usage, or quick reference for common patterns",
+      "MCP Knowledge Questions: Official Salesforce guidance, best practices, or MCP-validated patterns"
     ],
     "howToUse": [
       "Identify Domain: Determine which domain folder contains relevant knowledge",
@@ -744,22 +1703,27 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 30,
-    "completedFiles": 30,
+    "totalFiles": 68,
+    "completedFiles": 68,
     "plannedFiles": 0,
-    "domains": 10,
-    "domainsWithFiles": 10
+    "domains": 15,
+    "domainsWithFiles": 15
   },
   "coverage": {
     "architecture": 2,
-    "integrations": 4,
+    "integrations": 5,
     "identity-sso": 1,
-    "data-modeling": 6,
+    "data-modeling": 7,
     "security": 2,
-    "project-methods": 2,
-    "development": 9,
-    "troubleshooting": 2,
+    "project-methods": 4,
+    "development": 10,
+    "troubleshooting": 5,
     "patterns": 1,
-    "glossary": 1
+    "glossary": 1,
+    "testing": 2,
+    "quick-start": 2,
+    "api-reference": 5,
+    "mcp-knowledge": 5,
+    "code-examples": 22
   }
 }

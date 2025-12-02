@@ -142,6 +142,8 @@ Consider dead-letter queues for events that cannot be processed after retries. E
 
 Consider using Change Data Capture (CDC) alongside Platform Events:
 
+**Related**: [Change Data Capture Patterns](rag/integrations/change-data-capture-patterns.md) - Complete CDC patterns guide, [CDC Examples](rag/code-examples/integrations/cdc-examples.md)
+
 - CDC for high-volume, field-level change tracking
 - Platform Events for business-level events requiring orchestration
 - Use CDC events to trigger Platform Event publication for complex business logic

@@ -1,0 +1,404 @@
+# Apex Testing Patterns
+
+> Comprehensive testing patterns and examples for Apex development.
+
+## Overview
+
+This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories.
+
+**Related Patterns**:
+- [Testing Strategy](rag/project-methods/testing-strategy.md) - Overall testing strategy
+- [Apex Patterns](rag/development/apex-patterns.md) - Apex development patterns
+
+## Core Principles
+
+### Test Class Structure
+- Use `@isTest` annotation
+- Make test classes `private`
+- Use descriptive test method names: `test[MethodName]_[Scenario]`
+- Use `Test.startTest()` and `Test.stopTest()` to reset governor limits
+- Minimize logic within test blocks
+
+### Test Data Factories
+- Create reusable test data factory methods
+- Avoid `@SeeAllData` annotation
+- Use factories for consistent test data
+- Support bulk test data creation
+
+### Assertions
+- Always include assertions
+- Use new Salesforce Assert Class: `System.Assert`
+- Verify both positive and negative scenarios
+- Test edge cases and error conditions
+
+## Patterns
+
+### Pattern 1: Basic Test Class Structure
+
+**When to use**: Standard test class for any Apex class
+
+**Implementation**:
+```apex
+@isTest
+private class ContactServiceTest {
+    
+    @isTest
+    static void testProcessContacts_Success() {
+        // Arrange: Create test data
+        List<Contact> testContacts = createTestContacts(2);
+        insert testContacts;
+        
+        Set<Id> contactIds = new Set<Id>();
+        for (Contact c : testContacts) {
+            contactIds.add(c.Id);
+        }
+        
+        // Act: Execute code under test
+        Test.startTest();
+        List<Id> result = ContactService.processContacts(contactIds);
+        Test.stopTest();
+        
+        // Assert: Verify results
+        System.assertEquals(2, result.size(), 'Should process 2 contacts');
+    }
+    
+    private static List<Contact> createTestContacts(Integer count) {
+        List<Contact> contacts = new List<Contact>();
+        for (Integer i = 0; i < count; i++) {
+            contacts.add(new Contact(
+                LastName = 'Test' + i,
+                Email = 'test' + i + '@example.com'
+            ));
+        }
+        return contacts;
+    }
+}
+```
+
+**Best Practices**:
+- Use Arrange-Act-Assert pattern
+- Create test data in setup methods or factories
+- Use descriptive test method names
+- Include assertions with messages
+
+---
+
+### Pattern 2: Test Data Factory
+
+**When to use**: Reusable test data across multiple test classes
+
+**Implementation**:
+```apex
+@isTest
+public class TestDataFactory {
+    
+    /**
+     * Creates test Contact records
+     * @param count Number of contacts to create
+     * @param doInsert Whether to insert records
+     * @return List of Contact records
+     */
+    public static List<Contact> createContacts(Integer count, Boolean doInsert) {
+        List<Contact> contacts = new List<Contact>();
+        
+        for (Integer i = 0; i < count; i++) {
+            contacts.add(new Contact(
+                LastName = 'TestContact' + i,
+                Email = 'test' + i + '@example.com',
+                Phone = '555-000' + i
+            ));
+        }
+        
+        if (doInsert) {
+            insert contacts;
+        }
+        
+        return contacts;
+    }
+    
+    /**
+     * Creates test Account with Contacts
+     * @param accountName Account name
+     * @param contactCount Number of contacts
+     * @return Account with related contacts
+     */
+    public static Account createAccountWithContacts(String accountName, Integer contactCount) {
+        Account acc = new Account(Name = accountName);
+        insert acc;
+        
+        List<Contact> contacts = new List<Contact>();
+        for (Integer i = 0; i < contactCount; i++) {
+            contacts.add(new Contact(
+                LastName = 'Contact' + i,
+                AccountId = acc.Id
+            ));
+        }
+        insert contacts;
+        
+        return acc;
+    }
+}
+```
+
+**Usage**:
+```apex
+@isTest
+private class MyTestClass {
+    @isTest
+    static void testMethod() {
+        List<Contact> contacts = TestDataFactory.createContacts(5, true);
+        // Use contacts in test
+    }
+}
+```
+
+**Best Practices**:
+- Make factory methods `public static`
+- Support both insert and non-insert scenarios
+- Create related records together
+- Use consistent naming conventions
+
+---
+
+### Pattern 3: Bulk Testing
+
+**When to use**: Testing bulkification and governor limits
+
+**Implementation**:
+```apex
+@isTest
+private class ContactServiceTest {
+    
+    @isTest
+    static void testProcessContacts_Bulk() {
+        // Create bulk test data (200+ records)
+        List<Contact> testContacts = TestDataFactory.createContacts(200, true);
+        
+        Set<Id> contactIds = new Set<Id>();
+        for (Contact c : testContacts) {
+            contactIds.add(c.Id);
+        }
+        
+        Test.startTest();
+        List<Id> result = ContactService.processContacts(contactIds);
+        Test.stopTest();
+        
+        // Verify bulk processing
+        System.assertEquals(200, result.size(), 'Should process all 200 contacts');
+        
+        // Verify no governor limit errors
+        // (Test will fail if limits exceeded)
+    }
+}
+```
+
+**Best Practices**:
+- Test with 200+ records to verify bulkification
+- Verify all records processed correctly
+- Test governor limit compliance
+- Use `Test.startTest()` and `Test.stopTest()` to reset limits
+
+---
+
+### Pattern 4: Error Scenario Testing
+
+**When to use**: Testing error handling and exceptions
+
+**Implementation**:
+```apex
+@isTest
+private class ContactServiceTest {
+    
+    @isTest
+    static void testProcessContacts_InvalidInput() {
+        // Test with null input
+        Test.startTest();
+        try {
+            ContactService.processContacts(null);
+            System.assert(false, 'Should throw exception');
+        } catch (IllegalArgumentException e) {
+            System.assert(e.getMessage().contains('cannot be null'), 'Should throw appropriate error');
+        }
+        Test.stopTest();
+    }
+    
+    @isTest
+    static void testProcessContacts_EmptySet() {
+        // Test with empty set
+        Test.startTest();
+        List<Id> result = ContactService.processContacts(new Set<Id>());
+        Test.stopTest();
+        
+        System.assertEquals(0, result.size(), 'Should return empty list');
+    }
+}
+```
+
+**Best Practices**:
+- Test all error scenarios
+- Verify exception types and messages
+- Test edge cases (null, empty, invalid input)
+- Use try-catch for expected exceptions
+
+---
+
+### Pattern 5: Mocking and Dependency Injection
+
+**When to use**: Testing classes with external dependencies
+
+**Implementation**:
+```apex
+// Interface for dependency
+public interface IHttpService {
+    HttpResponse makeCallout(String endpoint);
+}
+
+// Implementation
+public class HttpService implements IHttpService {
+    public HttpResponse makeCallout(String endpoint) {
+        // Real implementation
+    }
+}
+
+// Mock implementation
+@isTest
+private class MockHttpService implements IHttpService {
+    public HttpResponse makeCallout(String endpoint) {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setBody('{"success": true}');
+        return res;
+    }
+}
+
+// Service using dependency injection
+public class ContactSyncService {
+    private IHttpService httpService;
+    
+    public ContactSyncService(IHttpService httpService) {
+        this.httpService = httpService;
+    }
+    
+    public void syncContact(Contact contact) {
+        HttpResponse res = httpService.makeCallout('/api/contacts');
+        // Process response
+    }
+}
+
+// Test with mock
+@isTest
+private class ContactSyncServiceTest {
+    @isTest
+    static void testSyncContact_Success() {
+        MockHttpService mockHttp = new MockHttpService();
+        ContactSyncService service = new ContactSyncService(mockHttp);
+        
+        Contact testContact = TestDataFactory.createContacts(1, true)[0];
+        
+        Test.startTest();
+        service.syncContact(testContact);
+        Test.stopTest();
+        
+        // Verify sync completed
+    }
+}
+```
+
+**Best Practices**:
+- Use interfaces for dependencies
+- Create mock implementations for testing
+- Inject dependencies via constructor
+- Test both success and error scenarios with mocks
+
+---
+
+### Pattern 6: Test Coverage Strategies
+
+**When to use**: Ensuring comprehensive test coverage
+
+**Implementation**:
+```apex
+@isTest
+private class ContactServiceTest {
+    
+    // Test all public methods
+    @isTest
+    static void testProcessContacts_Success() { }
+    
+    @isTest
+    static void testProcessContacts_Error() { }
+    
+    @isTest
+    static void testProcessContacts_Bulk() { }
+    
+    // Test all branches
+    @isTest
+    static void testProcessContacts_WithAccount() { }
+    
+    @isTest
+    static void testProcessContacts_WithoutAccount() { }
+    
+    // Test edge cases
+    @isTest
+    static void testProcessContacts_SingleRecord() { }
+    
+    @isTest
+    static void testProcessContacts_MaxRecords() { }
+}
+```
+
+**Best Practices**:
+- Aim for 100% code coverage (minimum 90%)
+- Test all public methods
+- Test all code branches (if/else, switch)
+- Test edge cases and error scenarios
+- Use code coverage tools to identify gaps
+
+---
+
+## Common Patterns Summary
+
+### Test Method Naming
+- `test[MethodName]_[Scenario]` - Standard pattern
+- Examples: `testProcessContacts_Success`, `testProcessContacts_Error`, `testProcessContacts_Bulk`
+
+### Test Structure
+1. **Arrange**: Create test data
+2. **Act**: Execute code under test
+3. **Assert**: Verify results
+
+### Test Data Creation
+- Use test data factories
+- Support bulk data creation
+- Create related records together
+
+### Assertions
+- Always include assertions
+- Use descriptive assertion messages
+- Verify both positive and negative scenarios
+
+---
+
+## Best Practices
+
+1. **Use `@isTest` annotation** for all test classes
+2. **Make test classes `private`**
+3. **Use descriptive test method names**
+4. **Use `Test.startTest()` and `Test.stopTest()`** to reset governor limits
+5. **Minimize logic within test blocks**
+6. **Create test data factories** for reusability
+7. **Test with bulk data** (200+ records)
+8. **Include assertions** in all tests
+9. **Test error scenarios** and edge cases
+10. **Aim for 100% code coverage** (minimum 90%)
+11. **Avoid `@SeeAllData` annotation**
+12. **Use mocking** for external dependencies
+
+---
+
+## Related Patterns
+
+- [Testing Strategy](rag/project-methods/testing-strategy.md) - Overall testing strategy
+- [Apex Patterns](rag/development/apex-patterns.md) - Apex development patterns
+- [Test Class Template](rag/code-examples/templates/test-class-template.md) - Test class template
+

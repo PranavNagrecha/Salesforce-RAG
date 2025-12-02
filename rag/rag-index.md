@@ -24,6 +24,11 @@ rag/
 ├── troubleshooting/      # Debugging and troubleshooting
 ├── patterns/             # Reusable design patterns
 ├── glossary/             # Terminology and definitions
+├── code-examples/        # Complete, working code examples
+├── testing/              # Testing patterns and examples
+├── quick-start/          # Quick-start guides
+├── api-reference/        # API references and method signatures
+├── mcp-knowledge/        # MCP-extracted knowledge
 └── rag-index.md          # This file
 ```
 
@@ -68,6 +73,7 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 - [integration-platform-patterns.md](rag/integrations/integration-platform-patterns.md) — Patterns for implementing integrations using MuleSoft and Dell Boomi platforms as security boundaries and transformation layers
 - [sis-sync-patterns.md](rag/integrations/sis-sync-patterns.md) — High-volume batch synchronization patterns for integrating with Student Information Systems using file-based staging and idempotent upserts
 - [salesforce-to-llm-data-pipelines.md](rag/integrations/salesforce-to-llm-data-pipelines.md) — Pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
+- [change-data-capture-patterns.md](rag/integrations/change-data-capture-patterns.md) — Change Data Capture patterns: CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns
 
 ### etl-vs-api-vs-events.md
 
@@ -151,6 +157,7 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - [lead-management-patterns.md](rag/data-modeling/lead-management-patterns.md) — Comprehensive data model and process guide for Salesforce lead management, conversion, duplicate rules, and assignment patterns
 - [object-setup-and-configuration.md](rag/data-modeling/object-setup-and-configuration.md) — Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
 - [file-management-patterns.md](rag/data-modeling/file-management-patterns.md) — File management patterns covering ContentVersion vs Attachments vs Documents, file storage, sharing, versioning, and migration strategies
+- [data-migration-patterns.md](rag/data-modeling/data-migration-patterns.md) — Data migration patterns: import strategies, transformation patterns, validation approaches, rollback strategies, and migration best practices
 
 ### external-ids-and-integration-keys.md
 
@@ -287,6 +294,8 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - [locking-and-concurrency-strategies.md](rag/development/locking-and-concurrency-strategies.md) — Row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, and deadlock prevention
 - [governor-limits-and-optimization.md](rag/development/governor-limits-and-optimization.md) — Governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management
 - [soql-query-patterns.md](rag/development/soql-query-patterns.md) — Practical SOQL query patterns and examples for common scenarios, including relationship queries, aggregate queries, subqueries, maintenance queries, and cursor-based pagination
+- [asynchronous-apex-patterns.md](rag/development/asynchronous-apex-patterns.md) — Comprehensive guide to asynchronous Apex: Batch, Queueable, Scheduled, and @future methods with decision frameworks, patterns, and best practices
+- [custom-settings-metadata-patterns.md](rag/development/custom-settings-metadata-patterns.md) — Guide to Custom Settings and Custom Metadata: decision framework, usage patterns, migration strategies, and best practices
 
 ### error-handling-and-logging.md
 
@@ -430,10 +439,13 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 ## Troubleshooting
 
-Debugging and troubleshooting approaches for integration debugging, data reconciliation, and root cause analysis.
+Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis.
 
 - [integration-debugging.md](rag/troubleshooting/integration-debugging.md) — Systematic approaches to troubleshooting integration failures using SOQL debugging, history object queries, and root cause analysis
 - [data-reconciliation.md](rag/troubleshooting/data-reconciliation.md) — Approaches to reconciling data between Salesforce and external systems using external IDs and integration job tracking
+- [common-apex-errors.md](rag/troubleshooting/common-apex-errors.md) — Common Apex errors with solutions: UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION
+- [common-lwc-errors.md](rag/troubleshooting/common-lwc-errors.md) — Common LWC errors with solutions: property access errors, wire adapter errors, event handling errors
+- [governor-limit-errors.md](rag/troubleshooting/governor-limit-errors.md) — Governor limit errors and solutions: too many SOQL queries, too many DML statements, CPU time limits, heap size limits
 
 ### integration-debugging.md
 
@@ -513,6 +525,42 @@ Project delivery and methodology for sprint-based delivery, testing strategies, 
 
 - [delivery-framework.md](rag/project-methods/delivery-framework.md) — Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects
 - [testing-strategy.md](rag/project-methods/testing-strategy.md) — Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
+- [deployment-patterns.md](rag/project-methods/deployment-patterns.md) — Deployment and CI/CD patterns: deployment methods, source control strategies, Metadata API patterns, package development, and deployment best practices
+- [sfdx-patterns.md](rag/project-methods/sfdx-patterns.md) — Salesforce DX patterns: project structure, commands, scratch org patterns, source tracking, and CI/CD integration
+
+## Testing
+
+Testing patterns and examples for Apex, LWC, and integration testing.
+
+- [apex-testing-patterns.md](rag/testing/apex-testing-patterns.md) — Apex testing patterns: test class structure, test data factories, bulk testing, error scenario testing, mocking
+- [test-data-factories.md](rag/testing/test-data-factories.md) — Test data factory patterns: basic factories, relationship factories, customization, bulk data creation
+
+## Quick Start Guides
+
+Step-by-step guides for getting started with Salesforce development.
+
+- [apex-quick-start.md](rag/quick-start/apex-quick-start.md) — Getting started with Apex: create your first service, selector, domain, and test classes
+- [lwc-quick-start.md](rag/quick-start/lwc-quick-start.md) — Getting started with LWC: create your first component with data access and interactivity
+
+## API Reference
+
+Quick reference for common APIs, methods, and patterns.
+
+- [apex-api-reference.md](rag/api-reference/apex-api-reference.md) — Apex API reference: Service, Domain, Selector, Integration, Utility classes with method signatures
+- [lwc-api-reference.md](rag/api-reference/lwc-api-reference.md) — LWC API reference: modules, decorators, wire adapters, Lightning Data Service
+- [lds-api-reference.md](rag/api-reference/lds-api-reference.md) — Lightning Data Service API reference: getRecord, updateRecord, createRecord, deleteRecord, cache management
+- [soql-reference.md](rag/api-reference/soql-reference.md) — SOQL reference: syntax, functions, relationship queries, aggregate queries, date/time functions
+- [platform-events-api.md](rag/api-reference/platform-events-api.md) — Platform Events API reference: publishing, subscribing, payload design, error handling
+
+## MCP Knowledge
+
+Knowledge extracted from Salesforce MCP Service tools, providing official guidance and best practices.
+
+- [lwc-development-guide.md](rag/mcp-knowledge/lwc-development-guide.md) — LWC development guidance: core principles, technical stack, best practices, project structure
+- [lwc-best-practices.md](rag/mcp-knowledge/lwc-best-practices.md) — LWC best practices: custom events, property naming, decorators, Lightning Message Service, template directives
+- [lwc-accessibility.md](rag/mcp-knowledge/lwc-accessibility.md) — LWC accessibility: WCAG 2.2 compliance, images, lists, form labels, keyboard accessibility, link purpose
+- [lds-patterns.md](rag/mcp-knowledge/lds-patterns.md) — Lightning Data Service patterns: data consistency, referential integrity, choosing UIAPI vs Apex
+- [design-system-patterns.md](rag/mcp-knowledge/design-system-patterns.md) — Salesforce Lightning Design System patterns: UX principles, visual design, component usage, interaction patterns
 
 ### delivery-framework.md
 
@@ -543,6 +591,64 @@ Project delivery and methodology for sprint-based delivery, testing strategies, 
 - Test class design anti-patterns (@SeeAllData, single-record tests, etc.)
 - Design for testability best practices
 
+## Code Examples
+
+Complete, working code examples organized by category. All examples are copy-paste ready and include tests.
+
+- [Code Examples Index](rag/code-examples/code-examples-index.md) — Complete index of all code examples
+
+### Apex Examples
+- [Service Layer Examples](rag/code-examples/apex/service-layer-examples.md) — Service class implementations with domain and selector delegation
+- [Domain Layer Examples](rag/code-examples/apex/domain-layer-examples.md) — Object-specific business logic and validation
+- [Selector Layer Examples](rag/code-examples/apex/selector-layer-examples.md) — SOQL queries and data access patterns
+- [Integration Examples](rag/code-examples/apex/integration-examples.md) — External API callouts and transformations
+- [Trigger Examples](rag/code-examples/apex/trigger-examples.md) — Trigger handler patterns with bulkification
+- [Batch Examples](rag/code-examples/apex/batch-examples.md) — Batch Apex implementations: stateless, stateful, chaining, error handling, and monitoring
+- [Queueable Examples](rag/code-examples/apex/queueable-examples.md) — Queueable patterns: basic, chaining, callouts, retry logic, and monitoring
+- [Scheduled Examples](rag/code-examples/apex/scheduled-examples.md) — Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, and monitoring
+
+### Code Templates
+- [Service Template](rag/code-examples/templates/apex-service-template.md) — Service class template
+- [Domain Template](rag/code-examples/templates/apex-domain-template.md) — Domain class template
+- [Selector Template](rag/code-examples/templates/apex-selector-template.md) — Selector class template
+- [Trigger Template](rag/code-examples/templates/apex-trigger-template.md) — Trigger handler template
+- [Test Template](rag/code-examples/templates/test-class-template.md) — Test class template
+- [Batch Template](rag/code-examples/templates/apex-batch-template.md) — Batch Apex template
+- [Queueable Template](rag/code-examples/templates/apex-queueable-template.md) — Queueable Apex template
+- [Scheduled Template](rag/code-examples/templates/apex-scheduled-template.md) — Scheduled Apex template
+- [SFDX Project Template](rag/code-examples/templates/sfdx-project-template.md) — SFDX project setup template
+- [CI/CD Template](rag/code-examples/templates/ci-cd-template.md) — CI/CD pipeline template
+
+### LWC Examples
+- [Component Examples](rag/code-examples/lwc/component-examples.md) — Lightning Web Component implementations (coming soon)
+- [Service Examples](rag/code-examples/lwc/service-examples.md) — LWC service layer patterns (coming soon)
+- [Wire Examples](rag/code-examples/lwc/wire-examples.md) — Wire service and imperative call patterns (coming soon)
+- [Test Examples](rag/code-examples/lwc/test-examples.md) — Jest test examples for LWC (coming soon)
+
+### Flow Examples
+- [Record-Triggered Examples](rag/code-examples/flow/record-triggered-examples.md) — Before-save and after-save flow patterns (coming soon)
+- [Screen Flow Examples](rag/code-examples/flow/screen-flow-examples.md) — User interaction flow patterns (coming soon)
+- [Subflow Examples](rag/code-examples/flow/subflow-examples.md) — Reusable subflow patterns (coming soon)
+
+### Integration Examples
+- [REST API Examples](rag/code-examples/integrations/rest-api-examples.md) — Outbound and inbound REST API patterns (coming soon)
+- [Platform Events Examples](rag/code-examples/integrations/platform-events-examples.md) — Event publishing and subscription patterns (coming soon)
+- [Callout Examples](rag/code-examples/integrations/callout-examples.md) — HTTP callout patterns with error handling (coming soon)
+- [Bulk API Examples](rag/code-examples/integrations/bulk-api-examples.md) — Bulk data operations (coming soon)
+- [CDC Examples](rag/code-examples/integrations/cdc-examples.md) — Change Data Capture patterns: trigger handlers, Platform Event integration, error handling, and replay
+
+### Utility Examples
+- [Logging Examples](rag/code-examples/utilities/logging-examples.md) — Structured logging patterns (coming soon)
+- [Error Handling Examples](rag/code-examples/utilities/error-handling-examples.md) — Error handling and retry patterns (coming soon)
+- [Validation Examples](rag/code-examples/utilities/validation-examples.md) — Data validation patterns (coming soon)
+- [Custom Settings Examples](rag/code-examples/utilities/custom-settings-examples.md) — Custom Settings usage: hierarchical and list custom settings in Apex and Flows
+- [Custom Metadata Examples](rag/code-examples/utilities/custom-metadata-examples.md) — Custom Metadata usage: configuration patterns, Apex queries, Flow integration, and migration from Custom Settings
+- [Metadata API Examples](rag/code-examples/utilities/metadata-api-examples.md) — Metadata API patterns: deployment, retrieval, and automation
+- [SFDX Examples](rag/code-examples/utilities/sfdx-examples.md) — Salesforce DX patterns: project setup, deployment scripts, and CI/CD integration
+- [Data Migration Examples](rag/code-examples/utilities/data-migration-examples.md) — Data migration patterns: import with validation, transformation, error handling, and rollback
+
+**When to Retrieve**: Need complete, working code examples, implementing specific patterns, looking for copy-paste ready code, or need test examples for code patterns.
+
 ## Retrieval Guidelines
 
 ### When to Use This Library
@@ -558,7 +664,8 @@ This RAG library should be retrieved when:
 7. **Project Methods Questions**: Sprint-based delivery, testing strategies, or quality standards
 8. **Troubleshooting Questions**: Integration debugging, data reconciliation, or root cause analysis
 9. **Pattern Questions**: Looking for reusable patterns or best practices
-10. **Terminology Questions**: Clarifying what a term means or understanding core concepts
+10. **Code Generation Questions**: Need complete, working code examples, implementing specific patterns, or looking for copy-paste ready code
+11. **Terminology Questions**: Clarifying what a term means or understanding core concepts
 
 ### How to Use This Library
 
@@ -602,28 +709,30 @@ See individual RAG files for domain-specific terminology and definitions.
 
 ## File Status
 
-### Completed Files (29 total)
+### Completed Files (68 total)
 
 **Architecture (2 files)**:
 - ✅ `architecture/event-driven-architecture.md`
 - ✅ `architecture/portal-architecture.md`
 
-**Integrations (4 files)**:
+**Integrations (5 files)**:
 - ✅ `integrations/etl-vs-api-vs-events.md`
 - ✅ `integrations/integration-platform-patterns.md`
 - ✅ `integrations/sis-sync-patterns.md`
 - ✅ `integrations/salesforce-to-llm-data-pipelines.md`
+- ✅ `integrations/change-data-capture-patterns.md`
 
 **Identity & SSO (1 file)**:
 - ✅ `identity-sso/multi-tenant-identity-architecture.md`
 
-**Data Modeling (6 files)**:
+**Data Modeling (7 files)**:
 - ✅ `data-modeling/external-ids-and-integration-keys.md`
 - ✅ `data-modeling/student-lifecycle-data-model.md`
 - ✅ `data-modeling/case-management-data-model.md`
 - ✅ `data-modeling/lead-management-patterns.md`
 - ✅ `data-modeling/object-setup-and-configuration.md`
 - ✅ `data-modeling/file-management-patterns.md`
+- ✅ `data-modeling/data-migration-patterns.md`
 
 **Security (2 files)**:
 - ✅ `security/permission-set-architecture.md`
@@ -639,13 +748,66 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `development/locking-and-concurrency-strategies.md`
 - ✅ `development/governor-limits-and-optimization.md`
 
-**Troubleshooting (2 files)**:
+**Troubleshooting (5 files)**:
 - ✅ `troubleshooting/integration-debugging.md`
 - ✅ `troubleshooting/data-reconciliation.md`
+- ✅ `troubleshooting/common-apex-errors.md`
+- ✅ `troubleshooting/common-lwc-errors.md`
+- ✅ `troubleshooting/governor-limit-errors.md`
 
-**Project Methods (2 files)**:
+**Testing (2 files)**:
+- ✅ `testing/apex-testing-patterns.md`
+- ✅ `testing/test-data-factories.md`
+
+**Quick Start (2 files)**:
+- ✅ `quick-start/apex-quick-start.md`
+- ✅ `quick-start/lwc-quick-start.md`
+
+**API Reference (5 files)**:
+- ✅ `api-reference/apex-api-reference.md`
+- ✅ `api-reference/lwc-api-reference.md`
+- ✅ `api-reference/lds-api-reference.md`
+- ✅ `api-reference/soql-reference.md`
+- ✅ `api-reference/platform-events-api.md`
+
+**MCP Knowledge (5 files)**:
+- ✅ `mcp-knowledge/lwc-development-guide.md`
+- ✅ `mcp-knowledge/lwc-best-practices.md`
+- ✅ `mcp-knowledge/lwc-accessibility.md`
+- ✅ `mcp-knowledge/lds-patterns.md`
+- ✅ `mcp-knowledge/design-system-patterns.md`
+
+**Code Examples (22 files)**:
+- ✅ `code-examples/apex/service-layer-examples.md`
+- ✅ `code-examples/apex/domain-layer-examples.md`
+- ✅ `code-examples/apex/selector-layer-examples.md`
+- ✅ `code-examples/apex/integration-examples.md`
+- ✅ `code-examples/apex/trigger-examples.md`
+- ✅ `code-examples/apex/batch-examples.md`
+- ✅ `code-examples/apex/queueable-examples.md`
+- ✅ `code-examples/apex/scheduled-examples.md`
+- ✅ `code-examples/integrations/cdc-examples.md`
+- ✅ `code-examples/utilities/custom-settings-examples.md`
+- ✅ `code-examples/utilities/custom-metadata-examples.md`
+- ✅ `code-examples/utilities/metadata-api-examples.md`
+- ✅ `code-examples/utilities/sfdx-examples.md`
+- ✅ `code-examples/utilities/data-migration-examples.md`
+- ✅ `code-examples/templates/apex-service-template.md`
+- ✅ `code-examples/templates/apex-domain-template.md`
+- ✅ `code-examples/templates/apex-selector-template.md`
+- ✅ `code-examples/templates/apex-trigger-template.md`
+- ✅ `code-examples/templates/test-class-template.md`
+- ✅ `code-examples/templates/apex-batch-template.md`
+- ✅ `code-examples/templates/apex-queueable-template.md`
+- ✅ `code-examples/templates/apex-scheduled-template.md`
+- ✅ `code-examples/templates/sfdx-project-template.md`
+- ✅ `code-examples/templates/ci-cd-template.md`
+
+**Project Methods (4 files)**:
 - ✅ `project-methods/delivery-framework.md`
 - ✅ `project-methods/testing-strategy.md`
+- ✅ `project-methods/deployment-patterns.md`
+- ✅ `project-methods/sfdx-patterns.md`
 
 **Patterns (1 file)**:
 - ✅ `patterns/cross-cutting-patterns.md`
