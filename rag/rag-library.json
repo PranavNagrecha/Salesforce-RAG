@@ -8,6 +8,10 @@
     "identity-sso": "Identity and SSO patterns",
     "data-modeling": "Data modeling patterns",
     "security": "Security and access control patterns",
+    "operations": "Delivery & operations patterns",
+    "observability": "Observability & resilience patterns",
+    "data-governance": "Data governance & compliance patterns",
+    "adoption": "Adoption & change management patterns",
     "project-methods": "Project delivery and methodology",
     "development": "Development patterns and practices",
     "troubleshooting": "Debugging and troubleshooting",
@@ -1765,6 +1769,239 @@
         "Essential patterns"
       ],
       "status": "completed"
+    },
+    {
+      "domain": "operations",
+      "file": "cicd-patterns.md",
+      "path": "rag/operations/cicd-patterns.md",
+      "whenToRetrieve": [
+        "Implementing CI/CD for Salesforce",
+        "Choosing between metadata and source-tracked orgs",
+        "Using unlocked packages",
+        "Automating sandbox seeding",
+        "Implementing deployment validation",
+        "Planning rollback strategies"
+      ],
+      "summary": "Comprehensive CI/CD patterns for Salesforce covering metadata vs. source-tracked org decision framework, unlocked package development and promotion, automated sandbox seeding strategies, deployment validation approaches, and rollback patterns including metadata rollback, data rollback, and feature flag rollbacks.",
+      "keyTopics": [
+        "Metadata vs. source-tracked orgs decision framework",
+        "Unlocked package development and versioning",
+        "Sandbox seeding automation",
+        "Deployment validation strategies",
+        "Rollback patterns and procedures"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "operations",
+      "file": "environment-strategy.md",
+      "path": "rag/operations/environment-strategy.md",
+      "whenToRetrieve": [
+        "Designing org topologies for multi-team programs",
+        "Implementing data masking for PII/PHI",
+        "Planning sandbox refresh cadences",
+        "Managing multiple Salesforce environments"
+      ],
+      "summary": "Environment strategy patterns for Salesforce including org topology patterns (single org, multi-org, hybrid), data masking strategies for PII/PHI, test data anonymization, and sandbox refresh cadence planning.",
+      "keyTopics": [
+        "Org topology patterns for multi-team programs",
+        "Data masking and anonymization strategies",
+        "Sandbox refresh cadences",
+        "Environment management best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "operations",
+      "file": "release-governance.md",
+      "path": "rag/operations/release-governance.md",
+      "whenToRetrieve": [
+        "Establishing Change Advisory Boards",
+        "Implementing approval workflows",
+        "Creating risk-based release checklists",
+        "Managing release governance processes"
+      ],
+      "summary": "Release governance patterns including CAB structure and processes, multi-stage approval workflows, automated approval gates, and risk-based release checklists with deployment risk matrices.",
+      "keyTopics": [
+        "Change Advisory Board (CAB) structure",
+        "Approval workflow patterns",
+        "Risk-based release checklists",
+        "Deployment risk assessment"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "observability",
+      "file": "monitoring-alerting.md",
+      "path": "rag/observability/monitoring-alerting.md",
+      "whenToRetrieve": [
+        "Implementing monitoring and alerting for Platform Events",
+        "Monitoring API health",
+        "Tracking async job failures",
+        "Implementing log aggregation",
+        "Setting up system observability"
+      ],
+      "summary": "Monitoring and alerting patterns for Salesforce including Platform Events monitoring metrics, API health monitoring (response time, error rates, availability), async job failure detection (Batch, Queueable, Scheduled), and log aggregation patterns with centralized logging strategies.",
+      "keyTopics": [
+        "Platform Events monitoring and metrics",
+        "API health monitoring",
+        "Async job failure detection",
+        "Log aggregation patterns"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "observability",
+      "file": "performance-tuning.md",
+      "path": "rag/observability/performance-tuning.md",
+      "whenToRetrieve": [
+        "Optimizing query selectivity",
+        "Handling Large Data Volumes (LDV)",
+        "Mitigating governor limits",
+        "Implementing caching strategies",
+        "Tuning Salesforce performance"
+      ],
+      "summary": "Performance tuning patterns including query/selectivity optimization with indexed fields, LDV handling strategies and data archiving, governor limit mitigation patterns, and caching strategies using Platform Cache.",
+      "keyTopics": [
+        "Query/selectivity tuning with indexed fields",
+        "Large Data Volume (LDV) handling",
+        "Governor limit mitigation",
+        "Caching strategies"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "observability",
+      "file": "ha-dr-patterns.md",
+      "path": "rag/observability/ha-dr-patterns.md",
+      "whenToRetrieve": [
+        "Planning backup and restore strategies",
+        "Implementing failover patterns for integrations",
+        "Conducting business continuity drills",
+        "Designing high availability systems"
+      ],
+      "summary": "High availability and disaster recovery patterns including backup/restore approaches (data and metadata), failover patterns for integrations (circuit breakers, retry logic), and business continuity drills with RTO/RPO planning.",
+      "keyTopics": [
+        "Backup/restore strategies",
+        "Integration failover patterns",
+        "Business continuity planning",
+        "RTO/RPO objectives"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "data-governance",
+      "file": "data-residency-compliance.md",
+      "path": "rag/data-governance/data-residency-compliance.md",
+      "whenToRetrieve": [
+        "Handling PII/PHI data",
+        "Implementing GDPR/CCPA/SOC2 compliance",
+        "Configuring field-level encryption",
+        "Implementing Shield best practices"
+      ],
+      "summary": "Data residency and compliance patterns including PII/PHI identification and protection, GDPR/CCPA/SOC2 compliance frameworks, field-level encryption with Shield Encryption, and Shield best practices (Platform Encryption, Event Monitoring, Field Audit Trail).",
+      "keyTopics": [
+        "PII/PHI handling and protection",
+        "GDPR/CCPA/SOC2 compliance",
+        "Field-level encryption",
+        "Shield best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "data-governance",
+      "file": "data-quality-stewardship.md",
+      "path": "rag/data-governance/data-quality-stewardship.md",
+      "whenToRetrieve": [
+        "Implementing duplicate prevention for Accounts/Contacts",
+        "Configuring survivorship rules for data merges",
+        "Establishing master data governance",
+        "Managing data quality at scale"
+      ],
+      "summary": "Data quality and stewardship patterns including duplicate prevention beyond leads (Account/Contact duplicate rules), survivorship rules for data merges, and master data governance with data stewardship workflows and data quality metrics.",
+      "keyTopics": [
+        "Duplicate prevention for Accounts and Contacts",
+        "Survivorship rules and merge strategies",
+        "Master data governance",
+        "Data quality metrics and stewardship"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "testing",
+      "file": "automated-testing-patterns.md",
+      "path": "rag/testing/automated-testing-patterns.md",
+      "whenToRetrieve": [
+        "Implementing automated testing at scale",
+        "Creating UI test automation",
+        "Implementing contract tests for integrations",
+        "Conducting load testing"
+      ],
+      "summary": "Automated testing patterns for Salesforce at scale including advanced Apex test data factory patterns, UI test automation for LWC (Jest) and Experience Cloud (Selenium/Playwright), contract tests for APIs and events, and load testing patterns with performance testing strategies.",
+      "keyTopics": [
+        "Advanced test data factory patterns",
+        "UI test automation (Jest, Selenium, Playwright)",
+        "Contract testing for integrations",
+        "Load testing and scalability testing"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "testing",
+      "file": "non-functional-requirements.md",
+      "path": "rag/testing/non-functional-requirements.md",
+      "whenToRetrieve": [
+        "Implementing security testing",
+        "Accessibility testing for LWCs and portals",
+        "Defining performance benchmarks",
+        "Testing non-functional requirements"
+      ],
+      "summary": "Non-functional requirements testing including security testing patterns (vulnerability testing, penetration testing), accessibility testing for LWCs and portals (WCAG compliance), and performance benchmarks with SLA definition and performance testing frameworks.",
+      "keyTopics": [
+        "Security testing patterns",
+        "Accessibility testing (WCAG compliance)",
+        "Performance benchmarks and SLAs",
+        "NFR test automation"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "adoption",
+      "file": "user-readiness.md",
+      "path": "rag/adoption/user-readiness.md",
+      "whenToRetrieve": [
+        "Creating training plans",
+        "Establishing support models",
+        "Implementing feature adoption telemetry",
+        "Planning user readiness programs"
+      ],
+      "summary": "User readiness patterns including training curriculum design, role-based training, training delivery methods, help desk patterns, support workflows, and telemetry for feature adoption tracking.",
+      "keyTopics": [
+        "Training plans and curriculum design",
+        "Support models and workflows",
+        "Feature adoption telemetry",
+        "User engagement patterns"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "adoption",
+      "file": "org-health-checks.md",
+      "path": "rag/adoption/org-health-checks.md",
+      "whenToRetrieve": [
+        "Conducting technical debt triage",
+        "Performing baseline audits",
+        "Creating remediation playbooks",
+        "Maintaining org health"
+      ],
+      "summary": "Org health check patterns including technical debt identification and prioritization, baseline audits (code quality, configuration, data quality), and remediation playbooks for debt remediation, org cleanup, and optimization.",
+      "keyTopics": [
+        "Technical debt triage",
+        "Baseline audits",
+        "Remediation playbooks",
+        "Org health monitoring"
+      ],
+      "status": "completed"
     }
   ],
   "retrievalGuidelines": {
@@ -1775,6 +2012,10 @@
       "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, lead management and conversion patterns, setting up custom objects with fields, layouts, and permissions, choosing file storage mechanisms (ContentVersion, Attachments, Documents), or planning data migrations",
       "Security Questions: Implementing permission set-driven security, managing access control, or securing Salesforce data for LLM systems",
       "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, optimizing governor limits and performance, building dynamic SOQL queries, implementing relationship queries, performing org maintenance, implementing asynchronous Apex (Batch, Queueable, Scheduled), or using Custom Settings and Custom Metadata",
+      "Operations Questions: Implementing CI/CD, choosing between metadata and source-tracked orgs, using unlocked packages, automating sandbox seeding, implementing deployment validation, planning rollback strategies, designing org topologies, implementing data masking, planning refresh cadences, establishing release governance, or managing Change Advisory Boards",
+      "Observability Questions: Implementing monitoring and alerting, monitoring Platform Events, tracking API health, detecting async job failures, implementing log aggregation, optimizing query performance, handling Large Data Volumes, mitigating governor limits, implementing caching, planning backup/restore, implementing failover patterns, or conducting business continuity drills",
+      "Data Governance Questions: Handling PII/PHI data, implementing GDPR/CCPA/SOC2 compliance, configuring field-level encryption, implementing Shield best practices, preventing duplicates, configuring survivorship rules, or establishing master data governance",
+      "Adoption Questions: Creating training plans, establishing support models, implementing feature adoption telemetry, conducting technical debt triage, performing baseline audits, or creating remediation playbooks",
       "Project Methods Questions: Sprint-based delivery, testing strategies, quality standards, deployment patterns, or Salesforce DX workflows",
       "Troubleshooting Questions: Integration debugging, data reconciliation, common errors, or root cause analysis",
       "Pattern Questions: Looking for reusable patterns or best practices",
@@ -1816,11 +2057,11 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 73,
-    "completedFiles": 73,
+    "totalFiles": 85,
+    "completedFiles": 85,
     "plannedFiles": 0,
-    "domains": 15,
-    "domainsWithFiles": 15
+    "domains": 19,
+    "domainsWithFiles": 19
   },
   "coverage": {
     "architecture": 2,
@@ -1828,12 +2069,16 @@
     "identity-sso": 1,
     "data-modeling": 7,
     "security": 2,
+    "operations": 3,
+    "observability": 3,
+    "data-governance": 2,
+    "adoption": 2,
     "project-methods": 4,
     "development": 10,
     "troubleshooting": 6,
     "patterns": 1,
     "glossary": 1,
-    "testing": 3,
+    "testing": 4,
     "quick-start": 3,
     "api-reference": 5,
     "mcp-knowledge": 5,
