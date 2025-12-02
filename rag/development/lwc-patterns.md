@@ -239,26 +239,119 @@ LWCs are surgical tools for complex UI needs when:
 
 ## Accessibility
 
+Accessibility ensures that all users, including those using assistive technologies, can access and interact with your components. All LWC components should follow WCAG 2.2 standards.
+
+**Related Resources**:
+- [LWC Accessibility Guidelines](rag/mcp-knowledge/lwc-accessibility.md) - Comprehensive WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md) - Complete working code examples
+- [LWC Accessibility Testing](rag/testing/lwc-accessibility-testing.md) - Testing patterns and tools
+- [LWC Accessibility Troubleshooting](rag/troubleshooting/lwc-accessibility-errors.md) - Common errors and fixes
+- [LWC Accessibility Quick Start](rag/quick-start/lwc-accessibility-quick-start.md) - Quick start guide
+
 ### WCAG Guidelines
 
-- Follow WCAG guidelines for accessibility
-- Ensure keyboard navigation works
-- Support screen readers
+- Follow WCAG 2.2 guidelines for accessibility
+- Ensure keyboard navigation works for all interactive elements
+- Support screen readers (NVDA, JAWS, VoiceOver)
 - Provide alternative text for images
+- Maintain proper color contrast (4.5:1 for normal text, 3:1 for large text)
+- Test with keyboard-only navigation
+- Test with screen readers
+
+### Form Accessibility
+
+- **Labels**: All form controls must have programmatically associated labels
+  - Use `label` attribute for Lightning Base Components
+  - Use `<label>` with `for`/`id` for custom inputs
+  - Use `aria-label` when visual labels not feasible
+- **Error Messages**: Use `role="alert"` and `aria-describedby` for error messages
+- **Autocomplete**: Use appropriate autocomplete tokens for personal information fields
+- **Fieldset/Legend**: Use fieldset/legend for grouped form controls
+
+**Example**: See [Accessible Form Examples](rag/code-examples/lwc/accessibility-examples.md#form-accessibility-examples)
+
+### Keyboard Navigation
+
+- **Focus Indicators**: All interactive elements must have visible focus indicators (2px outline, 3:1 contrast)
+- **Tab Order**: Logical tab order through all interactive elements
+- **Keyboard Shortcuts**: Support Enter, Space, Escape keys appropriately
+- **Focus Trapping**: Modals must trap focus and close on Escape key
+- **Focus Return**: Focus returns to trigger element after modal close
+- **No Keyboard Traps**: Ensure users can navigate away from all areas
+
+**Example**: See [Keyboard Navigation Examples](rag/code-examples/lwc/accessibility-examples.md#keyboard-navigation-examples)
 
 ### Semantic HTML
 
-- Use semantic HTML elements
-- Proper heading hierarchy
-- Meaningful form labels
+- Use semantic HTML elements (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`)
+- Proper heading hierarchy (h1 → h2 → h3, no skipping levels)
+- Meaningful form labels (not just placeholder text)
 - Accessible form controls
+- Proper list markup (`<ul>`, `<ol>`, `<dl>`)
+- Proper table structure with headers and scope attributes
 
-### ARIA Labels
+**Example**: See [Semantic HTML Examples](rag/code-examples/lwc/accessibility-examples.md#semantic-html-examples)
 
-- Provide ARIA labels where needed
-- Support assistive technologies
-- Ensure proper role attributes
-- Test with screen readers
+### ARIA Labels and Attributes
+
+- **ARIA Labels**: Provide `aria-label` for icon-only buttons and custom components
+- **ARIA Roles**: Use appropriate `role` attributes for custom interactive components
+- **ARIA States**: Use ARIA states (aria-checked, aria-expanded, aria-busy, etc.)
+- **ARIA Live Regions**: Use `aria-live="polite"` for status updates, `aria-live="assertive"` for errors
+- **ARIA Descriptions**: Use `aria-describedby` to associate help text and error messages
+- **Modal Dialogs**: Use `role="dialog"` and `aria-modal="true"` for modals
+
+**Example**: See [ARIA Patterns Examples](rag/code-examples/lwc/accessibility-examples.md#aria-patterns)
+
+### Image Accessibility
+
+- **Decorative Images**: Use `alt=""` and optionally `aria-hidden="true"`
+- **Informative Images**: Use descriptive `alt` text that conveys the information
+- **Image Links**: Provide `aria-label` on the link, use `alt=""` on the image
+- **Complex Images**: Use `aria-describedby` with `figcaption` for detailed descriptions
+
+**Example**: See [Image Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md#image-accessibility)
+
+### Color and Contrast
+
+- **Text Contrast**: Normal text must meet 4.5:1 contrast ratio, large text 3:1
+- **Focus Indicators**: Focus outlines must meet 3:1 contrast ratio
+- **Not Color Alone**: Information must not be conveyed by color alone (use icons/text)
+- **SLDS Tokens**: Use SLDS color tokens for proper contrast
+
+**Example**: See [Color and Contrast Examples](rag/code-examples/lwc/accessibility-examples.md#color-and-contrast)
+
+### Dynamic Content Accessibility
+
+- **Loading States**: Use `aria-live="polite"` and `aria-busy="true"` for loading states
+- **Error Messages**: Use `role="alert"` and `aria-live="assertive"` for errors
+- **Success Messages**: Use `role="status"` and `aria-live="polite"` for success messages
+- **Status Updates**: Announce dynamic content changes to screen readers
+
+**Example**: See [Dynamic Content Examples](rag/code-examples/lwc/accessibility-examples.md#dynamic-content-accessibility)
+
+### Testing Accessibility
+
+- **Automated Testing**: Use axe-core, Lighthouse, or Salesforce Accessibility Scanner
+- **Manual Testing**: Test with keyboard-only navigation
+- **Screen Reader Testing**: Test with NVDA (Windows), JAWS (Windows), or VoiceOver (macOS/iOS)
+- **Color Contrast Testing**: Use WebAIM Contrast Checker
+- **Jest Testing**: Include accessibility tests in Jest test suites
+
+**See**: [LWC Accessibility Testing](rag/testing/lwc-accessibility-testing.md) for complete testing patterns
+
+### Common Accessibility Mistakes
+
+- Missing form labels
+- Missing ARIA labels on icon buttons
+- Keyboard traps in modals
+- Missing focus indicators
+- Insufficient color contrast
+- Missing alt text on images
+- Incorrect heading hierarchy
+- Missing semantic HTML
+
+**See**: [LWC Accessibility Troubleshooting](rag/troubleshooting/lwc-accessibility-errors.md) for solutions to common errors
 
 ## Responsive Design
 

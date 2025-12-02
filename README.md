@@ -12,6 +12,11 @@ This repository provides a Retrieval-Augmented Generation (RAG) knowledge base f
 - **Data Modeling**: External IDs, integration keys, student lifecycle models, case management models
 - **Security**: Permission set-driven security architecture
 - **Development**: Apex, Flow, Lightning Web Components (LWC), OmniStudio patterns, error handling, logging
+- **Operations**: CI/CD patterns, environment strategy, release governance
+- **Observability**: Monitoring, alerting, performance tuning, high availability, disaster recovery
+- **Data Governance**: Data residency, compliance (GDPR/CCPA/SOC2), data quality, stewardship
+- **Testing**: Apex testing, automated testing, non-functional requirements
+- **Adoption**: User readiness, org health checks, change management
 - **Troubleshooting**: Integration debugging, data reconciliation, root cause analysis
 - **Project Methods**: Sprint-based delivery, testing strategies, quality standards
 - **Patterns**: Cross-cutting patterns that span multiple domains
@@ -26,8 +31,13 @@ rag/
 ├── identity-sso/         # Identity and SSO patterns
 ├── data-modeling/        # Data modeling patterns
 ├── security/             # Security and access control patterns
+├── operations/            # Delivery & operations patterns
+├── observability/         # Observability & resilience patterns
+├── data-governance/      # Data governance & compliance patterns
+├── adoption/              # Adoption & change management patterns
 ├── project-methods/      # Project delivery and methodology
 ├── development/          # Development patterns and practices
+├── testing/              # Testing patterns and examples
 ├── troubleshooting/      # Debugging and troubleshooting
 ├── patterns/             # Reusable design patterns
 ├── glossary/             # Terminology and definitions
@@ -73,6 +83,7 @@ All content in this library:
 - **`rag/rag-index.md`**: Human-readable index with domain overviews and file descriptions
 - **`rag/rag-library.json`**: Machine-readable metadata with structured information for each knowledge file
 - **`examples/`**: Usage examples for different RAG frameworks and tools
+- **`QUALITY.md`**: Quality assurance checklist and verification guidelines for ensuring best-practice coverage
 
 ## Terminology
 

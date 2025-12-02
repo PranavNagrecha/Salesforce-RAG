@@ -221,3 +221,8 @@ Avoid comprehensive logging when:
 - Performance impact is unacceptable
 - Logging overhead outweighs benefits
 
+## Related Patterns
+
+- [Monitoring and Alerting](rag/observability/monitoring-alerting.md) - Monitoring patterns, log aggregation, and alerting strategies
+- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization patterns
+

@@ -180,6 +180,12 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 - **Alert on Failures**: Send notifications when event processing fails
 - **Monitor Event Retention**: Track events approaching 24-hour retention limit
 
+## Related Patterns
+
+- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Platform Events and event-driven patterns
+- [Integration Patterns](rag/integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [Monitoring and Alerting](rag/observability/monitoring-alerting.md) - CDC monitoring and event processing metrics
+
 ## Tradeoffs: CDC vs Platform Events vs Other Patterns
 
 ### CDC Advantages

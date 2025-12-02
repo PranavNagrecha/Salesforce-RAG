@@ -48,6 +48,9 @@ This directory contains standalone code examples that complement the pattern doc
 ### Wire and Data
 - [Wire Examples](lwc/wire-examples.md) - Wire service and imperative call patterns
 
+### Accessibility
+- [Accessibility Examples](lwc/accessibility-examples.md) - Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
+
 ### Testing
 - [Test Examples](lwc/test-examples.md) - Jest test examples for LWC
 
@@ -87,12 +90,32 @@ This directory contains standalone code examples that complement the pattern doc
 ### Validation
 - [Validation Examples](utilities/validation-examples.md) - Data validation patterns
 
+## Templates
+
+### Apex Templates
+- [Service Template](templates/apex-service-template.md) - Service class template
+- [Domain Template](templates/apex-domain-template.md) - Domain class template
+- [Selector Template](templates/apex-selector-template.md) - Selector class template
+- [Trigger Template](templates/apex-trigger-template.md) - Trigger handler template
+- [Batch Template](templates/apex-batch-template.md) - Batch Apex template
+- [Queueable Template](templates/apex-queueable-template.md) - Queueable Apex template
+- [Scheduled Template](templates/apex-scheduled-template.md) - Scheduled Apex template
+- [Test Class Template](templates/test-class-template.md) - Test class template
+
+### LWC Templates
+- [Accessible Component Template](templates/lwc-accessible-component-template.md) - Accessible LWC component template with all accessibility best practices
+
+### Deployment Templates
+- [SFDX Project Template](templates/sfdx-project-template.md) - SFDX project setup template
+- [CI/CD Template](templates/ci-cd-template.md) - CI/CD pipeline template
+
 ## How to Use
 
 1. **Find a pattern** in `rag/development/` or `rag/integrations/`
 2. **See code examples** linked from pattern files
 3. **Browse standalone examples** in this directory
 4. **Copy and adapt** code examples for your use case
+5. **Use templates** as starting points for new components
 
 ## Related Documentation
 

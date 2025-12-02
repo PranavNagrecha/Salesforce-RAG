@@ -1565,6 +1565,30 @@
     },
     {
       "domain": "code-examples",
+      "file": "accessibility-examples.md",
+      "path": "rag/code-examples/lwc/accessibility-examples.md",
+      "whenToRetrieve": [
+        "Need LWC accessibility code examples",
+        "Implementing accessible forms",
+        "Looking for keyboard navigation examples",
+        "Need ARIA pattern examples",
+        "Implementing accessible modals"
+      ],
+      "summary": "Complete LWC accessibility code examples: forms, keyboard navigation, ARIA patterns, images, semantic HTML, dynamic content, color/contrast following WCAG 2.2 standards.",
+      "keyTopics": [
+        "Accessible form patterns",
+        "Keyboard navigation examples",
+        "ARIA labels and descriptions",
+        "Image accessibility",
+        "Semantic HTML examples",
+        "Dynamic content accessibility",
+        "Color and contrast patterns"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
       "file": "apex-batch-template.md",
       "path": "rag/code-examples/templates/apex-batch-template.md",
       "whenToRetrieve": [
@@ -1652,6 +1676,95 @@
       ],
       "status": "completed",
       "hasCodeExamples": true
+    },
+    {
+      "domain": "code-examples",
+      "file": "lwc-accessible-component-template.md",
+      "path": "rag/code-examples/templates/lwc-accessible-component-template.md",
+      "whenToRetrieve": [
+        "Need accessible LWC component template",
+        "Creating new accessible component",
+        "Looking for accessibility template"
+      ],
+      "summary": "Complete accessible LWC component template with all accessibility best practices: forms, keyboard navigation, ARIA, focus management, semantic HTML following WCAG 2.2 standards.",
+      "keyTopics": [
+        "Accessible form structure",
+        "Keyboard navigation support",
+        "ARIA attributes",
+        "Focus management",
+        "Modal accessibility",
+        "Semantic HTML",
+        "Color and contrast"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "troubleshooting",
+      "file": "lwc-accessibility-errors.md",
+      "path": "rag/troubleshooting/lwc-accessibility-errors.md",
+      "whenToRetrieve": [
+        "LWC accessibility errors",
+        "Missing form labels",
+        "ARIA accessibility issues",
+        "Keyboard navigation problems",
+        "WCAG violations"
+      ],
+      "summary": "Common LWC accessibility errors and solutions: missing labels, ARIA issues, keyboard traps, focus indicators, color contrast, WCAG violations following WCAG 2.2 standards.",
+      "keyTopics": [
+        "Missing form labels",
+        "Missing ARIA labels",
+        "Keyboard traps",
+        "Missing focus indicators",
+        "Insufficient color contrast",
+        "Missing alt text",
+        "Incorrect heading hierarchy",
+        "WCAG violation patterns"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "testing",
+      "file": "lwc-accessibility-testing.md",
+      "path": "rag/testing/lwc-accessibility-testing.md",
+      "whenToRetrieve": [
+        "Testing LWC accessibility",
+        "Jest accessibility tests",
+        "Manual accessibility testing",
+        "Automated accessibility tools"
+      ],
+      "summary": "LWC accessibility testing patterns: Jest a11y tests with @salesforce/sa11y, manual testing checklists, automated testing tools (axe-core, Lighthouse, Salesforce Accessibility Scanner).",
+      "keyTopics": [
+        "Jest accessibility testing",
+        "Keyboard navigation testing",
+        "ARIA attribute testing",
+        "Manual testing checklists",
+        "Screen reader testing",
+        "Color contrast testing",
+        "Automated testing tools"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "quick-start",
+      "file": "lwc-accessibility-quick-start.md",
+      "path": "rag/quick-start/lwc-accessibility-quick-start.md",
+      "whenToRetrieve": [
+        "Getting started with LWC accessibility",
+        "Making components accessible",
+        "LWC accessibility quick start"
+      ],
+      "summary": "Getting started with LWC accessibility: quick checklist, step-by-step guide for making existing components accessible, essential patterns following WCAG 2.2 standards.",
+      "keyTopics": [
+        "Accessibility checklist",
+        "Form accessibility",
+        "Keyboard navigation",
+        "ARIA attributes",
+        "Image accessibility",
+        "Semantic HTML",
+        "Essential patterns"
+      ],
+      "status": "completed"
     }
   ],
   "retrievalGuidelines": {
@@ -1703,8 +1816,8 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 68,
-    "completedFiles": 68,
+    "totalFiles": 73,
+    "completedFiles": 73,
     "plannedFiles": 0,
     "domains": 15,
     "domainsWithFiles": 15
@@ -1717,13 +1830,13 @@
     "security": 2,
     "project-methods": 4,
     "development": 10,
-    "troubleshooting": 5,
+    "troubleshooting": 6,
     "patterns": 1,
     "glossary": 1,
-    "testing": 2,
-    "quick-start": 2,
+    "testing": 3,
+    "quick-start": 3,
     "api-reference": 5,
     "mcp-knowledge": 5,
-    "code-examples": 22
+    "code-examples": 24
   }
 }

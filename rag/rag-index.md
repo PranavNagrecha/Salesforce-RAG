@@ -445,6 +445,7 @@ Debugging and troubleshooting approaches for integration debugging, data reconci
 - [data-reconciliation.md](rag/troubleshooting/data-reconciliation.md) — Approaches to reconciling data between Salesforce and external systems using external IDs and integration job tracking
 - [common-apex-errors.md](rag/troubleshooting/common-apex-errors.md) — Common Apex errors with solutions: UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION
 - [common-lwc-errors.md](rag/troubleshooting/common-lwc-errors.md) — Common LWC errors with solutions: property access errors, wire adapter errors, event handling errors
+- [lwc-accessibility-errors.md](rag/troubleshooting/lwc-accessibility-errors.md) — Common LWC accessibility errors with solutions: missing labels, ARIA issues, keyboard traps, focus indicators, color contrast, WCAG violations
 - [governor-limit-errors.md](rag/troubleshooting/governor-limit-errors.md) — Governor limit errors and solutions: too many SOQL queries, too many DML statements, CPU time limits, heap size limits
 
 ### integration-debugging.md
@@ -528,12 +529,189 @@ Project delivery and methodology for sprint-based delivery, testing strategies, 
 - [deployment-patterns.md](rag/project-methods/deployment-patterns.md) — Deployment and CI/CD patterns: deployment methods, source control strategies, Metadata API patterns, package development, and deployment best practices
 - [sfdx-patterns.md](rag/project-methods/sfdx-patterns.md) — Salesforce DX patterns: project structure, commands, scratch org patterns, source tracking, and CI/CD integration
 
+## Operations
+
+Delivery and operations patterns for CI/CD, environment strategy, and release governance.
+
+- [cicd-patterns.md](rag/operations/cicd-patterns.md) — Comprehensive CI/CD patterns: metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation, and rollback patterns
+- [environment-strategy.md](rag/operations/environment-strategy.md) — Environment strategy: org topologies for multi-team programs, data masking, and refresh cadences
+- [release-governance.md](rag/operations/release-governance.md) — Release governance: Change Advisory Boards, approval workflows, and risk-based release checklists
+
+### cicd-patterns.md
+
+**When to Retrieve**: Implementing CI/CD for Salesforce, choosing between metadata and source-tracked orgs, using unlocked packages, automating sandbox seeding, implementing deployment validation, or planning rollback strategies.
+
+**Summary**: Comprehensive CI/CD patterns for Salesforce covering metadata vs. source-tracked org decision framework, unlocked package development and promotion, automated sandbox seeding strategies, deployment validation approaches, and rollback patterns including metadata rollback, data rollback, and feature flag rollbacks.
+
+**Key Topics**:
+- Metadata vs. source-tracked orgs decision framework
+- Unlocked package development and versioning
+- Sandbox seeding automation
+- Deployment validation strategies
+- Rollback patterns and procedures
+
+### environment-strategy.md
+
+**When to Retrieve**: Designing org topologies for multi-team programs, implementing data masking for PII/PHI, planning sandbox refresh cadences, or managing multiple Salesforce environments.
+
+**Summary**: Environment strategy patterns for Salesforce including org topology patterns (single org, multi-org, hybrid), data masking strategies for PII/PHI, test data anonymization, and sandbox refresh cadence planning.
+
+**Key Topics**:
+- Org topology patterns for multi-team programs
+- Data masking and anonymization strategies
+- Sandbox refresh cadences
+- Environment management best practices
+
+### release-governance.md
+
+**When to Retrieve**: Establishing Change Advisory Boards, implementing approval workflows, creating risk-based release checklists, or managing release governance processes.
+
+**Summary**: Release governance patterns including CAB structure and processes, multi-stage approval workflows, automated approval gates, and risk-based release checklists with deployment risk matrices.
+
+**Key Topics**:
+- Change Advisory Board (CAB) structure
+- Approval workflow patterns
+- Risk-based release checklists
+- Deployment risk assessment
+
+## Observability
+
+Observability and resilience patterns for monitoring, performance tuning, and high availability.
+
+- [monitoring-alerting.md](rag/observability/monitoring-alerting.md) — Monitoring and alerting: Platform Events monitoring, API health, async job failures, and log aggregation patterns
+- [performance-tuning.md](rag/observability/performance-tuning.md) — Performance tuning: Query/selectivity tuning, Large Data Volumes (LDV) handling, governor limit mitigation, and caching strategies
+- [ha-dr-patterns.md](rag/observability/ha-dr-patterns.md) — High availability and disaster recovery: Backup/restore approaches, failover patterns for integrations, and business continuity drills
+
+### monitoring-alerting.md
+
+**When to Retrieve**: Implementing monitoring and alerting for Platform Events, monitoring API health, tracking async job failures, implementing log aggregation, or setting up system observability.
+
+**Summary**: Monitoring and alerting patterns for Salesforce including Platform Events monitoring metrics, API health monitoring (response time, error rates, availability), async job failure detection (Batch, Queueable, Scheduled), and log aggregation patterns with centralized logging strategies.
+
+**Key Topics**:
+- Platform Events monitoring and metrics
+- API health monitoring
+- Async job failure detection
+- Log aggregation patterns
+
+### performance-tuning.md
+
+**When to Retrieve**: Optimizing query selectivity, handling Large Data Volumes (LDV), mitigating governor limits, implementing caching strategies, or tuning Salesforce performance.
+
+**Summary**: Performance tuning patterns including query/selectivity optimization with indexed fields, LDV handling strategies and data archiving, governor limit mitigation patterns, and caching strategies using Platform Cache.
+
+**Key Topics**:
+- Query/selectivity tuning with indexed fields
+- Large Data Volume (LDV) handling
+- Governor limit mitigation
+- Caching strategies
+
+### ha-dr-patterns.md
+
+**When to Retrieve**: Planning backup and restore strategies, implementing failover patterns for integrations, conducting business continuity drills, or designing high availability systems.
+
+**Summary**: High availability and disaster recovery patterns including backup/restore approaches (data and metadata), failover patterns for integrations (circuit breakers, retry logic), and business continuity drills with RTO/RPO planning.
+
+**Key Topics**:
+- Backup/restore strategies
+- Integration failover patterns
+- Business continuity planning
+- RTO/RPO objectives
+
+## Data Governance
+
+Data governance and compliance patterns for data residency, compliance, and data quality.
+
+- [data-residency-compliance.md](rag/data-governance/data-residency-compliance.md) — Data residency and compliance: PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices
+- [data-quality-stewardship.md](rag/data-governance/data-quality-stewardship.md) — Data quality and stewardship: Duplicate prevention beyond leads, survivorship rules, and master data governance
+
+### data-residency-compliance.md
+
+**When to Retrieve**: Handling PII/PHI data, implementing GDPR/CCPA/SOC2 compliance, configuring field-level encryption, or implementing Shield best practices.
+
+**Summary**: Data residency and compliance patterns including PII/PHI identification and protection, GDPR/CCPA/SOC2 compliance frameworks, field-level encryption with Shield Encryption, and Shield best practices (Platform Encryption, Event Monitoring, Field Audit Trail).
+
+**Key Topics**:
+- PII/PHI handling and protection
+- GDPR/CCPA/SOC2 compliance
+- Field-level encryption
+- Shield best practices
+
+### data-quality-stewardship.md
+
+**When to Retrieve**: Implementing duplicate prevention for Accounts/Contacts, configuring survivorship rules for data merges, establishing master data governance, or managing data quality at scale.
+
+**Summary**: Data quality and stewardship patterns including duplicate prevention beyond leads (Account/Contact duplicate rules), survivorship rules for data merges, and master data governance with data stewardship workflows and data quality metrics.
+
+**Key Topics**:
+- Duplicate prevention for Accounts and Contacts
+- Survivorship rules and merge strategies
+- Master data governance
+- Data quality metrics and stewardship
+
+## Adoption
+
+Adoption and change management patterns for user readiness and org health.
+
+- [user-readiness.md](rag/adoption/user-readiness.md) — User readiness: Training plans, support models, and telemetry for feature adoption
+- [org-health-checks.md](rag/adoption/org-health-checks.md) — Org health checks: Technical debt triage, baseline audits, and remediation playbooks
+
+### user-readiness.md
+
+**When to Retrieve**: Creating training plans, establishing support models, implementing feature adoption telemetry, or planning user readiness programs.
+
+**Summary**: User readiness patterns including training curriculum design, role-based training, training delivery methods, help desk patterns, support workflows, and telemetry for feature adoption tracking.
+
+**Key Topics**:
+- Training plans and curriculum design
+- Support models and workflows
+- Feature adoption telemetry
+- User engagement patterns
+
+### org-health-checks.md
+
+**When to Retrieve**: Conducting technical debt triage, performing baseline audits, creating remediation playbooks, or maintaining org health.
+
+**Summary**: Org health check patterns including technical debt identification and prioritization, baseline audits (code quality, configuration, data quality), and remediation playbooks for debt remediation, org cleanup, and optimization.
+
+**Key Topics**:
+- Technical debt triage
+- Baseline audits
+- Remediation playbooks
+- Org health monitoring
+
 ## Testing
 
 Testing patterns and examples for Apex, LWC, and integration testing.
 
 - [apex-testing-patterns.md](rag/testing/apex-testing-patterns.md) — Apex testing patterns: test class structure, test data factories, bulk testing, error scenario testing, mocking
 - [test-data-factories.md](rag/testing/test-data-factories.md) — Test data factory patterns: basic factories, relationship factories, customization, bulk data creation
+- [automated-testing-patterns.md](rag/testing/automated-testing-patterns.md) — Automated testing at scale: Apex test data factories, UI test automation for LWC/Experience Cloud, contract tests for integrations, and load testing patterns
+- [non-functional-requirements.md](rag/testing/non-functional-requirements.md) — Non-functional requirements: Security testing, accessibility for LWCs/portals, and performance benchmarks
+
+### automated-testing-patterns.md
+
+**When to Retrieve**: Implementing automated testing at scale, creating UI test automation, implementing contract tests for integrations, or conducting load testing.
+
+**Summary**: Automated testing patterns for Salesforce at scale including advanced Apex test data factory patterns, UI test automation for LWC (Jest) and Experience Cloud (Selenium/Playwright), contract tests for APIs and events, and load testing patterns with performance testing strategies.
+
+**Key Topics**:
+- Advanced test data factory patterns
+- UI test automation (Jest, Selenium, Playwright)
+- Contract testing for integrations
+- Load testing and scalability testing
+
+### non-functional-requirements.md
+
+**When to Retrieve**: Implementing security testing, accessibility testing for LWCs and portals, defining performance benchmarks, or testing non-functional requirements.
+
+**Summary**: Non-functional requirements testing including security testing patterns (vulnerability testing, penetration testing), accessibility testing for LWCs and portals (WCAG compliance), and performance benchmarks with SLA definition and performance testing frameworks.
+
+**Key Topics**:
+- Security testing patterns
+- Accessibility testing (WCAG compliance)
+- Performance benchmarks and SLAs
+- NFR test automation
 
 ## Quick Start Guides
 
@@ -541,6 +719,7 @@ Step-by-step guides for getting started with Salesforce development.
 
 - [apex-quick-start.md](rag/quick-start/apex-quick-start.md) — Getting started with Apex: create your first service, selector, domain, and test classes
 - [lwc-quick-start.md](rag/quick-start/lwc-quick-start.md) — Getting started with LWC: create your first component with data access and interactivity
+- [lwc-accessibility-quick-start.md](rag/quick-start/lwc-accessibility-quick-start.md) — Getting started with LWC accessibility: quick checklist, step-by-step guide, essential patterns
 
 ## API Reference
 
@@ -616,6 +795,7 @@ Complete, working code examples organized by category. All examples are copy-pas
 - [Batch Template](rag/code-examples/templates/apex-batch-template.md) — Batch Apex template
 - [Queueable Template](rag/code-examples/templates/apex-queueable-template.md) — Queueable Apex template
 - [Scheduled Template](rag/code-examples/templates/apex-scheduled-template.md) — Scheduled Apex template
+- [Accessible Component Template](rag/code-examples/templates/lwc-accessible-component-template.md) — Accessible LWC component template with all accessibility best practices
 - [SFDX Project Template](rag/code-examples/templates/sfdx-project-template.md) — SFDX project setup template
 - [CI/CD Template](rag/code-examples/templates/ci-cd-template.md) — CI/CD pipeline template
 
@@ -623,6 +803,7 @@ Complete, working code examples organized by category. All examples are copy-pas
 - [Component Examples](rag/code-examples/lwc/component-examples.md) — Lightning Web Component implementations (coming soon)
 - [Service Examples](rag/code-examples/lwc/service-examples.md) — LWC service layer patterns (coming soon)
 - [Wire Examples](rag/code-examples/lwc/wire-examples.md) — Wire service and imperative call patterns (coming soon)
+- [Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md) — Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
 - [Test Examples](rag/code-examples/lwc/test-examples.md) — Jest test examples for LWC (coming soon)
 
 ### Flow Examples
@@ -738,7 +919,7 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `security/permission-set-architecture.md`
 - ✅ `security/salesforce-llm-data-governance.md`
 
-**Development (8 files)**:
+**Development (10 files)**:
 - ✅ `development/error-handling-and-logging.md`
 - ✅ `development/apex-patterns.md`
 - ✅ `development/flow-patterns.md`
@@ -747,21 +928,28 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `development/omnistudio-patterns.md`
 - ✅ `development/locking-and-concurrency-strategies.md`
 - ✅ `development/governor-limits-and-optimization.md`
+- ✅ `development/asynchronous-apex-patterns.md`
+- ✅ `development/custom-settings-metadata-patterns.md`
 
-**Troubleshooting (5 files)**:
+**Troubleshooting (6 files)**:
 - ✅ `troubleshooting/integration-debugging.md`
 - ✅ `troubleshooting/data-reconciliation.md`
 - ✅ `troubleshooting/common-apex-errors.md`
 - ✅ `troubleshooting/common-lwc-errors.md`
 - ✅ `troubleshooting/governor-limit-errors.md`
+- ✅ `troubleshooting/lwc-accessibility-errors.md`
 
-**Testing (2 files)**:
+**Testing (3 files)**:
 - ✅ `testing/apex-testing-patterns.md`
 - ✅ `testing/test-data-factories.md`
+- ✅ `testing/automated-testing-patterns.md`
+- ✅ `testing/non-functional-requirements.md`
+- ✅ `testing/lwc-accessibility-testing.md`
 
-**Quick Start (2 files)**:
+**Quick Start (3 files)**:
 - ✅ `quick-start/apex-quick-start.md`
 - ✅ `quick-start/lwc-quick-start.md`
+- ✅ `quick-start/lwc-accessibility-quick-start.md`
 
 **API Reference (5 files)**:
 - ✅ `api-reference/apex-api-reference.md`
@@ -800,6 +988,7 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `code-examples/templates/apex-batch-template.md`
 - ✅ `code-examples/templates/apex-queueable-template.md`
 - ✅ `code-examples/templates/apex-scheduled-template.md`
+- ✅ `code-examples/templates/lwc-accessible-component-template.md`
 - ✅ `code-examples/templates/sfdx-project-template.md`
 - ✅ `code-examples/templates/ci-cd-template.md`
 
@@ -808,6 +997,24 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `project-methods/testing-strategy.md`
 - ✅ `project-methods/deployment-patterns.md`
 - ✅ `project-methods/sfdx-patterns.md`
+
+**Operations (3 files)**:
+- ✅ `operations/cicd-patterns.md`
+- ✅ `operations/environment-strategy.md`
+- ✅ `operations/release-governance.md`
+
+**Observability (3 files)**:
+- ✅ `observability/monitoring-alerting.md`
+- ✅ `observability/performance-tuning.md`
+- ✅ `observability/ha-dr-patterns.md`
+
+**Data Governance (2 files)**:
+- ✅ `data-governance/data-residency-compliance.md`
+- ✅ `data-governance/data-quality-stewardship.md`
+
+**Adoption (2 files)**:
+- ✅ `adoption/user-readiness.md`
+- ✅ `adoption/org-health-checks.md`
 
 **Patterns (1 file)**:
 - ✅ `patterns/cross-cutting-patterns.md`
