@@ -6,7 +6,6 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 ## Quick Navigation
 
-- **[Terminology Flowchart](terminology-flowchart.md)**: Visual guide showing relationships between terms
 - **Jump to Section**: [Integration Terms](#integration-terms) | [Identity Terms](#identity-and-sso-terms) | [Data Model Terms](#data-model-terms) | [Security Terms](#security-terms) | [Platform Terms](#platform-terms) | [Development Terms](#development-terms) | [Operations Terms](#operations-terms) | [Data Governance Terms](#data-governance-terms) | [LLM/RAG Terms](#llm-and-rag-terms) | [Adoption Terms](#adoption-terms) | [Project Method Terms](#project-method-terms)
 
 ## Integration Terms
@@ -526,10 +525,6 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 **Related Patterns**: See `rag/adoption/org-health-checks.md` for baseline audit patterns.
 
 ## Related Documentation
-
-### Visual Guides
-
-- **[Terminology Flowchart](terminology-flowchart.md)**: Interactive flowchart showing relationships between all terminology categories
 
 ### Domain-Specific Terminology
 

@@ -53,8 +53,6 @@ This repository provides a Retrieval-Augmented Generation (RAG) knowledge base f
 - **MCP Knowledge**: Official Salesforce guidance and best practices extracted from Salesforce MCP Service tools
 
 - **Glossary**: Core terminology and definitions for integration, identity, data modeling, security, platform, development, and project method terms
-  - **[Core Terminology](rag/glossary/core-terminology.md)**: Complete glossary with detailed definitions
-  - **[Terminology Flowchart](rag/glossary/terminology-flowchart.md)**: Visual guide to terminology relationships
 
 ## Repository Structure
 
@@ -167,8 +165,7 @@ rag/
 │   └── design-system-patterns.md
 │
 ├── glossary/             # Terminology and definitions
-│   ├── core-terminology.md
-│   └── terminology-flowchart.md
+│   └── core-terminology.md
 │
 ├── rag-index.md          # Human-readable index of all knowledge files
 └── rag-library.json      # Machine-readable metadata for RAG systems
@@ -232,9 +229,7 @@ Common terms used throughout the library:
 - **LWC**: Lightning Web Component - modern Salesforce UI component framework
 - **EDA**: Education Data Architecture - Salesforce Education Cloud data model
 
-For complete terminology definitions and relationships:
-- **[Core Terminology](rag/glossary/core-terminology.md)**: Complete glossary with detailed definitions
-- **[Terminology Flowchart](rag/glossary/terminology-flowchart.md)**: Visual guide showing how terms relate to each other
+For complete terminology definitions, see **[Core Terminology](rag/glossary/core-terminology.md)**.
 
 ## Contributing
 
