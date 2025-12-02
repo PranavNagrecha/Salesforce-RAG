@@ -9,7 +9,7 @@ Batch Apex is used for processing large data volumes (thousands or millions of r
 
 **Related Patterns**:
 - [Asynchronous Apex Patterns](rag/development/asynchronous-apex-patterns.md#batch-apex-patterns)
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md)
+- [Governor Limits and Optimization](../../development/governor-limits-and-optimization.md)
 
 ## Examples
 
@@ -695,7 +695,7 @@ AsyncApexJob status = BatchJobMonitor.getJobStatus(jobId);
 
 ## Related Patterns
 
-- [Asynchronous Apex Patterns](rag/development/asynchronous-apex-patterns.md) - Complete async patterns guide
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md) - Governor limit management
-- [Batch Template](rag/code-examples/templates/apex-batch-template.md) - Batch Apex template
+- [Asynchronous Apex Patterns](../../development/asynchronous-apex-patterns.md) - Complete async patterns guide
+- [Governor Limits and Optimization](../../development/governor-limits-and-optimization.md) - Governor limit management
+- [Batch Template](../templates/apex-batch-template.md) - Batch Apex template
 

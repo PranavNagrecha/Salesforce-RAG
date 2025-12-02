@@ -5,8 +5,8 @@
 This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.
 
 **Related Patterns**:
-- [Apex Patterns](rag/development/apex-patterns.md) - Apex development patterns
-- [Integration Patterns](rag/integrations/integration-platform-patterns.md) - Integration configuration
+- [Apex Patterns](apex-patterns.md) - Apex development patterns
+- [Integration Patterns](../integrations/integration-platform-patterns.md) - Integration configuration
 
 ## Consensus Best Practices
 
@@ -203,8 +203,8 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 
 ## Related Patterns
 
-- [Apex Patterns](rag/development/apex-patterns.md) - Apex development patterns
-- [Integration Patterns](rag/integrations/integration-platform-patterns.md) - Integration configuration
-- [Custom Settings Examples](rag/code-examples/utilities/custom-settings-examples.md) - Custom Settings code examples
-- [Custom Metadata Examples](rag/code-examples/utilities/custom-metadata-examples.md) - Custom Metadata code examples
+- [Apex Patterns](apex-patterns.md) - Apex development patterns
+- [Integration Patterns](../integrations/integration-platform-patterns.md) - Integration configuration
+- [Custom Settings Examples](../code-examples/utilities/custom-settings-examples.md) - Custom Settings code examples
+- [Custom Metadata Examples](../code-examples/utilities/custom-metadata-examples.md) - Custom Metadata code examples
 

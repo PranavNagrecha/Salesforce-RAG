@@ -7,8 +7,8 @@
 Test data factories provide reusable methods for creating test data, ensuring consistency and reducing duplication across test classes.
 
 **Related Patterns**:
-- [Apex Testing Patterns](rag/testing/apex-testing-patterns.md) - Testing patterns
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Testing strategy
+- [Apex Testing Patterns](apex-testing-patterns.md) - Testing patterns
+- [Testing Strategy](../project-methods/testing-strategy.md) - Testing strategy
 
 ## Core Principles
 
@@ -298,7 +298,7 @@ private class MyTestClass {
 
 ## Related Patterns
 
-- [Apex Testing Patterns](rag/testing/apex-testing-patterns.md) - Testing patterns
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Testing strategy
-- [Test Class Template](rag/code-examples/templates/test-class-template.md) - Test class template
+- [Apex Testing Patterns](apex-testing-patterns.md) - Testing patterns
+- [Testing Strategy](../project-methods/testing-strategy.md) - Testing strategy
+- [Test Class Template](../code-examples/templates/test-class-template.md) - Test class template
 

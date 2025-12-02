@@ -8,8 +8,8 @@
 The Metadata API allows programmatic deployment and retrieval of Salesforce metadata. It's used for automated deployments, CI/CD pipelines, and bulk metadata operations.
 
 **Related Patterns**:
-- [Deployment Patterns](rag/project-methods/deployment-patterns.md)
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md)
+- [Deployment Patterns](../../project-methods/deployment-patterns.md)
+- [Salesforce DX Patterns](../../project-methods/sfdx-patterns.md)
 
 ## Examples
 
@@ -75,6 +75,6 @@ public class MetadataApiDeployment {
 
 ## Related Patterns
 
-- [Deployment Patterns](rag/project-methods/deployment-patterns.md) - Complete deployment guide
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX patterns
+- [Deployment Patterns](../../project-methods/deployment-patterns.md) - Complete deployment guide
+- [Salesforce DX Patterns](../../project-methods/sfdx-patterns.md) - SFDX patterns
 

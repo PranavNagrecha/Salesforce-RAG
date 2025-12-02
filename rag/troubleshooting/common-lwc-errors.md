@@ -73,7 +73,7 @@ wiredRecord({ data, error }) {
 - Check for null/undefined before accessing nested properties
 - Use loading states to prevent access before data loads
 
-**Related Patterns**: [LWC Patterns](rag/development/lwc-patterns.md), [LDS Patterns](rag/mcp-knowledge/lds-patterns.md)
+**Related Patterns**: [LWC Patterns](../development/lwc-patterns.md), [LDS Patterns](../mcp-knowledge/lds-patterns.md)
 
 ---
 
@@ -236,7 +236,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: [LWC API Reference](rag/api-reference/lwc-api-reference.md#wire), [LDS Patterns](rag/mcp-knowledge/lds-patterns.md)
+**Related Patterns**: [LWC API Reference](rag/api-reference/lwc-api-reference.md#wire), [LDS Patterns](../mcp-knowledge/lds-patterns.md)
 
 ---
 
@@ -365,7 +365,7 @@ handleClick() {
 - Bind methods when passing as callbacks
 - Avoid using `this` in unbound callbacks
 
-**Related Patterns**: [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md)
+**Related Patterns**: [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md)
 
 ---
 
@@ -428,14 +428,14 @@ wiredRecord({ data, error }) {
 - Validate parameter types
 - Handle parameter changes properly
 
-**Related Patterns**: [LDS Patterns](rag/mcp-knowledge/lds-patterns.md), [LWC API Reference](rag/api-reference/lwc-api-reference.md)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md), [LWC API Reference](../api-reference/lwc-api-reference.md)
 
 ---
 
 ## Related Patterns
 
-- [LWC Patterns](rag/development/lwc-patterns.md) - Complete LWC patterns
-- [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md) - LWC best practices
-- [LDS Patterns](rag/mcp-knowledge/lds-patterns.md) - Lightning Data Service patterns
-- [Error Handling](rag/development/error-handling-and-logging.md) - Error handling patterns
+- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - LWC best practices
+- [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Lightning Data Service patterns
+- [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
 

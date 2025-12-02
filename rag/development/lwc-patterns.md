@@ -242,11 +242,11 @@ LWCs are surgical tools for complex UI needs when:
 Accessibility ensures that all users, including those using assistive technologies, can access and interact with your components. All LWC components should follow WCAG 2.2 standards.
 
 **Related Resources**:
-- [LWC Accessibility Guidelines](rag/mcp-knowledge/lwc-accessibility.md) - Comprehensive WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md) - Complete working code examples
-- [LWC Accessibility Testing](rag/testing/lwc-accessibility-testing.md) - Testing patterns and tools
-- [LWC Accessibility Troubleshooting](rag/troubleshooting/lwc-accessibility-errors.md) - Common errors and fixes
-- [LWC Accessibility Quick Start](rag/quick-start/lwc-accessibility-quick-start.md) - Quick start guide
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - Comprehensive WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Complete working code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns and tools
+- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) - Common errors and fixes
+- [LWC Accessibility Quick Start](../quick-start/lwc-accessibility-quick-start.md) - Quick start guide
 
 ### WCAG Guidelines
 
@@ -338,7 +338,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Color Contrast Testing**: Use WebAIM Contrast Checker
 - **Jest Testing**: Include accessibility tests in Jest test suites
 
-**See**: [LWC Accessibility Testing](rag/testing/lwc-accessibility-testing.md) for complete testing patterns
+**See**: [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) for complete testing patterns
 
 ### Common Accessibility Mistakes
 
@@ -351,7 +351,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - Incorrect heading hierarchy
 - Missing semantic HTML
 
-**See**: [LWC Accessibility Troubleshooting](rag/troubleshooting/lwc-accessibility-errors.md) for solutions to common errors
+**See**: [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) for solutions to common errors
 
 ## Responsive Design
 

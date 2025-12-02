@@ -5,10 +5,10 @@
 This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns. These patterns are essential for ensuring code quality, preventing regressions, and maintaining system reliability at enterprise scale.
 
 **Related Patterns**:
-- [Apex Testing Patterns](rag/testing/apex-testing-patterns.md) - Apex test class patterns
-- [Test Data Factories](rag/testing/test-data-factories.md) - Test data factory patterns
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Comprehensive testing strategies
-- [Non-Functional Requirements](rag/testing/non-functional-requirements.md) - Security, accessibility, and performance testing
+- [Apex Testing Patterns](apex-testing-patterns.md) - Apex test class patterns
+- [Test Data Factories](test-data-factories.md) - Test data factory patterns
+- [Testing Strategy](../project-methods/testing-strategy.md) - Comprehensive testing strategies
+- [Non-Functional Requirements](non-functional-requirements.md) - Security, accessibility, and performance testing
 
 ## Consensus Best Practices
 
@@ -297,9 +297,9 @@ This guide covers automated testing patterns for Salesforce at scale, including 
 
 ## Related Patterns
 
-- [Apex Testing Patterns](rag/testing/apex-testing-patterns.md) - Apex test class patterns
-- [Test Data Factories](rag/testing/test-data-factories.md) - Test data factory patterns
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Comprehensive testing strategies
-- [Non-Functional Requirements](rag/testing/non-functional-requirements.md) - Security, accessibility, and performance testing
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization patterns
+- [Apex Testing Patterns](apex-testing-patterns.md) - Apex test class patterns
+- [Test Data Factories](test-data-factories.md) - Test data factory patterns
+- [Testing Strategy](../project-methods/testing-strategy.md) - Comprehensive testing strategies
+- [Non-Functional Requirements](non-functional-requirements.md) - Security, accessibility, and performance testing
+- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization patterns
 

@@ -89,8 +89,8 @@ This topic covers Salesforce governor limits, performance optimization strategie
 
 **Example scenario**: A nightly sync of 500,000 records from an external system uses Batch Apex to process records in batches of 200. Each batch executes in its own context with fresh governor limits, allowing the entire sync to complete successfully.
 
-**Related**: [Asynchronous Apex Patterns](rag/development/asynchronous-apex-patterns.md) - Complete guide to Batch, Queueable, and Scheduled Apex patterns
-- [Performance Tuning](rag/observability/performance-tuning.md) - LDV handling, caching strategies, and advanced performance optimization
+**Related**: [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Complete guide to Batch, Queueable, and Scheduled Apex patterns
+- [Performance Tuning](../observability/performance-tuning.md) - LDV handling, caching strategies, and advanced performance optimization
 
 ### Pattern 5: Heap Size Optimization
 

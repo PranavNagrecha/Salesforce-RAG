@@ -118,7 +118,7 @@ Reusable functionality:
 
 ## Asynchronous Apex Patterns
 
-For comprehensive asynchronous Apex patterns, see [Asynchronous Apex Patterns](rag/development/asynchronous-apex-patterns.md).
+For comprehensive asynchronous Apex patterns, see [Asynchronous Apex Patterns](asynchronous-apex-patterns.md).
 
 ### Queueable
 
@@ -129,7 +129,7 @@ Use for:
 - Lightweight async processing
 - Jobs that need to be chained together
 
-**Related**: [Queueable Examples](rag/code-examples/apex/queueable-examples.md), [Queueable Template](rag/code-examples/templates/apex-queueable-template.md)
+**Related**: [Queueable Examples](../code-examples/apex/queueable-examples.md), [Queueable Template](../code-examples/templates/apex-queueable-template.md)
 
 ### Batchable
 
@@ -140,7 +140,7 @@ Use for:
 - Processing thousands of records
 - Operations that exceed synchronous limits
 
-**Related**: [Batch Examples](rag/code-examples/apex/batch-examples.md), [Batch Template](rag/code-examples/templates/apex-batch-template.md)
+**Related**: [Batch Examples](../code-examples/apex/batch-examples.md), [Batch Template](../code-examples/templates/apex-batch-template.md)
 
 ### Scheduled
 
@@ -151,7 +151,7 @@ Use for:
 - Scheduled data processing
 - Recurring tasks
 
-**Related**: [Scheduled Examples](rag/code-examples/apex/scheduled-examples.md), [Scheduled Template](rag/code-examples/templates/apex-scheduled-template.md)
+**Related**: [Scheduled Examples](../code-examples/apex/scheduled-examples.md), [Scheduled Template](../code-examples/templates/apex-scheduled-template.md)
 
 ## Apex + LWC Integration
 
@@ -326,7 +326,7 @@ Use for:
 
 - **Externalize all configuration**: Never hardcode environment-specific values (URLs, IDs, counts). Use Custom Metadata Types or Custom Settings for configuration that varies by environment. This enables environment-specific configuration without code changes.
 
-**Related**: [Custom Settings and Custom Metadata Patterns](rag/development/custom-settings-metadata-patterns.md), [Custom Settings Examples](rag/code-examples/utilities/custom-settings-examples.md), [Custom Metadata Examples](rag/code-examples/utilities/custom-metadata-examples.md)
+**Related**: [Custom Settings and Custom Metadata Patterns](custom-settings-metadata-patterns.md), [Custom Settings Examples](../code-examples/utilities/custom-settings-examples.md), [Custom Metadata Examples](../code-examples/utilities/custom-metadata-examples.md)
 - **Use Named Credentials for all external URLs**: All HTTP callouts should use Named Credentials, not hardcoded URLs. This centralizes credential management and enables environment-specific endpoints.
 - **Centralize integration patterns**: When multiple classes make HTTP callouts, centralize the pattern in an abstract service class. This makes maintenance and auditing easier.
 

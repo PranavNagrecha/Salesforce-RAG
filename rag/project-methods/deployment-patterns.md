@@ -5,8 +5,8 @@
 This guide covers Salesforce deployment strategies, source control patterns, deployment best practices, Metadata API usage, and package development patterns. These patterns are essential for managing Salesforce development lifecycle and ensuring reliable deployments.
 
 **Related Patterns**:
-- [Delivery Framework](rag/project-methods/delivery-framework.md) - Project delivery methodology
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX-specific patterns
+- [Delivery Framework](delivery-framework.md) - Project delivery methodology
+- [Salesforce DX Patterns](sfdx-patterns.md) - SFDX-specific patterns
 
 ## Consensus Best Practices
 
@@ -193,6 +193,6 @@ force-app/
 
 ## Related Patterns
 
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX-specific patterns
-- [Delivery Framework](rag/project-methods/delivery-framework.md) - Project delivery methodology
+- [Salesforce DX Patterns](sfdx-patterns.md) - SFDX-specific patterns
+- [Delivery Framework](delivery-framework.md) - Project delivery methodology
 

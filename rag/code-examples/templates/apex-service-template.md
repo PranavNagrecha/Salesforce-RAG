@@ -87,6 +87,6 @@ public with sharing class ContactUpdateService {
 ```
 
 **Related Patterns**:
-- [Service Layer Examples](rag/code-examples/apex/service-layer-examples.md)
+- [Service Layer Examples](../apex/service-layer-examples.md)
 - [Apex Patterns](rag/development/apex-patterns.md#service-layer)
 

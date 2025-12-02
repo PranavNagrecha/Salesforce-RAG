@@ -5,9 +5,9 @@
 This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks. These patterns are essential for maintaining org health, identifying optimization opportunities, and ensuring long-term system sustainability.
 
 **Related Patterns**:
-- [User Readiness](rag/adoption/user-readiness.md) - User training and adoption
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md) - Resource optimization
+- [User Readiness](user-readiness.md) - User training and adoption
+- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Resource optimization
 
 ## Consensus Best Practices
 
@@ -267,8 +267,8 @@ This guide covers org health check patterns for Salesforce, including technical 
 
 ## Related Patterns
 
-- [User Readiness](rag/adoption/user-readiness.md) - User training and adoption
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md) - Resource optimization
-- [Monitoring and Alerting](rag/observability/monitoring-alerting.md) - System monitoring patterns
+- [User Readiness](user-readiness.md) - User training and adoption
+- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Resource optimization
+- [Monitoring and Alerting](../observability/monitoring-alerting.md) - System monitoring patterns
 

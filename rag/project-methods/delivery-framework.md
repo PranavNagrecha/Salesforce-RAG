@@ -5,10 +5,10 @@
 Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Emphasizes clear scope definition, stakeholder coordination, iterative delivery, and comprehensive quality standards.
 
 **Related Patterns**:
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Comprehensive testing strategies
-- [Deployment Patterns](rag/project-methods/deployment-patterns.md) - Deployment and CI/CD patterns
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX-specific patterns
-- [Release Governance](rag/operations/release-governance.md) - Release approval and risk management
+- [Testing Strategy](testing-strategy.md) - Comprehensive testing strategies
+- [Deployment Patterns](deployment-patterns.md) - Deployment and CI/CD patterns
+- [Salesforce DX Patterns](sfdx-patterns.md) - SFDX-specific patterns
+- [Release Governance](../operations/release-governance.md) - Release approval and risk management
 
 ## Sprint-Based Delivery
 
@@ -258,9 +258,9 @@ Avoid this framework when:
 
 ## Related Patterns
 
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
-- [Deployment Patterns](rag/project-methods/deployment-patterns.md) - Deployment and CI/CD patterns, source control strategies, Metadata API patterns
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX project structure, commands, scratch org patterns, source tracking
-- [Release Governance](rag/operations/release-governance.md) - Change Advisory Boards, approval workflows, risk-based release checklists
-- [CI/CD Patterns](rag/operations/cicd-patterns.md) - CI/CD automation, unlocked packages, sandbox seeding, rollback patterns
+- [Testing Strategy](testing-strategy.md) - Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
+- [Deployment Patterns](deployment-patterns.md) - Deployment and CI/CD patterns, source control strategies, Metadata API patterns
+- [Salesforce DX Patterns](sfdx-patterns.md) - SFDX project structure, commands, scratch org patterns, source tracking
+- [Release Governance](../operations/release-governance.md) - Change Advisory Boards, approval workflows, risk-based release checklists
+- [CI/CD Patterns](../operations/cicd-patterns.md) - CI/CD automation, unlocked packages, sandbox seeding, rollback patterns
 

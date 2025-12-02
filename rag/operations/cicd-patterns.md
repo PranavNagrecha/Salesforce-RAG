@@ -5,10 +5,10 @@
 This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation strategies, and rollback patterns. These patterns are essential for managing complex Salesforce development lifecycles with multiple teams and environments.
 
 **Related Patterns**:
-- [Deployment Patterns](rag/project-methods/deployment-patterns.md) - Deployment methods and best practices
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX-specific patterns
-- [Environment Strategy](rag/operations/environment-strategy.md) - Org topology and environment management
-- [Release Governance](rag/operations/release-governance.md) - Release approval and risk management
+- [Deployment Patterns](../project-methods/deployment-patterns.md) - Deployment methods and best practices
+- [Salesforce DX Patterns](../project-methods/sfdx-patterns.md) - SFDX-specific patterns
+- [Environment Strategy](environment-strategy.md) - Org topology and environment management
+- [Release Governance](release-governance.md) - Release approval and risk management
 
 ## Consensus Best Practices
 
@@ -262,9 +262,9 @@ This guide covers comprehensive CI/CD patterns for Salesforce, including metadat
 
 ## Related Patterns
 
-- [Deployment Patterns](rag/project-methods/deployment-patterns.md) - Deployment methods and Metadata API patterns
-- [Salesforce DX Patterns](rag/project-methods/sfdx-patterns.md) - SFDX project structure and commands
-- [Environment Strategy](rag/operations/environment-strategy.md) - Org topology and environment management
-- [Release Governance](rag/operations/release-governance.md) - Release approval and risk management
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - Comprehensive testing approaches
+- [Deployment Patterns](../project-methods/deployment-patterns.md) - Deployment methods and Metadata API patterns
+- [Salesforce DX Patterns](../project-methods/sfdx-patterns.md) - SFDX project structure and commands
+- [Environment Strategy](environment-strategy.md) - Org topology and environment management
+- [Release Governance](release-governance.md) - Release approval and risk management
+- [Testing Strategy](../project-methods/testing-strategy.md) - Comprehensive testing approaches
 

@@ -55,7 +55,7 @@ The fundamental pipeline consists of four stages:
 - Real-time or near-real-time processing
 - Event stream processing
 
-**Related**: [Change Data Capture Patterns](rag/integrations/change-data-capture-patterns.md) - Complete CDC patterns guide
+**Related**: [Change Data Capture Patterns](change-data-capture-patterns.md) - Complete CDC patterns guide
 
 **Pros**:
 - Real-time data freshness

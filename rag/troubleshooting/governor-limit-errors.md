@@ -76,7 +76,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor query count proactively
 
-**Related Patterns**: [SOQL Patterns](rag/development/soql-query-patterns.md), [Governor Limits](rag/development/governor-limits-and-optimization.md)
+**Related Patterns**: [SOQL Patterns](../development/soql-query-patterns.md), [Governor Limits](../development/governor-limits-and-optimization.md)
 
 ---
 
@@ -137,7 +137,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#bulkification), [Governor Limits](rag/development/governor-limits-and-optimization.md)
+**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#bulkification), [Governor Limits](../development/governor-limits-and-optimization.md)
 
 ---
 
@@ -257,7 +257,7 @@ public class LargeDataProcessor implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Monitor CPU time usage
 
-**Related Patterns**: [Governor Limits](rag/development/governor-limits-and-optimization.md), [Apex Patterns](rag/development/apex-patterns.md)
+**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.md), [Apex Patterns](../development/apex-patterns.md)
 
 ---
 
@@ -330,7 +330,7 @@ List<Contact> contacts = [
 - Use batch processing for large datasets
 - Avoid loading entire datasets into memory
 
-**Related Patterns**: [Governor Limits](rag/development/governor-limits-and-optimization.md), [SOQL Patterns](rag/development/soql-query-patterns.md)
+**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.md), [SOQL Patterns](../development/soql-query-patterns.md)
 
 ---
 
@@ -406,8 +406,8 @@ public class ProcessQueueable implements Queueable {
 
 ## Related Patterns
 
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md) - Complete governor limits guide
-- [Apex Patterns](rag/development/apex-patterns.md) - Apex best practices
-- [SOQL Patterns](rag/development/soql-query-patterns.md) - Query optimization
-- [Troubleshooting](rag/troubleshooting/) - Other troubleshooting guides
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Complete governor limits guide
+- [Apex Patterns](../development/apex-patterns.md) - Apex best practices
+- [SOQL Patterns](../development/soql-query-patterns.md) - Query optimization
+- [Troubleshooting](.) - Other troubleshooting guides
 

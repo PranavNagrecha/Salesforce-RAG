@@ -204,7 +204,7 @@ Both platforms should support:
 
 - Interface configuration stored in Custom Metadata Types
 
-**Related**: [Custom Settings and Custom Metadata Patterns](rag/development/custom-settings-metadata-patterns.md) - Complete guide to Custom Settings and Custom Metadata
+**Related**: [Custom Settings and Custom Metadata Patterns](../development/custom-settings-metadata-patterns.md) - Complete guide to Custom Settings and Custom Metadata
 - Environment-specific settings (endpoints, timeouts, headers)
 - Reusable across multiple integrations
 - Version-controlled configuration

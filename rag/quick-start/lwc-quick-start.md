@@ -265,23 +265,23 @@ export default class ContactViewer extends LightningElement {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [LWC Patterns](rag/development/lwc-patterns.md) - Complete LWC patterns
-   - [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md) - Best practices
-   - [LDS Patterns](rag/mcp-knowledge/lds-patterns.md) - Data service patterns
+   - [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
+   - [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - Best practices
+   - [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Data service patterns
 
 2. **Explore Examples**:
-   - [LWC API Reference](rag/api-reference/lwc-api-reference.md) - API reference
-   - [LDS API Reference](rag/api-reference/lds-api-reference.md) - LDS reference
+   - [LWC API Reference](../api-reference/lwc-api-reference.md) - API reference
+   - [LDS API Reference](../api-reference/lds-api-reference.md) - LDS reference
 
 3. **Understand Best Practices**:
-   - [LWC Accessibility](rag/mcp-knowledge/lwc-accessibility.md) - Accessibility
-   - [Design System Patterns](rag/mcp-knowledge/design-system-patterns.md) - SLDS patterns
+   - [LWC Accessibility](../mcp-knowledge/lwc-accessibility.md) - Accessibility
+   - [Design System Patterns](../mcp-knowledge/design-system-patterns.md) - SLDS patterns
 
 ---
 
 ## Related Resources
 
-- [LWC Patterns](rag/development/lwc-patterns.md) - Complete LWC patterns
-- [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md) - Best practices
-- [LWC API Reference](rag/api-reference/lwc-api-reference.md) - API reference
+- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - Best practices
+- [LWC API Reference](../api-reference/lwc-api-reference.md) - API reference
 

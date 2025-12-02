@@ -260,25 +260,25 @@ private class ContactUpdateServiceTest {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [Apex Patterns](rag/development/apex-patterns.md) - Complete Apex patterns
-   - [Service Layer Examples](rag/code-examples/apex/service-layer-examples.md) - Service examples
-   - [Selector Layer Examples](rag/code-examples/apex/selector-layer-examples.md) - Selector examples
+   - [Apex Patterns](../development/apex-patterns.md) - Complete Apex patterns
+   - [Service Layer Examples](../code-examples/apex/service-layer-examples.md) - Service examples
+   - [Selector Layer Examples](../code-examples/apex/selector-layer-examples.md) - Selector examples
 
 2. **Explore Templates**:
-   - [Service Template](rag/code-examples/templates/apex-service-template.md)
-   - [Selector Template](rag/code-examples/templates/apex-selector-template.md)
-   - [Domain Template](rag/code-examples/templates/apex-domain-template.md)
+   - [Service Template](../code-examples/templates/apex-service-template.md)
+   - [Selector Template](../code-examples/templates/apex-selector-template.md)
+   - [Domain Template](../code-examples/templates/apex-domain-template.md)
 
 3. **Understand Best Practices**:
-   - [Error Handling](rag/development/error-handling-and-logging.md)
-   - [Governor Limits](rag/development/governor-limits-and-optimization.md)
-   - [Testing Patterns](rag/testing/apex-testing-patterns.md)
+   - [Error Handling](../development/error-handling-and-logging.md)
+   - [Governor Limits](../development/governor-limits-and-optimization.md)
+   - [Testing Patterns](../testing/apex-testing-patterns.md)
 
 ---
 
 ## Related Resources
 
-- [Apex Patterns](rag/development/apex-patterns.md) - Complete Apex patterns
-- [Code Examples](rag/code-examples/) - Working code examples
-- [API Reference](rag/api-reference/apex-api-reference.md) - API reference
+- [Apex Patterns](../development/apex-patterns.md) - Complete Apex patterns
+- [Code Examples](../code-examples) - Working code examples
+- [API Reference](../api-reference/apex-api-reference.md) - API reference
 

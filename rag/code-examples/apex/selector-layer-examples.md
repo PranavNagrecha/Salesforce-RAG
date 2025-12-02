@@ -395,8 +395,8 @@ public static List<Contact> selectByIdWithCases(Set<Id> ids) {
 
 ## Related Patterns
 
-- [Service Layer Examples](rag/code-examples/apex/service-layer-examples.md) - Service layer patterns
-- [Domain Layer Examples](rag/code-examples/apex/domain-layer-examples.md) - Domain layer patterns
-- [SOQL Patterns](rag/development/soql-query-patterns.md) - SOQL query patterns
-- [Apex Patterns](rag/development/apex-patterns.md) - Complete Apex patterns
+- [Service Layer Examples](service-layer-examples.md) - Service layer patterns
+- [Domain Layer Examples](domain-layer-examples.md) - Domain layer patterns
+- [SOQL Patterns](../../development/soql-query-patterns.md) - SOQL query patterns
+- [Apex Patterns](../../development/apex-patterns.md) - Complete Apex patterns
 

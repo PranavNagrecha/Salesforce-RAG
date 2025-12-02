@@ -101,9 +101,9 @@ force-app/main/default/
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- [LWC Patterns](rag/development/lwc-patterns.md) - Complements with MCP-validated practices
-- [Apex Patterns](rag/development/apex-patterns.md) - Related backend patterns
-- [Security Patterns](rag/security/) - Security considerations
+- [LWC Patterns](../development/lwc-patterns.md) - Complements with MCP-validated practices
+- [Apex Patterns](../development/apex-patterns.md) - Related backend patterns
+- [Security Patterns](../security) - Security considerations
 
 **How This Complements Existing RAG**:
 - Validates and extends existing LWC patterns with official Salesforce guidance

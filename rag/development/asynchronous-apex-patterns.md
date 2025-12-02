@@ -5,9 +5,9 @@
 This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods. Asynchronous Apex is essential for processing large data volumes, performing long-running operations, and avoiding governor limit exceptions in synchronous contexts.
 
 **Related Patterns**:
-- [Apex Patterns](rag/development/apex-patterns.md) - General Apex patterns and class layering
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md) - Governor limit management
-- [Error Handling and Logging](rag/development/error-handling-and-logging.md) - Error handling patterns
+- [Apex Patterns](apex-patterns.md) - General Apex patterns and class layering
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Governor limit management
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
 
 ## Consensus Best Practices
 
@@ -445,10 +445,10 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 
 ## Related Patterns
 
-- [Apex Patterns](rag/development/apex-patterns.md) - General Apex patterns
-- [Governor Limits and Optimization](rag/development/governor-limits-and-optimization.md) - Governor limit management
-- [Error Handling and Logging](rag/development/error-handling-and-logging.md) - Error handling patterns
-- [Batch Examples](rag/code-examples/apex/batch-examples.md) - Complete Batch Apex code examples
-- [Queueable Examples](rag/code-examples/apex/queueable-examples.md) - Complete Queueable code examples
-- [Scheduled Examples](rag/code-examples/apex/scheduled-examples.md) - Complete Scheduled Apex code examples
+- [Apex Patterns](apex-patterns.md) - General Apex patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Governor limit management
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
+- [Batch Examples](../code-examples/apex/batch-examples.md) - Complete Batch Apex code examples
+- [Queueable Examples](../code-examples/apex/queueable-examples.md) - Complete Queueable code examples
+- [Scheduled Examples](../code-examples/apex/scheduled-examples.md) - Complete Scheduled Apex code examples
 

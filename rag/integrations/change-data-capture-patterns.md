@@ -5,8 +5,8 @@
 Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted. This guide covers CDC event processing patterns, error handling, and integration strategies.
 
 **Related Patterns**:
-- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Platform Events and event-driven patterns
-- [Integration Patterns](rag/integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events and event-driven patterns
+- [Integration Patterns](etl-vs-api-vs-events.md) - Integration pattern selection
 
 ## Consensus Best Practices
 
@@ -182,9 +182,9 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 
 ## Related Patterns
 
-- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Platform Events and event-driven patterns
-- [Integration Patterns](rag/integrations/etl-vs-api-vs-events.md) - Integration pattern selection
-- [Monitoring and Alerting](rag/observability/monitoring-alerting.md) - CDC monitoring and event processing metrics
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events and event-driven patterns
+- [Integration Patterns](etl-vs-api-vs-events.md) - Integration pattern selection
+- [Monitoring and Alerting](../observability/monitoring-alerting.md) - CDC monitoring and event processing metrics
 
 ## Tradeoffs: CDC vs Platform Events vs Other Patterns
 
@@ -223,7 +223,7 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 
 ## Related Patterns
 
-- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Platform Events patterns
-- [Integration Patterns](rag/integrations/etl-vs-api-vs-events.md) - Integration pattern selection
-- [CDC Examples](rag/code-examples/integrations/cdc-examples.md) - Complete CDC code examples
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
+- [Integration Patterns](etl-vs-api-vs-events.md) - Integration pattern selection
+- [CDC Examples](../code-examples/integrations/cdc-examples.md) - Complete CDC code examples
 

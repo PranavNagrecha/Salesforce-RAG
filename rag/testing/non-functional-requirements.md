@@ -5,10 +5,10 @@
 This guide covers non-functional requirements testing for Salesforce, including security testing, accessibility testing for LWCs and portals, and performance benchmarks. These patterns are essential for ensuring systems meet quality standards beyond functional requirements.
 
 **Related Patterns**:
-- [Automated Testing Patterns](rag/testing/automated-testing-patterns.md) - Automated testing approaches
-- [LWC Accessibility](rag/mcp-knowledge/lwc-accessibility.md) - LWC accessibility guidelines
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization
-- [Security Patterns](rag/security/) - Security and access control patterns
+- [Automated Testing Patterns](automated-testing-patterns.md) - Automated testing approaches
+- [LWC Accessibility](../mcp-knowledge/lwc-accessibility.md) - LWC accessibility guidelines
+- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization
+- [Security Patterns](../security) - Security and access control patterns
 
 ## Consensus Best Practices
 
@@ -257,9 +257,9 @@ This guide covers non-functional requirements testing for Salesforce, including 
 
 ## Related Patterns
 
-- [Automated Testing Patterns](rag/testing/automated-testing-patterns.md) - Automated testing approaches
-- [LWC Accessibility](rag/mcp-knowledge/lwc-accessibility.md) - LWC accessibility guidelines
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization
-- [Security Patterns](rag/security/) - Security and access control patterns
-- [Monitoring and Alerting](rag/observability/monitoring-alerting.md) - Performance monitoring
+- [Automated Testing Patterns](automated-testing-patterns.md) - Automated testing approaches
+- [LWC Accessibility](../mcp-knowledge/lwc-accessibility.md) - LWC accessibility guidelines
+- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization
+- [Security Patterns](../security) - Security and access control patterns
+- [Monitoring and Alerting](../observability/monitoring-alerting.md) - Performance monitoring
 

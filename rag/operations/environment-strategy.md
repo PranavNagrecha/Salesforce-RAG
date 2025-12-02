@@ -5,9 +5,9 @@
 This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences. These patterns are essential for managing complex Salesforce implementations with multiple teams, compliance requirements, and efficient development workflows.
 
 **Related Patterns**:
-- [CI/CD Patterns](rag/operations/cicd-patterns.md) - CI/CD and deployment automation
-- [Release Governance](rag/operations/release-governance.md) - Release approval and risk management
-- [Data Residency & Compliance](rag/data-governance/data-residency-compliance.md) - Data protection and compliance patterns
+- [CI/CD Patterns](cicd-patterns.md) - CI/CD and deployment automation
+- [Release Governance](release-governance.md) - Release approval and risk management
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.md) - Data protection and compliance patterns
 
 ## Consensus Best Practices
 
@@ -244,8 +244,8 @@ This guide covers environment strategy patterns for Salesforce, including org to
 
 ## Related Patterns
 
-- [CI/CD Patterns](rag/operations/cicd-patterns.md) - CI/CD and deployment automation
-- [Release Governance](rag/operations/release-governance.md) - Release approval and risk management
-- [Data Residency & Compliance](rag/data-governance/data-residency-compliance.md) - Data protection and compliance
+- [CI/CD Patterns](cicd-patterns.md) - CI/CD and deployment automation
+- [Release Governance](release-governance.md) - Release approval and risk management
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.md) - Data protection and compliance
 - [Sandbox Seeding](rag/operations/cicd-patterns.md#sandbox-seeding) - Test data management patterns
 

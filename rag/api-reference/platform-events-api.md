@@ -55,7 +55,7 @@ public with sharing class EventPublisher {
 - Include timestamp and idempotency keys
 - Keep payloads self-contained and minimal
 
-**Related Patterns**: [Event-Driven Architecture](rag/architecture/event-driven-architecture.md)
+**Related Patterns**: [Event-Driven Architecture](../architecture/event-driven-architecture.md)
 
 ---
 
@@ -243,13 +243,13 @@ public static void handleEvents(List<CustomEvent__e> events) {
 }
 ```
 
-**Related Patterns**: [Error Handling](rag/development/error-handling-and-logging.md)
+**Related Patterns**: [Error Handling](../development/error-handling-and-logging.md)
 
 ---
 
 ## Related Patterns
 
-- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Complete event-driven patterns
-- [Integration Patterns](rag/integrations/) - Integration with external systems
-- [Error Handling](rag/development/error-handling-and-logging.md) - Error handling patterns
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Complete event-driven patterns
+- [Integration Patterns](../integrations) - Integration with external systems
+- [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
 

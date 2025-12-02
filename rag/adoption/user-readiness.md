@@ -5,8 +5,8 @@
 This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption. These patterns are essential for ensuring successful user adoption, maximizing system value, and driving organizational change.
 
 **Related Patterns**:
-- [Org Health Checks](rag/adoption/org-health-checks.md) - Technical debt and org optimization
-- [Delivery Framework](rag/project-methods/delivery-framework.md) - Project delivery methodology
+- [Org Health Checks](org-health-checks.md) - Technical debt and org optimization
+- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
 
 ## Consensus Best Practices
 
@@ -247,7 +247,7 @@ This guide covers user readiness patterns for Salesforce, including training pla
 
 ## Related Patterns
 
-- [Org Health Checks](rag/adoption/org-health-checks.md) - Technical debt and org optimization
-- [Delivery Framework](rag/project-methods/delivery-framework.md) - Project delivery methodology
-- [Testing Strategy](rag/project-methods/testing-strategy.md) - User acceptance testing patterns
+- [Org Health Checks](org-health-checks.md) - Technical debt and org optimization
+- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
+- [Testing Strategy](../project-methods/testing-strategy.md) - User acceptance testing patterns
 

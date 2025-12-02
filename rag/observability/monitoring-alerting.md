@@ -5,10 +5,10 @@
 This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns. These patterns are essential for maintaining system reliability, detecting issues early, and ensuring operational excellence.
 
 **Related Patterns**:
-- [Error Handling and Logging](rag/development/error-handling-and-logging.md) - Logging framework and error handling
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization patterns
-- [Change Data Capture Patterns](rag/integrations/change-data-capture-patterns.md) - CDC event processing
-- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Platform Events patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.md) - Logging framework and error handling
+- [Performance Tuning](performance-tuning.md) - Performance optimization patterns
+- [Change Data Capture Patterns](../integrations/change-data-capture-patterns.md) - CDC event processing
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
 
 ## Consensus Best Practices
 
@@ -269,9 +269,9 @@ This guide covers monitoring and alerting patterns for Salesforce, including Pla
 
 ## Related Patterns
 
-- [Error Handling and Logging](rag/development/error-handling-and-logging.md) - Logging framework implementation
-- [Performance Tuning](rag/observability/performance-tuning.md) - Performance optimization and monitoring
-- [Change Data Capture Patterns](rag/integrations/change-data-capture-patterns.md) - CDC monitoring patterns
-- [Event-Driven Architecture](rag/architecture/event-driven-architecture.md) - Platform Events patterns
-- [High Availability & DR](rag/observability/ha-dr-patterns.md) - Disaster recovery and failover patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.md) - Logging framework implementation
+- [Performance Tuning](performance-tuning.md) - Performance optimization and monitoring
+- [Change Data Capture Patterns](../integrations/change-data-capture-patterns.md) - CDC monitoring patterns
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
+- [High Availability & DR](ha-dr-patterns.md) - Disaster recovery and failover patterns
 

@@ -5,8 +5,8 @@
 This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce. These patterns are essential for data imports, system migrations, and data synchronization.
 
 **Related Patterns**:
-- [External IDs and Integration Keys](rag/data-modeling/external-ids-and-integration-keys.md) - External ID patterns for migration
-- [ETL vs API vs Events](rag/integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns for migration
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
 
 ## Consensus Best Practices
 
@@ -267,7 +267,7 @@ This guide covers data migration strategies, transformation patterns, validation
 
 ## Related Patterns
 
-- [External IDs and Integration Keys](rag/data-modeling/external-ids-and-integration-keys.md) - External ID patterns
-- [ETL vs API vs Events](rag/integrations/etl-vs-api-vs-events.md) - Integration patterns
-- [Data Migration Examples](rag/code-examples/utilities/data-migration-examples.md) - Complete code examples
+- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration patterns
+- [Data Migration Examples](../code-examples/utilities/data-migration-examples.md) - Complete code examples
 

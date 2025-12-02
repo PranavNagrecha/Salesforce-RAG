@@ -171,7 +171,7 @@ private class ContactUpdateServiceTest {
 **Pattern**: Service Layer Orchestrating Multi-Step Workflow
 **Use Case**: Complex business process with multiple steps
 **Complexity**: Intermediate
-**Related Patterns**: [Service Layer](rag/development/apex-patterns.md#service-layer), [Error Handling](rag/development/error-handling-and-logging.md)
+**Related Patterns**: [Service Layer](rag/development/apex-patterns.md#service-layer), [Error Handling](../../development/error-handling-and-logging.md)
 
 **Problem**:
 You need to orchestrate a complex workflow: query related records → validate → update multiple objects → send notifications → log results.

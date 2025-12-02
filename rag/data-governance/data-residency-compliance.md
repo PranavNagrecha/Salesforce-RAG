@@ -5,9 +5,9 @@
 This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices. These patterns are essential for ensuring data protection, regulatory compliance, and maintaining customer trust.
 
 **Related Patterns**:
-- [Salesforce LLM Data Governance](rag/security/salesforce-llm-data-governance.md) - Data governance for LLM systems
-- [Permission Set Architecture](rag/security/permission-set-architecture.md) - Access control patterns
-- [Environment Strategy](rag/operations/environment-strategy.md) - Data masking patterns
+- [Salesforce LLM Data Governance](../security/salesforce-llm-data-governance.md) - Data governance for LLM systems
+- [Permission Set Architecture](../security/permission-set-architecture.md) - Access control patterns
+- [Environment Strategy](../operations/environment-strategy.md) - Data masking patterns
 
 ## Consensus Best Practices
 
@@ -313,8 +313,8 @@ This guide covers data residency and compliance patterns for Salesforce, includi
 
 ## Related Patterns
 
-- [Salesforce LLM Data Governance](rag/security/salesforce-llm-data-governance.md) - Data governance for LLM systems
-- [Permission Set Architecture](rag/security/permission-set-architecture.md) - Access control patterns
-- [Environment Strategy](rag/operations/environment-strategy.md) - Data masking patterns
-- [Data Quality & Stewardship](rag/data-governance/data-quality-stewardship.md) - Data quality patterns
+- [Salesforce LLM Data Governance](../security/salesforce-llm-data-governance.md) - Data governance for LLM systems
+- [Permission Set Architecture](../security/permission-set-architecture.md) - Access control patterns
+- [Environment Strategy](../operations/environment-strategy.md) - Data masking patterns
+- [Data Quality & Stewardship](data-quality-stewardship.md) - Data quality patterns
 

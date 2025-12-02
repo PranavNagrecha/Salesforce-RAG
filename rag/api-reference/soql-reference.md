@@ -168,7 +168,7 @@ WHERE AccountId = :accountId
 - Required for security compliance
 - Fails fast if user lacks access
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#security-enforcement), [Security Patterns](rag/security/)
+**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#security-enforcement), [Security Patterns](../security)
 
 ---
 
@@ -299,7 +299,7 @@ List<Contact> nextPage = [
 - `OFFSET` has performance limitations (max 2000)
 - Cursor-based approach scales better
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#cursor-based-pagination), [Governor Limits](rag/development/governor-limits-and-optimization.md)
+**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#cursor-based-pagination), [Governor Limits](../development/governor-limits-and-optimization.md)
 
 ---
 
@@ -366,8 +366,8 @@ WHERE Id NOT IN (SELECT ProfileId FROM User WHERE IsActive = true)
 
 ## Related Patterns
 
-- [SOQL Query Patterns](rag/development/soql-query-patterns.md) - Complete SOQL patterns and examples
-- [Apex Patterns](rag/development/apex-patterns.md) - Apex query patterns
-- [Governor Limits](rag/development/governor-limits-and-optimization.md) - Query optimization
+- [SOQL Query Patterns](../development/soql-query-patterns.md) - Complete SOQL patterns and examples
+- [Apex Patterns](../development/apex-patterns.md) - Apex query patterns
+- [Governor Limits](../development/governor-limits-and-optimization.md) - Query optimization
 - [Selector Layer](rag/development/apex-patterns.md#selector-layer) - Selector pattern implementation
 

@@ -7,9 +7,9 @@
 This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies. All solutions follow WCAG 2.2 standards.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](rag/mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md) - Accessibility code examples
-- [LWC Accessibility Testing](rag/testing/lwc-accessibility-testing.md) - Testing patterns
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Accessibility code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns
 
 ## Common Accessibility Errors
 
@@ -760,8 +760,8 @@ handleClose() {
 
 ## Related Patterns
 
-- [LWC Accessibility Guidelines](rag/mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md) - Accessibility code examples
-- [LWC Accessibility Testing](rag/testing/lwc-accessibility-testing.md) - Testing patterns
-- [Common LWC Errors](rag/troubleshooting/common-lwc-errors.md) - General LWC troubleshooting
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Accessibility code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns
+- [Common LWC Errors](common-lwc-errors.md) - General LWC troubleshooting
 

@@ -174,8 +174,8 @@ Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to 
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- [LWC Patterns](rag/development/lwc-patterns.md) - Component implementation patterns
-- [LWC Accessibility](rag/mcp-knowledge/lwc-accessibility.md) - Accessibility requirements
+- [LWC Patterns](../development/lwc-patterns.md) - Component implementation patterns
+- [LWC Accessibility](lwc-accessibility.md) - Accessibility requirements
 
 **How This Complements Existing RAG**:
 - Provides official SLDS design guidelines

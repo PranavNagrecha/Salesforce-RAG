@@ -75,7 +75,7 @@ trigger [ObjectName]Trigger on [ObjectName] (before insert, before update, after
 - Delegate to Service layer for complex workflows
 
 **Related Patterns**:
-- [Trigger Examples](rag/code-examples/apex/trigger-examples.md)
-- [Apex Patterns](rag/development/apex-patterns.md)
-- [Order of Execution](rag/development/order-of-execution.md)
+- [Trigger Examples](../apex/trigger-examples.md)
+- [Apex Patterns](../../development/apex-patterns.md)
+- [Order of Execution](../../development/order-of-execution.md)
 
