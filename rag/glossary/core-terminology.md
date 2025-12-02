@@ -4,6 +4,11 @@
 
 This glossary defines core terms used throughout the RAG knowledge library. Terms are defined in the context of this architecture, integrations, and data models. All definitions are generic and avoid client- or org-specific names.
 
+## Quick Navigation
+
+- **[Terminology Flowchart](terminology-flowchart.md)**: Visual guide showing relationships between terms
+- **Jump to Section**: [Integration Terms](#integration-terms) | [Identity Terms](#identity-and-sso-terms) | [Data Model Terms](#data-model-terms) | [Security Terms](#security-terms) | [Platform Terms](#platform-terms) | [Development Terms](#development-terms) | [Operations Terms](#operations-terms) | [Data Governance Terms](#data-governance-terms) | [LLM/RAG Terms](#llm-and-rag-terms) | [Adoption Terms](#adoption-terms) | [Project Method Terms](#project-method-terms)
+
 ## Integration Terms
 
 ### ETL (Extract, Transform, Load)
@@ -522,12 +527,18 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 ## Related Documentation
 
+### Visual Guides
+
+- **[Terminology Flowchart](terminology-flowchart.md)**: Interactive flowchart showing relationships between all terminology categories
+
+### Domain-Specific Terminology
+
 For domain-specific terminology and definitions, see:
 
 - **Integration Terms**: `rag/integrations/etl-vs-api-vs-events.md`, `rag/integrations/salesforce-to-llm-data-pipelines.md`
 - **Identity Terms**: `rag/identity-sso/multi-tenant-identity-architecture.md`
 - **Data Model Terms**: `rag/data-modeling/student-lifecycle-data-model.md`
-- **Security Terms**: `rag/security/permission-set-architecture.md`, `rag/security/salesforce-llm-data-governance.md`
+- **Security Terms**: `rag/security/permission-set-architecture.md`, `rag/security/salesforce-llm-data-governance.md`, `rag/security/sharing-mechanisms.md`
 - **Development Terms**: `rag/development/apex-patterns.md`, `rag/development/flow-patterns.md`, `rag/development/lwc-patterns.md`, `rag/development/locking-and-concurrency-strategies.md`, `rag/development/governor-limits-and-optimization.md`
 - **Operations Terms**: `rag/operations/cicd-patterns.md`, `rag/operations/environment-strategy.md`, `rag/operations/release-governance.md`
 - **Observability Terms**: `rag/observability/monitoring-alerting.md`, `rag/observability/performance-tuning.md`, `rag/observability/ha-dr-patterns.md`

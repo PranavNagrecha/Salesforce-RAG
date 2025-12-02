@@ -542,6 +542,7 @@ Reusable design patterns that span multiple domains, including governor limit ma
 Terminology and definitions for clarifying what terms mean and understanding core concepts.
 
 - [core-terminology.md](glossary/core-terminology.md) — Core terminology and definitions for integration, identity, data modeling, security, platform, development, and project method terms
+- [terminology-flowchart.md](glossary/terminology-flowchart.md) — Visual flowchart showing relationships between terminology categories
 
 ### core-terminology.md
 
@@ -559,6 +560,18 @@ Terminology and definitions for clarifying what terms mean and understanding cor
 - Integration platform terminology (MuleSoft, Dell Boomi)
 - Data quality terminology (Idempotent Operation, Reconciliation)
 - Project method terminology (Sprint-Based Delivery, UAT)
+
+### terminology-flowchart.md
+
+**When to Retrieve**: Understanding relationships between terminology categories, visualizing how terms connect across domains, navigating the glossary by relationships, or getting a high-level overview of terminology structure.
+
+**Summary**: Visual flowchart showing relationships between core terminology categories in the RAG knowledge library. Includes Mermaid diagram showing how integration, identity, data modeling, security, development, operations, and other domains relate to each other. Provides category navigation and guidance on using the flowchart to explore terminology.
+
+**Key Topics**:
+- Terminology relationship visualization
+- Category navigation guide
+- Integration between domains
+- Quick reference for term relationships
 
 ## Project Methods
 
