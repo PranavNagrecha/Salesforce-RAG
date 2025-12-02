@@ -130,7 +130,47 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: Used in portal implementations to ensure users see only their own records or records for their associated organizations. Replaces traditional sharing rules for portal users.
 
-**Related Patterns**: See `rag/architecture/portal-architecture.md` for sharing set patterns.
+**Related Patterns**: See `rag/architecture/portal-architecture.md` for sharing set patterns and `rag/security/sharing-mechanisms.md` for comprehensive sharing guidance.
+
+### Org-Wide Defaults (OWD)
+
+**Definition**: Baseline level of access to records for all users within the organization, set per object.
+
+**Context**: OWD settings (Private, Public Read Only, Public Read/Write) determine the default access level before sharing rules are applied. Private is most restrictive, requiring sharing rules for access beyond owners and role hierarchy.
+
+**Related Patterns**: See `rag/security/sharing-mechanisms.md` for OWD selection framework and sharing patterns.
+
+### Apex Managed Sharing
+
+**Definition**: Programmatic sharing of records using Apex code by creating entries in object Share tables.
+
+**Context**: Used for complex sharing requirements that cannot be met through declarative sharing rules. Requires Apex Sharing Reasons and allows dynamic, logic-based sharing patterns.
+
+**Related Patterns**: See `rag/security/sharing-mechanisms.md` for Apex managed sharing patterns and code examples.
+
+### View All / Modify All Permissions
+
+**Definition**: Object-level permissions that grant users the ability to view or modify all records of a particular object, bypassing sharing settings.
+
+**Context**: View All grants read access to all records; Modify All grants full CRUD access. These permissions bypass all sharing rules and org-wide defaults. Should be used sparingly.
+
+**Related Patterns**: See `rag/security/sharing-mechanisms.md` for when to use View All/Modify All and security implications.
+
+### View All Data / Modify All Data
+
+**Definition**: System-level permissions that provide access to all records across all objects in the organization.
+
+**Context**: View All Data grants read access; Modify All Data grants full CRUD access. These permissions bypass all security mechanisms and are typically reserved for system administrators.
+
+**Related Patterns**: See `rag/security/sharing-mechanisms.md` for security implications and best practices.
+
+### Sharing Rules
+
+**Definition**: Declarative rules that extend access beyond Org-Wide Defaults and role hierarchy by granting additional access to specific users or groups.
+
+**Context**: Types include Owner-based (share records owned by specific users/roles), Criteria-based (share records meeting field criteria), and Territory-based (share records in territories). Sharing rules are evaluated after OWD and role hierarchy.
+
+**Related Patterns**: See `rag/security/sharing-mechanisms.md` for sharing rule types, configuration patterns, and decision frameworks.
 
 ## Platform Terms
 

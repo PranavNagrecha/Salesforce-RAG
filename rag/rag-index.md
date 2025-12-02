@@ -78,6 +78,7 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 - [sis-sync-patterns.md](integrations/sis-sync-patterns.md) — High-volume batch synchronization patterns for integrating with Student Information Systems using file-based staging and idempotent upserts
 - [salesforce-to-llm-data-pipelines.md](integrations/salesforce-to-llm-data-pipelines.md) — Pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
 - [change-data-capture-patterns.md](integrations/change-data-capture-patterns.md) — Change Data Capture patterns: CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns
+- [integration-user-license-guide.md](integrations/integration-user-license-guide.md) — Comprehensive guide to Salesforce Integration User Licenses (free API-only license): setup, authentication, permissions, security, and best practices
 
 ### etl-vs-api-vs-events.md
 
@@ -130,6 +131,21 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 - Per-record vs aggregated chunking strategies
 - Field selection and redaction patterns
 - Relationship context preservation in chunks
+
+### integration-user-license-guide.md
+
+**When to Retrieve**: Setting up Integration User Licenses for system-to-system integrations, configuring API-only authentication for external systems, understanding how to use the free Integration User License, implementing OAuth Client Credentials Flow, managing permissions for integration users, or planning integration authentication strategy.
+
+**Summary**: Comprehensive guide to Salesforce Integration User Licenses - the free API-only license included with Enterprise, Performance, and Unlimited editions. Covers license details and allocation, step-by-step setup and configuration, OAuth 2.0 Client Credentials Flow authentication, Permission Set design and management, security best practices, operational monitoring, and integration patterns with MuleSoft and Dell Boomi.
+
+**Key Topics**:
+- Integration User License setup and configuration
+- OAuth 2.0 Client Credentials Flow authentication
+- Permission Set design for API-only users
+- Security best practices and audit trail management
+- License management and cost optimization
+- Integration patterns with MuleSoft and Dell Boomi
+- Operational monitoring and troubleshooting
 
 ## Identity and SSO
 
@@ -253,10 +269,11 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 
 ## Security
 
-Security and access control patterns for implementing permission set-driven security, managing access control, and securing Salesforce data for LLM systems.
+Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms.
 
 - [permission-set-architecture.md](security/permission-set-architecture.md) — Guide to permission set-driven security architecture with Profiles for UI configuration and Permission Sets for access control
 - [salesforce-llm-data-governance.md](security/salesforce-llm-data-governance.md) — Security and governance patterns for choosing what data to expose from Salesforce to LLMs and how to do that safely
+- [sharing-mechanisms.md](security/sharing-mechanisms.md) — Comprehensive guide to all Salesforce sharing mechanisms including OWD, Role Hierarchy, Sharing Rules, Apex Managed Sharing, View All/Modify All permissions, Sharing Sets, and community sharing patterns
 
 ### permission-set-architecture.md
 
@@ -284,6 +301,25 @@ Security and access control patterns for implementing permission set-driven secu
 - Separate indexes per role vs attribute-based filtering
 - Data masking and redaction strategies
 - Governance and compliance (GDPR, CCPA, HIPAA, FERPA)
+
+### sharing-mechanisms.md
+
+**When to Retrieve**: Understanding how Salesforce sharing works, implementing sharing rules for internal users, designing Experience Cloud sharing with Sharing Sets, deciding between different sharing mechanisms, troubleshooting sharing access issues, implementing Apex managed sharing, understanding View All/Modify All permissions, designing multi-tenant data isolation patterns, or optimizing sharing for large data volumes.
+
+**Summary**: Comprehensive guide to all Salesforce sharing mechanisms. Covers Org-Wide Defaults (OWD), Role Hierarchy, Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, Apex Managed Sharing, View All/Modify All permissions (object and system level), View All Fields/Modify All Fields permissions, Sharing Sets for Experience Cloud, community sharing patterns, sharing calculation and performance, decision frameworks for selecting sharing mechanisms, best practices, common patterns, troubleshooting, and code examples.
+
+**Key Topics**:
+- Org-Wide Defaults (Private, Public Read Only, Public Read/Write)
+- Role Hierarchy and hierarchical access patterns
+- Sharing Rules (Owner-based, Criteria-based, Territory-based)
+- Manual Sharing and Apex Managed Sharing
+- View All/Modify All permissions (object and system level)
+- View All Fields/Modify All Fields permissions
+- Sharing Sets for Experience Cloud (Community) users
+- Community sharing patterns and multi-tenant data isolation
+- Sharing calculation, performance, and optimization
+- Decision frameworks for selecting sharing mechanisms
+- Best practices, common patterns, and troubleshooting
 
 ## Development
 
@@ -919,9 +955,10 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `data-modeling/file-management-patterns.md`
 - ✅ `data-modeling/data-migration-patterns.md`
 
-**Security (2 files)**:
+**Security (3 files)**:
 - ✅ `security/permission-set-architecture.md`
 - ✅ `security/salesforce-llm-data-governance.md`
+- ✅ `security/sharing-mechanisms.md`
 
 **Development (10 files)**:
 - ✅ `development/error-handling-and-logging.md`

@@ -342,6 +342,37 @@
       "status": "completed"
     },
     {
+      "domain": "security",
+      "file": "sharing-mechanisms.md",
+      "path": "rag/security/sharing-mechanisms.md",
+      "whenToRetrieve": [
+        "Understanding how Salesforce sharing works",
+        "Implementing sharing rules for internal users",
+        "Designing Experience Cloud sharing with Sharing Sets",
+        "Deciding between different sharing mechanisms",
+        "Troubleshooting sharing access issues",
+        "Implementing Apex managed sharing",
+        "Understanding View All/Modify All permissions",
+        "Designing multi-tenant data isolation patterns",
+        "Optimizing sharing for large data volumes"
+      ],
+      "summary": "Comprehensive guide to all Salesforce sharing mechanisms. Covers Org-Wide Defaults (OWD), Role Hierarchy, Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, Apex Managed Sharing, View All/Modify All permissions (object and system level), View All Fields/Modify All Fields permissions, Sharing Sets for Experience Cloud, community sharing patterns, sharing calculation and performance, decision frameworks for selecting sharing mechanisms, best practices, common patterns, troubleshooting, and code examples.",
+      "keyTopics": [
+        "Org-Wide Defaults (Private, Public Read Only, Public Read/Write)",
+        "Role Hierarchy and hierarchical access patterns",
+        "Sharing Rules (Owner-based, Criteria-based, Territory-based)",
+        "Manual Sharing and Apex Managed Sharing",
+        "View All/Modify All permissions (object and system level)",
+        "View All Fields/Modify All Fields permissions",
+        "Sharing Sets for Experience Cloud (Community) users",
+        "Community sharing patterns and multi-tenant data isolation",
+        "Sharing calculation, performance, and optimization",
+        "Decision frameworks for selecting sharing mechanisms",
+        "Best practices, common patterns, and troubleshooting"
+      ],
+      "status": "completed"
+    },
+    {
       "domain": "development",
       "file": "error-handling-and-logging.md",
       "path": "rag/development/error-handling-and-logging.md",
@@ -1326,6 +1357,30 @@
       ],
       "status": "completed",
       "hasCodeExamples": true
+    },
+    {
+      "domain": "integrations",
+      "file": "integration-user-license-guide.md",
+      "path": "rag/integrations/integration-user-license-guide.md",
+      "whenToRetrieve": [
+        "Setting up Integration User Licenses for system-to-system integrations",
+        "Configuring API-only authentication for external systems",
+        "Understanding how to use the free Integration User License",
+        "Implementing OAuth Client Credentials Flow",
+        "Managing permissions for integration users",
+        "Planning integration authentication strategy"
+      ],
+      "summary": "Comprehensive guide to Salesforce Integration User Licenses - the free API-only license included with Enterprise, Performance, and Unlimited editions. Covers license details and allocation, step-by-step setup and configuration, OAuth 2.0 Client Credentials Flow authentication, Permission Set design and management, security best practices, operational monitoring, and integration patterns with MuleSoft and Dell Boomi.",
+      "keyTopics": [
+        "Integration User License setup and configuration",
+        "OAuth 2.0 Client Credentials Flow authentication",
+        "Permission Set design for API-only users",
+        "Security best practices and audit trail management",
+        "License management and cost optimization",
+        "Integration patterns with MuleSoft and Dell Boomi",
+        "Operational monitoring and troubleshooting"
+      ],
+      "status": "completed"
     },
     {
       "domain": "data-modeling",
