@@ -19,13 +19,17 @@ rag/
 ├── identity-sso/         # Identity and SSO patterns
 ├── data-modeling/        # Data modeling patterns
 ├── security/             # Security and access control patterns
+├── operations/            # Delivery & operations patterns
+├── observability/         # Observability & resilience patterns
+├── data-governance/      # Data governance & compliance patterns
+├── adoption/              # Adoption & change management patterns
 ├── project-methods/      # Project delivery and methodology
 ├── development/          # Development patterns and practices
+├── testing/              # Testing patterns and examples
 ├── troubleshooting/      # Debugging and troubleshooting
 ├── patterns/             # Reusable design patterns
 ├── glossary/             # Terminology and definitions
 ├── code-examples/        # Complete, working code examples
-├── testing/              # Testing patterns and examples
 ├── quick-start/          # Quick-start guides
 ├── api-reference/        # API references and method signatures
 ├── mcp-knowledge/        # MCP-extracted knowledge
