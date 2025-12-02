@@ -320,6 +320,166 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Related Patterns**: See `rag/integrations/salesforce-to-llm-data-pipelines.md` for indexing strategies.
 
+## Operations Terms
+
+### CI/CD (Continuous Integration/Continuous Deployment)
+
+**Definition**: Automated software delivery process that integrates code changes and deploys them to environments automatically.
+
+**Context**: Used for Salesforce deployments to ensure consistent, reliable deployments. Includes metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation, and rollback strategies.
+
+**Related Patterns**: See `rag/operations/cicd-patterns.md` for CI/CD patterns.
+
+### Source-Tracked Org
+
+**Definition**: Salesforce org that automatically tracks changes made directly in the org, enabling bidirectional sync between org and source control.
+
+**Context**: Used for modern development workflows with SFDX. Supports automatic change detection, better Git integration, and modern CI/CD tooling.
+
+**Related Patterns**: See `rag/operations/cicd-patterns.md` for source-tracked org patterns.
+
+### Unlocked Package
+
+**Definition**: Salesforce package type for modular development, allowing versioned, reusable components that can be installed and upgraded independently.
+
+**Context**: Used for breaking down large codebases into manageable, versioned packages. Supports dependency management, versioning, and package promotion workflows.
+
+**Related Patterns**: See `rag/operations/cicd-patterns.md` for unlocked package patterns.
+
+### CAB (Change Advisory Board)
+
+**Definition**: Governance body that reviews and approves changes before deployment to production.
+
+**Context**: Used for managing release governance, assessing change risk, coordinating release scheduling, and ensuring proper approval workflows.
+
+**Related Patterns**: See `rag/operations/release-governance.md` for CAB patterns.
+
+## Observability Terms
+
+### LDV (Large Data Volume)
+
+**Definition**: Salesforce org with 1 million+ records per object, requiring specialized data handling and query optimization strategies.
+
+**Context**: Used to describe orgs with very large datasets. Requires indexed field usage, data archiving strategies, and LDV-specific query optimization.
+
+**Related Patterns**: See `rag/observability/performance-tuning.md` for LDV handling patterns.
+
+### RTO (Recovery Time Objective)
+
+**Definition**: Maximum acceptable downtime, defining the time to restore system functionality after a disaster.
+
+**Context**: Used in disaster recovery planning. Varies by system criticality (minutes to hours for critical systems, days to weeks for standard systems).
+
+**Related Patterns**: See `rag/observability/ha-dr-patterns.md` for RTO planning.
+
+### RPO (Recovery Point Objective)
+
+**Definition**: Maximum acceptable data loss, defining the point in time to recover to after a disaster.
+
+**Context**: Used in backup and disaster recovery planning. Determines backup frequency requirements (real-time replication for zero data loss, hours to days for acceptable data loss).
+
+**Related Patterns**: See `rag/observability/ha-dr-patterns.md` for RPO planning.
+
+### Circuit Breaker
+
+**Definition**: Design pattern that prevents cascading failures by failing fast when a system is down, allowing time for recovery.
+
+**Context**: Used in integration failover patterns. Has three states: Closed (normal operation), Open (fail fast), Half-Open (testing recovery).
+
+**Related Patterns**: See `rag/observability/ha-dr-patterns.md` for circuit breaker patterns.
+
+## Data Governance Terms
+
+### PII (Personally Identifiable Information)
+
+**Definition**: Data that can identify a specific individual, such as name, SSN, email, phone number, or biometric data.
+
+**Context**: Used in data classification and protection strategies. Requires encryption, access controls, and compliance with regulations like GDPR and CCPA.
+
+**Related Patterns**: See `rag/data-governance/data-residency-compliance.md` for PII handling patterns.
+
+### PHI (Protected Health Information)
+
+**Definition**: Health information that can identify an individual, including medical records, diagnoses, treatments, and health identifiers.
+
+**Context**: Used in healthcare implementations. Requires HIPAA compliance, encryption, audit trails, and strict access controls.
+
+**Related Patterns**: See `rag/data-governance/data-residency-compliance.md` for PHI protection patterns.
+
+### GDPR (General Data Protection Regulation)
+
+**Definition**: European Union regulation governing data protection and privacy for individuals within the EU.
+
+**Context**: Used for implementations serving EU residents. Requires data subject rights (access, rectification, erasure, portability), consent management, and data processing documentation.
+
+**Related Patterns**: See `rag/data-governance/data-residency-compliance.md` for GDPR compliance patterns.
+
+### CCPA (California Consumer Privacy Act)
+
+**Definition**: California state law providing consumers rights to know, delete, and opt-out of data sales.
+
+**Context**: Used for implementations serving California residents. Requires consumer request processes, opt-out mechanisms, and privacy policy updates.
+
+**Related Patterns**: See `rag/data-governance/data-residency-compliance.md` for CCPA compliance patterns.
+
+### SOC2 (System and Organization Controls 2)
+
+**Definition**: Security and compliance framework with five trust service criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy.
+
+**Context**: Used for enterprise implementations requiring security certifications. Requires documented controls, regular audits, and audit evidence maintenance.
+
+**Related Patterns**: See `rag/data-governance/data-residency-compliance.md` for SOC2 controls.
+
+### Shield Platform Encryption
+
+**Definition**: Salesforce encryption solution that encrypts data at rest in the database, search indexes, and file storage.
+
+**Context**: Used for protecting sensitive data (PII/PHI). Supports deterministic encryption (searchable) and probabilistic encryption (maximum security).
+
+**Related Patterns**: See `rag/data-governance/data-residency-compliance.md` for Shield encryption patterns.
+
+### Survivorship Rules
+
+**Definition**: Rules that determine which data values to keep when merging duplicate records.
+
+**Context**: Used in data quality and duplicate management. Defines field-level priority rules (source priority, recency, completeness, quality score) for merge operations.
+
+**Related Patterns**: See `rag/data-governance/data-quality-stewardship.md` for survivorship rule patterns.
+
+### Master Data Governance
+
+**Definition**: Process of managing master data entities (Customer, Product, Reference data) to ensure data quality, consistency, and single source of truth.
+
+**Context**: Used for maintaining data quality at scale. Includes data stewardship workflows, data quality metrics, and automated quality checks.
+
+**Related Patterns**: See `rag/data-governance/data-quality-stewardship.md` for master data governance patterns.
+
+## Adoption Terms
+
+### Feature Adoption Telemetry
+
+**Definition**: Metrics and tracking for measuring how users adopt and use new features in the system.
+
+**Context**: Used for measuring user engagement, identifying adoption barriers, and optimizing feature rollout. Tracks feature usage, frequency, depth, and user satisfaction.
+
+**Related Patterns**: See `rag/adoption/user-readiness.md` for feature adoption patterns.
+
+### Technical Debt
+
+**Definition**: Accumulated shortcuts, workarounds, and suboptimal implementations that require future remediation.
+
+**Context**: Used in org health management. Includes code debt, configuration debt, data debt, security debt, performance debt, and documentation debt.
+
+**Related Patterns**: See `rag/adoption/org-health-checks.md` for technical debt triage patterns.
+
+### Baseline Audit
+
+**Definition**: Comprehensive assessment of org health, including code quality, configuration complexity, data quality, security, and performance.
+
+**Context**: Used for establishing org health baselines, identifying issues, and tracking improvements over time.
+
+**Related Patterns**: See `rag/adoption/org-health-checks.md` for baseline audit patterns.
+
 ## Related Documentation
 
 For domain-specific terminology and definitions, see:
@@ -329,4 +489,8 @@ For domain-specific terminology and definitions, see:
 - **Data Model Terms**: `rag/data-modeling/student-lifecycle-data-model.md`
 - **Security Terms**: `rag/security/permission-set-architecture.md`, `rag/security/salesforce-llm-data-governance.md`
 - **Development Terms**: `rag/development/apex-patterns.md`, `rag/development/flow-patterns.md`, `rag/development/lwc-patterns.md`, `rag/development/locking-and-concurrency-strategies.md`, `rag/development/governor-limits-and-optimization.md`
+- **Operations Terms**: `rag/operations/cicd-patterns.md`, `rag/operations/environment-strategy.md`, `rag/operations/release-governance.md`
+- **Observability Terms**: `rag/observability/monitoring-alerting.md`, `rag/observability/performance-tuning.md`, `rag/observability/ha-dr-patterns.md`
+- **Data Governance Terms**: `rag/data-governance/data-residency-compliance.md`, `rag/data-governance/data-quality-stewardship.md`
+- **Adoption Terms**: `rag/adoption/user-readiness.md`, `rag/adoption/org-health-checks.md`
 
