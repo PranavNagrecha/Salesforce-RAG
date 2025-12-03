@@ -1,6 +1,6 @@
 # Website Rules and Guidelines
 
-## 🚀 Quick Start: Auto-Sync Homepage
+## 🚀 Quick Start: Auto-Sync Everything
 
 **Just run this command:**
 ```bash
@@ -8,11 +8,12 @@ python website/scripts/sync-homepage.py
 ```
 
 That's it. The script will:
-- ✅ Scan `rag-index.md` for all categories
-- ✅ Check homepage for missing categories
-- ✅ Add any missing categories automatically
-- ✅ Update all descriptions to match `rag-index.md` exactly
-- ✅ Ensure all links work correctly
+- ✅ **Scan `rag/` folder** for all .md files
+- ✅ **Rebuild `rag-index.md`** from actual files (not just reference it)
+- ✅ **Find all categories** automatically
+- ✅ **Add missing categories** to homepage
+- ✅ **Update all descriptions** to match exactly
+- ✅ **Ensure all links** work correctly
 
 **Then commit:**
 ```bash
@@ -41,12 +42,16 @@ git push
 3. **Complete Coverage**: ALL major domains from `rag-index.md` must have homepage cards (script handles this)
 4. **Consistent Formatting**: All cards follow the same structure (script handles this)
 
-### When Adding New Domain to rag-index.md
+### When Adding New Files to rag/
 
-1. Add section to `rag/rag-index.md`
+1. Add your .md file to the appropriate folder in `rag/`
 2. **Run**: `python website/scripts/sync-homepage.py`
-3. Commit changes
-4. Done!
+3. The script will:
+   - Find your new file automatically
+   - Add it to `rag-index.md`
+   - Update homepage if needed
+4. Commit changes
+5. Done!
 
 ### Link Rules
 
