@@ -73,6 +73,46 @@ permalink: /
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#glossary">📖 Glossary</a></h3>
     <p>Terminology and definitions for clarifying what terms mean and understanding core concepts</p>
   </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#identity-and-sso">🔐 Identity and SSO</a></h3>
+    <p>Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#best-practices">⭐ Best Practices</a></h3>
+    <p>Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#patterns">🔀 Patterns</a></h3>
+    <p>Reusable design patterns that span multiple domains, including governor limit management, bulkification, and cross-cutting design patterns</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#project-methods">📋 Project Methods</a></h3>
+    <p>Project delivery and methodology for sprint-based delivery, testing strategies, and quality standards</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#observability">📊 Observability</a></h3>
+    <p>Observability and resilience patterns for monitoring, performance tuning, and high availability</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#data-governance">🛡️ Data Governance</a></h3>
+    <p>Data governance and compliance patterns for data residency, compliance, and data quality</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#adoption">👥 Adoption</a></h3>
+    <p>Adoption and change management patterns for user readiness and org health</p>
+  </div>
+  
+  <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#mcp-knowledge">🔧 MCP Knowledge</a></h3>
+    <p>MCP-extracted knowledge for Lightning Web Components, Lightning Data Service, and design system patterns</p>
+  </div>
 </div>
 
 ## Quick Links
