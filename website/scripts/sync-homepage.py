@@ -291,7 +291,8 @@ def build_rag_index(files_by_folder):
             # Build absolute path for Jekyll relative_url filter
             # Use HTML links instead of markdown links so we can use Jekyll filters
             # Format: <a href="{{ '/rag/path/file.html' | relative_url }}">text</a>
-            absolute_path = f"/rag/{url_path}"
+            # url is already the relative path (e.g., "adoption/org-health-checks.html")
+            absolute_path = f"/rag/{url}"
             
             # Use HTML link with Jekyll relative_url filter
             # This ensures baseurl is correctly applied
