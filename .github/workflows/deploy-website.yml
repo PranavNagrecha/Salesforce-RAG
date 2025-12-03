@@ -5,9 +5,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'rag/**'
-      - 'website/**'
+    # Remove path restrictions to trigger on any push to main
+    # paths:
+    #   - 'rag/**'
+    #   - 'website/**'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
