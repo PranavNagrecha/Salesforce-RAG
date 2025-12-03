@@ -7,7 +7,6 @@ on:
     paths:
       - 'rag/**'
       - 'website/**'
-      - 'Knowledge/**'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
