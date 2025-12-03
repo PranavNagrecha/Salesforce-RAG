@@ -66,22 +66,34 @@ git push
 
 ### When Adding New Files to rag/
 
-1. Add your .md file to the appropriate folder in `rag/`
-2. **Run**: `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
-3. The script will:
+1. **Add your .md file** to the appropriate folder in `rag/`
+2. **CRITICAL: Add Jekyll frontmatter** to your new file:
+   ```yaml
+   ---
+   layout: default
+   title: Your Page Title
+   description: Brief description of the page content
+   permalink: /rag/your-folder/your-file.html
+   ---
+   ```
+   - **Without frontmatter, the file will NOT generate an HTML page and links will return 404**
+3. **Run**: `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
+4. The script will:
    - Find your new file automatically
    - Add it to `rag-index.md`
    - Add it to `rag-library.json` with metadata
    - **If this is the FIRST file in a folder**: Create a new homepage card for that folder
    - **If folder already had files**: Update existing card
    - Update statistics and coverage counts
-4. Commit changes:
+5. Commit changes:
    ```bash
-   git add rag/rag-index.md rag/rag-library.json website/root/index.md
+   git add rag/your-folder/your-file.md rag/rag-index.md rag/rag-library.json website/root/index.md
    git commit -m "Add new RAG file: [filename]"
    git push
    ```
-5. Done!
+6. Done!
+
+**Remember: Frontmatter is REQUIRED - files without it will not work!**
 
 **Note**: Empty folders (with zero .md files) will NOT get homepage cards. As soon as you add the first file, the card will appear.
 
@@ -100,6 +112,47 @@ git push
    - Homepage category cards link to these anchors (e.g., `{{ '/rag/rag-index.html' | relative_url }}#adoption`)
 
 ## Content Rules
+
+### Jekyll Frontmatter Requirement
+
+**CRITICAL RULE**: **ALL markdown files in `rag/` MUST have Jekyll frontmatter or Jekyll will NOT generate HTML pages.**
+
+1. **Required Frontmatter**: Every `.md` file in `rag/` must start with frontmatter:
+   ```yaml
+   ---
+   layout: default
+   title: Page Title
+   description: Page description for SEO
+   permalink: /rag/path/to/page.html
+   ---
+   ```
+
+2. **Why It's Required**: 
+   - Without frontmatter, Jekyll treats the file as plain markdown and does NOT convert it to HTML
+   - Links to files without frontmatter will return 404 errors
+   - Frontmatter tells Jekyll to process the file and where to generate the HTML
+
+3. **Permalink Format**: 
+   - Must match the file path: `rag/development/lwc-patterns.md` → `permalink: /rag/development/lwc-patterns.html`
+   - Always use `.html` extension (Jekyll converts `.md` to `.html`)
+
+4. **When Adding New Files**:
+   - **ALWAYS** add frontmatter immediately when creating a new `.md` file
+   - Use this template:
+     ```yaml
+     ---
+     layout: default
+     title: Your Page Title
+     description: Brief description of the page content
+     permalink: /rag/your-folder/your-file.html
+     ---
+     ```
+
+5. **Validation**: 
+   - Run `python website/scripts/validate-comprehensive-links.py` to check for files missing frontmatter
+   - Files without frontmatter will cause 404 errors when linked
+
+**This is a hard requirement - files without frontmatter will NOT work on the website.**
 
 ### Descriptions
 
