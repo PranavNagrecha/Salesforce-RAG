@@ -1,13 +1,8 @@
 ---
-title: "Lightning Data Service (LDS) API Reference"
-level: "Intermediate"
-tags:
-  - api-reference
-  - lds
-  - lightning-data-service
-  - reference
-  - wire-adapters
-last_reviewed: "2025-01-XX"
+layout: default
+title: Lightning Data Service (LDS) API Reference
+description: This reference provides API signatures, parameters, and usage examples for Lightning Data Service adapters used in Lightning Web Components
+permalink: /rag/api-reference/lds-api-reference.html
 ---
 
 # Lightning Data Service (LDS) API Reference

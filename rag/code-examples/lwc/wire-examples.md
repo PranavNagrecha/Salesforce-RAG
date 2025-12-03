@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Wire Examples
-description: Code examples for Wire Examples
+title: LWC Wire Service Code Examples
+description: Wire services provide reactive data access in Lightning Web Components
 permalink: /rag/code-examples/lwc/wire-examples.html
 ---
 

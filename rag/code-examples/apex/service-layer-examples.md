@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Service Layer Examples
-description: Code examples for Service Layer Examples
+title: Service Layer Code Examples
+description: The Service Layer coordinates between domain, selector, and integration layers
 permalink: /rag/code-examples/apex/service-layer-examples.html
 ---
 

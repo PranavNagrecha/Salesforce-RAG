@@ -1,3 +1,10 @@
+---
+layout: default
+title: LWC Development Guide - MCP Knowledge
+description: This guide provides comprehensive guidance for Lightning Web Components (LWC) development, covering core principles, technical stack, best practices, and development workflows
+permalink: /rag/mcp-knowledge/lwc-development-guide.html
+---
+
 # LWC Development Guide - MCP Knowledge
 
 > This file contains knowledge extracted from Salesforce MCP Service tools.  

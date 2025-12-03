@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Trigger Examples
-description: Code examples for Trigger Examples
+title: Trigger Handler Code Examples
+description: Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation
 permalink: /rag/code-examples/apex/trigger-examples.html
 ---
 

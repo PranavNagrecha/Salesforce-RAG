@@ -1,12 +1,8 @@
 ---
-title: "Data Quality and Stewardship for Salesforce"
-level: "Intermediate"
-tags:
-  - data-governance
-  - data-quality
-  - duplicate-prevention
-  - master-data
-last_reviewed: "2025-01-XX"
+layout: default
+title: Data Quality and Stewardship for Salesforce
+description: This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance
+permalink: /rag/data-governance/data-quality-stewardship.html
 ---
 
 # Data Quality and Stewardship for Salesforce

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Callout Examples
-description: Code examples for Callout Examples
+title: HTTP Callout Code Examples
+description: HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs
 permalink: /rag/code-examples/integrations/callout-examples.html
 ---
 

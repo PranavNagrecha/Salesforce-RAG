@@ -1,7 +1,7 @@
 ---
 layout: default
-title: LWC Component Examples
-description: Complete, working code examples for Lightning Web Component patterns and implementations
+title: Lightning Web Component Code Examples
+description: Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce
 permalink: /rag/code-examples/lwc/component-examples.html
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Sfdx Project Template
-description: Code examples for Sfdx Project Template
+title: SFDX Project Template
+description: Documentation for SFDX Project Template
 permalink: /rag/code-examples/templates/sfdx-project-template.html
 ---
 

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Custom Settings Code Examples
+description: Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas
+permalink: /rag/code-examples/utilities/custom-settings-examples.html
+---
+
 # Custom Settings Code Examples
 
 > Complete, working code examples for Custom Settings patterns.

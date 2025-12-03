@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Integration Examples
-description: Code examples for Integration Examples
+title: Integration Layer Code Examples
+description: The Integration Layer handles external API callouts, data transformation, authentication, and error handling
 permalink: /rag/code-examples/apex/integration-examples.html
 ---
 

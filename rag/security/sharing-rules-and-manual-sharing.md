@@ -1,13 +1,8 @@
 ---
-title: "Salesforce Sharing Rules and Manual Sharing"
-level: "Intermediate"
-tags:
-  - salesforce
-  - security
-  - sharing
-  - sharing-rules
-  - apex-managed-sharing
-last_reviewed: "2025-01-XX"
+layout: default
+title: Salesforce Sharing Rules and Manual Sharing
+description: This document covers sharing rules (owner-based, criteria-based, territory-based), manual sharing, and Apex managed sharing
+permalink: /rag/security/sharing-rules-and-manual-sharing.html
 ---
 
 # Salesforce Sharing Rules and Manual Sharing

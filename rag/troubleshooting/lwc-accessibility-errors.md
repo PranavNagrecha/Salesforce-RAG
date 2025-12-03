@@ -1,13 +1,8 @@
 ---
-title: "LWC Accessibility Errors and Solutions"
-level: "Intermediate"
-tags:
-  - troubleshooting
-  - lwc
-  - accessibility
-  - errors
-  - wcag
-last_reviewed: "2025-01-XX"
+layout: default
+title: LWC Accessibility Errors and Solutions
+description: This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies
+permalink: /rag/troubleshooting/lwc-accessibility-errors.html
 ---
 
 # LWC Accessibility Errors and Solutions

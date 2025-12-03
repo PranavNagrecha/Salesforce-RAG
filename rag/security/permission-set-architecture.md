@@ -1,12 +1,8 @@
 ---
-title: "Permission Set-Driven Security Architecture"
-level: "Advanced"
-tags:
-  - security
-  - permission-sets
-  - access-control
-  - architecture
-last_reviewed: "2025-01-XX"
+layout: default
+title: Permission Set-Driven Security Architecture
+description: Permission set-driven security architecture transitions from profile-centric to permission set-based access control
+permalink: /rag/security/permission-set-architecture.html
 ---
 
 # Permission Set-Driven Security Architecture

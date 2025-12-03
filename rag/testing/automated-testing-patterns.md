@@ -1,13 +1,8 @@
 ---
-title: "Automated Testing Patterns for Salesforce"
-level: "Advanced"
-tags:
-  - testing
-  - automation
-  - ui-testing
-  - contract-testing
-  - load-testing
-last_reviewed: "2025-01-XX"
+layout: default
+title: Automated Testing Patterns for Salesforce
+description: This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns
+permalink: /rag/testing/automated-testing-patterns.html
 ---
 
 # Automated Testing Patterns for Salesforce

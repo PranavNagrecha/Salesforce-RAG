@@ -1,12 +1,8 @@
 ---
-title: "Test Data Factory Patterns"
-level: "Intermediate"
-tags:
-  - testing
-  - apex
-  - test-data-factories
-  - test-classes
-last_reviewed: "2025-01-XX"
+layout: default
+title: Test Data Factory Patterns
+description: Test data factories provide reusable methods for creating test data, ensuring consistency and reducing duplication across test classes
+permalink: /rag/testing/test-data-factories.html
 ---
 
 # Test Data Factory Patterns

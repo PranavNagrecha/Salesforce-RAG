@@ -1,3 +1,10 @@
+---
+layout: default
+title: Data Migration Code Examples
+description: Data migration involves importing, transforming, and validating data in Salesforce
+permalink: /rag/code-examples/utilities/data-migration-examples.html
+---
+
 # Data Migration Code Examples
 
 > Complete, working code examples for data migration patterns.

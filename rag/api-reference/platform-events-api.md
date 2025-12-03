@@ -1,13 +1,8 @@
 ---
-title: "Platform Events API Reference"
-level: "Intermediate"
-tags:
-  - api-reference
-  - platform-events
-  - events
-  - reference
-  - integration
-last_reviewed: "2025-01-XX"
+layout: default
+title: Platform Events API Reference
+description: This reference provides API signatures, parameters, and usage examples for Platform Events in Salesforce
+permalink: /rag/api-reference/platform-events-api.html
 ---
 
 # Platform Events API Reference

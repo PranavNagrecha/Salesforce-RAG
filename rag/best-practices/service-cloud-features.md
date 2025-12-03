@@ -1,18 +1,8 @@
 ---
-title: "Service Cloud Features and Configuration"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 2: The Complete Guide To Salesforce Administration"
-section: "Service Cloud"
-level: "Intermediate"
-tags:
-  - salesforce
-  - service-cloud
-  - cases
-  - knowledge
-  - omni-channel
-  - administration
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/best-practices/service-cloud-features.html
 ---
 
 # Overview

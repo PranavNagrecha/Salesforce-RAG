@@ -1,17 +1,8 @@
 ---
-title: "Salesforce User License Selection"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 1: How to evaluate Salesforce for your business"
-section: "Understanding Salesforce, its products, and its licenses"
-level: "Beginner"
-tags:
-  - salesforce
-  - user-licenses
-  - licensing
-  - evaluation
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/architecture/user-license-selection.html
 ---
 
 # Overview

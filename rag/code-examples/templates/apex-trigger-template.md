@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Trigger Template
-description: Code examples for Apex Trigger Template
+title: Trigger Handler Template
+description: Documentation for Trigger Handler Template
 permalink: /rag/code-examples/templates/apex-trigger-template.html
 ---
 

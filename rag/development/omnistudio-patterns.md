@@ -1,13 +1,8 @@
 ---
-title: "OmniStudio Patterns"
-level: "Intermediate"
-tags:
-  - omnistudio
-  - development
-  - patterns
-  - omniscripts
-  - flexcards
-last_reviewed: "2025-01-XX"
+layout: default
+title: OmniStudio Patterns
+description: OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI components for complex business processes
+permalink: /rag/development/omnistudio-patterns.html
 ---
 
 # OmniStudio Patterns

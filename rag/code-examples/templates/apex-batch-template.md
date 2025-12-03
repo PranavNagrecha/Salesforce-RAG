@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Batch Template
-description: Code examples for Apex Batch Template
+title: Batch Apex Template
+description: Documentation for Batch Apex Template
 permalink: /rag/code-examples/templates/apex-batch-template.html
 ---
 

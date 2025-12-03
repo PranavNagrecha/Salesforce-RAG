@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Platform Events Examples
-description: Code examples for Platform Events Examples
+title: Platform Events Code Examples
+description: Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems
 permalink: /rag/code-examples/integrations/platform-events-examples.html
 ---
 

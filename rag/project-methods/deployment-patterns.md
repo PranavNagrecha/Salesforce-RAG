@@ -1,12 +1,8 @@
 ---
-title: "Deployment and CI/CD Patterns"
-level: "Intermediate"
-tags:
-  - project-methods
-  - deployment
-  - cicd
-  - metadata-api
-last_reviewed: "2025-01-XX"
+layout: default
+title: Deployment and CI/CD Patterns
+description: This guide covers Salesforce deployment strategies, source control patterns, deployment best practices, Metadata API usage, and package development patterns
+permalink: /rag/project-methods/deployment-patterns.html
 ---
 
 # Deployment and CI/CD Patterns

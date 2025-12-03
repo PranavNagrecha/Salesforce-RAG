@@ -1,14 +1,8 @@
 ---
-title: "Locking and Concurrency Strategies"
-level: "Advanced"
-tags:
-  - apex
-  - development
-  - patterns
-  - concurrency
-  - locking
-  - error-handling
-last_reviewed: "2025-01-XX"
+layout: default
+title: Locking and Concurrency Strategies
+description: This topic covers Salesforce row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, deadlock prevention, and high-concurrency scenario management
+permalink: /rag/development/locking-and-concurrency-strategies.html
 ---
 
 # Locking and Concurrency Strategies

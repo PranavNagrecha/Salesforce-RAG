@@ -1,12 +1,8 @@
 ---
-title: "Apex API Reference"
-level: "Intermediate"
-tags:
-  - api-reference
-  - apex
-  - reference
-  - methods
-last_reviewed: "2025-01-XX"
+layout: default
+title: Apex API Reference
+description: This reference provides method signatures, parameters, return types, and usage examples for common Apex patterns used in Salesforce implementations
+permalink: /rag/api-reference/apex-api-reference.html
 ---
 
 # Apex API Reference

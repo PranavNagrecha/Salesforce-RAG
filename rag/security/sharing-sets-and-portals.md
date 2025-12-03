@@ -1,14 +1,8 @@
 ---
-title: "Salesforce Sharing Sets and Portal Sharing"
-level: "Intermediate"
-tags:
-  - salesforce
-  - security
-  - sharing
-  - experience-cloud
-  - sharing-sets
-  - portals
-last_reviewed: "2025-01-XX"
+layout: default
+title: Salesforce Sharing Sets and Portal Sharing
+description: This document covers Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples
+permalink: /rag/security/sharing-sets-and-portals.html
 ---
 
 # Salesforce Sharing Sets and Portal Sharing

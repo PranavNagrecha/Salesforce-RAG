@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Logging Examples
-description: Code examples for Logging Examples
+title: Logging Code Examples
+description: Structured logging enables consistent, searchable logging across Salesforce applications
 permalink: /rag/code-examples/utilities/logging-examples.html
 ---
 

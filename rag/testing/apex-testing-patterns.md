@@ -1,12 +1,8 @@
 ---
-title: "Apex Testing Patterns"
-level: "Intermediate"
-tags:
-  - testing
-  - apex
-  - test-classes
-  - test-data-factories
-last_reviewed: "2025-01-XX"
+layout: default
+title: Apex Testing Patterns
+description: This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories
+permalink: /rag/testing/apex-testing-patterns.html
 ---
 
 # Apex Testing Patterns

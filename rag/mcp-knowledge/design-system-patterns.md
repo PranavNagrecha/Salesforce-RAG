@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Design System Patterns
-description: Salesforce Lightning Design System (SLDS) patterns and best practices for creating accessible, responsive Lightning Web Components
+title: Salesforce Lightning Design System (SLDS) Patterns - MCP Knowledge
+description: Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software, covering UX principles, visual design, component usage, interaction patterns, and accessibility
 permalink: /rag/mcp-knowledge/design-system-patterns.html
 ---
 

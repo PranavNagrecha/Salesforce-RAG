@@ -1,14 +1,8 @@
 ---
-title: "Salesforce LLM Data Governance"
-level: "Advanced"
-tags:
-  - security
-  - llm
-  - rag
-  - data-governance
-  - data-scoping
-  - data-security
-last_reviewed: "2025-01-XX"
+layout: default
+title: Salesforce Data Scope & Security for LLMs
+description: This document covers how to choose what data to expose from Salesforce to LLMs and how to do that safely
+permalink: /rag/security/salesforce-llm-data-governance.html
 ---
 
 # Salesforce Data Scope & Security for LLMs

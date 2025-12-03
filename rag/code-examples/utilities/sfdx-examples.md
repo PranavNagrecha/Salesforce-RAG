@@ -1,3 +1,10 @@
+---
+layout: default
+title: Salesforce DX Code Examples
+description: Salesforce DX provides command-line tools and workflows for modern Salesforce development
+permalink: /rag/code-examples/utilities/sfdx-examples.html
+---
+
 # Salesforce DX Code Examples
 
 > Complete, working code examples for Salesforce DX patterns.

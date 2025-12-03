@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Validation Examples
-description: Code examples for Validation Examples
+title: Validation Code Examples
+description: Data validation ensures data quality and prevents invalid data from entering the system
 permalink: /rag/code-examples/utilities/validation-examples.html
 ---
 

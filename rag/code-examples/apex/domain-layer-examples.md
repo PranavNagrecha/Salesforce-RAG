@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Domain Layer Examples
-description: Code examples for Domain Layer Examples
+title: Domain Layer Code Examples
+description: The Domain Layer encapsulates object-specific business logic and validation
 permalink: /rag/code-examples/apex/domain-layer-examples.html
 ---
 

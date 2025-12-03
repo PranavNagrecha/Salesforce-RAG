@@ -1,13 +1,8 @@
 ---
-title: "Integration Platform Patterns"
-level: "Intermediate"
-tags:
-  - integrations
-  - mulesoft
-  - boomi
-  - integration-platforms
-  - etl
-last_reviewed: "2025-01-XX"
+layout: default
+title: Integration Platform Patterns
+description: Integration platforms serve as middleware between Salesforce and external systems, handling security, transformation, and orchestration
+permalink: /rag/integrations/integration-platform-patterns.html
 ---
 
 # Integration Platform Patterns

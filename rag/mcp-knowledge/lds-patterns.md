@@ -1,3 +1,10 @@
+---
+layout: default
+title: Lightning Data Service (LDS) Patterns - MCP Knowledge
+description: Guidelines for building, reviewing, and maintaining Lightning Web Components that interact with Salesforce's Lightning Data Service, focusing on data consistency, referential integrity, and choosing UIAPI vs Apex
+permalink: /rag/mcp-knowledge/lds-patterns.html
+---
+
 # Lightning Data Service (LDS) Patterns - MCP Knowledge
 
 > This file contains knowledge extracted from Salesforce MCP Service tools.  

@@ -1,12 +1,8 @@
 ---
-title: "Testing and QA Strategy"
-level: "Intermediate"
-tags:
-  - project-methods
-  - testing
-  - qa
-  - test-strategy
-last_reviewed: "2025-01-XX"
+layout: default
+title: Testing and QA Strategy
+description: Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and user acceptance testing
+permalink: /rag/project-methods/testing-strategy.html
 ---
 
 # Testing and QA Strategy

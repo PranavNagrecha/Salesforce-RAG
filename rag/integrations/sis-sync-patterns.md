@@ -1,14 +1,8 @@
 ---
-title: "SIS Synchronization Patterns"
-level: "Advanced"
-tags:
-  - integrations
-  - etl
-  - sis
-  - education-cloud
-  - batch-processing
-  - high-volume
-last_reviewed: "2025-01-XX"
+layout: default
+title: SIS Synchronization Patterns
+description: High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS)
+permalink: /rag/integrations/sis-sync-patterns.html
 ---
 
 # SIS Synchronization Patterns

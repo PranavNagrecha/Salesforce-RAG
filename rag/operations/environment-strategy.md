@@ -1,12 +1,8 @@
 ---
-title: "Environment Strategy for Salesforce"
-level: "Intermediate"
-tags:
-  - operations
-  - environment-strategy
-  - sandboxes
-  - data-masking
-last_reviewed: "2025-01-XX"
+layout: default
+title: Environment Strategy for Salesforce
+description: This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences
+permalink: /rag/operations/environment-strategy.html
 ---
 
 # Environment Strategy for Salesforce

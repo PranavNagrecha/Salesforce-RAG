@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Test Class Template
-description: Code examples for Test Class Template
+description: Documentation for Test Class Template
 permalink: /rag/code-examples/templates/test-class-template.html
 ---
 

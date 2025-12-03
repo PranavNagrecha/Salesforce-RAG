@@ -1,12 +1,8 @@
 ---
-title: "Data Migration Patterns"
-level: "Intermediate"
-tags:
-  - data-modeling
-  - data-migration
-  - data-import
-  - transformation
-last_reviewed: "2025-01-XX"
+layout: default
+title: Data Migration Patterns
+description: This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce
+permalink: /rag/data-modeling/data-migration-patterns.html
 ---
 
 # Data Migration Patterns

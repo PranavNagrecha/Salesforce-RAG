@@ -1,11 +1,8 @@
 ---
-title: "Core Terminology and Definitions"
-level: "Beginner"
-tags:
-  - glossary
-  - terminology
-  - definitions
-last_reviewed: "2025-01-XX"
+layout: default
+title: Core Terminology and Definitions
+description: This glossary defines core terms used throughout the RAG knowledge library
+permalink: /rag/glossary/core-terminology.html
 ---
 
 # Core Terminology and Definitions

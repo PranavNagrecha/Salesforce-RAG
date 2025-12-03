@@ -1,11 +1,8 @@
 ---
-title: "Apex Quick Start Guide"
-level: "Beginner"
-tags:
-  - quick-start
-  - apex
-  - getting-started
-last_reviewed: "2025-01-XX"
+layout: default
+title: Apex Quick Start Guide
+description: This quick-start guide provides step-by-step instructions for creating your first Apex classes following best practices
+permalink: /rag/quick-start/apex-quick-start.html
 ---
 
 # Apex Quick Start Guide

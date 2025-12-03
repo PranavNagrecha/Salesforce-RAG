@@ -1,12 +1,8 @@
 ---
-title: "Integration Debugging Methods"
-level: "Intermediate"
-tags:
-  - troubleshooting
-  - integrations
-  - debugging
-  - root-cause-analysis
-last_reviewed: "2025-01-XX"
+layout: default
+title: Integration Debugging Methods
+description: Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues
+permalink: /rag/troubleshooting/integration-debugging.html
 ---
 
 # Integration Debugging Methods

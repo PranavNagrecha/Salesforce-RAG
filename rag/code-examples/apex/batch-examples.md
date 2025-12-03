@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Batch Examples
-description: Code examples for Batch Examples
+title: Batch Apex Code Examples
+description: Batch Apex is used for processing large data volumes (thousands or millions of records) in batches of 200
 permalink: /rag/code-examples/apex/batch-examples.html
 ---
 

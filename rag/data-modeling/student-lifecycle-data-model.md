@@ -1,13 +1,8 @@
 ---
-title: "Student Lifecycle Data Model"
-level: "Advanced"
-tags:
-  - data-modeling
-  - education-cloud
-  - eda
-  - student-lifecycle
-  - sis-integration
-last_reviewed: "2025-01-XX"
+layout: default
+title: Student Lifecycle Data Model
+description: The Salesforce Education Cloud (EDA) data model supports higher education institutions, with particular focus on online and adult-learning programs
+permalink: /rag/data-modeling/student-lifecycle-data-model.html
 ---
 
 # Student Lifecycle Data Model

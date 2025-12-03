@@ -1,13 +1,8 @@
 ---
-title: "Case Management Data Model"
-level: "Advanced"
-tags:
-  - data-modeling
-  - case-management
-  - public-sector
-  - multi-tenant
-  - data-model
-last_reviewed: "2025-01-XX"
+layout: default
+title: Case Management Data Model
+description: A comprehensive data model for public sector case management, supporting multi-agency public benefits and services portals
+permalink: /rag/data-modeling/case-management-data-model.html
 ---
 
 # Case Management Data Model

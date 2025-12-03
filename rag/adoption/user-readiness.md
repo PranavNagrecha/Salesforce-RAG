@@ -1,12 +1,8 @@
 ---
-title: "User Readiness for Salesforce"
-level: "Intermediate"
-tags:
-  - adoption
-  - user-readiness
-  - training
-  - change-management
-last_reviewed: "2025-01-XX"
+layout: default
+title: User Readiness for Salesforce
+description: This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption
+permalink: /rag/adoption/user-readiness.html
 ---
 
 # User Readiness for Salesforce

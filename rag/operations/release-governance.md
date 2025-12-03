@@ -1,12 +1,8 @@
 ---
-title: "Release Governance for Salesforce"
-level: "Intermediate"
-tags:
-  - operations
-  - release-governance
-  - cab
-  - change-management
-last_reviewed: "2025-01-XX"
+layout: default
+title: Release Governance for Salesforce
+description: This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists
+permalink: /rag/operations/release-governance.html
 ---
 
 # Release Governance for Salesforce

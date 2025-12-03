@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Error Handling Examples
-description: Code examples for Error Handling Examples
+title: Error Handling Code Examples
+description: Robust error handling ensures applications gracefully handle failures and provide meaningful feedback
 permalink: /rag/code-examples/utilities/error-handling-examples.html
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: LWC Accessibility Code Examples
-description: Complete, working code examples for Lightning Web Component accessibility patterns following WCAG 2.2 standards
+description: Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components
 permalink: /rag/code-examples/lwc/accessibility-examples.html
 ---
 

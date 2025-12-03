@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Lwc Accessible Component Template
-description: Code examples for Lwc Accessible Component Template
+title: Accessible LWC Component Template
+description: This template provides a complete, accessible LWC component structure with all accessibility best practices built in
 permalink: /rag/code-examples/templates/lwc-accessible-component-template.html
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Domain Template
-description: Code examples for Apex Domain Template
+title: Domain Class Template
+description: Documentation for Domain Class Template
 permalink: /rag/code-examples/templates/apex-domain-template.html
 ---
 

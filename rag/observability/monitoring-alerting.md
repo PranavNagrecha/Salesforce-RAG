@@ -1,12 +1,8 @@
 ---
-title: "Monitoring and Alerting for Salesforce"
-level: "Intermediate"
-tags:
-  - observability
-  - monitoring
-  - alerting
-  - platform-events
-last_reviewed: "2025-01-XX"
+layout: default
+title: Monitoring and Alerting for Salesforce
+description: This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns
+permalink: /rag/observability/monitoring-alerting.html
 ---
 
 # Monitoring and Alerting for Salesforce

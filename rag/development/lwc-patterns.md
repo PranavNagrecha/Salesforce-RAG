@@ -1,13 +1,8 @@
 ---
-title: "Lightning Web Component (LWC) Patterns"
-level: "Intermediate"
-tags:
-  - lwc
-  - development
-  - patterns
-  - lightning-web-components
-  - frontend
-last_reviewed: "2025-01-XX"
+layout: default
+title: Lightning Web Component (LWC) Patterns
+description: LWCs are built for complex business logic that standard page layouts cannot handle
+permalink: /rag/development/lwc-patterns.html
 ---
 
 # Lightning Web Component (LWC) Patterns

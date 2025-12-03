@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Queueable Template
-description: Code examples for Apex Queueable Template
+title: Queueable Apex Template
+description: Documentation for Queueable Apex Template
 permalink: /rag/code-examples/templates/apex-queueable-template.html
 ---
 

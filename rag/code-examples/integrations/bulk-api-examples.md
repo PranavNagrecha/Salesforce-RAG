@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Bulk Api Examples
-description: Code examples for Bulk Api Examples
+title: Bulk API Code Examples
+description: Bulk API enables high-volume data operations in Salesforce
 permalink: /rag/code-examples/integrations/bulk-api-examples.html
 ---
 

@@ -1,12 +1,8 @@
 ---
-title: "Common Apex Errors and Solutions"
-level: "Intermediate"
-tags:
-  - troubleshooting
-  - apex
-  - errors
-  - debugging
-last_reviewed: "2025-01-XX"
+layout: default
+title: Common Apex Errors and Solutions
+description: This guide provides solutions for common Apex errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies
+permalink: /rag/troubleshooting/common-apex-errors.html
 ---
 
 # Common Apex Errors and Solutions

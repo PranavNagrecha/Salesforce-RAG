@@ -1,13 +1,8 @@
 ---
-title: "Lead Management and Conversion Data Model"
-level: "Intermediate"
-tags:
-  - data-modeling
-  - lead-management
-  - lead-conversion
-  - duplicate-prevention
-  - marketing-attribution
-last_reviewed: "2025-01-XX"
+layout: default
+title: Lead Management and Conversion Data Model
+description: A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management
+permalink: /rag/data-modeling/lead-management-patterns.html
 ---
 
 # Lead Management and Conversion Data Model

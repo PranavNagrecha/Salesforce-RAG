@@ -1,13 +1,8 @@
 ---
-title: "Salesforce Sharing Fundamentals"
-level: "Intermediate"
-tags:
-  - salesforce
-  - security
-  - sharing
-  - org-wide-defaults
-  - role-hierarchy
-last_reviewed: "2025-01-XX"
+layout: default
+title: Salesforce Sharing Fundamentals
+description: This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions
+permalink: /rag/security/sharing-fundamentals.html
 ---
 
 # Salesforce Sharing Fundamentals

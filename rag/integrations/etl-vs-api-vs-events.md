@@ -1,14 +1,8 @@
 ---
-title: "ETL vs API vs Events: Integration Pattern Selection"
-level: "Intermediate"
-tags:
-  - integrations
-  - patterns
-  - etl
-  - api
-  - platform-events
-  - decision-framework
-last_reviewed: "2025-01-XX"
+layout: default
+title: ETL vs API vs Events: Integration Pattern Selection
+description: Different integration patterns serve different use cases
+permalink: /rag/integrations/etl-vs-api-vs-events.html
 ---
 
 # ETL vs API vs Events: Integration Pattern Selection

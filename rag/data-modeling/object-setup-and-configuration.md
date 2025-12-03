@@ -1,12 +1,8 @@
 ---
-title: "Object Setup and Configuration"
-level: "Intermediate"
-tags:
-  - data-modeling
-  - object-setup
-  - configuration
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Object Setup and Configuration
+description: Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
+permalink: /rag/data-modeling/object-setup-and-configuration.html
 ---
 
 # Object Setup and Configuration

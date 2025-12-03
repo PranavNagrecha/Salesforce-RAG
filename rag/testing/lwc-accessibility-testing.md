@@ -1,12 +1,8 @@
 ---
-title: "LWC Accessibility Testing Patterns"
-level: "Intermediate"
-tags:
-  - testing
-  - lwc
-  - accessibility
-  - wcag
-last_reviewed: "2025-01-XX"
+layout: default
+title: LWC Accessibility Testing Patterns
+description: This guide provides testing patterns, best practices, and examples for ensuring Lightning Web Components meet WCAG 2
+permalink: /rag/testing/lwc-accessibility-testing.html
 ---
 
 # LWC Accessibility Testing Patterns

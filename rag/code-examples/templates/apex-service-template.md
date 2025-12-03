@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Service Template
-description: Code examples for Apex Service Template
+title: Service Class Template
+description: Documentation for Service Class Template
 permalink: /rag/code-examples/templates/apex-service-template.html
 ---
 

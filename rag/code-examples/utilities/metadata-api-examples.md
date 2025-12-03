@@ -1,3 +1,10 @@
+---
+layout: default
+title: Metadata API Code Examples
+description: The Metadata API allows programmatic deployment and retrieval of Salesforce metadata
+permalink: /rag/code-examples/utilities/metadata-api-examples.html
+---
+
 # Metadata API Code Examples
 
 > Complete, working code examples for Metadata API patterns.

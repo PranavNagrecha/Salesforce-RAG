@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Selector Layer Examples
-description: Code examples for Selector Layer Examples
+title: Selector Layer Code Examples
+description: The Selector Layer provides centralized SOQL queries and data access abstraction
 permalink: /rag/code-examples/apex/selector-layer-examples.html
 ---
 

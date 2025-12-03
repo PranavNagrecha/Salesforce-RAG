@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Test Examples
-description: Code examples for Test Examples
+title: LWC Jest Testing Code Examples
+description: Jest is the testing framework for Lightning Web Components
 permalink: /rag/code-examples/lwc/test-examples.html
 ---
 

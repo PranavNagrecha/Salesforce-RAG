@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Rest Api Examples
-description: Code examples for Rest Api Examples
+title: REST API Code Examples
+description: REST API integrations enable real-time, synchronous communication between Salesforce and external systems
 permalink: /rag/code-examples/integrations/rest-api-examples.html
 ---
 

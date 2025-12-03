@@ -1,18 +1,8 @@
 ---
-title: "LWC Jest Testing - Unit Testing Lightning Web Components"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 3: The Complete Guide To Lightning Web Components"
-section: "LWC Jest Testing"
-level: "Intermediate"
-tags:
-  - salesforce
-  - lwc
-  - testing
-  - jest
-  - unit-testing
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/testing/lwc-jest-testing.html
 ---
 
 # Overview

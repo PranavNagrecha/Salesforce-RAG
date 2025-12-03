@@ -1,12 +1,8 @@
 ---
-title: "CI/CD Patterns for Salesforce"
-level: "Intermediate"
-tags:
-  - operations
-  - cicd
-  - deployment
-  - devops
-last_reviewed: "2025-01-XX"
+layout: default
+title: CI/CD Patterns for Salesforce
+description: This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs
+permalink: /rag/operations/cicd-patterns.html
 ---
 
 # CI/CD Patterns for Salesforce

@@ -1,15 +1,8 @@
 ---
-title: "Asynchronous Apex Patterns"
-level: "Advanced"
-tags:
-  - apex
-  - development
-  - patterns
-  - batch
-  - queueable
-  - scheduled
-  - asynchronous
-last_reviewed: "2025-01-XX"
+layout: default
+title: Asynchronous Apex Patterns
+description: This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods
+permalink: /rag/development/asynchronous-apex-patterns.html
 ---
 
 # Asynchronous Apex Patterns

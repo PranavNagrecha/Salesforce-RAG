@@ -1,17 +1,8 @@
 ---
-title: "Data Storage Planning in Salesforce"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 4: The Complete Guide To Salesforce Architecture"
-section: "Data Storage in Salesforce"
-level: "Intermediate"
-tags:
-  - salesforce
-  - architecture
-  - data-storage
-  - capacity-planning
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/data-modeling/data-storage-planning.html
 ---
 
 # Overview

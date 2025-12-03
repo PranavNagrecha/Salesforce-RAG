@@ -1,12 +1,8 @@
 ---
-title: "Org Health Checks for Salesforce"
-level: "Intermediate"
-tags:
-  - adoption
-  - org-health
-  - technical-debt
-  - optimization
-last_reviewed: "2025-01-XX"
+layout: default
+title: Org Health Checks for Salesforce
+description: This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks
+permalink: /rag/adoption/org-health-checks.html
 ---
 
 # Org Health Checks for Salesforce

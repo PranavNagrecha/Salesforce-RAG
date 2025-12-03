@@ -1,17 +1,8 @@
 ---
-title: "Determining Salesforce Org Strategy"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 4: The Complete Guide To Salesforce Architecture"
-section: "Determining your Salesforce Org Strategy"
-level: "Advanced"
-tags:
-  - salesforce
-  - architecture
-  - org-strategy
-  - multi-org
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/architecture/org-strategy.html
 ---
 
 # Overview

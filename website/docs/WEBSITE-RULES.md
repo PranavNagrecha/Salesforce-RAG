@@ -149,8 +149,15 @@ git push
      ```
 
 5. **Validation**: 
-   - Run `python website/scripts/validate-comprehensive-links.py` to check for files missing frontmatter
+   - **ALWAYS run before deploying**: `python website/scripts/validate-frontmatter.py`
+   - This checks ALL markdown files in `rag/` for proper frontmatter
    - Files without frontmatter will cause 404 errors when linked
+   - The validation script will list all files missing frontmatter
+
+6. **Automated Checking**:
+   - The `update-rag-and-website.sh` script should validate frontmatter
+   - CI/CD pipeline should fail if files are missing frontmatter
+   - **Never deploy without validating frontmatter first**
 
 **This is a hard requirement - files without frontmatter will NOT work on the website.**
 
@@ -267,11 +274,17 @@ git push
 
 ### Testing Before Deploy
 
-1. **Run Sync Script**: `python website/scripts/sync-homepage.py`
-2. **Link Validation**: Verify all links work
-3. **Description Match**: Verify homepage matches index (script does this)
-4. **All Categories**: Verify all domains have homepage cards (script does this)
-5. **Mobile Check**: Verify mobile responsiveness
+1. **Validate Frontmatter**: `python website/scripts/validate-frontmatter.py`
+   - **CRITICAL**: This must pass before deploying
+   - All markdown files must have proper Jekyll frontmatter
+   - Files without frontmatter will cause 404 errors
+2. **Run Sync Script**: `python website/scripts/sync-homepage.py`
+3. **Link Validation**: `python website/scripts/validate-comprehensive-links.py`
+   - Verify all links work
+   - Check for broken links
+4. **Description Match**: Verify homepage matches index (script does this)
+5. **All Categories**: Verify all domains have homepage cards (script does this)
+6. **Mobile Check**: Verify mobile responsiveness
 
 ## Link Path Resolution Rules
 

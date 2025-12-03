@@ -1,13 +1,8 @@
 ---
-title: "SOQL Reference"
-level: "Intermediate"
-tags:
-  - api-reference
-  - soql
-  - queries
-  - reference
-  - database
-last_reviewed: "2025-01-XX"
+layout: default
+title: SOQL Reference
+description: This reference provides SOQL syntax, functions, and common query patterns for Salesforce data access
+permalink: /rag/api-reference/soql-reference.html
 ---
 
 # SOQL Reference

@@ -1,11 +1,8 @@
 ---
-title: "Cross-Cutting Design Patterns"
-level: "Intermediate"
-tags:
-  - patterns
-  - cross-cutting
-  - architecture
-last_reviewed: "2025-01-XX"
+layout: default
+title: Cross-Cutting Design Patterns
+description: This document summarizes reusable patterns that appear across multiple domains in the architecture
+permalink: /rag/patterns/cross-cutting-patterns.html
 ---
 
 # Cross-Cutting Design Patterns

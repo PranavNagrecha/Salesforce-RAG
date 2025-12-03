@@ -1,13 +1,8 @@
 ---
-title: "File Management Patterns"
-level: "Intermediate"
-tags:
-  - data-modeling
-  - file-management
-  - contentversion
-  - attachments
-  - documents
-last_reviewed: "2025-01-XX"
+layout: default
+title: File Management Patterns
+description: Salesforce provides multiple mechanisms for file storage and management
+permalink: /rag/data-modeling/file-management-patterns.html
 ---
 
 # File Management Patterns

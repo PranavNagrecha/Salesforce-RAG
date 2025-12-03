@@ -1,12 +1,8 @@
 ---
-title: "Data Reconciliation Techniques"
-level: "Intermediate"
-tags:
-  - troubleshooting
-  - data-quality
-  - reconciliation
-  - integration
-last_reviewed: "2025-01-XX"
+layout: default
+title: Data Reconciliation Techniques
+description: Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency
+permalink: /rag/troubleshooting/data-reconciliation.html
 ---
 
 # Data Reconciliation Techniques

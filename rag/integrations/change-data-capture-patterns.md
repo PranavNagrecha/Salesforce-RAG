@@ -1,13 +1,8 @@
 ---
-title: "Change Data Capture (CDC) Patterns"
-level: "Intermediate"
-tags:
-  - integrations
-  - cdc
-  - change-data-capture
-  - real-time
-  - event-driven
-last_reviewed: "2025-01-XX"
+layout: default
+title: Change Data Capture (CDC) Patterns
+description: Change Data Capture (CDC) provides real-time change notifications for Salesforce records
+permalink: /rag/integrations/change-data-capture-patterns.html
 ---
 
 # Change Data Capture (CDC) Patterns

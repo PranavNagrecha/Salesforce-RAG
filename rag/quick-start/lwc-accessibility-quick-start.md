@@ -1,16 +1,8 @@
 ---
 layout: default
 title: LWC Accessibility Quick Start Guide
-description: Getting started with Lightning Web Component accessibility in Salesforce
+description: This quick-start guide provides step-by-step instructions for making Lightning Web Components accessible, following WCAG 2
 permalink: /rag/quick-start/lwc-accessibility-quick-start.html
-level: "Beginner"
-tags:
-  - quick-start
-  - lwc
-  - accessibility
-  - wcag
-  - getting-started
-last_reviewed: "2025-01-XX"
 ---
 
 # LWC Accessibility Quick Start Guide

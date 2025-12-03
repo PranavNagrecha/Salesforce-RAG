@@ -1,12 +1,8 @@
 ---
-title: "Common LWC Errors and Solutions"
-level: "Intermediate"
-tags:
-  - troubleshooting
-  - lwc
-  - errors
-  - debugging
-last_reviewed: "2025-01-XX"
+layout: default
+title: Common LWC Errors and Solutions
+description: This guide provides solutions for common LWC errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies
+permalink: /rag/troubleshooting/common-lwc-errors.html
 ---
 
 # Common LWC Errors and Solutions

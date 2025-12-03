@@ -1,13 +1,8 @@
 ---
-title: "Order of Execution"
-level: "Intermediate"
-tags:
-  - apex
-  - flow
-  - development
-  - order-of-execution
-  - triggers
-last_reviewed: "2025-01-XX"
+layout: default
+title: Order of Execution
+description: Understanding the order of execution in Salesforce is critical for architects and developers
+permalink: /rag/development/order-of-execution.html
 ---
 
 # Order of Execution

@@ -1,17 +1,8 @@
 ---
-title: "Standard Object Oddities and Constraints in Salesforce"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 4: The Complete Guide To Salesforce Architecture"
-section: "Standard Object Oddities to Remember"
-level: "Intermediate"
-tags:
-  - salesforce
-  - architecture
-  - standard-objects
-  - constraints
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/data-modeling/standard-object-oddities.html
 ---
 
 # Overview

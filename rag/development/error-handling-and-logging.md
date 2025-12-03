@@ -1,14 +1,8 @@
 ---
-title: "Error Handling and Logging Framework"
-level: "Intermediate"
-tags:
-  - apex
-  - development
-  - patterns
-  - error-handling
-  - logging
-  - observability
-last_reviewed: "2025-01-XX"
+layout: default
+title: Error Handling and Logging Framework
+description: Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance
+permalink: /rag/development/error-handling-and-logging.html
 ---
 
 # Error Handling and Logging Framework

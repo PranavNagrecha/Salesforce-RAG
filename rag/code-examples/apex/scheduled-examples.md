@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Scheduled Examples
-description: Code examples for Scheduled Examples
+title: Scheduled Apex Code Examples
+description: Scheduled Apex provides time-based automation for periodic tasks
 permalink: /rag/code-examples/apex/scheduled-examples.html
 ---
 

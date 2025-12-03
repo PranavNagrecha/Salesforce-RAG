@@ -1,12 +1,8 @@
 ---
-title: "LWC Quick Start Guide"
-level: "Beginner"
-tags:
-  - quick-start
-  - lwc
-  - lightning-web-components
-  - getting-started
-last_reviewed: "2025-01-XX"
+layout: default
+title: LWC Quick Start Guide
+description: This quick-start guide provides step-by-step instructions for creating your first Lightning Web Component following best practices
+permalink: /rag/quick-start/lwc-quick-start.html
 ---
 
 # LWC Quick Start Guide

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Selector Template
-description: Code examples for Apex Selector Template
+title: Selector Class Template
+description: Documentation for Selector Class Template
 permalink: /rag/code-examples/templates/apex-selector-template.html
 ---
 

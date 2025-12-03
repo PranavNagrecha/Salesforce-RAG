@@ -1,14 +1,8 @@
 ---
-title: "Data Residency and Compliance for Salesforce"
-level: "Intermediate"
-tags:
-  - data-governance
-  - compliance
-  - gdpr
-  - ccpa
-  - data-residency
-  - shield
-last_reviewed: "2025-01-XX"
+layout: default
+title: Data Residency and Compliance for Salesforce
+description: This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices
+permalink: /rag/data-governance/data-residency-compliance.html
 ---
 
 # Data Residency and Compliance for Salesforce

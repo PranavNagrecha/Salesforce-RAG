@@ -1,3 +1,10 @@
+---
+layout: default
+title: LWC Best Practices - MCP Knowledge
+description: Comprehensive best practices for Lightning Web Components development, focusing on event handling, property naming, decorator usage, and component structure
+permalink: /rag/mcp-knowledge/lwc-best-practices.html
+---
+
 # LWC Best Practices - MCP Knowledge
 
 > This file contains knowledge extracted from Salesforce MCP Service tools.  

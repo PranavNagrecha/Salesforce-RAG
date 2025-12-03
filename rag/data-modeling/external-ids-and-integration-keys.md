@@ -1,12 +1,8 @@
 ---
-title: "External IDs and Integration Keys"
-level: "Intermediate"
-tags:
-  - data-modeling
-  - external-ids
-  - integration-keys
-  - data-sync
-last_reviewed: "2025-01-XX"
+layout: default
+title: External IDs and Integration Keys
+description: External ID strategies enable stable record mapping between Salesforce and external systems, supporting idempotent data synchronization and reliable integration patterns
+permalink: /rag/data-modeling/external-ids-and-integration-keys.html
 ---
 
 # External IDs and Integration Keys

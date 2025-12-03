@@ -1,13 +1,8 @@
 ---
-title: "LWC API Reference"
-level: "Intermediate"
-tags:
-  - api-reference
-  - lwc
-  - lightning-web-components
-  - reference
-  - methods
-last_reviewed: "2025-01-XX"
+layout: default
+title: LWC API Reference
+description: This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns
+permalink: /rag/api-reference/lwc-api-reference.html
 ---
 
 # LWC API Reference

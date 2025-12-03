@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Queueable Examples
-description: Code examples for Queueable Examples
+title: Queueable Apex Code Examples
+description: Queueable Apex is used for lightweight async processing, chaining jobs, and performing callouts after DML operations
 permalink: /rag/code-examples/apex/queueable-examples.html
 ---
 

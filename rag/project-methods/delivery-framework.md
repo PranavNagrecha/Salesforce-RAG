@@ -1,12 +1,8 @@
 ---
-title: "Project Delivery Framework"
-level: "Intermediate"
-tags:
-  - project-methods
-  - delivery
-  - sprint-based
-  - agile
-last_reviewed: "2025-01-XX"
+layout: default
+title: Project Delivery Framework
+description: Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects
+permalink: /rag/project-methods/delivery-framework.html
 ---
 
 # Project Delivery Framework

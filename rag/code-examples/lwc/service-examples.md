@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Service Examples
-description: Code examples for Service Examples
+title: LWC Service Layer Code Examples
+description: LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic
 permalink: /rag/code-examples/lwc/service-examples.html
 ---
 

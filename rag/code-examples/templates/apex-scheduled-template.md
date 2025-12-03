@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Apex Scheduled Template
-description: Code examples for Apex Scheduled Template
+title: Scheduled Apex Template
+description: Documentation for Scheduled Apex Template
 permalink: /rag/code-examples/templates/apex-scheduled-template.html
 ---
 

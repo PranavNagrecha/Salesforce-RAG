@@ -1,14 +1,8 @@
 ---
-title: "Apex Design Patterns and Best Practices"
-level: "Intermediate"
-tags:
-  - apex
-  - development
-  - patterns
-  - service-layer
-  - domain-layer
-  - selector-layer
-last_reviewed: "2025-01-XX"
+layout: default
+title: Apex Design Patterns and Best Practices
+description: Apex is used strategically when Flows are insufficient or need optimization/bulkification
+permalink: /rag/development/apex-patterns.html
 ---
 
 # Apex Design Patterns and Best Practices

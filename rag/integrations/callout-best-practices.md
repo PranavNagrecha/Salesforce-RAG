@@ -1,14 +1,8 @@
 ---
-title: "Callout Best Practices"
-level: "Intermediate"
-tags:
-  - integrations
-  - apex
-  - callouts
-  - http
-  - best-practices
-  - error-handling
-last_reviewed: "2025-01-XX"
+layout: default
+title: Callout Best Practices
+description: This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring
+permalink: /rag/integrations/callout-best-practices.html
 ---
 
 # Callout Best Practices

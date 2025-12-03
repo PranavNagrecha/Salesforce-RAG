@@ -1,13 +1,8 @@
 ---
-title: "Flow Design and Orchestration Patterns"
-level: "Intermediate"
-tags:
-  - flow
-  - development
-  - patterns
-  - automation
-  - declarative
-last_reviewed: "2025-01-XX"
+layout: default
+title: Flow Design and Orchestration Patterns
+description: Flow is used as the primary automation engine across projects, with Apex reserved for complex logic, integrations, and performance-critical scenarios
+permalink: /rag/development/flow-patterns.html
 ---
 
 # Flow Design and Orchestration Patterns

@@ -1,12 +1,8 @@
 ---
-title: "Event-Driven Architecture"
-level: "Advanced"
-tags:
-  - architecture
-  - platform-events
-  - event-driven
-  - integration
-last_reviewed: "2025-01-XX"
+layout: default
+title: Event-Driven Architecture
+description: Event-driven integration patterns decouple Salesforce from external systems by publishing business events that can be consumed asynchronously by multiple subscribers
+permalink: /rag/architecture/event-driven-architecture.html
 ---
 
 # Event-Driven Architecture

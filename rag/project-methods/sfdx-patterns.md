@@ -1,12 +1,8 @@
 ---
-title: "Salesforce DX (SFDX) Patterns"
-level: "Intermediate"
-tags:
-  - project-methods
-  - sfdx
-  - salesforce-dx
-  - source-control
-last_reviewed: "2025-01-XX"
+layout: default
+title: Salesforce DX (SFDX) Patterns
+description: Salesforce DX provides a modern, source-driven development workflow for Salesforce
+permalink: /rag/project-methods/sfdx-patterns.html
 ---
 
 # Salesforce DX (SFDX) Patterns

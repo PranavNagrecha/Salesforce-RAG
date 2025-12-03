@@ -1,7 +1,7 @@
 ---
 layout: default
-title: LWC Accessibility Guidelines
-description: Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2.2 standards
+title: LWC Accessibility - MCP Knowledge
+description: Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2
 permalink: /rag/mcp-knowledge/lwc-accessibility.html
 ---
 

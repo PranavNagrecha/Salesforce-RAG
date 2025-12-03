@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Ci Cd Template
-description: Code examples for Ci Cd Template
+title: CI/CD Template
+description: Documentation for CI/CD Template
 permalink: /rag/code-examples/templates/ci-cd-template.html
 ---
 

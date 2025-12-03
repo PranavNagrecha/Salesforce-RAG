@@ -1,14 +1,8 @@
 ---
-title: "Governor Limits and Performance Optimization"
-level: "Advanced"
-tags:
-  - apex
-  - development
-  - patterns
-  - governor-limits
-  - performance
-  - optimization
-last_reviewed: "2025-01-XX"
+layout: default
+title: Governor Limits and Performance Optimization
+description: This topic covers Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management best practices
+permalink: /rag/development/governor-limits-and-optimization.html
 ---
 
 # Governor Limits and Performance Optimization

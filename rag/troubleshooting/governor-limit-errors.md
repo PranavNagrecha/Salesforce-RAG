@@ -1,12 +1,8 @@
 ---
-title: "Governor Limit Errors and Solutions"
-level: "Advanced"
-tags:
-  - troubleshooting
-  - apex
-  - governor-limits
-  - performance
-last_reviewed: "2025-01-XX"
+layout: default
+title: Governor Limit Errors and Solutions
+description: This guide provides solutions for governor limit errors, including error messages, causes, solutions, and prevention strategies
+permalink: /rag/troubleshooting/governor-limit-errors.html
 ---
 
 # Governor Limit Errors and Solutions

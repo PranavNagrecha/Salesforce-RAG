@@ -1,17 +1,8 @@
 ---
-title: "Building, Leading, and Training Salesforce Development Teams"
-source: "The Salesforce Master Class wiki"
-source_url: "https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki"
-topic: "Topic 4: The Complete Guide To Salesforce Architecture"
-section: "How to Effectively Build, Lead and Train a Team of Devs"
-level: "Advanced"
-tags:
-  - salesforce
-  - architecture
-  - team-leadership
-  - management
-  - best-practices
-last_reviewed: "2025-01-XX"
+layout: default
+title: Overview
+description: Documentation for Overview
+permalink: /rag/architecture/team-leadership.html
 ---
 
 # Overview

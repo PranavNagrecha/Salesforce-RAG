@@ -1,3 +1,10 @@
+---
+layout: default
+title: Custom Metadata Code Examples
+description: Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas
+permalink: /rag/code-examples/utilities/custom-metadata-examples.html
+---
+
 # Custom Metadata Code Examples
 
 > Complete, working code examples for Custom Metadata patterns.

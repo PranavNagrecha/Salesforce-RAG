@@ -1,13 +1,8 @@
 ---
-title: "Multi-Tenant Identity Architecture"
-level: "Advanced"
-tags:
-  - identity-sso
-  - multi-tenant
-  - sso
-  - oidc
-  - saml
-last_reviewed: "2025-01-XX"
+layout: default
+title: Multi-Tenant Identity Architecture
+description: Multi-tenant identity architecture enables a single Salesforce org to support multiple distinct user communities with different identity providers, security requirements, and access patterns
+permalink: /rag/identity-sso/multi-tenant-identity-architecture.html
 ---
 
 # Multi-Tenant Identity Architecture

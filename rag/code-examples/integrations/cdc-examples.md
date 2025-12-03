@@ -1,3 +1,10 @@
+---
+layout: default
+title: Change Data Capture (CDC) Code Examples
+description: Change Data Capture (CDC) provides real-time change notifications for Salesforce records
+permalink: /rag/code-examples/integrations/cdc-examples.html
+---
+
 # Change Data Capture (CDC) Code Examples
 
 > Complete, working code examples for Change Data Capture patterns.

@@ -1,13 +1,8 @@
 ---
-title: "SOQL Query Patterns"
-level: "Intermediate"
-tags:
-  - soql
-  - apex
-  - development
-  - queries
-  - data-access
-last_reviewed: "2025-01-XX"
+layout: default
+title: SOQL Query Patterns
+description: This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects
+permalink: /rag/development/soql-query-patterns.html
 ---
 
 # SOQL Query Patterns

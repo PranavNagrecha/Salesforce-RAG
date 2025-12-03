@@ -1,13 +1,8 @@
 ---
-title: "Salesforce to LLM Data Pipelines"
-level: "Advanced"
-tags:
-  - integrations
-  - llm
-  - rag
-  - data-pipelines
-  - ai
-last_reviewed: "2025-01-XX"
+layout: default
+title: Salesforce → LLM Data Pipelines
+description: This document covers high-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
+permalink: /rag/integrations/salesforce-to-llm-data-pipelines.html
 ---
 
 # Salesforce → LLM Data Pipelines

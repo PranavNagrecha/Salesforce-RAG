@@ -1,13 +1,8 @@
 ---
-title: "Non-Functional Requirements for Salesforce"
-level: "Intermediate"
-tags:
-  - testing
-  - security
-  - accessibility
-  - performance
-  - nfr
-last_reviewed: "2025-01-XX"
+layout: default
+title: Non-Functional Requirements for Salesforce
+description: This guide covers non-functional requirements testing for Salesforce, including security testing, accessibility testing for LWCs and portals, and performance benchmarks
+permalink: /rag/testing/non-functional-requirements.html
 ---
 
 # Non-Functional Requirements for Salesforce
