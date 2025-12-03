@@ -267,7 +267,7 @@ git push
 3. **Link Resolution**: 
    - Absolute paths starting with `/` are automatically resolved with baseurl via `relative_url` filter
    - Example: `{{ '/rag/adoption/org-health-checks.html' | relative_url }}` → `/Salesforce-RAG/rag/adoption/org-health-checks.html`
-   - **Path Validation**: Use `fix-incorrect-paths.py` to find and fix incorrect paths:
+   - **Path Validation**: Use `fix-comprehensive-links.py` to find and fix incorrect paths:
      - Duplicate directories: `/rag/adoption/adoption/` → `/rag/adoption/`
      - Wrong parent paths: `/rag/adoption/observability/` → `/rag/observability/`
      - Wrong parent paths: `/rag/adoption/development/` → `/rag/development/`
@@ -308,9 +308,10 @@ git push
 
 ### Fixing Incorrect Paths
 
-1. **Run fix-incorrect-paths.py**: Automatically fixes common path errors
+1. **Run fix-comprehensive-links.py**: Automatically fixes common path errors
    ```bash
-   python website/scripts/fix-incorrect-paths.py
+   python website/scripts/fix-comprehensive-links.py --dry-run  # Preview
+   python website/scripts/fix-comprehensive-links.py --apply    # Apply fixes
    ```
 
 2. **Manual Verification**: Check for patterns:
