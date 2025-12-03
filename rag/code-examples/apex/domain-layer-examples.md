@@ -2,7 +2,19 @@
 layout: default
 title: Domain Layer Code Examples
 description: The Domain Layer encapsulates object-specific business logic and validation
-permalink: /rag/development/apex-patterns.html#domain-layer' | relative_url }}">Domain Layer</a>
+permalink: /rag/code-examples/apex/domain-layer-examples.html
+---
+
+## Overview
+
+The Domain Layer encapsulates object-specific business logic and validation. This layer is responsible for enforcing business rules, data validation, and object-specific operations.
+
+**Related Patterns**:
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Class Layering</a> - Architecture patterns
+- <a href="{{ '/rag/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
+- <a href="{{ '/rag/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a> - Selector layer patterns
+
+---
 
 **Problem**: 
 You need to validate Contact records and apply business rules before DML operations. The domain layer encapsulates Contact-specific logic.
