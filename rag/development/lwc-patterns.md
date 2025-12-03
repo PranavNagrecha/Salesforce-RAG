@@ -29,7 +29,7 @@ Lightning Web Components (LWC) are modern, standards-based web components built 
 **Recommended Reading**:
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex service layer patterns for LWC integration
 - <a href="{{ '/rag/development/lightning-app-builder.html' | relative_url }}">Lightning App Builder</a> - Understanding when to use declarative vs custom components
-- <a href="{{ '/rag/development/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility best practices
+- <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility best practices
 
 ## LWC Fundamentals
 
@@ -498,7 +498,7 @@ Accessibility ensures that all users, including those using assistive technologi
 **Related Resources**:
 - <a href="{{ '/rag/development/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - Comprehensive WCAG 2.2 compliance guidance
 - <a href="{{ '/rag/development/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete working code examples
-- <a href="{{ '/rag/development/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns and tools
+- <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns and tools
 - <a href="{{ '/rag/development/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
 - <a href="{{ '/rag/development/quick-start/lwc-accessibility-quick-start.html' | relative_url }}">LWC Accessibility Quick Start</a> - Quick start guide
 
@@ -592,7 +592,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Color Contrast Testing**: Use WebAIM Contrast Checker
 - **Jest Testing**: Include accessibility tests in Jest test suites
 
-**See**: <a href="{{ '/rag/development/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> for complete testing patterns
+**See**: <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> for complete testing patterns
 
 ### Common Accessibility Mistakes
 
@@ -670,8 +670,8 @@ Accessibility ensures that all users, including those using assistive technologi
 - <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when LWCs execute
 
 **Related Domains**:
-- <a href="{{ '/rag/development/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility testing patterns
-- <a href="{{ '/rag/development/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Unit testing Lightning Web Components
+- <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility testing patterns
+- <a href="{{ '/rag/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Unit testing Lightning Web Components
 - <a href="{{ '/rag/development/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - Troubleshooting LWC issues
 - <a href="{{ '/rag/development/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility error resolution
 - <a href="{{ '/rag/code-examples/lwc.html' | relative_url }}">Code Examples</a> - Complete LWC code examples

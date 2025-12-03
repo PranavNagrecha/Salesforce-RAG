@@ -625,7 +625,7 @@ Use for:
 
 **Related Domains**:
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Integrating Apex with Lightning Web Components
-- <a href="{{ '/rag/development/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a> - Apex testing best practices
+- <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a> - Apex testing best practices
 - <a href="{{ '/rag/code-examples/apex.html' | relative_url }}">Code Examples</a> - Complete working code examples
 
 ## Q&A
