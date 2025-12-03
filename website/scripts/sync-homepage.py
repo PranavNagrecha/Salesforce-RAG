@@ -194,14 +194,10 @@ def find_markdown_files():
         # Build URL path (convert .md to .html, use forward slashes)
         url_path = str(rel_path).replace("\\", "/").replace(".md", ".html")
         
-        # For markdown files, use relative paths (Jekyll will handle baseurl)
-        # Relative to rag-index.md location (which is in rag/ folder)
-        if len(parts) > 1:
-            # File is in a subfolder, use relative path
-            relative_url = url_path
-        else:
-            # File is in rag/ root
-            relative_url = file_path.name.replace(".md", ".html")
+        # Build absolute URL path for markdown links
+        # Jekyll with baseurl needs absolute paths starting with /rag/
+        # These will be resolved correctly: /rag/adoption/org-health-checks.html
+        absolute_url = f"/rag/{url_path}"
         
         file_info = {
             "path": str(rel_path),
@@ -209,7 +205,7 @@ def find_markdown_files():
             "folder": folder,
             "title": title,
             "description": description,
-            "url": relative_url,  # Use relative path for markdown links
+            "url": absolute_url,  # Absolute path for Jekyll baseurl handling
             "modified": datetime.fromtimestamp(file_path.stat().st_mtime).isoformat(),
             "size": file_path.stat().st_size,
         }
