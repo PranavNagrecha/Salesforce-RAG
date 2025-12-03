@@ -9,7 +9,7 @@ Accessibility in Lightning Web Components ensures that all users, including thos
 
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/lwc/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
-- <a href="{{ '/rag/code-examples/lwc/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - General LWC patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - General LWC patterns
 - <a href="{{ '/rag/code-examples/lwc/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS accessibility
 
 ## Form Accessibility Examples

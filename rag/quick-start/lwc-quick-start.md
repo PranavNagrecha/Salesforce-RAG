@@ -276,7 +276,7 @@ export default class ContactViewer extends LightningElement {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - <a href="{{ '/rag/quick-start/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+   - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
    - <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Best practices
    - <a href="{{ '/rag/quick-start/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Data service patterns
 
@@ -292,7 +292,7 @@ export default class ContactViewer extends LightningElement {
 
 ## Related Resources
 
-- <a href="{{ '/rag/quick-start/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
 - <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Best practices
 - <a href="{{ '/rag/quick-start/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - API reference
 

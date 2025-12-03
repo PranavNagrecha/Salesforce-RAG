@@ -26,10 +26,10 @@ This guide provides solutions for governor limit errors, including error message
 - Familiarity with error handling
 
 **Recommended Reading**:
-- <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management and optimization
-- <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management and optimization
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Bulkification patterns
-- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Too many SOQL queries
 
@@ -101,7 +101,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor query count proactively
 
-**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>, <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
+**Related Patterns**: <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>, <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
 
 ---
 
@@ -162,7 +162,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification), <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
+**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification), <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
 
 ---
 
@@ -355,7 +355,7 @@ List<Contact> contacts = [
 - Use batch processing for large datasets
 - Avoid loading entire datasets into memory
 
-**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>
 
 ---
 
@@ -549,12 +549,12 @@ public class ProcessQueueable implements Queueable {
 - <a href="{{ '/rag/troubleshooting/common-apex-errors.html' | relative_url }}">Common Apex Errors</a> - Other common Apex errors
 
 **Related Domains**:
-- <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Complete governor limits guide
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Complete governor limits guide
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
-- <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
 
-- <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Complete governor limits guide
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Complete governor limits guide
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
-- <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
 - [Troubleshooting](.) - Other troubleshooting guides
 

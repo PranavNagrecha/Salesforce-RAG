@@ -19,8 +19,8 @@ last_reviewed: "2025-01-XX"
 Record-Triggered Flows run automatically when records are created or updated. They can run before save (to modify field values) or after save (to create related records, send notifications, etc.). This document provides practical examples of common Record-Triggered Flow patterns.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
 
 ## Examples
 
@@ -314,6 +314,6 @@ Handle errors by:
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

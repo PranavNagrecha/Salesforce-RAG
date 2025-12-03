@@ -142,7 +142,7 @@ trigger ApplicationTrigger on Application__c (after insert, after update) {
 **Pattern**: Publishing Platform Events declaratively from Flow
 **Use Case**: Publishing events without code
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/flow-patterns.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to publish Platform Events from a Record-Triggered Flow when records are created or updated.
@@ -338,7 +338,7 @@ public with sharing class EnrollmentEventService {
 **Pattern**: Handling event publication and processing errors
 **Use Case**: Ensuring reliable event delivery and processing
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need to handle errors when publishing or processing Platform Events.
@@ -480,5 +480,5 @@ public with sharing class EventErrorHandler {
 
 - <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Event-driven architecture patterns
 - <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration patterns
-- <a href="{{ '/rag/code-examples/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 

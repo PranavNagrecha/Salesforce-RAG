@@ -16,7 +16,7 @@ last_reviewed: "2025-01-XX"
 This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns. These patterns are essential for maintaining system reliability, detecting issues early, and ensuring operational excellence.
 
 **Related Patterns**:
-- <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Logging framework and error handling
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Logging framework and error handling
 - <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
 - <a href="{{ '/rag/observability/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC event processing
 - <a href="{{ '/rag/observability/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
@@ -322,7 +322,7 @@ This guide covers monitoring and alerting patterns for Salesforce, including Pla
 
 ## Related Patterns
 
-- <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Logging framework implementation
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Logging framework implementation
 - <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization and monitoring
 - <a href="{{ '/rag/observability/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC monitoring patterns
 - <a href="{{ '/rag/observability/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns

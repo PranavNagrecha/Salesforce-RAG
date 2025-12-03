@@ -20,7 +20,7 @@ Jest is the testing framework for Lightning Web Components. These examples demon
 
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Complete Jest testing guide
-- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
 - <a href="{{ '/rag/code-examples/lwc/code-examples/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns
 
 ## Examples
@@ -697,5 +697,5 @@ describe('c-contact-form', () => {
 ## See Also
 
 - <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Complete Jest testing guide
-- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
 - <a href="{{ '/rag/code-examples/lwc/code-examples/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns

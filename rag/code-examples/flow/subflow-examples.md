@@ -21,7 +21,7 @@ Subflows are reusable flow components that can be called from other Flows or Ape
 ⚠️ **Note**: Process Builder is deprecated - use Record-Triggered Flows instead. Subflows can be called from Record-Triggered Flows.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
 - <a href="{{ '/rag/code-examples/flow/code-examples/flow/record-triggered-examples.html' | relative_url }}">Record-Triggered Examples</a> - Automated flow patterns
 - <a href="{{ '/rag/code-examples/flow/code-examples/flow/screen-flow-examples.html' | relative_url }}">Screen Flow Examples</a> - User interaction flows
 
@@ -396,5 +396,5 @@ Design Subflows for reuse:
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
-- <a href="{{ '/rag/code-examples/flow/code-examples/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

@@ -19,7 +19,7 @@ last_reviewed: "2025-01-XX"
 LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic. Service classes help keep component JavaScript clean and maintainable.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
 - <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC API method signatures
 
 ## Examples
@@ -147,7 +147,7 @@ export default class ContactDisplay extends LightningElement {
 **Pattern**: Utility service for data validation
 **Use Case**: Validating user input before submission
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to validate user input consistently across multiple components.
@@ -336,7 +336,7 @@ export default class ContactForm extends LightningElement {
 **Pattern**: Utility service for data transformation
 **Use Case**: Transforming data between formats (e.g., API response to component data)
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to transform data from Apex responses or API calls into formats suitable for component display.
@@ -513,6 +513,6 @@ export default class ContactList extends LightningElement {
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
 - <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
 - <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference

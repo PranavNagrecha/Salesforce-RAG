@@ -9,7 +9,7 @@ Batch Apex is used for processing large data volumes (thousands or millions of r
 
 **Related Patterns**:
 - [Asynchronous Apex Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#batch-apex-patterns)
-- <a href="{{ '/rag/code-examples/apex/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a>
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a>
 
 ## Examples
 
@@ -695,7 +695,7 @@ AsyncApexJob status = BatchJobMonitor.getJobStatus(jobId);
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/apex/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Complete async patterns guide
-- <a href="{{ '/rag/code-examples/apex/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Complete async patterns guide
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
 - <a href="{{ '/rag/code-examples/apex/code-examples/templates/apex-batch-template.html' | relative_url }}">Batch Template</a> - Batch Apex template
 

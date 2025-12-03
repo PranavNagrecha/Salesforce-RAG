@@ -255,7 +255,7 @@ public static void handleEvents(List<CustomEvent__e> events) {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
 
 ---
 
@@ -263,5 +263,5 @@ public static void handleEvents(List<CustomEvent__e> events) {
 
 - <a href="{{ '/rag/api-reference/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Complete event-driven patterns
 - [Integration Patterns](../integrations) - Integration with external systems
-- <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 

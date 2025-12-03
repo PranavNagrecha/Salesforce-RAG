@@ -270,7 +270,7 @@ private class ContactUpdateServiceTest {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - <a href="{{ '/rag/quick-start/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
+   - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
    - <a href="{{ '/rag/quick-start/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service examples
    - <a href="{{ '/rag/quick-start/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a> - Selector examples
 
@@ -280,15 +280,15 @@ private class ContactUpdateServiceTest {
    - <a href="{{ '/rag/quick-start/code-examples/templates/apex-domain-template.html' | relative_url }}">Domain Template</a>
 
 3. **Understand Best Practices**:
-   - <a href="{{ '/rag/quick-start/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
-   - <a href="{{ '/rag/quick-start/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
+   - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
+   - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
    - <a href="{{ '/rag/quick-start/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a>
 
 ---
 
 ## Related Resources
 
-- <a href="{{ '/rag/quick-start/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 - [Code Examples](../code-examples) - Working code examples
 - <a href="{{ '/rag/quick-start/api-reference/apex-api-reference.html' | relative_url }}">API Reference</a> - API reference
 

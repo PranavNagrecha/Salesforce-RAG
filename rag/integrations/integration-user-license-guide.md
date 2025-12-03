@@ -48,7 +48,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
 - <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
-- <a href="{{ '/rag/integrations/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management basics
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management basics
 
 ## License Details
 

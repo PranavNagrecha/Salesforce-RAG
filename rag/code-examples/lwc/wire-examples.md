@@ -19,7 +19,7 @@ last_reviewed: "2025-01-XX"
 Wire services provide reactive data access in Lightning Web Components. The `@wire` decorator automatically manages data fetching, caching, and reactivity. This document demonstrates common wire service patterns for accessing Salesforce data.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
 - <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - Lightning Data Service API reference
 - <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 
@@ -216,7 +216,7 @@ export default class ContactWithAccount extends LightningElement {
 **Pattern**: Reactive Apex method calls
 **Use Case**: Calling Apex methods that return data reactively
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to call an Apex method and have the data update reactively when parameters change.
@@ -318,7 +318,7 @@ export default class AccountContacts extends LightningElement {
 **Pattern**: Accessing object metadata
 **Use Case**: Getting field labels, picklist values, or object metadata
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to access object metadata like field labels or picklist values.
@@ -405,7 +405,7 @@ export default class DynamicForm extends LightningElement {
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
 - <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - Lightning Data Service API reference
 - <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 - <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference

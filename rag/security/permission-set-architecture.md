@@ -25,7 +25,7 @@ Permission set-driven security architecture transitions from profile-centric to 
 
 **Recommended Reading**:
 - <a href="{{ '/rag/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Organization-wide defaults and role hierarchy
-- <a href="{{ '/rag/security/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
 - <a href="{{ '/rag/security/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Permission management for integration users
 
 ## Architecture Pattern
@@ -296,6 +296,6 @@ Avoid permission set-driven security when:
 - <a href="{{ '/rag/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Organization-wide defaults and role hierarchy
 - <a href="{{ '/rag/security/sharing-rules-and-manual-sharing.html' | relative_url }}">Sharing Rules and Manual Sharing</a> - Sharing rules and manual sharing patterns
 - <a href="{{ '/rag/security/sharing-sets-and-portals.html' | relative_url }}">Sharing Sets and Portals</a> - Experience Cloud sharing patterns
-- <a href="{{ '/rag/security/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
 - <a href="{{ '/rag/security/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Permission management for integration users
 

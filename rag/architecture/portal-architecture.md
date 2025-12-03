@@ -462,6 +462,6 @@ Avoid portal architecture when:
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/mobile-strategy.html' | relative_url }}">Mobile Strategy</a> - Mobile portal optimization
-- <a href="{{ '/rag/architecture/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Custom component development for portals
-- <a href="{{ '/rag/architecture/development/omnistudio-patterns.html' | relative_url }}">OmniStudio Patterns</a> - OmniStudio patterns for portals
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Custom component development for portals
+- <a href="{{ '/rag/development/omnistudio-patterns.html' | relative_url }}">OmniStudio Patterns</a> - OmniStudio patterns for portals
 

@@ -19,7 +19,7 @@ last_reviewed: "2025-01-XX"
 Structured logging enables consistent, searchable logging across Salesforce applications. These examples demonstrate custom logging objects, platform event fallbacks, external logging integration, and compliance/audit trail requirements.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
 - <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
 - <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
 
@@ -30,7 +30,7 @@ Structured logging enables consistent, searchable logging across Salesforce appl
 **Pattern**: Custom logging object with utility class
 **Use Case**: Structured logging for all operations
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need a consistent logging mechanism across your application.
@@ -181,7 +181,7 @@ try {
 **Pattern**: Platform event fallback when DML fails
 **Use Case**: Ensuring logs are captured even when DML fails
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need to ensure logs are captured even when DML operations fail (e.g., during trigger failures).
@@ -391,6 +391,6 @@ ExternalLoggingService.enqueueLogs(logs);
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
 - <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
 

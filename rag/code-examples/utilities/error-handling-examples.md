@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Robust error handling ensures applications gracefully handle failures and provide meaningful feedback. These examples demonstrate try-catch patterns, custom exceptions, retry logic, error logging, and user-friendly error messages.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
 - <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging patterns
-- <a href="{{ '/rag/code-examples/utilities/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Retry patterns
+- <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Retry patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Robust error handling ensures applications gracefully handle failures and provid
 **Pattern**: Try-catch error handling
 **Use Case**: Handling exceptions in Apex code
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need to handle exceptions gracefully in your Apex code.
@@ -175,7 +175,7 @@ public with sharing class ContactService {
 **Pattern**: Retry logic with exponential backoff
 **Use Case**: Handling transient failures (e.g., UNABLE_TO_LOCK_ROW)
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a>
+**Related Patterns**: <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a>
 
 **Problem**:
 You need to retry operations that may fail due to transient errors.
@@ -306,7 +306,7 @@ List<Id> result = (List<Id>) RetryService.retryWithBackoff(new RetryService.Retr
 **Pattern**: Retrying operations using Queueable
 **Use Case**: Retrying operations asynchronously
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 **Problem**:
 You need to retry operations asynchronously without blocking the current transaction.
@@ -438,7 +438,7 @@ System.enqueueJob(new QueueableRetryService('updateContacts', params));
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
-- <a href="{{ '/rag/code-examples/utilities/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Retry patterns
-- <a href="{{ '/rag/code-examples/utilities/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
+- <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Retry patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 

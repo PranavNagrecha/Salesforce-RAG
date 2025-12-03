@@ -309,5 +309,5 @@ This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for
 - <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring
 - <a href="{{ '/rag/observability/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and rollback
 - <a href="{{ '/rag/observability/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection
-- <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 

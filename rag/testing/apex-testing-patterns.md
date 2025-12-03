@@ -19,7 +19,7 @@ This guide provides testing patterns, best practices, and examples for Apex test
 
 **Related Patterns**:
 - <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Overall testing strategy
-- <a href="{{ '/rag/testing/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 
 ## Core Principles
 
@@ -452,6 +452,6 @@ private class ContactServiceTest {
 ## Related Patterns
 
 - <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Overall testing strategy
-- <a href="{{ '/rag/testing/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 - <a href="{{ '/rag/testing/code-examples/templates/test-class-template.html' | relative_url }}">Test Class Template</a> - Test class template
 

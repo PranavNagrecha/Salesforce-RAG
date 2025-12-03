@@ -441,7 +441,7 @@ PUT /services/apexrest/api/contacts
 **Pattern**: Making REST API callouts asynchronously
 **Use Case**: Long-running or high-volume callouts
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 **Problem**:
 You need to make REST API callouts asynchronously to avoid timeout issues and handle high volumes.
@@ -560,5 +560,5 @@ System.enqueueJob(new AsyncRestApiService('/api/sync', 'POST', payload, contact.
 
 - <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
 - <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
-- <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 

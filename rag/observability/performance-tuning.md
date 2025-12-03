@@ -16,7 +16,7 @@ last_reviewed: "2025-01-XX"
 This guide covers performance tuning patterns for Salesforce, including query/selectivity tuning, Large Data Volume (LDV) handling, governor limit mitigation, and caching strategies. These patterns are essential for optimizing Salesforce performance, handling large datasets, and ensuring system scalability.
 
 **Related Patterns**:
-- <a href="{{ '/rag/observability/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limits and resource management
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limits and resource management
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices
 - <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Performance monitoring patterns
 
@@ -332,8 +332,8 @@ This guide covers performance tuning patterns for Salesforce, including query/se
 
 ## Related Patterns
 
-- <a href="{{ '/rag/observability/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limits and resource management
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limits and resource management
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices
 - <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Performance monitoring
-- <a href="{{ '/rag/observability/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async processing for performance
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async processing for performance
 

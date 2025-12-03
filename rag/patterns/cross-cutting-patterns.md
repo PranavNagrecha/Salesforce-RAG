@@ -26,8 +26,8 @@ This document summarizes reusable patterns that appear across multiple domains i
 
 **Recommended Reading**:
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
-- <a href="{{ '/rag/patterns/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow automation patterns
-- <a href="{{ '/rag/patterns/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Lightning Web Component patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow automation patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Lightning Web Component patterns
 - <a href="{{ '/rag/patterns/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Integration pattern selection
 
 ## Governor Limit Management

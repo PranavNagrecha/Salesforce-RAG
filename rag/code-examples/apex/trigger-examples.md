@@ -9,7 +9,7 @@ Trigger handlers process trigger events with bulkification, error handling, and 
 
 **Related Patterns**:
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex design patterns
-- <a href="{{ '/rag/code-examples/apex/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
 
 ## Examples
 
@@ -310,5 +310,5 @@ for (Contact newContact : newContacts) {
 - <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
 - <a href="{{ '/rag/code-examples/apex/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a> - Domain layer patterns
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
-- <a href="{{ '/rag/code-examples/apex/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
 

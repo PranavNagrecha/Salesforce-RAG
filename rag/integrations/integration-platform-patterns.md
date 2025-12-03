@@ -229,7 +229,7 @@ Both platforms should support:
 
 - Interface configuration stored in Custom Metadata Types
 
-**Related**: <a href="{{ '/rag/integrations/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Complete guide to Custom Settings and Custom Metadata
+**Related**: <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Complete guide to Custom Settings and Custom Metadata
 - Environment-specific settings (endpoints, timeouts, headers)
 - Reusable across multiple integrations
 - Version-controlled configuration

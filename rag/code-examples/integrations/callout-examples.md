@@ -21,7 +21,7 @@ HTTP callouts enable Salesforce to communicate with external systems via REST or
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
 - <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/rest-api-examples.html' | relative_url }}">REST API Examples</a> - REST API patterns
-- <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 
 ## Examples
 
@@ -291,7 +291,7 @@ public with sharing class RobustCalloutService {
 **Pattern**: Making callouts asynchronously using Queueable
 **Use Case**: Long-running or high-volume callouts
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 **Problem**:
 You need to make HTTP callouts asynchronously to avoid timeout issues.
@@ -570,5 +570,5 @@ public with sharing class CircuitBreakerService {
 ## See Also
 
 - <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
-- <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
-- <a href="{{ '/rag/code-examples/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

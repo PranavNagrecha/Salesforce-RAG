@@ -55,7 +55,7 @@ handleSuccess() {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>, <a href="{{ '/rag/api-reference/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>, <a href="{{ '/rag/api-reference/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a>
 
 ---
 
@@ -95,7 +95,7 @@ export default class MyComponent extends NavigationMixin(LightningElement) {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 ---
 
@@ -190,7 +190,7 @@ wiredObjectInfo({ data, error }) {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 ---
 
@@ -417,7 +417,7 @@ export default class MyComponent extends LightningElement {
 - Handle both `data` and `error` in wire functions
 - Use `refreshApex()` after mutations
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 ---
 
@@ -456,7 +456,7 @@ export default class MyComponent extends LightningElement {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/api-reference/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
 - <a href="{{ '/rag/api-reference/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
 - <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 - <a href="{{ '/rag/api-reference/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns

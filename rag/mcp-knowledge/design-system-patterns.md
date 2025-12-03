@@ -174,7 +174,7 @@ Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to 
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- <a href="{{ '/rag/mcp-knowledge/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Component implementation patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Component implementation patterns
 - <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility</a> - Accessibility requirements
 
 **How This Complements Existing RAG**:

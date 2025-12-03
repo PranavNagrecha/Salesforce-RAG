@@ -27,8 +27,8 @@ This guide provides comprehensive best practices for implementing HTTP callouts 
 
 **Recommended Reading**:
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
-- <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
-- <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
 
@@ -157,7 +157,7 @@ private static Boolean isRetryableError(Integer statusCode, Exception e) {
 - **Provide user-friendly messages**: Transform technical errors into actionable messages
 - **Handle timeout scenarios**: Explicitly handle timeout exceptions
 
-**Related Patterns**: <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 ## Leverage Asynchronous Patterns
 
@@ -234,7 +234,7 @@ public static void makeAsyncCallout(String endpoint, String payloadJson) {
 
 **Note**: Prefer Queueable over @future for new development due to better error handling and chaining capabilities.
 
-**Related Patterns**: <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>, <a href="{{ '/rag/integrations/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>, <a href="{{ '/rag/integrations/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>
 
 ## Implement Circuit Breaker Pattern
 
@@ -390,7 +390,7 @@ public class CalloutWithProcessingQueueable implements Queueable, Database.Allow
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/integrations/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>, <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/integrations/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>, <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 ## Optimize Response Processing
 
@@ -475,7 +475,7 @@ public static void processResponseInBatches(HttpResponse response) {
 - **Use streaming parsers**: For very large JSON responses
 - **Extract only needed fields**: Reduce memory footprint
 
-**Related Patterns**: <a href="{{ '/rag/integrations/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a>
+**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a>
 
 ## Monitor and Log Callout Performance
 
@@ -617,7 +617,7 @@ insert contact;
 - Proper error handling
 - Better user experience (non-blocking)
 
-**Related Patterns**: <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 ## Testing Callout Best Practices
 
@@ -873,18 +873,18 @@ Remember that callouts are often the most fragile part of your Salesforce integr
 
 **See Also**:
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
 
 **Related Domains**:
 - <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
-- <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/integrations/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
 - <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 
 - <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
-- <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
-- <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/integrations/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
 - <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 

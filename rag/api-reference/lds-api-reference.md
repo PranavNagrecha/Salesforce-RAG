@@ -396,5 +396,5 @@ async handleApexUpdate() {
 
 - <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Complete LDS guidance
 - <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC module reference
-- <a href="{{ '/rag/api-reference/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
 

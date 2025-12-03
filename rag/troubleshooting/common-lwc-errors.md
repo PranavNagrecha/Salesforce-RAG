@@ -26,9 +26,9 @@ This guide provides solutions for common LWC errors encountered during Salesforc
 - Familiarity with field-level security and object permissions
 
 **Recommended Reading**:
-- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
 - <a href="{{ '/rag/troubleshooting/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - LWC testing patterns
-- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Cannot read property 'value' of undefined
 
@@ -97,7 +97,7 @@ wiredRecord({ data, error }) {
 - Check for null/undefined before accessing nested properties
 - Use loading states to prevent access before data loads
 
-**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -587,7 +587,7 @@ A field has proper FLS permissions and object access, but the component still fa
 **Related Patterns**: 
 - [Sharing Sets and Portals](../security/sharing-sets-and-portals.html#field-level-sharing-considerations) - Field-level security patterns
 - [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html#field-level-security) - Field configuration best practices
-- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
 
 ---
 
@@ -707,14 +707,14 @@ A field has proper FLS permissions and object access, but the component still fa
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 
 **Related Domains**:
-- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
-- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 
-- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
-- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 

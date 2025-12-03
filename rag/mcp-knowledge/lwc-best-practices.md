@@ -204,9 +204,9 @@ Comprehensive best practices for Lightning Web Components development, focusing 
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- <a href="{{ '/rag/mcp-knowledge/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complements with MCP-validated practices
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complements with MCP-validated practices
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Related backend patterns
-- <a href="{{ '/rag/mcp-knowledge/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 
 **How This Complements Existing RAG**:
 - Provides detailed best practices for LWC-specific patterns

@@ -8,7 +8,7 @@
 Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas. Hierarchical Custom Settings support user-level configuration, while List Custom Settings provide simple key-value lookups.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/utilities/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
+- <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
 
 ## Examples
 
@@ -104,5 +104,5 @@ public class CountryCodeLookup {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/utilities/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Complete patterns guide
+- <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Complete patterns guide
 

@@ -19,7 +19,7 @@ last_reviewed: "2025-01-XX"
 Data validation ensures data quality and prevents invalid data from entering the system. These examples demonstrate field validation, record validation, bulk validation, custom validation rules, and validation error handling.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
+- <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
 - <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
 - <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
 
@@ -30,7 +30,7 @@ Data validation ensures data quality and prevents invalid data from entering the
 **Pattern**: Validating individual fields
 **Use Case**: Ensuring field values meet business rules
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
+**Related Patterns**: <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
 
 **Problem**:
 You need to validate field values before saving records.
@@ -188,7 +188,7 @@ if (!phoneResult.isValid) {
 **Pattern**: Validating entire records
 **Use Case**: Ensuring records meet business rules
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
+**Related Patterns**: <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
 
 **Problem**:
 You need to validate entire records with multiple fields and business rules.
@@ -433,6 +433,6 @@ if (!separated.get('invalid').isEmpty()) {
 
 ## See Also
 
-- <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
+- <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
 - <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
 
