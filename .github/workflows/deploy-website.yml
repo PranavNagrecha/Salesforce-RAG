@@ -18,8 +18,11 @@ jobs:
       contents: read
       pages: write
       id-token: write
+    # CRITICAL: This environment name must match GitHub Pages settings
+    # Repository Settings → Pages → Source MUST be "GitHub Actions" (not a branch)
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Checkout repository
@@ -88,8 +91,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         timeout-minutes: 5
         continue-on-error: false
 
