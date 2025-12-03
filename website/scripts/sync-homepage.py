@@ -280,31 +280,18 @@ def build_rag_index(files_by_folder):
         
         lines.append(f"{desc}\n\n")
         
-        # File list
+        # File summaries with links
         for file_info in files:
             filename = file_info["filename"]
             url = file_info["url"]
             description = file_info["description"]
-            # Truncate description if too long
-            if len(description) > 150:
-                description = description[:147] + "..."
             # Build absolute path for Jekyll relative_url filter
-            # Use HTML links instead of markdown links so we can use Jekyll filters
-            # Format: <a href="{{ '/rag/path/file.html' | relative_url }}">text</a>
             # url is already the relative path (e.g., "adoption/org-health-checks.html")
             absolute_path = f"/rag/{url}"
             
-            # Use HTML link with Jekyll relative_url filter
-            # This ensures baseurl is correctly applied
-            lines.append(f"- <a href=\"{{{{ '{absolute_path}' | relative_url }}}}\">{filename}</a> — {description}\n")
-        
-        lines.append("\n")
-        
-        # File summaries
-        for file_info in files:
-            filename = file_info["filename"]
-            description = file_info["description"]
+            # Use HTML link with Jekyll relative_url filter in the header
             lines.append(f"### {filename}\n\n")
+            lines.append(f"<a href=\"{{{{ '{absolute_path}' | relative_url }}}}\">View {filename}</a>\n\n")
             lines.append(f"**Summary**: {description}\n\n")
         
         lines.append("\n")
