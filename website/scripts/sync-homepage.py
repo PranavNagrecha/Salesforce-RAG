@@ -288,8 +288,14 @@ def build_rag_index(files_by_folder):
             # Truncate description if too long
             if len(description) > 150:
                 description = description[:147] + "..."
-            # Use relative path for markdown links
-            lines.append(f"- [{filename}]({url}) — {description}\n")
+            # Build absolute path for Jekyll relative_url filter
+            # Use HTML links instead of markdown links so we can use Jekyll filters
+            # Format: <a href="{{ '/rag/path/file.html' | relative_url }}">text</a>
+            absolute_path = f"/rag/{url_path}"
+            
+            # Use HTML link with Jekyll relative_url filter
+            # This ensures baseurl is correctly applied
+            lines.append(f"- <a href=\"{{{{ '{absolute_path}' | relative_url }}}}\">{filename}</a> — {description}\n")
         
         lines.append("\n")
         
