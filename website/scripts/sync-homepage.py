@@ -291,8 +291,16 @@ def build_rag_index(files_by_folder):
             url = file_info["url"]
             description = file_info["description"]
             # Build absolute path for Jekyll relative_url filter
-            # url is already the relative path (e.g., "adoption/org-health-checks.html")
-            absolute_path = f"/rag/{url}"
+            # url is already an absolute path starting with /rag/ (from find_markdown_files)
+            # Just use it directly, ensuring it starts with /rag/
+            if url.startswith("/rag/"):
+                absolute_path = url
+            elif url.startswith("/"):
+                # Already absolute but wrong prefix, fix it
+                absolute_path = f"/rag{url}"
+            else:
+                # Relative path, prepend /rag/
+                absolute_path = f"/rag/{url}"
             
             # Use HTML link with Jekyll relative_url filter in the header
             lines.append(f"### {filename}\n\n")

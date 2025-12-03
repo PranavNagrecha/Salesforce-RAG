@@ -3,12 +3,12 @@
     "title": "Salesforce RAG Knowledge Library",
     "description": "A comprehensive knowledge library containing implementation patterns, best practices, and architectural guidance.",
     "version": "1.0",
-    "last_updated": "2025-12-03T10:32:25.954705"
+    "last_updated": "2025-12-03T10:36:56.093601"
   },
   "statistics": {
     "total_files": 160,
     "total_folders": 21,
-    "last_updated": "2025-12-03T10:32:25.954705"
+    "last_updated": "2025-12-03T10:36:56.093601"
   },
   "folder_statistics": {
     "code-examples": 47,
