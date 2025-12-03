@@ -65,7 +65,7 @@ export default class ContactViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a>
 
 **Best Practices**:
 - Use schema imports instead of string literals

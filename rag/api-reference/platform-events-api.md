@@ -203,7 +203,7 @@ CustomEvent__e event = new CustomEvent__e(
 );
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/architecture/event-driven-architecture.html#event-payload-design' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/architecture/event-driven-architecture.html#event-payload-design.html' | relative_url }}">Event-Driven Architecture</a>
 
 ---
 

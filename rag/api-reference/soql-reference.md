@@ -133,5 +133,5 @@ List<Contact> nextPage = [
 - `OFFSET` has performance limitations (max 2000)
 - Cursor-based approach scales better
 
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#selector-layer' | relative_url }}">Selector Layer</a> - Selector pattern implementation
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#selector-layer.html' | relative_url }}">Selector Layer</a> - Selector pattern implementation
 

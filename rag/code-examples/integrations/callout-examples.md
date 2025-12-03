@@ -11,7 +11,7 @@ permalink: /rag/development/asynchronous-apex-patterns.html' | relative_url }}">
 **Pattern**: HTTP callout using Named Credentials
 **Use Case**: Making authenticated HTTP requests to external APIs
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
 
 **Problem**:
 You need to make HTTP callouts to an external API using Named Credentials for authentication.
@@ -122,7 +122,7 @@ public with sharing class HttpCalloutService {
 **Pattern**: Comprehensive error handling for HTTP callouts
 **Use Case**: Handling various error scenarios gracefully
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
 
 **Problem**:
 You need to handle different types of errors (network, timeout, HTTP status codes) appropriately.
@@ -399,7 +399,7 @@ System.enqueueJob(new AsyncCalloutService('/api/sync', 'POST', payload, contact.
 **Pattern**: Circuit breaker for high-volume integrations
 **Use Case**: Preventing cascading failures in high-volume scenarios
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
 
 **Problem**:
 You need to prevent callouts when an external system is down to avoid wasting resources.

@@ -15,8 +15,8 @@ permalink: /rag/code-examples/utilities/sfdx-examples.html
 Salesforce DX provides command-line tools and workflows for modern Salesforce development. These examples show common SFDX patterns and scripts.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/utilities/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a>
-- <a href="{{ '/rag/code-examples/utilities/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a>
+- <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a>
+- <a href="{{ '/rag/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a>
 
 ## Examples
 
@@ -87,6 +87,6 @@ fi
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/utilities/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - Complete SFDX guide
-- <a href="{{ '/rag/code-examples/utilities/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment patterns
+- <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - Complete SFDX guide
+- <a href="{{ '/rag/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment patterns
 

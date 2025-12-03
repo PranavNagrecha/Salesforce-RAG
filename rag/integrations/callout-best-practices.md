@@ -62,7 +62,7 @@ req.setEndpoint('https://api.example.com/endpoint');
 - **Authentication Protocol**: OAuth 2.0, Basic Auth, Certificate
 - **Per-User Callout**: Enable if user-specific authentication required
 
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials' | relative_url }}">Integration Examples</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials.html' | relative_url }}">Integration Examples</a>
 
 ## Implement Proper Error Handling
 

@@ -446,7 +446,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor governor limits proactively
 
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#bulkification' | relative_url }}">Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#bulkification.html' | relative_url }}">Apex Patterns</a>
 
 ---
 
@@ -508,7 +508,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#bulkification' | relative_url }}">Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#bulkification.html' | relative_url }}">Apex Patterns</a>
 
 ---
 

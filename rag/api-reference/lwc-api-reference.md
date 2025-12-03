@@ -39,7 +39,7 @@ wiredAccounts({ data, error }) {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -114,7 +114,7 @@ disconnectedCallback() {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -155,7 +155,7 @@ export default class AccountViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity' | relative_url }}">Referential Integrity</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity.html' | relative_url }}">Referential Integrity</a>
 
 ---
 
@@ -191,7 +191,7 @@ export default class MyComponent extends LightningElement {
 - For getters/setters: Decorate only the getter
 - Do not mutate @api properties internally
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -263,7 +263,7 @@ export default class MyComponent extends LightningElement {
 - Not needed when entire object/array is reassigned
 
 **Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
-- <a href="{{ '/rag/api-reference/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
-- <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
-- <a href="{{ '/rag/api-reference/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns
+- <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
+- <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
+- <a href="{{ '/rag/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns
 

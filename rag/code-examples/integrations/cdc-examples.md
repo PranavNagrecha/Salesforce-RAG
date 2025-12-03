@@ -15,8 +15,8 @@ permalink: /rag/code-examples/integrations/cdc-examples.html
 Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a>
-- <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
+- <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a>
+- <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 ## Examples
 
@@ -25,7 +25,7 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 **Pattern**: Trigger-based CDC processing
 **Use Case**: Processing CDC events directly in Apex triggers
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-1-trigger-based-cdc-processing' | relative_url }}">Trigger-Based CDC Processing</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-1-trigger-based-cdc-processing.html' | relative_url }}">Trigger-Based CDC Processing</a>
 
 **Problem**:
 You need to process Contact change events to sync data to an external system. Trigger processes events and calls external API for each change.
@@ -161,7 +161,7 @@ CDC events are automatically published when Contact records change. No manual tr
 **Pattern**: Combining CDC with Platform Events
 **Use Case**: Complex event-driven workflows with CDC change detection
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-2-platform-event-integration-with-cdc' | relative_url }}">Platform Event Integration with CDC</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-2-platform-event-integration-with-cdc.html' | relative_url }}">Platform Event Integration with CDC</a>
 
 **Problem**:
 Contact changes trigger CDC events, which publish Platform Events with enriched data. Multiple subscribers process Platform Events for different purposes.
@@ -239,7 +239,7 @@ public class ContactChangeEventHandler {
 **Pattern**: CDC event error handling with retry logic
 **Use Case**: Handling CDC event processing failures
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-3-cdc-error-handling-and-replay' | relative_url }}">CDC Error Handling and Replay</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-3-cdc-error-handling-and-replay.html' | relative_url }}">CDC Error Handling and Replay</a>
 
 **Problem**:
 CDC event processing fails due to external API timeout. Failed events are logged, and replay mechanism processes them after API recovers.
@@ -397,6 +397,6 @@ public class ContactSyncRetryQueueable implements Queueable {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Complete CDC patterns guide
-- <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
+- <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Complete CDC patterns guide
+- <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 

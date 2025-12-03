@@ -15,7 +15,7 @@ Test data factories provide reusable methods for creating test data, ensuring co
 
 **Related Patterns**:
 - <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Testing patterns
-- <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing strategy
+- <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing strategy
 
 ## Core Principles
 
@@ -348,6 +348,6 @@ private class MyTestClass {
 ## Related Patterns
 
 - <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Testing patterns
-- <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing strategy
+- <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing strategy
 - <a href="{{ '/rag/testing/code-examples/templates/test-class-template.html' | relative_url }}">Test Class Template</a> - Test class template
 

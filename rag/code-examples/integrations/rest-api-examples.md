@@ -15,8 +15,8 @@ permalink: /rag/code-examples/integrations/rest-api-examples.html
 REST API integrations enable real-time, synchronous communication between Salesforce and external systems. These examples demonstrate common REST API patterns including outbound callouts, inbound REST services, authentication, error handling, and response processing.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
-- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
 - <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Apex integration layer examples
 
 ## Examples
@@ -26,7 +26,7 @@ REST API integrations enable real-time, synchronous communication between Salesf
 **Pattern**: REST API callout using Named Credentials
 **Use Case**: Calling external REST APIs from Salesforce
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
 
 **Problem**:
 You need to make HTTP callouts to an external REST API using Named Credentials for authentication.
@@ -197,7 +197,7 @@ Map<String, Object> response = RestApiService.post('/api/users', payload);
 **Pattern**: Exposing REST API endpoints from Salesforce
 **Use Case**: Allowing external systems to call Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a>
 
 **Problem**:
 You need to expose a REST API endpoint that external systems can call to create or update records in Salesforce.

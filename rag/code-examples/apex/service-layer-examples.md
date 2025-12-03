@@ -320,7 +320,7 @@ private class AccountContactUpdateServiceTest {
 **Pattern**: Service Layer with Asynchronous Processing
 **Use Case**: Long-running operations that should be async
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns.html#asynchronous-apex-patterns' | relative_url }}">Asynchronous Apex</a>
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns.html#asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex</a>
 
 **Problem**:
 You need to process a large number of records asynchronously, potentially chaining multiple jobs.

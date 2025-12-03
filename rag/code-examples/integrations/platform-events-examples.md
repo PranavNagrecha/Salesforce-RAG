@@ -15,9 +15,9 @@ permalink: /rag/code-examples/integrations/platform-events-examples.html
 Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems. These examples demonstrate publishing events from Apex and Flows, subscribing to events, handling event payloads, and integrating with external event buses.
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Event-driven architecture patterns
+- <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Event-driven architecture patterns
 - <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/cdc-examples.html' | relative_url }}">Change Data Capture Examples</a> - CDC event patterns
-- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration patterns
 
 ## Examples
 
@@ -26,7 +26,7 @@ Platform Events enable event-driven architecture in Salesforce, allowing decoupl
 **Pattern**: Publishing Platform Events from Apex code
 **Use Case**: Publishing business events from Apex triggers or services
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 **Problem**:
 You need to publish Platform Events when records are created or updated to notify external systems.
@@ -173,7 +173,7 @@ You need to publish Platform Events from a Record-Triggered Flow when records ar
 **Pattern**: Subscribing to Platform Events using Apex triggers
 **Use Case**: Processing events internally within Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 **Problem**:
 You need to subscribe to Platform Events and process them (e.g., logging, triggering workflows).
@@ -256,7 +256,7 @@ trigger ApplicationEventTrigger on Application_Submitted__e (after insert) {
 **Pattern**: Designing self-contained event payloads
 **Use Case**: Enabling event subscribers to process events without querying Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 **Problem**:
 You need to design event payloads that include all necessary context for subscribers.
