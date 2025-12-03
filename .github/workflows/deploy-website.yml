@@ -20,9 +20,10 @@ jobs:
       id-token: write
     # CRITICAL: This environment name must match GitHub Pages settings
     # Repository Settings → Pages → Source MUST be "GitHub Actions" (not a branch)
+    # If this fails with 404, go to: https://github.com/PranavNagrecha/Salesforce-RAG/settings/pages
+    # and change Source from "Deploy from a branch" to "GitHub Actions"
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Checkout repository
@@ -80,6 +81,15 @@ jobs:
       
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      
+      - name: Verify Pages Configuration
+        run: |
+          echo "Checking GitHub Pages configuration..."
+          echo "If this fails, ensure:"
+          echo "  1. Go to: https://github.com/PranavNagrecha/Salesforce-RAG/settings/pages"
+          echo "  2. Source MUST be set to 'GitHub Actions' (NOT 'Deploy from a branch')"
+          echo "  3. Click Save"
+          echo "  4. Then re-run this workflow"
       
       - name: Upload artifact
         id: upload
