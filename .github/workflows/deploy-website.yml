@@ -30,11 +30,11 @@ jobs:
       
       - name: Update website files
         run: |
-          python scripts/update-website.py --verbose
+          python website/scripts/update-website.py --verbose
       
       - name: Validate changes
         run: |
-          python scripts/update-website.py --validate-only
+          python website/scripts/update-website.py --validate-only
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
