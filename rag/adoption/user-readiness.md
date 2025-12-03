@@ -19,6 +19,18 @@ This guide covers user readiness patterns for Salesforce, including training pla
 - [Org Health Checks](org-health-checks.md) - Technical debt and org optimization
 - [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of change management principles
+- Knowledge of training and user adoption strategies
+- Understanding of Salesforce platform capabilities
+- Familiarity with project delivery methodologies
+
+**Recommended Reading**:
+- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery patterns
+- [Org Health Checks](org-health-checks.md) - Technical optimization patterns
+
 ## Consensus Best Practices
 
 - **Plan training early**: Include training in project planning from the start

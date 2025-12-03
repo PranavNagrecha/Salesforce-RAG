@@ -17,6 +17,19 @@ last_reviewed: "2025-01-XX"
 
 This topic covers Salesforce row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, deadlock prevention, and high-concurrency scenario management. These patterns are especially relevant for integration-heavy systems with large data volumes and high concurrency, where multiple processes may attempt to update the same records simultaneously.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce transaction model and row locking
+- Knowledge of DML operations and exception handling
+- Understanding of governor limits and asynchronous Apex
+- Familiarity with error handling patterns
+
+**Recommended Reading**:
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Queueable and Batch Apex patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Resource management
+
 ## Consensus Best Practices
 
 - **Implement retry logic for row locking errors**: When encountering `UNABLE_TO_LOCK_ROW` exceptions, implement retry logic with exponential backoff to handle transient locking conflicts gracefully. This prevents data loss and improves system reliability under high concurrency.
@@ -165,6 +178,56 @@ These tradeoffs require human judgment based on system load, concurrency pattern
 - **Lock-free design complexity**: The complexity of implementing lock-free patterns may not be justified for all scenarios. The decision requires evaluation based on concurrency levels and development resources.
 
 - **Deadlock prevention strategies**: Consistent lock ordering is effective but may not be feasible for all scenarios. The decision requires evaluation based on operation complexity and lock acquisition patterns.
+
+## Edge Cases and Limitations
+
+### High-Concurrency Scenarios
+
+**Scenario**: Multiple processes attempting to update the same records simultaneously can cause lock contention.
+
+**Consideration**:
+- Implement retry logic with exponential backoff
+- Use Queueable for retry operations to defer to separate transaction context
+- Consider using event-driven patterns to reduce lock contention
+- Monitor lock contention patterns and optimize as needed
+
+### Partial Success in Bulk Operations
+
+**Scenario**: When processing collections, some records may succeed while others fail due to locking.
+
+**Consideration**:
+- Implement idempotent operations to allow safe retries
+- Track successful and failed records separately
+- Use Database methods with `allOrNone=false` for partial success
+- Log failures for manual intervention if needed
+
+### Deadlock Scenarios
+
+**Scenario**: Circular lock dependencies can cause deadlocks where transactions wait indefinitely.
+
+**Consideration**:
+- Design operations to acquire locks in consistent order
+- Implement deadlock detection and retry mechanisms
+- Use NOWAIT locking for read operations to fail fast
+- Monitor for deadlock patterns and adjust lock ordering
+
+### Long-Running Transactions
+
+**Scenario**: Transactions that hold locks for extended periods increase contention.
+
+**Consideration**:
+- Minimize transaction scope by performing expensive operations before acquiring locks
+- Release locks as soon as possible
+- Use asynchronous processing for long-running operations
+- Consider breaking operations into smaller transactions
+
+### Limitations
+
+- **Lock timeout**: Salesforce has implicit lock timeouts; long-running transactions may fail
+- **Retry limits**: Infinite retries are not recommended; set maximum retry attempts (typically 3-5)
+- **NOWAIT availability**: `FOR UPDATE NOWAIT` is not available in all contexts
+- **Lock scope**: Row-level locking only; cannot lock at object level
+- **Cross-object locking**: Locking related objects requires careful ordering to prevent deadlocks
 
 ## Q&A
 

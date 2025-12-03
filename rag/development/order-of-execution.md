@@ -16,6 +16,19 @@ last_reviewed: "2025-01-XX"
 
 Understanding the order of execution in Salesforce is critical for architects and developers. The execution order determines when triggers, flows, validation rules, and other automation run, which directly impacts system behavior, data integrity, and debugging capabilities.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce automation (Triggers, Flows, Process Builder, Workflow Rules)
+- Knowledge of validation rules and data validation
+- Understanding of Apex triggers and execution context
+- Familiarity with record save operations
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Apex trigger patterns
+- [Flow Patterns](flow-patterns.md) - Flow automation patterns
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling in automation
+
 ## Complete Order of Execution
 
 ### Save Operation Sequence

@@ -17,6 +17,20 @@ last_reviewed: "2025-01-XX"
 
 This guide provides solutions for governor limit errors, including error messages, causes, solutions, and prevention strategies.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce governor limits
+- Knowledge of Apex programming and SOQL queries
+- Understanding of bulkification patterns
+- Familiarity with error handling
+
+**Recommended Reading**:
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Limit management and optimization
+- [SOQL Query Patterns](../development/soql-query-patterns.md) - Query optimization
+- [Apex Patterns](../development/apex-patterns.md) - Bulkification patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+
 ## Too many SOQL queries
 
 **Error Message**: `LimitException: Too many SOQL queries: 101 out of 100`

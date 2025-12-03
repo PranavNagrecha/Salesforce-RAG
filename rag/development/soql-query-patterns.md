@@ -24,6 +24,19 @@ This document captures SOQL query patterns and practices derived from actual imp
 - Performing org maintenance and cleanup
 - Building cascading load patterns for LWC components
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of SOQL syntax and query structure
+- Basic knowledge of Salesforce data model and relationships
+- Understanding of governor limits (query count, rows returned)
+- Familiarity with Apex or LWC development
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Apex class structure and Selector layer patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Limit management and optimization
+- [Order of Execution](order-of-execution.md) - Understanding when queries execute
+
 ## What Was Actually Done
 
 ### Dynamic SOQL with Proper Escaping
@@ -487,6 +500,55 @@ ORDER BY ApiVersion ASC, Name ASC
 - **Use date functions**: `LAST_N_YEARS:2` for time-based filtering
 - **Combine conditions**: Use multiple NOT IN clauses to find truly unused components
 - **Query metadata objects**: Use EntityDefinition, ApexClass, etc. for metadata analysis
+
+## Edge Cases and Limitations
+
+### Query Selectivity Limitations
+
+**Scenario**: Queries that return more than 10% of records may be non-selective and cannot use indexes.
+
+**Consideration**: 
+- Use multiple indexed fields in WHERE clauses to improve selectivity
+- Consider using date ranges or other selective filters
+- For large datasets, use pagination or batch processing
+- Monitor query performance and adjust filters as needed
+
+### Relationship Query Limitations
+
+**Scenario**: Parent-to-child or child-to-parent queries can return large result sets.
+
+**Consideration**:
+- Use LIMIT clauses in subqueries to control result size
+- Consider using aggregate queries when only counts or summaries are needed
+- Be aware of governor limits for relationship queries (200 parent records with 200 child records each = 40,000 total records)
+
+### Dynamic SOQL Security Limitations
+
+**Scenario**: Dynamic SOQL with user input requires careful handling to prevent injection.
+
+**Consideration**:
+- Always use `String.escapeSingleQuotes()` for user input
+- Validate input before building queries
+- Use bind variables when possible (preferred over string concatenation)
+- Test with edge cases (null, empty strings, special characters)
+
+### Large Data Volume Limitations
+
+**Scenario**: Queries on objects with millions of records may have performance issues.
+
+**Consideration**:
+- Use indexed fields in WHERE clauses
+- Consider using Bulk API for large data operations
+- Implement pagination for large result sets
+- Use asynchronous processing for large queries
+
+### Limitations
+
+- **SOQL cannot query all objects**: Some objects (like SetupEntityAccess) cannot be queried directly
+- **Relationship query depth**: Cannot query more than 5 levels deep in relationships
+- **Aggregate query limitations**: Cannot use aggregate functions with certain field types
+- **Date function limitations**: Some date functions may not use indexes efficiently
+- **Text search limitations**: SOQL text search is limited compared to SOSL
 
 ## Interactions With Other RAG Files
 

@@ -15,6 +15,19 @@ last_reviewed: "2025-01-XX"
 
 Permission set-driven security architecture transitions from profile-centric to permission set-based access control. This pattern provides more granular permission management, especially at scale, and enables flexible role-based access control without creating multiple profiles.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce security model (Profiles, Permission Sets, Sharing)
+- Knowledge of object-level and field-level security
+- Understanding of user management and license types
+- Familiarity with role hierarchy and sharing rules
+
+**Recommended Reading**:
+- [Sharing Fundamentals](sharing-fundamentals.md) - Organization-wide defaults and role hierarchy
+- [Admin Basics](../development/admin-basics.md) - User management and basic administration
+- [Integration User License Guide](../integrations/integration-user-license-guide.md) - Permission management for integration users
+
 ## Architecture Pattern
 
 ### Profile Structure

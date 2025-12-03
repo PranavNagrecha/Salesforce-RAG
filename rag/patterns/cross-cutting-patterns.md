@@ -16,6 +16,20 @@ This document summarizes reusable patterns that appear across multiple domains i
 
 **Note**: This file links to detailed domain-specific documentation. It does not duplicate full content but provides a "pattern table of contents" showing how different pieces of the architecture fit together.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce platform fundamentals
+- Knowledge of Apex, Flow, and LWC development
+- Understanding of integration patterns
+- Familiarity with security and data modeling concepts
+
+**Recommended Reading**:
+- [Apex Patterns](../development/apex-patterns.md) - Apex development patterns
+- [Flow Patterns](../development/flow-patterns.md) - Flow automation patterns
+- [LWC Patterns](../development/lwc-patterns.md) - Lightning Web Component patterns
+- [Integration Patterns](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+
 ## Governor Limit Management
 
 ### Pattern Summary

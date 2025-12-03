@@ -15,6 +15,20 @@ last_reviewed: "2025-01-XX"
 
 Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency. These techniques use external IDs, integration job tracking, and comparison queries to validate data synchronization.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of SOQL query syntax
+- Knowledge of external IDs and integration keys
+- Understanding of integration patterns and data synchronization
+- Familiarity with data quality concepts
+
+**Recommended Reading**:
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns
+- [Integration Debugging](integration-debugging.md) - Debugging integration issues
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data validation patterns
+
 ## Reconciliation Patterns
 
 ### External ID-Based Reconciliation

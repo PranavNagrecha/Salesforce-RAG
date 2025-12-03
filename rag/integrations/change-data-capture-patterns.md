@@ -20,6 +20,19 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 - [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events and event-driven patterns
 - [Integration Patterns](etl-vs-api-vs-events.md) - Integration pattern selection
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce event-driven architecture
+- Knowledge of Platform Events and event processing
+- Understanding of integration patterns (ETL, API, Events)
+- Familiarity with error handling and retry patterns
+
+**Recommended Reading**:
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
+- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+
 ## Consensus Best Practices
 
 - **Use CDC for real-time change tracking**: Track field-level changes in real-time
@@ -266,6 +279,56 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 ### Q: Can I combine CDC with Platform Events?
 
 **A**: Yes, combining CDC with Platform Events is a common pattern. Use **CDC to detect changes** and **Platform Events for business logic**. Publish Platform Events from CDC triggers to add business context, filter events, or enable longer retention. This provides the best of both worlds.
+
+## Edge Cases and Limitations
+
+### CDC Event Retention
+
+**Scenario**: CDC events have a 24-hour retention period and expire after that time.
+
+**Consideration**:
+- Process events within the retention window
+- Implement event replay logic for failed events
+- Store critical events in custom objects for longer retention
+- Plan for event processing delays and failures
+
+### High-Volume CDC Scenarios
+
+**Scenario**: Objects with high change frequency can generate millions of CDC events.
+
+**Consideration**:
+- Process events in bulk to handle high volumes
+- Use asynchronous processing (triggers or Platform Events)
+- Implement event batching and throttling if needed
+- Monitor event processing performance and adjust as needed
+
+### CDC Event Filtering Limitations
+
+**Scenario**: CDC events cannot be filtered before publishing; all changes generate events.
+
+**Consideration**:
+- Filter events in subscriber code if filtering is needed
+- Use CDC to detect changes and publish Platform Events with filtered logic
+- Consider using Platform Events directly if filtering is critical
+- Plan for processing all events even if only some are needed
+
+### Field-Level Change Tracking
+
+**Scenario**: CDC provides field-level change tracking, but not all fields may be tracked.
+
+**Consideration**:
+- Verify which fields are included in CDC events
+- Use ChangeEventHeader to identify changed fields
+- Consider using Field History Tracking for additional change tracking
+- Plan for fields that may not be tracked in CDC events
+
+### Limitations
+
+- **24-hour retention**: CDC events expire after 24 hours and cannot be replayed
+- **No filtering**: CDC events cannot be filtered before publishing
+- **Object limitations**: Not all objects support CDC (check object capabilities)
+- **Field limitations**: Some fields may not be tracked in CDC events
+- **Event size**: Large change events may have payload size limitations
 
 ## Related Patterns
 

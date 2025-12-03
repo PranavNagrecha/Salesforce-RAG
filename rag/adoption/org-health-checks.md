@@ -20,6 +20,19 @@ This guide covers org health check patterns for Salesforce, including technical 
 - [Performance Tuning](../observability/performance-tuning.md) - Performance optimization
 - [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Resource optimization
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce platform architecture
+- Knowledge of technical debt and code quality concepts
+- Understanding of performance optimization
+- Familiarity with governance and compliance requirements
+
+**Recommended Reading**:
+- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization patterns
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Resource optimization
+- [Monitoring and Alerting](../observability/monitoring-alerting.md) - Monitoring patterns
+
 ## Consensus Best Practices
 
 - **Conduct regular health checks**: Schedule regular org health assessments

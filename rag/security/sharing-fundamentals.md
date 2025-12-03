@@ -21,6 +21,19 @@ This document covers the fundamental concepts of Salesforce sharing, including O
 - See `rag/security/sharing-sets-and-portals.md` for Experience Cloud sharing patterns
 - See `rag/security/permission-set-architecture.md` for permission context
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce security model (Profiles, Permission Sets)
+- Knowledge of object-level and field-level security
+- Understanding of user management and roles
+- Familiarity with record ownership concepts
+
+**Recommended Reading**:
+- [Permission Set Architecture](permission-set-architecture.md) - Permission management patterns
+- [Admin Basics](../development/admin-basics.md) - User management and basic administration
+- [Sharing Rules and Manual Sharing](sharing-rules-and-manual-sharing.md) - Advanced sharing patterns
+
 ## Sharing Model Fundamentals
 
 ### How Salesforce Sharing Works

@@ -23,6 +23,20 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 - [Governor Limits and Optimization](governor-limits-and-optimization.md) - Governor limit management
 - [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Apex programming fundamentals
+- Knowledge of governor limits and when they apply
+- Understanding of Salesforce transaction model
+- Familiarity with DML operations and SOQL queries
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Apex class structure and patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Limit management
+- [Order of Execution](order-of-execution.md) - Transaction execution order
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
+
 ## Consensus Best Practices
 
 - **Use Batch Apex for large data volumes**: Process thousands or millions of records in batches
@@ -456,6 +470,56 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 - Testing and debugging
 
 **Tradeoff**: Scheduled provides automation but less control. Manual execution provides control but requires manual intervention.
+
+## Edge Cases and Limitations
+
+### Batch Apex Job Failures
+
+**Scenario**: Batch Apex jobs may fail due to governor limits, data issues, or system errors.
+
+**Consideration**:
+- Implement error handling in `execute()` and `finish()` methods
+- Use Database methods with `allOrNone=false` for partial success
+- Log failures for troubleshooting and retry
+- Monitor job status and implement retry mechanisms
+
+### Queueable Chaining Limits
+
+**Scenario**: Queueable jobs can be chained, but there are limits on chain depth.
+
+**Consideration**:
+- Maximum chain depth is 2 (Queueable → Queueable → Queueable)
+- Plan chain depth carefully to avoid hitting limits
+- Consider using Platform Events for deeper chains
+- Monitor chain depth and adjust as needed
+
+### Scheduled Job Conflicts
+
+**Scenario**: Multiple scheduled jobs may conflict or overlap.
+
+**Consideration**:
+- Use `System.abortJob()` to prevent overlapping executions
+- Implement job status checking before scheduling
+- Use Custom Metadata to configure job schedules
+- Monitor job execution and handle conflicts
+
+### Large Data Volume Processing
+
+**Scenario**: Processing millions of records in Batch Apex may take hours or days.
+
+**Consideration**:
+- Break large operations into smaller batches if possible
+- Monitor batch progress and implement checkpoints
+- Consider using Bulk API for very large operations
+- Plan for long-running jobs and user expectations
+
+### Limitations
+
+- **Batch size**: Batch Apex processes 200 records per batch; cannot be changed
+- **Queueable depth**: Maximum chain depth of 2 for Queueable jobs
+- **Scheduled frequency**: Minimum scheduling interval is 1 hour
+- **Job limits**: Limited concurrent jobs (5 Batch, 50 Queueable, 100 Scheduled)
+- **Transaction limits**: Each async job has its own governor limits
 
 ## Q&A
 

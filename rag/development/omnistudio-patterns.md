@@ -16,6 +16,19 @@ last_reviewed: "2025-01-XX"
 
 OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI components for complex business processes. Used in higher education and public sector contexts to guide users through applications, grant workflows, and other multi-step processes.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce declarative automation
+- Knowledge of Flow and Process Builder concepts
+- Understanding of data transformation and validation
+- Familiarity with Experience Cloud (for portal implementations)
+
+**Recommended Reading**:
+- [Flow Patterns](flow-patterns.md) - Flow automation patterns
+- [Portal Architecture](../architecture/portal-architecture.md) - Experience Cloud patterns
+- [LWC Patterns](lwc-patterns.md) - Lightning Web Component patterns
+
 ## OmniScripts for Guided Processes
 
 ### Purpose

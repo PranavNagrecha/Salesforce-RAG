@@ -17,6 +17,19 @@ last_reviewed: "2025-01-XX"
 
 Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance. The framework uses a custom logging object (`LOG_LogMessage__c`) with utility classes and platform event fallbacks to ensure no errors are lost.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Apex exception handling (try-catch blocks)
+- Knowledge of DML operations and exception types
+- Understanding of Platform Events (for fallback logging)
+- Familiarity with custom objects and field types
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Apex class structure and patterns
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Queueable patterns for error handling
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
+
 ## Logging Architecture
 
 ### Custom Logging Object
@@ -267,6 +280,56 @@ Avoid comprehensive logging when:
 ### Q: What are the performance implications of comprehensive logging?
 
 **A**: Logging adds DML operations which count against governor limits. Use async logging (Queueable, Platform Events) for high-volume scenarios, batch log writes when possible, and consider log retention policies to manage storage. Balance logging comprehensiveness with performance.
+
+## Edge Cases and Limitations
+
+### Logging Object Unavailability
+
+**Scenario**: The custom logging object may be unavailable due to permissions, DML limits, or system issues.
+
+**Consideration**:
+- Implement platform event fallback to ensure errors are never lost
+- Handle DML exceptions gracefully in logging utility
+- Monitor logging object availability and permissions
+- Consider using multiple logging mechanisms for redundancy
+
+### High-Volume Logging Scenarios
+
+**Scenario**: High-frequency logging can hit governor limits or cause performance issues.
+
+**Consideration**:
+- Use asynchronous logging for high-volume scenarios
+- Implement log batching to reduce DML operations
+- Consider log level filtering to reduce log volume
+- Monitor logging performance and adjust as needed
+
+### Partial Failure Scenarios
+
+**Scenario**: Some records in a bulk operation may fail while others succeed.
+
+**Consideration**:
+- Use Database methods with `allOrNone=false` for partial success
+- Log errors per record using `getDmlFields()` and `getDmlMessage()`
+- Track successful and failed records separately
+- Implement retry logic for failed records
+
+### Error Context Loss
+
+**Scenario**: Errors may occur in contexts where full context is not available.
+
+**Consideration**:
+- Capture as much context as possible (source, method, parameters, stack trace)
+- Use correlation IDs to track related operations
+- Include user context and timestamp in all logs
+- Design logging to capture context at the point of error
+
+### Limitations
+
+- **DML limits**: Logging DML operations count against governor limits
+- **Storage limits**: Custom logging objects consume storage; plan for log retention and cleanup
+- **Query limits**: Querying logs counts against SOQL query limits
+- **Platform event limits**: Platform event fallback has its own limits and retention
+- **Performance impact**: Excessive logging can impact transaction performance
 
 ## Related Patterns
 

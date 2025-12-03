@@ -17,6 +17,20 @@ last_reviewed: "2025-01-XX"
 
 This document covers how to choose *what* data to expose from Salesforce to LLMs and how to do that safely. It addresses scoping strategy (which objects, fields, and records to include), security considerations (how to reflect Salesforce access controls in LLM data extraction), data masking and redaction strategies, and governance and lifecycle management.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce security model (FLS, OLS, sharing rules)
+- Knowledge of data governance and compliance requirements
+- Understanding of LLM/RAG systems and data pipelines
+- Familiarity with PII/PHI handling and data masking
+
+**Recommended Reading**:
+- [Salesforce to LLM Data Pipelines](../integrations/salesforce-to-llm-data-pipelines.md) - Data pipeline patterns
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.md) - Compliance patterns
+- [Permission Set Architecture](permission-set-architecture.md) - Access control patterns
+- [Sharing Fundamentals](sharing-fundamentals.md) - Security and sharing model
+
 ## Data Scoping Principles
 
 ### Criteria for Including/Excluding Data

@@ -21,6 +21,18 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 - [Apex Patterns](apex-patterns.md) - Apex development patterns
 - [Integration Patterns](../integrations/integration-platform-patterns.md) - Integration configuration
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Apex programming fundamentals
+- Knowledge of Salesforce configuration management
+- Understanding of deployment and packaging concepts
+- Familiarity with custom objects and fields
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Apex development patterns
+- [Deployment Patterns](../project-methods/deployment-patterns.md) - Deployment strategies
+
 ## Consensus Best Practices
 
 - **Use Custom Metadata for new development**: Custom Metadata is the modern approach

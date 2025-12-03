@@ -15,6 +15,20 @@ last_reviewed: "2025-01-XX"
 
 Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues. These methods focus on finding root causes rather than symptoms, using SOQL queries, history objects, and error analysis.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of SOQL query syntax
+- Knowledge of Salesforce data model and relationships
+- Understanding of integration patterns (ETL, API, Events)
+- Familiarity with history objects and field tracking
+
+**Recommended Reading**:
+- [SOQL Query Patterns](../development/soql-query-patterns.md) - Query patterns for debugging
+- [Data Reconciliation](data-reconciliation.md) - Data validation patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+
 ## SOQL Debugging Patterns
 
 ### History Object Queries

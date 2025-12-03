@@ -17,6 +17,20 @@ last_reviewed: "2025-01-XX"
 
 This topic covers Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management best practices. These patterns are especially relevant for integration-heavy systems with large data volumes, where proper limit management becomes critical for system performance and scalability.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce governor limits
+- Knowledge of SOQL query syntax and optimization
+- Understanding of Apex programming fundamentals
+- Familiarity with DML operations and bulkification
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Apex class structure and bulkification patterns
+- [SOQL Query Patterns](soql-query-patterns.md) - Query optimization and selectivity
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Async processing for large operations
+- [Order of Execution](order-of-execution.md) - Transaction execution order
+
 ## Consensus Best Practices
 
 - **Always bulkify operations**: Process collections of records, never single records in loops. This reduces the number of DML operations and SOQL queries, staying within governor limits and improving performance.
