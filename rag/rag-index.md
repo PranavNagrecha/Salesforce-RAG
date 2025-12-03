@@ -369,7 +369,7 @@ Complete, working code examples organized by category. All examples are copy-pas
 
 <a href="{{ '/rag/code-examples/code-examples-index.html' | relative_url }}">View code-examples-index.md</a>
 
-**Summary**: This directory contains standalone code examples that complement the pattern documentation in `rag/development/`, `rag/integrations/`, etc. Each example includes:
+**Summary**: Complete, working code examples organized by category. All examples are copy-paste ready and follow Salesforce best practices.
 
 ### component-examples.md
 

@@ -12,6 +12,11 @@ highlighter: rouge
 kramdown:
   auto_ids: true
   header_offset: 0
+  hard_wrap: false
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block: rouge
 # Using custom layout instead of theme to avoid theme navigation clutter
 plugins:
   - jekyll-feed

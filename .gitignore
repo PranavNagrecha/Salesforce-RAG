@@ -63,3 +63,11 @@ ENV/
 *.tmp
 *.bak
 *.swp
+
+# Link validation reports (generated files)
+website/docs/link-discovery.json
+website/docs/link-validation.json
+website/docs/link-validation-report.md
+website/docs/link-validation-report.json
+website/docs/link-validation-report.csv
+website/docs/link-fix-backups/
