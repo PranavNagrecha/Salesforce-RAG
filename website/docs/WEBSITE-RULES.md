@@ -132,8 +132,9 @@ git push
 ### In rag-index.md
 
 1. **Bullet List Items**: These are the clickable links
-   - Format: `- [filename.md](path/file.html) — Description`
+   - Format: `- <a href="{{ '/rag/path/file.html' | relative_url }}">filename.md</a> — Description`
    - These MUST be clickable and work
+   - Generated automatically by `sync-homepage.py`
 2. **Subsection Headers**: These are metadata (not links)
    - Format: `### filename.md`
    - These provide additional information about the file
@@ -146,9 +147,20 @@ git push
    - ❌ Wrong: `[text](adoption/org-health-checks.html)` (markdown link - won't work with baseurl)
    - ❌ Wrong: `[text](/rag/adoption/org-health-checks.html)` (markdown absolute - won't work)
    - **Solution**: All internal links must use HTML format with Jekyll's `relative_url` filter
-2. **HTML Extension**: Always use `.html` extension (not `.md`)
-3. **Baseurl Handling**: Jekyll automatically resolves relative paths with baseurl correctly
-4. **Anchor Links**: Use lowercase with hyphens for section anchors (e.g., `#adoption`, `#architecture-patterns`)
+2. **Correct Path Resolution**: When converting relative paths to absolute paths, ensure correct resolution:
+   - ✅ Correct: `user-readiness.html` (same dir) → `/rag/adoption/user-readiness.html`
+   - ✅ Correct: `../development/governor-limits-and-optimization.html` → `/rag/development/governor-limits-and-optimization.html`
+   - ✅ Correct: `../observability/performance-tuning.html` → `/rag/observability/performance-tuning.html`
+   - ❌ Wrong: `/rag/adoption/adoption/user-readiness.html` (duplicate directory)
+   - ❌ Wrong: `/rag/adoption/observability/performance-tuning.html` (wrong - should be `/rag/observability/`)
+   - ❌ Wrong: `/rag/adoption/development/governor-limits-and-optimization.html` (wrong - should be `/rag/development/`)
+   - **Path Resolution Rules**:
+     - Same directory: `file.html` → `/rag/{current_dir}/file.html`
+     - Parent directory: `../other-dir/file.html` → `/rag/other-dir/file.html` (go up from current_dir first)
+     - Subdirectory: `subdir/file.html` → `/rag/{current_dir}/subdir/file.html`
+3. **HTML Extension**: Always use `.html` extension (not `.md`)
+4. **Baseurl Handling**: Jekyll's `relative_url` filter automatically applies baseurl to absolute paths starting with `/`
+5. **Anchor Links**: Use lowercase with hyphens for section anchors (e.g., `#adoption`, `#architecture-patterns`)
    - Section "Architecture Patterns" → anchor `#architecture-patterns`
    - Section "API Reference" → anchor `#api-reference`
    - Section "Code Examples" → anchor `#code-examples`
@@ -193,8 +205,12 @@ git push
    - Run Jekyll build
    - Deploy to GitHub Pages
 3. **Link Resolution**: 
-   - Absolute paths starting with `/` are automatically resolved with baseurl
-   - Example: `/rag/adoption/org-health-checks.html` → `/Salesforce-RAG/rag/adoption/org-health-checks.html`
+   - Absolute paths starting with `/` are automatically resolved with baseurl via `relative_url` filter
+   - Example: `{{ '/rag/adoption/org-health-checks.html' | relative_url }}` → `/Salesforce-RAG/rag/adoption/org-health-checks.html`
+   - **Path Validation**: Use `fix-incorrect-paths.py` to find and fix incorrect paths:
+     - Duplicate directories: `/rag/adoption/adoption/` → `/rag/adoption/`
+     - Wrong parent paths: `/rag/adoption/observability/` → `/rag/observability/`
+     - Wrong parent paths: `/rag/adoption/development/` → `/rag/development/`
 
 ### Testing Before Deploy
 
@@ -203,6 +219,43 @@ git push
 3. **Description Match**: Verify homepage matches index (script does this)
 4. **All Categories**: Verify all domains have homepage cards (script does this)
 5. **Mobile Check**: Verify mobile responsiveness
+
+## Link Path Resolution Rules
+
+### Common Path Errors to Avoid
+
+1. **Duplicate Directories**: 
+   - ❌ Wrong: `/rag/adoption/adoption/user-readiness.html`
+   - ✅ Correct: `/rag/adoption/user-readiness.html`
+   - **Cause**: Script incorrectly resolved same-directory links
+
+2. **Wrong Parent Directory Resolution**:
+   - ❌ Wrong: `/rag/adoption/observability/performance-tuning.html` (from `adoption/` folder)
+   - ✅ Correct: `/rag/observability/performance-tuning.html`
+   - **Cause**: Script didn't properly go up directories with `../`
+
+3. **Incorrect Relative Path Handling**:
+   - From `rag/adoption/org-health-checks.md`:
+     - `user-readiness.html` → `/rag/adoption/user-readiness.html` ✅
+     - `../development/governor-limits-and-optimization.html` → `/rag/development/governor-limits-and-optimization.html` ✅
+     - `../observability/performance-tuning.html` → `/rag/observability/performance-tuning.html` ✅
+
+### Fixing Incorrect Paths
+
+1. **Run fix-incorrect-paths.py**: Automatically fixes common path errors
+   ```bash
+   python website/scripts/fix-incorrect-paths.py
+   ```
+
+2. **Manual Verification**: Check for patterns:
+   - `/rag/([^/]+)/\1/` - duplicate directories
+   - `/rag/adoption/observability/` - wrong parent path
+   - `/rag/adoption/development/` - wrong parent path
+
+3. **Path Resolution Logic**:
+   - Same directory: `file.html` → `/rag/{current_dir}/file.html`
+   - Parent directory (`../`): Go up from current_dir, then append remaining path
+   - Subdirectory: Append to current_dir path
 
 ## Maintenance Rules
 
