@@ -50,10 +50,6 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
       
-      - name: Setup Jekyll
-        run: |
-          bundle install
-      
       - name: Prepare Jekyll directories
         run: |
           # Copy website files to root (Jekyll requires them in root for GitHub Pages)
@@ -66,6 +62,10 @@ jobs:
           if [ -d "website/root" ]; then
             cp website/root/* .
           fi
+      
+      - name: Setup Jekyll
+        run: |
+          bundle install
       
       - name: Build site
         run: |
