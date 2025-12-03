@@ -26,10 +26,10 @@ This topic covers Salesforce governor limits, performance optimization strategie
 - Familiarity with DML operations and bulkification
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and bulkification patterns
-- <a href="{{ '/rag/development/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization and selectivity
-- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async processing for large operations
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Transaction execution order
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and bulkification patterns
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization and selectivity
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async processing for large operations
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Transaction execution order
 
 ## Consensus Best Practices
 
@@ -116,7 +116,7 @@ This topic covers Salesforce governor limits, performance optimization strategie
 
 **Example scenario**: A nightly sync of 500,000 records from an external system uses Batch Apex to process records in batches of 200. Each batch executes in its own context with fresh governor limits, allowing the entire sync to complete successfully.
 
-**Related**: <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Complete guide to Batch, Queueable, and Scheduled Apex patterns
+**Related**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Complete guide to Batch, Queueable, and Scheduled Apex patterns
 - <a href="{{ '/rag/development/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - LDV handling, caching strategies, and advanced performance optimization
 
 ### Pattern 5: Heap Size Optimization
@@ -309,10 +309,10 @@ These tradeoffs require human judgment based on specific use cases, data volumes
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization and selectivity
-- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Batch, Queueable, and Scheduled Apex for large operations
-- <a href="{{ '/rag/development/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk API and data load optimization
-- <a href="{{ '/rag/development/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Concurrency and resource management
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling for limit exceptions
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Bulkification and optimization patterns
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization and selectivity
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Batch, Queueable, and Scheduled Apex for large operations
+- <a href="{{ '/rag/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk API and data load optimization
+- <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Concurrency and resource management
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling for limit exceptions
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Bulkification and optimization patterns
 

@@ -528,5 +528,5 @@ Avoid this model when:
 
 - <a href="{{ '/rag/data-modeling/identity-sso/multi-tenant-identity-architecture.html' | relative_url }}">Multi-Tenant Identity Architecture</a> - Identity provider patterns
 - <a href="{{ '/rag/data-modeling/security/sharing-sets-and-portals.html' | relative_url }}">Sharing Sets and Portals</a> - Experience Cloud sharing patterns
-- <a href="{{ '/rag/data-modeling/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
 

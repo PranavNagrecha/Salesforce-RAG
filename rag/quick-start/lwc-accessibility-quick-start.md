@@ -612,5 +612,5 @@ export default class AccessibleModal extends LightningElement {
 - <a href="{{ '/rag/quick-start/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
 - <a href="{{ '/rag/quick-start/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 - <a href="{{ '/rag/quick-start/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
-- <a href="{{ '/rag/quick-start/quick-start/lwc-quick-start.html' | relative_url }}">LWC Quick Start</a> - General LWC quick start
+- <a href="{{ '/rag/quick-start/lwc-quick-start.html' | relative_url }}">LWC Quick Start</a> - General LWC quick start
 

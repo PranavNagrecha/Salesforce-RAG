@@ -29,7 +29,7 @@ This guide provides comprehensive best practices for implementing HTTP callouts 
 - <a href="{{ '/rag/integrations/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 - <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
 - <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
 
 ## Callout Limitations
@@ -872,7 +872,7 @@ Remember that callouts are often the most fragile part of your Salesforce integr
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
 
 **Related Domains**:
@@ -884,7 +884,7 @@ Remember that callouts are often the most fragile part of your Salesforce integr
 - <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
 - <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
 - <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/integrations/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
 - <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 

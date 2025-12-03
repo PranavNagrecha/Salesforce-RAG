@@ -24,9 +24,9 @@ Integration platforms serve as middleware between Salesforce and external system
 - Familiarity with authentication mechanisms (OAuth, API keys)
 
 **Recommended Reading**:
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/integrations/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Authentication and licensing
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Authentication and licensing
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
 - <a href="{{ '/rag/integrations/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - Data mapping patterns
 
 ## MuleSoft Integration Platform
@@ -380,14 +380,14 @@ Both platforms should support:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
-- <a href="{{ '/rag/integrations/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Authentication and licensing for integrations
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns and error handling
-- <a href="{{ '/rag/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Real-time change notification patterns
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
+- <a href="{{ '/rag/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Authentication and licensing for integrations
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns and error handling
+- <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Real-time change notification patterns
 
 **Related Domains**:
 - <a href="{{ '/rag/integrations/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - Data mapping and stable record identification
-- <a href="{{ '/rag/integrations/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
+- <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
 - <a href="{{ '/rag/integrations/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Troubleshooting integration failures
 - <a href="{{ '/rag/integrations/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Reconciling data between systems
 

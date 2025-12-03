@@ -24,9 +24,9 @@ Flow is used as the primary automation engine across projects, with Apex reserve
 - Familiarity with Salesforce security model (profiles, permission sets)
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Understanding when to use Apex vs Flow
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
-- <a href="{{ '/rag/development/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Foundation Salesforce administration knowledge
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Understanding when to use Apex vs Flow
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Foundation Salesforce administration knowledge
 
 ## Flow Type Selection
 
@@ -447,10 +447,10 @@ The "Flow User" user permission is being deprecated in Winter '26 (2025). This a
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Understanding when to use Apex vs Flow
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute in the save sequence
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns for Flow integration
-- <a href="{{ '/rag/development/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Foundation Salesforce administration knowledge
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Understanding when to use Apex vs Flow
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute in the save sequence
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns for Flow integration
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Foundation Salesforce administration knowledge
 
 **Related Domains**:
 - <a href="{{ '/rag/development/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing Flow automation

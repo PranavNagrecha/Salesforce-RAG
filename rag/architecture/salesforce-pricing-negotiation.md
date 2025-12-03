@@ -398,10 +398,10 @@ When negotiating Salesforce pricing, always ask:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection and pricing
-- <a href="{{ '/rag/architecture/architecture/user-license-selection.html' | relative_url }}">User License Selection</a> - License type selection and cost optimization
-- <a href="{{ '/rag/architecture/architecture/salesforce-product-evaluation.html' | relative_url }}">Salesforce Product Evaluation</a> - Product selection and pricing
+- <a href="{{ '/rag/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection and pricing
+- <a href="{{ '/rag/architecture/user-license-selection.html' | relative_url }}">User License Selection</a> - License type selection and cost optimization
+- <a href="{{ '/rag/architecture/salesforce-product-evaluation.html' | relative_url }}">Salesforce Product Evaluation</a> - Product selection and pricing
 
 **Related Domains**:
-- <a href="{{ '/rag/architecture/architecture/org-strategy.html' | relative_url }}">Org Strategy</a> - Multi-org vs single-org cost implications
+- <a href="{{ '/rag/architecture/org-strategy.html' | relative_url }}">Org Strategy</a> - Multi-org vs single-org cost implications
 

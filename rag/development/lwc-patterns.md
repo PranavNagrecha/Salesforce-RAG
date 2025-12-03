@@ -27,8 +27,8 @@ Lightning Web Components (LWC) are modern, standards-based web components built 
 - Basic understanding of Apex (for calling server-side methods)
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex service layer patterns for LWC integration
-- <a href="{{ '/rag/development/development/lightning-app-builder.html' | relative_url }}">Lightning App Builder</a> - Understanding when to use declarative vs custom components
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex service layer patterns for LWC integration
+- <a href="{{ '/rag/development/lightning-app-builder.html' | relative_url }}">Lightning App Builder</a> - Understanding when to use declarative vs custom components
 - <a href="{{ '/rag/development/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility best practices
 
 ## LWC Fundamentals
@@ -359,7 +359,7 @@ export default class DynamicRecordEditForm extends LightningElement {
 - **Maintainable**: Field changes don't require component updates
 - **Flexible**: Supports conditional field display based on various criteria
 
-**Related Patterns**: <a href="{{ '/rag/development/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Metadata Patterns</a>, [Config-Driven UI](#config-driven-ui)
+**Related Patterns**: <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Metadata Patterns</a>, [Config-Driven UI](#config-driven-ui)
 
 ### Performance-Aware Patterns
 
@@ -664,10 +664,10 @@ Accessibility ensures that all users, including those using assistive technologi
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex service layer patterns for LWC integration
-- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Understanding when to use declarative vs custom components
-- <a href="{{ '/rag/development/development/lightning-app-builder.html' | relative_url }}">Lightning App Builder</a> - Declarative component configuration
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when LWCs execute
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex service layer patterns for LWC integration
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Understanding when to use declarative vs custom components
+- <a href="{{ '/rag/development/lightning-app-builder.html' | relative_url }}">Lightning App Builder</a> - Declarative component configuration
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when LWCs execute
 
 **Related Domains**:
 - <a href="{{ '/rag/development/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility testing patterns

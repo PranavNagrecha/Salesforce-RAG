@@ -432,7 +432,7 @@ Think of large data loads as four-phase process: Plan thoroughly, test in sandbo
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management for large operations
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management for large operations
 
 **Related Domains**:
 - <a href="{{ '/rag/development/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration strategies and patterns

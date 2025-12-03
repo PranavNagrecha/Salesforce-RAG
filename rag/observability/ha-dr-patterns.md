@@ -17,7 +17,7 @@ last_reviewed: "2025-01-XX"
 This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for Salesforce, including backup/restore approaches, failover patterns for integrations, and business continuity drills. These patterns are essential for ensuring system resilience, data protection, and business continuity.
 
 **Related Patterns**:
-- <a href="{{ '/rag/observability/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring and alerting
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring and alerting
 - <a href="{{ '/rag/observability/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and rollback patterns
 - <a href="{{ '/rag/observability/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection patterns
 
@@ -306,7 +306,7 @@ This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for
 
 ## Related Patterns
 
-- <a href="{{ '/rag/observability/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring
 - <a href="{{ '/rag/observability/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and rollback
 - <a href="{{ '/rag/observability/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection
 - <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

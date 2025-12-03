@@ -745,7 +745,7 @@ Avoid this model when:
 
 ## Related Patterns
 
-- <a href="{{ '/rag/data-modeling/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for lead integration
+- <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for lead integration
 - <a href="{{ '/rag/data-modeling/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality and Stewardship</a> - Duplicate prevention patterns
-- <a href="{{ '/rag/data-modeling/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Object configuration patterns
+- <a href="{{ '/rag/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Object configuration patterns
 

@@ -704,7 +704,7 @@ A field has proper FLS permissions and object access, but the component still fa
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/troubleshooting/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
+- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 
 **Related Domains**:
 - <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
@@ -716,5 +716,5 @@ A field has proper FLS permissions and object access, but the component still fa
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 - <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
-- <a href="{{ '/rag/troubleshooting/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
+- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 

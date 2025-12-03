@@ -165,7 +165,7 @@ Comprehensive accessibility guidelines for Lightning Web Components, based on WC
 
 **Related Patterns**:
 - <a href="{{ '/rag/mcp-knowledge/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Accessibility considerations
-- <a href="{{ '/rag/mcp-knowledge/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS accessibility
+- <a href="{{ '/rag/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS accessibility
 
 **How This Complements Existing RAG**:
 - Provides comprehensive WCAG compliance guidance

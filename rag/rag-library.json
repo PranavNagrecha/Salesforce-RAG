@@ -3,12 +3,12 @@
     "title": "Salesforce RAG Knowledge Library",
     "description": "A comprehensive knowledge library containing implementation patterns, best practices, and architectural guidance.",
     "version": "1.0",
-    "last_updated": "2025-12-02T22:57:25.689732"
+    "last_updated": "2025-12-02T22:58:34.673238"
   },
   "statistics": {
     "total_files": 139,
     "total_folders": 20,
-    "last_updated": "2025-12-02T22:57:25.689732"
+    "last_updated": "2025-12-02T22:58:34.673238"
   },
   "folder_statistics": {
     "code-examples": 41,
@@ -40,8 +40,8 @@
       "title": "Org Health Checks for Salesforce",
       "description": "This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks. These patterns are essential for maintaining org health, identifying optimization opportunities, and ensuring long-term system sustainability.",
       "url": "adoption/org-health-checks.html",
-      "modified": "2025-12-02T22:53:47.762511",
-      "size": 15465
+      "modified": "2025-12-02T22:57:37.433231",
+      "size": 15945
     },
     {
       "path": "adoption/user-readiness.md",
@@ -50,8 +50,8 @@
       "title": "User Readiness for Salesforce",
       "description": "This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption. These patterns are essential for ensuring successful user adoption, maximizing system value, and driving organizational change.",
       "url": "adoption/user-readiness.html",
-      "modified": "2025-12-02T22:53:47.762632",
-      "size": 13499
+      "modified": "2025-12-02T22:57:37.433471",
+      "size": 13835
     },
     {
       "path": "api-reference/apex-api-reference.md",
@@ -60,8 +60,8 @@
       "title": "Apex API Reference",
       "description": "This reference provides method signatures, parameters, return types, and usage examples for common Apex patterns used in Salesforce implementations.",
       "url": "api-reference/apex-api-reference.html",
-      "modified": "2025-12-02T22:53:47.761984",
-      "size": 10171
+      "modified": "2025-12-02T22:57:37.432195",
+      "size": 10489
     },
     {
       "path": "api-reference/lds-api-reference.md",
@@ -70,8 +70,8 @@
       "title": "Lightning Data Service (LDS) API Reference",
       "description": "This reference provides API signatures, parameters, and usage examples for Lightning Data Service adapters used in Lightning Web Components.",
       "url": "api-reference/lds-api-reference.html",
-      "modified": "2025-12-02T22:53:47.762225",
-      "size": 10014
+      "modified": "2025-12-02T22:57:37.432562",
+      "size": 10279
     },
     {
       "path": "api-reference/lwc-api-reference.md",
@@ -80,8 +80,8 @@
       "title": "LWC API Reference",
       "description": "This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns.",
       "url": "api-reference/lwc-api-reference.html",
-      "modified": "2025-12-02T22:53:47.761871",
-      "size": 12068
+      "modified": "2025-12-02T22:57:37.431911",
+      "size": 12810
     },
     {
       "path": "api-reference/platform-events-api.md",
@@ -90,8 +90,8 @@
       "title": "Platform Events API Reference",
       "description": "This reference provides API signatures, parameters, and usage examples for Platform Events in Salesforce.",
       "url": "api-reference/platform-events-api.html",
-      "modified": "2025-12-02T22:53:47.762095",
-      "size": 6404
+      "modified": "2025-12-02T22:57:37.432389",
+      "size": 6616
     },
     {
       "path": "api-reference/soql-reference.md",
@@ -100,8 +100,8 @@
       "title": "SOQL Reference",
       "description": "This reference provides SOQL syntax, functions, and common query patterns for Salesforce data access.",
       "url": "api-reference/soql-reference.html",
-      "modified": "2025-12-02T22:53:47.762344",
-      "size": 7645
+      "modified": "2025-12-02T22:57:37.432847",
+      "size": 7857
     },
     {
       "path": "architecture/architect-role.md",
@@ -110,8 +110,8 @@
       "title": "Salesforce Architect Role and Responsibilities",
       "description": "---\ntitle: \"Salesforce Architect Role and Responsibilities\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"An Introduction to Salesforce Archi",
       "url": "architecture/architect-role.html",
-      "modified": "2025-12-02T22:53:47.766963",
-      "size": 18488
+      "modified": "2025-12-02T22:57:37.441010",
+      "size": 18748
     },
     {
       "path": "architecture/diagramming-patterns.md",
@@ -120,8 +120,8 @@
       "title": "Salesforce Architecture Diagramming",
       "description": "---\ntitle: \"Salesforce Architecture Diagramming\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"The Basics of Diagramming\"\nlevel: \"Intermediat",
       "url": "architecture/diagramming-patterns.html",
-      "modified": "2025-12-02T22:53:47.766220",
-      "size": 16897
+      "modified": "2025-12-02T22:57:37.439900",
+      "size": 17105
     },
     {
       "path": "architecture/event-driven-architecture.md",
@@ -130,8 +130,8 @@
       "title": "Event-Driven Architecture",
       "description": "Event-driven integration patterns decouple Salesforce from external systems by publishing business events that can be consumed asynchronously by multiple subscribers. This pattern enables scalable, resilient integrations that can handle high-volume scenarios and support multiple downstream systems.",
       "url": "architecture/event-driven-architecture.html",
-      "modified": "2025-12-02T22:53:47.766821",
-      "size": 10407
+      "modified": "2025-12-02T22:57:37.440826",
+      "size": 10719
     },
     {
       "path": "architecture/governance-patterns.md",
@@ -140,8 +140,8 @@
       "title": "Salesforce Org Governance",
       "description": "---\ntitle: \"Salesforce Org Governance\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"Salesforce Org Governance\"\nlevel: \"Advanced\"\ntags:\n  - s",
       "url": "architecture/governance-patterns.html",
-      "modified": "2025-12-02T22:53:47.766412",
-      "size": 17131
+      "modified": "2025-12-02T22:57:37.440147",
+      "size": 17391
     },
     {
       "path": "architecture/mobile-strategy.md",
@@ -150,8 +150,8 @@
       "title": "Choosing a Mobile Strategy for Salesforce",
       "description": "---\ntitle: \"Choosing a Mobile Strategy for Salesforce\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"Choosing a Mobile Strategy for your Sale",
       "url": "architecture/mobile-strategy.html",
-      "modified": "2025-12-02T22:53:47.766140",
-      "size": 17290
+      "modified": "2025-12-02T22:57:37.439774",
+      "size": 17498
     },
     {
       "path": "architecture/org-edition-selection.md",
@@ -160,8 +160,8 @@
       "title": "Salesforce Org Edition Selection",
       "description": "---\ntitle: \"Salesforce Org Edition Selection\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 1: How to evaluate Salesforce for your business\"\nsection: \"Understanding Salesforce, its products, and its li",
       "url": "architecture/org-edition-selection.html",
-      "modified": "2025-12-02T22:53:47.765723",
-      "size": 20632
+      "modified": "2025-12-02T22:57:37.438974",
+      "size": 20840
     },
     {
       "path": "architecture/org-strategy.md",
@@ -170,8 +170,8 @@
       "title": "Determining Salesforce Org Strategy",
       "description": "---\ntitle: \"Determining Salesforce Org Strategy\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"Determining your Salesforce Org Strategy\"\nleve",
       "url": "architecture/org-strategy.html",
-      "modified": "2025-12-02T22:53:47.766652",
-      "size": 17719
+      "modified": "2025-12-02T22:57:37.440509",
+      "size": 17979
     },
     {
       "path": "architecture/portal-architecture.md",
@@ -180,8 +180,8 @@
       "title": "Portal Architecture Patterns",
       "description": "Experience Cloud portal architecture patterns for supporting multiple user types (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns. These patterns enable single-org multi-tenant portal implementations.",
       "url": "architecture/portal-architecture.html",
-      "modified": "2025-12-02T22:53:47.766023",
-      "size": 16067
+      "modified": "2025-12-02T22:57:37.439612",
+      "size": 16327
     },
     {
       "path": "architecture/project-estimation.md",
@@ -190,8 +190,8 @@
       "title": "Accurately Estimating Salesforce Project Work",
       "description": "---\ntitle: \"Accurately Estimating Salesforce Project Work\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"How to Accurately Estimate Project W",
       "url": "architecture/project-estimation.html",
-      "modified": "2025-12-02T22:53:47.766331",
-      "size": 19650
+      "modified": "2025-12-02T22:57:37.440032",
+      "size": 19858
     },
     {
       "path": "architecture/salesforce-pricing-negotiation.md",
@@ -200,8 +200,8 @@
       "title": "Salesforce Pricing and Contract Negotiation",
       "description": "---\ntitle: \"Salesforce Pricing and Contract Negotiation\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 1: How to evaluate Salesforce for your business\"\nsection: \"Understanding Salesforce, its products,",
       "url": "architecture/salesforce-pricing-negotiation.html",
-      "modified": "2025-12-02T22:53:47.766494",
-      "size": 20652
+      "modified": "2025-12-02T22:57:37.440267",
+      "size": 20860
     },
     {
       "path": "architecture/salesforce-product-evaluation.md",
@@ -210,8 +210,8 @@
       "title": "Salesforce Product Evaluation and Selection",
       "description": "---\ntitle: \"Salesforce Product Evaluation and Selection\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 1: How to evaluate Salesforce for your business\"\nsection: \"Understanding Salesforce, its products,",
       "url": "architecture/salesforce-product-evaluation.html",
-      "modified": "2025-12-02T22:53:47.765821",
-      "size": 23491
+      "modified": "2025-12-02T22:57:37.439176",
+      "size": 23751
     },
     {
       "path": "architecture/stakeholder-communication.md",
@@ -220,8 +220,8 @@
       "title": "Stakeholder Communication for Salesforce Architects",
       "description": "---\ntitle: \"Stakeholder Communication for Salesforce Architects\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"The Basics of Communication\"\nl",
       "url": "architecture/stakeholder-communication.html",
-      "modified": "2025-12-02T22:53:47.766576",
-      "size": 16999
+      "modified": "2025-12-02T22:57:37.440384",
+      "size": 17207
     },
     {
       "path": "architecture/team-leadership.md",
@@ -230,8 +230,8 @@
       "title": "Building, Leading, and Training Salesforce Development Teams",
       "description": "---\ntitle: \"Building, Leading, and Training Salesforce Development Teams\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"How to Effectively Bu",
       "url": "architecture/team-leadership.html",
-      "modified": "2025-12-02T22:53:47.765905",
-      "size": 17750
+      "modified": "2025-12-02T22:57:37.439363",
+      "size": 18010
     },
     {
       "path": "architecture/user-license-selection.md",
@@ -240,8 +240,8 @@
       "title": "Salesforce User License Selection",
       "description": "---\ntitle: \"Salesforce User License Selection\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 1: How to evaluate Salesforce for your business\"\nsection: \"Understanding Salesforce, its products, and its l",
       "url": "architecture/user-license-selection.html",
-      "modified": "2025-12-02T22:53:47.766748",
-      "size": 24736
+      "modified": "2025-12-02T22:57:37.440647",
+      "size": 24944
     },
     {
       "path": "best-practices/complex-reporting.md",
@@ -300,8 +300,8 @@
       "title": "Batch Apex Code Examples",
       "description": "Batch Apex is used for processing large data volumes (thousands or millions of records) in batches of 200. Each batch executes in a separate transaction context with fresh governor limits.",
       "url": "code-examples/apex/batch-examples.html",
-      "modified": "2025-12-02T22:53:47.755516",
-      "size": 22583
+      "modified": "2025-12-02T22:57:37.419312",
+      "size": 22815
     },
     {
       "path": "code-examples/apex/domain-layer-examples.md",
@@ -310,8 +310,8 @@
       "title": "Domain Layer Code Examples",
       "description": "The Domain Layer encapsulates object-specific business logic and validation. It can be called from triggers OR from Service layer, and should NOT contain SOQL queries or external callouts.",
       "url": "code-examples/apex/domain-layer-examples.html",
-      "modified": "2025-12-02T22:53:47.755844",
-      "size": 10356
+      "modified": "2025-12-02T22:57:37.419999",
+      "size": 10588
     },
     {
       "path": "code-examples/apex/integration-examples.md",
@@ -320,8 +320,8 @@
       "title": "Integration Layer Code Examples",
       "description": "The Integration Layer handles external API callouts, data transformation, authentication, and error handling. It should NOT contain business logic or SOQL queries.",
       "url": "code-examples/apex/integration-examples.html",
-      "modified": "2025-12-02T22:53:47.756057",
-      "size": 12073
+      "modified": "2025-12-02T22:57:37.420401",
+      "size": 12189
     },
     {
       "path": "code-examples/apex/queueable-examples.md",
@@ -330,8 +330,8 @@
       "title": "Queueable Apex Code Examples",
       "description": "Queueable Apex is used for lightweight async processing, chaining jobs, and performing callouts after DML operations. It provides better error handling than @future methods and can process up to 50,000 records.",
       "url": "code-examples/apex/queueable-examples.html",
-      "modified": "2025-12-02T22:53:47.756194",
-      "size": 19642
+      "modified": "2025-12-02T22:57:37.420643",
+      "size": 19874
     },
     {
       "path": "code-examples/apex/scheduled-examples.md",
@@ -340,8 +340,8 @@
       "title": "Scheduled Apex Code Examples",
       "description": "Scheduled Apex provides time-based automation for periodic tasks. It's used for maintenance, reporting, and scheduled data processing using cron expressions.",
       "url": "code-examples/apex/scheduled-examples.html",
-      "modified": "2025-12-02T22:53:47.755354",
-      "size": 15716
+      "modified": "2025-12-02T22:57:37.419087",
+      "size": 15948
     },
     {
       "path": "code-examples/apex/selector-layer-examples.md",
@@ -350,8 +350,8 @@
       "title": "Selector Layer Code Examples",
       "description": "The Selector Layer provides centralized SOQL queries and data access abstraction. It enforces security, optimizes queries, and provides reusable query methods.",
       "url": "code-examples/apex/selector-layer-examples.html",
-      "modified": "2025-12-02T22:53:47.755712",
-      "size": 12330
+      "modified": "2025-12-02T22:57:37.419779",
+      "size": 12562
     },
     {
       "path": "code-examples/apex/service-layer-examples.md",
@@ -360,8 +360,8 @@
       "title": "Service Layer Code Examples",
       "description": "The Service Layer coordinates between domain, selector, and integration layers. It orchestrates complex workflows and exposes clean method signatures for Flows and LWCs.",
       "url": "code-examples/apex/service-layer-examples.html",
-      "modified": "2025-12-02T22:53:47.755970",
-      "size": 18867
+      "modified": "2025-12-02T22:57:37.420239",
+      "size": 18925
     },
     {
       "path": "code-examples/apex/trigger-examples.md",
@@ -370,8 +370,8 @@
       "title": "Trigger Handler Code Examples",
       "description": "Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation. Triggers should be thin and delegate to Domain or Service layers.",
       "url": "code-examples/apex/trigger-examples.html",
-      "modified": "2025-12-02T22:53:47.755599",
-      "size": 9760
+      "modified": "2025-12-02T22:57:37.419511",
+      "size": 10108
     },
     {
       "path": "code-examples/code-examples-index.md",
@@ -380,8 +380,8 @@
       "title": "Code Examples Index",
       "description": "This directory contains standalone code examples that complement the pattern documentation in `rag/development/`, `rag/integrations/`, etc. Each example includes:",
       "url": "code-examples/code-examples-index.html",
-      "modified": "2025-12-02T22:53:47.754502",
-      "size": 5735
+      "modified": "2025-12-02T22:57:37.417457",
+      "size": 7802
     },
     {
       "path": "code-examples/flow/record-triggered-examples.md",
@@ -390,8 +390,8 @@
       "title": "Record-Triggered Flow Code Examples",
       "description": "Record-Triggered Flows run automatically when records are created or updated. They can run before save (to modify field values) or after save (to create related records, send notifications, etc.). This document provides practical examples of common Record-Triggered Flow patterns.",
       "url": "code-examples/flow/record-triggered-examples.html",
-      "modified": "2025-12-02T22:53:47.758608",
-      "size": 10869
+      "modified": "2025-12-02T22:57:37.426015",
+      "size": 11275
     },
     {
       "path": "code-examples/flow/screen-flow-examples.md",
@@ -400,8 +400,8 @@
       "title": "Screen Flow Code Examples",
       "description": "Screen Flows provide guided user interactions for multi-step processes. They are ideal for internal apps, portal UX, guided data capture, and step-by-step case/application handling. This document provides practical examples of common Screen Flow patterns.",
       "url": "code-examples/flow/screen-flow-examples.html",
-      "modified": "2025-12-02T22:53:47.758351",
-      "size": 12405
+      "modified": "2025-12-02T22:57:37.425422",
+      "size": 12753
     },
     {
       "path": "code-examples/flow/subflow-examples.md",
@@ -410,8 +410,8 @@
       "title": "Subflow Code Examples",
       "description": "Subflows are reusable flow components that can be called from other Flows or Apex. They enable code reuse, easier maintenance, and consistent business logic across multiple automation contexts. This document provides practical examples of common Subflow patterns.",
       "url": "code-examples/flow/subflow-examples.html",
-      "modified": "2025-12-02T22:53:47.758485",
-      "size": 13606
+      "modified": "2025-12-02T22:57:37.425647",
+      "size": 14012
     },
     {
       "path": "code-examples/integrations/bulk-api-examples.md",
@@ -420,8 +420,8 @@
       "title": "Bulk API Code Examples",
       "description": "Bulk API enables high-volume data operations in Salesforce. These examples demonstrate creating bulk jobs, uploading data, monitoring job status, and processing results for large-scale data operations.",
       "url": "code-examples/integrations/bulk-api-examples.html",
-      "modified": "2025-12-02T22:53:47.756604",
-      "size": 17523
+      "modified": "2025-12-02T22:57:37.421646",
+      "size": 18315
     },
     {
       "path": "code-examples/integrations/callout-examples.md",
@@ -430,8 +430,8 @@
       "title": "HTTP Callout Code Examples",
       "description": "HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs. These examples demonstrate Named Credentials, error handling, async patterns, circuit breakers, response optimization, and testing patterns.",
       "url": "code-examples/integrations/callout-examples.html",
-      "modified": "2025-12-02T22:53:47.756423",
-      "size": 19083
+      "modified": "2025-12-02T22:57:37.421124",
+      "size": 19941
     },
     {
       "path": "code-examples/integrations/cdc-examples.md",
@@ -440,8 +440,8 @@
       "title": "Change Data Capture (CDC) Code Examples",
       "description": "Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted.",
       "url": "code-examples/integrations/cdc-examples.html",
-      "modified": "2025-12-02T22:53:47.756696",
-      "size": 13668
+      "modified": "2025-12-02T22:57:37.421849",
+      "size": 13932
     },
     {
       "path": "code-examples/integrations/platform-events-examples.md",
@@ -450,8 +450,8 @@
       "title": "Platform Events Code Examples",
       "description": "Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems. These examples demonstrate publishing events from Apex and Flows, subscribing to events, handling event payloads, and integrating with external event buses.",
       "url": "code-examples/integrations/platform-events-examples.html",
-      "modified": "2025-12-02T22:53:47.756517",
-      "size": 17621
+      "modified": "2025-12-02T22:57:37.421346",
+      "size": 18545
     },
     {
       "path": "code-examples/integrations/rest-api-examples.md",
@@ -460,8 +460,8 @@
       "title": "REST API Code Examples",
       "description": "REST API integrations enable real-time, synchronous communication between Salesforce and external systems. These examples demonstrate common REST API patterns including outbound callouts, inbound REST services, authentication, error handling, and response processing.",
       "url": "code-examples/integrations/rest-api-examples.html",
-      "modified": "2025-12-02T22:53:47.756324",
-      "size": 19158
+      "modified": "2025-12-02T22:57:37.420902",
+      "size": 19950
     },
     {
       "path": "code-examples/lwc/accessibility-examples.md",
@@ -470,8 +470,8 @@
       "title": "LWC Accessibility Code Examples",
       "description": "Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components. These examples demonstrate practical implementation of accessibility patterns.",
       "url": "code-examples/lwc/accessibility-examples.html",
-      "modified": "2025-12-02T22:53:47.755096",
-      "size": 36542
+      "modified": "2025-12-02T22:57:37.418633",
+      "size": 36884
     },
     {
       "path": "code-examples/lwc/component-examples.md",
@@ -480,8 +480,8 @@
       "title": "Lightning Web Component Code Examples",
       "description": "Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce. These examples demonstrate common LWC patterns for data access, user interactions, and business logic.",
       "url": "code-examples/lwc/component-examples.html",
-      "modified": "2025-12-02T22:53:47.754825",
-      "size": 9178
+      "modified": "2025-12-02T22:57:37.418064",
+      "size": 9691
     },
     {
       "path": "code-examples/lwc/service-examples.md",
@@ -490,8 +490,8 @@
       "title": "LWC Service Layer Code Examples",
       "description": "LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic. Service classes help keep component JavaScript clean and maintainable.",
       "url": "code-examples/lwc/service-examples.html",
-      "modified": "2025-12-02T22:53:47.755188",
-      "size": 15876
+      "modified": "2025-12-02T22:57:37.418852",
+      "size": 16446
     },
     {
       "path": "code-examples/lwc/test-examples.md",
@@ -500,8 +500,8 @@
       "title": "LWC Jest Testing Code Examples",
       "description": "Jest is the testing framework for Lightning Web Components. These examples demonstrate how to write comprehensive tests for LWC components, including testing wire adapters, Apex calls, events, and user interactions.",
       "url": "code-examples/lwc/test-examples.html",
-      "modified": "2025-12-02T22:53:47.754951",
-      "size": 21309
+      "modified": "2025-12-02T22:57:37.418357",
+      "size": 22050
     },
     {
       "path": "code-examples/lwc/wire-examples.md",
@@ -510,8 +510,8 @@
       "title": "LWC Wire Service Code Examples",
       "description": "Wire services provide reactive data access in Lightning Web Components. The `@wire` decorator automatically manages data fetching, caching, and reactivity. This document demonstrates common wire service patterns for accessing Salesforce data.",
       "url": "code-examples/lwc/wire-examples.html",
-      "modified": "2025-12-02T22:53:47.754683",
-      "size": 13568
+      "modified": "2025-12-02T22:57:37.417808",
+      "size": 14252
     },
     {
       "path": "code-examples/templates/apex-batch-template.md",
@@ -530,8 +530,8 @@
       "title": "Domain Class Template",
       "description": "**Use Case**: Basic domain class with validation and business rules",
       "url": "code-examples/templates/apex-domain-template.html",
-      "modified": "2025-12-02T22:53:47.757907",
-      "size": 3421
+      "modified": "2025-12-02T22:57:37.424338",
+      "size": 3484
     },
     {
       "path": "code-examples/templates/apex-queueable-template.md",
@@ -560,8 +560,8 @@
       "title": "Selector Class Template",
       "description": "**Use Case**: Basic selector class with security enforcement",
       "url": "code-examples/templates/apex-selector-template.html",
-      "modified": "2025-12-02T22:53:47.758127",
-      "size": 2112
+      "modified": "2025-12-02T22:57:37.425050",
+      "size": 2238
     },
     {
       "path": "code-examples/templates/apex-service-template.md",
@@ -570,8 +570,8 @@
       "title": "Service Class Template",
       "description": "**Use Case**: Basic service class with error handling and logging",
       "url": "code-examples/templates/apex-service-template.html",
-      "modified": "2025-12-02T22:53:47.758010",
-      "size": 2869
+      "modified": "2025-12-02T22:57:37.424651",
+      "size": 2932
     },
     {
       "path": "code-examples/templates/apex-trigger-template.md",
@@ -580,8 +580,8 @@
       "title": "Trigger Handler Template",
       "description": "**Use Case**: Basic trigger handler with Domain layer delegation",
       "url": "code-examples/templates/apex-trigger-template.html",
-      "modified": "2025-12-02T22:53:47.757767",
-      "size": 2783
+      "modified": "2025-12-02T22:57:37.423951",
+      "size": 2972
     },
     {
       "path": "code-examples/templates/ci-cd-template.md",
@@ -600,8 +600,8 @@
       "title": "Accessible LWC Component Template",
       "description": "This template provides a complete, accessible LWC component structure with all accessibility best practices built in. Use this as a starting point for new components.",
       "url": "code-examples/templates/lwc-accessible-component-template.html",
-      "modified": "2025-12-02T22:53:47.758233",
-      "size": 17599
+      "modified": "2025-12-02T22:57:37.425206",
+      "size": 18040
     },
     {
       "path": "code-examples/templates/sfdx-project-template.md",
@@ -620,8 +620,8 @@
       "title": "Test Class Template",
       "description": "**Use Case**: Basic test class with test data factory and assertions",
       "url": "code-examples/templates/test-class-template.html",
-      "modified": "2025-12-02T22:53:47.757696",
-      "size": 3549
+      "modified": "2025-12-02T22:57:37.423741",
+      "size": 3675
     },
     {
       "path": "code-examples/utilities/custom-metadata-examples.md",
@@ -630,8 +630,8 @@
       "title": "Custom Metadata Code Examples",
       "description": "Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas. They're the modern approach for configuration management.",
       "url": "code-examples/utilities/custom-metadata-examples.html",
-      "modified": "2025-12-02T22:53:47.756852",
-      "size": 4821
+      "modified": "2025-12-02T22:57:37.422107",
+      "size": 4947
     },
     {
       "path": "code-examples/utilities/custom-settings-examples.md",
@@ -640,8 +640,8 @@
       "title": "Custom Settings Code Examples",
       "description": "Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas. Hierarchical Custom Settings support user-level configuration, while List Custom Settings provide simple key-value lookups.",
       "url": "code-examples/utilities/custom-settings-examples.html",
-      "modified": "2025-12-02T22:53:47.757374",
-      "size": 3047
+      "modified": "2025-12-02T22:57:37.423117",
+      "size": 3173
     },
     {
       "path": "code-examples/utilities/data-migration-examples.md",
@@ -650,8 +650,8 @@
       "title": "Data Migration Code Examples",
       "description": "Data migration involves importing, transforming, and validating data in Salesforce. These examples cover common migration scenarios and patterns.",
       "url": "code-examples/utilities/data-migration-examples.html",
-      "modified": "2025-12-02T22:53:47.757181",
-      "size": 3928
+      "modified": "2025-12-02T22:57:37.422677",
+      "size": 4054
     },
     {
       "path": "code-examples/utilities/error-handling-examples.md",
@@ -660,8 +660,8 @@
       "title": "Error Handling Code Examples",
       "description": "Robust error handling ensures applications gracefully handle failures and provide meaningful feedback. These examples demonstrate try-catch patterns, custom exceptions, retry logic, error logging, and user-friendly error messages.",
       "url": "code-examples/utilities/error-handling-examples.html",
-      "modified": "2025-12-02T22:53:47.756988",
-      "size": 14633
+      "modified": "2025-12-02T22:57:37.422332",
+      "size": 15326
     },
     {
       "path": "code-examples/utilities/logging-examples.md",
@@ -670,8 +670,8 @@
       "title": "Logging Code Examples",
       "description": "Structured logging enables consistent, searchable logging across Salesforce applications. These examples demonstrate custom logging objects, platform event fallbacks, external logging integration, and compliance/audit trail requirements.",
       "url": "code-examples/utilities/logging-examples.html",
-      "modified": "2025-12-02T22:53:47.757454",
-      "size": 13575
+      "modified": "2025-12-02T22:57:37.423269",
+      "size": 14205
     },
     {
       "path": "code-examples/utilities/metadata-api-examples.md",
@@ -680,8 +680,8 @@
       "title": "Metadata API Code Examples",
       "description": "The Metadata API allows programmatic deployment and retrieval of Salesforce metadata. It's used for automated deployments, CI/CD pipelines, and bulk metadata operations.",
       "url": "code-examples/utilities/metadata-api-examples.html",
-      "modified": "2025-12-02T22:53:47.757575",
-      "size": 2789
+      "modified": "2025-12-02T22:57:37.423427",
+      "size": 3041
     },
     {
       "path": "code-examples/utilities/sfdx-examples.md",
@@ -690,8 +690,8 @@
       "title": "Salesforce DX Code Examples",
       "description": "Salesforce DX provides command-line tools and workflows for modern Salesforce development. These examples show common SFDX patterns and scripts.",
       "url": "code-examples/utilities/sfdx-examples.html",
-      "modified": "2025-12-02T22:53:47.757106",
-      "size": 1955
+      "modified": "2025-12-02T22:57:37.422565",
+      "size": 2207
     },
     {
       "path": "code-examples/utilities/validation-examples.md",
@@ -700,8 +700,8 @@
       "title": "Validation Code Examples",
       "description": "Data validation ensures data quality and prevents invalid data from entering the system. These examples demonstrate field validation, record validation, bulk validation, custom validation rules, and validation error handling.",
       "url": "code-examples/utilities/validation-examples.html",
-      "modified": "2025-12-02T22:53:47.757261",
-      "size": 13658
+      "modified": "2025-12-02T22:57:37.422903",
+      "size": 14288
     },
     {
       "path": "data-governance/data-quality-stewardship.md",
@@ -710,8 +710,8 @@
       "title": "Data Quality and Stewardship for Salesforce",
       "description": "This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance. These patterns are essential for maintaining data integrity, preventing duplicates, and ensuring consistent data across the organizatio",
       "url": "data-governance/data-quality-stewardship.html",
-      "modified": "2025-12-02T22:53:47.767203",
-      "size": 15100
+      "modified": "2025-12-02T22:57:37.441515",
+      "size": 15485
     },
     {
       "path": "data-governance/data-residency-compliance.md",
@@ -720,8 +720,8 @@
       "title": "Data Residency and Compliance for Salesforce",
       "description": "This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices. These patterns are essential for ensuring data protection, regulatory compliance, and maintaining customer trust.",
       "url": "data-governance/data-residency-compliance.html",
-      "modified": "2025-12-02T22:53:47.767081",
-      "size": 15327
+      "modified": "2025-12-02T22:57:37.441262",
+      "size": 15712
     },
     {
       "path": "data-modeling/case-management-data-model.md",
@@ -730,8 +730,8 @@
       "title": "Case Management Data Model",
       "description": "A comprehensive data model for public sector case management, supporting multi-agency public benefits and services portals. The model handles clients, external partner organizations, staff, cases, notices, and transactions within a single Salesforce org.",
       "url": "data-modeling/case-management-data-model.html",
-      "modified": "2025-12-02T22:53:47.768255",
-      "size": 21074
+      "modified": "2025-12-02T22:57:37.443094",
+      "size": 21233
     },
     {
       "path": "data-modeling/data-migration-patterns.md",
@@ -740,8 +740,8 @@
       "title": "Data Migration Patterns",
       "description": "This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce. These patterns are essential for data imports, system migrations, and data synchronization.",
       "url": "data-modeling/data-migration-patterns.html",
-      "modified": "2025-12-02T22:53:47.768713",
-      "size": 15763
+      "modified": "2025-12-02T22:57:37.444260",
+      "size": 16028
     },
     {
       "path": "data-modeling/data-storage-planning.md",
@@ -770,8 +770,8 @@
       "title": "File Management Patterns",
       "description": "Salesforce provides multiple mechanisms for file storage and management. Understanding when to use ContentVersion (Files), Attachments, Documents, and the Library system is critical for effective data management and user experience.",
       "url": "data-modeling/file-management-patterns.html",
-      "modified": "2025-12-02T22:53:47.768575",
-      "size": 14569
+      "modified": "2025-12-02T22:57:37.444051",
+      "size": 14728
     },
     {
       "path": "data-modeling/lead-management-patterns.md",
@@ -780,8 +780,8 @@
       "title": "Lead Management and Conversion Data Model",
       "description": "A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management. The model handles leads from multiple sources, automated assignment, scoring, conversion to Contacts/Accounts/Opportunities, and data qu",
       "url": "data-modeling/lead-management-patterns.html",
-      "modified": "2025-12-02T22:53:47.768389",
-      "size": 31445
+      "modified": "2025-12-02T22:57:37.443511",
+      "size": 31604
     },
     {
       "path": "data-modeling/object-setup-and-configuration.md",
@@ -800,8 +800,8 @@
       "title": "Standard Object Oddities and Constraints in Salesforce",
       "description": "---\ntitle: \"Standard Object Oddities and Constraints in Salesforce\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"Standard Object Oddities to",
       "url": "data-modeling/standard-object-oddities.html",
-      "modified": "2025-12-02T22:53:47.768471",
-      "size": 18153
+      "modified": "2025-12-02T22:57:37.443697",
+      "size": 18312
     },
     {
       "path": "data-modeling/student-lifecycle-data-model.md",
@@ -810,8 +810,8 @@
       "title": "Student Lifecycle Data Model",
       "description": "The Salesforce Education Cloud (EDA) data model supports higher education institutions, with particular focus on online and adult-learning programs. The model integrates with legacy student information systems (SIS) while supporting CRM workflows for admissions and student engagement.",
       "url": "data-modeling/student-lifecycle-data-model.html",
-      "modified": "2025-12-02T22:53:47.768179",
-      "size": 18121
+      "modified": "2025-12-02T22:57:37.442985",
+      "size": 18280
     },
     {
       "path": "development/admin-basics.md",
@@ -820,8 +820,8 @@
       "title": "Salesforce Administration Basics",
       "description": "---\ntitle: \"Salesforce Administration Basics\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 2: The Complete Guide To Salesforce Administration\"\nsection: \"The Basics of Salesforce Administration\"\nlevel:",
       "url": "development/admin-basics.html",
-      "modified": "2025-12-02T22:53:47.761038",
-      "size": 30944
+      "modified": "2025-12-02T22:57:37.430612",
+      "size": 31199
     },
     {
       "path": "development/apex-patterns.md",
@@ -830,8 +830,8 @@
       "title": "Apex Design Patterns and Best Practices",
       "description": "Apex is used strategically when Flows are insufficient or need optimization/bulkification. The approach emphasizes proper layering, bulkification, comprehensive testing, and integration with declarative automation.",
       "url": "development/apex-patterns.html",
-      "modified": "2025-12-02T22:53:47.759805",
-      "size": 31193
+      "modified": "2025-12-02T22:57:37.428298",
+      "size": 32417
     },
     {
       "path": "development/asynchronous-apex-patterns.md",
@@ -840,8 +840,8 @@
       "title": "Asynchronous Apex Patterns",
       "description": "This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods. Asynchronous Apex is essential for processing large data volumes, performing long-running operations, and avoiding governor limit exceptions in synch",
       "url": "development/asynchronous-apex-patterns.html",
-      "modified": "2025-12-02T22:53:47.759985",
-      "size": 23592
+      "modified": "2025-12-02T22:57:37.428554",
+      "size": 24255
     },
     {
       "path": "development/custom-settings-metadata-patterns.md",
@@ -850,8 +850,8 @@
       "title": "Custom Settings and Custom Metadata Patterns",
       "description": "This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.",
       "url": "development/custom-settings-metadata-patterns.html",
-      "modified": "2025-12-02T22:53:47.760307",
-      "size": 11687
+      "modified": "2025-12-02T22:57:37.428843",
+      "size": 12095
     },
     {
       "path": "development/email-management.md",
@@ -860,8 +860,8 @@
       "title": "Salesforce Email Management",
       "description": "---\ntitle: \"Salesforce Email Management\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 2: The Complete Guide To Salesforce Administration\"\nsection: \"Email\"\nlevel: \"Intermediate\"\ntags:\n  - salesforce\n  ",
       "url": "development/email-management.html",
-      "modified": "2025-12-02T22:53:47.760220",
-      "size": 17876
+      "modified": "2025-12-02T22:57:37.428670",
+      "size": 18029
     },
     {
       "path": "development/error-handling-and-logging.md",
@@ -870,8 +870,8 @@
       "title": "Error Handling and Logging Framework",
       "description": "Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance. The framework uses a custom logging object (`LOG_LogMessage__c`) with utility classes and platform event fallbacks to ensure no errors are lost.",
       "url": "development/error-handling-and-logging.html",
-      "modified": "2025-12-02T22:53:47.759658",
-      "size": 12264
+      "modified": "2025-12-02T22:57:37.428052",
+      "size": 12672
     },
     {
       "path": "development/flow-patterns.md",
@@ -880,8 +880,8 @@
       "title": "Flow Design and Orchestration Patterns",
       "description": "Flow is used as the primary automation engine across projects, with Apex reserved for complex logic, integrations, and performance-critical scenarios. The approach emphasizes declarative automation where possible, with clear patterns for when to use different Flow types.",
       "url": "development/flow-patterns.html",
-      "modified": "2025-12-02T22:53:47.759359",
-      "size": 15724
+      "modified": "2025-12-02T22:57:37.427420",
+      "size": 16132
     },
     {
       "path": "development/formulas-validation-rules.md",
@@ -890,8 +890,8 @@
       "title": "Formulas, Validation Rules, and Custom Labels",
       "description": "---\ntitle: \"Formulas, Validation Rules, and Custom Labels\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 2: The Complete Guide To Salesforce Administration\"\nsection: \"Formulas, Lookup Filters, Custom L",
       "url": "development/formulas-validation-rules.html",
-      "modified": "2025-12-02T22:53:47.759265",
-      "size": 21449
+      "modified": "2025-12-02T22:57:37.427284",
+      "size": 21704
     },
     {
       "path": "development/governor-limits-and-optimization.md",
@@ -900,8 +900,8 @@
       "title": "Governor Limits and Performance Optimization",
       "description": "This topic covers Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management best practices. These patterns are especially relevant for integration-heavy systems with large data volumes, where proper limit management be",
       "url": "development/governor-limits-and-optimization.html",
-      "modified": "2025-12-02T22:53:47.760422",
-      "size": 21421
+      "modified": "2025-12-02T22:57:37.429209",
+      "size": 22033
     },
     {
       "path": "development/large-data-loads.md",
@@ -910,8 +910,8 @@
       "title": "Gigantic Data Loads in Salesforce",
       "description": "---\ntitle: \"Gigantic Data Loads in Salesforce\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 4: The Complete Guide To Salesforce Architecture\"\nsection: \"Gigantic Data Loads\"\nlevel: \"Advanced\"\ntags:\n  -",
       "url": "development/large-data-loads.html",
-      "modified": "2025-12-02T22:53:47.760797",
-      "size": 17692
+      "modified": "2025-12-02T22:57:37.430255",
+      "size": 17998
     },
     {
       "path": "development/lightning-app-builder.md",
@@ -920,8 +920,8 @@
       "title": "Lightning App Builder and Dynamic Forms",
       "description": "---\ntitle: \"Lightning App Builder and Dynamic Forms\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 2: The Complete Guide To Salesforce Administration\"\nsection: \"Lightning App Builder\"\nlevel: \"Intermedi",
       "url": "development/lightning-app-builder.html",
-      "modified": "2025-12-02T22:53:47.759881",
-      "size": 21381
+      "modified": "2025-12-02T22:57:37.428411",
+      "size": 21585
     },
     {
       "path": "development/locking-and-concurrency-strategies.md",
@@ -930,8 +930,8 @@
       "title": "Locking and Concurrency Strategies",
       "description": "This topic covers Salesforce row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, deadlock prevention, and high-concurrency scenario management. These patterns are especially relevant for integration-heavy systems with large data volumes and high concurrenc",
       "url": "development/locking-and-concurrency-strategies.html",
-      "modified": "2025-12-02T22:53:47.759582",
-      "size": 18926
+      "modified": "2025-12-02T22:57:37.427858",
+      "size": 19334
     },
     {
       "path": "development/lwc-patterns.md",
@@ -940,8 +940,8 @@
       "title": "Lightning Web Component (LWC) Patterns",
       "description": "LWCs are built for complex business logic that standard page layouts cannot handle. Components are designed to make complex processes usable for non-technical users and hide integration complexity behind simple interfaces.",
       "url": "development/lwc-patterns.html",
-      "modified": "2025-12-02T22:53:47.760705",
-      "size": 30469
+      "modified": "2025-12-02T22:57:37.430025",
+      "size": 31438
     },
     {
       "path": "development/omnistudio-patterns.md",
@@ -950,8 +950,8 @@
       "title": "OmniStudio Patterns",
       "description": "OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI components for complex business processes. Used in higher education and public sector contexts to guide users through applications, grant workflows, and other multi-step processes.",
       "url": "development/omnistudio-patterns.html",
-      "modified": "2025-12-02T22:53:47.760888",
-      "size": 14926
+      "modified": "2025-12-02T22:57:37.430406",
+      "size": 15232
     },
     {
       "path": "development/order-of-execution.md",
@@ -960,8 +960,8 @@
       "title": "Order of Execution",
       "description": "Understanding the order of execution in Salesforce is critical for architects and developers. The execution order determines when triggers, flows, validation rules, and other automation run, which directly impacts system behavior, data integrity, and debugging capabilities.",
       "url": "development/order-of-execution.html",
-      "modified": "2025-12-02T22:53:47.760516",
-      "size": 15879
+      "modified": "2025-12-02T22:57:37.429622",
+      "size": 16185
     },
     {
       "path": "development/soql-query-patterns.md",
@@ -970,8 +970,8 @@
       "title": "SOQL Query Patterns",
       "description": "This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects. All patterns documented here are based on real work, including dynamic SOQL implementations, relationship queries, debugging patterns, and maintenance queries u",
       "url": "development/soql-query-patterns.html",
-      "modified": "2025-12-02T22:53:47.759501",
-      "size": 26324
+      "modified": "2025-12-02T22:57:37.427687",
+      "size": 26783
     },
     {
       "path": "glossary/core-terminology.md",
@@ -1000,8 +1000,8 @@
       "title": "Callout Best Practices",
       "description": "This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring. Following these patterns ensures robust, maintainable, and eff",
       "url": "integrations/callout-best-practices.html",
-      "modified": "2025-12-02T22:53:47.764448",
-      "size": 33038
+      "modified": "2025-12-02T22:57:37.437008",
+      "size": 34390
     },
     {
       "path": "integrations/change-data-capture-patterns.md",
@@ -1010,8 +1010,8 @@
       "title": "Change Data Capture (CDC) Patterns",
       "description": "Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted. This guide covers CDC event processing patterns, error handling, and integration strategies.",
       "url": "integrations/change-data-capture-patterns.html",
-      "modified": "2025-12-02T22:53:47.764543",
-      "size": 15168
+      "modified": "2025-12-02T22:57:37.437144",
+      "size": 15740
     },
     {
       "path": "integrations/etl-vs-api-vs-events.md",
@@ -1020,8 +1020,8 @@
       "title": "ETL vs API vs Events: Integration Pattern Selection",
       "description": "Different integration patterns serve different use cases. Understanding when to use ETL (batch), API (synchronous), or Events (asynchronous) is critical for building scalable, maintainable integrations.",
       "url": "integrations/etl-vs-api-vs-events.html",
-      "modified": "2025-12-02T22:53:47.764681",
-      "size": 15741
+      "modified": "2025-12-02T22:57:37.437343",
+      "size": 16573
     },
     {
       "path": "integrations/integration-platform-patterns.md",
@@ -1030,8 +1030,8 @@
       "title": "Integration Platform Patterns",
       "description": "Integration platforms serve as middleware between Salesforce and external systems, handling security, transformation, and orchestration. Two primary platforms are used: MuleSoft (for security boundaries and transformation) and Dell Boomi (for high-volume ETL operations).",
       "url": "integrations/integration-platform-patterns.html",
-      "modified": "2025-12-02T22:53:47.764328",
-      "size": 17767
+      "modified": "2025-12-02T22:57:37.436830",
+      "size": 18443
     },
     {
       "path": "integrations/integration-user-license-guide.md",
@@ -1040,8 +1040,8 @@
       "title": "Integration User License Guide",
       "description": "The Salesforce Integration User License is a free API-only license designed for system-to-system integrations. Introduced in March 2023, this license provides a cost-effective and secure way to authenticate external systems with Salesforce without consuming full user licenses.",
       "url": "integrations/integration-user-license-guide.html",
-      "modified": "2025-12-02T22:53:47.764120",
-      "size": 30333
+      "modified": "2025-12-02T22:57:37.436565",
+      "size": 31269
     },
     {
       "path": "integrations/salesforce-to-llm-data-pipelines.md",
@@ -1050,8 +1050,8 @@
       "title": "Salesforce to LLM Data Pipelines",
       "description": "This document covers high-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents). It addresses how to move Salesforce data into RAG/LLM systems, common architectural variants and their tradeoffs, extraction strateg",
       "url": "integrations/salesforce-to-llm-data-pipelines.html",
-      "modified": "2025-12-02T22:53:47.764841",
-      "size": 27392
+      "modified": "2025-12-02T22:57:37.437493",
+      "size": 27652
     },
     {
       "path": "integrations/sis-sync-patterns.md",
@@ -1060,8 +1060,8 @@
       "title": "SIS Synchronization Patterns",
       "description": "High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS). These patterns handle hundreds of thousands of student records daily through ETL platforms with file-based staging and dynamic SQL batching.",
       "url": "integrations/sis-sync-patterns.html",
-      "modified": "2025-12-02T22:53:47.764221",
-      "size": 19565
+      "modified": "2025-12-02T22:57:37.436683",
+      "size": 19773
     },
     {
       "path": "mcp-knowledge/design-system-patterns.md",
@@ -1070,8 +1070,8 @@
       "title": "Salesforce Lightning Design System (SLDS) Patterns - MCP Knowledge",
       "description": "Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software, covering UX principles, visual design, component usage, interaction patterns, and accessibility.",
       "url": "mcp-knowledge/design-system-patterns.html",
-      "modified": "2025-12-02T22:53:47.761701",
-      "size": 7821
+      "modified": "2025-12-02T22:57:37.431657",
+      "size": 7927
     },
     {
       "path": "mcp-knowledge/lds-patterns.md",
@@ -1080,8 +1080,8 @@
       "title": "Lightning Data Service (LDS) Patterns - MCP Knowledge",
       "description": "Guidelines for building, reviewing, and maintaining Lightning Web Components that interact with Salesforce's Lightning Data Service, focusing on data consistency, referential integrity, and choosing UIAPI vs Apex.",
       "url": "mcp-knowledge/lds-patterns.html",
-      "modified": "2025-12-02T22:53:47.761572",
-      "size": 5159
+      "modified": "2025-12-02T22:57:37.431418",
+      "size": 5318
     },
     {
       "path": "mcp-knowledge/lwc-accessibility.md",
@@ -1090,8 +1090,8 @@
       "title": "LWC Accessibility - MCP Knowledge",
       "description": "Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2.2 (Web Content Accessibility Guidelines) standards.",
       "url": "mcp-knowledge/lwc-accessibility.html",
-      "modified": "2025-12-02T22:53:47.761434",
-      "size": 6314
+      "modified": "2025-12-02T22:57:37.431237",
+      "size": 6420
     },
     {
       "path": "mcp-knowledge/lwc-best-practices.md",
@@ -1100,8 +1100,8 @@
       "title": "LWC Best Practices - MCP Knowledge",
       "description": "Comprehensive best practices for Lightning Web Components development, focusing on event handling, property naming, decorator usage, and component structure.",
       "url": "mcp-knowledge/lwc-best-practices.html",
-      "modified": "2025-12-02T22:53:47.761154",
-      "size": 7701
+      "modified": "2025-12-02T22:57:37.430882",
+      "size": 7860
     },
     {
       "path": "mcp-knowledge/lwc-development-guide.md",
@@ -1110,8 +1110,8 @@
       "title": "LWC Development Guide - MCP Knowledge",
       "description": "This guide provides comprehensive guidance for Lightning Web Components (LWC) development, covering core principles, technical stack, best practices, and development workflows.",
       "url": "mcp-knowledge/lwc-development-guide.html",
-      "modified": "2025-12-02T22:53:47.761303",
-      "size": 4371
+      "modified": "2025-12-02T22:57:37.431065",
+      "size": 4477
     },
     {
       "path": "observability/ha-dr-patterns.md",
@@ -1120,8 +1120,8 @@
       "title": "High Availability and Disaster Recovery for Salesforce",
       "description": "This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for Salesforce, including backup/restore approaches, failover patterns for integrations, and business continuity drills. These patterns are essential for ensuring system resilience, data protection, and business continuity.",
       "url": "observability/ha-dr-patterns.html",
-      "modified": "2025-12-02T22:53:47.763516",
-      "size": 12839
+      "modified": "2025-12-02T22:57:37.435014",
+      "size": 13210
     },
     {
       "path": "observability/monitoring-alerting.md",
@@ -1130,8 +1130,8 @@
       "title": "Monitoring and Alerting for Salesforce",
       "description": "This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns. These patterns are essential for maintaining system reliability, detecting issues early, and ensuring operational",
       "url": "observability/monitoring-alerting.html",
-      "modified": "2025-12-02T22:53:47.763636",
-      "size": 12816
+      "modified": "2025-12-02T22:57:37.435384",
+      "size": 13293
     },
     {
       "path": "observability/performance-tuning.md",
@@ -1140,8 +1140,8 @@
       "title": "Performance Tuning for Salesforce",
       "description": "This guide covers performance tuning patterns for Salesforce, including query/selectivity tuning, Large Data Volume (LDV) handling, governor limit mitigation, and caching strategies. These patterns are essential for optimizing Salesforce performance, handling large datasets, and ensuring system scal",
       "url": "observability/performance-tuning.html",
-      "modified": "2025-12-02T22:53:47.763390",
-      "size": 14341
+      "modified": "2025-12-02T22:57:37.434819",
+      "size": 14712
     },
     {
       "path": "operations/cicd-patterns.md",
@@ -1150,8 +1150,8 @@
       "title": "CI/CD Patterns for Salesforce",
       "description": "This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation strategies, and rollback patterns. These patterns are essential for managing complex Salesforce development lifecycles with multiple te",
       "url": "operations/cicd-patterns.html",
-      "modified": "2025-12-02T22:53:47.763976",
-      "size": 18230
+      "modified": "2025-12-02T22:57:37.436243",
+      "size": 18930
     },
     {
       "path": "operations/environment-strategy.md",
@@ -1160,8 +1160,8 @@
       "title": "Environment Strategy for Salesforce",
       "description": "This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences. These patterns are essential for managing complex Salesforce implementations with multiple teams, compliance requirements, and effi",
       "url": "operations/environment-strategy.html",
-      "modified": "2025-12-02T22:53:47.763886",
-      "size": 16916
+      "modified": "2025-12-02T22:57:37.435994",
+      "size": 17416
     },
     {
       "path": "operations/release-governance.md",
@@ -1170,8 +1170,8 @@
       "title": "Release Governance for Salesforce",
       "description": "This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists. These patterns are essential for managing complex Salesforce releases with multiple stakeholders, compliance requirements, and risk mitigation.",
       "url": "operations/release-governance.html",
-      "modified": "2025-12-02T22:53:47.763789",
-      "size": 16809
+      "modified": "2025-12-02T22:57:37.435674",
+      "size": 17409
     },
     {
       "path": "patterns/cross-cutting-patterns.md",
@@ -1180,8 +1180,8 @@
       "title": "Cross-Cutting Design Patterns",
       "description": "This document summarizes reusable patterns that appear across multiple domains in the architecture. These patterns are fundamental to how the system operates and should be considered when implementing features in any domain.",
       "url": "patterns/cross-cutting-patterns.html",
-      "modified": "2025-12-02T22:53:47.758751",
-      "size": 17152
+      "modified": "2025-12-02T22:57:37.426235",
+      "size": 17344
     },
     {
       "path": "project-methods/delivery-framework.md",
@@ -1190,8 +1190,8 @@
       "title": "Project Delivery Framework",
       "description": "Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Emphasizes clear scope definition, stakeholder coordination, iterative delivery, and comprehensive quality standards.",
       "url": "project-methods/delivery-framework.html",
-      "modified": "2025-12-02T22:53:47.769170",
-      "size": 14434
+      "modified": "2025-12-02T22:57:37.445164",
+      "size": 14929
     },
     {
       "path": "project-methods/deployment-patterns.md",
@@ -1200,8 +1200,8 @@
       "title": "Deployment and CI/CD Patterns",
       "description": "This guide covers Salesforce deployment strategies, source control patterns, deployment best practices, Metadata API usage, and package development patterns. These patterns are essential for managing Salesforce development lifecycle and ensuring reliable deployments.",
       "url": "project-methods/deployment-patterns.html",
-      "modified": "2025-12-02T22:53:47.768889",
-      "size": 9996
+      "modified": "2025-12-02T22:57:37.444675",
+      "size": 10271
     },
     {
       "path": "project-methods/sfdx-patterns.md",
@@ -1210,8 +1210,8 @@
       "title": "Salesforce DX (SFDX) Patterns",
       "description": "Salesforce DX provides a modern, source-driven development workflow for Salesforce. This guide covers SFDX project structure, commands, scratch org patterns, source tracking, and CI/CD integration.",
       "url": "project-methods/sfdx-patterns.html",
-      "modified": "2025-12-02T22:53:47.769028",
-      "size": 9183
+      "modified": "2025-12-02T22:57:37.444915",
+      "size": 9458
     },
     {
       "path": "project-methods/testing-strategy.md",
@@ -1220,8 +1220,8 @@
       "title": "Testing and QA Strategy",
       "description": "Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and user acceptance testing. These strategies validate Salesforce configurations, integrations, and portal functionality across multiple environments.",
       "url": "project-methods/testing-strategy.html",
-      "modified": "2025-12-02T22:53:47.769300",
-      "size": 17391
+      "modified": "2025-12-02T22:57:37.445342",
+      "size": 17611
     },
     {
       "path": "quick-start/apex-quick-start.md",
@@ -1230,8 +1230,8 @@
       "title": "Apex Quick Start Guide",
       "description": "This quick-start guide provides step-by-step instructions for creating your first Apex classes following best practices.",
       "url": "quick-start/apex-quick-start.html",
-      "modified": "2025-12-02T22:53:47.767890",
-      "size": 7645
+      "modified": "2025-12-02T22:57:37.442407",
+      "size": 8206
     },
     {
       "path": "quick-start/lwc-accessibility-quick-start.md",
@@ -1240,8 +1240,8 @@
       "title": "LWC Accessibility Quick Start Guide",
       "description": "This quick-start guide provides step-by-step instructions for making Lightning Web Components accessible, following WCAG 2.2 standards and Salesforce best practices.",
       "url": "quick-start/lwc-accessibility-quick-start.html",
-      "modified": "2025-12-02T22:53:47.767757",
-      "size": 15938
+      "modified": "2025-12-02T22:57:37.442282",
+      "size": 16601
     },
     {
       "path": "quick-start/lwc-quick-start.md",
@@ -1250,8 +1250,8 @@
       "title": "LWC Quick Start Guide",
       "description": "This quick-start guide provides step-by-step instructions for creating your first Lightning Web Component following best practices.",
       "url": "quick-start/lwc-quick-start.html",
-      "modified": "2025-12-02T22:53:47.767604",
-      "size": 8218
+      "modified": "2025-12-02T22:57:37.442034",
+      "size": 8728
     },
     {
       "path": "security/permission-set-architecture.md",
@@ -1260,8 +1260,8 @@
       "title": "Permission Set-Driven Security Architecture",
       "description": "Permission set-driven security architecture transitions from profile-centric to permission set-based access control. This pattern provides more granular permission management, especially at scale, and enables flexible role-based access control without creating multiple profiles.",
       "url": "security/permission-set-architecture.html",
-      "modified": "2025-12-02T22:53:47.758888",
-      "size": 11751
+      "modified": "2025-12-02T22:57:37.426614",
+      "size": 12135
     },
     {
       "path": "security/salesforce-llm-data-governance.md",
@@ -1270,8 +1270,8 @@
       "title": "Salesforce LLM Data Governance",
       "description": "This document covers how to choose *what* data to expose from Salesforce to LLMs and how to do that safely. It addresses scoping strategy (which objects, fields, and records to include), security considerations (how to reflect Salesforce access controls in LLM data extraction), data masking and reda",
       "url": "security/salesforce-llm-data-governance.html",
-      "modified": "2025-12-02T22:53:47.759023",
-      "size": 20202
+      "modified": "2025-12-02T22:57:37.426815",
+      "size": 20538
     },
     {
       "path": "security/sharing-fundamentals.md",
@@ -1280,8 +1280,8 @@
       "title": "Salesforce Sharing Fundamentals",
       "description": "This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions. These are the foundational mechanisms that control record-level access in Salesforce.",
       "url": "security/sharing-fundamentals.html",
-      "modified": "2025-12-02T22:53:47.759152",
-      "size": 20626
+      "modified": "2025-12-02T22:57:37.427116",
+      "size": 20770
     },
     {
       "path": "security/sharing-rules-and-manual-sharing.md",
@@ -1310,8 +1310,8 @@
       "title": "Apex Testing Patterns",
       "description": "This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories.",
       "url": "testing/apex-testing-patterns.html",
-      "modified": "2025-12-02T22:53:47.765419",
-      "size": 14575
+      "modified": "2025-12-02T22:57:37.438584",
+      "size": 14810
     },
     {
       "path": "testing/automated-testing-patterns.md",
@@ -1320,8 +1320,8 @@
       "title": "Automated Testing Patterns for Salesforce",
       "description": "This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns. These patterns are essential for ensuring code quality, preventing regressions, and m",
       "url": "testing/automated-testing-patterns.html",
-      "modified": "2025-12-02T22:53:47.765293",
-      "size": 14954
+      "modified": "2025-12-02T22:57:37.438396",
+      "size": 15377
     },
     {
       "path": "testing/lwc-accessibility-testing.md",
@@ -1330,8 +1330,8 @@
       "title": "LWC Accessibility Testing Patterns",
       "description": "This guide provides testing patterns, best practices, and examples for ensuring Lightning Web Components meet WCAG 2.2 accessibility standards. It covers Jest accessibility testing, manual testing checklists, and automated testing tools.",
       "url": "testing/lwc-accessibility-testing.html",
-      "modified": "2025-12-02T22:53:47.765063",
-      "size": 19137
+      "modified": "2025-12-02T22:57:37.437794",
+      "size": 19466
     },
     {
       "path": "testing/lwc-jest-testing.md",
@@ -1340,8 +1340,8 @@
       "title": "LWC Jest Testing - Unit Testing Lightning Web Components",
       "description": "---\ntitle: \"LWC Jest Testing - Unit Testing Lightning Web Components\"\nsource: \"The Salesforce Master Class wiki\"\nsource_url: \"https://github.com/Coding-With-The-Force/The-Salesforce-Master-Class/wiki\"\ntopic: \"Topic 3: The Complete Guide To Lightning Web Components\"\nsection: \"LWC Jest Testing\"\nlevel:",
       "url": "testing/lwc-jest-testing.html",
-      "modified": "2025-12-02T22:53:47.764956",
-      "size": 19267
+      "modified": "2025-12-02T22:57:37.437653",
+      "size": 19455
     },
     {
       "path": "testing/non-functional-requirements.md",
@@ -1350,8 +1350,8 @@
       "title": "Non-Functional Requirements for Salesforce",
       "description": "This guide covers non-functional requirements testing for Salesforce, including security testing, accessibility testing for LWCs and portals, and performance benchmarks. These patterns are essential for ensuring systems meet quality standards beyond functional requirements.",
       "url": "testing/non-functional-requirements.html",
-      "modified": "2025-12-02T22:53:47.765554",
-      "size": 14563
+      "modified": "2025-12-02T22:57:37.438775",
+      "size": 14892
     },
     {
       "path": "testing/test-data-factories.md",
@@ -1360,8 +1360,8 @@
       "title": "Test Data Factory Patterns",
       "description": "Test data factories provide reusable methods for creating test data, ensuring consistency and reducing duplication across test classes.",
       "url": "testing/test-data-factories.html",
-      "modified": "2025-12-02T22:53:47.765145",
-      "size": 11809
+      "modified": "2025-12-02T22:57:37.438207",
+      "size": 12044
     },
     {
       "path": "troubleshooting/common-apex-errors.md",
@@ -1370,8 +1370,8 @@
       "title": "Common Apex Errors and Solutions",
       "description": "This guide provides solutions for common Apex errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies.",
       "url": "troubleshooting/common-apex-errors.html",
-      "modified": "2025-12-02T22:53:47.763184",
-      "size": 22658
+      "modified": "2025-12-02T22:57:37.434372",
+      "size": 23428
     },
     {
       "path": "troubleshooting/common-lwc-errors.md",
@@ -1380,8 +1380,8 @@
       "title": "Common LWC Errors and Solutions",
       "description": "This guide provides solutions for common LWC errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies.",
       "url": "troubleshooting/common-lwc-errors.html",
-      "modified": "2025-12-02T22:53:47.762915",
-      "size": 24619
+      "modified": "2025-12-02T22:57:37.433919",
+      "size": 25719
     },
     {
       "path": "troubleshooting/data-reconciliation.md",
@@ -1390,8 +1390,8 @@
       "title": "Data Reconciliation Techniques",
       "description": "Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency. These techniques use external IDs, integration job tracking, and comparison queries to validate data synchronization.",
       "url": "troubleshooting/data-reconciliation.html",
-      "modified": "2025-12-02T22:53:47.763086",
-      "size": 16748
+      "modified": "2025-12-02T22:57:37.434209",
+      "size": 17463
     },
     {
       "path": "troubleshooting/governor-limit-errors.md",
@@ -1400,8 +1400,8 @@
       "title": "Governor Limit Errors and Solutions",
       "description": "This guide provides solutions for governor limit errors, including error messages, causes, solutions, and prevention strategies.",
       "url": "troubleshooting/governor-limit-errors.html",
-      "modified": "2025-12-02T22:53:47.762797",
-      "size": 18845
+      "modified": "2025-12-02T22:57:37.433726",
+      "size": 19835
     },
     {
       "path": "troubleshooting/integration-debugging.md",
@@ -1410,8 +1410,8 @@
       "title": "Integration Debugging Methods",
       "description": "Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues. These methods focus on finding root causes rather than symptoms, using SOQL queries, history objects, and error analysis.",
       "url": "troubleshooting/integration-debugging.html",
-      "modified": "2025-12-02T22:53:47.762999",
-      "size": 18392
+      "modified": "2025-12-02T22:57:37.434063",
+      "size": 19162
     },
     {
       "path": "troubleshooting/lwc-accessibility-errors.md",
@@ -1420,8 +1420,8 @@
       "title": "LWC Accessibility Errors and Solutions",
       "description": "This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies. All solutions follow WCAG 2.2 standards.",
       "url": "troubleshooting/lwc-accessibility-errors.html",
-      "modified": "2025-12-02T22:53:47.763285",
-      "size": 25530
+      "modified": "2025-12-02T22:57:37.434534",
+      "size": 26135
     }
   ]
 }

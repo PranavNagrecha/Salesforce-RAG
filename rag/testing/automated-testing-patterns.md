@@ -17,10 +17,10 @@ last_reviewed: "2025-01-XX"
 This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns. These patterns are essential for ensuring code quality, preventing regressions, and maintaining system reliability at enterprise scale.
 
 **Related Patterns**:
-- <a href="{{ '/rag/testing/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
-- <a href="{{ '/rag/testing/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
+- <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
+- <a href="{{ '/rag/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
 - <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies
-- <a href="{{ '/rag/testing/testing/non-functional-requirements.html' | relative_url }}">Non-Functional Requirements</a> - Security, accessibility, and performance testing
+- <a href="{{ '/rag/testing/non-functional-requirements.html' | relative_url }}">Non-Functional Requirements</a> - Security, accessibility, and performance testing
 
 ## Consensus Best Practices
 
@@ -351,9 +351,9 @@ This guide covers automated testing patterns for Salesforce at scale, including 
 
 ## Related Patterns
 
-- <a href="{{ '/rag/testing/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
-- <a href="{{ '/rag/testing/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
+- <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
+- <a href="{{ '/rag/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
 - <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies
-- <a href="{{ '/rag/testing/testing/non-functional-requirements.html' | relative_url }}">Non-Functional Requirements</a> - Security, accessibility, and performance testing
+- <a href="{{ '/rag/testing/non-functional-requirements.html' | relative_url }}">Non-Functional Requirements</a> - Security, accessibility, and performance testing
 - <a href="{{ '/rag/testing/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
 

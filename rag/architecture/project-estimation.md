@@ -416,8 +416,8 @@ Think of estimation as a communication tool, not just a prediction. Good estimat
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/stakeholder-communication.html' | relative_url }}">Stakeholder Communication</a> - Communicating with stakeholders
-- <a href="{{ '/rag/architecture/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Leading development teams
+- <a href="{{ '/rag/architecture/stakeholder-communication.html' | relative_url }}">Stakeholder Communication</a> - Communicating with stakeholders
+- <a href="{{ '/rag/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Leading development teams
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Sprint-based delivery approach

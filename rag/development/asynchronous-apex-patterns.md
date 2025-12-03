@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods. Asynchronous Apex is essential for processing large data volumes, performing long-running operations, and avoiding governor limit exceptions in synchronous contexts.
 
 **Related Patterns**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - General Apex patterns and class layering
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - General Apex patterns and class layering
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Prerequisites
 
@@ -32,10 +32,10 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 - Familiarity with DML operations and SOQL queries
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and patterns
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Transaction execution order
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and patterns
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Transaction execution order
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Consensus Best Practices
 
@@ -558,9 +558,9 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - General Apex patterns
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - General Apex patterns
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 **Related Domains**:
 - <a href="{{ '/rag/development/code-examples/apex/batch-examples.html' | relative_url }}">Batch Examples</a> - Complete Batch Apex code examples

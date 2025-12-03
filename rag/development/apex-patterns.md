@@ -28,10 +28,10 @@ Apex is Salesforce's proprietary programming language, similar to Java, that ena
 - Knowledge of SOQL (Salesforce Object Query Language)
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Understanding when to use Flow vs Apex
-- <a href="{{ '/rag/development/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Understanding platform limits
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Understanding when to use Flow vs Apex
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Understanding platform limits
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Apex Language Fundamentals
 
@@ -205,7 +205,7 @@ Reusable functionality:
 
 ## Asynchronous Apex Patterns
 
-For comprehensive asynchronous Apex patterns, see <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>.
+For comprehensive asynchronous Apex patterns, see <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>.
 
 ### Queueable
 
@@ -413,7 +413,7 @@ Use for:
 
 - **Externalize all configuration**: Never hardcode environment-specific values (URLs, IDs, counts). Use Custom Metadata Types or Custom Settings for configuration that varies by environment. This enables environment-specific configuration without code changes.
 
-**Related**: <a href="{{ '/rag/development/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>, <a href="{{ '/rag/development/code-examples/utilities/custom-settings-examples.html' | relative_url }}">Custom Settings Examples</a>, <a href="{{ '/rag/development/code-examples/utilities/custom-metadata-examples.html' | relative_url }}">Custom Metadata Examples</a>
+**Related**: <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>, <a href="{{ '/rag/development/code-examples/utilities/custom-settings-examples.html' | relative_url }}">Custom Settings Examples</a>, <a href="{{ '/rag/development/code-examples/utilities/custom-metadata-examples.html' | relative_url }}">Custom Metadata Examples</a>
 - **Use Named Credentials for all external URLs**: All HTTP callouts should use Named Credentials, not hardcoded URLs. This centralizes credential management and enables environment-specific endpoints.
 - **Centralize integration patterns**: When multiple classes make HTTP callouts, centralize the pattern in an abstract service class. This makes maintenance and auditing easier.
 
@@ -614,17 +614,17 @@ Use for:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Understanding when to use Flow vs Apex
-- <a href="{{ '/rag/development/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices and patterns
-- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Batch, Queueable, and Scheduled Apex patterns
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization and limit management
-- <a href="{{ '/rag/development/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Row locking and retry patterns
-- <a href="{{ '/rag/development/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Configuration management patterns
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Apex executes in the save sequence
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Understanding when to use Flow vs Apex
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices and patterns
+- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Batch, Queueable, and Scheduled Apex patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization and limit management
+- <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Row locking and retry patterns
+- <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Configuration management patterns
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Apex executes in the save sequence
 
 **Related Domains**:
-- <a href="{{ '/rag/development/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Integrating Apex with Lightning Web Components
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Integrating Apex with Lightning Web Components
 - <a href="{{ '/rag/development/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a> - Apex testing best practices
 - [Code Examples](../code-examples/apex/) - Complete working code examples
 

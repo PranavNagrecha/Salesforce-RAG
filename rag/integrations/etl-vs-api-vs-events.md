@@ -26,8 +26,8 @@ Different integration patterns serve different use cases. Understanding when to 
 - Knowledge of data synchronization concepts
 
 **Recommended Reading**:
-- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
 - <a href="{{ '/rag/integrations/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Event-driven patterns
 - <a href="{{ '/rag/integrations/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - Data mapping patterns
 
@@ -393,19 +393,19 @@ Combine patterns when:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi patterns
-- <a href="{{ '/rag/integrations/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume ETL synchronization patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi patterns
+- <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume ETL synchronization patterns
 
 **Related Domains**:
-- <a href="{{ '/rag/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC for event-driven integration
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - API callout patterns
+- <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC for event-driven integration
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - API callout patterns
 - <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 - <a href="{{ '/rag/integrations/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk data operation patterns
 
-- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi patterns
-- <a href="{{ '/rag/integrations/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume ETL synchronization patterns
-- <a href="{{ '/rag/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC for event-driven integration
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - API callout patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi patterns
+- <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume ETL synchronization patterns
+- <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC for event-driven integration
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - API callout patterns
 - <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 - <a href="{{ '/rag/integrations/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk data operation patterns
 

@@ -429,7 +429,7 @@ Salesforce provides multiple mechanisms for file storage and management. Underst
 
 ## Related Patterns
 
-- <a href="{{ '/rag/data-modeling/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Object setup patterns
+- <a href="{{ '/rag/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Object setup patterns
 - <a href="{{ '/rag/data-modeling/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow file upload patterns
 - <a href="{{ '/rag/data-modeling/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex file management patterns
 

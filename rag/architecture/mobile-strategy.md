@@ -382,7 +382,7 @@ Think of mobile strategy as starting with standard options (Salesforce Mobile Ap
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/portal-architecture.html' | relative_url }}">Portal Architecture</a> - Experience Cloud mobile patterns
+- <a href="{{ '/rag/architecture/portal-architecture.html' | relative_url }}">Portal Architecture</a> - Experience Cloud mobile patterns
 - <a href="{{ '/rag/architecture/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Mobile-optimized LWC patterns
 
 **Related Domains**:

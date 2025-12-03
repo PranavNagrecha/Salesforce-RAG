@@ -337,9 +337,9 @@ Think of yourself as a translator between business language and technical langua
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/architect-role.html' | relative_url }}">Architect Role</a> - Architect communication responsibilities
-- <a href="{{ '/rag/architecture/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Team communication patterns
-- <a href="{{ '/rag/architecture/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Managing stakeholder expectations
+- <a href="{{ '/rag/architecture/architect-role.html' | relative_url }}">Architect Role</a> - Architect communication responsibilities
+- <a href="{{ '/rag/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Team communication patterns
+- <a href="{{ '/rag/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Managing stakeholder expectations
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Stakeholder coordination in sprints

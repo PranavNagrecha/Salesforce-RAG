@@ -33,9 +33,9 @@ This document captures SOQL query patterns and practices derived from actual imp
 - Familiarity with Apex or LWC development
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and Selector layer patterns
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management and optimization
-- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when queries execute
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and Selector layer patterns
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management and optimization
+- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when queries execute
 
 ## What Was Actually Done
 
@@ -570,9 +570,9 @@ ORDER BY ApiVersion ASC, Name ASC
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class layering and Selector layer patterns
-- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Query optimization and limit management
-- <a href="{{ '/rag/development/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk query patterns for large datasets
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class layering and Selector layer patterns
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Query optimization and limit management
+- <a href="{{ '/rag/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk query patterns for large datasets
 
 **Related Domains**:
 - <a href="{{ '/rag/development/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Query patterns for debugging integrations

@@ -446,8 +446,8 @@ When creating Lightning pages:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Custom Lightning Web Component development
-- <a href="{{ '/rag/development/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Page layout and UI configuration
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Custom Lightning Web Component development
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Page layout and UI configuration
 
 **Related Domains**:
 - <a href="{{ '/rag/development/architecture/portal-architecture.html' | relative_url }}">Portal Architecture</a> - Experience Cloud page patterns

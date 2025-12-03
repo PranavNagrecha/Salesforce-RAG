@@ -16,8 +16,8 @@ last_reviewed: "2025-01-XX"
 This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption. These patterns are essential for ensuring successful user adoption, maximizing system value, and driving organizational change.
 
 **Related Patterns**:
-- <a href="{{ '/rag/adoption/adoption/org-health-checks.html' | relative_url }}">Org Health Checks</a> - Technical debt and org optimization
-- <a href="{{ '/rag/adoption/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
+- <a href="{{ '/rag/adoption/org-health-checks.html' | relative_url }}">Org Health Checks</a> - Technical debt and org optimization
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 
 ## Prerequisites
 
@@ -28,8 +28,8 @@ This guide covers user readiness patterns for Salesforce, including training pla
 - Familiarity with project delivery methodologies
 
 **Recommended Reading**:
-- <a href="{{ '/rag/adoption/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery patterns
-- <a href="{{ '/rag/adoption/adoption/org-health-checks.html' | relative_url }}">Org Health Checks</a> - Technical optimization patterns
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery patterns
+- <a href="{{ '/rag/adoption/org-health-checks.html' | relative_url }}">Org Health Checks</a> - Technical optimization patterns
 
 ## Consensus Best Practices
 
@@ -312,7 +312,7 @@ This guide covers user readiness patterns for Salesforce, including training pla
 
 ## Related Patterns
 
-- <a href="{{ '/rag/adoption/adoption/org-health-checks.html' | relative_url }}">Org Health Checks</a> - Technical debt and org optimization
-- <a href="{{ '/rag/adoption/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
-- <a href="{{ '/rag/adoption/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - User acceptance testing patterns
+- <a href="{{ '/rag/adoption/org-health-checks.html' | relative_url }}">Org Health Checks</a> - Technical debt and org optimization
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
+- <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - User acceptance testing patterns
 

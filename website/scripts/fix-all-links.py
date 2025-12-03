@@ -58,18 +58,23 @@ def fix_links_in_file(file_path: Path):
                 # Already absolute path
                 absolute_path = link_url
             elif link_url.startswith("../"):
-                # Relative path with parent directory
+                # Relative path with parent directory - resolve correctly
                 parts = link_url.split("/")
                 up_count = sum(1 for p in parts if p == "..")
                 remaining = "/".join([p for p in parts if p != ".." and p])
                 # Go up from file_dir
                 target_dir = file_dir
                 for _ in range(up_count):
+                    if target_dir == Path("."):
+                        # Can't go up from rag/ root
+                        break
                     target_dir = target_dir.parent
                 if target_dir == Path("."):
                     absolute_path = f"/rag/{remaining}"
                 else:
-                    absolute_path = f"/rag/{target_dir}/{remaining}"
+                    # Build path correctly
+                    target_str = str(target_dir).replace("\\", "/")
+                    absolute_path = f"/rag/{target_str}/{remaining}" if target_str else f"/rag/{remaining}"
             elif link_url.startswith("./"):
                 # Same directory
                 remaining = link_url[2:]
@@ -78,11 +83,21 @@ def fix_links_in_file(file_path: Path):
                 else:
                     absolute_path = f"/rag/{file_dir}/{remaining}"
             else:
-                # Same directory or subdirectory
+                # Same directory or subdirectory (no ../ or ./ prefix)
                 if file_dir == Path("."):
+                    # File is in rag/ root
                     absolute_path = f"/rag/{link_url}"
                 else:
-                    absolute_path = f"/rag/{file_dir}/{link_url}"
+                    # File is in a subdirectory - link is relative to that directory
+                    # If link_url doesn't contain /, it's in same directory
+                    if "/" not in link_url:
+                        # Same directory
+                        file_dir_str = str(file_dir).replace("\\", "/")
+                        absolute_path = f"/rag/{file_dir_str}/{link_url}"
+                    else:
+                        # Subdirectory - resolve relative to file_dir
+                        file_dir_str = str(file_dir).replace("\\", "/")
+                        absolute_path = f"/rag/{file_dir_str}/{link_url}"
             
             # Convert .md to .html if needed
             if absolute_path.endswith(".md"):

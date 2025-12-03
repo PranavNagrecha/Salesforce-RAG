@@ -902,7 +902,7 @@ handleClose() {
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/troubleshooting/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
+- <a href="{{ '/rag/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
 
 **Related Domains**:
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
@@ -912,5 +912,5 @@ handleClose() {
 - <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
 - <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
 - <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
-- <a href="{{ '/rag/troubleshooting/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
+- <a href="{{ '/rag/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
 

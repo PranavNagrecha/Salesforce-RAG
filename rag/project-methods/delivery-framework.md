@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Emphasizes clear scope definition, stakeholder coordination, iterative delivery, and comprehensive quality standards.
 
 **Related Patterns**:
-- <a href="{{ '/rag/project-methods/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies
-- <a href="{{ '/rag/project-methods/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment and CI/CD patterns
-- <a href="{{ '/rag/project-methods/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
+- <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies
+- <a href="{{ '/rag/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment and CI/CD patterns
+- <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
 - <a href="{{ '/rag/project-methods/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 
 ## Sprint-Based Delivery
@@ -311,9 +311,9 @@ Avoid this framework when:
 
 ## Related Patterns
 
-- <a href="{{ '/rag/project-methods/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
-- <a href="{{ '/rag/project-methods/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment and CI/CD patterns, source control strategies, Metadata API patterns
-- <a href="{{ '/rag/project-methods/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX project structure, commands, scratch org patterns, source tracking
+- <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
+- <a href="{{ '/rag/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment and CI/CD patterns, source control strategies, Metadata API patterns
+- <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX project structure, commands, scratch org patterns, source tracking
 - <a href="{{ '/rag/project-methods/operations/release-governance.html' | relative_url }}">Release Governance</a> - Change Advisory Boards, approval workflows, risk-based release checklists
 - <a href="{{ '/rag/project-methods/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD automation, unlocked packages, sandbox seeding, rollback patterns
 

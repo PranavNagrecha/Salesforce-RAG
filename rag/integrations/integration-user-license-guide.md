@@ -46,8 +46,8 @@ The Salesforce Integration User License is a free API-only license designed for 
 
 **Recommended Reading**:
 - <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
-- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
 - <a href="{{ '/rag/integrations/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management basics
 
 ## License Details
@@ -658,7 +658,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Use MuleSoft's Salesforce connector
 - Document MuleSoft-Salesforce integration
 
-**Related**: <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Patterns for MuleSoft and Dell Boomi integrations
+**Related**: <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Patterns for MuleSoft and Dell Boomi integrations
 
 ### Integration with Dell Boomi
 
@@ -674,7 +674,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Use Boomi's Salesforce connector for operations
 - Document Boomi-Salesforce integration
 
-**Related**: <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Patterns for MuleSoft and Dell Boomi integrations
+**Related**: <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Patterns for MuleSoft and Dell Boomi integrations
 
 ### REST API Integration Patterns
 
@@ -690,7 +690,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Handle API limits appropriately
 - Monitor API usage
 
-**Related**: <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Decision framework for integration patterns
+**Related**: <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Decision framework for integration patterns
 
 ### Bulk API Considerations
 
@@ -706,7 +706,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Implement error handling for failed records
 - Use appropriate batch sizes
 
-**Related**: <a href="{{ '/rag/integrations/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
+**Related**: <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
 
 ## Summary
 
@@ -830,16 +830,16 @@ The Salesforce Integration User License provides a cost-effective and secure way
 
 **See Also**:
 - <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns for integration users
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns for integration users
 
 **Related Domains**:
-- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi integration patterns
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
-- <a href="{{ '/rag/integrations/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi integration patterns
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
+- <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
 
-- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi integration patterns
-- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi integration patterns
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
 - <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
-- <a href="{{ '/rag/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns for integration users
-- <a href="{{ '/rag/integrations/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
+- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns for integration users
+- <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
 

@@ -461,7 +461,7 @@ Avoid portal architecture when:
 - <a href="{{ '/rag/architecture/security/sharing-sets-and-portals.html' | relative_url }}">Sharing Sets and Portals</a> - Experience Cloud sharing patterns
 
 **Related Domains**:
-- <a href="{{ '/rag/architecture/architecture/mobile-strategy.html' | relative_url }}">Mobile Strategy</a> - Mobile portal optimization
+- <a href="{{ '/rag/architecture/mobile-strategy.html' | relative_url }}">Mobile Strategy</a> - Mobile portal optimization
 - <a href="{{ '/rag/architecture/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Custom component development for portals
 - <a href="{{ '/rag/architecture/development/omnistudio-patterns.html' | relative_url }}">OmniStudio Patterns</a> - OmniStudio patterns for portals
 

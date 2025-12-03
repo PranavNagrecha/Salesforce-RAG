@@ -284,8 +284,8 @@ Use free Integration User licenses for system-to-system integrations rather than
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection and license availability
-- <a href="{{ '/rag/architecture/architecture/salesforce-pricing-negotiation.html' | relative_url }}">Salesforce Pricing Negotiation</a> - License cost optimization
+- <a href="{{ '/rag/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection and license availability
+- <a href="{{ '/rag/architecture/salesforce-pricing-negotiation.html' | relative_url }}">Salesforce Pricing Negotiation</a> - License cost optimization
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Integration User License setup and configuration

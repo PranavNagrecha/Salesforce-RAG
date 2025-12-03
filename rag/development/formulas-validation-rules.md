@@ -433,9 +433,9 @@ When creating formulas, validation rules, or lookup filters:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Automation patterns for business logic
-- <a href="{{ '/rag/development/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Declarative configuration patterns
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling in validation rules
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Automation patterns for business logic
+- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Declarative configuration patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling in validation rules
 
 **Related Domains**:
 - <a href="{{ '/rag/development/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Field and object configuration

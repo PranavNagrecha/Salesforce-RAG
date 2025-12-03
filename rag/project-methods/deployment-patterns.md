@@ -16,8 +16,8 @@ last_reviewed: "2025-01-XX"
 This guide covers Salesforce deployment strategies, source control patterns, deployment best practices, Metadata API usage, and package development patterns. These patterns are essential for managing Salesforce development lifecycle and ensuring reliable deployments.
 
 **Related Patterns**:
-- <a href="{{ '/rag/project-methods/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
-- <a href="{{ '/rag/project-methods/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
+- <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
 
 ## Consensus Best Practices
 
@@ -246,7 +246,7 @@ force-app/
 
 ## Related Patterns
 
-- <a href="{{ '/rag/project-methods/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
-- <a href="{{ '/rag/project-methods/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
+- <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 - <a href="{{ '/rag/project-methods/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD automation patterns
 

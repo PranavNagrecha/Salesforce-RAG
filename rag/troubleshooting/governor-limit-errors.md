@@ -546,7 +546,7 @@ public class ProcessQueueable implements Queueable {
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/troubleshooting/troubleshooting/common-apex-errors.html' | relative_url }}">Common Apex Errors</a> - Other common Apex errors
+- <a href="{{ '/rag/troubleshooting/common-apex-errors.html' | relative_url }}">Common Apex Errors</a> - Other common Apex errors
 
 **Related Domains**:
 - <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Complete governor limits guide

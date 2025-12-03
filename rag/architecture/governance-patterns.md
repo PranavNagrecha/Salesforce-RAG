@@ -368,8 +368,8 @@ Think of governance as enabling quality, security, and sustainability, not const
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/org-strategy.html' | relative_url }}">Org Strategy</a> - Org structure and governance implications
-- <a href="{{ '/rag/architecture/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Project planning and governance
+- <a href="{{ '/rag/architecture/org-strategy.html' | relative_url }}">Org Strategy</a> - Org structure and governance implications
+- <a href="{{ '/rag/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Project planning and governance
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and change management

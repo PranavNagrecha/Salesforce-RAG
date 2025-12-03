@@ -25,9 +25,9 @@ Understanding the order of execution in Salesforce is critical for architects an
 - Familiarity with record save operations
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex trigger patterns
-- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow automation patterns
-- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling in automation
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex trigger patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow automation patterns
+- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling in automation
 
 ## Complete Order of Execution
 
@@ -363,8 +363,8 @@ If multiple triggers exist for the same object and event:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow execution patterns and timing
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex trigger patterns and execution
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow execution patterns and timing
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex trigger patterns and execution
 
 **Related Domains**:
 - <a href="{{ '/rag/development/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Async processing patterns

@@ -360,8 +360,8 @@ Think of org strategy as starting with simplest approach (single org) and adding
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection for org strategy
-- <a href="{{ '/rag/architecture/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Governance implications of org strategy
+- <a href="{{ '/rag/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection for org strategy
+- <a href="{{ '/rag/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Governance implications of org strategy
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Multi-org integration patterns

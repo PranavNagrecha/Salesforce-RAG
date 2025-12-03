@@ -391,11 +391,11 @@ When defining architect role:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/architecture/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Leading development teams
-- <a href="{{ '/rag/architecture/architecture/stakeholder-communication.html' | relative_url }}">Stakeholder Communication</a> - Communicating with stakeholders
-- <a href="{{ '/rag/architecture/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Estimating project work
+- <a href="{{ '/rag/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Leading development teams
+- <a href="{{ '/rag/architecture/stakeholder-communication.html' | relative_url }}">Stakeholder Communication</a> - Communicating with stakeholders
+- <a href="{{ '/rag/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Estimating project work
 
 **Related Domains**:
-- <a href="{{ '/rag/architecture/architecture/diagramming-patterns.html' | relative_url }}">Diagramming Patterns</a> - Creating architectural diagrams
-- <a href="{{ '/rag/architecture/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Establishing org governance
+- <a href="{{ '/rag/architecture/diagramming-patterns.html' | relative_url }}">Diagramming Patterns</a> - Creating architectural diagrams
+- <a href="{{ '/rag/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Establishing org governance
 

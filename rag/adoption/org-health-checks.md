@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks. These patterns are essential for maintaining org health, identifying optimization opportunities, and ensuring long-term system sustainability.
 
 **Related Patterns**:
-- <a href="{{ '/rag/adoption/adoption/user-readiness.html' | relative_url }}">User Readiness</a> - User training and adoption
-- <a href="{{ '/rag/adoption/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
-- <a href="{{ '/rag/adoption/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
+- <a href="{{ '/rag/adoption/user-readiness.html' | relative_url }}">User Readiness</a> - User training and adoption
+- <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ This guide covers org health check patterns for Salesforce, including technical 
 - Familiarity with governance and compliance requirements
 
 **Recommended Reading**:
-- <a href="{{ '/rag/adoption/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
-- <a href="{{ '/rag/adoption/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
-- <a href="{{ '/rag/adoption/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
+- <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 
 ## Consensus Best Practices
 
@@ -333,8 +333,8 @@ This guide covers org health check patterns for Salesforce, including technical 
 
 ## Related Patterns
 
-- <a href="{{ '/rag/adoption/adoption/user-readiness.html' | relative_url }}">User Readiness</a> - User training and adoption
-- <a href="{{ '/rag/adoption/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
-- <a href="{{ '/rag/adoption/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
-- <a href="{{ '/rag/adoption/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring patterns
+- <a href="{{ '/rag/adoption/user-readiness.html' | relative_url }}">User Readiness</a> - User training and adoption
+- <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
+- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring patterns
 

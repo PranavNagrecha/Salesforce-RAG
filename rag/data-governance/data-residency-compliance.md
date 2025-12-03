@@ -371,5 +371,5 @@ This guide covers data residency and compliance patterns for Salesforce, includi
 - <a href="{{ '/rag/data-governance/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
 - <a href="{{ '/rag/data-governance/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
 - <a href="{{ '/rag/data-governance/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
-- <a href="{{ '/rag/data-governance/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality & Stewardship</a> - Data quality patterns
+- <a href="{{ '/rag/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality & Stewardship</a> - Data quality patterns
 

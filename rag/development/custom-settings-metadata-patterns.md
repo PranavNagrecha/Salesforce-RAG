@@ -18,7 +18,7 @@ last_reviewed: "2025-01-XX"
 This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.
 
 **Related Patterns**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 - <a href="{{ '/rag/development/integrations/integration-platform-patterns.html' | relative_url }}">Integration Patterns</a> - Integration configuration
 
 ## Prerequisites
@@ -30,7 +30,7 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 - Familiarity with custom objects and fields
 
 **Recommended Reading**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 - <a href="{{ '/rag/development/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment strategies
 
 ## Consensus Best Practices
@@ -263,7 +263,7 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 
 **Related Domains**:
 - <a href="{{ '/rag/development/integrations/integration-platform-patterns.html' | relative_url }}">Integration Patterns</a> - Integration configuration

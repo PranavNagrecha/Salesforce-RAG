@@ -694,7 +694,7 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/troubleshooting/troubleshooting/governor-limit-errors.html' | relative_url }}">Governor Limit Errors</a> - Governor limit-specific errors
+- <a href="{{ '/rag/troubleshooting/governor-limit-errors.html' | relative_url }}">Governor Limit Errors</a> - Governor limit-specific errors
 
 **Related Domains**:
 - <a href="{{ '/rag/troubleshooting/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency</a> - Row locking patterns
