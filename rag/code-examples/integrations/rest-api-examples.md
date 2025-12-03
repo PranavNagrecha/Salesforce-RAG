@@ -17,7 +17,7 @@ REST API integrations enable real-time, synchronous communication between Salesf
 **Related Patterns**:
 - <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Apex integration layer examples
+- <a href="{{ '/rag/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Apex integration layer examples
 
 ## Examples
 

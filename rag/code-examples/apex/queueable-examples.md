@@ -112,7 +112,7 @@ private class EmailNotificationQueueableTest {
 **Pattern**: Queueable chaining - one job triggers another
 **Use Case**: Multi-step async operations (Job A → Job B → Job C)
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns#pattern-2-chained-queueable-jobs.html' | relative_url }}">Chained Queueable Jobs</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html#pattern-2-chained-queueable-jobs' | relative_url }}">Chained Queueable Jobs</a>
 
 **Problem**:
 You need to perform a multi-step integration: (1) Query external API, (2) Transform data, (3) Update Salesforce records. Each step should run as a chained Queueable job.
@@ -226,7 +226,7 @@ Id jobId = System.enqueueJob(firstJob);
 **Pattern**: Queueable performing callouts after DML
 **Use Case**: Integration scenarios requiring callouts after record updates
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns#pattern-3-queueable-with-callouts.html' | relative_url }}">Queueable with Callouts</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html#pattern-3-queueable-with-callouts' | relative_url }}">Queueable with Callouts</a>
 
 **Problem**:
 You need to create a record in Salesforce, then call an external API to sync the data. The Queueable job performs the callout after the DML completes.
@@ -322,7 +322,7 @@ Id jobId = System.enqueueJob(syncJob);
 **Pattern**: Queueable with retry logic and exponential backoff
 **Use Case**: Handling transient errors in async operations
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns#pattern-4-queueable-retry-pattern.html' | relative_url }}">Queueable Retry Pattern</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html#pattern-4-queueable-retry-pattern' | relative_url }}">Queueable Retry Pattern</a>
 
 **Problem**:
 You need to call an external API that may be temporarily unavailable. The Queueable job should retry with increasing delays (1s, 2s, 4s) up to 3 attempts.
@@ -453,7 +453,7 @@ Id jobId = System.enqueueJob(job);
 **Pattern**: Queueable job monitoring and status tracking
 **Use Case**: Monitoring async operations and tracking execution
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns#pattern-5-queueable-monitoring.html' | relative_url }}">Queueable Monitoring</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html#pattern-5-queueable-monitoring' | relative_url }}">Queueable Monitoring</a>
 
 **Problem**:
 You need to monitor Queueable job execution, track execution time, detect failures, and send alerts on errors.

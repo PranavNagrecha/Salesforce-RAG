@@ -16,7 +16,7 @@ Platform Events enable event-driven architecture in Salesforce, allowing decoupl
 
 **Related Patterns**:
 - <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Event-driven architecture patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/cdc-examples.html' | relative_url }}">Change Data Capture Examples</a> - CDC event patterns
+- <a href="{{ '/rag/code-examples/integrations/cdc-examples.html' | relative_url }}">Change Data Capture Examples</a> - CDC event patterns
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration patterns
 
 ## Examples

@@ -279,7 +279,7 @@ Use free Integration User licenses for system-to-system integrations rather than
 - <a href="{{ '/rag/architecture/salesforce-pricing-negotiation.html' | relative_url }}">Salesforce Pricing Negotiation</a> - License cost optimization
 
 **Related Domains**:
-- <a href="{{ '/rag/architecture/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Integration User License setup and configuration
+- <a href="{{ '/rag/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Integration User License setup and configuration
 - <a href="{{ '/rag/architecture/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management for different license types
 
 ## Under-Licensing Users

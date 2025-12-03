@@ -155,7 +155,7 @@ export default class AccountViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity.html' | relative_url }}">Referential Integrity</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity' | relative_url }}">Referential Integrity</a>
 
 ---
 
@@ -191,7 +191,7 @@ export default class MyComponent extends LightningElement {
 - For getters/setters: Decorate only the getter
 - Do not mutate @api properties internally
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators' | relative_url }}">LWC Best Practices</a>
 
 ---
 

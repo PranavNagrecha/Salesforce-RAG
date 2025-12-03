@@ -280,7 +280,7 @@ insert contact;
 **Pattern**: Validating multiple records efficiently
 **Use Case**: Validating bulk data operations
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a>
+**Related Patterns**: <a href="{{ '/rag/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a>
 
 **Problem**:
 You need to validate multiple records efficiently in bulk operations.
@@ -401,5 +401,5 @@ if (!separated.get('invalid').isEmpty()) {
 ## Related Examples
 
 - <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
-- <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
+- <a href="{{ '/rag/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
 

@@ -127,7 +127,7 @@ export default class MyComponent extends LightningElement {
 - Use camelCase in JavaScript, kebab-case in HTML
 - Verify property names match between JS and HTML
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -180,7 +180,7 @@ const event = new CustomEvent('recordupdate', { // Valid
 - Event handlers in HTML: `on` + lowercase event name
 - Follow LWC naming conventions strictly
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#custom-events.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#custom-events' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -234,7 +234,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/lwc-api-reference.html#wire.html' | relative_url }}">LWC API Reference</a>, <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/lwc-api-reference.html#wire' | relative_url }}">LWC API Reference</a>, <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -298,7 +298,7 @@ export default class MyComponent extends LightningElement {
 - Implement `render()` method for multiple templates
 - Return template reference, not string
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates' | relative_url }}">LWC Best Practices</a>
 
 ---
 

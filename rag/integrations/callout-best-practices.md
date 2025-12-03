@@ -62,7 +62,7 @@ req.setEndpoint('https://api.example.com/endpoint');
 - **Authentication Protocol**: OAuth 2.0, Basic Auth, Certificate
 - **Per-User Callout**: Enable if user-specific authentication required
 
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials.html' | relative_url }}">Integration Examples</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials' | relative_url }}">Integration Examples</a>
 
 ## Implement Proper Error Handling
 
@@ -538,7 +538,7 @@ public static void checkCalloutHealth(String integrationName) {
 - **Correlate requests**: Use request IDs for tracing
 - **Set up dashboards**: Visualize callout health and performance
 
-**Related Patterns**: <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a>
+**Related Patterns**: <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a>
 
 ## Avoid DML Before Callout
 
@@ -720,5 +720,5 @@ private class ComprehensiveCalloutTest {
 - **Achieve 100% coverage**: Cover all code paths
 
 **Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
-- <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 

@@ -180,7 +180,7 @@ permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">
 
 - <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events and event-driven patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Integration pattern selection
-- <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - CDC monitoring and event processing metrics
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - CDC monitoring and event processing metrics
 
 ## Tradeoffs: CDC vs Platform Events vs Other Patterns
 

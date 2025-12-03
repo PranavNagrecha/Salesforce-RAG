@@ -2,7 +2,7 @@
 layout: default
 title: SOQL Reference
 description: This reference provides SOQL syntax, functions, and common query patterns for Salesforce data access
-permalink: /rag/development/apex-patterns.html#security-enforcement' | relative_url }}">Apex Patterns</a>, <a href="{{ '/rag/security.html' | relative_url }}">Security Patterns</a>
+permalink: /rag/development/apex-patterns.html#security-enforcement' | relative_url }}">Apex Patterns</a>, <a href="{{ '/rag/security/' | relative_url }}">Security Patterns</a>
 
 ---
 
@@ -133,5 +133,5 @@ List<Contact> nextPage = [
 - `OFFSET` has performance limitations (max 2000)
 - Cursor-based approach scales better
 
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#selector-layer.html' | relative_url }}">Selector Layer</a> - Selector pattern implementation
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns.html#selector-layer' | relative_url }}">Selector Layer</a> - Selector pattern implementation
 

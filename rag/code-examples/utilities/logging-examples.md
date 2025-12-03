@@ -260,7 +260,7 @@ public with sharing class LOG_LogMessageUtility {
 **Pattern**: Integrating with external logging systems
 **Use Case**: Centralized logging across multiple systems
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a>
 
 **Problem**:
 You need to send logs to an external logging system (e.g., Splunk, OpenSearch).
@@ -359,5 +359,5 @@ ExternalLoggingService.enqueueLogs(logs);
 ## Related Examples
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
-- <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
+- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
 

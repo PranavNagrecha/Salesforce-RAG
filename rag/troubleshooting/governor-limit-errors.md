@@ -189,7 +189,7 @@ public static void processCalloutsAsync(Set<Id> contactIds) {
 - Batch callouts when possible
 - Monitor callout count
 
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#asynchronous-apex-patterns.html' | relative_url }}">Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns.html#asynchronous-apex-patterns' | relative_url }}">Apex Patterns</a>
 
 ---
 
