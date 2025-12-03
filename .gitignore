@@ -1,4 +1,15 @@
-# Jekyll
+# Only website/ and rag/ should be deployed
+# Exclude everything else
+
+# Exclude all root-level files and directories except essential ones
+/*
+!/.gitignore
+!/.github/
+!/scripts/
+!/website/
+!/rag/
+
+# Jekyll build artifacts
 _site/
 .sass-cache/
 .jekyll-cache/
@@ -15,6 +26,7 @@ Gemfile.lock
 *.swp
 *.swo
 *~
+.cursor/
 
 # OS
 .DS_Store
