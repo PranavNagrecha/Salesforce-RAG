@@ -1,29 +1,52 @@
 # Website Rules and Guidelines
 
-This document defines the rules and standards for maintaining the Salesforce RAG Knowledge Library website.
+## 🚀 Quick Start: Auto-Sync Homepage
+
+**Just run this command:**
+```bash
+python website/scripts/sync-homepage.py
+```
+
+That's it. The script will:
+- ✅ Scan `rag-index.md` for all categories
+- ✅ Check homepage for missing categories
+- ✅ Add any missing categories automatically
+- ✅ Update all descriptions to match `rag-index.md` exactly
+- ✅ Ensure all links work correctly
+
+**Then commit:**
+```bash
+git add website/root/index.md
+git commit -m "Auto-sync homepage categories"
+git push
+```
+
+---
 
 ## General Principles
 
-1. **Consistency First**: All content must be consistent across homepage, index pages, and individual pages
-2. **User Experience**: Navigation should be intuitive and all links must work
-3. **SEO Optimization**: All pages must have proper meta tags, descriptions, and structured data
-4. **Accessibility**: Follow WCAG 2.1 AA standards for accessibility
-5. **Mobile Responsive**: All layouts must work on mobile, tablet, and desktop
+1. **Automation First**: Use `sync-homepage.py` - don't manually edit homepage categories
+2. **Consistency**: All content must match between homepage and `rag-index.md`
+3. **User Experience**: Navigation should be intuitive and all links must work
+4. **SEO Optimization**: All pages must have proper meta tags, descriptions, and structured data
+5. **Accessibility**: Follow WCAG 2.1 AA standards for accessibility
+6. **Mobile Responsive**: All layouts must work on mobile, tablet, and desktop
 
 ## Homepage Rules
 
 ### Category Cards
 
-1. **Must Match Index**: Homepage card descriptions MUST exactly match the section descriptions in `rag/rag-index.md`
-2. **Complete Coverage**: ALL major domains from `rag-index.md` must have homepage cards
-3. **Consistent Formatting**: All cards must follow the same structure:
-   ```html
-   <div class="domain-card">
-     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#section-id">🏗️ Section Name</a></h3>
-     <p>Exact description from rag-index.md</p>
-   </div>
-   ```
-4. **Anchor Links**: All cards must link to the corresponding section in `rag-index.html` using proper anchor IDs
+1. **Auto-Sync Only**: Use `sync-homepage.py` to update homepage - don't manually edit
+2. **Must Match Index**: Homepage card descriptions MUST exactly match `rag-index.md` section descriptions
+3. **Complete Coverage**: ALL major domains from `rag-index.md` must have homepage cards (script handles this)
+4. **Consistent Formatting**: All cards follow the same structure (script handles this)
+
+### When Adding New Domain to rag-index.md
+
+1. Add section to `rag/rag-index.md`
+2. **Run**: `python website/scripts/sync-homepage.py`
+3. Commit changes
+4. Done!
 
 ### Link Rules
 
@@ -37,13 +60,13 @@ This document defines the rules and standards for maintaining the Salesforce RAG
 ### Descriptions
 
 1. **Exact Match**: Homepage descriptions must exactly match `rag-index.md` section descriptions
-2. **No Summaries**: Don't create summaries - use the exact text from the index
-3. **Consistency Check**: Before deploying, verify all descriptions match
+2. **Auto-Sync**: Use `sync-homepage.py` to ensure they match
+3. **No Manual Edits**: Don't manually edit homepage descriptions - they'll be overwritten
 
 ### Navigation
 
 1. **Complete Index**: The `rag-index.md` must include ALL domains
-2. **All Domains Visible**: Homepage must show cards for ALL major domains
+2. **All Domains Visible**: Homepage must show cards for ALL major domains (script ensures this)
 3. **No Hidden Content**: If it's in the index, it should be accessible from homepage
 
 ## File Organization Rules
@@ -90,34 +113,36 @@ This document defines the rules and standards for maintaining the Salesforce RAG
 
 ### Testing Before Deploy
 
-1. **Link Validation**: Verify all links work
-2. **Description Match**: Verify homepage matches index
-3. **All Categories**: Verify all domains have homepage cards
-4. **Mobile Check**: Verify mobile responsiveness
+1. **Run Sync Script**: `python website/scripts/sync-homepage.py`
+2. **Link Validation**: Verify all links work
+3. **Description Match**: Verify homepage matches index (script does this)
+4. **All Categories**: Verify all domains have homepage cards (script does this)
+5. **Mobile Check**: Verify mobile responsiveness
 
 ## Maintenance Rules
 
 ### When Adding New Domain
 
 1. Add section to `rag/rag-index.md`
-2. Add homepage card to `website/root/index.md`
-3. Ensure description matches exactly
-4. Test link works
-5. Deploy
+2. **Run**: `python website/scripts/sync-homepage.py`
+3. Commit both files
+4. Deploy
+5. Done!
 
 ### When Updating Descriptions
 
 1. Update `rag/rag-index.md` first
-2. Then update `website/root/index.md` to match
-3. Never update one without the other
-4. Always verify they match before committing
+2. **Run**: `python website/scripts/sync-homepage.py`
+3. Commit both files
+4. Done!
+
+**Never manually edit homepage categories - always use the sync script!**
 
 ## Quality Checklist
 
-Before every deployment, verify:
+Before every deployment:
 
-- [ ] All homepage card descriptions match `rag-index.md` exactly
-- [ ] All domains from index have homepage cards
+- [ ] Run `python website/scripts/sync-homepage.py`
 - [ ] All links use `relative_url` filter
 - [ ] All links work (test anchor links)
 - [ ] Mobile responsive layout works
@@ -128,15 +153,16 @@ Before every deployment, verify:
 ## Violations
 
 If you find:
-- Homepage descriptions that don't match index → Update homepage to match
-- Missing homepage cards for domains → Add cards
+- Homepage descriptions that don't match index → **Run sync script**
+- Missing homepage cards for domains → **Run sync script**
 - Broken links → Fix immediately
-- Inconsistent formatting → Standardize
+- Inconsistent formatting → **Run sync script**
 
 ## Questions?
 
-If unsure about any rule:
-1. Check this document first
-2. Check `website/docs/` for additional guidance
-3. Follow the principle: "Match the index, keep it simple, make it work"
+**Just run the script:**
+```bash
+python website/scripts/sync-homepage.py
+```
 
+That's it. No manual work needed.
