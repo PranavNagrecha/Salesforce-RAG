@@ -76,6 +76,6 @@ trigger [ObjectName]Trigger on [ObjectName] (before insert, before update, after
 
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/templates/code-examples/apex/trigger-examples.html' | relative_url }}">Trigger Examples</a>
-- <a href="{{ '/rag/code-examples/templates/development/apex-patterns.html' | relative_url }}">Apex Patterns</a>
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a>
 - <a href="{{ '/rag/code-examples/templates/development/order-of-execution.html' | relative_url }}">Order of Execution</a>
 

@@ -379,7 +379,7 @@ WHERE Id NOT IN (SELECT ProfileId FROM User WHERE IsActive = true)
 ## Related Patterns
 
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Complete SOQL patterns and examples
-- <a href="{{ '/rag/api-reference/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex query patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex query patterns
 - <a href="{{ '/rag/api-reference/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a> - Query optimization
 - <a href="{{ '/rag/development/apex-patterns.html#selector-layer' | relative_url }}">Selector Layer</a> - Selector pattern implementation
 

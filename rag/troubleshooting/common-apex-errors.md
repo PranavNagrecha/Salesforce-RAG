@@ -700,10 +700,10 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 - <a href="{{ '/rag/troubleshooting/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency</a> - Row locking patterns
 - <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a> - Limit management
-- <a href="{{ '/rag/troubleshooting/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
 
 - <a href="{{ '/rag/troubleshooting/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency</a> - Row locking patterns
 - <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a> - Limit management
-- <a href="{{ '/rag/troubleshooting/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
 

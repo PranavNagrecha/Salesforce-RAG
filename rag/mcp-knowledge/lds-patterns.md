@@ -96,7 +96,7 @@ async handleUpdate() {
 
 **Related Patterns**:
 - <a href="{{ '/rag/mcp-knowledge/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
-- <a href="{{ '/rag/mcp-knowledge/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - When to use Apex vs LDS
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - When to use Apex vs LDS
 - <a href="{{ '/rag/mcp-knowledge/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query patterns
 
 **How This Complements Existing RAG**:

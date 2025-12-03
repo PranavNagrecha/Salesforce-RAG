@@ -398,5 +398,5 @@ public static List<Contact> selectByIdWithCases(Set<Id> ids) {
 - <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
 - <a href="{{ '/rag/code-examples/apex/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a> - Domain layer patterns
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - SOQL query patterns
-- <a href="{{ '/rag/code-examples/apex/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 

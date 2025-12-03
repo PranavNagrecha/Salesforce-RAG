@@ -102,7 +102,7 @@ force-app/main/default/
 
 **Related Patterns**:
 - <a href="{{ '/rag/mcp-knowledge/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complements with MCP-validated practices
-- <a href="{{ '/rag/mcp-knowledge/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Related backend patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Related backend patterns
 - [Security Patterns](../security) - Security considerations
 
 **How This Complements Existing RAG**:

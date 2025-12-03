@@ -26,7 +26,7 @@ This guide provides comprehensive best practices for implementing HTTP callouts 
 - Knowledge of error handling patterns
 
 **Recommended Reading**:
-- <a href="{{ '/rag/integrations/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 - <a href="{{ '/rag/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
 - <a href="{{ '/rag/integrations/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
