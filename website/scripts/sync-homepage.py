@@ -10,6 +10,28 @@ This script:
 5. Ensures all links work correctly
 
 Just run: python website/scripts/sync-homepage.py
+
+LESSONS LEARNED (Don't repeat these mistakes):
+1. Finding closing </div> tag: Must count nested divs, not just find first </div>
+   - domain-grid contains domain-card divs, so need to track depth
+   - Use depth counter: +1 for <div, -1 for </div>, stop when depth == 0
+2. File organization: Always scan actual rag/ folder, don't just reference rag-index.md
+   - This ensures new files are automatically included
+   - Extracts metadata from actual files, not stale index
+3. Homepage sync: Must replace entire domain-grid section, not just append
+   - Find grid_start and grid_end correctly
+   - Replace everything between, including all cards
+4. Metadata extraction: Handle missing frontmatter gracefully
+   - Fall back to filename if no title
+   - Extract from Overview section if no description
+   - Don't fail if metadata is missing
+5. Domain mapping: Map folder names to section names consistently
+   - Use FOLDER_TO_SECTION dict for all mappings
+   - Handle edge cases (quick-start vs Quick Start Guides)
+6. Verification: Always verify output structure
+   - Check that correct number of cards are generated
+   - Ensure closing tags are correct
+   - Validate HTML structure
 """
 
 import re
@@ -92,7 +114,12 @@ def get_anchor_id(section_name):
 
 
 def extract_frontmatter(content):
-    """Extract YAML frontmatter from markdown file"""
+    """Extract YAML frontmatter from markdown file
+    
+    LESSON LEARNED: Handle missing frontmatter gracefully
+    - Not all files have frontmatter
+    - Return empty dict if missing, don't fail
+    """
     if not content.startswith('---'):
         return {}
     
@@ -148,7 +175,13 @@ def extract_key_topics(content):
 
 
 def scan_rag_folder(rag_path):
-    """Scan rag/ folder and organize files by domain"""
+    """Scan rag/ folder and organize files by domain
+    
+    LESSON LEARNED: Always scan actual rag/ folder, don't just reference rag-index.md
+    - This ensures new files are automatically included
+    - Extracts metadata from actual files, not stale index
+    - Handles files in subdirectories correctly
+    """
     files_by_domain = defaultdict(list)
     
     print("📂 Scanning rag/ folder structure...")
@@ -401,10 +434,31 @@ def update_homepage(rag_index_path, homepage_path):
     
     # Find the domain-grid section
     grid_start = homepage_content.find('<div class="domain-grid">')
-    grid_end = homepage_content.find('</div>', grid_start) + 6
-    
     if grid_start == -1:
         print("❌ ERROR: Could not find domain-grid section!")
+        return False
+    
+    # LESSON LEARNED: Must count nested divs to find correct closing tag
+    # domain-grid contains domain-card divs, so can't just find first </div>
+    # Track depth: +1 for <div, -1 for </div, stop when depth == 0
+    pos = grid_start
+    depth = 0
+    grid_end = -1
+    while pos < len(homepage_content):
+        if homepage_content[pos:pos+4] == '<div':
+            depth += 1
+            pos = homepage_content.find('>', pos) + 1
+        elif homepage_content[pos:pos+6] == '</div>':
+            depth -= 1
+            if depth == 0:
+                grid_end = pos + 6
+                break
+            pos += 6
+        else:
+            pos += 1
+    
+    if grid_end == -1:
+        print("❌ ERROR: Could not find closing tag for domain-grid!")
         return False
     
     # Generate all cards
@@ -419,6 +473,12 @@ def update_homepage(rag_index_path, homepage_path):
     # Write updated homepage
     with open(homepage_path, 'w', encoding='utf-8') as f:
         f.write(new_homepage)
+    
+    # LESSON LEARNED: Verify output structure
+    # Check that correct number of cards are in the grid
+    card_count = new_homepage[grid_start:grid_start+5000].count('domain-card')
+    if card_count != len(sections):
+        print(f"   ⚠️  WARNING: Expected {len(sections)} cards, found {card_count}")
     
     print(f"   ✅ Updated homepage with {len(sections)} categories")
     
