@@ -3,12 +3,12 @@
     "title": "Salesforce RAG Knowledge Library",
     "description": "A comprehensive knowledge library containing implementation patterns, best practices, and architectural guidance.",
     "version": "1.0",
-    "last_updated": "2025-12-03T08:55:10.648667"
+    "last_updated": "2025-12-03T09:00:14.780080"
   },
   "statistics": {
     "total_files": 160,
     "total_folders": 21,
-    "last_updated": "2025-12-03T08:55:10.648667"
+    "last_updated": "2025-12-03T09:00:14.780080"
   },
   "folder_statistics": {
     "code-examples": 47,
@@ -40,7 +40,7 @@
       "folder": "adoption",
       "title": "Org Health Checks for Salesforce",
       "description": "This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks",
-      "url": "adoption/org-health-checks.html",
+      "url": "rag/adoption/org-health-checks.html",
       "modified": "2025-12-03T07:53:00.900453",
       "size": 398
     },
@@ -50,7 +50,7 @@
       "folder": "adoption",
       "title": "User Readiness for Salesforce",
       "description": "This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption",
-      "url": "adoption/user-readiness.html",
+      "url": "rag/adoption/user-readiness.html",
       "modified": "2025-12-03T00:06:55.315068",
       "size": 13854
     },
@@ -70,7 +70,7 @@
       "folder": "api-reference",
       "title": "Lightning Data Service (LDS) API Reference",
       "description": "This reference provides API signatures, parameters, and usage examples for Lightning Data Service adapters used in Lightning Web Components",
-      "url": "api-reference/lds-api-reference.html",
+      "url": "rag/api-reference/lds-api-reference.html",
       "modified": "2025-12-03T00:06:55.314546",
       "size": 10051
     },
@@ -80,7 +80,7 @@
       "folder": "api-reference",
       "title": "LWC API Reference",
       "description": "This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns",
-      "url": "api-reference/lwc-api-reference.html",
+      "url": "rag/api-reference/lwc-api-reference.html",
       "modified": "2025-12-03T00:06:55.313916",
       "size": 7470
     },
@@ -90,7 +90,7 @@
       "folder": "api-reference",
       "title": "Platform Events API Reference",
       "description": "This reference provides API signatures, parameters, and usage examples for Platform Events in Salesforce",
-      "url": "api-reference/platform-events-api.html",
+      "url": "rag/api-reference/platform-events-api.html",
       "modified": "2025-12-03T00:06:55.314285",
       "size": 6274
     },
@@ -100,7 +100,7 @@
       "folder": "api-reference",
       "title": "SOQL Reference",
       "description": "This reference provides SOQL syntax, functions, and common query patterns for Salesforce data access",
-      "url": "api-reference/soql-reference.html",
+      "url": "rag/api-reference/soql-reference.html",
       "modified": "2025-12-03T00:06:55.314718",
       "size": 2512
     },
@@ -110,7 +110,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/architect-role.html",
+      "url": "rag/architecture/architect-role.html",
       "modified": "2025-12-03T00:06:55.324300",
       "size": 18360
     },
@@ -120,7 +120,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/diagramming-patterns.html",
+      "url": "rag/architecture/diagramming-patterns.html",
       "modified": "2025-12-03T00:06:55.322423",
       "size": 16760
     },
@@ -130,7 +130,7 @@
       "folder": "architecture",
       "title": "Event-Driven Architecture",
       "description": "Event-driven integration patterns decouple Salesforce from external systems by publishing business events that can be consumed asynchronously by multiple subscribers",
-      "url": "architecture/event-driven-architecture.html",
+      "url": "rag/architecture/event-driven-architecture.html",
       "modified": "2025-12-03T00:06:55.323942",
       "size": 10770
     },
@@ -140,7 +140,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/governance-patterns.html",
+      "url": "rag/architecture/governance-patterns.html",
       "modified": "2025-12-03T00:06:55.322925",
       "size": 17040
     },
@@ -150,7 +150,7 @@
       "folder": "architecture",
       "title": "Mobile Strategy Patterns",
       "description": "Patterns for designing Salesforce mobile strategies, including Salesforce mobile app, mobile-optimized LWCs, and offline considerations",
-      "url": "architecture/mobile-strategy.html",
+      "url": "rag/architecture/mobile-strategy.html",
       "modified": "2025-12-03T08:32:52.744719",
       "size": 2825
     },
@@ -160,7 +160,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/org-edition-selection.html",
+      "url": "rag/architecture/org-edition-selection.html",
       "modified": "2025-12-03T00:06:55.321559",
       "size": 20479
     },
@@ -170,7 +170,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/org-strategy.html",
+      "url": "rag/architecture/org-strategy.html",
       "modified": "2025-12-03T00:06:55.323510",
       "size": 17605
     },
@@ -180,7 +180,7 @@
       "folder": "architecture",
       "title": "Portal Architecture Patterns",
       "description": "Experience Cloud portal architecture patterns for supporting multiple user types with different identity providers, security requirements, and access patterns",
-      "url": "architecture/portal-architecture.html",
+      "url": "rag/architecture/portal-architecture.html",
       "modified": "2025-12-03T08:24:26.892673",
       "size": 13667
     },
@@ -190,7 +190,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/project-estimation.html",
+      "url": "rag/architecture/project-estimation.html",
       "modified": "2025-12-03T00:06:55.322741",
       "size": 19487
     },
@@ -200,7 +200,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/salesforce-pricing-negotiation.html",
+      "url": "rag/architecture/salesforce-pricing-negotiation.html",
       "modified": "2025-12-03T00:06:55.323153",
       "size": 20496
     },
@@ -210,7 +210,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/salesforce-product-evaluation.html",
+      "url": "rag/architecture/salesforce-product-evaluation.html",
       "modified": "2025-12-03T00:06:55.321799",
       "size": 23368
     },
@@ -220,7 +220,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/stakeholder-communication.html",
+      "url": "rag/architecture/stakeholder-communication.html",
       "modified": "2025-12-03T00:06:55.323359",
       "size": 16838
     },
@@ -230,7 +230,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/team-leadership.html",
+      "url": "rag/architecture/team-leadership.html",
       "modified": "2025-12-03T00:06:55.321985",
       "size": 17595
     },
@@ -240,7 +240,7 @@
       "folder": "architecture",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "architecture/user-license-selection.html",
+      "url": "rag/architecture/user-license-selection.html",
       "modified": "2025-12-03T00:06:55.323745",
       "size": 24581
     },
@@ -250,7 +250,7 @@
       "folder": "best-practices",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "best-practices/complex-reporting.html",
+      "url": "rag/best-practices/complex-reporting.html",
       "modified": "2025-12-03T00:06:55.329944",
       "size": 14527
     },
@@ -260,7 +260,7 @@
       "folder": "best-practices",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "best-practices/reports-dashboards.html",
+      "url": "rag/best-practices/reports-dashboards.html",
       "modified": "2025-12-03T08:29:20.919046",
       "size": 22027
     },
@@ -270,7 +270,7 @@
       "folder": "best-practices",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "best-practices/sales-cloud-features.html",
+      "url": "rag/best-practices/sales-cloud-features.html",
       "modified": "2025-12-03T08:29:20.910540",
       "size": 21831
     },
@@ -280,7 +280,7 @@
       "folder": "best-practices",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "best-practices/salesforce-org-staffing.html",
+      "url": "rag/best-practices/salesforce-org-staffing.html",
       "modified": "2025-12-03T00:06:55.331608",
       "size": 20241
     },
@@ -290,7 +290,7 @@
       "folder": "best-practices",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "best-practices/service-cloud-features.html",
+      "url": "rag/best-practices/service-cloud-features.html",
       "modified": "2025-12-03T00:06:55.331374",
       "size": 19405
     },
@@ -310,7 +310,7 @@
       "folder": "code-examples",
       "title": "Domain Layer Code Examples",
       "description": "The Domain Layer encapsulates object-specific business logic and validation",
-      "url": "code-examples/apex/domain-layer-examples.html",
+      "url": "rag/code-examples/apex/domain-layer-examples.html",
       "modified": "2025-12-03T00:06:55.301352",
       "size": 10182
     },
@@ -360,7 +360,7 @@
       "folder": "code-examples",
       "title": "Service Layer Code Examples",
       "description": "The Service Layer coordinates between domain, selector, and integration layers",
-      "url": "code-examples/apex/service-layer-examples.html",
+      "url": "rag/code-examples/apex/service-layer-examples.html",
       "modified": "2025-12-03T00:06:55.301840",
       "size": 18010
     },
@@ -380,7 +380,7 @@
       "folder": "code-examples",
       "title": "Code Examples Index",
       "description": "Complete, working code examples organized by category. All examples are copy-paste ready and follow Salesforce best practices.",
-      "url": "code-examples/code-examples-index.html",
+      "url": "rag/code-examples/code-examples-index.html",
       "modified": "2025-12-03T00:13:15.464946",
       "size": 11440
     },
@@ -390,7 +390,7 @@
       "folder": "code-examples",
       "title": "Record-Triggered Flow Code Examples",
       "description": "Record-Triggered Flows run automatically when records are created or updated, providing declarative automation for common business processes",
-      "url": "code-examples/flow/record-triggered-examples.html",
+      "url": "rag/code-examples/flow/record-triggered-examples.html",
       "modified": "2025-12-03T08:20:19.007482",
       "size": 11531
     },
@@ -400,7 +400,7 @@
       "folder": "code-examples",
       "title": "Screen Flow Code Examples",
       "description": "Screen Flows provide guided user interactions for multi-step processes, data collection, and complex forms with conditional logic",
-      "url": "code-examples/flow/screen-flow-examples.html",
+      "url": "rag/code-examples/flow/screen-flow-examples.html",
       "modified": "2025-12-03T08:20:19.007488",
       "size": 12609
     },
@@ -410,7 +410,7 @@
       "folder": "code-examples",
       "title": "Subflow Code Examples",
       "description": "Subflows are reusable flow components that can be called from other Flows or Apex, enabling code reuse and easier maintenance",
-      "url": "code-examples/flow/subflow-examples.html",
+      "url": "rag/code-examples/flow/subflow-examples.html",
       "modified": "2025-12-03T08:20:19.007479",
       "size": 15907
     },
@@ -420,7 +420,7 @@
       "folder": "code-examples",
       "title": "Bulk API Code Examples",
       "description": "Bulk API enables high-volume data operations in Salesforce",
-      "url": "code-examples/integrations/bulk-api-examples.html",
+      "url": "rag/code-examples/integrations/bulk-api-examples.html",
       "modified": "2025-12-03T07:53:00.910853",
       "size": 9917
     },
@@ -430,7 +430,7 @@
       "folder": "code-examples",
       "title": "HTTP Callout Code Examples",
       "description": "HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs",
-      "url": "code-examples/integrations/callout-examples.html",
+      "url": "rag/code-examples/integrations/callout-examples.html",
       "modified": "2025-12-03T07:53:00.911735",
       "size": 18086
     },
@@ -440,7 +440,7 @@
       "folder": "code-examples",
       "title": "Change Data Capture (CDC) Code Examples",
       "description": "Change Data Capture (CDC) provides real-time change notifications for Salesforce records",
-      "url": "code-examples/integrations/cdc-examples.html",
+      "url": "rag/code-examples/integrations/cdc-examples.html",
       "modified": "2025-12-03T00:06:55.304581",
       "size": 14114
     },
@@ -450,7 +450,7 @@
       "folder": "code-examples",
       "title": "Platform Events Code Examples",
       "description": "Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems",
-      "url": "code-examples/integrations/platform-events-examples.html",
+      "url": "rag/code-examples/integrations/platform-events-examples.html",
       "modified": "2025-12-03T00:06:55.303887",
       "size": 17550
     },
@@ -460,7 +460,7 @@
       "folder": "code-examples",
       "title": "REST POST Request Code Examples",
       "description": "Examples for performing REST POST callouts from Apex using Named Credentials",
-      "url": "code-examples/integrations/post-request-examples.html",
+      "url": "rag/code-examples/integrations/post-request-examples.html",
       "modified": "2025-12-03T08:12:22.904512",
       "size": 965
     },
@@ -470,7 +470,7 @@
       "folder": "code-examples",
       "title": "REST API Code Examples",
       "description": "REST API integrations enable real-time, synchronous communication between Salesforce and external systems",
-      "url": "code-examples/integrations/rest-api-examples.html",
+      "url": "rag/code-examples/integrations/rest-api-examples.html",
       "modified": "2025-12-03T00:06:55.303058",
       "size": 18972
     },
@@ -480,7 +480,7 @@
       "folder": "code-examples",
       "title": "REST Resource Code Examples",
       "description": "Examples for implementing REST resources in Apex with @RestResource and HTTP method annotations",
-      "url": "code-examples/integrations/rest-resource-examples.html",
+      "url": "rag/code-examples/integrations/rest-resource-examples.html",
       "modified": "2025-12-03T08:12:27.213364",
       "size": 732
     },
@@ -500,7 +500,7 @@
       "folder": "code-examples",
       "title": "Lightning Web Component Code Examples",
       "description": "Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce",
-      "url": "code-examples/lwc/component-examples.html",
+      "url": "rag/code-examples/lwc/component-examples.html",
       "modified": "2025-12-03T08:20:19.007528",
       "size": 21462
     },
@@ -510,7 +510,7 @@
       "folder": "code-examples",
       "title": "LWC List View Button Examples",
       "description": "Examples for adding custom LWC-powered buttons to list views",
-      "url": "code-examples/lwc/list-view-button-examples.html",
+      "url": "rag/code-examples/lwc/list-view-button-examples.html",
       "modified": "2025-12-03T08:12:17.934230",
       "size": 1003
     },
@@ -520,7 +520,7 @@
       "folder": "code-examples",
       "title": "LWC PDF Generation Examples",
       "description": "Examples for generating PDFs from Lightning Web Components using Apex and external services",
-      "url": "code-examples/lwc/pdf-generation-examples.html",
+      "url": "rag/code-examples/lwc/pdf-generation-examples.html",
       "modified": "2025-12-03T08:12:05.134097",
       "size": 1130
     },
@@ -530,7 +530,7 @@
       "folder": "code-examples",
       "title": "LWC Service Layer Code Examples",
       "description": "LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic",
-      "url": "code-examples/lwc/service-examples.html",
+      "url": "rag/code-examples/lwc/service-examples.html",
       "modified": "2025-12-03T07:53:00.913444",
       "size": 14856
     },
@@ -540,7 +540,7 @@
       "folder": "code-examples",
       "title": "LWC Jest Testing Code Examples",
       "description": "Jest is the testing framework for Lightning Web Components",
-      "url": "code-examples/lwc/test-examples.html",
+      "url": "rag/code-examples/lwc/test-examples.html",
       "modified": "2025-12-03T07:53:00.914061",
       "size": 20493
     },
@@ -550,7 +550,7 @@
       "folder": "code-examples",
       "title": "LWC Wire Service Code Examples",
       "description": "Wire services provide reactive data access in Lightning Web Components",
-      "url": "code-examples/lwc/wire-examples.html",
+      "url": "rag/code-examples/lwc/wire-examples.html",
       "modified": "2025-12-03T07:53:00.914318",
       "size": 2899
     },
@@ -560,7 +560,7 @@
       "folder": "code-examples",
       "title": "LWC Word Document Generation Examples",
       "description": "Examples for generating Word documents from Lightning Web Components using Apex and external services",
-      "url": "code-examples/lwc/word-document-generation-examples.html",
+      "url": "rag/code-examples/lwc/word-document-generation-examples.html",
       "modified": "2025-12-03T08:12:11.276196",
       "size": 944
     },
@@ -570,7 +570,7 @@
       "folder": "code-examples",
       "title": "Batch Apex Template",
       "description": "Documentation for Batch Apex Template",
-      "url": "code-examples/templates/apex-batch-template.html",
+      "url": "rag/code-examples/templates/apex-batch-template.html",
       "modified": "2025-12-03T00:06:55.307635",
       "size": 2788
     },
@@ -580,7 +580,7 @@
       "folder": "code-examples",
       "title": "Domain Class Template",
       "description": "Documentation for Domain Class Template",
-      "url": "code-examples/templates/apex-domain-template.html",
+      "url": "rag/code-examples/templates/apex-domain-template.html",
       "modified": "2025-12-03T00:06:55.307735",
       "size": 3538
     },
@@ -590,7 +590,7 @@
       "folder": "code-examples",
       "title": "Queueable Apex Template",
       "description": "Documentation for Queueable Apex Template",
-      "url": "code-examples/templates/apex-queueable-template.html",
+      "url": "rag/code-examples/templates/apex-queueable-template.html",
       "modified": "2025-12-03T00:06:55.308306",
       "size": 2206
     },
@@ -600,7 +600,7 @@
       "folder": "code-examples",
       "title": "Scheduled Apex Template",
       "description": "Documentation for Scheduled Apex Template",
-      "url": "code-examples/templates/apex-scheduled-template.html",
+      "url": "rag/code-examples/templates/apex-scheduled-template.html",
       "modified": "2025-12-03T00:06:55.307347",
       "size": 2482
     },
@@ -610,7 +610,7 @@
       "folder": "code-examples",
       "title": "Selector Class Template",
       "description": "Documentation for Selector Class Template",
-      "url": "code-examples/templates/apex-selector-template.html",
+      "url": "rag/code-examples/templates/apex-selector-template.html",
       "modified": "2025-12-03T00:06:55.308588",
       "size": 2166
     },
@@ -620,7 +620,7 @@
       "folder": "code-examples",
       "title": "Service Class Template",
       "description": "Documentation for Service Class Template",
-      "url": "code-examples/templates/apex-service-template.html",
+      "url": "rag/code-examples/templates/apex-service-template.html",
       "modified": "2025-12-03T00:06:55.308095",
       "size": 2987
     },
@@ -630,7 +630,7 @@
       "folder": "code-examples",
       "title": "Trigger Handler Template",
       "description": "Documentation for Trigger Handler Template",
-      "url": "code-examples/templates/apex-trigger-template.html",
+      "url": "rag/code-examples/templates/apex-trigger-template.html",
       "modified": "2025-12-03T00:06:55.307055",
       "size": 2887
     },
@@ -640,7 +640,7 @@
       "folder": "code-examples",
       "title": "CI/CD Template",
       "description": "Documentation for CI/CD Template",
-      "url": "code-examples/templates/ci-cd-template.html",
+      "url": "rag/code-examples/templates/ci-cd-template.html",
       "modified": "2025-12-03T00:06:55.307998",
       "size": 1109
     },
@@ -650,7 +650,7 @@
       "folder": "code-examples",
       "title": "Accessible LWC Component Template",
       "description": "This template provides a complete, accessible LWC component structure with all accessibility best practices built in",
-      "url": "code-examples/templates/lwc-accessible-component-template.html",
+      "url": "rag/code-examples/templates/lwc-accessible-component-template.html",
       "modified": "2025-12-03T00:06:55.308960",
       "size": 18145
     },
@@ -660,7 +660,7 @@
       "folder": "code-examples",
       "title": "SFDX Project Template",
       "description": "Documentation for SFDX Project Template",
-      "url": "code-examples/templates/sfdx-project-template.html",
+      "url": "rag/code-examples/templates/sfdx-project-template.html",
       "modified": "2025-12-03T00:06:55.308418",
       "size": 912
     },
@@ -670,7 +670,7 @@
       "folder": "code-examples",
       "title": "Test Class Template",
       "description": "Documentation for Test Class Template",
-      "url": "code-examples/templates/test-class-template.html",
+      "url": "rag/code-examples/templates/test-class-template.html",
       "modified": "2025-12-03T00:06:55.306837",
       "size": 3793
     },
@@ -700,7 +700,7 @@
       "folder": "code-examples",
       "title": "Data Migration Code Examples",
       "description": "Data migration involves importing, transforming, and validating data in Salesforce",
-      "url": "code-examples/utilities/data-migration-examples.html",
+      "url": "rag/code-examples/utilities/data-migration-examples.html",
       "modified": "2025-12-03T00:06:55.305700",
       "size": 4230
     },
@@ -710,7 +710,7 @@
       "folder": "code-examples",
       "title": "Error Handling Code Examples",
       "description": "Robust error handling ensures applications gracefully handle failures and provide meaningful feedback",
-      "url": "code-examples/utilities/error-handling-examples.html",
+      "url": "rag/code-examples/utilities/error-handling-examples.html",
       "modified": "2025-12-03T07:53:00.917837",
       "size": 13350
     },
@@ -720,7 +720,7 @@
       "folder": "code-examples",
       "title": "Logging Code Examples",
       "description": "Structured logging enables consistent, searchable logging across Salesforce applications",
-      "url": "code-examples/utilities/logging-examples.html",
+      "url": "rag/code-examples/utilities/logging-examples.html",
       "modified": "2025-12-03T07:53:00.918348",
       "size": 12529
     },
@@ -730,7 +730,7 @@
       "folder": "code-examples",
       "title": "Metadata API Code Examples",
       "description": "The Metadata API allows programmatic deployment and retrieval of Salesforce metadata",
-      "url": "code-examples/utilities/metadata-api-examples.html",
+      "url": "rag/code-examples/utilities/metadata-api-examples.html",
       "modified": "2025-12-03T00:06:55.306675",
       "size": 3167
     },
@@ -740,7 +740,7 @@
       "folder": "code-examples",
       "title": "Nebula Logger Code Examples",
       "description": "Examples for using the Nebula Logger open-source library for structured logging in Salesforce",
-      "url": "code-examples/utilities/nebula-logger-examples.html",
+      "url": "rag/code-examples/utilities/nebula-logger-examples.html",
       "modified": "2025-12-03T08:12:00.280602",
       "size": 1439
     },
@@ -750,7 +750,7 @@
       "folder": "code-examples",
       "title": "Salesforce DX Code Examples",
       "description": "Salesforce DX provides command-line tools and workflows for modern Salesforce development",
-      "url": "code-examples/utilities/sfdx-examples.html",
+      "url": "rag/code-examples/utilities/sfdx-examples.html",
       "modified": "2025-12-03T00:06:55.305512",
       "size": 2331
     },
@@ -760,7 +760,7 @@
       "folder": "code-examples",
       "title": "Validation Code Examples",
       "description": "Data validation ensures data quality and prevents invalid data from entering the system",
-      "url": "code-examples/utilities/validation-examples.html",
+      "url": "rag/code-examples/utilities/validation-examples.html",
       "modified": "2025-12-03T07:53:00.919045",
       "size": 12632
     },
@@ -770,7 +770,7 @@
       "folder": "data-governance",
       "title": "Data Quality and Stewardship for Salesforce",
       "description": "This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance",
-      "url": "data-governance/data-quality-stewardship.html",
+      "url": "rag/data-governance/data-quality-stewardship.html",
       "modified": "2025-12-03T00:06:55.324677",
       "size": 15490
     },
@@ -780,7 +780,7 @@
       "folder": "data-governance",
       "title": "Data Residency and Compliance for Salesforce",
       "description": "This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices",
-      "url": "data-governance/data-residency-compliance.html",
+      "url": "rag/data-governance/data-residency-compliance.html",
       "modified": "2025-12-03T00:06:55.324450",
       "size": 15725
     },
@@ -790,7 +790,7 @@
       "folder": "data-modeling",
       "title": "Case Management Data Model",
       "description": "A comprehensive data model for public sector case management, supporting multi-agency public benefits and services portals",
-      "url": "data-modeling/case-management-data-model.html",
+      "url": "rag/data-modeling/case-management-data-model.html",
       "modified": "2025-12-03T00:06:55.326628",
       "size": 21261
     },
@@ -800,7 +800,7 @@
       "folder": "data-modeling",
       "title": "Data Migration Patterns",
       "description": "This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce",
-      "url": "data-modeling/data-migration-patterns.html",
+      "url": "rag/data-modeling/data-migration-patterns.html",
       "modified": "2025-12-03T07:53:47.723918",
       "size": 14827
     },
@@ -810,7 +810,7 @@
       "folder": "data-modeling",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "data-modeling/data-storage-planning.html",
+      "url": "rag/data-modeling/data-storage-planning.html",
       "modified": "2025-12-03T00:06:55.328590",
       "size": 15491
     },
@@ -820,7 +820,7 @@
       "folder": "data-modeling",
       "title": "External IDs and Integration Keys",
       "description": "External ID strategies enable stable record mapping between Salesforce and external systems, supporting idempotent data synchronization and reliable integration patterns",
-      "url": "data-modeling/external-ids-and-integration-keys.html",
+      "url": "rag/data-modeling/external-ids-and-integration-keys.html",
       "modified": "2025-12-03T00:06:55.327846",
       "size": 10853
     },
@@ -830,7 +830,7 @@
       "folder": "data-modeling",
       "title": "File Management Patterns",
       "description": "Salesforce provides multiple mechanisms for file storage and management, each with different use cases, limitations, and best practices",
-      "url": "data-modeling/file-management-patterns.html",
+      "url": "rag/data-modeling/file-management-patterns.html",
       "modified": "2025-12-03T08:29:10.549678",
       "size": 10014
     },
@@ -840,7 +840,7 @@
       "folder": "data-modeling",
       "title": "Lead Management and Conversion Data Model",
       "description": "A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management",
-      "url": "data-modeling/lead-management-patterns.html",
+      "url": "rag/data-modeling/lead-management-patterns.html",
       "modified": "2025-12-03T08:29:20.910672",
       "size": 31602
     },
@@ -850,7 +850,7 @@
       "folder": "data-modeling",
       "title": "NPSP Opportunity and Gift Data Model",
       "description": "A comprehensive data model for nonprofit and education fundraising, covering how NPSP uses the standard Opportunity object to represent gifts, grants, and donations, along with related NPSP objects like Payments, Recurring Donations, and Allocations",
-      "url": "data-modeling/npsp-opportunity-gift-model.html",
+      "url": "rag/data-modeling/npsp-opportunity-gift-model.html",
       "modified": "2025-12-03T08:29:20.910029",
       "size": 24732
     },
@@ -860,7 +860,7 @@
       "folder": "data-modeling",
       "title": "Object Setup and Configuration",
       "description": "Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce",
-      "url": "data-modeling/object-setup-and-configuration.html",
+      "url": "rag/data-modeling/object-setup-and-configuration.html",
       "modified": "2025-12-03T07:53:47.724124",
       "size": 22491
     },
@@ -870,7 +870,7 @@
       "folder": "data-modeling",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "data-modeling/standard-object-oddities.html",
+      "url": "rag/data-modeling/standard-object-oddities.html",
       "modified": "2025-12-03T00:06:55.327554",
       "size": 17949
     },
@@ -880,7 +880,7 @@
       "folder": "data-modeling",
       "title": "Student Lifecycle Data Model",
       "description": "The Salesforce Education Cloud (EDA) data model supports higher education institutions, with particular focus on online and adult-learning programs",
-      "url": "data-modeling/student-lifecycle-data-model.html",
+      "url": "rag/data-modeling/student-lifecycle-data-model.html",
       "modified": "2025-12-03T00:06:55.326400",
       "size": 18335
     },
@@ -890,7 +890,7 @@
       "folder": "development",
       "title": "Salesforce Admin Basics",
       "description": "Core responsibilities, skills, and configuration patterns for Salesforce administrators",
-      "url": "development/admin-basics.html",
+      "url": "rag/development/admin-basics.html",
       "modified": "2025-12-03T08:11:49.589177",
       "size": 5810
     },
@@ -900,7 +900,7 @@
       "folder": "development",
       "title": "Apex Interface Patterns",
       "description": "Patterns and examples for using Apex interfaces to decouple implementations, enable mocking, and improve testability",
-      "url": "development/apex-interfaces-patterns.html",
+      "url": "rag/development/apex-interfaces-patterns.html",
       "modified": "2025-12-03T08:10:55.381371",
       "size": 3946
     },
@@ -910,7 +910,7 @@
       "folder": "development",
       "title": "Apex Design Patterns and Best Practices",
       "description": "Apex is used strategically when Flows are insufficient or need optimization/bulkification",
-      "url": "development/apex-patterns.html",
+      "url": "rag/development/apex-patterns.html",
       "modified": "2025-12-03T08:53:57.301290",
       "size": 4389
     },
@@ -920,7 +920,7 @@
       "folder": "development",
       "title": "Asynchronous Apex Patterns",
       "description": "Comprehensive patterns for Batch, Queueable, Scheduled, and future methods in Salesforce",
-      "url": "development/asynchronous-apex-patterns.html",
+      "url": "rag/development/asynchronous-apex-patterns.html",
       "modified": "2025-12-03T08:12:08.588354",
       "size": 5788
     },
@@ -930,7 +930,7 @@
       "folder": "development",
       "title": "Custom Settings and Custom Metadata Patterns",
       "description": "Patterns for using Custom Settings and Custom Metadata Types for configuration management in Salesforce",
-      "url": "development/custom-settings-metadata-patterns.html",
+      "url": "rag/development/custom-settings-metadata-patterns.html",
       "modified": "2025-12-03T08:12:26.434626",
       "size": 4963
     },
@@ -940,7 +940,7 @@
       "folder": "development",
       "title": "Email Management Patterns",
       "description": "Patterns for sending, receiving, and tracking email in Salesforce using standard features and Apex",
-      "url": "development/email-management.html",
+      "url": "rag/development/email-management.html",
       "modified": "2025-12-03T08:14:01.471217",
       "size": 4132
     },
@@ -950,7 +950,7 @@
       "folder": "development",
       "title": "Error Handling and Logging Framework",
       "description": "Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance",
-      "url": "development/error-handling-and-logging.html",
+      "url": "rag/development/error-handling-and-logging.html",
       "modified": "2025-12-03T07:53:00.925388",
       "size": 11040
     },
@@ -960,7 +960,7 @@
       "folder": "development",
       "title": "Flow Design and Orchestration Patterns",
       "description": "Comprehensive Flow patterns and best practices based on real implementation experience across enterprise-scale Salesforce projects",
-      "url": "development/flow-patterns.html",
+      "url": "rag/development/flow-patterns.html",
       "modified": "2025-12-03T08:29:20.923602",
       "size": 89434
     },
@@ -970,7 +970,7 @@
       "folder": "development",
       "title": "Formulas and Validation Rules",
       "description": "Comprehensive guide to Salesforce Validation Rules and Formula Fields, including syntax, operations, patterns, use cases, and best practices",
-      "url": "development/formulas-validation-rules.html",
+      "url": "rag/development/formulas-validation-rules.html",
       "modified": "2025-12-03T08:29:20.923673",
       "size": 35226
     },
@@ -980,7 +980,7 @@
       "folder": "development",
       "title": "Governor Limits and Performance Optimization",
       "description": "This topic covers Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management best practices",
-      "url": "development/governor-limits-and-optimization.html",
+      "url": "rag/development/governor-limits-and-optimization.html",
       "modified": "2025-12-03T08:11:25.209650",
       "size": 8405
     },
@@ -990,7 +990,7 @@
       "folder": "development",
       "title": "Large Data Loads",
       "description": "Patterns for loading and migrating large data volumes into Salesforce safely",
-      "url": "development/large-data-loads.html",
+      "url": "rag/development/large-data-loads.html",
       "modified": "2025-12-03T08:12:52.727102",
       "size": 3217
     },
@@ -1000,7 +1000,7 @@
       "folder": "development",
       "title": "Lightning App Builder Patterns",
       "description": "Patterns for composing Lightning pages, using Dynamic Forms, and structuring layouts",
-      "url": "development/lightning-app-builder.html",
+      "url": "rag/development/lightning-app-builder.html",
       "modified": "2025-12-03T08:13:03.137840",
       "size": 3167
     },
@@ -1010,7 +1010,7 @@
       "folder": "development",
       "title": "Locking and Concurrency Strategies",
       "description": "Patterns for handling row locking, UNABLE_TO_LOCK_ROW errors, and high-concurrency scenarios in Salesforce",
-      "url": "development/locking-and-concurrency-strategies.html",
+      "url": "rag/development/locking-and-concurrency-strategies.html",
       "modified": "2025-12-03T08:14:01.464251",
       "size": 3434
     },
@@ -1020,7 +1020,7 @@
       "folder": "development",
       "title": "LWC Data Attribute Patterns",
       "description": "Patterns for using data-* attributes in Lightning Web Components to pass context, IDs, and metadata into event handlers",
-      "url": "development/lwc-data-attributes-patterns.html",
+      "url": "rag/development/lwc-data-attributes-patterns.html",
       "modified": "2025-12-03T08:11:33.900820",
       "size": 2174
     },
@@ -1030,7 +1030,7 @@
       "folder": "development",
       "title": "Lightning Web Component (LWC) Patterns",
       "description": "LWCs are built for complex business logic that standard page layouts cannot handle",
-      "url": "development/lwc-patterns.html",
+      "url": "rag/development/lwc-patterns.html",
       "modified": "2025-12-03T07:53:00.928103",
       "size": 17698
     },
@@ -1040,7 +1040,7 @@
       "folder": "development",
       "title": "NPSP Opportunity Processing Patterns",
       "description": "Comprehensive process patterns for nonprofit and education fundraising opportunity processing, covering gift entry, pledge management, recurring donations, stage automation, and donor stewardship workflows",
-      "url": "development/npsp-opportunity-processing-patterns.html",
+      "url": "rag/development/npsp-opportunity-processing-patterns.html",
       "modified": "2025-12-03T08:29:20.910568",
       "size": 24394
     },
@@ -1050,7 +1050,7 @@
       "folder": "development",
       "title": "OmniStudio Patterns",
       "description": "Patterns for designing OmniScripts and FlexCards for guided, multi-step business processes",
-      "url": "development/omnistudio-patterns.html",
+      "url": "rag/development/omnistudio-patterns.html",
       "modified": "2025-12-03T08:14:01.464251",
       "size": 3093
     },
@@ -1060,7 +1060,7 @@
       "folder": "development",
       "title": "Order of Execution",
       "description": "Understanding the order of execution in Salesforce is critical for architects and developers",
-      "url": "development/order-of-execution.html",
+      "url": "rag/development/order-of-execution.html",
       "modified": "2025-12-03T07:53:00.928623",
       "size": 3149
     },
@@ -1070,7 +1070,7 @@
       "folder": "development",
       "title": "Platform Cache Patterns",
       "description": "Patterns for using Platform Cache to improve performance and reduce load on Salesforce and external systems",
-      "url": "development/platform-cache-patterns.html",
+      "url": "rag/development/platform-cache-patterns.html",
       "modified": "2025-12-03T08:11:04.178108",
       "size": 3262
     },
@@ -1080,7 +1080,7 @@
       "folder": "development",
       "title": "Safe Navigation Patterns",
       "description": "Patterns for safely navigating nested relationships and avoiding null dereference errors in Apex",
-      "url": "development/safe-navigation-patterns.html",
+      "url": "rag/development/safe-navigation-patterns.html",
       "modified": "2025-12-03T08:11:23.848499",
       "size": 1777
     },
@@ -1090,7 +1090,7 @@
       "folder": "development",
       "title": "SOQL Query Patterns",
       "description": "This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects",
-      "url": "development/soql-query-patterns.html",
+      "url": "rag/development/soql-query-patterns.html",
       "modified": "2025-12-03T08:13:16.898095",
       "size": 25825
     },
@@ -1100,7 +1100,7 @@
       "folder": "development",
       "title": "Trigger Framework Patterns",
       "description": "Patterns for implementing a single-trigger-per-object framework with handlers and domain classes",
-      "url": "development/trigger-framework-patterns.html",
+      "url": "rag/development/trigger-framework-patterns.html",
       "modified": "2025-12-03T08:11:44.300786",
       "size": 1646
     },
@@ -1110,7 +1110,7 @@
       "folder": "development",
       "title": "Wrapper Class Patterns",
       "description": "Patterns for using Apex wrapper classes to shape data for UI, batch processing, and integrations",
-      "url": "development/wrapper-classes-patterns.html",
+      "url": "rag/development/wrapper-classes-patterns.html",
       "modified": "2025-12-03T08:11:14.223548",
       "size": 3514
     },
@@ -1120,7 +1120,7 @@
       "folder": "glossary",
       "title": "Core Terminology and Definitions",
       "description": "This glossary defines core terms used throughout the RAG knowledge library",
-      "url": "glossary/core-terminology.html",
+      "url": "rag/glossary/core-terminology.html",
       "modified": "2025-12-03T07:53:47.724143",
       "size": 715
     },
@@ -1130,7 +1130,7 @@
       "folder": "identity-sso",
       "title": "Multi-Tenant Identity Architecture",
       "description": "Multi-tenant identity architecture enables a single Salesforce org to support multiple distinct user communities with different identity providers, security requirements, and access patterns",
-      "url": "identity-sso/multi-tenant-identity-architecture.html",
+      "url": "rag/identity-sso/multi-tenant-identity-architecture.html",
       "modified": "2025-12-03T00:06:55.325989",
       "size": 17546
     },
@@ -1140,7 +1140,7 @@
       "folder": "integrations",
       "title": "Authentication Flow Patterns",
       "description": "Patterns for implementing OAuth and related authentication flows for Salesforce integrations",
-      "url": "integrations/auth-flows-patterns.html",
+      "url": "rag/integrations/auth-flows-patterns.html",
       "modified": "2025-12-03T08:12:32.731808",
       "size": 1211
     },
@@ -1150,7 +1150,7 @@
       "folder": "integrations",
       "title": "Callout Best Practices",
       "description": "This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring",
-      "url": "integrations/callout-best-practices.html",
+      "url": "rag/integrations/callout-best-practices.html",
       "modified": "2025-12-03T08:47:48.997464",
       "size": 29374
     },
@@ -1160,7 +1160,7 @@
       "folder": "integrations",
       "title": "Change Data Capture (CDC) Patterns",
       "description": "Change Data Capture (CDC) provides real-time change notifications for Salesforce records",
-      "url": "integrations/change-data-capture-patterns.html",
+      "url": "rag/integrations/change-data-capture-patterns.html",
       "modified": "2025-12-03T07:53:00.930700",
       "size": 14284
     },
@@ -1180,7 +1180,7 @@
       "folder": "integrations",
       "title": "Integration Platform Patterns",
       "description": "Integration platforms serve as middleware between Salesforce and external systems, handling security, transformation, and orchestration",
-      "url": "integrations/integration-platform-patterns.html",
+      "url": "rag/integrations/integration-platform-patterns.html",
       "modified": "2025-12-03T07:53:00.931362",
       "size": 9617
     },
@@ -1190,7 +1190,7 @@
       "folder": "integrations",
       "title": "Integration User License Guide",
       "description": "The Salesforce Integration User License is a free API-only license designed for system-to-system integrations",
-      "url": "integrations/integration-user-license-guide.html",
+      "url": "rag/integrations/integration-user-license-guide.html",
       "modified": "2025-12-03T07:53:00.931969",
       "size": 29108
     },
@@ -1200,7 +1200,7 @@
       "folder": "integrations",
       "title": "Named Credentials Patterns",
       "description": "Patterns for using Named Credentials to manage external endpoint URLs and authentication",
-      "url": "integrations/named-credentials-patterns.html",
+      "url": "rag/integrations/named-credentials-patterns.html",
       "modified": "2025-12-03T08:12:37.491841",
       "size": 1189
     },
@@ -1210,7 +1210,7 @@
       "folder": "integrations",
       "title": "Salesforce → LLM Data Pipelines",
       "description": "This document covers high-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)",
-      "url": "integrations/salesforce-to-llm-data-pipelines.html",
+      "url": "rag/integrations/salesforce-to-llm-data-pipelines.html",
       "modified": "2025-12-03T00:06:55.319563",
       "size": 27736
     },
@@ -1220,7 +1220,7 @@
       "folder": "integrations",
       "title": "SIS Synchronization Patterns",
       "description": "High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS)",
-      "url": "integrations/sis-sync-patterns.html",
+      "url": "rag/integrations/sis-sync-patterns.html",
       "modified": "2025-12-03T07:53:47.730257",
       "size": 18624
     },
@@ -1230,7 +1230,7 @@
       "folder": "mcp-knowledge",
       "title": "Salesforce Lightning Design System (SLDS) Patterns - MCP Knowledge",
       "description": "Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software, covering UX principles, visual design, component usage, interaction patterns, and accessibility",
-      "url": "mcp-knowledge/design-system-patterns.html",
+      "url": "rag/mcp-knowledge/design-system-patterns.html",
       "modified": "2025-12-03T08:31:44.154959",
       "size": 4258
     },
@@ -1240,7 +1240,7 @@
       "folder": "mcp-knowledge",
       "title": "Lightning Data Service (LDS) Patterns - MCP Knowledge",
       "description": "Guidelines for building, reviewing, and maintaining Lightning Web Components that interact with Salesforce's Lightning Data Service, focusing on data consistency, referential integrity, and choosing UIAPI vs Apex",
-      "url": "mcp-knowledge/lds-patterns.html",
+      "url": "rag/mcp-knowledge/lds-patterns.html",
       "modified": "2025-12-03T07:53:47.735996",
       "size": 5183
     },
@@ -1250,7 +1250,7 @@
       "folder": "mcp-knowledge",
       "title": "LWC Accessibility - MCP Knowledge",
       "description": "Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2 and Salesforce MCP guidance",
-      "url": "mcp-knowledge/lwc-accessibility.html",
+      "url": "rag/mcp-knowledge/lwc-accessibility.html",
       "modified": "2025-12-03T08:32:13.833166",
       "size": 3480
     },
@@ -1260,7 +1260,7 @@
       "folder": "mcp-knowledge",
       "title": "LWC Best Practices - MCP Knowledge",
       "description": "Comprehensive best practices for Lightning Web Components development, focusing on event handling, property naming, decorator usage, and component structure",
-      "url": "mcp-knowledge/lwc-best-practices.html",
+      "url": "rag/mcp-knowledge/lwc-best-practices.html",
       "modified": "2025-12-03T08:32:30.972294",
       "size": 2960
     },
@@ -1270,7 +1270,7 @@
       "folder": "mcp-knowledge",
       "title": "LWC Development Guide - MCP Knowledge",
       "description": "Comprehensive guidance for Lightning Web Components (LWC) development, covering core principles, technical stack, best practices, and development workflows",
-      "url": "mcp-knowledge/lwc-development-guide.html",
+      "url": "rag/mcp-knowledge/lwc-development-guide.html",
       "modified": "2025-12-03T08:32:40.171199",
       "size": 2859
     },
@@ -1280,7 +1280,7 @@
       "folder": "meta",
       "title": "RAG Knowledge Style Guide",
       "description": "Standards for structure, voice, formatting, and metadata across the Salesforce RAG knowledge library",
-      "url": "meta/style-guide.html",
+      "url": "rag/meta/style-guide.html",
       "modified": "2025-12-03T08:10:35.424423",
       "size": 4467
     },
@@ -1290,7 +1290,7 @@
       "folder": "meta",
       "title": "REPLACE WITH CODE EXAMPLE TITLE",
       "description": "REPLACE with a one-sentence description of what these examples demonstrate",
-      "url": "meta/templates/code-example-template.html",
+      "url": "rag/meta/templates/code-example-template.html",
       "modified": "2025-12-03T08:54:33.517973",
       "size": 1583
     },
@@ -1300,7 +1300,7 @@
       "folder": "meta",
       "title": "REPLACE WITH TITLE",
       "description": "REPLACE with a one-sentence summary of what this file covers",
-      "url": "meta/templates/knowledge-file-template.html",
+      "url": "rag/meta/templates/knowledge-file-template.html",
       "modified": "2025-12-03T08:54:33.977048",
       "size": 2676
     },
@@ -1310,8 +1310,8 @@
       "folder": "meta",
       "title": "REPLACE WITH PATTERN NAME",
       "description": "REPLACE with a one-sentence summary of the pattern and when it is used",
-      "url": "meta/templates/pattern-template.html",
-      "modified": "2025-12-03T08:55:05.020155",
+      "url": "rag/meta/templates/pattern-template.html",
+      "modified": "2025-12-03T08:55:20.217053",
       "size": 2067
     },
     {
@@ -1320,7 +1320,7 @@
       "folder": "observability",
       "title": "High Availability and Disaster Recovery for Salesforce",
       "description": "This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for Salesforce, including backup/restore approaches, failover patterns for integrations, and business continuity drills",
-      "url": "observability/ha-dr-patterns.html",
+      "url": "rag/observability/ha-dr-patterns.html",
       "modified": "2025-12-03T08:27:33.909801",
       "size": 12503
     },
@@ -1330,7 +1330,7 @@
       "folder": "observability",
       "title": "Monitoring and Alerting for Salesforce",
       "description": "This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns",
-      "url": "observability/monitoring-alerting.html",
+      "url": "rag/observability/monitoring-alerting.html",
       "modified": "2025-12-03T08:27:48.136837",
       "size": 14637
     },
@@ -1340,7 +1340,7 @@
       "folder": "observability",
       "title": "Performance Tuning for Salesforce",
       "description": "This guide covers performance tuning patterns for Salesforce, including query/selectivity tuning, Large Data Volume (LDV) handling, governor limit mitigation, and caching strategies",
-      "url": "observability/performance-tuning.html",
+      "url": "rag/observability/performance-tuning.html",
       "modified": "2025-12-03T08:28:16.417419",
       "size": 12394
     },
@@ -1350,7 +1350,7 @@
       "folder": "operations",
       "title": "CI/CD Patterns for Salesforce",
       "description": "This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs",
-      "url": "operations/cicd-patterns.html",
+      "url": "rag/operations/cicd-patterns.html",
       "modified": "2025-12-03T00:06:55.317956",
       "size": 18826
     },
@@ -1360,7 +1360,7 @@
       "folder": "operations",
       "title": "Environment Strategy for Salesforce",
       "description": "This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences",
-      "url": "operations/environment-strategy.html",
+      "url": "rag/operations/environment-strategy.html",
       "modified": "2025-12-03T00:06:55.317616",
       "size": 17494
     },
@@ -1370,7 +1370,7 @@
       "folder": "operations",
       "title": "Release Governance for Salesforce",
       "description": "This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists",
-      "url": "operations/release-governance.html",
+      "url": "rag/operations/release-governance.html",
       "modified": "2025-12-03T00:06:55.317232",
       "size": 17385
     },
@@ -1380,7 +1380,7 @@
       "folder": "patterns",
       "title": "Cross-Cutting Design Patterns",
       "description": "This document summarizes reusable patterns that appear across multiple domains in the architecture",
-      "url": "patterns/cross-cutting-patterns.html",
+      "url": "rag/patterns/cross-cutting-patterns.html",
       "modified": "2025-12-03T07:53:47.736014",
       "size": 6024
     },
@@ -1390,7 +1390,7 @@
       "folder": "project-methods",
       "title": "Project Delivery Framework",
       "description": "Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects",
-      "url": "project-methods/delivery-framework.html",
+      "url": "rag/project-methods/delivery-framework.html",
       "modified": "2025-12-03T00:06:55.329449",
       "size": 14840
     },
@@ -1400,7 +1400,7 @@
       "folder": "project-methods",
       "title": "Deployment and CI/CD Patterns",
       "description": "This guide covers Salesforce deployment strategies, source control patterns, deployment best practices, Metadata API usage, and package development patterns",
-      "url": "project-methods/deployment-patterns.html",
+      "url": "rag/project-methods/deployment-patterns.html",
       "modified": "2025-12-03T00:06:55.328825",
       "size": 10313
     },
@@ -1410,7 +1410,7 @@
       "folder": "project-methods",
       "title": "Salesforce DX (SFDX) Patterns",
       "description": "Salesforce DX provides a modern, source-driven development workflow for Salesforce",
-      "url": "project-methods/sfdx-patterns.html",
+      "url": "rag/project-methods/sfdx-patterns.html",
       "modified": "2025-12-03T00:06:55.329102",
       "size": 9415
     },
@@ -1420,7 +1420,7 @@
       "folder": "project-methods",
       "title": "Testing and QA Strategy",
       "description": "Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and user acceptance testing",
-      "url": "project-methods/testing-strategy.html",
+      "url": "rag/project-methods/testing-strategy.html",
       "modified": "2025-12-03T00:06:55.329718",
       "size": 17650
     },
@@ -1430,7 +1430,7 @@
       "folder": "quick-start",
       "title": "Apex Quick Start Guide",
       "description": "This quick-start guide provides step-by-step instructions for creating your first Apex classes following best practices",
-      "url": "quick-start/apex-quick-start.html",
+      "url": "rag/quick-start/apex-quick-start.html",
       "modified": "2025-12-03T00:06:55.325720",
       "size": 7067
     },
@@ -1440,7 +1440,7 @@
       "folder": "quick-start",
       "title": "LWC Accessibility Quick Start Guide",
       "description": "This quick-start guide provides step-by-step instructions for making Lightning Web Components accessible, following WCAG 2",
-      "url": "quick-start/lwc-accessibility-quick-start.html",
+      "url": "rag/quick-start/lwc-accessibility-quick-start.html",
       "modified": "2025-12-03T00:06:55.325581",
       "size": 16533
     },
@@ -1450,7 +1450,7 @@
       "folder": "quick-start",
       "title": "LWC Quick Start Guide",
       "description": "This quick-start guide provides step-by-step instructions for creating your first Lightning Web Component following best practices",
-      "url": "quick-start/lwc-quick-start.html",
+      "url": "rag/quick-start/lwc-quick-start.html",
       "modified": "2025-12-03T00:06:55.325122",
       "size": 7769
     },
@@ -1460,7 +1460,7 @@
       "folder": "security",
       "title": "Permission Set-Driven Security Architecture",
       "description": "Permission set-driven security architecture transitions from profile-centric to permission set-based access control, enabling flexible, modular security management",
-      "url": "security/permission-set-architecture.html",
+      "url": "rag/security/permission-set-architecture.html",
       "modified": "2025-12-03T08:23:39.636387",
       "size": 13835
     },
@@ -1470,7 +1470,7 @@
       "folder": "security",
       "title": "Salesforce Data Scope & Security for LLMs",
       "description": "This document covers how to choose what data to expose from Salesforce to LLMs and how to do that safely",
-      "url": "security/salesforce-llm-data-governance.html",
+      "url": "rag/security/salesforce-llm-data-governance.html",
       "modified": "2025-12-03T00:06:55.310631",
       "size": 20541
     },
@@ -1480,7 +1480,7 @@
       "folder": "security",
       "title": "Salesforce Sharing Fundamentals",
       "description": "This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions",
-      "url": "security/sharing-fundamentals.html",
+      "url": "rag/security/sharing-fundamentals.html",
       "modified": "2025-12-03T07:53:00.942188",
       "size": 19706
     },
@@ -1490,7 +1490,7 @@
       "folder": "security",
       "title": "Salesforce Sharing Rules and Manual Sharing",
       "description": "This document covers sharing rules (owner-based, criteria-based, territory-based), manual sharing, and Apex managed sharing",
-      "url": "security/sharing-rules-and-manual-sharing.html",
+      "url": "rag/security/sharing-rules-and-manual-sharing.html",
       "modified": "2025-12-03T00:06:55.310169",
       "size": 20882
     },
@@ -1500,7 +1500,7 @@
       "folder": "security",
       "title": "Salesforce Sharing Sets and Portal Sharing",
       "description": "This document covers Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples",
-      "url": "security/sharing-sets-and-portals.html",
+      "url": "rag/security/sharing-sets-and-portals.html",
       "modified": "2025-12-03T00:06:55.311320",
       "size": 38445
     },
@@ -1520,7 +1520,7 @@
       "folder": "testing",
       "title": "Automated Testing Patterns for Salesforce",
       "description": "This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns",
-      "url": "testing/automated-testing-patterns.html",
+      "url": "rag/testing/automated-testing-patterns.html",
       "modified": "2025-12-03T00:06:55.320518",
       "size": 15468
     },
@@ -1530,7 +1530,7 @@
       "folder": "testing",
       "title": "DML Mocking Patterns",
       "description": "Patterns for testing Apex logic that performs DML without relying on real database writes",
-      "url": "testing/dml-mocking-patterns.html",
+      "url": "rag/testing/dml-mocking-patterns.html",
       "modified": "2025-12-03T08:11:54.752847",
       "size": 2492
     },
@@ -1540,7 +1540,7 @@
       "folder": "testing",
       "title": "LWC Accessibility Testing Patterns",
       "description": "This guide provides testing patterns, best practices, and examples for ensuring Lightning Web Components meet WCAG 2",
-      "url": "testing/lwc-accessibility-testing.html",
+      "url": "rag/testing/lwc-accessibility-testing.html",
       "modified": "2025-12-03T00:06:55.320059",
       "size": 19504
     },
@@ -1550,7 +1550,7 @@
       "folder": "testing",
       "title": "Overview",
       "description": "Documentation for Overview",
-      "url": "testing/lwc-jest-testing.html",
+      "url": "rag/testing/lwc-jest-testing.html",
       "modified": "2025-12-03T00:06:55.319810",
       "size": 19111
     },
@@ -1560,7 +1560,7 @@
       "folder": "testing",
       "title": "Non-Functional Requirements for Salesforce",
       "description": "This guide covers non-functional requirements testing for Salesforce, including security testing, accessibility testing for LWCs and portals, and performance benchmarks",
-      "url": "testing/non-functional-requirements.html",
+      "url": "rag/testing/non-functional-requirements.html",
       "modified": "2025-12-03T00:06:55.321156",
       "size": 15038
     },
@@ -1570,7 +1570,7 @@
       "folder": "testing",
       "title": "Test Data Factory Patterns",
       "description": "Test data factories provide reusable methods for creating test data, ensuring consistency and reducing duplication across test classes",
-      "url": "testing/test-data-factories.html",
+      "url": "rag/testing/test-data-factories.html",
       "modified": "2025-12-03T00:06:55.320253",
       "size": 12095
     },
@@ -1580,7 +1580,7 @@
       "folder": "troubleshooting",
       "title": "Common Apex Errors and Solutions",
       "description": "This guide provides solutions for common Apex errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies",
-      "url": "troubleshooting/common-apex-errors.html",
+      "url": "rag/troubleshooting/common-apex-errors.html",
       "modified": "2025-12-03T00:06:55.316267",
       "size": 14817
     },
@@ -1600,7 +1600,7 @@
       "folder": "troubleshooting",
       "title": "Data Reconciliation Techniques",
       "description": "Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency",
-      "url": "troubleshooting/data-reconciliation.html",
+      "url": "rag/troubleshooting/data-reconciliation.html",
       "modified": "2025-12-03T00:06:55.315905",
       "size": 17349
     },
@@ -1620,7 +1620,7 @@
       "folder": "troubleshooting",
       "title": "Integration Debugging Methods",
       "description": "Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues",
-      "url": "troubleshooting/integration-debugging.html",
+      "url": "rag/troubleshooting/integration-debugging.html",
       "modified": "2025-12-03T08:30:06.001088",
       "size": 13211
     },
@@ -1630,7 +1630,7 @@
       "folder": "troubleshooting",
       "title": "LWC Accessibility Errors and Solutions",
       "description": "This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies",
-      "url": "troubleshooting/lwc-accessibility-errors.html",
+      "url": "rag/troubleshooting/lwc-accessibility-errors.html",
       "modified": "2025-12-03T00:06:55.316707",
       "size": 25687
     }

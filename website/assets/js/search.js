@@ -186,7 +186,20 @@
     const html = results.map(file => {
       const title = file.title || file.path || 'Untitled';
       const description = file.description || file.summary || '';
-      const url = file.url || file.path || '#';
+      let url = file.url || file.path || '#';
+      
+      // Ensure URL has proper base path
+      // If URL doesn't start with /, it's relative - prepend /Salesforce-RAG/rag/
+      // If URL starts with /rag/, prepend /Salesforce-RAG
+      // If URL already starts with /Salesforce-RAG/, use as-is
+      if (!url.startsWith('/')) {
+        url = '/Salesforce-RAG/rag/' + url;
+      } else if (url.startsWith('/rag/')) {
+        url = '/Salesforce-RAG' + url;
+      } else if (!url.startsWith('/Salesforce-RAG/')) {
+        url = '/Salesforce-RAG' + url;
+      }
+      
       const path = file.path || '';
 
       return `
