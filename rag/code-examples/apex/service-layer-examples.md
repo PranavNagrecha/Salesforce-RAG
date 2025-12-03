@@ -2,7 +2,8 @@
 layout: default
 title: Service Layer Code Examples
 description: The Service Layer coordinates between domain, selector, and integration layers
-permalink: /rag/development/apex-patterns.html#selector-layer' | relative_url }}">Selector Layer</a>
+permalink: /rag/code-examples/apex/service-layer-examples.html
+---
 
 **Problem**:
 You need to update records with validation and business logic. The service layer orchestrates the workflow by delegating to domain and selector layers.
@@ -319,7 +320,7 @@ private class AccountContactUpdateServiceTest {
 **Pattern**: Service Layer with Asynchronous Processing
 **Use Case**: Long-running operations that should be async
 **Complexity**: Advanced
-**Related Patterns**: <a href="{{ '/rag/development/apex-patterns#asynchronous-apex-patterns' | relative_url }}">Asynchronous Apex</a>
+**Related Patterns**: <a href="{{ '/rag/development/apex-patterns.html#asynchronous-apex-patterns' | relative_url }}">Asynchronous Apex</a>
 
 **Problem**:
 You need to process a large number of records asynchronously, potentially chaining multiple jobs.
