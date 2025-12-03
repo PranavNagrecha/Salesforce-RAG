@@ -85,11 +85,21 @@
         <ul class="navbar-nav">
           <li><a href="{{ '/rag/rag-index.html' | relative_url }}">Browse All</a></li>
           <li><a href="{{ '/examples/' | relative_url }}">Examples</a></li>
+          <li><button id="search-toggle" class="search-toggle" aria-label="Search">🔍 Search</button></li>
           <li><a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  
+  <!-- Search Container -->
+  <div id="search-container" class="search-container" style="display: none;">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search knowledge base... (Ctrl+K)" autocomplete="off">
+      <button id="search-close" class="search-close" aria-label="Close search">×</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
   
   <main class="main-content">
     <div class="container">
@@ -107,6 +117,9 @@
       </p>
     </div>
   </footer>
+  
+  <!-- Search functionality -->
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   
   <!-- Analytics (add your tracking code here) -->
   <!-- Google Analytics example:
