@@ -49,10 +49,20 @@ git push
 
 ### Category Cards
 
+**CRITICAL RULE**: **Homepage cards are created DYNAMICALLY based on actual folder contents.**
+
 1. **Auto-Sync Only**: Use `sync-homepage.py` to update homepage - don't manually edit
 2. **Must Match Index**: Homepage card descriptions MUST exactly match `rag-index.md` section descriptions
-3. **Complete Coverage**: ALL major domains from `rag-index.md` must have homepage cards (script handles this)
-4. **Consistent Formatting**: All cards follow the same structure (script handles this)
+3. **Card Creation Rule**: 
+   - **Empty folder = NO card** (folder exists but has zero .md files)
+   - **Folder with files = YES card** (folder has at least ONE .md file)
+   - Cards are created automatically for ALL folders that have files
+4. **Dynamic Coverage**: The script scans `rag/` folder structure and creates cards for:
+   - Every main folder that contains at least one .md file
+   - Currently: API Reference, Adoption, Architecture Patterns, Best Practices, Code Examples, Data Governance, Data Modeling, Development, Glossary, Identity and SSO, Integration Patterns, MCP Knowledge, Observability, Operations, Patterns, Project Methods, Quick Start Guides, Security, Testing, Troubleshooting
+5. **No Duplicates**: Each category appears exactly once on the homepage
+6. **Consistent Formatting**: All cards follow the same structure (script handles this)
+7. **Automatic Updates**: When you add a file to an empty folder, the next sync will create its card
 
 ### When Adding New Files to rag/
 
@@ -62,7 +72,8 @@ git push
    - Find your new file automatically
    - Add it to `rag-index.md`
    - Add it to `rag-library.json` with metadata
-   - Update homepage if needed
+   - **If this is the FIRST file in a folder**: Create a new homepage card for that folder
+   - **If folder already had files**: Update existing card
    - Update statistics and coverage counts
 4. Commit changes:
    ```bash
@@ -71,6 +82,8 @@ git push
    git push
    ```
 5. Done!
+
+**Note**: Empty folders (with zero .md files) will NOT get homepage cards. As soon as you add the first file, the card will appear.
 
 ### Link Rules
 
@@ -147,20 +160,31 @@ git push
 
 ### When Adding New Domain
 
-1. Add files to new domain folder in `rag/`
-2. **Run**: `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
-3. The script will:
-   - Automatically detect the new domain
+1. **Create the folder** in `rag/` (e.g., `rag/my-new-domain/`)
+2. **Add at least ONE .md file** to the folder (empty folders don't get cards)
+3. **Add folder mapping** to `FOLDER_TO_SECTION` in `website/scripts/sync-homepage.py`:
+   ```python
+   "my-new-domain": "My New Domain",
+   ```
+4. **Add emoji** to `EMOJI_MAP` in the same file:
+   ```python
+   "My New Domain": "🎯",
+   ```
+5. **Run**: `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
+6. The script will:
+   - Automatically detect the new domain (because it has files)
    - Add it to `rag-index.md`
    - Add it to `rag-library.json`
-   - Update homepage with new category card
-4. Commit changes:
+   - **Create a new homepage card** (because folder has files)
+7. Commit changes:
    ```bash
-   git add rag/rag-index.md rag/rag-library.json website/root/index.md
+   git add rag/rag-index.md rag/rag-library.json website/root/index.md website/scripts/sync-homepage.py
    git commit -m "Add new domain: [domain-name]"
    git push
    ```
-5. Done!
+8. Done!
+
+**Important**: The folder MUST have at least one .md file to get a homepage card. Empty folders are ignored.
 
 ### When Updating Descriptions
 

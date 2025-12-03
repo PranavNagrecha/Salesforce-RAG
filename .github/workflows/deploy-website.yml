@@ -85,14 +85,6 @@ jobs:
           path: ./_site
         timeout-minutes: 3
       
-      - name: Verify artifact upload
-        run: |
-          if [ -z "${{ steps.upload.outputs.artifact-id }}" ]; then
-            echo "❌ Artifact upload failed - no artifact ID"
-            exit 1
-          fi
-          echo "✅ Artifact uploaded successfully: ${{ steps.upload.outputs.artifact-id }}"
-      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3

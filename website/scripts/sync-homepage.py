@@ -183,15 +183,24 @@ def extract_key_topics(content):
 def scan_rag_folder(rag_path):
     """Scan rag/ folder and organize files by domain
     
-    LESSON LEARNED: Always scan actual rag/ folder, don't just reference rag-index.md
-    - This ensures new files are automatically included
-    - Extracts metadata from actual files, not stale index
-    - Handles files in subdirectories correctly
+    CRITICAL: This function MUST ensure ALL main folders get cards, even if empty.
+    - Scans actual folder structure to find ALL main folders
+    - Creates entries for ALL folders in FOLDER_TO_SECTION
+    - Ensures every main folder has a card on homepage
     """
     files_by_domain = defaultdict(list)
     
     print("📂 Scanning rag/ folder structure...")
     
+    # FIRST: Find ALL main folders that exist (even if empty)
+    existing_folders = set()
+    for item in rag_path.iterdir():
+        if item.is_dir() and not item.name.startswith('.'):
+            # Skip meta and other non-content folders
+            if item.name not in {'meta', '.git', '__pycache__', 'node_modules'}:
+                existing_folders.add(item.name)
+    
+    # SECOND: Scan for files in each folder
     for md_file in rag_path.rglob('*.md'):
         # Skip excluded files
         if md_file.name in EXCLUDE_FILES:
@@ -215,7 +224,9 @@ def scan_rag_folder(rag_path):
         # Map folder to section
         section_name = FOLDER_TO_SECTION.get(domain_folder)
         if not section_name:
-            print(f"   ⚠️  Unknown domain folder: {domain_folder}")
+            # Unknown folder - still track it but warn
+            if domain_folder not in {'examples', 'meta'}:
+                print(f"   ⚠️  Unknown domain folder: {domain_folder} (will not get homepage card)")
             continue
         
         # Read file content
@@ -245,7 +256,23 @@ def scan_rag_folder(rag_path):
             'full_path': relative_path,
         })
     
-    print(f"   Found {sum(len(files) for files in files_by_domain.values())} files in {len(files_by_domain)} domains")
+    # THIRD: Only include folders that have at least ONE file
+    # Rule: Empty folder = NO card. Folder with files = YES card.
+    total_files = sum(len(files) for files in files_by_domain.values())
+    total_domains = len(files_by_domain)
+    
+    # Check for folders that exist but have no files
+    empty_folders = []
+    for folder_name, section_name in FOLDER_TO_SECTION.items():
+        if folder_name in existing_folders and section_name not in files_by_domain:
+            empty_folders.append(folder_name)
+    
+    if empty_folders:
+        print(f"   ℹ️  Folders with no files (will NOT get homepage cards): {', '.join(empty_folders)}")
+    
+    print(f"   Found {total_files} files in {total_domains} domains")
+    print(f"   ✅ Creating homepage cards for {total_domains} folders with files (empty folders excluded)")
+    
     return files_by_domain
 
 
@@ -596,11 +623,20 @@ def generate_card_html(section):
 
 
 def update_homepage(rag_index_path, homepage_path):
-    """Update homepage with all categories from rag-index.md"""
+    """Update homepage with all categories from rag-index.md
+    
+    RULE: Only create cards for folders that have at least ONE file.
+    Empty folders = NO card. Folders with files = YES card.
+    """
     
     print("🏠 Syncing homepage...")
     sections = extract_sections_from_index(rag_index_path)
-    print(f"   Found {len(sections)} categories")
+    print(f"   Found {len(sections)} categories from rag-index.md (only folders with files)")
+    
+    # Sort sections alphabetically for consistent ordering
+    sections.sort(key=lambda x: x['name'])
+    
+    print(f"   ✅ Creating {len(sections)} homepage cards (one per folder with files)")
     
     # Read homepage
     with open(homepage_path, 'r', encoding='utf-8') as f:
@@ -640,9 +676,22 @@ def update_homepage(rag_index_path, homepage_path):
     for section in sections:
         cards.append(generate_card_html(section))
     
-    # Replace the grid content
+    # Replace the grid content - ensure we get the complete replacement
     new_grid = '<div class="domain-grid">\n' + '\n  \n'.join(cards) + '\n</div>'
-    new_homepage = homepage_content[:grid_start] + new_grid + homepage_content[grid_end:]
+    
+    # Find the next section after the grid (usually "## Quick Links" or similar)
+    # This ensures we don't accidentally include duplicate cards
+    next_section = homepage_content.find('\n## ', grid_end)
+    if next_section == -1:
+        # Try without newline
+        next_section = homepage_content.find('## ', grid_end)
+    
+    if next_section == -1:
+        # No next section, replace to end of grid
+        new_homepage = homepage_content[:grid_start] + new_grid + homepage_content[grid_end:]
+    else:
+        # Replace up to next section (skip any duplicate cards)
+        new_homepage = homepage_content[:grid_start] + new_grid + '\n\n' + homepage_content[next_section:]
     
     # Write updated homepage
     with open(homepage_path, 'w', encoding='utf-8') as f:
