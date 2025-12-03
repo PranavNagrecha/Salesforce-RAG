@@ -1,14 +1,10 @@
 name: Deploy Website
-# Auto-deploy on push to main
 
+# Auto-deploy on push to main
 on:
   push:
     branches:
       - main
-    # Remove path restrictions to trigger on any push to main
-    # paths:
-    #   - 'rag/**'
-    #   - 'website/**'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
@@ -18,8 +14,6 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    # REMOVED environment block - let GitHub Pages auto-create it
-    # This sometimes fixes "Cannot find any run" errors
     
     steps:
       - name: Checkout repository
@@ -36,15 +30,15 @@ jobs:
       
       - name: Sync RAG index and homepage
         run: |
-          python website/scripts/sync-homepage.py
+          python3 website/scripts/sync-homepage.py
       
       - name: Update website files (sitemap)
         run: |
-          python website/scripts/update-website.py --verbose
+          python3 website/scripts/update-website.py --verbose
       
       - name: Validate changes
         run: |
-          python website/scripts/update-website.py --validate-only
+          python3 website/scripts/update-website.py --validate-only
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -90,4 +84,3 @@ jobs:
         uses: actions/deploy-pages@v3
         timeout-minutes: 10
         continue-on-error: false
-

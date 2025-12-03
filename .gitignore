@@ -14,10 +14,18 @@ _site/
 .jekyll-cache/
 .jekyll-metadata/
 vendor/
+_layouts/
+assets/
+_config.yml
+Gemfile
+Gemfile.lock
+index.md
+robots.txt
+sitemap.xml
+.nojekyll
 
 # Dependencies
 node_modules/
-Gemfile.lock
 
 # IDE
 .vscode/
@@ -33,3 +41,18 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

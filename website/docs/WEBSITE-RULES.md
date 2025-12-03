@@ -29,7 +29,7 @@ This script orchestrates the complete workflow:
 
 **Then commit:**
 ```bash
-git add rag/rag-index.md rag/rag-library.json website/root/index.md sitemap.xml
+git add rag/rag-index.md rag/rag-library.json website/root/index.md website/root/sitemap.xml
 git commit -m "Auto-sync RAG index, library JSON, and homepage"
 git push
 ```
@@ -236,3 +236,4 @@ python website/scripts/sync-homepage.py
 ```
 
 That's it. No manual work needed.
+

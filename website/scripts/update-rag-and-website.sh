@@ -5,14 +5,14 @@
 # Run this after making changes to RAG files.
 #
 # Usage:
-#   ./scripts/update-rag-and-website.sh
-#   ./scripts/update-rag-and-website.sh --validate-only
-#   ./scripts/update-rag-and-website.sh --commit "Your commit message"
+#   ./website/scripts/update-rag-and-website.sh
+#   ./website/scripts/update-rag-and-website.sh --validate-only
+#   ./website/scripts/update-rag-and-website.sh --commit "Your commit message"
 
 set -e  # Exit on error
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
 # Colors for output
 RED='\033[0;31m'
@@ -145,7 +145,7 @@ if [ -n "$COMMIT_MSG" ]; then
     if [ "$DRY_RUN" = true ]; then
         echo "[DRY RUN] Would commit with message: $COMMIT_MSG"
     else
-        git add sitemap.xml
+        git add website/root/sitemap.xml
         git add rag/rag-index.md rag/rag-library.json 2>/dev/null || true
         git add website/root/index.md 2>/dev/null || true
         
@@ -167,7 +167,7 @@ else
     echo "  $0 --commit 'Your commit message'"
     echo ""
     echo "Or commit manually:"
-    echo "  git add rag/rag-index.md rag/rag-library.json website/root/index.md sitemap.xml"
+    echo "  git add rag/rag-index.md rag/rag-library.json website/root/index.md website/root/sitemap.xml"
     echo "  git commit -m 'Update website files'"
     echo "  git push origin main"
 fi
@@ -180,7 +180,7 @@ if [ "$DRY_RUN" = false ]; then
     echo ""
     echo "Next steps:"
     echo "  1. Review changes: git diff"
-    echo "  2. Commit: git add rag/rag-index.md rag/rag-library.json website/root/index.md sitemap.xml && git commit -m 'Update website'"
+    echo "  2. Commit: git add rag/rag-index.md rag/rag-library.json website/root/index.md website/root/sitemap.xml && git commit -m 'Update website'"
     echo "  3. Push: git push origin main"
     echo "  4. GitHub Pages will automatically rebuild (1-2 minutes)"
     echo ""

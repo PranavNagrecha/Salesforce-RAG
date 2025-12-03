@@ -9,14 +9,15 @@ This script automatically updates website files when RAG content changes:
 - Prepares site for deployment
 
 Usage:
-    python scripts/update-website.py
-    python scripts/update-website.py --validate-only
-    python scripts/update-website.py --dry-run
+    python website/scripts/update-website.py
+    python website/scripts/update-website.py --validate-only
+    python website/scripts/update-website.py --dry-run
 """
 
 import os
 import sys
 import json
+import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime
@@ -24,13 +25,12 @@ from typing import List, Dict, Tuple
 import argparse
 
 # Configuration
-# LESSON LEARNED: Script is in website/scripts/, so parent.parent = website/, need one more parent for repo root
 BASE_DIR = Path(__file__).parent.parent.parent
 RAG_DIR = BASE_DIR / "rag"
-SITEMAP_PATH = BASE_DIR / "sitemap.xml"
+SITEMAP_PATH = BASE_DIR / "website" / "root" / "sitemap.xml"
 SITE_URL = "https://pranavnagrecha.github.io/Salesforce-RAG"
 EXCLUDE_DIRS = {"meta", ".git", "__pycache__", "node_modules"}
-EXCLUDE_FILES = {"README.md", "CONTRIBUTING.md", "MAINTENANCE.md"}
+EXCLUDE_FILES = {"README.md", "CONTRIBUTING.md", "MAINTENANCE.md", "rag-index.md", "rag-library.json", "index.md"}
 
 # Domain descriptions for sitemap priorities
 DOMAIN_PRIORITIES = {
@@ -98,232 +98,164 @@ def get_file_metadata(file_path: Path) -> Dict:
     
     # Try to read frontmatter
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
-            
-            # Check for YAML frontmatter
-            if content.startswith("---"):
-                lines = content.split("\n")
-                if len(lines) > 1:
-                    frontmatter_end = None
-                    for i, line in enumerate(lines[1:], 1):
-                        if line.strip() == "---":
-                            frontmatter_end = i
-                            break
-                    
-                    if frontmatter_end:
-                        frontmatter = "\n".join(lines[1:frontmatter_end])
-                        # Simple YAML parsing (basic)
-                        for line in frontmatter.split("\n"):
-                            if ":" in line:
-                                key, value = line.split(":", 1)
-                                key = key.strip().strip('"\'')
-                                value = value.strip().strip('"\'')
-                                if key == "title":
-                                    metadata["title"] = value
-    except Exception as e:
-        print(f"Warning: Could not read metadata from {file_path}: {e}", file=sys.stderr)
+        content = file_path.read_text(encoding='utf-8')
+        if content.startswith("---"):
+            import yaml
+            parts = content.split("---", 2)
+            if len(parts) >= 3:
+                frontmatter = yaml.safe_load(parts[1]) or {}
+                metadata.update(frontmatter)
+    except Exception:
+        pass
     
     return metadata
 
 
-def determine_priority(file_path: str) -> float:
-    """Determine sitemap priority based on file path."""
-    # Check for index files (highest priority)
-    if "index" in file_path.lower() or "rag-index" in file_path.lower():
-        return 1.0
-    
-    # Check domain priorities
-    for domain, priority in DOMAIN_PRIORITIES.items():
-        if f"/{domain}/" in file_path or file_path.startswith(f"{domain}/"):
-            return priority
-    
-    # Default priority
-    return 0.7
+def get_priority_for_path(relative_path: str) -> float:
+    """Get sitemap priority based on file path."""
+    parts = relative_path.split("/")
+    if len(parts) > 1:
+        folder = parts[0]
+        return DOMAIN_PRIORITIES.get(folder, 0.7)
+    return 0.8  # Root level files
 
 
-def determine_changefreq(file_path: str) -> str:
-    """Determine change frequency based on file type."""
-    if "index" in file_path.lower():
-        return "weekly"
-    elif "template" in file_path.lower():
-        return "monthly"
-    elif "example" in file_path.lower():
-        return "monthly"
-    else:
-        return "monthly"
-
-
-def generate_sitemap(markdown_files: List[Tuple[Path, str]], output_path: Path) -> None:
-    """Generate XML sitemap from markdown files."""
-    # Create root element
+def generate_sitemap(markdown_files: List[Tuple[Path, str]]) -> str:
+    """Generate sitemap.xml content."""
+    # Create XML structure
     urlset = ET.Element("urlset")
     urlset.set("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9")
-    urlset.set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
-    urlset.set("xsi:schemaLocation", 
-               "http://www.sitemaps.org/schemas/sitemap/0.9 "
-               "http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd")
     
     # Add homepage
-    home_url = ET.SubElement(urlset, "url")
-    ET.SubElement(home_url, "loc").text = f"{SITE_URL}/"
-    ET.SubElement(home_url, "lastmod").text = datetime.now().strftime("%Y-%m-%d")
-    ET.SubElement(home_url, "changefreq").text = "weekly"
-    ET.SubElement(home_url, "priority").text = "1.0"
+    url_elem = ET.SubElement(urlset, "url")
+    ET.SubElement(url_elem, "loc").text = f"{SITE_URL}/"
+    ET.SubElement(url_elem, "lastmod").text = datetime.now().strftime("%Y-%m-%d")
+    ET.SubElement(url_elem, "changefreq").text = "weekly"
+    ET.SubElement(url_elem, "priority").text = "1.0"
     
-    # Add main index
-    index_url = ET.SubElement(urlset, "url")
-    ET.SubElement(index_url, "loc").text = f"{SITE_URL}/rag/rag-index.html"
-    ET.SubElement(index_url, "lastmod").text = datetime.now().strftime("%Y-%m-%d")
-    ET.SubElement(index_url, "changefreq").text = "weekly"
-    ET.SubElement(index_url, "priority").text = "0.9"
+    # Add rag-index
+    url_elem = ET.SubElement(urlset, "url")
+    ET.SubElement(url_elem, "loc").text = f"{SITE_URL}/rag/rag-index.html"
+    ET.SubElement(url_elem, "lastmod").text = datetime.now().strftime("%Y-%m-%d")
+    ET.SubElement(url_elem, "changefreq").text = "daily"
+    ET.SubElement(url_elem, "priority").text = "0.9"
     
     # Add all markdown files
     for file_path, relative_path in markdown_files:
         metadata = get_file_metadata(file_path)
         
-        # Convert .md to .html for URL
-        url_path = relative_path.replace(".md", ".html")
-        # Handle index files
-        if url_path.endswith("index.html"):
-            url_path = url_path.replace("/index.html", "/")
+        # Convert .md to .html and build URL
+        url_path = relative_path.replace("\\", "/").replace(".md", ".html")
+        full_url = f"{SITE_URL}/rag/{url_path}"
         
-        url = ET.SubElement(urlset, "url")
-        ET.SubElement(url, "loc").text = f"{SITE_URL}/{url_path}"
-        ET.SubElement(url, "lastmod").text = metadata["modified"].strftime("%Y-%m-%d")
-        ET.SubElement(url, "changefreq").text = determine_changefreq(relative_path)
-        ET.SubElement(url, "priority").text = str(determine_priority(relative_path))
+        url_elem = ET.SubElement(urlset, "url")
+        ET.SubElement(url_elem, "loc").text = full_url
+        ET.SubElement(url_elem, "lastmod").text = metadata["modified"].strftime("%Y-%m-%d")
+        ET.SubElement(url_elem, "changefreq").text = "monthly"
+        priority = get_priority_for_path(relative_path)
+        ET.SubElement(url_elem, "priority").text = str(priority)
     
-    # Write XML
-    tree = ET.ElementTree(urlset)
-    ET.indent(tree, space="  ")
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
-    
-    print(f"✅ Generated sitemap with {len(markdown_files) + 2} URLs")
+    # Convert to string
+    ET.indent(urlset, space="  ")
+    return ET.tostring(urlset, encoding='unicode', xml_declaration=True)
 
 
-def validate_markdown_files(markdown_files: List[Tuple[Path, str]]) -> Tuple[int, List[str]]:
-    """Validate markdown files for common issues."""
+def validate_links(markdown_files: List[Tuple[Path, str]]) -> Tuple[int, List[str]]:
+    """Validate internal links in markdown files."""
     errors = []
-    warnings = []
+    total_links = 0
     
     for file_path, relative_path in markdown_files:
-        # Check file is readable
         try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                content = f.read()
+            content = file_path.read_text(encoding='utf-8')
+            
+            # Find all markdown links
+            link_pattern = r'\[([^\]]+)\]\(([^\)]+)\)'
+            links = re.findall(link_pattern, content)
+            total_links += len(links)
+            
+            for link_text, link_url in links:
+                # Skip external links
+                if link_url.startswith("http://") or link_url.startswith("https://") or link_url.startswith("mailto:"):
+                    continue
+                
+                # Skip anchor links
+                if link_url.startswith("#"):
+                    continue
+                
+                # Validate internal link
+                # Links should use .html extension
+                if link_url.endswith(".md"):
+                    errors.append(f"{relative_path}: Link '{link_text}' uses .md extension (should be .html): {link_url}")
+                
+                # Check if link is relative and valid
+                if not link_url.startswith("/"):
+                    # Relative link - check if file exists
+                    link_path = (file_path.parent / link_url).resolve()
+                    if not link_path.exists():
+                        errors.append(f"{relative_path}: Broken link '{link_text}': {link_url}")
+        
         except Exception as e:
-            errors.append(f"Cannot read {relative_path}: {e}")
-            continue
-        
-        # Check for basic structure
-        if len(content.strip()) < 100:
-            warnings.append(f"{relative_path}: File seems very short (< 100 chars)")
-        
-        # Check for title/heading
-        if not content.startswith("#") and "---" not in content[:100]:
-            warnings.append(f"{relative_path}: No H1 heading or frontmatter found")
-        
-        # Check for empty file
-        if not content.strip():
-            errors.append(f"{relative_path}: File is empty")
+            errors.append(f"{relative_path}: Error reading file: {e}")
     
-    return len(errors), errors + warnings
-
-
-def print_summary(markdown_files: List[Tuple[Path, str]]) -> None:
-    """Print summary of files found."""
-    print("\n" + "="*60)
-    print("RAG Content Summary")
-    print("="*60)
-    
-    # Count by domain
-    domain_counts = {}
-    for _, relative_path in markdown_files:
-        domain = relative_path.split("/")[0] if "/" in relative_path else "root"
-        domain_counts[domain] = domain_counts.get(domain, 0) + 1
-    
-    print(f"\nTotal markdown files: {len(markdown_files)}")
-    print("\nFiles by domain:")
-    for domain, count in sorted(domain_counts.items()):
-        print(f"  {domain:20s}: {count:3d} files")
-    
-    print("\n" + "="*60)
+    return total_links, errors
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Update website files for Salesforce RAG Knowledge Library"
-    )
-    parser.add_argument(
-        "--validate-only",
-        action="store_true",
-        help="Only validate files, don't update sitemap"
-    )
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Show what would be done without making changes"
-    )
-    parser.add_argument(
-        "--verbose",
-        "-v",
-        action="store_true",
-        help="Verbose output"
-    )
-    
+    """Main function."""
+    parser = argparse.ArgumentParser(description="Update website files")
+    parser.add_argument("--validate-only", action="store_true", help="Only validate, don't update files")
+    parser.add_argument("--dry-run", action="store_true", help="Show what would be done without making changes")
+    parser.add_argument("--verbose", action="store_true", help="Verbose output")
     args = parser.parse_args()
     
-    print("🔍 Scanning RAG directory...")
+    if args.verbose:
+        print("Finding markdown files...")
     
-    # Find all markdown files
-    markdown_files = find_markdown_files(RAG_DIR, BASE_DIR)
+    markdown_files = find_markdown_files(RAG_DIR, RAG_DIR)
     
-    if not markdown_files:
-        print("❌ No markdown files found in rag/ directory!")
-        sys.exit(1)
+    if args.verbose:
+        print(f"Found {len(markdown_files)} markdown files")
     
-    # Print summary
-    if args.verbose or not args.validate_only:
-        print_summary(markdown_files)
+    # Validate links
+    if args.verbose:
+        print("Validating links...")
     
-    # Validate files
-    print("\n🔍 Validating markdown files...")
-    error_count, issues = validate_markdown_files(markdown_files)
+    total_links, link_errors = validate_links(markdown_files)
     
-    if issues:
-        print(f"\n⚠️  Found {len(issues)} issues:")
-        for issue in issues[:10]:  # Show first 10
-            print(f"  - {issue}")
-        if len(issues) > 10:
-            print(f"  ... and {len(issues) - 10} more")
-    
-    if error_count > 0:
-        print(f"\n❌ Found {error_count} errors. Please fix before deploying.")
-        if not args.validate_only:
-            sys.exit(1)
+    if link_errors:
+        print(f"\n⚠️  Found {len(link_errors)} link issues:", file=sys.stderr)
+        for error in link_errors[:10]:  # Show first 10
+            print(f"  - {error}", file=sys.stderr)
+        if len(link_errors) > 10:
+            print(f"  ... and {len(link_errors) - 10} more", file=sys.stderr)
+    else:
+        if args.verbose:
+            print(f"✓ All {total_links} links validated successfully")
     
     if args.validate_only:
-        print("\n✅ Validation complete!")
-        sys.exit(0)
+        if link_errors:
+            sys.exit(1)
+        return
     
     # Generate sitemap
-    if not args.dry_run:
-        print("\n📝 Generating sitemap.xml...")
-        generate_sitemap(markdown_files, SITEMAP_PATH)
-        print(f"✅ Sitemap saved to: {SITEMAP_PATH}")
-    else:
-        print("\n🔍 [DRY RUN] Would generate sitemap with:")
-        print(f"  - Homepage")
-        print(f"  - Index page")
-        print(f"  - {len(markdown_files)} markdown files")
+    if args.verbose:
+        print("Generating sitemap.xml...")
     
-    print("\n✅ Website update complete!")
-    print("\nNext steps:")
-    print("  1. Review the changes")
-    print("  2. Commit: git add sitemap.xml")
-    print("  3. Push: git push origin main")
-    print("  4. GitHub Pages will automatically rebuild")
+    sitemap_content = generate_sitemap(markdown_files)
+    
+    if args.dry_run:
+        print(f"[DRY RUN] Would write sitemap.xml ({len(sitemap_content)} characters)")
+        print(f"[DRY RUN] Would include {len(markdown_files)} markdown files")
+    else:
+        SITEMAP_PATH.write_text(sitemap_content, encoding='utf-8')
+        print(f"✓ Wrote {SITEMAP_PATH}")
+        print(f"  - {len(markdown_files)} markdown files")
+        print(f"  - {total_links} total links")
+        if link_errors:
+            print(f"  - ⚠️  {len(link_errors)} link issues found")
+        else:
+            print(f"  - ✓ All links valid")
 
 
 if __name__ == "__main__":
