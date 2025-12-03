@@ -17,8 +17,8 @@ last_reviewed: "2025-01-XX"
 Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted. This guide covers CDC event processing patterns, error handling, and integration strategies.
 
 **Related Patterns**:
-- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events and event-driven patterns
-- [Integration Patterns](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Platform Events and event-driven patterns
+- [Integration Patterns](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 - Familiarity with error handling and retry patterns
 
 **Recommended Reading**:
-- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
-- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
-- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Platform Events patterns
+- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
 
 ## Consensus Best Practices
 
@@ -207,9 +207,9 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 
 ## Related Patterns
 
-- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events and event-driven patterns
-- [Integration Patterns](etl-vs-api-vs-events.html) - Integration pattern selection
-- [Monitoring and Alerting](../observability/monitoring-alerting.html) - CDC monitoring and event processing metrics
+- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Platform Events and event-driven patterns
+- [Integration Patterns](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Monitoring and Alerting](/rag/observability/monitoring-alerting.html) - CDC monitoring and event processing metrics
 
 ## Tradeoffs: CDC vs Platform Events vs Other Patterns
 
@@ -332,7 +332,7 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 
 ## Related Patterns
 
-- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
-- [Integration Patterns](etl-vs-api-vs-events.html) - Integration pattern selection
-- [CDC Examples](../code-examples/integrations/cdc-examples.html) - Complete CDC code examples
+- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Platform Events patterns
+- [Integration Patterns](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [CDC Examples](/rag/code-examples/integrations/cdc-examples.html) - Complete CDC code examples
 

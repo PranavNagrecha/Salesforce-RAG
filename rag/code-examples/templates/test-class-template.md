@@ -115,6 +115,6 @@ private class [ClassName]Test {
 - Avoid `@SeeAllData` annotation
 
 **Related Patterns**:
-- [Apex Patterns](../../development/apex-patterns.html) - Testing strategies
-- [Testing Strategy](../../project-methods/testing-strategy.html) - Testing best practices
+- [Apex Patterns](/rag/development/apex-patterns.html) - Testing strategies
+- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Testing best practices
 

@@ -7,9 +7,9 @@
 This template provides a complete, accessible LWC component structure with all accessibility best practices built in. Use this as a starting point for new components.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](../../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../lwc/accessibility-examples.html) - Complete code examples
-- [LWC Accessibility Quick Start](../../quick-start/lwc-accessibility-quick-start.html) - Quick start guide
+- [LWC Accessibility Guidelines](/rag/mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](/rag/code-examples/lwc/accessibility-examples.html) - Complete code examples
+- [LWC Accessibility Quick Start](/rag/quick-start/lwc-accessibility-quick-start.html) - Quick start guide
 
 ## Component Structure
 
@@ -517,8 +517,8 @@ textarea:focus-visible,
 
 ## Related Patterns
 
-- [LWC Accessibility Guidelines](../../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../lwc/accessibility-examples.html) - Complete code examples
-- [LWC Accessibility Quick Start](../../quick-start/lwc-accessibility-quick-start.html) - Quick start guide
-- [LWC Accessibility Testing](../../testing/lwc-accessibility-testing.html) - Testing patterns
+- [LWC Accessibility Guidelines](/rag/mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](/rag/code-examples/lwc/accessibility-examples.html) - Complete code examples
+- [LWC Accessibility Quick Start](/rag/quick-start/lwc-accessibility-quick-start.html) - Quick start guide
+- [LWC Accessibility Testing](/rag/testing/lwc-accessibility-testing.html) - Testing patterns
 

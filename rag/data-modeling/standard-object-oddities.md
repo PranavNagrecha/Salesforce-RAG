@@ -364,7 +364,7 @@ Think of standard objects as having different capabilities and constraints. Not 
 
 ## Related Patterns
 
-- [Object Setup and Configuration](object-setup-and-configuration.html) - Object configuration patterns
-- [Permission Set Architecture](../security/permission-set-architecture.html) - Access control patterns
-- [Sharing Fundamentals](../security/sharing-fundamentals.html) - Sharing model patterns
+- [Object Setup and Configuration](/rag/data-modeling/object-setup-and-configuration.html) - Object configuration patterns
+- [Permission Set Architecture](/rag/security/permission-set-architecture.html) - Access control patterns
+- [Sharing Fundamentals](/rag/security/sharing-fundamentals.html) - Sharing model patterns
 

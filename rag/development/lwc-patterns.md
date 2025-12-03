@@ -27,9 +27,9 @@ Lightning Web Components (LWC) are modern, standards-based web components built 
 - Basic understanding of Apex (for calling server-side methods)
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.html) - Apex service layer patterns for LWC integration
-- [Lightning App Builder](lightning-app-builder.html) - Understanding when to use declarative vs custom components
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Accessibility best practices
+- [Apex Patterns](/rag/development/apex-patterns.html) - Apex service layer patterns for LWC integration
+- [Lightning App Builder](/rag/development/lightning-app-builder.html) - Understanding when to use declarative vs custom components
+- [LWC Accessibility Testing](/rag/testing/lwc-accessibility-testing.html) - Accessibility best practices
 
 ## LWC Fundamentals
 
@@ -359,7 +359,7 @@ export default class DynamicRecordEditForm extends LightningElement {
 - **Maintainable**: Field changes don't require component updates
 - **Flexible**: Supports conditional field display based on various criteria
 
-**Related Patterns**: [Custom Settings and Metadata Patterns](custom-settings-metadata-patterns.html), [Config-Driven UI](#config-driven-ui)
+**Related Patterns**: [Custom Settings and Metadata Patterns](/rag/development/custom-settings-metadata-patterns.html), [Config-Driven UI](#config-driven-ui)
 
 ### Performance-Aware Patterns
 
@@ -496,11 +496,11 @@ export default class DynamicRecordEditForm extends LightningElement {
 Accessibility ensures that all users, including those using assistive technologies, can access and interact with your components. All LWC components should follow WCAG 2.2 standards.
 
 **Related Resources**:
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - Comprehensive WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Complete working code examples
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns and tools
-- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
-- [LWC Accessibility Quick Start](../quick-start/lwc-accessibility-quick-start.html) - Quick start guide
+- [LWC Accessibility Guidelines](/rag/mcp-knowledge/lwc-accessibility.html) - Comprehensive WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](/rag/code-examples/lwc/accessibility-examples.html) - Complete working code examples
+- [LWC Accessibility Testing](/rag/testing/lwc-accessibility-testing.html) - Testing patterns and tools
+- [LWC Accessibility Troubleshooting](/rag/troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
+- [LWC Accessibility Quick Start](/rag/quick-start/lwc-accessibility-quick-start.html) - Quick start guide
 
 ### WCAG Guidelines
 
@@ -592,7 +592,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Color Contrast Testing**: Use WebAIM Contrast Checker
 - **Jest Testing**: Include accessibility tests in Jest test suites
 
-**See**: [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) for complete testing patterns
+**See**: [LWC Accessibility Testing](/rag/testing/lwc-accessibility-testing.html) for complete testing patterns
 
 ### Common Accessibility Mistakes
 
@@ -605,7 +605,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - Incorrect heading hierarchy
 - Missing semantic HTML
 
-**See**: [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) for solutions to common errors
+**See**: [LWC Accessibility Troubleshooting](/rag/troubleshooting/lwc-accessibility-errors.html) for solutions to common errors
 
 ## Responsive Design
 
@@ -664,16 +664,16 @@ Accessibility ensures that all users, including those using assistive technologi
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](apex-patterns.html) - Apex service layer patterns for LWC integration
-- [Flow Patterns](flow-patterns.html) - Understanding when to use declarative vs custom components
-- [Lightning App Builder](lightning-app-builder.html) - Declarative component configuration
-- [Order of Execution](order-of-execution.html) - Understanding when LWCs execute
+- [Apex Patterns](/rag/development/apex-patterns.html) - Apex service layer patterns for LWC integration
+- [Flow Patterns](/rag/development/flow-patterns.html) - Understanding when to use declarative vs custom components
+- [Lightning App Builder](/rag/development/lightning-app-builder.html) - Declarative component configuration
+- [Order of Execution](/rag/development/order-of-execution.html) - Understanding when LWCs execute
 
 **Related Domains**:
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Accessibility testing patterns
-- [LWC Jest Testing](../testing/lwc-jest-testing.html) - Unit testing Lightning Web Components
-- [Common LWC Errors](../troubleshooting/common-lwc-errors.html) - Troubleshooting LWC issues
-- [LWC Accessibility Errors](../troubleshooting/lwc-accessibility-errors.html) - Accessibility error resolution
+- [LWC Accessibility Testing](/rag/testing/lwc-accessibility-testing.html) - Accessibility testing patterns
+- [LWC Jest Testing](/rag/testing/lwc-jest-testing.html) - Unit testing Lightning Web Components
+- [Common LWC Errors](/rag/troubleshooting/common-lwc-errors.html) - Troubleshooting LWC issues
+- [LWC Accessibility Errors](/rag/troubleshooting/lwc-accessibility-errors.html) - Accessibility error resolution
 - [Code Examples](../code-examples/lwc/) - Complete LWC code examples
 
 ## Q&A

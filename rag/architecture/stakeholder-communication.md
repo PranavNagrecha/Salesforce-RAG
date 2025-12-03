@@ -337,10 +337,10 @@ Think of yourself as a translator between business language and technical langua
 ## Related Patterns
 
 **See Also**:
-- [Architect Role](architect-role.html) - Architect communication responsibilities
-- [Team Leadership](team-leadership.html) - Team communication patterns
-- [Project Estimation](project-estimation.html) - Managing stakeholder expectations
+- [Architect Role](/rag/architecture/architect-role.html) - Architect communication responsibilities
+- [Team Leadership](/rag/architecture/team-leadership.html) - Team communication patterns
+- [Project Estimation](/rag/architecture/project-estimation.html) - Managing stakeholder expectations
 
 **Related Domains**:
-- [Delivery Framework](../project-methods/delivery-framework.html) - Stakeholder coordination in sprints
+- [Delivery Framework](/rag/project-methods/delivery-framework.html) - Stakeholder coordination in sprints
 

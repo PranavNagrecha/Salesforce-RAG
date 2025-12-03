@@ -8,9 +8,9 @@
 Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components. These examples demonstrate practical implementation of accessibility patterns.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](../../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Patterns](../../development/lwc-patterns.html) - General LWC patterns
-- [Design System Patterns](../../mcp-knowledge/design-system-patterns.html) - SLDS accessibility
+- [LWC Accessibility Guidelines](/rag/mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Patterns](/rag/development/lwc-patterns.html) - General LWC patterns
+- [Design System Patterns](/rag/mcp-knowledge/design-system-patterns.html) - SLDS accessibility
 
 ## Form Accessibility Examples
 
@@ -1138,7 +1138,7 @@ export default class StatusIndicator extends LightningElement {
 
 ## Related Examples
 
-- [Accessible Component Template](../templates/lwc-accessible-component-template.html) - Template for accessible components
-- [Accessibility Testing](../../testing/lwc-accessibility-testing.html) - Testing patterns
-- [Accessibility Troubleshooting](../../troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
+- [Accessible Component Template](/rag/code-examples/templates/lwc-accessible-component-template.html) - Template for accessible components
+- [Accessibility Testing](/rag/testing/lwc-accessibility-testing.html) - Testing patterns
+- [Accessibility Troubleshooting](/rag/troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
 

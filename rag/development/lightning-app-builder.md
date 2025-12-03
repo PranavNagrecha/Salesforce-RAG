@@ -446,10 +446,10 @@ When creating Lightning pages:
 ## Related Patterns
 
 **See Also**:
-- [LWC Patterns](lwc-patterns.html) - Custom Lightning Web Component development
-- [Admin Basics](admin-basics.html) - Page layout and UI configuration
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Custom Lightning Web Component development
+- [Admin Basics](/rag/development/admin-basics.html) - Page layout and UI configuration
 
 **Related Domains**:
-- [Portal Architecture](../architecture/portal-architecture.html) - Experience Cloud page patterns
-- [Mobile Strategy](../architecture/mobile-strategy.html) - Mobile page optimization
+- [Portal Architecture](/rag/architecture/portal-architecture.html) - Experience Cloud page patterns
+- [Mobile Strategy](/rag/architecture/mobile-strategy.html) - Mobile page optimization
 

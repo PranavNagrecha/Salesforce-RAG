@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists. These patterns are essential for managing complex Salesforce releases with multiple stakeholders, compliance requirements, and risk mitigation.
 
 **Related Patterns**:
-- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
-- [Environment Strategy](environment-strategy.html) - Org topology and environment management
-- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
+- [CI/CD Patterns](/rag/operations/cicd-patterns.html) - CI/CD and deployment automation
+- [Environment Strategy](/rag/operations/environment-strategy.html) - Org topology and environment management
+- [Delivery Framework](/rag/project-methods/delivery-framework.html) - Project delivery methodology
 
 ## Prerequisites
 
@@ -347,16 +347,16 @@ This guide covers release governance patterns for Salesforce, including Change A
 ## Related Patterns
 
 **See Also**:
-- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
-- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+- [CI/CD Patterns](/rag/operations/cicd-patterns.html) - CI/CD and deployment automation
+- [Environment Strategy](/rag/operations/environment-strategy.html) - Org topology and environment management
 
 **Related Domains**:
-- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
-- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing approaches
-- [Governance Patterns](../architecture/governance-patterns.html) - Org governance patterns
+- [Delivery Framework](/rag/project-methods/delivery-framework.html) - Project delivery methodology
+- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Comprehensive testing approaches
+- [Governance Patterns](/rag/architecture/governance-patterns.html) - Org governance patterns
 
-- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
-- [Environment Strategy](environment-strategy.html) - Org topology and environment management
-- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
-- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing approaches
+- [CI/CD Patterns](/rag/operations/cicd-patterns.html) - CI/CD and deployment automation
+- [Environment Strategy](/rag/operations/environment-strategy.html) - Org topology and environment management
+- [Delivery Framework](/rag/project-methods/delivery-framework.html) - Project delivery methodology
+- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Comprehensive testing approaches
 

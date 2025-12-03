@@ -41,7 +41,7 @@ Set<Id> contactIds = new Set<Id>{ '003000000000001', '003000000000002' };
 List<Id> processedIds = ContactUpdateService.processContacts(contactIds);
 ```
 
-**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), [Service Layer Examples](../code-examples/apex/service-layer-examples.html)
+**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html)
 
 **Best Practices**:
 - Always use `with sharing` or `without sharing` explicitly
@@ -239,7 +239,7 @@ try {
 }
 ```
 
-**Related Patterns**: [Error Handling and Logging](../development/error-handling-and-logging.html)
+**Related Patterns**: [Error Handling and Logging](/rag/development/error-handling-and-logging.html)
 
 **Best Practices**:
 - ALL exceptions MUST be logged
@@ -336,8 +336,8 @@ static void testMethod() {
 
 ## Related Patterns
 
-- [Apex Patterns](../development/apex-patterns.html) - Complete Apex design patterns
-- [Service Layer Examples](../code-examples/apex/service-layer-examples.html) - Service layer code examples
-- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
-- [SOQL Patterns](../development/soql-query-patterns.html) - SOQL query patterns
+- [Apex Patterns](/rag/development/apex-patterns.html) - Complete Apex design patterns
+- [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Service layer code examples
+- [Error Handling](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [SOQL Patterns](/rag/development/soql-query-patterns.html) - SOQL query patterns
 

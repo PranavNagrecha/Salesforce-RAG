@@ -25,9 +25,9 @@ OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI
 - Familiarity with Experience Cloud (for portal implementations)
 
 **Recommended Reading**:
-- [Flow Patterns](flow-patterns.html) - Flow automation patterns
-- [Portal Architecture](../architecture/portal-architecture.html) - Experience Cloud patterns
-- [LWC Patterns](lwc-patterns.html) - Lightning Web Component patterns
+- [Flow Patterns](/rag/development/flow-patterns.html) - Flow automation patterns
+- [Portal Architecture](/rag/architecture/portal-architecture.html) - Experience Cloud patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Lightning Web Component patterns
 
 ## OmniScripts for Guided Processes
 
@@ -405,9 +405,9 @@ Avoid OmniStudio when:
 ## Related Patterns
 
 **See Also**:
-- [Flow Patterns](flow-patterns.html) - Flow automation patterns
-- [LWC Patterns](lwc-patterns.html) - Lightning Web Component patterns
+- [Flow Patterns](/rag/development/flow-patterns.html) - Flow automation patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Lightning Web Component patterns
 
 **Related Domains**:
-- [Portal Architecture](../architecture/portal-architecture.html) - Experience Cloud patterns
+- [Portal Architecture](/rag/architecture/portal-architecture.html) - Experience Cloud patterns
 

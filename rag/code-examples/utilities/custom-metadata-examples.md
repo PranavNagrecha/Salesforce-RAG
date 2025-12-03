@@ -8,7 +8,7 @@
 Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas. They're the modern approach for configuration management.
 
 **Related Patterns**:
-- [Custom Settings and Custom Metadata Patterns](../../development/custom-settings-metadata-patterns.html)
+- [Custom Settings and Custom Metadata Patterns](/rag/development/custom-settings-metadata-patterns.html)
 
 ## Examples
 
@@ -161,5 +161,5 @@ public class ConfigMigration {
 
 ## Related Patterns
 
-- [Custom Settings and Custom Metadata Patterns](../../development/custom-settings-metadata-patterns.html) - Complete patterns guide
+- [Custom Settings and Custom Metadata Patterns](/rag/development/custom-settings-metadata-patterns.html) - Complete patterns guide
 

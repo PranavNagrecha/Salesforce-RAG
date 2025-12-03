@@ -26,10 +26,10 @@ Different integration patterns serve different use cases. Understanding when to 
 - Knowledge of data synchronization concepts
 
 **Recommended Reading**:
-- [Integration Platform Patterns](integration-platform-patterns.html) - Integration platform patterns
-- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns
-- [Platform Events Examples](../code-examples/integrations/platform-events-examples.html) - Event-driven patterns
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - Data mapping patterns
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Integration platform patterns
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - HTTP callout patterns
+- [Platform Events Examples](/rag/code-examples/integrations/platform-events-examples.html) - Event-driven patterns
+- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - Data mapping patterns
 
 ## Integration Pattern Types
 
@@ -393,19 +393,19 @@ Combine patterns when:
 ## Related Patterns
 
 **See Also**:
-- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
-- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume ETL synchronization patterns
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
+- [SIS Sync Patterns](/rag/integrations/sis-sync-patterns.html) - High-volume ETL synchronization patterns
 
 **Related Domains**:
-- [Change Data Capture Patterns](change-data-capture-patterns.html) - CDC for event-driven integration
-- [Callout Best Practices](callout-best-practices.html) - API callout patterns
-- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
-- [Large Data Loads](../development/large-data-loads.html) - Bulk data operation patterns
+- [Change Data Capture Patterns](/rag/integrations/change-data-capture-patterns.html) - CDC for event-driven integration
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - API callout patterns
+- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Platform Events patterns
+- [Large Data Loads](/rag/development/large-data-loads.html) - Bulk data operation patterns
 
-- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
-- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume ETL synchronization patterns
-- [Change Data Capture Patterns](change-data-capture-patterns.html) - CDC for event-driven integration
-- [Callout Best Practices](callout-best-practices.html) - API callout patterns
-- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
-- [Large Data Loads](../development/large-data-loads.html) - Bulk data operation patterns
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
+- [SIS Sync Patterns](/rag/integrations/sis-sync-patterns.html) - High-volume ETL synchronization patterns
+- [Change Data Capture Patterns](/rag/integrations/change-data-capture-patterns.html) - CDC for event-driven integration
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - API callout patterns
+- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Platform Events patterns
+- [Large Data Loads](/rag/development/large-data-loads.html) - Bulk data operation patterns
 

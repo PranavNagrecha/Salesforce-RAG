@@ -369,7 +369,7 @@ Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
+- [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Service layer patterns
 - [Integration Patterns](../../integrations) - Integration architecture patterns
-- [Error Handling](../../development/error-handling-and-logging.html) - Error handling patterns
+- [Error Handling](/rag/development/error-handling-and-logging.html) - Error handling patterns
 

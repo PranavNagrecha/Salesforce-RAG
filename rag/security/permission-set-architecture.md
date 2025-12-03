@@ -24,9 +24,9 @@ Permission set-driven security architecture transitions from profile-centric to 
 - Familiarity with role hierarchy and sharing rules
 
 **Recommended Reading**:
-- [Sharing Fundamentals](sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
-- [Admin Basics](../development/admin-basics.html) - User management and basic administration
-- [Integration User License Guide](../integrations/integration-user-license-guide.html) - Permission management for integration users
+- [Sharing Fundamentals](/rag/security/sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
+- [Admin Basics](/rag/development/admin-basics.html) - User management and basic administration
+- [Integration User License Guide](/rag/integrations/integration-user-license-guide.html) - Permission management for integration users
 
 ## Architecture Pattern
 
@@ -293,9 +293,9 @@ Avoid permission set-driven security when:
 
 ## Related Patterns
 
-- [Sharing Fundamentals](sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
-- [Sharing Rules and Manual Sharing](sharing-rules-and-manual-sharing.html) - Sharing rules and manual sharing patterns
-- [Sharing Sets and Portals](sharing-sets-and-portals.html) - Experience Cloud sharing patterns
-- [Admin Basics](../development/admin-basics.html) - User management and basic administration
-- [Integration User License Guide](../integrations/integration-user-license-guide.html) - Permission management for integration users
+- [Sharing Fundamentals](/rag/security/sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
+- [Sharing Rules and Manual Sharing](/rag/security/sharing-rules-and-manual-sharing.html) - Sharing rules and manual sharing patterns
+- [Sharing Sets and Portals](/rag/security/sharing-sets-and-portals.html) - Experience Cloud sharing patterns
+- [Admin Basics](/rag/development/admin-basics.html) - User management and basic administration
+- [Integration User License Guide](/rag/integrations/integration-user-license-guide.html) - Permission management for integration users
 

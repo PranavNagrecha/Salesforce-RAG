@@ -382,10 +382,10 @@ Think of mobile strategy as starting with standard options (Salesforce Mobile Ap
 ## Related Patterns
 
 **See Also**:
-- [Portal Architecture](portal-architecture.html) - Experience Cloud mobile patterns
-- [LWC Patterns](../development/lwc-patterns.html) - Mobile-optimized LWC patterns
+- [Portal Architecture](/rag/architecture/portal-architecture.html) - Experience Cloud mobile patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Mobile-optimized LWC patterns
 
 **Related Domains**:
-- [LWC Accessibility](../development/lwc-patterns.html) - Mobile accessibility patterns
-- [Mobile LWC Patterns](../mcp-knowledge/lwc-development-guide.html) - Official mobile LWC guidance
+- [LWC Accessibility](/rag/development/lwc-patterns.html) - Mobile accessibility patterns
+- [Mobile LWC Patterns](/rag/mcp-knowledge/lwc-development-guide.html) - Official mobile LWC guidance
 

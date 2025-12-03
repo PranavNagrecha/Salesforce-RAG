@@ -150,18 +150,18 @@ Consider dead-letter queues for events that cannot be processed after retries. E
 ## Related Patterns
 
 **See Also**:
-- [Change Data Capture Patterns](../integrations/change-data-capture-patterns.html) - CDC event processing patterns
-- [Platform Events Examples](../code-examples/integrations/platform-events-examples.html) - Platform Events code examples
+- [Change Data Capture Patterns](/rag/integrations/change-data-capture-patterns.html) - CDC event processing patterns
+- [Platform Events Examples](/rag/code-examples/integrations/platform-events-examples.html) - Platform Events code examples
 
 **Related Domains**:
-- [Integration Platform Patterns](../integrations/integration-platform-patterns.html) - Integration platform patterns
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Integration platform patterns
+- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
 
 ### Change Data Capture Integration
 
 Consider using Change Data Capture (CDC) alongside Platform Events:
 
-**Related**: [Change Data Capture Patterns](../integrations/change-data-capture-patterns.html) - Complete CDC patterns guide, [CDC Examples](../code-examples/integrations/cdc-examples.html)
+**Related**: [Change Data Capture Patterns](/rag/integrations/change-data-capture-patterns.html) - Complete CDC patterns guide, [CDC Examples](/rag/code-examples/integrations/cdc-examples.html)
 
 - CDC for high-volume, field-level change tracking
 - Platform Events for business-level events requiring orchestration

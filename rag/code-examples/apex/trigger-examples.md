@@ -8,8 +8,8 @@
 Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation. Triggers should be thin and delegate to Domain or Service layers.
 
 **Related Patterns**:
-- [Apex Patterns](../../development/apex-patterns.html) - Apex design patterns
-- [Order of Execution](../../development/order-of-execution.html) - Execution order
+- [Apex Patterns](/rag/development/apex-patterns.html) - Apex design patterns
+- [Order of Execution](/rag/development/order-of-execution.html) - Execution order
 
 ## Examples
 
@@ -307,8 +307,8 @@ for (Contact newContact : newContacts) {
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
-- [Domain Layer Examples](domain-layer-examples.html) - Domain layer patterns
-- [Apex Patterns](../../development/apex-patterns.html) - Complete Apex patterns
-- [Order of Execution](../../development/order-of-execution.html) - Execution order
+- [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Service layer patterns
+- [Domain Layer Examples](/rag/code-examples/apex/domain-layer-examples.html) - Domain layer patterns
+- [Apex Patterns](/rag/development/apex-patterns.html) - Complete Apex patterns
+- [Order of Execution](/rag/development/order-of-execution.html) - Execution order
 

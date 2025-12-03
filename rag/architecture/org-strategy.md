@@ -360,11 +360,11 @@ Think of org strategy as starting with simplest approach (single org) and adding
 ## Related Patterns
 
 **See Also**:
-- [Org Edition Selection](org-edition-selection.html) - Edition selection for org strategy
-- [Governance Patterns](governance-patterns.html) - Governance implications of org strategy
+- [Org Edition Selection](/rag/architecture/org-edition-selection.html) - Edition selection for org strategy
+- [Governance Patterns](/rag/architecture/governance-patterns.html) - Governance implications of org strategy
 
 **Related Domains**:
-- [Integration Platform Patterns](../integrations/integration-platform-patterns.html) - Multi-org integration patterns
-- [Environment Strategy](../operations/environment-strategy.html) - Environment management for multi-org
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration for org strategy
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Multi-org integration patterns
+- [Environment Strategy](/rag/operations/environment-strategy.html) - Environment management for multi-org
+- [Data Migration Patterns](/rag/data-modeling/data-migration-patterns.html) - Data migration for org strategy
 

@@ -164,8 +164,8 @@ Comprehensive accessibility guidelines for Lightning Web Components, based on WC
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- [LWC Patterns](../development/lwc-patterns.html) - Accessibility considerations
-- [Design System Patterns](design-system-patterns.html) - SLDS accessibility
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Accessibility considerations
+- [Design System Patterns](/rag/mcp-knowledge/design-system-patterns.html) - SLDS accessibility
 
 **How This Complements Existing RAG**:
 - Provides comprehensive WCAG compliance guidance

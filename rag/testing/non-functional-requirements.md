@@ -17,9 +17,9 @@ last_reviewed: "2025-01-XX"
 This guide covers non-functional requirements testing for Salesforce, including security testing, accessibility testing for LWCs and portals, and performance benchmarks. These patterns are essential for ensuring systems meet quality standards beyond functional requirements.
 
 **Related Patterns**:
-- [Automated Testing Patterns](automated-testing-patterns.html) - Automated testing approaches
-- [LWC Accessibility](../mcp-knowledge/lwc-accessibility.html) - LWC accessibility guidelines
-- [Performance Tuning](../observability/performance-tuning.html) - Performance optimization
+- [Automated Testing Patterns](/rag/testing/automated-testing-patterns.html) - Automated testing approaches
+- [LWC Accessibility](/rag/mcp-knowledge/lwc-accessibility.html) - LWC accessibility guidelines
+- [Performance Tuning](/rag/observability/performance-tuning.html) - Performance optimization
 - [Security Patterns](../security) - Security and access control patterns
 
 ## Consensus Best Practices
@@ -311,9 +311,9 @@ This guide covers non-functional requirements testing for Salesforce, including 
 
 ## Related Patterns
 
-- [Automated Testing Patterns](automated-testing-patterns.html) - Automated testing approaches
-- [LWC Accessibility](../mcp-knowledge/lwc-accessibility.html) - LWC accessibility guidelines
-- [Performance Tuning](../observability/performance-tuning.html) - Performance optimization
+- [Automated Testing Patterns](/rag/testing/automated-testing-patterns.html) - Automated testing approaches
+- [LWC Accessibility](/rag/mcp-knowledge/lwc-accessibility.html) - LWC accessibility guidelines
+- [Performance Tuning](/rag/observability/performance-tuning.html) - Performance optimization
 - [Security Patterns](../security) - Security and access control patterns
-- [Monitoring and Alerting](../observability/monitoring-alerting.html) - Performance monitoring
+- [Monitoring and Alerting](/rag/observability/monitoring-alerting.html) - Performance monitoring
 

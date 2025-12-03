@@ -28,10 +28,10 @@ Apex is Salesforce's proprietary programming language, similar to Java, that ena
 - Knowledge of SOQL (Salesforce Object Query Language)
 
 **Recommended Reading**:
-- [Flow Patterns](flow-patterns.html) - Understanding when to use Flow vs Apex
-- [SOQL Query Patterns](soql-query-patterns.html) - SOQL query best practices
-- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Understanding platform limits
-- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns
+- [Flow Patterns](/rag/development/flow-patterns.html) - Understanding when to use Flow vs Apex
+- [SOQL Query Patterns](/rag/development/soql-query-patterns.html) - SOQL query best practices
+- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Understanding platform limits
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
 
 ## Apex Language Fundamentals
 
@@ -205,7 +205,7 @@ Reusable functionality:
 
 ## Asynchronous Apex Patterns
 
-For comprehensive asynchronous Apex patterns, see [Asynchronous Apex Patterns](asynchronous-apex-patterns.html).
+For comprehensive asynchronous Apex patterns, see [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html).
 
 ### Queueable
 
@@ -216,7 +216,7 @@ Use for:
 - Lightweight async processing
 - Jobs that need to be chained together
 
-**Related**: [Queueable Examples](../code-examples/apex/queueable-examples.html), [Queueable Template](../code-examples/templates/apex-queueable-template.html)
+**Related**: [Queueable Examples](/rag/code-examples/apex/queueable-examples.html), [Queueable Template](/rag/code-examples/templates/apex-queueable-template.html)
 
 ### Batchable
 
@@ -227,7 +227,7 @@ Use for:
 - Processing thousands of records
 - Operations that exceed synchronous limits
 
-**Related**: [Batch Examples](../code-examples/apex/batch-examples.html), [Batch Template](../code-examples/templates/apex-batch-template.html)
+**Related**: [Batch Examples](/rag/code-examples/apex/batch-examples.html), [Batch Template](/rag/code-examples/templates/apex-batch-template.html)
 
 ### Scheduled
 
@@ -238,7 +238,7 @@ Use for:
 - Scheduled data processing
 - Recurring tasks
 
-**Related**: [Scheduled Examples](../code-examples/apex/scheduled-examples.html), [Scheduled Template](../code-examples/templates/apex-scheduled-template.html)
+**Related**: [Scheduled Examples](/rag/code-examples/apex/scheduled-examples.html), [Scheduled Template](/rag/code-examples/templates/apex-scheduled-template.html)
 
 ## Apex + LWC Integration
 
@@ -413,7 +413,7 @@ Use for:
 
 - **Externalize all configuration**: Never hardcode environment-specific values (URLs, IDs, counts). Use Custom Metadata Types or Custom Settings for configuration that varies by environment. This enables environment-specific configuration without code changes.
 
-**Related**: [Custom Settings and Custom Metadata Patterns](custom-settings-metadata-patterns.html), [Custom Settings Examples](../code-examples/utilities/custom-settings-examples.html), [Custom Metadata Examples](../code-examples/utilities/custom-metadata-examples.html)
+**Related**: [Custom Settings and Custom Metadata Patterns](/rag/development/custom-settings-metadata-patterns.html), [Custom Settings Examples](/rag/code-examples/utilities/custom-settings-examples.html), [Custom Metadata Examples](/rag/code-examples/utilities/custom-metadata-examples.html)
 - **Use Named Credentials for all external URLs**: All HTTP callouts should use Named Credentials, not hardcoded URLs. This centralizes credential management and enables environment-specific endpoints.
 - **Centralize integration patterns**: When multiple classes make HTTP callouts, centralize the pattern in an abstract service class. This makes maintenance and auditing easier.
 
@@ -614,18 +614,18 @@ Use for:
 ## Related Patterns
 
 **See Also**:
-- [Flow Patterns](flow-patterns.html) - Understanding when to use Flow vs Apex
-- [SOQL Query Patterns](soql-query-patterns.html) - SOQL query best practices and patterns
-- [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Batch, Queueable, and Scheduled Apex patterns
-- [Error Handling and Logging](error-handling-and-logging.html) - Comprehensive error handling framework
-- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Performance optimization and limit management
-- [Locking and Concurrency Strategies](locking-and-concurrency-strategies.html) - Row locking and retry patterns
-- [Custom Settings and Custom Metadata Patterns](custom-settings-metadata-patterns.html) - Configuration management patterns
-- [Order of Execution](order-of-execution.html) - Understanding when Apex executes in the save sequence
+- [Flow Patterns](/rag/development/flow-patterns.html) - Understanding when to use Flow vs Apex
+- [SOQL Query Patterns](/rag/development/soql-query-patterns.html) - SOQL query best practices and patterns
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Batch, Queueable, and Scheduled Apex patterns
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Comprehensive error handling framework
+- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Performance optimization and limit management
+- [Locking and Concurrency Strategies](/rag/development/locking-and-concurrency-strategies.html) - Row locking and retry patterns
+- [Custom Settings and Custom Metadata Patterns](/rag/development/custom-settings-metadata-patterns.html) - Configuration management patterns
+- [Order of Execution](/rag/development/order-of-execution.html) - Understanding when Apex executes in the save sequence
 
 **Related Domains**:
-- [LWC Patterns](lwc-patterns.html) - Integrating Apex with Lightning Web Components
-- [Testing Patterns](../testing/apex-testing-patterns.html) - Apex testing best practices
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Integrating Apex with Lightning Web Components
+- [Testing Patterns](/rag/testing/apex-testing-patterns.html) - Apex testing best practices
 - [Code Examples](../code-examples/apex/) - Complete working code examples
 
 ## Q&A

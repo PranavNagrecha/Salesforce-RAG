@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance. These patterns are essential for maintaining data integrity, preventing duplicates, and ensuring consistent data across the organization.
 
 **Related Patterns**:
-- [Lead Management Patterns](../data-modeling/lead-management-patterns.html) - Lead duplicate prevention
-- [Data Reconciliation](../troubleshooting/data-reconciliation.html) - Data reconciliation patterns
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns
+- [Lead Management Patterns](/rag/data-modeling/lead-management-patterns.html) - Lead duplicate prevention
+- [Data Reconciliation](/rag/troubleshooting/data-reconciliation.html) - Data reconciliation patterns
+- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - External ID patterns
 
 ## Consensus Best Practices
 
@@ -347,8 +347,8 @@ This guide covers data quality and stewardship patterns for Salesforce, includin
 
 ## Related Patterns
 
-- [Lead Management Patterns](../data-modeling/lead-management-patterns.html) - Lead duplicate prevention
-- [Data Reconciliation](../troubleshooting/data-reconciliation.html) - Data reconciliation patterns
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration quality patterns
+- [Lead Management Patterns](/rag/data-modeling/lead-management-patterns.html) - Lead duplicate prevention
+- [Data Reconciliation](/rag/troubleshooting/data-reconciliation.html) - Data reconciliation patterns
+- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - External ID patterns
+- [Data Migration Patterns](/rag/data-modeling/data-migration-patterns.html) - Data migration quality patterns
 

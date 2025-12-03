@@ -396,9 +396,9 @@ When configuring email in Salesforce:
 ## Related Patterns
 
 **See Also**:
-- [Flow Patterns](flow-patterns.html) - Automated email sending through Flows
-- [Admin Basics](admin-basics.html) - Email configuration and settings
+- [Flow Patterns](/rag/development/flow-patterns.html) - Automated email sending through Flows
+- [Admin Basics](/rag/development/admin-basics.html) - Email configuration and settings
 
 **Related Domains**:
-- [Integration Patterns](../integrations/etl-vs-api-vs-events.html) - Email in integration scenarios
+- [Integration Patterns](/rag/integrations/etl-vs-api-vs-events.html) - Email in integration scenarios
 

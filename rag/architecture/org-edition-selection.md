@@ -374,10 +374,10 @@ When selecting a Salesforce edition, always ask:
 ## Related Patterns
 
 **See Also**:
-- [Org Strategy](org-strategy.html) - Multi-org vs single-org decisions
+- [Org Strategy](/rag/architecture/org-strategy.html) - Multi-org vs single-org decisions
 
 **Related Domains**:
-- [User License Selection](user-license-selection.html) - License type selection patterns
-- [Salesforce Product Evaluation](salesforce-product-evaluation.html) - Product selection framework
-- [Salesforce Pricing Negotiation](salesforce-pricing-negotiation.html) - Pricing and negotiation strategies
+- [User License Selection](/rag/architecture/user-license-selection.html) - License type selection patterns
+- [Salesforce Product Evaluation](/rag/architecture/salesforce-product-evaluation.html) - Product selection framework
+- [Salesforce Pricing Negotiation](/rag/architecture/salesforce-pricing-negotiation.html) - Pricing and negotiation strategies
 

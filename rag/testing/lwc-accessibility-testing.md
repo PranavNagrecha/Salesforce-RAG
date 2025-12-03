@@ -18,9 +18,9 @@ last_reviewed: "2025-01-XX"
 This guide provides testing patterns, best practices, and examples for ensuring Lightning Web Components meet WCAG 2.2 accessibility standards. It covers Jest accessibility testing, manual testing checklists, and automated testing tools.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Accessibility code examples
-- [Testing Strategy](../project-methods/testing-strategy.html) - Overall testing strategy
+- [LWC Accessibility Guidelines](/rag/mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](/rag/code-examples/lwc/accessibility-examples.html) - Accessibility code examples
+- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Overall testing strategy
 
 ## Core Principles
 
@@ -541,8 +541,8 @@ it('should pass accessibility scan', async () => {
 
 ## Related Patterns
 
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Accessibility code examples
-- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
-- [Testing Strategy](../project-methods/testing-strategy.html) - Overall testing strategy
+- [LWC Accessibility Guidelines](/rag/mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](/rag/code-examples/lwc/accessibility-examples.html) - Accessibility code examples
+- [LWC Accessibility Troubleshooting](/rag/troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
+- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Overall testing strategy
 

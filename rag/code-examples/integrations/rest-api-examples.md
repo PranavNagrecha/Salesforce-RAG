@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 REST API integrations enable real-time, synchronous communication between Salesforce and external systems. These examples demonstrate common REST API patterns including outbound callouts, inbound REST services, authentication, error handling, and response processing.
 
 **Related Patterns**:
-- [Callout Best Practices](../../integrations/callout-best-practices.html) - Comprehensive callout best practices
-- [Integration Platform Patterns](../../integrations/integration-platform-patterns.html) - Integration platform patterns
-- [Integration Examples](../apex/integration-examples.html) - Apex integration layer examples
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - Comprehensive callout best practices
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Integration platform patterns
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Apex integration layer examples
 
 ## Examples
 
@@ -30,7 +30,7 @@ REST API integrations enable real-time, synchronous communication between Salesf
 **Pattern**: REST API callout using Named Credentials
 **Use Case**: Calling external REST APIs from Salesforce
 **Complexity**: Basic
-**Related Patterns**: [Callout Best Practices](../../integrations/callout-best-practices.html)
+**Related Patterns**: [Callout Best Practices](/rag/integrations/callout-best-practices.html)
 
 **Problem**:
 You need to make HTTP callouts to an external REST API using Named Credentials for authentication.
@@ -201,7 +201,7 @@ Map<String, Object> response = RestApiService.post('/api/users', payload);
 **Pattern**: Exposing REST API endpoints from Salesforce
 **Use Case**: Allowing external systems to call Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: [Integration Platform Patterns](../../integrations/integration-platform-patterns.html)
+**Related Patterns**: [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html)
 
 **Problem**:
 You need to expose a REST API endpoint that external systems can call to create or update records in Salesforce.
@@ -441,7 +441,7 @@ PUT /services/apexrest/api/contacts
 **Pattern**: Making REST API callouts asynchronously
 **Use Case**: Long-running or high-volume callouts
 **Complexity**: Intermediate
-**Related Patterns**: [Asynchronous Apex Patterns](../../development/asynchronous-apex-patterns.html)
+**Related Patterns**: [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html)
 
 **Problem**:
 You need to make REST API callouts asynchronously to avoid timeout issues and handle high volumes.
@@ -552,13 +552,13 @@ System.enqueueJob(new AsyncRestApiService('/api/sync', 'POST', payload, contact.
 
 ## Related Examples
 
-- [Callout Examples](callout-examples.html) - HTTP callout patterns
-- [Platform Events Examples](platform-events-examples.html) - Event-driven patterns
-- [Integration Examples](../apex/integration-examples.html) - Apex integration layer
+- [Callout Examples](/rag/code-examples/integrations/callout-examples.html) - HTTP callout patterns
+- [Platform Events Examples](/rag/code-examples/integrations/platform-events-examples.html) - Event-driven patterns
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Apex integration layer
 
 ## See Also
 
-- [Callout Best Practices](../../integrations/callout-best-practices.html) - Comprehensive callout best practices
-- [Integration Platform Patterns](../../integrations/integration-platform-patterns.html) - Integration platform patterns
-- [Asynchronous Apex Patterns](../../development/asynchronous-apex-patterns.html) - Async patterns
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - Comprehensive callout best practices
+- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Integration platform patterns
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Async patterns
 

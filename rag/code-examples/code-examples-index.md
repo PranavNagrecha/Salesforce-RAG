@@ -15,99 +15,99 @@ This directory contains standalone code examples that complement the pattern doc
 ## Apex Examples
 
 ### Service Layer
-- [Service Layer Examples](apex/service-layer-examples.html) - Service class implementations with domain and selector delegation
+- [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Service class implementations with domain and selector delegation
 
 ### Domain Layer
-- [Domain Layer Examples](apex/domain-layer-examples.html) - Object-specific business logic and validation
+- [Domain Layer Examples](/rag/code-examples/apex/domain-layer-examples.html) - Object-specific business logic and validation
 
 ### Selector Layer
-- [Selector Layer Examples](apex/selector-layer-examples.html) - SOQL queries and data access patterns
+- [Selector Layer Examples](/rag/code-examples/apex/selector-layer-examples.html) - SOQL queries and data access patterns
 
 ### Integration Layer
-- [Integration Examples](apex/integration-examples.html) - External API callouts and transformations
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - External API callouts and transformations
 
 ### Triggers
-- [Trigger Examples](apex/trigger-examples.html) - Trigger handler patterns with bulkification
+- [Trigger Examples](/rag/code-examples/apex/trigger-examples.html) - Trigger handler patterns with bulkification
 
 ### Asynchronous Processing
-- [Batch Examples](apex/batch-examples.html) - Batch Apex implementations: stateless, stateful, chaining, error handling, monitoring
-- [Queueable Examples](apex/queueable-examples.html) - Queueable patterns: basic, chaining, callouts, retry logic, monitoring
-- [Scheduled Examples](apex/scheduled-examples.html) - Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, monitoring
+- [Batch Examples](/rag/code-examples/apex/batch-examples.html) - Batch Apex implementations: stateless, stateful, chaining, error handling, monitoring
+- [Queueable Examples](/rag/code-examples/apex/queueable-examples.html) - Queueable patterns: basic, chaining, callouts, retry logic, monitoring
+- [Scheduled Examples](/rag/code-examples/apex/scheduled-examples.html) - Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, monitoring
 
 ### Testing
-- [Test Examples](apex/test-examples.html) - Test class patterns, factories, and mocking
+- [Test Examples](/rag/code-examples/apex/test-examples.html) - Test class patterns, factories, and mocking
 
 ## LWC Examples
 
 ### Components
-- [Component Examples](lwc/component-examples.html) - Lightning Web Component implementations
+- [Component Examples](/rag/code-examples/lwc/component-examples.html) - Lightning Web Component implementations
 
 ### Services
-- [Service Examples](lwc/service-examples.html) - LWC service layer patterns
+- [Service Examples](/rag/code-examples/lwc/service-examples.html) - LWC service layer patterns
 
 ### Wire and Data
-- [Wire Examples](lwc/wire-examples.html) - Wire service and imperative call patterns
+- [Wire Examples](/rag/code-examples/lwc/wire-examples.html) - Wire service and imperative call patterns
 
 ### Accessibility
-- [Accessibility Examples](lwc/accessibility-examples.html) - Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
+- [Accessibility Examples](/rag/code-examples/lwc/accessibility-examples.html) - Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
 
 ### Testing
-- [Test Examples](lwc/test-examples.html) - Jest test examples for LWC
+- [Test Examples](/rag/code-examples/lwc/test-examples.html) - Jest test examples for LWC
 
 ## Flow Examples
 
 ### Record-Triggered
-- [Record-Triggered Examples](flow/record-triggered-examples.html) - Before-save and after-save flow patterns
+- [Record-Triggered Examples](/rag/code-examples/flow/record-triggered-examples.html) - Before-save and after-save flow patterns
 
 ### Screen Flows
-- [Screen Flow Examples](flow/screen-flow-examples.html) - User interaction flow patterns
+- [Screen Flow Examples](/rag/code-examples/flow/screen-flow-examples.html) - User interaction flow patterns
 
 ### Subflows
-- [Subflow Examples](flow/subflow-examples.html) - Reusable subflow patterns
+- [Subflow Examples](/rag/code-examples/flow/subflow-examples.html) - Reusable subflow patterns
 
 ## Integration Examples
 
 ### REST API
-- [REST API Examples](integrations/rest-api-examples.html) - Outbound and inbound REST API patterns
+- [REST API Examples](/rag/code-examples/integrations/rest-api-examples.html) - Outbound and inbound REST API patterns
 
 ### Platform Events
-- [Platform Events Examples](integrations/platform-events-examples.html) - Event publishing and subscription patterns
+- [Platform Events Examples](/rag/code-examples/integrations/platform-events-examples.html) - Event publishing and subscription patterns
 
 ### Callouts
-- [Callout Examples](integrations/callout-examples.html) - HTTP callout patterns with error handling
+- [Callout Examples](/rag/code-examples/integrations/callout-examples.html) - HTTP callout patterns with error handling
 
 ### Bulk API
-- [Bulk API Examples](integrations/bulk-api-examples.html) - Bulk data operations
+- [Bulk API Examples](/rag/code-examples/integrations/bulk-api-examples.html) - Bulk data operations
 
 ## Utility Examples
 
 ### Logging
-- [Logging Examples](utilities/logging-examples.html) - Structured logging patterns
+- [Logging Examples](/rag/code-examples/utilities/logging-examples.html) - Structured logging patterns
 
 ### Error Handling
-- [Error Handling Examples](utilities/error-handling-examples.html) - Error handling and retry patterns
+- [Error Handling Examples](/rag/code-examples/utilities/error-handling-examples.html) - Error handling and retry patterns
 
 ### Validation
-- [Validation Examples](utilities/validation-examples.html) - Data validation patterns
+- [Validation Examples](/rag/code-examples/utilities/validation-examples.html) - Data validation patterns
 
 ## Templates
 
 ### Apex Templates
-- [Service Template](templates/apex-service-template.html) - Service class template
-- [Domain Template](templates/apex-domain-template.html) - Domain class template
-- [Selector Template](templates/apex-selector-template.html) - Selector class template
-- [Trigger Template](templates/apex-trigger-template.html) - Trigger handler template
-- [Batch Template](templates/apex-batch-template.html) - Batch Apex template
-- [Queueable Template](templates/apex-queueable-template.html) - Queueable Apex template
-- [Scheduled Template](templates/apex-scheduled-template.html) - Scheduled Apex template
-- [Test Class Template](templates/test-class-template.html) - Test class template
+- [Service Template](/rag/code-examples/templates/apex-service-template.html) - Service class template
+- [Domain Template](/rag/code-examples/templates/apex-domain-template.html) - Domain class template
+- [Selector Template](/rag/code-examples/templates/apex-selector-template.html) - Selector class template
+- [Trigger Template](/rag/code-examples/templates/apex-trigger-template.html) - Trigger handler template
+- [Batch Template](/rag/code-examples/templates/apex-batch-template.html) - Batch Apex template
+- [Queueable Template](/rag/code-examples/templates/apex-queueable-template.html) - Queueable Apex template
+- [Scheduled Template](/rag/code-examples/templates/apex-scheduled-template.html) - Scheduled Apex template
+- [Test Class Template](/rag/code-examples/templates/test-class-template.html) - Test class template
 
 ### LWC Templates
-- [Accessible Component Template](templates/lwc-accessible-component-template.html) - Accessible LWC component template with all accessibility best practices
+- [Accessible Component Template](/rag/code-examples/templates/lwc-accessible-component-template.html) - Accessible LWC component template with all accessibility best practices
 
 ### Deployment Templates
-- [SFDX Project Template](templates/sfdx-project-template.html) - SFDX project setup template
-- [CI/CD Template](templates/ci-cd-template.html) - CI/CD pipeline template
+- [SFDX Project Template](/rag/code-examples/templates/sfdx-project-template.html) - SFDX project setup template
+- [CI/CD Template](/rag/code-examples/templates/ci-cd-template.html) - CI/CD pipeline template
 
 ## How to Use
 
@@ -119,9 +119,9 @@ This directory contains standalone code examples that complement the pattern doc
 
 ## Related Documentation
 
-- [RAG Index](../rag-index.html) - Complete RAG library index
-- [Apex Patterns](../development/apex-patterns.html) - Apex design patterns
-- [LWC Patterns](../development/lwc-patterns.html) - Lightning Web Component patterns
-- [Flow Patterns](../development/flow-patterns.html) - Flow design patterns
+- [RAG Index](/rag/rag-index.html) - Complete RAG library index
+- [Apex Patterns](/rag/development/apex-patterns.html) - Apex design patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Lightning Web Component patterns
+- [Flow Patterns](/rag/development/flow-patterns.html) - Flow design patterns
 - [Integration Patterns](../integrations/) - Integration patterns
 

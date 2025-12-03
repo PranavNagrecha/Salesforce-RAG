@@ -432,12 +432,12 @@ Think of large data loads as four-phase process: Plan thoroughly, test in sandbo
 ## Related Patterns
 
 **See Also**:
-- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Limit management for large operations
+- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Limit management for large operations
 
 **Related Domains**:
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration strategies and patterns
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns for data loads
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection for large loads
-- [Bulk API Examples](../code-examples/integrations/bulk-api-examples.html) - Bulk API code examples
-- [SIS Sync Patterns](../integrations/sis-sync-patterns.html) - High-volume batch synchronization patterns
+- [Data Migration Patterns](/rag/data-modeling/data-migration-patterns.html) - Data migration strategies and patterns
+- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - External ID patterns for data loads
+- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection for large loads
+- [Bulk API Examples](/rag/code-examples/integrations/bulk-api-examples.html) - Bulk API code examples
+- [SIS Sync Patterns](/rag/integrations/sis-sync-patterns.html) - High-volume batch synchronization patterns
 

@@ -26,9 +26,9 @@ This guide provides solutions for common LWC errors encountered during Salesforc
 - Familiarity with field-level security and object permissions
 
 **Recommended Reading**:
-- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC development patterns
-- [LWC Jest Testing](../testing/lwc-jest-testing.html) - LWC testing patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Complete LWC development patterns
+- [LWC Jest Testing](/rag/testing/lwc-jest-testing.html) - LWC testing patterns
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
 
 ## Cannot read property 'value' of undefined
 
@@ -97,7 +97,7 @@ wiredRecord({ data, error }) {
 - Check for null/undefined before accessing nested properties
 - Use loading states to prevent access before data loads
 
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html), [LDS Patterns](../mcp-knowledge/lds-patterns.html)
+**Related Patterns**: [LWC Patterns](/rag/development/lwc-patterns.html), [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -260,7 +260,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: [LWC API Reference](/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire), [LDS Patterns](../mcp-knowledge/lds-patterns.html)
+**Related Patterns**: [LWC API Reference](/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire), [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -389,7 +389,7 @@ handleClick() {
 - Bind methods when passing as callbacks
 - Avoid using `this` in unbound callbacks
 
-**Related Patterns**: [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html)
+**Related Patterns**: [LWC Best Practices](/rag/mcp-knowledge/lwc-best-practices.html)
 
 ---
 
@@ -452,7 +452,7 @@ wiredRecord({ data, error }) {
 - Validate parameter types
 - Handle parameter changes properly
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html), [LWC API Reference](../api-reference/lwc-api-reference.html)
+**Related Patterns**: [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html), [LWC API Reference](/rag/api-reference/lwc-api-reference.html)
 
 ---
 
@@ -587,7 +587,7 @@ A field has proper FLS permissions and object access, but the component still fa
 **Related Patterns**: 
 - [Sharing Sets and Portals](../security/sharing-sets-and-portals.html#field-level-sharing-considerations) - Field-level security patterns
 - [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html#field-level-security) - Field configuration best practices
-- [LWC Patterns](../development/lwc-patterns.html) - LWC component patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - LWC component patterns
 
 ---
 
@@ -704,17 +704,17 @@ A field has proper FLS permissions and object access, but the component still fa
 ## Related Patterns
 
 **See Also**:
-- [LWC Accessibility Errors](lwc-accessibility-errors.html) - Accessibility-specific errors
+- [LWC Accessibility Errors](/rag/troubleshooting/lwc-accessibility-errors.html) - Accessibility-specific errors
 
 **Related Domains**:
-- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
-- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - LWC best practices
-- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
-- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](/rag/mcp-knowledge/lwc-best-practices.html) - LWC best practices
+- [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [Error Handling](/rag/development/error-handling-and-logging.html) - Error handling patterns
 
-- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
-- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - LWC best practices
-- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
-- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
-- [LWC Accessibility Errors](lwc-accessibility-errors.html) - Accessibility-specific errors
+- [LWC Patterns](/rag/development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](/rag/mcp-knowledge/lwc-best-practices.html) - LWC best practices
+- [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [Error Handling](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [LWC Accessibility Errors](/rag/troubleshooting/lwc-accessibility-errors.html) - Accessibility-specific errors
 

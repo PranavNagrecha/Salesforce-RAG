@@ -24,9 +24,9 @@ Flow is used as the primary automation engine across projects, with Apex reserve
 - Familiarity with Salesforce security model (profiles, permission sets)
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.html) - Understanding when to use Apex vs Flow
-- [Order of Execution](order-of-execution.html) - Understanding when Flows execute
-- [Admin Basics](admin-basics.html) - Foundation Salesforce administration knowledge
+- [Apex Patterns](/rag/development/apex-patterns.html) - Understanding when to use Apex vs Flow
+- [Order of Execution](/rag/development/order-of-execution.html) - Understanding when Flows execute
+- [Admin Basics](/rag/development/admin-basics.html) - Foundation Salesforce administration knowledge
 
 ## Flow Type Selection
 
@@ -447,13 +447,13 @@ The "Flow User" user permission is being deprecated in Winter '26 (2025). This a
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](apex-patterns.html) - Understanding when to use Apex vs Flow
-- [Order of Execution](order-of-execution.html) - Understanding when Flows execute in the save sequence
-- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns for Flow integration
-- [Admin Basics](admin-basics.html) - Foundation Salesforce administration knowledge
+- [Apex Patterns](/rag/development/apex-patterns.html) - Understanding when to use Apex vs Flow
+- [Order of Execution](/rag/development/order-of-execution.html) - Understanding when Flows execute in the save sequence
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns for Flow integration
+- [Admin Basics](/rag/development/admin-basics.html) - Foundation Salesforce administration knowledge
 
 **Related Domains**:
-- [Testing Strategy](../project-methods/testing-strategy.html) - Testing Flow automation
+- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Testing Flow automation
 - [Code Examples](../code-examples/flow/) - Flow pattern examples (coming soon)
 
 ### Change Management

@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Wire services provide reactive data access in Lightning Web Components. The `@wire` decorator automatically manages data fetching, caching, and reactivity. This document demonstrates common wire service patterns for accessing Salesforce data.
 
 **Related Patterns**:
-- [LWC Patterns](../development/lwc-patterns.html) - LWC development patterns and best practices
-- [LDS API Reference](../api-reference/lds-api-reference.html) - Lightning Data Service API reference
-- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [LWC Patterns](/rag/code-examples/development/lwc-patterns.html) - LWC development patterns and best practices
+- [LDS API Reference](/rag/code-examples/api-reference/lds-api-reference.html) - Lightning Data Service API reference
+- [LDS Patterns](/rag/code-examples/mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
 
 ## Examples
 
@@ -216,7 +216,7 @@ export default class ContactWithAccount extends LightningElement {
 **Pattern**: Reactive Apex method calls
 **Use Case**: Calling Apex methods that return data reactively
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html)
+**Related Patterns**: [LWC Patterns](/rag/code-examples/development/lwc-patterns.html)
 
 **Problem**:
 You need to call an Apex method and have the data update reactively when parameters change.
@@ -318,7 +318,7 @@ export default class AccountContacts extends LightningElement {
 **Pattern**: Accessing object metadata
 **Use Case**: Getting field labels, picklist values, or object metadata
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html)
+**Related Patterns**: [LWC Patterns](/rag/code-examples/development/lwc-patterns.html)
 
 **Problem**:
 You need to access object metadata like field labels or picklist values.
@@ -399,13 +399,13 @@ export default class DynamicForm extends LightningElement {
 
 ## Related Examples
 
-- [Component Examples](component-examples.html) - LWC component implementations
-- [Service Examples](service-examples.html) - LWC service layer patterns
-- [Apex Service Layer Examples](../apex/service-layer-examples.html) - Apex service methods
+- [Component Examples](/rag/code-examples/lwc/component-examples.html) - LWC component implementations
+- [Service Examples](/rag/code-examples/lwc/service-examples.html) - LWC service layer patterns
+- [Apex Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Apex service methods
 
 ## See Also
 
-- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC development patterns
-- [LDS API Reference](../api-reference/lds-api-reference.html) - Lightning Data Service API reference
-- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
-- [LWC API Reference](../api-reference/lwc-api-reference.html) - Complete LWC API reference
+- [LWC Patterns](/rag/code-examples/development/lwc-patterns.html) - Complete LWC development patterns
+- [LDS API Reference](/rag/code-examples/api-reference/lds-api-reference.html) - Lightning Data Service API reference
+- [LDS Patterns](/rag/code-examples/mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [LWC API Reference](/rag/code-examples/api-reference/lwc-api-reference.html) - Complete LWC API reference

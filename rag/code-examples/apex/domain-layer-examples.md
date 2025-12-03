@@ -235,7 +235,7 @@ public with sharing class ContactUpdateService {
 }
 ```
 
-**Related Examples**: [Service Layer Examples](service-layer-examples.html)
+**Related Examples**: [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html)
 
 ---
 
@@ -322,7 +322,7 @@ private static String formatPhone(String phone) {
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
-- [Selector Layer Examples](selector-layer-examples.html) - Data access patterns
-- [Apex Patterns](../../development/apex-patterns.html) - Complete Apex patterns
+- [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Service layer patterns
+- [Selector Layer Examples](/rag/code-examples/apex/selector-layer-examples.html) - Data access patterns
+- [Apex Patterns](/rag/development/apex-patterns.html) - Complete Apex patterns
 

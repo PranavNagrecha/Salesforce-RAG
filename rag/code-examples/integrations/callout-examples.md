@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs. These examples demonstrate Named Credentials, error handling, async patterns, circuit breakers, response optimization, and testing patterns.
 
 **Related Patterns**:
-- [Callout Best Practices](../../integrations/callout-best-practices.html) - Comprehensive callout best practices
-- [REST API Examples](rest-api-examples.html) - REST API patterns
-- [Asynchronous Apex Patterns](../../development/asynchronous-apex-patterns.html) - Async patterns
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - Comprehensive callout best practices
+- [REST API Examples](/rag/code-examples/integrations/rest-api-examples.html) - REST API patterns
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Async patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ HTTP callouts enable Salesforce to communicate with external systems via REST or
 **Pattern**: HTTP callout using Named Credentials
 **Use Case**: Making authenticated HTTP requests to external APIs
 **Complexity**: Basic
-**Related Patterns**: [Callout Best Practices](../../integrations/callout-best-practices.html)
+**Related Patterns**: [Callout Best Practices](/rag/integrations/callout-best-practices.html)
 
 **Problem**:
 You need to make HTTP callouts to an external API using Named Credentials for authentication.
@@ -141,7 +141,7 @@ public with sharing class HttpCalloutService {
 **Pattern**: Comprehensive error handling for HTTP callouts
 **Use Case**: Handling various error scenarios gracefully
 **Complexity**: Intermediate
-**Related Patterns**: [Callout Best Practices](../../integrations/callout-best-practices.html)
+**Related Patterns**: [Callout Best Practices](/rag/integrations/callout-best-practices.html)
 
 **Problem**:
 You need to handle different types of errors (network, timeout, HTTP status codes) appropriately.
@@ -291,7 +291,7 @@ public with sharing class RobustCalloutService {
 **Pattern**: Making callouts asynchronously using Queueable
 **Use Case**: Long-running or high-volume callouts
 **Complexity**: Intermediate
-**Related Patterns**: [Asynchronous Apex Patterns](../../development/asynchronous-apex-patterns.html)
+**Related Patterns**: [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html)
 
 **Problem**:
 You need to make HTTP callouts asynchronously to avoid timeout issues.
@@ -418,7 +418,7 @@ System.enqueueJob(new AsyncCalloutService('/api/sync', 'POST', payload, contact.
 **Pattern**: Circuit breaker for high-volume integrations
 **Use Case**: Preventing cascading failures in high-volume scenarios
 **Complexity**: Advanced
-**Related Patterns**: [Callout Best Practices](../../integrations/callout-best-practices.html)
+**Related Patterns**: [Callout Best Practices](/rag/integrations/callout-best-practices.html)
 
 **Problem**:
 You need to prevent callouts when an external system is down to avoid wasting resources.
@@ -563,12 +563,12 @@ public with sharing class CircuitBreakerService {
 
 ## Related Examples
 
-- [REST API Examples](rest-api-examples.html) - REST API patterns
-- [Platform Events Examples](platform-events-examples.html) - Event-driven patterns
-- [Integration Examples](../apex/integration-examples.html) - Integration patterns
+- [REST API Examples](/rag/code-examples/integrations/rest-api-examples.html) - REST API patterns
+- [Platform Events Examples](/rag/code-examples/integrations/platform-events-examples.html) - Event-driven patterns
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Integration patterns
 
 ## See Also
 
-- [Callout Best Practices](../../integrations/callout-best-practices.html) - Comprehensive callout best practices
-- [Asynchronous Apex Patterns](../../development/asynchronous-apex-patterns.html) - Async patterns
-- [Error Handling and Logging](../../development/error-handling-and-logging.html) - Error handling patterns
+- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - Comprehensive callout best practices
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Async patterns
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns

@@ -56,27 +56,47 @@ def fix_links_in_file(file_path: Path):
         
         # Convert relative path to absolute path
         if link_url.endswith(".html") or link_url.endswith(".md"):
-            # Resolve relative path
-            if file_dir == Path("."):
-                # File is in rag/ root
-                new_url = f"/rag/{link_url}"
-            else:
-                # File is in a subdirectory
-                resolved = (file_dir / link_url).resolve()
-                try:
-                    rel_to_rag = resolved.relative_to(RAG_DIR.resolve())
-                    rel_str = str(rel_to_rag).replace('\\', '/')
-                    new_url = f"/rag/{rel_str}"
-                except ValueError:
-                    # Link points outside rag/ directory, keep as is
-                    return match.group(0)
-            
-            # Convert .md to .html if needed
-            if new_url.endswith(".md"):
-                new_url = new_url[:-3] + ".html"
-            
-            modified = True
-            return f"[{link_text}]({new_url})"
+            # Handle relative paths
+            if not link_url.startswith("/"):
+                # This is a relative path - convert to absolute
+                # Handle ../ paths
+                if link_url.startswith("../"):
+                    # Count how many ../ we have
+                    parts = link_url.split("/")
+                    up_count = sum(1 for p in parts if p == "..")
+                    # Build path from rag/ root
+                    remaining = "/".join([p for p in parts if p != ".." and p])
+                    # Go up from file_dir
+                    target_dir = file_dir
+                    for _ in range(up_count):
+                        target_dir = target_dir.parent
+                    if target_dir == Path("."):
+                        new_url = f"/rag/{remaining}"
+                    else:
+                        new_url = f"/rag/{target_dir}/{remaining}"
+                elif link_url.startswith("./"):
+                    # Same directory
+                    remaining = link_url[2:]
+                    if file_dir == Path("."):
+                        new_url = f"/rag/{remaining}"
+                    else:
+                        new_url = f"/rag/{file_dir}/{remaining}"
+                else:
+                    # Same directory or subdirectory
+                    if file_dir == Path("."):
+                        new_url = f"/rag/{link_url}"
+                    else:
+                        new_url = f"/rag/{file_dir}/{link_url}"
+                
+                # Convert .md to .html if needed
+                if new_url.endswith(".md"):
+                    new_url = new_url[:-3] + ".html"
+                
+                # Normalize path (remove //, handle .)
+                new_url = new_url.replace("//", "/")
+                
+                modified = True
+                return f"[{link_text}]({new_url})"
         
         return match.group(0)
     

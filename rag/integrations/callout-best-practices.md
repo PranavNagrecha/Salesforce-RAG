@@ -26,11 +26,11 @@ This guide provides comprehensive best practices for implementing HTTP callouts 
 - Knowledge of error handling patterns
 
 **Recommended Reading**:
-- [Apex Patterns](../development/apex-patterns.html) - Apex development patterns
-- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html) - Queueable and @future patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
-- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
-- [Integration Examples](../code-examples/apex/integration-examples.html) - Complete callout code examples
+- [Apex Patterns](/rag/development/apex-patterns.html) - Apex development patterns
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Queueable and @future patterns
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Complete callout code examples
 
 ## Callout Limitations
 
@@ -157,7 +157,7 @@ private static Boolean isRetryableError(Integer statusCode, Exception e) {
 - **Provide user-friendly messages**: Transform technical errors into actionable messages
 - **Handle timeout scenarios**: Explicitly handle timeout exceptions
 
-**Related Patterns**: [Error Handling and Logging](../development/error-handling-and-logging.html)
+**Related Patterns**: [Error Handling and Logging](/rag/development/error-handling-and-logging.html)
 
 ## Leverage Asynchronous Patterns
 
@@ -234,7 +234,7 @@ public static void makeAsyncCallout(String endpoint, String payloadJson) {
 
 **Note**: Prefer Queueable over @future for new development due to better error handling and chaining capabilities.
 
-**Related Patterns**: [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html), [Queueable Examples](../../code-examples/apex/queueable-examples.html)
+**Related Patterns**: [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html), [Queueable Examples](/rag/code-examples/apex/queueable-examples.html)
 
 ## Implement Circuit Breaker Pattern
 
@@ -390,7 +390,7 @@ public class CalloutWithProcessingQueueable implements Queueable, Database.Allow
 }
 ```
 
-**Related Patterns**: [Queueable Examples](../../code-examples/apex/queueable-examples.html), [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html)
+**Related Patterns**: [Queueable Examples](/rag/code-examples/apex/queueable-examples.html), [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html)
 
 ## Optimize Response Processing
 
@@ -475,7 +475,7 @@ public static void processResponseInBatches(HttpResponse response) {
 - **Use streaming parsers**: For very large JSON responses
 - **Extract only needed fields**: Reduce memory footprint
 
-**Related Patterns**: [Governor Limits and Optimization](../development/governor-limits-and-optimization.html)
+**Related Patterns**: [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html)
 
 ## Monitor and Log Callout Performance
 
@@ -564,7 +564,7 @@ public static void checkCalloutHealth(String integrationName) {
 - **Correlate requests**: Use request IDs for tracing
 - **Set up dashboards**: Visualize callout health and performance
 
-**Related Patterns**: [Monitoring and Alerting](../observability/monitoring-alerting.html)
+**Related Patterns**: [Monitoring and Alerting](/rag/observability/monitoring-alerting.html)
 
 ## Avoid DML Before Callout
 
@@ -617,7 +617,7 @@ insert contact;
 - Proper error handling
 - Better user experience (non-blocking)
 
-**Related Patterns**: [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html)
+**Related Patterns**: [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html)
 
 ## Testing Callout Best Practices
 
@@ -745,7 +745,7 @@ private class ComprehensiveCalloutTest {
 - **Test async patterns**: Test Queueable and @future callouts
 - **Achieve 100% coverage**: Cover all code paths
 
-**Related Patterns**: [Apex Testing Patterns](../testing/apex-testing-patterns.html)
+**Related Patterns**: [Apex Testing Patterns](/rag/testing/apex-testing-patterns.html)
 
 ## Key Takeaways
 
@@ -872,19 +872,19 @@ Remember that callouts are often the most fragile part of your Salesforce integr
 ## Related Patterns
 
 **See Also**:
-- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
-- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html) - Queueable and @future patterns
+- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Queueable and @future patterns
 
 **Related Domains**:
-- [Integration Examples](../code-examples/apex/integration-examples.html) - Complete callout code examples
-- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
-- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Performance optimization
-- [Monitoring and Alerting](../observability/monitoring-alerting.html) - Monitoring patterns
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Complete callout code examples
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Performance optimization
+- [Monitoring and Alerting](/rag/observability/monitoring-alerting.html) - Monitoring patterns
 
-- [Integration Examples](../../code-examples/apex/integration-examples.html) - Complete callout code examples
-- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html) - Queueable and @future patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
-- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
-- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Performance optimization
-- [Monitoring and Alerting](../observability/monitoring-alerting.html) - Monitoring patterns
+- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Complete callout code examples
+- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Queueable and @future patterns
+- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Performance optimization
+- [Monitoring and Alerting](/rag/observability/monitoring-alerting.html) - Monitoring patterns
 

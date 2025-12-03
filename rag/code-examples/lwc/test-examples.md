@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Jest is the testing framework for Lightning Web Components. These examples demonstrate how to write comprehensive tests for LWC components, including testing wire adapters, Apex calls, events, and user interactions.
 
 **Related Patterns**:
-- [LWC Jest Testing](../testing/lwc-jest-testing.html) - Complete Jest testing guide
-- [LWC Patterns](../development/lwc-patterns.html) - LWC development patterns
-- [Apex Testing Patterns](../testing/apex-testing-patterns.html) - Apex testing patterns
+- [LWC Jest Testing](/rag/code-examples/testing/lwc-jest-testing.html) - Complete Jest testing guide
+- [LWC Patterns](/rag/code-examples/development/lwc-patterns.html) - LWC development patterns
+- [Apex Testing Patterns](/rag/code-examples/testing/apex-testing-patterns.html) - Apex testing patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Jest is the testing framework for Lightning Web Components. These examples demon
 **Pattern**: Testing component rendering and properties
 **Use Case**: Verifying component displays correctly
 **Complexity**: Basic
-**Related Patterns**: [LWC Jest Testing](../testing/lwc-jest-testing.html)
+**Related Patterns**: [LWC Jest Testing](/rag/code-examples/testing/lwc-jest-testing.html)
 
 **Problem**:
 You need to test that a component renders correctly and displays data.
@@ -173,7 +173,7 @@ describe('c-contact-display', () => {
 **Pattern**: Testing imperative Apex method calls
 **Use Case**: Verifying Apex methods are called correctly
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Jest Testing](../testing/lwc-jest-testing.html)
+**Related Patterns**: [LWC Jest Testing](/rag/code-examples/testing/lwc-jest-testing.html)
 
 **Component** (`contactAction.js`):
 ```javascript
@@ -376,7 +376,7 @@ describe('c-contact-action', () => {
 **Pattern**: Testing reactive wire adapter data
 **Use Case**: Verifying wire adapters work correctly
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Jest Testing](../testing/lwc-jest-testing.html)
+**Related Patterns**: [LWC Jest Testing](/rag/code-examples/testing/lwc-jest-testing.html)
 
 **Component** (`accountContacts.js`):
 ```javascript
@@ -511,7 +511,7 @@ describe('c-account-contacts', () => {
 **Pattern**: Testing user interactions and events
 **Use Case**: Verifying user interactions work correctly
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Jest Testing](../testing/lwc-jest-testing.html)
+**Related Patterns**: [LWC Jest Testing](/rag/code-examples/testing/lwc-jest-testing.html)
 
 **Component** (`contactForm.js`):
 ```javascript
@@ -690,12 +690,12 @@ describe('c-contact-form', () => {
 
 ## Related Examples
 
-- [Component Examples](component-examples.html) - LWC component implementations
-- [Service Examples](service-examples.html) - LWC service layer patterns
-- [Wire Examples](wire-examples.html) - Wire service patterns
+- [Component Examples](/rag/code-examples/lwc/component-examples.html) - LWC component implementations
+- [Service Examples](/rag/code-examples/lwc/service-examples.html) - LWC service layer patterns
+- [Wire Examples](/rag/code-examples/lwc/wire-examples.html) - Wire service patterns
 
 ## See Also
 
-- [LWC Jest Testing](../testing/lwc-jest-testing.html) - Complete Jest testing guide
-- [LWC Patterns](../development/lwc-patterns.html) - LWC development patterns
-- [Apex Testing Patterns](../testing/apex-testing-patterns.html) - Apex testing patterns
+- [LWC Jest Testing](/rag/code-examples/testing/lwc-jest-testing.html) - Complete Jest testing guide
+- [LWC Patterns](/rag/code-examples/development/lwc-patterns.html) - LWC development patterns
+- [Apex Testing Patterns](/rag/code-examples/testing/apex-testing-patterns.html) - Apex testing patterns

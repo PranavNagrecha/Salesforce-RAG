@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Data validation ensures data quality and prevents invalid data from entering the system. These examples demonstrate field validation, record validation, bulk validation, custom validation rules, and validation error handling.
 
 **Related Patterns**:
-- [Formulas and Validation Rules](../../development/formulas-validation-rules.html) - Validation rule patterns
-- [Error Handling Examples](error-handling-examples.html) - Error handling patterns
-- [Data Quality Stewardship](../../data-governance/data-quality-stewardship.html) - Data quality patterns
+- [Formulas and Validation Rules](/rag/development/formulas-validation-rules.html) - Validation rule patterns
+- [Error Handling Examples](/rag/code-examples/utilities/error-handling-examples.html) - Error handling patterns
+- [Data Quality Stewardship](/rag/data-governance/data-quality-stewardship.html) - Data quality patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Data validation ensures data quality and prevents invalid data from entering the
 **Pattern**: Validating individual fields
 **Use Case**: Ensuring field values meet business rules
 **Complexity**: Basic
-**Related Patterns**: [Formulas and Validation Rules](../../development/formulas-validation-rules.html)
+**Related Patterns**: [Formulas and Validation Rules](/rag/development/formulas-validation-rules.html)
 
 **Problem**:
 You need to validate field values before saving records.
@@ -188,7 +188,7 @@ if (!phoneResult.isValid) {
 **Pattern**: Validating entire records
 **Use Case**: Ensuring records meet business rules
 **Complexity**: Intermediate
-**Related Patterns**: [Formulas and Validation Rules](../../development/formulas-validation-rules.html)
+**Related Patterns**: [Formulas and Validation Rules](/rag/development/formulas-validation-rules.html)
 
 **Problem**:
 You need to validate entire records with multiple fields and business rules.
@@ -308,7 +308,7 @@ insert contact;
 **Pattern**: Validating multiple records efficiently
 **Use Case**: Validating bulk data operations
 **Complexity**: Intermediate
-**Related Patterns**: [Data Quality Stewardship](../../data-governance/data-quality-stewardship.html)
+**Related Patterns**: [Data Quality Stewardship](/rag/data-governance/data-quality-stewardship.html)
 
 **Problem**:
 You need to validate multiple records efficiently in bulk operations.
@@ -428,11 +428,11 @@ if (!separated.get('invalid').isEmpty()) {
 
 ## Related Examples
 
-- [Error Handling Examples](error-handling-examples.html) - Error handling patterns
-- [Logging Examples](logging-examples.html) - Logging patterns
+- [Error Handling Examples](/rag/code-examples/utilities/error-handling-examples.html) - Error handling patterns
+- [Logging Examples](/rag/code-examples/utilities/logging-examples.html) - Logging patterns
 
 ## See Also
 
-- [Formulas and Validation Rules](../../development/formulas-validation-rules.html) - Validation rule patterns
-- [Data Quality Stewardship](../../data-governance/data-quality-stewardship.html) - Data quality patterns
+- [Formulas and Validation Rules](/rag/development/formulas-validation-rules.html) - Validation rule patterns
+- [Data Quality Stewardship](/rag/data-governance/data-quality-stewardship.html) - Data quality patterns
 
