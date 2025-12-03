@@ -20,10 +20,10 @@ jobs:
       id-token: write
     # CRITICAL: This environment name must match GitHub Pages settings
     # Repository Settings → Pages → Source MUST be "GitHub Actions" (not a branch)
-    # If this fails with 404, go to: https://github.com/PranavNagrecha/Salesforce-RAG/settings/pages
-    # and change Source from "Deploy from a branch" to "GitHub Actions"
+    # If this fails with 404, the environment may need to be manually created first
     environment:
       name: github-pages
+      # Remove URL to avoid circular reference - let Pages API handle it
     
     steps:
       - name: Checkout repository
