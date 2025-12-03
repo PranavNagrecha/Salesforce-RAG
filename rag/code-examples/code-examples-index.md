@@ -42,7 +42,7 @@ This directory contains standalone code examples that complement the pattern doc
 - <a href="{{ '/rag/code-examples/apex/scheduled-examples.html' | relative_url }}">Scheduled Examples</a> - Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, monitoring
 
 ### Testing
-- <a href="{{ '/rag/code-examples/apex/test-examples.html' | relative_url }}">Test Examples</a> - Test class patterns, factories, and mocking
+- <a href="{{ '/rag/code-examples/lwc/test-examples.html' | relative_url }}">Test Examples</a> - Test class patterns, factories, and mocking (LWC Jest examples)
 
 ## LWC Examples
 

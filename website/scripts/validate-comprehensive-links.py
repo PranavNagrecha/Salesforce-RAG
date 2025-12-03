@@ -31,8 +31,7 @@ def build_file_index() -> Dict[str, Path]:
     """Build index of all markdown files by their path."""
     file_index = {}
     for md_file in RAG_DIR.rglob("*.md"):
-        if md_file.name == "rag-index.md":
-            continue
+        # Include rag-index.md in the index (it exists, just auto-generated)
         try:
             rel_path = md_file.relative_to(RAG_DIR)
             normalized = str(rel_path).replace("\\", "/")
@@ -75,9 +74,11 @@ def validate_internal_html_link(link: Dict[str, Any], file_index: Dict[str, Path
     rel_path = md_path.replace("/rag/", "")
     
     # Skip links to files outside rag/ directory (e.g., website/meta/)
+    # These are valid but not in our rag/ file index
     if rel_path.startswith("website/"):
         # This is a link to a file outside the rag/ directory
         # It might be valid but we can't validate it with our file_index
+        # Don't report as error - these are intentional links to website docs
         return issues
     
     # Check for duplicate directory patterns
