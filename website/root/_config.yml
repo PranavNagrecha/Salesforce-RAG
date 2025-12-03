@@ -15,6 +15,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Disable SCSS processing to avoid encoding errors
+sass:
+  style: compressed
+  sass_dir: _sass
+  sourcemap: never
+
 # SEO Settings
 author: Pranav Nagrecha
 twitter:
@@ -46,6 +52,8 @@ exclude:
   - test-rag-cursor.md
   - test-rag-queries.txt
   - verify-rag.py
+  - "**/*.scss"  # Exclude SCSS files - we use CSS directly
+  - assets/css/style.scss  # Explicitly exclude this file
 
 # Include website assets and layouts
 include:

@@ -1,2619 +1,1377 @@
 {
   "version": "2.0",
-  "lastUpdated": "2024",
+  "lastUpdated": "2025-12-02",
   "description": "RAG Knowledge Library - Structured knowledge derived from real Salesforce implementation experience. All content sanitized and organized for efficient AI retrieval.",
   "directoryStructure": {
-    "architecture": "System architecture patterns",
-    "integrations": "Integration patterns and platforms",
-    "identity-sso": "Identity and SSO patterns",
-    "data-modeling": "Data modeling patterns",
-    "security": "Security and access control patterns",
-    "operations": "Delivery & operations patterns",
-    "observability": "Observability & resilience patterns",
-    "data-governance": "Data governance & compliance patterns",
-    "adoption": "Adoption & change management patterns",
-    "project-methods": "Project delivery and methodology",
-    "development": "Development patterns and practices",
-    "troubleshooting": "Debugging and troubleshooting",
-    "patterns": "Reusable design patterns",
-    "glossary": "Terminology and definitions",
-    "code-examples": "Complete, working code examples",
-    "testing": "Testing patterns and examples",
-    "quick-start": "Quick-start guides",
-    "api-reference": "API references and method signatures",
-    "mcp-knowledge": "MCP-extracted knowledge",
-    "best-practices": "Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features"
+    "architecture": "Architecture patterns for designing system structure, integration patterns, multi-tenant solutions, and portal architecture.",
+    "integrations": "Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.",
+    "identity-sso": "Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.",
+    "data-modeling": "Data modeling patterns for designing external IDs, integration keys, student lifecycle models, and case management models.",
+    "security": "Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms.",
+    "best-practices": "Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features.",
+    "development": "Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, concurrency control, and performance optimization.",
+    "troubleshooting": "Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis.",
+    "patterns": "Reusable design patterns that span multiple domains, including governor limit management, bulkification, and cross-cutting design patterns.",
+    "glossary": "Terminology and definitions for clarifying what terms mean and understanding core concepts.",
+    "project-methods": "Project delivery and methodology for sprint-based delivery, testing strategies, and quality standards.",
+    "operations": "Delivery and operations patterns for CI/CD, environment strategy, and release governance.",
+    "observability": "Observability and resilience patterns for monitoring, performance tuning, and high availability.",
+    "data-governance": "Data governance and compliance patterns for data residency, compliance, and data quality.",
+    "adoption": "Adoption and change management patterns for user readiness and org health.",
+    "testing": "Testing patterns and examples for Apex, LWC, and integration testing.",
+    "quick-start": "Step-by-step guides for getting started with Salesforce development.",
+    "api-reference": "Quick reference for common APIs, methods, and patterns.",
+    "mcp-knowledge": "Knowledge extracted from Salesforce MCP Service tools, providing official guidance and best practices.",
+    "code-examples": "Complete, working code examples organized by category. All examples are copy-paste ready and include tests."
   },
   "files": [
-    {
-      "domain": "architecture",
-      "file": "event-driven-architecture.md",
-      "path": "rag/architecture/event-driven-architecture.md",
-      "whenToRetrieve": [
-        "How to implement Platform Events for asynchronous integration",
-        "Designing event-driven architecture to decouple systems",
-        "Publishing events from Flows or Apex",
-        "Integrating with external event buses (e.g., AWS EventBridge)",
-        "Designing event payloads and handling event errors"
-      ],
-      "summary": "Guide to implementing event-driven architecture with Platform Events. Teaches how to publish events from Flows and Apex, design self-contained event payloads, integrate with external event buses, consume events internally, and handle errors. Includes decision framework for when to use events vs. APIs vs. ETL.",
-      "keyTopics": [
-        "Platform Events publication from Flows and Apex",
-        "External event bus patterns (EventBridge)",
-        "Event payload design (self-contained, minimal PII, idempotent)",
-        "Internal event consumption via Channel Members",
-        "Error handling and monitoring patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "portal-architecture.md",
-      "path": "rag/architecture/portal-architecture.md",
-      "whenToRetrieve": [
-        "Designing Experience Cloud portals for multiple user communities",
-        "Supporting different user types (students, partners, citizens) in one portal",
-        "Implementing identity-aware routing and behavior",
-        "Designing portal security and sharing models"
-      ],
-      "summary": "Architecture patterns for Experience Cloud portals that support multiple user communities (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns. Covers identity-aware routing, sharing models, and portal design patterns.",
-      "keyTopics": [
-        "Student/applicant portal patterns",
-        "External partner/provider portal patterns",
-        "Citizen/client portal patterns",
-        "Identity-aware behavior and routing",
-        "Sharing and security for portals"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "architect-role.md",
-      "path": "rag/architecture/architect-role.md",
-      "whenToRetrieve": [
-        "Understanding the Salesforce architect role",
-        "Differences between architects and developers",
-        "Types of architects",
-        "Resources for Salesforce architects"
-      ],
-      "summary": "Guide to the Salesforce architect role, covering what architects do, how they differ from developers, different types of architects (Solution, Technical, System, Enterprise), and useful resources for architects.",
-      "keyTopics": [
-        "Architect role and responsibilities",
-        "Architect vs developer differences",
-        "Types of architects (Solution, Technical, System, Enterprise)",
-        "Architect career paths",
-        "Resources for architects"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "diagramming-patterns.md",
-      "path": "rag/architecture/diagramming-patterns.md",
-      "whenToRetrieve": [
-        "Creating system architecture diagrams",
-        "Entity relationship diagrams",
-        "Sequence diagrams",
-        "Other architectural diagrams for Salesforce implementations"
-      ],
-      "summary": "Comprehensive guide to diagramming for Salesforce architects. Covers system architecture diagrams, entity relationship diagrams (ERD), sequence diagrams, activity diagrams, use case diagrams, class diagrams, environment diagrams, actors and licenses diagrams, and role hierarchy diagrams.",
-      "keyTopics": [
-        "System architecture diagrams",
-        "Entity relationship diagrams (ERD)",
-        "Sequence diagrams",
-        "Activity diagrams",
-        "Use case diagrams",
-        "Class diagrams",
-        "Environment diagrams",
-        "Role hierarchy diagrams"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "stakeholder-communication.md",
-      "path": "rag/architecture/stakeholder-communication.md",
-      "whenToRetrieve": [
-        "Communicating with stakeholders",
-        "Asking effective questions",
-        "Setting realistic expectations",
-        "Establishing trust as an architect"
-      ],
-      "summary": "Guide to stakeholder communication for Salesforce architects. Covers importance of communication, how to communicate with stakeholders, asking effective questions, setting realistic expectations, and establishing trust.",
-      "keyTopics": [
-        "Stakeholder communication strategies",
-        "Asking effective questions",
-        "Setting realistic expectations",
-        "Establishing trust",
-        "Communication best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "team-leadership.md",
-      "path": "rag/architecture/team-leadership.md",
-      "whenToRetrieve": [
-        "Building and leading development teams",
-        "Finding the right talent",
-        "Leadership styles",
-        "Training team members"
-      ],
-      "summary": "Guide to team leadership for Salesforce architects. Covers how to effectively build, lead, and train a team of developers, focusing on finding the right talent, leadership styles, and training.",
-      "keyTopics": [
-        "Team building strategies",
-        "Finding the right talent",
-        "Leadership styles",
-        "Training and development",
-        "Team management best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "project-estimation.md",
-      "path": "rag/architecture/project-estimation.md",
-      "whenToRetrieve": [
-        "Estimating project work",
-        "Understanding roles on a team",
-        "Guarding against unrealistic expectations",
-        "Estimating OOTB options",
-        "Estimating to median talent",
-        "Solving work from broken requirements"
-      ],
-      "summary": "Guide to project estimation for Salesforce architects. Covers project work estimation, roles on a team, guarding against unrealistic expectations, estimating OOTB options, estimating to median talent, and solving work from broken requirements.",
-      "keyTopics": [
-        "Project work estimation",
-        "Roles on a team",
-        "Guarding against unrealistic expectations",
-        "Estimating OOTB options",
-        "Estimating to median talent",
-        "Solving work from broken requirements"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "org-strategy.md",
-      "path": "rag/architecture/org-strategy.md",
-      "whenToRetrieve": [
-        "Determining Salesforce org strategy",
-        "Choosing between single org and multiple orgs",
-        "Understanding org strategy implications"
-      ],
-      "summary": "Guide to determining Salesforce org strategy. Covers how to choose between a single Salesforce org and multiple orgs, including considerations, tradeoffs, and decision frameworks.",
-      "keyTopics": [
-        "Single org strategy",
-        "Multi-org strategy",
-        "Decision frameworks",
-        "Tradeoffs and considerations",
-        "Org strategy best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "mobile-strategy.md",
-      "path": "rag/architecture/mobile-strategy.md",
-      "whenToRetrieve": [
-        "Choosing a mobile strategy for Salesforce",
-        "Understanding different mobile options",
-        "When to pick each mobile option"
-      ],
-      "summary": "Guide to choosing a mobile strategy for a Salesforce org. Covers different mobile options and when to pick each, including considerations and best practices.",
-      "keyTopics": [
-        "Mobile options in Salesforce",
-        "When to pick each mobile option",
-        "Mobile strategy considerations",
-        "Mobile best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "architecture",
-      "file": "governance-patterns.md",
-      "path": "rag/architecture/governance-patterns.md",
-      "whenToRetrieve": [
-        "Defining Salesforce org governance",
-        "How and when to staff a Center of Excellence (COE)",
-        "Understanding governance patterns"
-      ],
-      "summary": "Guide to Salesforce org governance and how and when to staff a Center of Excellence (COE). Covers governance patterns, COE structure, and best practices.",
-      "keyTopics": [
-        "Salesforce org governance",
-        "Center of Excellence (COE)",
-        "Governance patterns",
-        "COE structure and staffing",
-        "Governance best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "integrations",
-      "file": "etl-vs-api-vs-events.md",
-      "path": "rag/integrations/etl-vs-api-vs-events.md",
-      "whenToRetrieve": [
-        "Deciding whether to use ETL, API, or Events for an integration",
-        "Understanding tradeoffs between batch, synchronous, and asynchronous patterns",
-        "Selecting the right integration pattern for a use case"
-      ],
-      "summary": "Decision framework for choosing integration patterns. Explains when to use ETL (high-volume batch), API (real-time request/response), or Events (asynchronous publish-subscribe), with implementation patterns, best practices, and tradeoffs for each approach.",
-      "keyTopics": [
-        "ETL pattern for high-volume batch synchronization",
-        "API pattern for real-time request/response",
-        "Events pattern for asynchronous processing",
-        "Hybrid pattern combinations",
-        "Decision framework and selection criteria"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "integrations",
-      "file": "integration-platform-patterns.md",
-      "path": "rag/integrations/integration-platform-patterns.md",
-      "whenToRetrieve": [
-        "Implementing integrations with MuleSoft or Dell Boomi",
-        "Using integration platforms as security boundaries",
-        "Designing transformation layers for data mapping",
-        "Handling high-volume ETL operations with integration platforms"
-      ],
-      "summary": "Patterns for implementing integrations using MuleSoft and Dell Boomi platforms. Covers using MuleSoft as a security boundary (VPN, IP whitelisting) and transformation layer (DataWeave), using Boomi for high-volume batch processing, file-based staging patterns, and best practices for both platforms.",
-      "keyTopics": [
-        "MuleSoft as security boundary (VPN, IP whitelisting)",
-        "MuleSoft transformation layer (DataWeave)",
-        "Boomi high-volume batch processing",
-        "File-based staging for large data sets",
-        "Integration job tracking patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "integrations",
-      "file": "sis-sync-patterns.md",
-      "path": "rag/integrations/sis-sync-patterns.md",
-      "whenToRetrieve": [
-        "Synchronizing large volumes of data from Student Information Systems (SIS)",
-        "Implementing high-volume batch integrations (hundreds of thousands of records)",
-        "Using file-based staging for very large data sets",
-        "Designing idempotent batch synchronization patterns"
-      ],
-      "summary": "High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems. Teaches file-based staging for large ID lists, dynamic SQL IN-clause batching, idempotent upserts using external IDs, integration job tracking, and error handling with retry logic.",
-      "keyTopics": [
-        "File-based staging for large ID lists",
-        "Dynamic SQL IN-clause batching",
-        "Idempotent upserts with external IDs",
-        "Integration job tracking",
-        "Error handling and retry logic"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "integrations",
-      "file": "salesforce-to-llm-data-pipelines.md",
-      "path": "rag/integrations/salesforce-to-llm-data-pipelines.md",
-      "whenToRetrieve": [
-        "Moving Salesforce data into LLM/RAG systems",
-        "Designing data extraction pipelines for LLM systems",
-        "Implementing transformation and chunking strategies for Salesforce data",
-        "Understanding architectural variants for Salesforce to LLM data pipelines"
-      ],
-      "summary": "High-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems. Covers batch export, event-driven, and on-demand query patterns, extraction APIs (REST, Bulk, Metadata, CDC), transformation and chunking strategies, and interaction with manifest-style descriptions.",
-      "keyTopics": [
-        "Batch export vs event-driven vs on-demand query patterns",
-        "REST API, Bulk API, Metadata API, and CDC extraction patterns",
-        "Per-record vs aggregated chunking strategies",
-        "Field selection and redaction patterns",
-        "Relationship context preservation in chunks"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "identity-sso",
-      "file": "multi-tenant-identity-architecture.md",
-      "path": "rag/identity-sso/multi-tenant-identity-architecture.md",
-      "whenToRetrieve": [
-        "Supporting multiple identity providers (OIDC, SAML, organization tenant) in one org",
-        "Implementing login handlers to route users by identity type",
-        "Designing multi-tenant identity for different user communities",
-        "Separating user types using Record Types and sharing models"
-      ],
-      "summary": "Guide to multi-tenant identity architecture supporting multiple user communities (citizens, external partner organizations, internal staff) with different identity providers. Covers implementing OIDC for external users, SAML for internal staff, organization tenant identity for partners, login handler patterns, Record Type-based separation, and sharing models.",
-      "keyTopics": [
-        "OIDC for external users (citizens/clients)",
-        "SAML for internal staff",
-        "Organization tenant identity for external partners",
-        "Login handler patterns and matching strategies",
-        "Record Type-based user separation",
-        "Sharing and security by identity type"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-modeling",
-      "file": "external-ids-and-integration-keys.md",
-      "path": "rag/data-modeling/external-ids-and-integration-keys.md",
-      "whenToRetrieve": [
-        "Designing external ID fields for stable record mapping",
-        "Creating composite external IDs for multi-column keys",
-        "Implementing idempotent upsert operations",
-        "Tracking integration job status and timestamps"
-      ],
-      "summary": "Guide to external ID strategies for stable record mapping between Salesforce and external systems. Covers external ID design principles (stable, unique, mirror external keys), composite external IDs for multi-column keys, integration job tracking fields (Last_Sync_Timestamp, Last_Sync_Status), idempotent upsert patterns, and managing external IDs across multiple systems.",
-      "keyTopics": [
-        "External ID design principles (stable, unique, mirror external keys)",
-        "Composite external IDs for multi-column keys",
-        "Integration job tracking fields (Last_Sync_Timestamp, Last_Sync_Status, etc.)",
-        "Idempotent upsert patterns",
-        "Multi-system external ID management"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-modeling",
-      "file": "student-lifecycle-data-model.md",
-      "path": "rag/data-modeling/student-lifecycle-data-model.md",
-      "whenToRetrieve": [
-        "Modeling student and applicant data in Education Cloud",
-        "Designing Program Enrollment and Course Enrollment objects",
-        "Integrating Education Cloud with Student Information Systems (SIS)",
-        "Understanding Education Data Architecture (EDA) data model"
-      ],
-      "summary": "Salesforce Education Cloud (EDA) data model patterns for higher education institutions. Covers using Contact as the core student/applicant record, Program Enrollment and Course Enrollment object design, Application object patterns, SIS integration data model, and derived fields from SIS data.",
-      "keyTopics": [
-        "Contact as core student/applicant record",
-        "Program Enrollment and Course Enrollment objects",
-        "Application object design",
-        "SIS integration data model",
-        "Derived fields from SIS data"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-modeling",
-      "file": "case-management-data-model.md",
-      "path": "rag/data-modeling/case-management-data-model.md",
-      "whenToRetrieve": [
-        "Designing case management data models for public sector",
-        "Modeling multi-tenant case data in a single org",
-        "Designing Notice and Transaction objects",
-        "Modeling relationships between clients and external partner organizations"
-      ],
-      "summary": "Data model patterns for public sector case management supporting multi-agency public benefits and services portals. Covers Client Accounts/Contacts modeling, External Partner (Provider) Accounts, case management model, Notice and Transaction objects, and multi-tenant data isolation patterns.",
-      "keyTopics": [
-        "Client Accounts/Contacts modeling",
-        "External Partner (Provider) Accounts",
-        "Case management model",
-        "Notice and Transaction objects",
-        "Multi-tenant data isolation"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-modeling",
-      "file": "lead-management-patterns.md",
-      "path": "rag/data-modeling/lead-management-patterns.md",
-      "whenToRetrieve": [
-        "Implementing lead management and conversion processes",
-        "Configuring duplicate rules and matching rules for leads",
-        "Setting up lead assignment rules",
-        "Designing lead scoring models",
-        "Managing lead-to-opportunity conversion workflows",
-        "Field mapping during lead conversion"
-      ],
-      "summary": "Comprehensive data model and process guide for Salesforce lead management. Covers lead object structure, conversion field mapping (Lead → Contact/Account/Opportunity), duplicate rules configuration, lead assignment rules, lead status management, lead scoring, data quality patterns, and integration patterns.",
-      "keyTopics": [
-        "Lead conversion field mapping (Lead → Contact/Account/Opportunity)",
-        "Duplicate rules and matching rules configuration",
-        "Lead assignment rules and round-robin patterns",
-        "Lead status management and progression",
-        "Lead scoring models and thresholds",
-        "Data quality and standardization patterns",
-        "Web-to-Lead and marketing automation integration"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-modeling",
-      "file": "object-setup-and-configuration.md",
-      "path": "rag/data-modeling/object-setup-and-configuration.md",
-      "whenToRetrieve": [
-        "Setting up custom objects in Salesforce",
-        "Configuring object fields, page layouts, and related lists",
-        "Setting up tabs, actions, and Lightning Record Pages",
-        "Configuring field-level security and object permissions",
-        "Setting up search layouts and compact layouts",
-        "Completing object configuration checklist before deployment"
-      ],
-      "summary": "Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce. Covers complete object configuration from initial creation through Lightning Experience optimization, including field setup, page layouts, tabs, actions, search layouts, permissions, and testing procedures.",
-      "keyTopics": [
-        "Object creation and basic configuration",
-        "Field configuration with help text and FLS",
-        "Page layout and compact layout setup",
-        "Search layout configuration",
-        "Tab creation and app assignment",
-        "Action configuration (Create, Update)",
-        "Lightning Record Page setup",
-        "Field-level security best practices",
-        "Object setup testing procedures",
-        "Community/portal object configuration"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-modeling",
-      "file": "file-management-patterns.md",
-      "path": "rag/data-modeling/file-management-patterns.md",
-      "whenToRetrieve": [
-        "Choosing between ContentVersion, Attachments, and Documents",
-        "Implementing file storage and management in Salesforce",
-        "Designing file upload and sharing patterns",
-        "Managing file storage limits and cleanup",
-        "Migrating from Attachments to ContentVersion",
-        "Implementing file versioning and collaboration"
-      ],
-      "summary": "File management patterns for Salesforce implementations. Covers ContentVersion (Files) vs Attachments vs Documents decision framework, file upload patterns, file sharing and versioning, storage management, security and access control, and integration patterns including external file storage and migration strategies.",
-      "keyTopics": [
-        "ContentVersion (Files) vs Attachments vs Documents",
-        "File upload and storage patterns",
-        "File sharing and versioning",
-        "Storage management and cleanup",
-        "File-level security and access control",
-        "External file storage integration",
-        "File migration patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "security",
-      "file": "permission-set-architecture.md",
-      "path": "rag/security/permission-set-architecture.md",
-      "whenToRetrieve": [
-        "Implementing permission set-driven security architecture",
-        "Migrating from profile-centric to permission set-based access control",
-        "Managing permissions at scale using Permission Set Groups",
-        "Designing security models for community users"
-      ],
-      "summary": "Guide to permission set-driven security architecture. Teaches using Profiles for UI configuration only, Permission Sets for comprehensive access control, Permission Set Groups for role-based assignment, migration strategy from profile-centric model, and best practices for managing permissions at scale. Includes restrictions for community users.",
-      "keyTopics": [
-        "Profiles = UI configuration only",
-        "Permission Sets = Access control",
-        "Permission Set Groups for role-based assignment",
-        "No delete permissions for community users",
-        "Migration strategy from profile-centric model"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "security",
-      "file": "salesforce-llm-data-governance.md",
-      "path": "rag/security/salesforce-llm-data-governance.md",
-      "whenToRetrieve": [
-        "Choosing what data to expose from Salesforce to LLMs",
-        "Implementing security model evaluation (FLS, OLS, sharing rules) in LLM data extraction",
-        "Designing data masking and redaction strategies",
-        "Implementing governance and compliance for Salesforce to LLM data pipelines"
-      ],
-      "summary": "Security and governance patterns for Salesforce to LLM data pipelines. Covers data scoping principles, mapping Salesforce security to LLM access, data masking and redaction strategies, RAG security enforcement patterns (separate indexes, attribute-based filtering), and governance lifecycle management (refresh cadence, retention, compliance, audit trails).",
-      "keyTopics": [
-        "Data scoping principles (relevance, sensitivity, volume constraints)",
-        "FLS/OLS evaluation and sharing rule understanding",
-        "Service account vs user context extraction patterns",
-        "Separate indexes per role vs attribute-based filtering",
-        "Data masking and redaction strategies",
-        "Governance and compliance (GDPR, CCPA, HIPAA, FERPA)"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "security",
-      "file": "sharing-fundamentals.md",
-      "path": "rag/security/sharing-fundamentals.md",
-      "whenToRetrieve": [
-        "Understanding the fundamentals of Salesforce sharing",
-        "Setting Org-Wide Defaults for objects",
-        "Designing role hierarchy for access control",
-        "Deciding when to use View All/Modify All permissions",
-        "Understanding the order of sharing evaluation"
-      ],
-      "summary": "Fundamentals of Salesforce sharing including Org-Wide Defaults (OWD), Role Hierarchy, View All/Modify All permissions (object and system level), and View All Fields/Modify All Fields permissions.",
-      "keyTopics": [
-        "Org-Wide Defaults (Private, Public Read Only, Public Read/Write)",
-        "Role Hierarchy and hierarchical access patterns",
-        "View All/Modify All permissions (object and system level)",
-        "View All Fields/Modify All Fields permissions",
-        "Sharing vs. Permissions distinction",
-        "Order of sharing evaluation"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "security",
-      "file": "sharing-rules-and-manual-sharing.md",
-      "path": "rag/security/sharing-rules-and-manual-sharing.md",
-      "whenToRetrieve": [
-        "Implementing sharing rules for internal users",
-        "Deciding between sharing rules and Apex managed sharing",
-        "Implementing Apex managed sharing for complex requirements",
-        "Understanding manual sharing use cases",
-        "Troubleshooting sharing rule issues"
-      ],
-      "summary": "Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, and Apex Managed Sharing. Includes implementation patterns, decision frameworks, and code examples.",
-      "keyTopics": [
-        "Owner-based sharing rules",
-        "Criteria-based sharing rules",
-        "Territory-based sharing rules",
-        "Manual sharing",
-        "Apex Managed Sharing and Apex Sharing Reasons",
-        "Decision frameworks for selecting sharing mechanisms",
-        "Code examples and testing patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "security",
-      "file": "sharing-sets-and-portals.md",
-      "path": "rag/security/sharing-sets-and-portals.md",
-      "whenToRetrieve": [
-        "Designing Experience Cloud sharing with Sharing Sets",
-        "Implementing portal sharing patterns",
-        "Understanding field-level sharing considerations",
-        "Optimizing sharing for large data volumes",
-        "Troubleshooting sharing access issues",
-        "Designing multi-tenant data isolation patterns"
-      ],
-      "summary": "Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples.",
-      "keyTopics": [
-        "Sharing Sets for Experience Cloud (Community) users",
-        "Community sharing patterns and multi-tenant data isolation",
-        "Field-Level Security (FLS) and sharing interactions",
-        "Sharing calculation, performance, and optimization",
-        "Best practices, common patterns, and troubleshooting",
-        "Code examples for community sharing"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "error-handling-and-logging.md",
-      "path": "rag/development/error-handling-and-logging.md",
-      "whenToRetrieve": [
-        "Implementing error handling and logging frameworks",
-        "Creating structured logging for compliance and audit trails",
-        "Integrating with external logging platforms (OpenSearch, Splunk)",
-        "Handling logging failures with platform event fallbacks"
-      ],
-      "summary": "Error handling and logging framework using custom LOG_LogMessage__c object. Covers implementing logging utility classes, platform event fallback patterns for DML failures, structured logging format, integration with centralized logging platforms (OpenSearch, Splunk), and compliance/audit trail requirements.",
-      "keyTopics": [
-        "Custom logging object (LOG_LogMessage__c)",
-        "LOG_LogMessageUtility class",
-        "Platform event fallback for DML failures",
-        "Structured logging format",
-        "Integration with centralized logging (OpenSearch, Splunk)",
-        "Compliance and audit trail requirements"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "apex-patterns.md",
-      "path": "rag/development/apex-patterns.md",
-      "whenToRetrieve": [
-        "Deciding when to use Apex vs. Flow",
-        "Implementing Apex class layering (Service, Domain, Selector, Integration)",
-        "Understanding layer boundaries and delegation patterns",
-        "Using dependency injection for testability",
-        "Optimizing SOQL queries and managing governor limits",
-        "Designing asynchronous Apex (Queueable, Batchable, Scheduled)",
-        "Integrating Apex with Lightning Web Components",
-        "Implementing logging utilities with fallback mechanisms",
-        "Building integration services with configuration management",
-        "Implementing retry logic with intelligent error detection",
-        "Building scoring models with business rule overrides",
-        "Understanding tradeoffs and implementation decisions"
-      ],
-      "summary": "Apex design patterns and best practices. Covers decision framework for when to choose Apex over Flow, class layering patterns (Service, Domain, Selector, Integration) with layer boundaries and delegation guidance, dependency injection for testability, SOQL design and optimization, asynchronous patterns (Queueable, Batchable, Scheduled), Apex+LWC integration patterns, error handling, and testing strategies. Includes detailed pattern implementations: Logging Utility with Fallback Mechanism, Integration Service with Configuration Management, Retry Logic with Intelligent Error Detection, and Scoring Model with Business Rule Overrides. Also covers tradeoffs and implementation decisions.",
-      "keyTopics": [
-        "When to choose Apex over Flow",
-        "Apex class layering (Service, Domain, Selector, Integration)",
-        "Layer boundaries and delegation patterns",
-        "Dependency injection for testability",
-        "Selector layer query method patterns",
-        "Integration layer patterns (Named Credentials)",
-        "Domain layer usage in triggers vs Service layer",
-        "SOQL design and optimization",
-        "Asynchronous Apex patterns (Queueable, Batchable, Scheduled)",
-        "Apex + LWC integration patterns",
-        "Error handling and testing strategies",
-        "Logging Utility with Fallback Mechanism pattern",
-        "Integration Service with Configuration Management pattern",
-        "Retry Logic with Intelligent Error Detection pattern",
-        "Scoring Model with Business Rule Overrides pattern",
-        "Tradeoffs and implementation decisions"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "flow-patterns.md",
-      "path": "rag/development/flow-patterns.md",
-      "whenToRetrieve": [
-        "Selecting the right Flow type for automation",
-        "Designing Record-Triggered Flows with proper structure",
-        "Building Screen Flows for user interactions",
-        "Integrating Flows with Apex for complex logic",
-        "Optimizing Flow performance and handling errors",
-        "Migrating from Flow User permission before Winter '26"
-      ],
-      "summary": "Flow design and orchestration patterns. Covers Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched), Record-Triggered Flow structure patterns, Screen Flow design patterns, Flow+Apex integration patterns, naming conventions, error handling, performance optimization, and Flow User permission deprecation migration guidance.",
-      "keyTopics": [
-        "Flow type selection (Record-Triggered, Subflows, Screen, Scheduled, Auto-Launched)",
-        "Record-Triggered Flow structure patterns",
-        "Screen Flow design patterns",
-        "Flow + Apex integration patterns",
-        "Flow naming and documentation",
-        "Error handling and performance",
-        "Flow User permission deprecation (Winter '26)"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "order-of-execution.md",
-      "path": "rag/development/order-of-execution.md",
-      "whenToRetrieve": [
-        "Understanding when triggers, flows, and validation rules execute",
-        "Designing automation with execution order in mind",
-        "Debugging issues related to execution timing",
-        "Choosing between before-save and after-save automation",
-        "Understanding trigger execution order and context",
-        "Designing field value modifications and related record operations"
-      ],
-      "summary": "Complete guide to Salesforce order of execution. Covers the full execution sequence for save operations, before-save vs after-save decision framework, Flow execution timing, validation rule timing, trigger execution order, common patterns and pitfalls, performance considerations, and debugging techniques.",
-      "keyTopics": [
-        "Complete order of execution sequence",
-        "Before-save vs after-save decision framework",
-        "Flow execution timing (before-save and after-save)",
-        "Validation rule timing",
-        "Trigger execution order and context",
-        "Common patterns and pitfalls",
-        "Performance considerations",
-        "Debugging execution order issues"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "lwc-patterns.md",
-      "path": "rag/development/lwc-patterns.md",
-      "whenToRetrieve": [
-        "Building console-style Lightning Web Components",
-        "Implementing complex business logic in LWCs",
-        "Designing service-layer patterns for LWCs",
-        "Creating config-driven UI components",
-        "Optimizing LWC performance and accessibility",
-        "Implementing performance-optimized LWC controller patterns",
-        "Using cache busting and lazy loading strategies"
-      ],
-      "summary": "Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations. Includes detailed Performance-Optimized LWC Controller Pattern with cache busting, lazy loading, and single Apex call strategies.",
-      "keyTopics": [
-        "Console-style LWC patterns",
-        "Fraud/risk scoring LWC implementation",
-        "Program-selection LWC patterns",
-        "Service-layer pattern for LWCs",
-        "Config-driven UI patterns",
-        "Performance optimization and accessibility",
-        "Performance-Optimized LWC Controller Pattern",
-        "Cache busting with random parameters",
-        "Lazy loading for detailed breakdowns",
-        "Single Apex call strategies"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "omnistudio-patterns.md",
-      "path": "rag/development/omnistudio-patterns.md",
-      "whenToRetrieve": [
-        "Designing OmniScripts for guided workflows",
-        "Creating FlexCards for reusable UI components",
-        "Implementing grant management workflows with OmniStudio",
-        "Integrating OmniStudio with Salesforce data model",
-        "Optimizing OmniStudio performance and error handling"
-      ],
-      "summary": "OmniStudio (OmniScripts and FlexCards) patterns for guided workflows and reusable UI components. Covers OmniScript design patterns for guided processes, FlexCard design for reusable UI, grant management workflow patterns, integration with Salesforce data model, and performance optimization with error handling.",
-      "keyTopics": [
-        "OmniScripts for guided processes",
-        "FlexCards for reusable UI components",
-        "Grant management workflows",
-        "Integration with Salesforce data model",
-        "Performance optimization and error handling"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "locking-and-concurrency-strategies.md",
-      "path": "rag/development/locking-and-concurrency-strategies.md",
-      "whenToRetrieve": [
-        "Handling UNABLE_TO_LOCK_ROW exceptions",
-        "Implementing retry logic with exponential backoff",
-        "Designing idempotent operations for safe retries",
-        "Preventing deadlocks",
-        "Optimizing high-concurrency scenarios"
-      ],
-      "summary": "Comprehensive guidance on Salesforce row locking, concurrency control patterns, retry strategies with exponential backoff, deadlock prevention, and high-concurrency optimization. Covers retry logic patterns, idempotent operations with External IDs, Queueable-based retry patterns, lock-free design patterns, and deadlock prevention strategies.",
-      "keyTopics": [
-        "Retry logic with exponential backoff for UNABLE_TO_LOCK_ROW",
-        "Idempotent operations with External IDs",
-        "Queueable-based retry patterns",
-        "Lock-free design patterns (Platform Events, queue-based processing)",
-        "Deadlock prevention and detection",
-        "Transaction scope optimization"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "governor-limits-and-optimization.md",
-      "path": "rag/development/governor-limits-and-optimization.md",
-      "whenToRetrieve": [
-        "Monitoring governor limit usage",
-        "Optimizing SOQL queries for selectivity",
-        "Implementing query result pagination",
-        "Using asynchronous processing for large operations",
-        "Optimizing heap size usage"
-      ],
-      "summary": "Comprehensive guidance on Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management. Covers governor limits monitoring, selective query optimization (10% threshold, indexed fields), query result pagination, asynchronous processing patterns, and heap size optimization.",
-      "keyTopics": [
-        "Governor limits monitoring and proactive checking",
-        "Selective query optimization (10% threshold, indexed fields)",
-        "Query result pagination (OFFSET vs cursor-based)",
-        "Asynchronous processing (Batch, Queueable, Scheduled)",
-        "Heap size optimization patterns",
-        "Resource management best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "soql-query-patterns.md",
-      "path": "rag/development/soql-query-patterns.md",
-      "whenToRetrieve": [
-        "Building dynamic SOQL queries with user input",
-        "Implementing relationship queries to combine related data",
-        "Optimizing queries for performance and governor limits",
-        "Debugging integration failures and data issues",
-        "Performing org maintenance and cleanup",
-        "Building cascading load patterns for LWC components",
-        "Need practical SOQL query examples for common scenarios",
-        "Looking for maintenance queries to clean up orgs"
-      ],
-      "summary": "Practical SOQL query patterns and examples derived from real implementation experience. Covers dynamic SOQL with proper escaping, relationship queries, cascading load patterns, query optimizations, SOQL debugging patterns, security enforcement, bulkification patterns, and maintenance queries for org cleanup.",
-      "keyTopics": [
-        "Dynamic SOQL with proper escaping (String.escapeSingleQuotes)",
-        "Relationship queries using dot notation",
-        "Cascading load pattern with cacheable methods",
-        "Query optimizations (minimal field selection, selective WHERE clauses, LIMIT clauses)",
-        "SOQL debugging patterns (history objects, error fields, root cause analysis)",
-        "Security enforcement (WITH SECURITY_ENFORCED)",
-        "Bulkification patterns (avoid SOQL in loops)",
-        "Maintenance queries (unused permission sets, roles, profiles, reports, email templates)"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "troubleshooting",
-      "file": "integration-debugging.md",
-      "path": "rag/troubleshooting/integration-debugging.md",
-      "whenToRetrieve": [
-        "Troubleshooting integration failures and errors",
-        "Using SOQL debugging patterns to investigate issues",
-        "Performing root cause analysis for data synchronization problems",
-        "Querying history objects to track data changes",
-        "Analyzing integration errors and data quality issues"
-      ],
-      "summary": "Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues. Covers SOQL debugging patterns, history object queries for change tracking, root cause analysis techniques, integration error analysis, and data quality debugging methods.",
-      "keyTopics": [
-        "SOQL debugging patterns",
-        "History object queries for change tracking",
-        "Root cause analysis techniques",
-        "Integration error analysis",
-        "Data quality debugging methods"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "troubleshooting",
-      "file": "data-reconciliation.md",
-      "path": "rag/troubleshooting/data-reconciliation.md",
-      "whenToRetrieve": [
-        "Reconciling data between Salesforce and external systems",
-        "Using external IDs to identify and match records",
-        "Performing field-level reconciliation to find discrepancies",
-        "Building reconciliation reporting and alerting",
-        "Ensuring data consistency across systems"
-      ],
-      "summary": "Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency. Covers external ID-based reconciliation, integration job tracking reconciliation, field-level reconciliation, discrepancy identification, and reconciliation reporting with alerting.",
-      "keyTopics": [
-        "External ID-based reconciliation",
-        "Integration job tracking reconciliation",
-        "Field-level reconciliation",
-        "Discrepancy identification",
-        "Reconciliation reporting and alerting"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "project-methods",
-      "file": "delivery-framework.md",
-      "path": "rag/project-methods/delivery-framework.md",
-      "whenToRetrieve": [
-        "Managing complex multi-stakeholder Salesforce projects",
-        "Implementing sprint-based delivery structure",
-        "Coordinating stakeholders and testing windows",
-        "Establishing quality standards and change management",
-        "Planning project delivery methodology"
-      ],
-      "summary": "Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Covers sprint structure, stakeholder coordination practices, testing window coordination, change management and documentation alignment, and comprehensive quality standards.",
-      "keyTopics": [
-        "Sprint-based delivery structure",
-        "Stakeholder coordination practices",
-        "Testing window coordination",
-        "Change management and documentation alignment",
-        "Comprehensive quality standards"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "project-methods",
-      "file": "testing-strategy.md",
-      "path": "rag/project-methods/testing-strategy.md",
-      "whenToRetrieve": [
-        "Planning comprehensive testing strategies for Salesforce projects",
-        "Designing integration testing (connectivity, transformation, error handling)",
-        "Implementing data quality testing (matching, deduplication, error capture)",
-        "Testing user migration and login handlers",
-        "Conducting user acceptance testing (UAT)",
-        "Understanding test class security anti-patterns",
-        "Implementing test class design best practices"
-      ],
-      "summary": "Comprehensive testing strategies for Salesforce implementations. Covers integration testing (connectivity, data transformation, error handling), data quality testing (matching, deduplication, error capture), user migration and login handler testing, user acceptance testing (UAT), and test environment management. Includes test class security anti-patterns, test class design anti-patterns, and design for testability best practices.",
-      "keyTopics": [
-        "Integration testing (connectivity, data transformation, error handling)",
-        "Data quality testing (matching, deduplication, error capture)",
-        "User migration and login handler testing",
-        "User acceptance testing (UAT)",
-        "Test environment management",
-        "Test class security anti-patterns",
-        "Test class design anti-patterns (@SeeAllData, single-record tests, etc.)",
-        "Design for testability best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "patterns",
-      "file": "cross-cutting-patterns.md",
-      "path": "rag/patterns/cross-cutting-patterns.md",
-      "whenToRetrieve": [
-        "Finding reusable patterns that apply across multiple domains",
-        "Managing governor limits across Apex, Flow, and integrations",
-        "Implementing bulkification patterns",
-        "Applying cross-cutting design patterns",
-        "Understanding patterns that span architecture, development, and integration"
-      ],
-      "summary": "Summary of cross-cutting patterns that appear across multiple domains. Covers governor limit management patterns, bulkification across Apex/Flow/integrations, external ID and integration key patterns, error handling and logging patterns, data quality and deduplication patterns, security and sharing patterns, integration pattern selection framework, portal design patterns, and testing/quality patterns. Links to detailed domain-specific documentation.",
-      "keyTopics": [
-        "Governor limit management patterns",
-        "Bulkification across Apex, Flow, and integrations",
-        "External ID and integration key patterns",
-        "Error handling and logging patterns",
-        "Data quality and deduplication patterns",
-        "Security and sharing patterns",
-        "Integration pattern selection framework",
-        "Portal design patterns",
-        "Testing and quality patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "glossary",
-      "file": "core-terminology.md",
-      "path": "rag/glossary/core-terminology.md",
-      "whenToRetrieve": [
-        "Looking up definitions of Salesforce and integration terminology",
-        "Understanding acronyms and abbreviations (ETL, SIS, OIDC, SAML, LWC, etc.)",
-        "Clarifying core concepts used in the knowledge library",
-        "Finding domain-specific terminology definitions"
-      ],
-      "summary": "Core terminology and definitions used throughout the RAG knowledge library. Covers integration terms (ETL, API, Platform Events, External ID), identity terms (OIDC, SAML, Login Handler, Organization Tenant Identity), data model terms (SIS, EDA, Record Type), security terms (Permission Set, Permission Set Group, Sharing Set), platform terms (Experience Cloud, GovCloud), development terms (LWC, OmniStudio, Flow, Apex), integration platform terms (MuleSoft, Dell Boomi), data quality terms (Idempotent Operation, Reconciliation), and project method terms (Sprint-Based Delivery, UAT).",
-      "keyTopics": [
-        "Integration terminology (ETL, API, Platform Events, External ID)",
-        "Identity and SSO terminology (OIDC, SAML, Organization Tenant Identity)",
-        "Data model terminology (SIS, EDA, Record Type)",
-        "Security terminology (Permission Set, Permission Set Group, Sharing Set)",
-        "Platform terminology (Experience Cloud, GovCloud)",
-        "Development terminology (LWC, OmniStudio, Flow, Apex)",
-        "Integration platform terminology (MuleSoft, Dell Boomi)",
-        "Data quality terminology (Idempotent Operation, Reconciliation)",
-        "Project method terminology (Sprint-Based Delivery, UAT)"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "troubleshooting",
-      "file": "common-apex-errors.md",
-      "path": "rag/troubleshooting/common-apex-errors.md",
-      "whenToRetrieve": [
-        "Troubleshooting common Apex errors",
-        "Handling UNABLE_TO_LOCK_ROW exceptions",
-        "Fixing NULL_POINTER_EXCEPTION errors",
-        "Resolving QUERY_EXCEPTION errors",
-        "Handling DML_EXCEPTION errors",
-        "Fixing LIMIT_EXCEPTION errors"
-      ],
-      "summary": "Troubleshooting guide for common Apex errors with solutions and prevention strategies. Covers UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION with before/after code examples.",
-      "keyTopics": [
-        "UNABLE_TO_LOCK_ROW solutions",
-        "NULL_POINTER_EXCEPTION prevention",
-        "QUERY_EXCEPTION fixes",
-        "DML_EXCEPTION handling",
-        "LIMIT_EXCEPTION solutions"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "troubleshooting",
-      "file": "common-lwc-errors.md",
-      "path": "rag/troubleshooting/common-lwc-errors.md",
-      "whenToRetrieve": [
-        "Troubleshooting common LWC errors",
-        "Fixing property access errors",
-        "Resolving wire adapter errors",
-        "Fixing event handling errors",
-        "Handling LWC compilation errors"
-      ],
-      "summary": "Troubleshooting guide for common Lightning Web Component errors with solutions and prevention strategies. Covers property access errors, wire adapter errors, event handling errors, and LWC compilation errors.",
-      "keyTopics": [
-        "Property access errors",
-        "Wire adapter errors",
-        "Event handling errors",
-        "LWC compilation errors"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "troubleshooting",
-      "file": "governor-limit-errors.md",
-      "path": "rag/troubleshooting/governor-limit-errors.md",
-      "whenToRetrieve": [
-        "Troubleshooting governor limit errors",
-        "Fixing too many SOQL queries",
-        "Resolving too many DML statements",
-        "Handling CPU time limit exceeded",
-        "Fixing heap size limit exceeded"
-      ],
-      "summary": "Troubleshooting guide for Salesforce governor limit errors with solutions and optimization strategies. Covers SOQL query limits, DML statement limits, CPU time limits, heap size limits, and callout limits.",
-      "keyTopics": [
-        "SOQL query limit solutions",
-        "DML statement limit solutions",
-        "CPU time limit optimization",
-        "Heap size limit optimization",
-        "Callout limit solutions"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "testing",
-      "file": "apex-testing-patterns.md",
-      "path": "rag/testing/apex-testing-patterns.md",
-      "whenToRetrieve": [
-        "Writing Apex test classes",
-        "Creating test data factories",
-        "Testing with bulk data",
-        "Testing error scenarios",
-        "Implementing mocking patterns"
-      ],
-      "summary": "Comprehensive testing patterns and examples for Apex development. Covers test class structure, test data factories, bulk testing, error scenario testing, mocking, and test coverage strategies.",
-      "keyTopics": [
-        "Test class structure",
-        "Test data factories",
-        "Bulk testing patterns",
-        "Error scenario testing",
-        "Mocking and dependency injection",
-        "Test coverage strategies"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "testing",
-      "file": "test-data-factories.md",
-      "path": "rag/testing/test-data-factories.md",
-      "whenToRetrieve": [
-        "Creating reusable test data",
-        "Building test data factories",
-        "Creating related test records",
-        "Generating bulk test data"
-      ],
-      "summary": "Patterns and examples for creating reusable test data factories in Apex. Covers basic factories, relationship factories, customization patterns, and bulk data creation.",
-      "keyTopics": [
-        "Basic factory methods",
-        "Relationship factories",
-        "Customization patterns",
-        "Bulk data creation"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "quick-start",
-      "file": "apex-quick-start.md",
-      "path": "rag/quick-start/apex-quick-start.md",
-      "whenToRetrieve": [
-        "Getting started with Apex",
-        "Creating first Apex classes",
-        "Learning Apex class layering",
-        "Writing first test classes"
-      ],
-      "summary": "Step-by-step guide for getting started with Apex development. Covers creating Service, Selector, Domain, and Test classes with complete working examples.",
-      "keyTopics": [
-        "Service class creation",
-        "Selector class creation",
-        "Domain class creation",
-        "Test class creation",
-        "Deployment and testing"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "quick-start",
-      "file": "lwc-quick-start.md",
-      "path": "rag/quick-start/lwc-quick-start.md",
-      "whenToRetrieve": [
-        "Getting started with LWC",
-        "Creating first Lightning Web Component",
-        "Learning LWC data access",
-        "Adding interactivity to LWC"
-      ],
-      "summary": "Step-by-step guide for getting started with Lightning Web Component development. Covers creating components, data access with LDS, and adding interactivity.",
-      "keyTopics": [
-        "Component creation",
-        "Data access with LDS",
-        "Interactivity patterns",
-        "Deployment and testing"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
     {
       "domain": "api-reference",
       "file": "apex-api-reference.md",
       "path": "rag/api-reference/apex-api-reference.md",
-      "whenToRetrieve": [
-        "Looking up Apex method signatures",
-        "Finding API usage examples",
-        "Understanding method parameters",
-        "Quick reference for Apex patterns"
-      ],
-      "summary": "Quick reference for common Apex classes, methods, and patterns. Provides method signatures, parameters, return types, and usage examples for Service, Domain, Selector, Integration, and Utility layers.",
-      "keyTopics": [
-        "Service layer methods",
-        "Domain layer methods",
-        "Selector layer methods",
-        "Integration layer methods",
-        "Utility class methods"
-      ],
+      "whenToRetrieve": [],
+      "summary": "This reference provides method signatures, parameters, return types, and usage examples for common Apex patterns used in Salesforce implementations.",
+      "keyTopics": [],
       "status": "completed",
-      "hasApiReference": true,
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "api-reference",
-      "file": "lwc-api-reference.md",
-      "path": "rag/api-reference/lwc-api-reference.md",
-      "whenToRetrieve": [
-        "Looking up LWC module APIs",
-        "Finding decorator usage",
-        "Understanding wire adapters",
-        "Quick reference for LWC patterns"
-      ],
-      "summary": "Quick reference for Lightning Web Component modules, decorators, and wire adapters. Provides API signatures, parameters, and usage examples for core LWC modules.",
-      "keyTopics": [
-        "Core modules",
-        "Lightning Data Service",
-        "Lightning Message Service",
-        "Schema imports",
-        "Decorators"
-      ],
-      "status": "completed",
-      "hasApiReference": true,
-      "hasCodeExamples": true
+      "title": "Apex API Reference"
     },
     {
       "domain": "api-reference",
       "file": "lds-api-reference.md",
       "path": "rag/api-reference/lds-api-reference.md",
-      "whenToRetrieve": [
-        "Looking up LDS wire adapters",
-        "Finding LDS method signatures",
-        "Understanding cache management",
-        "Quick reference for LDS patterns"
-      ],
-      "summary": "Quick reference for Lightning Data Service wire adapters and methods. Provides API signatures, parameters, and usage examples for record access, mutations, and cache management.",
-      "keyTopics": [
-        "Record access",
-        "Record mutations",
-        "Object metadata",
-        "List views",
-        "Cache management"
-      ],
+      "whenToRetrieve": [],
+      "summary": "This reference provides API signatures, parameters, and usage examples for Lightning Data Service adapters used in Lightning Web Components.",
+      "keyTopics": [],
       "status": "completed",
-      "hasApiReference": true,
-      "hasCodeExamples": true
+      "title": "Lightning Data Service (LDS) API Reference"
     },
     {
       "domain": "api-reference",
-      "file": "soql-reference.md",
-      "path": "rag/api-reference/soql-reference.md",
-      "whenToRetrieve": [
-        "Looking up SOQL syntax",
-        "Finding SOQL function examples",
-        "Understanding relationship queries",
-        "Quick reference for SOQL patterns"
-      ],
-      "summary": "Quick reference for SOQL syntax, functions, and common query patterns. Provides SOQL syntax, relationship queries, aggregate queries, date/time functions, and common query patterns.",
-      "keyTopics": [
-        "Basic SOQL syntax",
-        "Relationship queries",
-        "Aggregate queries",
-        "Date and time functions",
-        "Security enforcement",
-        "Common query patterns"
-      ],
+      "file": "lwc-api-reference.md",
+      "path": "rag/api-reference/lwc-api-reference.md",
+      "whenToRetrieve": [],
+      "summary": "This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns.",
+      "keyTopics": [],
       "status": "completed",
-      "hasApiReference": true,
-      "hasCodeExamples": true
+      "title": "LWC API Reference"
     },
     {
       "domain": "api-reference",
       "file": "platform-events-api.md",
       "path": "rag/api-reference/platform-events-api.md",
-      "whenToRetrieve": [
-        "Looking up Platform Events APIs",
-        "Finding event publishing patterns",
-        "Understanding event subscription",
-        "Quick reference for Platform Events"
-      ],
-      "summary": "Quick reference for Platform Events publication, subscription, and payload patterns. Provides API signatures, parameters, and usage examples for publishing and subscribing to events.",
-      "keyTopics": [
-        "Publishing events",
-        "Subscribing to events",
-        "Event payload design",
-        "Error handling"
-      ],
+      "whenToRetrieve": [],
+      "summary": "This reference provides API signatures, parameters, and usage examples for Platform Events in Salesforce.",
+      "keyTopics": [],
       "status": "completed",
-      "hasApiReference": true,
-      "hasCodeExamples": true
+      "title": "Platform Events API Reference"
     },
     {
-      "domain": "mcp-knowledge",
-      "file": "lwc-development-guide.md",
-      "path": "rag/mcp-knowledge/lwc-development-guide.md",
-      "whenToRetrieve": [
-        "LWC development guidance",
-        "Understanding LWC technical stack",
-        "Learning LWC best practices",
-        "Understanding LWC project structure"
-      ],
-      "summary": "Comprehensive guidance for Lightning Web Components development, covering core principles, technical stack, best practices, and development workflows. Extracted from Salesforce MCP Service tools.",
-      "keyTopics": [
-        "Core principles",
-        "Technical stack",
-        "Best practices",
-        "Project structure",
-        "Quality standards"
-      ],
+      "domain": "api-reference",
+      "file": "soql-reference.md",
+      "path": "rag/api-reference/soql-reference.md",
+      "whenToRetrieve": [],
+      "summary": "This reference provides SOQL syntax, functions, and common query patterns for Salesforce data access.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "SOQL Reference"
+    },
+    {
+      "domain": "adoption",
+      "file": "org-health-checks.md",
+      "path": "rag/adoption/org-health-checks.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks. These patterns are essential for maintaining org health, identifying optimization opportunities, and ensuring long-term system sustainability.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Org Health Checks for Salesforce"
+    },
+    {
+      "domain": "adoption",
+      "file": "user-readiness.md",
+      "path": "rag/adoption/user-readiness.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption. These patterns are essential for ensuring successful user adoption, maximizing system value, and driving organizational change.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "User Readiness for Salesforce"
+    },
+    {
+      "domain": "architecture",
+      "file": "architect-role.md",
+      "path": "rag/architecture/architect-role.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Architect Role and Responsibilities",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Architect Role and Responsibilities"
+    },
+    {
+      "domain": "architecture",
+      "file": "diagramming-patterns.md",
+      "path": "rag/architecture/diagramming-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Architecture Diagramming",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Architecture Diagramming"
+    },
+    {
+      "domain": "architecture",
+      "file": "event-driven-architecture.md",
+      "path": "rag/architecture/event-driven-architecture.md",
+      "whenToRetrieve": [],
+      "summary": "Event-driven integration patterns decouple Salesforce from external systems by publishing business events that can be consumed asynchronously by multiple subscribers. This pattern enables scalable, resilient integrations that can handle high-volume scenarios and support multiple downstream systems.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Event-Driven Architecture"
+    },
+    {
+      "domain": "architecture",
+      "file": "governance-patterns.md",
+      "path": "rag/architecture/governance-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Org Governance",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Org Governance"
+    },
+    {
+      "domain": "architecture",
+      "file": "mobile-strategy.md",
+      "path": "rag/architecture/mobile-strategy.md",
+      "whenToRetrieve": [],
+      "summary": "Choosing a Mobile Strategy for Salesforce",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Choosing a Mobile Strategy for Salesforce"
+    },
+    {
+      "domain": "architecture",
+      "file": "org-edition-selection.md",
+      "path": "rag/architecture/org-edition-selection.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Org Edition Selection",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Org Edition Selection"
+    },
+    {
+      "domain": "architecture",
+      "file": "org-strategy.md",
+      "path": "rag/architecture/org-strategy.md",
+      "whenToRetrieve": [],
+      "summary": "Determining Salesforce Org Strategy",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Determining Salesforce Org Strategy"
+    },
+    {
+      "domain": "architecture",
+      "file": "portal-architecture.md",
+      "path": "rag/architecture/portal-architecture.md",
+      "whenToRetrieve": [],
+      "summary": "Experience Cloud portal architecture patterns for supporting multiple user types (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns. These patterns enable single-org multi-tenant portal implementations.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Portal Architecture Patterns"
+    },
+    {
+      "domain": "architecture",
+      "file": "project-estimation.md",
+      "path": "rag/architecture/project-estimation.md",
+      "whenToRetrieve": [],
+      "summary": "Accurately Estimating Salesforce Project Work",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Accurately Estimating Salesforce Project Work"
+    },
+    {
+      "domain": "architecture",
+      "file": "salesforce-pricing-negotiation.md",
+      "path": "rag/architecture/salesforce-pricing-negotiation.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Pricing and Contract Negotiation",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Pricing and Contract Negotiation"
+    },
+    {
+      "domain": "architecture",
+      "file": "salesforce-product-evaluation.md",
+      "path": "rag/architecture/salesforce-product-evaluation.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Product Evaluation and Selection",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Product Evaluation and Selection"
+    },
+    {
+      "domain": "architecture",
+      "file": "stakeholder-communication.md",
+      "path": "rag/architecture/stakeholder-communication.md",
+      "whenToRetrieve": [],
+      "summary": "Stakeholder Communication for Salesforce Architects",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Stakeholder Communication for Salesforce Architects"
+    },
+    {
+      "domain": "architecture",
+      "file": "team-leadership.md",
+      "path": "rag/architecture/team-leadership.md",
+      "whenToRetrieve": [],
+      "summary": "Building, Leading, and Training Salesforce Development Teams",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Building, Leading, and Training Salesforce Development Teams"
+    },
+    {
+      "domain": "architecture",
+      "file": "user-license-selection.md",
+      "path": "rag/architecture/user-license-selection.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce User License Selection",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce User License Selection"
+    },
+    {
+      "domain": "best-practices",
+      "file": "complex-reporting.md",
+      "path": "rag/best-practices/complex-reporting.md",
+      "whenToRetrieve": [],
+      "summary": "Complex Reporting in Salesforce",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Complex Reporting in Salesforce"
+    },
+    {
+      "domain": "best-practices",
+      "file": "reports-dashboards.md",
+      "path": "rag/best-practices/reports-dashboards.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Reports and Dashboards",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Reports and Dashboards"
+    },
+    {
+      "domain": "best-practices",
+      "file": "sales-cloud-features.md",
+      "path": "rag/best-practices/sales-cloud-features.md",
+      "whenToRetrieve": [],
+      "summary": "Sales Cloud Features and Configuration",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Sales Cloud Features and Configuration"
+    },
+    {
+      "domain": "best-practices",
+      "file": "salesforce-org-staffing.md",
+      "path": "rag/best-practices/salesforce-org-staffing.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce Org Staffing and Team Structure",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Org Staffing and Team Structure"
+    },
+    {
+      "domain": "best-practices",
+      "file": "service-cloud-features.md",
+      "path": "rag/best-practices/service-cloud-features.md",
+      "whenToRetrieve": [],
+      "summary": "Service Cloud Features and Configuration",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Service Cloud Features and Configuration"
+    },
+    {
+      "domain": "code-examples",
+      "file": "accessibility-examples.md",
+      "path": "rag/code-examples/lwc/accessibility-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components. These examples demonstrate practical implementation of accessibility patterns.",
+      "keyTopics": [],
       "status": "completed"
     },
     {
-      "domain": "mcp-knowledge",
-      "file": "lwc-best-practices.md",
-      "path": "rag/mcp-knowledge/lwc-best-practices.md",
-      "whenToRetrieve": [
-        "LWC best practices",
-        "Custom event patterns",
-        "Property naming conventions",
-        "Decorator usage",
-        "Lightning Message Service"
-      ],
-      "summary": "Comprehensive best practices for Lightning Web Components development, focusing on event handling, property naming, decorator usage, and component structure. Extracted from Salesforce MCP Service tools.",
-      "keyTopics": [
-        "Custom events",
-        "Property and attribute naming",
-        "Decorators",
-        "Lightning Message Service",
-        "Template directives",
-        "Error handling"
-      ],
+      "domain": "code-examples",
+      "file": "apex-batch-template.md",
+      "path": "rag/code-examples/templates/apex-batch-template.md",
+      "whenToRetrieve": [],
+      "summary": "Apex Batch Template",
+      "keyTopics": [],
       "status": "completed"
-    },
-    {
-      "domain": "mcp-knowledge",
-      "file": "lwc-accessibility.md",
-      "path": "rag/mcp-knowledge/lwc-accessibility.md",
-      "whenToRetrieve": [
-        "LWC accessibility requirements",
-        "WCAG compliance",
-        "Accessibility patterns",
-        "Keyboard navigation",
-        "Screen reader support"
-      ],
-      "summary": "Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2.2 standards. Covers images, lists, form labels, keyboard accessibility, and accessibility patterns. Extracted from Salesforce MCP Service tools.",
-      "keyTopics": [
-        "WCAG 2.2 compliance",
-        "Image accessibility",
-        "Form label accessibility",
-        "Keyboard navigation",
-        "Screen reader support"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "mcp-knowledge",
-      "file": "lds-patterns.md",
-      "path": "rag/mcp-knowledge/lds-patterns.md",
-      "whenToRetrieve": [
-        "Lightning Data Service patterns",
-        "Data consistency patterns",
-        "Referential integrity",
-        "Choosing UIAPI vs Apex"
-      ],
-      "summary": "Guidelines for building Lightning Web Components that interact with Salesforce's Lightning Data Service. Focuses on data consistency, referential integrity, and choosing UIAPI vs Apex. Extracted from Salesforce MCP Service tools.",
-      "keyTopics": [
-        "Data consistency",
-        "Referential integrity",
-        "Choosing UIAPI vs Apex",
-        "Base components",
-        "Schema imports"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "mcp-knowledge",
-      "file": "design-system-patterns.md",
-      "path": "rag/mcp-knowledge/design-system-patterns.md",
-      "whenToRetrieve": [
-        "Salesforce Lightning Design System patterns",
-        "SLDS component usage",
-        "Visual design patterns",
-        "Interaction patterns",
-        "Accessibility in SLDS"
-      ],
-      "summary": "Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software. Covers UX principles, visual design, component usage, interaction patterns, and accessibility. Extracted from Salesforce MCP Service tools.",
-      "keyTopics": [
-        "UX principles",
-        "Visual design",
-        "Component usage",
-        "Interaction patterns",
-        "Accessibility",
-        "Form design"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "code-examples",
-      "file": "service-layer-examples.md",
-      "path": "rag/code-examples/apex/service-layer-examples.md",
-      "whenToRetrieve": [
-        "Need Service class code examples",
-        "Implementing service layer patterns",
-        "Looking for copy-paste ready code"
-      ],
-      "summary": "Complete, working code examples for Apex Service Layer patterns. All examples are copy-paste ready and include tests.",
-      "keyTopics": [
-        "Service class examples",
-        "Domain and selector delegation",
-        "Error handling",
-        "Logging patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "domain-layer-examples.md",
-      "path": "rag/code-examples/apex/domain-layer-examples.md",
-      "whenToRetrieve": [
-        "Need Domain class code examples",
-        "Implementing domain layer patterns",
-        "Looking for validation examples"
-      ],
-      "summary": "Complete, working code examples for Apex Domain Layer patterns. All examples are copy-paste ready and include tests.",
-      "keyTopics": [
-        "Domain class examples",
-        "Validation patterns",
-        "Business rule application",
-        "Custom exceptions"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "selector-layer-examples.md",
-      "path": "rag/code-examples/apex/selector-layer-examples.md",
-      "whenToRetrieve": [
-        "Need Selector class code examples",
-        "Implementing selector layer patterns",
-        "Looking for SOQL query examples"
-      ],
-      "summary": "Complete, working code examples for Apex Selector Layer patterns. All examples are copy-paste ready and include tests.",
-      "keyTopics": [
-        "Selector class examples",
-        "SOQL query patterns",
-        "Security enforcement",
-        "Relationship queries"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "integration-examples.md",
-      "path": "rag/code-examples/apex/integration-examples.md",
-      "whenToRetrieve": [
-        "Need Integration class code examples",
-        "Implementing REST API callouts",
-        "Looking for Named Credentials patterns"
-      ],
-      "summary": "Complete, working code examples for Apex Integration Layer patterns. All examples are copy-paste ready and include tests.",
-      "keyTopics": [
-        "REST API callouts",
-        "Named Credentials",
-        "Error handling",
-        "Retry logic"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "trigger-examples.md",
-      "path": "rag/code-examples/apex/trigger-examples.md",
-      "whenToRetrieve": [
-        "Need Trigger handler code examples",
-        "Implementing trigger patterns",
-        "Looking for bulkification examples"
-      ],
-      "summary": "Complete, working code examples for Apex Trigger Handler patterns. All examples are copy-paste ready and include tests.",
-      "keyTopics": [
-        "Trigger handler examples",
-        "Bulkification patterns",
-        "Recursion prevention",
-        "Domain and Service delegation"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "apex-service-template.md",
-      "path": "rag/code-examples/templates/apex-service-template.md",
-      "whenToRetrieve": [
-        "Need Service class template",
-        "Creating new service class",
-        "Looking for boilerplate code"
-      ],
-      "summary": "Service class template with error handling and logging. Copy-paste ready template for creating new service classes.",
-      "keyTopics": [
-        "Service class template",
-        "Error handling",
-        "Logging patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
     },
     {
       "domain": "code-examples",
       "file": "apex-domain-template.md",
       "path": "rag/code-examples/templates/apex-domain-template.md",
-      "whenToRetrieve": [
-        "Need Domain class template",
-        "Creating new domain class",
-        "Looking for validation template"
-      ],
-      "summary": "Domain class template with validation and business rules. Copy-paste ready template for creating new domain classes.",
-      "keyTopics": [
-        "Domain class template",
-        "Validation patterns",
-        "Business rules"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
+      "whenToRetrieve": [],
+      "summary": "Apex Domain Template",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-queueable-template.md",
+      "path": "rag/code-examples/templates/apex-queueable-template.md",
+      "whenToRetrieve": [],
+      "summary": "Apex Queueable Template",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-scheduled-template.md",
+      "path": "rag/code-examples/templates/apex-scheduled-template.md",
+      "whenToRetrieve": [],
+      "summary": "Apex Scheduled Template",
+      "keyTopics": [],
+      "status": "completed"
     },
     {
       "domain": "code-examples",
       "file": "apex-selector-template.md",
       "path": "rag/code-examples/templates/apex-selector-template.md",
-      "whenToRetrieve": [
-        "Need Selector class template",
-        "Creating new selector class",
-        "Looking for SOQL template"
-      ],
-      "summary": "Selector class template with security enforcement. Copy-paste ready template for creating new selector classes.",
-      "keyTopics": [
-        "Selector class template",
-        "Security enforcement",
-        "SOQL patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
+      "whenToRetrieve": [],
+      "summary": "Apex Selector Template",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "apex-service-template.md",
+      "path": "rag/code-examples/templates/apex-service-template.md",
+      "whenToRetrieve": [],
+      "summary": "Apex Service Template",
+      "keyTopics": [],
+      "status": "completed"
     },
     {
       "domain": "code-examples",
       "file": "apex-trigger-template.md",
       "path": "rag/code-examples/templates/apex-trigger-template.md",
-      "whenToRetrieve": [
-        "Need Trigger handler template",
-        "Creating new trigger handler",
-        "Looking for trigger template"
-      ],
-      "summary": "Trigger handler template with Domain layer delegation. Copy-paste ready template for creating new trigger handlers.",
-      "keyTopics": [
-        "Trigger handler template",
-        "Domain delegation",
-        "Bulkification"
-      ],
+      "whenToRetrieve": [],
+      "summary": "Apex Trigger Template",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "batch-examples.md",
+      "path": "rag/code-examples/apex/batch-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Batch Apex is used for processing large data volumes (thousands or millions of records) in batches of 200. Each batch executes in a separate transaction context with fresh governor limits.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "bulk-api-examples.md",
+      "path": "rag/code-examples/integrations/bulk-api-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Bulk API enables high-volume data operations in Salesforce. These examples demonstrate creating bulk jobs, uploading data, monitoring job status, and processing results for large-scale data operations.",
+      "keyTopics": [],
       "status": "completed",
-      "hasCodeExamples": true
+      "title": "Bulk API Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "callout-examples.md",
+      "path": "rag/code-examples/integrations/callout-examples.md",
+      "whenToRetrieve": [],
+      "summary": "HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs. These examples demonstrate Named Credentials, error handling, async patterns, circuit breakers, response optimization, and testing patterns.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "HTTP Callout Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "cdc-examples.md",
+      "path": "rag/code-examples/integrations/cdc-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "ci-cd-template.md",
+      "path": "rag/code-examples/templates/ci-cd-template.md",
+      "whenToRetrieve": [],
+      "summary": "Ci Cd Template",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "code-examples-index.md",
+      "path": "rag/code-examples/code-examples-index.md",
+      "whenToRetrieve": [],
+      "summary": "This directory contains standalone code examples that complement the pattern documentation in `rag/development/`, `rag/integrations/`, etc. Each example includes:",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "component-examples.md",
+      "path": "rag/code-examples/lwc/component-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce. These examples demonstrate common LWC patterns for data access, user interactions, and business logic.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "custom-metadata-examples.md",
+      "path": "rag/code-examples/utilities/custom-metadata-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas. They're the modern approach for configuration management.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "custom-settings-examples.md",
+      "path": "rag/code-examples/utilities/custom-settings-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas. Hierarchical Custom Settings support user-level configuration, while List Custom Settings provide simple key-value lookups.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "data-migration-examples.md",
+      "path": "rag/code-examples/utilities/data-migration-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Data migration involves importing, transforming, and validating data in Salesforce. These examples cover common migration scenarios and patterns.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "domain-layer-examples.md",
+      "path": "rag/code-examples/apex/domain-layer-examples.md",
+      "whenToRetrieve": [],
+      "summary": "The Domain Layer encapsulates object-specific business logic and validation. It can be called from triggers OR from Service layer, and should NOT contain SOQL queries or external callouts.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "error-handling-examples.md",
+      "path": "rag/code-examples/utilities/error-handling-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Robust error handling ensures applications gracefully handle failures and provide meaningful feedback. These examples demonstrate try-catch patterns, custom exceptions, retry logic, error logging, and user-friendly error messages.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Error Handling Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "integration-examples.md",
+      "path": "rag/code-examples/apex/integration-examples.md",
+      "whenToRetrieve": [],
+      "summary": "The Integration Layer handles external API callouts, data transformation, authentication, and error handling. It should NOT contain business logic or SOQL queries.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "logging-examples.md",
+      "path": "rag/code-examples/utilities/logging-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Structured logging enables consistent, searchable logging across Salesforce applications. These examples demonstrate custom logging objects, platform event fallbacks, external logging integration, and compliance/audit trail requirements.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Logging Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "lwc-accessible-component-template.md",
+      "path": "rag/code-examples/templates/lwc-accessible-component-template.md",
+      "whenToRetrieve": [],
+      "summary": "This template provides a complete, accessible LWC component structure with all accessibility best practices built in. Use this as a starting point for new components.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "metadata-api-examples.md",
+      "path": "rag/code-examples/utilities/metadata-api-examples.md",
+      "whenToRetrieve": [],
+      "summary": "The Metadata API allows programmatic deployment and retrieval of Salesforce metadata. It's used for automated deployments, CI/CD pipelines, and bulk metadata operations.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "platform-events-examples.md",
+      "path": "rag/code-examples/integrations/platform-events-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems. These examples demonstrate publishing events from Apex and Flows, subscribing to events, handling event payloads, and integrating with external event buses.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Platform Events Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "queueable-examples.md",
+      "path": "rag/code-examples/apex/queueable-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Queueable Apex is used for lightweight async processing, chaining jobs, and performing callouts after DML operations. It provides better error handling than @future methods and can process up to 50,000 records.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "record-triggered-examples.md",
+      "path": "rag/code-examples/flow/record-triggered-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Record-Triggered Flows run automatically when records are created or updated. They can run before save (to modify field values) or after save (to create related records, send notifications, etc.). This document provides practical examples of common Record-Triggered Flow patterns.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Record-Triggered Flow Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "rest-api-examples.md",
+      "path": "rag/code-examples/integrations/rest-api-examples.md",
+      "whenToRetrieve": [],
+      "summary": "REST API integrations enable real-time, synchronous communication between Salesforce and external systems. These examples demonstrate common REST API patterns including outbound callouts, inbound REST services, authentication, error handling, and response processing.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "REST API Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "scheduled-examples.md",
+      "path": "rag/code-examples/apex/scheduled-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Scheduled Apex provides time-based automation for periodic tasks. It's used for maintenance, reporting, and scheduled data processing using cron expressions.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "screen-flow-examples.md",
+      "path": "rag/code-examples/flow/screen-flow-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Screen Flows provide guided user interactions for multi-step processes. They are ideal for internal apps, portal UX, guided data capture, and step-by-step case/application handling. This document provides practical examples of common Screen Flow patterns.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Screen Flow Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "selector-layer-examples.md",
+      "path": "rag/code-examples/apex/selector-layer-examples.md",
+      "whenToRetrieve": [],
+      "summary": "The Selector Layer provides centralized SOQL queries and data access abstraction. It enforces security, optimizes queries, and provides reusable query methods.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "service-examples.md",
+      "path": "rag/code-examples/lwc/service-examples.md",
+      "whenToRetrieve": [],
+      "summary": "LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic. Service classes help keep component JavaScript clean and maintainable.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "LWC Service Layer Code Examples"
+    },
+    {
+      "domain": "code-examples",
+      "file": "service-layer-examples.md",
+      "path": "rag/code-examples/apex/service-layer-examples.md",
+      "whenToRetrieve": [],
+      "summary": "The Service Layer coordinates between domain, selector, and integration layers. It orchestrates complex workflows and exposes clean method signatures for Flows and LWCs.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "sfdx-examples.md",
+      "path": "rag/code-examples/utilities/sfdx-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce DX provides command-line tools and workflows for modern Salesforce development. These examples show common SFDX patterns and scripts.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "sfdx-project-template.md",
+      "path": "rag/code-examples/templates/sfdx-project-template.md",
+      "whenToRetrieve": [],
+      "summary": "Sfdx Project Template",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "code-examples",
+      "file": "subflow-examples.md",
+      "path": "rag/code-examples/flow/subflow-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Subflows are reusable flow components that can be called from other Flows or Apex. They enable code reuse, easier maintenance, and consistent business logic across multiple automation contexts. This document provides practical examples of common Subflow patterns.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Subflow Code Examples"
     },
     {
       "domain": "code-examples",
       "file": "test-class-template.md",
       "path": "rag/code-examples/templates/test-class-template.md",
-      "whenToRetrieve": [
-        "Need test class template",
-        "Creating new test class",
-        "Looking for test template"
-      ],
-      "summary": "Test class template with test data factory and assertions. Copy-paste ready template for creating new test classes.",
-      "keyTopics": [
-        "Test class template",
-        "Test data factory",
-        "Assertions"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
+      "whenToRetrieve": [],
+      "summary": "Test Class Template",
+      "keyTopics": [],
+      "status": "completed"
     },
     {
-      "domain": "development",
-      "file": "asynchronous-apex-patterns.md",
-      "path": "rag/development/asynchronous-apex-patterns.md",
-      "whenToRetrieve": [
-        "Implementing Batch Apex, Queueable, or Scheduled Apex",
-        "Choosing between async Apex types",
-        "Designing async processing patterns",
-        "Implementing batch chaining or Queueable chaining",
-        "Monitoring async job execution"
-      ],
-      "summary": "Comprehensive guide to asynchronous Apex patterns covering Batch, Queueable, Scheduled, and @future methods. Includes decision frameworks, implementation patterns, error handling, monitoring, and tradeoffs.",
-      "keyTopics": [
-        "Batch Apex patterns (stateless, stateful, chaining)",
-        "Queueable patterns (chaining, callouts, retry)",
-        "Scheduled Apex patterns (cron expressions, monitoring)",
-        "@future methods and migration to Queueable",
-        "Error handling and retry strategies",
-        "Job monitoring and status tracking"
-      ],
+      "domain": "code-examples",
+      "file": "test-examples.md",
+      "path": "rag/code-examples/lwc/test-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Jest is the testing framework for Lightning Web Components. These examples demonstrate how to write comprehensive tests for LWC components, including testing wire adapters, Apex calls, events, and user interactions.",
+      "keyTopics": [],
       "status": "completed",
-      "hasCodeExamples": true
+      "title": "LWC Jest Testing Code Examples"
     },
     {
-      "domain": "development",
-      "file": "custom-settings-metadata-patterns.md",
-      "path": "rag/development/custom-settings-metadata-patterns.md",
-      "whenToRetrieve": [
-        "Choosing between Custom Settings and Custom Metadata",
-        "Implementing configuration management",
-        "Using Hierarchical Custom Settings",
-        "Using Custom Metadata Types",
-        "Migrating from Custom Settings to Custom Metadata"
-      ],
-      "summary": "Guide to Custom Settings and Custom Metadata patterns for configuration management. Covers decision framework, usage patterns, migration strategies, and best practices.",
-      "keyTopics": [
-        "Custom Settings vs Custom Metadata decision framework",
-        "Hierarchical Custom Settings patterns",
-        "List Custom Settings patterns",
-        "Custom Metadata Type patterns",
-        "Migration from Custom Settings to Custom Metadata",
-        "Configuration management best practices"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
+      "domain": "code-examples",
+      "file": "trigger-examples.md",
+      "path": "rag/code-examples/apex/trigger-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation. Triggers should be thin and delegate to Domain or Service layers.",
+      "keyTopics": [],
+      "status": "completed"
     },
     {
-      "domain": "integrations",
-      "file": "change-data-capture-patterns.md",
-      "path": "rag/integrations/change-data-capture-patterns.md",
-      "whenToRetrieve": [
-        "Implementing Change Data Capture (CDC)",
-        "Processing CDC events",
-        "Combining CDC with Platform Events",
-        "Handling CDC errors and replay",
-        "Real-time integration with CDC"
-      ],
-      "summary": "Change Data Capture patterns for real-time change tracking. Covers CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns.",
-      "keyTopics": [
-        "Trigger-based CDC processing",
-        "CDC with Platform Events",
-        "CDC error handling and replay",
-        "CDC for real-time integrations",
-        "CDC monitoring and observability",
-        "CDC vs Platform Events tradeoffs"
-      ],
+      "domain": "code-examples",
+      "file": "validation-examples.md",
+      "path": "rag/code-examples/utilities/validation-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Data validation ensures data quality and prevents invalid data from entering the system. These examples demonstrate field validation, record validation, bulk validation, custom validation rules, and validation error handling.",
+      "keyTopics": [],
       "status": "completed",
-      "hasCodeExamples": true
+      "title": "Validation Code Examples"
     },
     {
-      "domain": "integrations",
-      "file": "integration-user-license-guide.md",
-      "path": "rag/integrations/integration-user-license-guide.md",
-      "whenToRetrieve": [
-        "Setting up Integration User Licenses for system-to-system integrations",
-        "Configuring API-only authentication for external systems",
-        "Understanding how to use the free Integration User License",
-        "Implementing OAuth Client Credentials Flow",
-        "Managing permissions for integration users",
-        "Planning integration authentication strategy"
-      ],
-      "summary": "Comprehensive guide to Salesforce Integration User Licenses - the free API-only license included with Enterprise, Performance, and Unlimited editions. Covers license details and allocation, step-by-step setup and configuration, OAuth 2.0 Client Credentials Flow authentication, Permission Set design and management, security best practices, operational monitoring, and integration patterns with MuleSoft and Dell Boomi.",
-      "keyTopics": [
-        "Integration User License setup and configuration",
-        "OAuth 2.0 Client Credentials Flow authentication",
-        "Permission Set design for API-only users",
-        "Security best practices and audit trail management",
-        "License management and cost optimization",
-        "Integration patterns with MuleSoft and Dell Boomi",
-        "Operational monitoring and troubleshooting"
-      ],
+      "domain": "code-examples",
+      "file": "wire-examples.md",
+      "path": "rag/code-examples/lwc/wire-examples.md",
+      "whenToRetrieve": [],
+      "summary": "Wire services provide reactive data access in Lightning Web Components. The `@wire` decorator automatically manages data fetching, caching, and reactivity. This document demonstrates common wire service patterns for accessing Salesforce data.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "LWC Wire Service Code Examples"
+    },
+    {
+      "domain": "data-governance",
+      "file": "data-quality-stewardship.md",
+      "path": "rag/data-governance/data-quality-stewardship.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance. These patterns are essential for maintaining data integrity, preventing duplicates, and ensuring consistent data across the organization.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Data Quality and Stewardship for Salesforce"
+    },
+    {
+      "domain": "data-governance",
+      "file": "data-residency-compliance.md",
+      "path": "rag/data-governance/data-residency-compliance.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices. These patterns are essential for ensuring data protection, regulatory compliance, and maintaining customer trust.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Data Residency and Compliance for Salesforce"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "case-management-data-model.md",
+      "path": "rag/data-modeling/case-management-data-model.md",
+      "whenToRetrieve": [],
+      "summary": "A comprehensive data model for public sector case management, supporting multi-agency public benefits and services portals. The model handles clients, external partner organizations, staff, cases, notices, and transactions within a single Salesforce org.",
+      "keyTopics": [],
       "status": "completed"
     },
     {
       "domain": "data-modeling",
       "file": "data-migration-patterns.md",
       "path": "rag/data-modeling/data-migration-patterns.md",
-      "whenToRetrieve": [
-        "Planning data migrations",
-        "Importing data into Salesforce",
-        "Transforming data during migration",
-        "Validating data during migration",
-        "Implementing rollback strategies"
-      ],
-      "summary": "Data migration patterns covering import strategies, transformation patterns, validation approaches, rollback strategies, and migration best practices.",
-      "keyTopics": [
-        "Data import strategies (Data Import Wizard, Data Loader, Bulk API)",
-        "Data transformation patterns",
-        "Data validation (pre, during, post migration)",
-        "Rollback strategies and backup procedures",
-        "Migration planning and testing"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "project-methods",
-      "file": "deployment-patterns.md",
-      "path": "rag/project-methods/deployment-patterns.md",
-      "whenToRetrieve": [
-        "Planning Salesforce deployments",
-        "Choosing deployment methods",
-        "Implementing source control strategies",
-        "Using Metadata API",
-        "Developing packages"
-      ],
-      "summary": "Deployment and CI/CD patterns covering deployment methods, source control strategies, Metadata API usage, package development, and deployment best practices.",
-      "keyTopics": [
-        "Deployment methods (Change Sets, Metadata API, SFDX)",
-        "Source control strategies and Git workflows",
-        "Metadata API patterns",
-        "Package development (Unlocked, Managed)",
-        "Deployment best practices and rollback strategies"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "project-methods",
-      "file": "sfdx-patterns.md",
-      "path": "rag/project-methods/sfdx-patterns.md",
-      "whenToRetrieve": [
-        "Using Salesforce DX",
-        "Setting up SFDX projects",
-        "Working with scratch orgs",
-        "Implementing CI/CD with SFDX",
-        "Managing source tracking"
-      ],
-      "summary": "Salesforce DX patterns covering project structure, commands, scratch org patterns, source tracking, and CI/CD integration.",
-      "keyTopics": [
-        "SFDX project structure",
-        "SFDX commands and workflows",
-        "Scratch org patterns",
-        "Source tracking and conflict resolution",
-        "CI/CD integration with SFDX"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "batch-examples.md",
-      "path": "rag/code-examples/apex/batch-examples.md",
-      "whenToRetrieve": [
-        "Need Batch Apex code examples",
-        "Implementing batch processing",
-        "Looking for batch chaining examples"
-      ],
-      "summary": "Complete Batch Apex code examples: stateless, stateful, chaining, error handling, and monitoring patterns.",
-      "keyTopics": [
-        "Stateless Batch Apex",
-        "Stateful Batch with state management",
-        "Batch chaining patterns",
-        "Batch error handling and retry",
-        "Batch monitoring patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "queueable-examples.md",
-      "path": "rag/code-examples/apex/queueable-examples.md",
-      "whenToRetrieve": [
-        "Need Queueable code examples",
-        "Implementing Queueable jobs",
-        "Looking for Queueable chaining examples"
-      ],
-      "summary": "Complete Queueable Apex code examples: basic, chaining, callouts, retry logic, and monitoring patterns.",
-      "keyTopics": [
-        "Basic Queueable",
-        "Chained Queueable jobs",
-        "Queueable with callouts",
-        "Queueable retry pattern",
-        "Queueable monitoring"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "scheduled-examples.md",
-      "path": "rag/code-examples/apex/scheduled-examples.md",
-      "whenToRetrieve": [
-        "Need Scheduled Apex code examples",
-        "Implementing scheduled jobs",
-        "Looking for cron expression examples"
-      ],
-      "summary": "Complete Scheduled Apex code examples: basic scheduled, cron expressions, scheduled batch jobs, error handling, and monitoring.",
-      "keyTopics": [
-        "Basic Scheduled Apex",
-        "Cron expression examples",
-        "Scheduled batch job",
-        "Scheduled with error handling",
-        "Scheduled job monitoring"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "cdc-examples.md",
-      "path": "rag/code-examples/integrations/cdc-examples.md",
-      "whenToRetrieve": [
-        "Need CDC code examples",
-        "Implementing CDC event processing",
-        "Looking for CDC integration patterns"
-      ],
-      "summary": "Complete Change Data Capture code examples: trigger handlers, Platform Event integration, error handling, and replay patterns.",
-      "keyTopics": [
-        "Basic CDC trigger handler",
-        "CDC with Platform Events",
-        "CDC error handling and retry",
-        "CDC event replay pattern",
-        "CDC monitoring pattern"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "custom-settings-examples.md",
-      "path": "rag/code-examples/utilities/custom-settings-examples.md",
-      "whenToRetrieve": [
-        "Need Custom Settings code examples",
-        "Using Hierarchical Custom Settings",
-        "Using List Custom Settings"
-      ],
-      "summary": "Complete Custom Settings code examples: hierarchical and list custom settings usage in Apex and Flows.",
-      "keyTopics": [
-        "Hierarchical Custom Settings usage",
-        "List Custom Settings usage",
-        "Custom Settings in Apex",
-        "Custom Settings in Flows"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "custom-metadata-examples.md",
-      "path": "rag/code-examples/utilities/custom-metadata-examples.md",
-      "whenToRetrieve": [
-        "Need Custom Metadata code examples",
-        "Using Custom Metadata in Apex",
-        "Using Custom Metadata in Flows"
-      ],
-      "summary": "Complete Custom Metadata code examples: configuration patterns, Apex queries, Flow integration, and migration from Custom Settings.",
-      "keyTopics": [
-        "Custom Metadata in Apex",
-        "Custom Metadata in Flows",
-        "Custom Metadata for configuration",
-        "Migration from Custom Settings"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "metadata-api-examples.md",
-      "path": "rag/code-examples/utilities/metadata-api-examples.md",
-      "whenToRetrieve": [
-        "Need Metadata API code examples",
-        "Implementing metadata deployment",
-        "Automating metadata operations"
-      ],
-      "summary": "Metadata API code examples: deployment, retrieval, and automation patterns.",
-      "keyTopics": [
-        "Metadata API deployment",
-        "Metadata API retrieval",
-        "Metadata API automation"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "sfdx-examples.md",
-      "path": "rag/code-examples/utilities/sfdx-examples.md",
-      "whenToRetrieve": [
-        "Need SFDX code examples",
-        "Setting up SFDX projects",
-        "Implementing CI/CD with SFDX"
-      ],
-      "summary": "Salesforce DX code examples: project setup, deployment scripts, and CI/CD integration patterns.",
-      "keyTopics": [
-        "SFDX project setup",
-        "SFDX deployment scripts",
-        "SFDX CI/CD patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "data-migration-examples.md",
-      "path": "rag/code-examples/utilities/data-migration-examples.md",
-      "whenToRetrieve": [
-        "Need data migration code examples",
-        "Implementing data import with validation",
-        "Looking for migration error handling"
-      ],
-      "summary": "Data migration code examples: import with validation, transformation patterns, error handling, and rollback patterns.",
-      "keyTopics": [
-        "Data import with validation",
-        "Data transformation patterns",
-        "Migration error handling",
-        "Rollback patterns",
-        "Migration monitoring"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "accessibility-examples.md",
-      "path": "rag/code-examples/lwc/accessibility-examples.md",
-      "whenToRetrieve": [
-        "Need LWC accessibility code examples",
-        "Implementing accessible forms",
-        "Looking for keyboard navigation examples",
-        "Need ARIA pattern examples",
-        "Implementing accessible modals"
-      ],
-      "summary": "Complete LWC accessibility code examples: forms, keyboard navigation, ARIA patterns, images, semantic HTML, dynamic content, color/contrast following WCAG 2.2 standards.",
-      "keyTopics": [
-        "Accessible form patterns",
-        "Keyboard navigation examples",
-        "ARIA labels and descriptions",
-        "Image accessibility",
-        "Semantic HTML examples",
-        "Dynamic content accessibility",
-        "Color and contrast patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "apex-batch-template.md",
-      "path": "rag/code-examples/templates/apex-batch-template.md",
-      "whenToRetrieve": [
-        "Need Batch Apex template",
-        "Creating new batch class",
-        "Looking for batch template"
-      ],
-      "summary": "Batch Apex template for bulk processing. Copy-paste ready template for creating new batch classes.",
-      "keyTopics": [
-        "Batch Apex template",
-        "Stateless and stateful patterns",
-        "Error handling"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "apex-queueable-template.md",
-      "path": "rag/code-examples/templates/apex-queueable-template.md",
-      "whenToRetrieve": [
-        "Need Queueable template",
-        "Creating new Queueable class",
-        "Looking for Queueable template"
-      ],
-      "summary": "Queueable Apex template for async processing. Copy-paste ready template for creating new Queueable classes.",
-      "keyTopics": [
-        "Queueable template",
-        "Chaining patterns",
-        "Callout patterns"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "apex-scheduled-template.md",
-      "path": "rag/code-examples/templates/apex-scheduled-template.md",
-      "whenToRetrieve": [
-        "Need Scheduled Apex template",
-        "Creating new scheduled class",
-        "Looking for scheduled template"
-      ],
-      "summary": "Scheduled Apex template for time-based automation. Copy-paste ready template for creating new scheduled classes.",
-      "keyTopics": [
-        "Scheduled Apex template",
-        "Cron expressions",
-        "Error handling"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "sfdx-project-template.md",
-      "path": "rag/code-examples/templates/sfdx-project-template.md",
-      "whenToRetrieve": [
-        "Need SFDX project template",
-        "Setting up new SFDX project",
-        "Looking for project structure"
-      ],
-      "summary": "SFDX project template for initializing new projects. Copy-paste ready template for project setup.",
-      "keyTopics": [
-        "SFDX project structure",
-        "Scratch org configuration",
-        "Project setup"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "ci-cd-template.md",
-      "path": "rag/code-examples/templates/ci-cd-template.md",
-      "whenToRetrieve": [
-        "Need CI/CD template",
-        "Setting up CI/CD pipeline",
-        "Looking for deployment automation"
-      ],
-      "summary": "CI/CD pipeline template for Salesforce deployment automation. Copy-paste ready template for CI/CD setup.",
-      "keyTopics": [
-        "CI/CD pipeline template",
-        "GitHub Actions example",
-        "Automated deployment"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "code-examples",
-      "file": "lwc-accessible-component-template.md",
-      "path": "rag/code-examples/templates/lwc-accessible-component-template.md",
-      "whenToRetrieve": [
-        "Need accessible LWC component template",
-        "Creating new accessible component",
-        "Looking for accessibility template"
-      ],
-      "summary": "Complete accessible LWC component template with all accessibility best practices: forms, keyboard navigation, ARIA, focus management, semantic HTML following WCAG 2.2 standards.",
-      "keyTopics": [
-        "Accessible form structure",
-        "Keyboard navigation support",
-        "ARIA attributes",
-        "Focus management",
-        "Modal accessibility",
-        "Semantic HTML",
-        "Color and contrast"
-      ],
-      "status": "completed",
-      "hasCodeExamples": true
-    },
-    {
-      "domain": "troubleshooting",
-      "file": "lwc-accessibility-errors.md",
-      "path": "rag/troubleshooting/lwc-accessibility-errors.md",
-      "whenToRetrieve": [
-        "LWC accessibility errors",
-        "Missing form labels",
-        "ARIA accessibility issues",
-        "Keyboard navigation problems",
-        "WCAG violations"
-      ],
-      "summary": "Common LWC accessibility errors and solutions: missing labels, ARIA issues, keyboard traps, focus indicators, color contrast, WCAG violations following WCAG 2.2 standards.",
-      "keyTopics": [
-        "Missing form labels",
-        "Missing ARIA labels",
-        "Keyboard traps",
-        "Missing focus indicators",
-        "Insufficient color contrast",
-        "Missing alt text",
-        "Incorrect heading hierarchy",
-        "WCAG violation patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "testing",
-      "file": "lwc-accessibility-testing.md",
-      "path": "rag/testing/lwc-accessibility-testing.md",
-      "whenToRetrieve": [
-        "Testing LWC accessibility",
-        "Jest accessibility tests",
-        "Manual accessibility testing",
-        "Automated accessibility tools"
-      ],
-      "summary": "LWC accessibility testing patterns: Jest a11y tests with @salesforce/sa11y, manual testing checklists, automated testing tools (axe-core, Lighthouse, Salesforce Accessibility Scanner).",
-      "keyTopics": [
-        "Jest accessibility testing",
-        "Keyboard navigation testing",
-        "ARIA attribute testing",
-        "Manual testing checklists",
-        "Screen reader testing",
-        "Color contrast testing",
-        "Automated testing tools"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "quick-start",
-      "file": "lwc-accessibility-quick-start.md",
-      "path": "rag/quick-start/lwc-accessibility-quick-start.md",
-      "whenToRetrieve": [
-        "Getting started with LWC accessibility",
-        "Making components accessible",
-        "LWC accessibility quick start"
-      ],
-      "summary": "Getting started with LWC accessibility: quick checklist, step-by-step guide for making existing components accessible, essential patterns following WCAG 2.2 standards.",
-      "keyTopics": [
-        "Accessibility checklist",
-        "Form accessibility",
-        "Keyboard navigation",
-        "ARIA attributes",
-        "Image accessibility",
-        "Semantic HTML",
-        "Essential patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "operations",
-      "file": "cicd-patterns.md",
-      "path": "rag/operations/cicd-patterns.md",
-      "whenToRetrieve": [
-        "Implementing CI/CD for Salesforce",
-        "Choosing between metadata and source-tracked orgs",
-        "Using unlocked packages",
-        "Automating sandbox seeding",
-        "Implementing deployment validation",
-        "Planning rollback strategies"
-      ],
-      "summary": "Comprehensive CI/CD patterns for Salesforce covering metadata vs. source-tracked org decision framework, unlocked package development and promotion, automated sandbox seeding strategies, deployment validation approaches, and rollback patterns including metadata rollback, data rollback, and feature flag rollbacks.",
-      "keyTopics": [
-        "Metadata vs. source-tracked orgs decision framework",
-        "Unlocked package development and versioning",
-        "Sandbox seeding automation",
-        "Deployment validation strategies",
-        "Rollback patterns and procedures"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "operations",
-      "file": "environment-strategy.md",
-      "path": "rag/operations/environment-strategy.md",
-      "whenToRetrieve": [
-        "Designing org topologies for multi-team programs",
-        "Implementing data masking for PII/PHI",
-        "Planning sandbox refresh cadences",
-        "Managing multiple Salesforce environments"
-      ],
-      "summary": "Environment strategy patterns for Salesforce including org topology patterns (single org, multi-org, hybrid), data masking strategies for PII/PHI, test data anonymization, and sandbox refresh cadence planning.",
-      "keyTopics": [
-        "Org topology patterns for multi-team programs",
-        "Data masking and anonymization strategies",
-        "Sandbox refresh cadences",
-        "Environment management best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "operations",
-      "file": "release-governance.md",
-      "path": "rag/operations/release-governance.md",
-      "whenToRetrieve": [
-        "Establishing Change Advisory Boards",
-        "Implementing approval workflows",
-        "Creating risk-based release checklists",
-        "Managing release governance processes"
-      ],
-      "summary": "Release governance patterns including CAB structure and processes, multi-stage approval workflows, automated approval gates, and risk-based release checklists with deployment risk matrices.",
-      "keyTopics": [
-        "Change Advisory Board (CAB) structure",
-        "Approval workflow patterns",
-        "Risk-based release checklists",
-        "Deployment risk assessment"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "observability",
-      "file": "monitoring-alerting.md",
-      "path": "rag/observability/monitoring-alerting.md",
-      "whenToRetrieve": [
-        "Implementing monitoring and alerting for Platform Events",
-        "Monitoring API health",
-        "Tracking async job failures",
-        "Implementing log aggregation",
-        "Setting up system observability"
-      ],
-      "summary": "Monitoring and alerting patterns for Salesforce including Platform Events monitoring metrics, API health monitoring (response time, error rates, availability), async job failure detection (Batch, Queueable, Scheduled), and log aggregation patterns with centralized logging strategies.",
-      "keyTopics": [
-        "Platform Events monitoring and metrics",
-        "API health monitoring",
-        "Async job failure detection",
-        "Log aggregation patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "observability",
-      "file": "performance-tuning.md",
-      "path": "rag/observability/performance-tuning.md",
-      "whenToRetrieve": [
-        "Optimizing query selectivity",
-        "Handling Large Data Volumes (LDV)",
-        "Mitigating governor limits",
-        "Implementing caching strategies",
-        "Tuning Salesforce performance"
-      ],
-      "summary": "Performance tuning patterns including query/selectivity optimization with indexed fields, LDV handling strategies and data archiving, governor limit mitigation patterns, and caching strategies using Platform Cache.",
-      "keyTopics": [
-        "Query/selectivity tuning with indexed fields",
-        "Large Data Volume (LDV) handling",
-        "Governor limit mitigation",
-        "Caching strategies"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "observability",
-      "file": "ha-dr-patterns.md",
-      "path": "rag/observability/ha-dr-patterns.md",
-      "whenToRetrieve": [
-        "Planning backup and restore strategies",
-        "Implementing failover patterns for integrations",
-        "Conducting business continuity drills",
-        "Designing high availability systems"
-      ],
-      "summary": "High availability and disaster recovery patterns including backup/restore approaches (data and metadata), failover patterns for integrations (circuit breakers, retry logic), and business continuity drills with RTO/RPO planning.",
-      "keyTopics": [
-        "Backup/restore strategies",
-        "Integration failover patterns",
-        "Business continuity planning",
-        "RTO/RPO objectives"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-governance",
-      "file": "data-residency-compliance.md",
-      "path": "rag/data-governance/data-residency-compliance.md",
-      "whenToRetrieve": [
-        "Handling PII/PHI data",
-        "Implementing GDPR/CCPA/SOC2 compliance",
-        "Configuring field-level encryption",
-        "Implementing Shield best practices"
-      ],
-      "summary": "Data residency and compliance patterns including PII/PHI identification and protection, GDPR/CCPA/SOC2 compliance frameworks, field-level encryption with Shield Encryption, and Shield best practices (Platform Encryption, Event Monitoring, Field Audit Trail).",
-      "keyTopics": [
-        "PII/PHI handling and protection",
-        "GDPR/CCPA/SOC2 compliance",
-        "Field-level encryption",
-        "Shield best practices"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "data-governance",
-      "file": "data-quality-stewardship.md",
-      "path": "rag/data-governance/data-quality-stewardship.md",
-      "whenToRetrieve": [
-        "Implementing duplicate prevention for Accounts/Contacts",
-        "Configuring survivorship rules for data merges",
-        "Establishing master data governance",
-        "Managing data quality at scale"
-      ],
-      "summary": "Data quality and stewardship patterns including duplicate prevention beyond leads (Account/Contact duplicate rules), survivorship rules for data merges, and master data governance with data stewardship workflows and data quality metrics.",
-      "keyTopics": [
-        "Duplicate prevention for Accounts and Contacts",
-        "Survivorship rules and merge strategies",
-        "Master data governance",
-        "Data quality metrics and stewardship"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "testing",
-      "file": "automated-testing-patterns.md",
-      "path": "rag/testing/automated-testing-patterns.md",
-      "whenToRetrieve": [
-        "Implementing automated testing at scale",
-        "Creating UI test automation",
-        "Implementing contract tests for integrations",
-        "Conducting load testing"
-      ],
-      "summary": "Automated testing patterns for Salesforce at scale including advanced Apex test data factory patterns, UI test automation for LWC (Jest) and Experience Cloud (Selenium/Playwright), contract tests for APIs and events, and load testing patterns with performance testing strategies.",
-      "keyTopics": [
-        "Advanced test data factory patterns",
-        "UI test automation (Jest, Selenium, Playwright)",
-        "Contract testing for integrations",
-        "Load testing and scalability testing"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "testing",
-      "file": "non-functional-requirements.md",
-      "path": "rag/testing/non-functional-requirements.md",
-      "whenToRetrieve": [
-        "Implementing security testing",
-        "Accessibility testing for LWCs and portals",
-        "Defining performance benchmarks",
-        "Testing non-functional requirements"
-      ],
-      "summary": "Non-functional requirements testing including security testing patterns (vulnerability testing, penetration testing), accessibility testing for LWCs and portals (WCAG compliance), and performance benchmarks with SLA definition and performance testing frameworks.",
-      "keyTopics": [
-        "Security testing patterns",
-        "Accessibility testing (WCAG compliance)",
-        "Performance benchmarks and SLAs",
-        "NFR test automation"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "adoption",
-      "file": "user-readiness.md",
-      "path": "rag/adoption/user-readiness.md",
-      "whenToRetrieve": [
-        "Creating training plans",
-        "Establishing support models",
-        "Implementing feature adoption telemetry",
-        "Planning user readiness programs"
-      ],
-      "summary": "User readiness patterns including training curriculum design, role-based training, training delivery methods, help desk patterns, support workflows, and telemetry for feature adoption tracking.",
-      "keyTopics": [
-        "Training plans and curriculum design",
-        "Support models and workflows",
-        "Feature adoption telemetry",
-        "User engagement patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "adoption",
-      "file": "org-health-checks.md",
-      "path": "rag/adoption/org-health-checks.md",
-      "whenToRetrieve": [
-        "Conducting technical debt triage",
-        "Performing baseline audits",
-        "Creating remediation playbooks",
-        "Maintaining org health"
-      ],
-      "summary": "Org health check patterns including technical debt identification and prioritization, baseline audits (code quality, configuration, data quality), and remediation playbooks for debt remediation, org cleanup, and optimization.",
-      "keyTopics": [
-        "Technical debt triage",
-        "Baseline audits",
-        "Remediation playbooks",
-        "Org health monitoring"
-      ],
+      "whenToRetrieve": [],
+      "summary": "This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce. These patterns are essential for data imports, system migrations, and data synchronization.",
+      "keyTopics": [],
       "status": "completed"
     },
     {
       "domain": "data-modeling",
       "file": "data-storage-planning.md",
       "path": "rag/data-modeling/data-storage-planning.md",
-      "whenToRetrieve": [
-        "Planning data storage capacity",
-        "Calculating current storage usage",
-        "Understanding storage limits",
-        "Planning for future growth",
-        "Optimizing storage usage"
-      ],
-      "summary": "Comprehensive guide to data storage planning in Salesforce. Covers how Salesforce calculates storage, calculating current storage usage, objects that don't count toward storage, planning for future growth, and storage optimization strategies.",
-      "keyTopics": [
-        "How Salesforce calculates storage (data and file storage)",
-        "Calculating current storage usage",
-        "Objects that don't count toward storage",
-        "Planning for future growth",
-        "Storage optimization strategies (archiving, file management)"
-      ],
+      "whenToRetrieve": [],
+      "summary": "Data Storage Planning in Salesforce",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Data Storage Planning in Salesforce"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "external-ids-and-integration-keys.md",
+      "path": "rag/data-modeling/external-ids-and-integration-keys.md",
+      "whenToRetrieve": [],
+      "summary": "External ID strategies enable stable record mapping between Salesforce and external systems, supporting idempotent data synchronization and reliable integration patterns. External IDs mirror external system primary keys and enable safe retry operations.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "External IDs and Integration Keys"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "file-management-patterns.md",
+      "path": "rag/data-modeling/file-management-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce provides multiple mechanisms for file storage and management. Understanding when to use ContentVersion (Files), Attachments, Documents, and the Library system is critical for effective data management and user experience.",
+      "keyTopics": [],
       "status": "completed"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "lead-management-patterns.md",
+      "path": "rag/data-modeling/lead-management-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management. The model handles leads from multiple sources, automated assignment, scoring, conversion to Contacts/Accounts/Opportunities, and data quality management within a single Salesforce org.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Lead Management and Conversion Data Model"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "object-setup-and-configuration.md",
+      "path": "rag/data-modeling/object-setup-and-configuration.md",
+      "whenToRetrieve": [],
+      "summary": "Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce. This guide covers the complete object configuration process from initial creation through Lightning Experience optimization, ensuring objects are properly configured for production use.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Object Setup and Configuration"
     },
     {
       "domain": "data-modeling",
       "file": "standard-object-oddities.md",
       "path": "rag/data-modeling/standard-object-oddities.md",
-      "whenToRetrieve": [
-        "Understanding standard object constraints",
-        "Objects where quick actions aren't available",
-        "Objects that support queues",
-        "Objects with fixed CRUD permissions",
-        "Objects that can't be used in lookup relationships"
-      ],
-      "summary": "Guide to standard object oddities and constraints in Salesforce. Covers objects where quick actions aren't available, objects that can have queues own them, objects with fixed CRUD permissions, objects that can't be used in lookup relationships, and objects that support dynamic forms.",
-      "keyTopics": [
-        "Objects where quick actions aren't available",
-        "Objects that support queue ownership",
-        "Objects with fixed CRUD permissions",
-        "Objects that can't be lookup parents",
-        "Objects that support dynamic forms"
-      ],
+      "whenToRetrieve": [],
+      "summary": "Standard Object Oddities and Constraints in Salesforce",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Standard Object Oddities and Constraints in Salesforce"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "student-lifecycle-data-model.md",
+      "path": "rag/data-modeling/student-lifecycle-data-model.md",
+      "whenToRetrieve": [],
+      "summary": "The Salesforce Education Cloud (EDA) data model supports higher education institutions, with particular focus on online and adult-learning programs. The model integrates with legacy student information systems (SIS) while supporting CRM workflows for admissions and student engagement.",
+      "keyTopics": [],
       "status": "completed"
     },
     {
       "domain": "development",
       "file": "admin-basics.md",
       "path": "rag/development/admin-basics.md",
-      "whenToRetrieve": [
-        "Understanding Salesforce administration basics",
-        "Navigating Salesforce UI",
-        "Setting up orgs",
-        "Configuring org settings",
-        "Learning admin fundamentals"
-      ],
-      "summary": "Comprehensive guide to Salesforce administration basics. Covers the Salesforce administrator role, navigating Lightning and Classic UI, sandbox setup, company information, language and time zone settings, storage limits, UI settings, theme and branding, and business hours.",
-      "keyTopics": [
-        "Salesforce administrator role and responsibilities",
-        "Navigating Lightning and Classic UI",
-        "Sandbox setup and management",
-        "Org setup and configuration",
-        "UI settings and branding"
-      ],
+      "whenToRetrieve": [],
+      "summary": "Salesforce Administration Basics",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Administration Basics"
+    },
+    {
+      "domain": "development",
+      "file": "apex-patterns.md",
+      "path": "rag/development/apex-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Apex is used strategically when Flows are insufficient or need optimization/bulkification. The approach emphasizes proper layering, bulkification, comprehensive testing, and integration with declarative automation.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Apex Design Patterns and Best Practices"
+    },
+    {
+      "domain": "development",
+      "file": "asynchronous-apex-patterns.md",
+      "path": "rag/development/asynchronous-apex-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods. Asynchronous Apex is essential for processing large data volumes, performing long-running operations, and avoiding governor limit exceptions in synchronous contexts.",
+      "keyTopics": [],
       "status": "completed"
     },
     {
       "domain": "development",
-      "file": "formulas-validation-rules.md",
-      "path": "rag/development/formulas-validation-rules.md",
-      "whenToRetrieve": [
-        "Creating formulas",
-        "Validation rules",
-        "Custom labels",
-        "Lookup filters",
-        "Understanding formula functions in Salesforce"
-      ],
-      "summary": "Comprehensive guide to formulas, validation rules, custom labels, and lookup filters. Covers formula introduction, creating validation rules with formulas, lookup field filters, custom labels, and best practices.",
-      "keyTopics": [
-        "Formula fundamentals and functions",
-        "Validation rules with formulas",
-        "Lookup field filters",
-        "Custom labels",
-        "Best practices and patterns"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "development",
-      "file": "lightning-app-builder.md",
-      "path": "rag/development/lightning-app-builder.md",
-      "whenToRetrieve": [
-        "Using Lightning App Builder",
-        "Creating Lightning pages",
-        "Configuring Lightning Experience components",
-        "Implementing dynamic forms and actions"
-      ],
-      "summary": "Guide to Lightning App Builder for creating and customizing Lightning pages. Covers Lightning App Builder basics, creating Lightning pages, component configuration, dynamic forms and actions, and best practices.",
-      "keyTopics": [
-        "Lightning App Builder basics",
-        "Creating Lightning pages",
-        "Component configuration",
-        "Dynamic forms and actions",
-        "Best practices"
-      ],
-      "status": "completed"
+      "file": "custom-settings-metadata-patterns.md",
+      "path": "rag/development/custom-settings-metadata-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Custom Settings and Custom Metadata Patterns"
     },
     {
       "domain": "development",
       "file": "email-management.md",
       "path": "rag/development/email-management.md",
-      "whenToRetrieve": [
-        "Managing email in Salesforce",
-        "Understanding email limits",
-        "Creating email templates",
-        "Sending emails from Salesforce",
-        "Configuring email settings"
-      ],
-      "summary": "Guide to email management in Salesforce. Covers email limits, email logs, email templates, list email, mass email, flow email, and email best practices.",
-      "keyTopics": [
-        "Email limits and constraints",
-        "Email logs and tracking",
-        "Email templates",
-        "List and mass email",
-        "Flow email actions"
-      ],
-      "status": "completed"
+      "whenToRetrieve": [],
+      "summary": "Salesforce Email Management",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Email Management"
+    },
+    {
+      "domain": "development",
+      "file": "error-handling-and-logging.md",
+      "path": "rag/development/error-handling-and-logging.md",
+      "whenToRetrieve": [],
+      "summary": "Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance. The framework uses a custom logging object (`LOG_LogMessage__c`) with utility classes and platform event fallbacks to ensure no errors are lost.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Error Handling and Logging Framework"
+    },
+    {
+      "domain": "development",
+      "file": "flow-patterns.md",
+      "path": "rag/development/flow-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Flow is used as the primary automation engine across projects, with Apex reserved for complex logic, integrations, and performance-critical scenarios. The approach emphasizes declarative automation where possible, with clear patterns for when to use different Flow types.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Flow Design and Orchestration Patterns"
+    },
+    {
+      "domain": "development",
+      "file": "formulas-validation-rules.md",
+      "path": "rag/development/formulas-validation-rules.md",
+      "whenToRetrieve": [],
+      "summary": "Formulas, Validation Rules, and Custom Labels",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Formulas, Validation Rules, and Custom Labels"
+    },
+    {
+      "domain": "development",
+      "file": "governor-limits-and-optimization.md",
+      "path": "rag/development/governor-limits-and-optimization.md",
+      "whenToRetrieve": [],
+      "summary": "This topic covers Salesforce governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management best practices. These patterns are especially relevant for integration-heavy systems with large data volumes, where proper limit management becomes critical for system performance and scalability.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Governor Limits and Performance Optimization"
     },
     {
       "domain": "development",
       "file": "large-data-loads.md",
       "path": "rag/development/large-data-loads.md",
-      "whenToRetrieve": [
-        "Planning large data loads",
-        "Selecting tools for data loads",
-        "Preventing data skew",
-        "Testing large data loads",
-        "Executing data migration projects"
-      ],
-      "summary": "Comprehensive guide to large data loads in Salesforce. Covers tools for large data loads (Data Loader, Bulk API, ETL tools), data quality considerations, preventing data skew, testing environments, and data load planning.",
-      "keyTopics": [
-        "Tools for large data loads (Data Loader, Bulk API, ETL)",
-        "Data quality considerations (deduplication, cleanup)",
-        "Preventing data skew",
-        "Testing environments",
-        "Data load planning and execution"
-      ],
+      "whenToRetrieve": [],
+      "summary": "Gigantic Data Loads in Salesforce",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Gigantic Data Loads in Salesforce"
+    },
+    {
+      "domain": "development",
+      "file": "lightning-app-builder.md",
+      "path": "rag/development/lightning-app-builder.md",
+      "whenToRetrieve": [],
+      "summary": "Lightning App Builder and Dynamic Forms",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Lightning App Builder and Dynamic Forms"
+    },
+    {
+      "domain": "development",
+      "file": "locking-and-concurrency-strategies.md",
+      "path": "rag/development/locking-and-concurrency-strategies.md",
+      "whenToRetrieve": [],
+      "summary": "This topic covers Salesforce row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, deadlock prevention, and high-concurrency scenario management. These patterns are especially relevant for integration-heavy systems with large data volumes and high concurrency, where multiple processes may attempt to update the same records simultaneously.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Locking and Concurrency Strategies"
+    },
+    {
+      "domain": "development",
+      "file": "lwc-patterns.md",
+      "path": "rag/development/lwc-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "LWCs are built for complex business logic that standard page layouts cannot handle. Components are designed to make complex processes usable for non-technical users and hide integration complexity behind simple interfaces.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Lightning Web Component (LWC) Patterns"
+    },
+    {
+      "domain": "development",
+      "file": "omnistudio-patterns.md",
+      "path": "rag/development/omnistudio-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI components for complex business processes. Used in higher education and public sector contexts to guide users through applications, grant workflows, and other multi-step processes.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "OmniStudio Patterns"
+    },
+    {
+      "domain": "development",
+      "file": "order-of-execution.md",
+      "path": "rag/development/order-of-execution.md",
+      "whenToRetrieve": [],
+      "summary": "Understanding the order of execution in Salesforce is critical for architects and developers. The execution order determines when triggers, flows, validation rules, and other automation run, which directly impacts system behavior, data integrity, and debugging capabilities.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Order of Execution"
+    },
+    {
+      "domain": "development",
+      "file": "soql-query-patterns.md",
+      "path": "rag/development/soql-query-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects. All patterns documented here are based on real work, including dynamic SOQL implementations, relationship queries, debugging patterns, and maintenance queries used in production systems.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "SOQL Query Patterns"
+    },
+    {
+      "domain": "glossary",
+      "file": "core-terminology.md",
+      "path": "rag/glossary/core-terminology.md",
+      "whenToRetrieve": [],
+      "summary": "This glossary defines core terms used throughout the RAG knowledge library. Terms are defined in the context of this architecture, integrations, and data models. All definitions are generic and avoid client- or org-specific names.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Core Terminology and Definitions"
+    },
+    {
+      "domain": "identity-sso",
+      "file": "multi-tenant-identity-architecture.md",
+      "path": "rag/identity-sso/multi-tenant-identity-architecture.md",
+      "whenToRetrieve": [],
+      "summary": "Multi-tenant identity architecture enables a single Salesforce org to support multiple distinct user communities with different identity providers, security requirements, and access patterns. This pattern is essential for public sector and higher education implementations where citizens, external partner organizations, and internal staff must coexist in the same org.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Multi-Tenant Identity Architecture"
+    },
+    {
+      "domain": "integrations",
+      "file": "callout-best-practices.md",
+      "path": "rag/integrations/callout-best-practices.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring. Following these patterns ensures robust, maintainable, and efficient callout implementations.",
+      "keyTopics": [],
       "status": "completed"
+    },
+    {
+      "domain": "integrations",
+      "file": "change-data-capture-patterns.md",
+      "path": "rag/integrations/change-data-capture-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted. This guide covers CDC event processing patterns, error handling, and integration strategies.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Change Data Capture (CDC) Patterns"
+    },
+    {
+      "domain": "integrations",
+      "file": "etl-vs-api-vs-events.md",
+      "path": "rag/integrations/etl-vs-api-vs-events.md",
+      "whenToRetrieve": [],
+      "summary": "Different integration patterns serve different use cases. Understanding when to use ETL (batch), API (synchronous), or Events (asynchronous) is critical for building scalable, maintainable integrations.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "ETL vs API vs Events: Integration Pattern Selection"
+    },
+    {
+      "domain": "integrations",
+      "file": "integration-platform-patterns.md",
+      "path": "rag/integrations/integration-platform-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Integration platforms serve as middleware between Salesforce and external systems, handling security, transformation, and orchestration. Two primary platforms are used: MuleSoft (for security boundaries and transformation) and Dell Boomi (for high-volume ETL operations).",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "integrations",
+      "file": "integration-user-license-guide.md",
+      "path": "rag/integrations/integration-user-license-guide.md",
+      "whenToRetrieve": [],
+      "summary": "The Salesforce Integration User License is a free API-only license designed for system-to-system integrations. Introduced in March 2023, this license provides a cost-effective and secure way to authenticate external systems with Salesforce without consuming full user licenses.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "integrations",
+      "file": "salesforce-to-llm-data-pipelines.md",
+      "path": "rag/integrations/salesforce-to-llm-data-pipelines.md",
+      "whenToRetrieve": [],
+      "summary": "This document covers high-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents). It addresses how to move Salesforce data into RAG/LLM systems, common architectural variants and their tradeoffs, extraction strategies, transformation and chunking approaches, and interaction with manifest-style descriptions.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce to LLM Data Pipelines"
+    },
+    {
+      "domain": "integrations",
+      "file": "sis-sync-patterns.md",
+      "path": "rag/integrations/sis-sync-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS). These patterns handle hundreds of thousands of student records daily through ETL platforms with file-based staging and dynamic SQL batching.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "SIS Synchronization Patterns"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "design-system-patterns.md",
+      "path": "rag/mcp-knowledge/design-system-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software, covering UX principles, visual design, component usage, interaction patterns, and accessibility.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lds-patterns.md",
+      "path": "rag/mcp-knowledge/lds-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Guidelines for building, reviewing, and maintaining Lightning Web Components that interact with Salesforce's Lightning Data Service, focusing on data consistency, referential integrity, and choosing UIAPI vs Apex.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lwc-accessibility.md",
+      "path": "rag/mcp-knowledge/lwc-accessibility.md",
+      "whenToRetrieve": [],
+      "summary": "Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2.2 (Web Content Accessibility Guidelines) standards.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lwc-best-practices.md",
+      "path": "rag/mcp-knowledge/lwc-best-practices.md",
+      "whenToRetrieve": [],
+      "summary": "Comprehensive best practices for Lightning Web Components development, focusing on event handling, property naming, decorator usage, and component structure.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "mcp-knowledge",
+      "file": "lwc-development-guide.md",
+      "path": "rag/mcp-knowledge/lwc-development-guide.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides comprehensive guidance for Lightning Web Components (LWC) development, covering core principles, technical stack, best practices, and development workflows.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "observability",
+      "file": "ha-dr-patterns.md",
+      "path": "rag/observability/ha-dr-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for Salesforce, including backup/restore approaches, failover patterns for integrations, and business continuity drills. These patterns are essential for ensuring system resilience, data protection, and business continuity.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "High Availability and Disaster Recovery for Salesforce"
+    },
+    {
+      "domain": "observability",
+      "file": "monitoring-alerting.md",
+      "path": "rag/observability/monitoring-alerting.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns. These patterns are essential for maintaining system reliability, detecting issues early, and ensuring operational excellence.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Monitoring and Alerting for Salesforce"
+    },
+    {
+      "domain": "observability",
+      "file": "performance-tuning.md",
+      "path": "rag/observability/performance-tuning.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers performance tuning patterns for Salesforce, including query/selectivity tuning, Large Data Volume (LDV) handling, governor limit mitigation, and caching strategies. These patterns are essential for optimizing Salesforce performance, handling large datasets, and ensuring system scalability.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Performance Tuning for Salesforce"
+    },
+    {
+      "domain": "operations",
+      "file": "cicd-patterns.md",
+      "path": "rag/operations/cicd-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation strategies, and rollback patterns. These patterns are essential for managing complex Salesforce development lifecycles with multiple teams and environments.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "CI/CD Patterns for Salesforce"
+    },
+    {
+      "domain": "operations",
+      "file": "environment-strategy.md",
+      "path": "rag/operations/environment-strategy.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences. These patterns are essential for managing complex Salesforce implementations with multiple teams, compliance requirements, and efficient development workflows.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Environment Strategy for Salesforce"
+    },
+    {
+      "domain": "operations",
+      "file": "release-governance.md",
+      "path": "rag/operations/release-governance.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists. These patterns are essential for managing complex Salesforce releases with multiple stakeholders, compliance requirements, and risk mitigation.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Release Governance for Salesforce"
+    },
+    {
+      "domain": "patterns",
+      "file": "cross-cutting-patterns.md",
+      "path": "rag/patterns/cross-cutting-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This document summarizes reusable patterns that appear across multiple domains in the architecture. These patterns are fundamental to how the system operates and should be considered when implementing features in any domain.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Cross-Cutting Design Patterns"
+    },
+    {
+      "domain": "project-methods",
+      "file": "delivery-framework.md",
+      "path": "rag/project-methods/delivery-framework.md",
+      "whenToRetrieve": [],
+      "summary": "Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects. Emphasizes clear scope definition, stakeholder coordination, iterative delivery, and comprehensive quality standards.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Project Delivery Framework"
+    },
+    {
+      "domain": "project-methods",
+      "file": "deployment-patterns.md",
+      "path": "rag/project-methods/deployment-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers Salesforce deployment strategies, source control patterns, deployment best practices, Metadata API usage, and package development patterns. These patterns are essential for managing Salesforce development lifecycle and ensuring reliable deployments.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Deployment and CI/CD Patterns"
+    },
+    {
+      "domain": "project-methods",
+      "file": "sfdx-patterns.md",
+      "path": "rag/project-methods/sfdx-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "Salesforce DX provides a modern, source-driven development workflow for Salesforce. This guide covers SFDX project structure, commands, scratch org patterns, source tracking, and CI/CD integration.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce DX (SFDX) Patterns"
+    },
+    {
+      "domain": "project-methods",
+      "file": "testing-strategy.md",
+      "path": "rag/project-methods/testing-strategy.md",
+      "whenToRetrieve": [],
+      "summary": "Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and user acceptance testing. These strategies validate Salesforce configurations, integrations, and portal functionality across multiple environments.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Testing and QA Strategy"
+    },
+    {
+      "domain": "quick-start",
+      "file": "apex-quick-start.md",
+      "path": "rag/quick-start/apex-quick-start.md",
+      "whenToRetrieve": [],
+      "summary": "This quick-start guide provides step-by-step instructions for creating your first Apex classes following best practices.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Apex Quick Start Guide"
+    },
+    {
+      "domain": "quick-start",
+      "file": "lwc-accessibility-quick-start.md",
+      "path": "rag/quick-start/lwc-accessibility-quick-start.md",
+      "whenToRetrieve": [],
+      "summary": "This quick-start guide provides step-by-step instructions for making Lightning Web Components accessible, following WCAG 2.2 standards and Salesforce best practices.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "LWC Accessibility Quick Start Guide"
+    },
+    {
+      "domain": "quick-start",
+      "file": "lwc-quick-start.md",
+      "path": "rag/quick-start/lwc-quick-start.md",
+      "whenToRetrieve": [],
+      "summary": "This quick-start guide provides step-by-step instructions for creating your first Lightning Web Component following best practices.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "LWC Quick Start Guide"
+    },
+    {
+      "domain": "security",
+      "file": "permission-set-architecture.md",
+      "path": "rag/security/permission-set-architecture.md",
+      "whenToRetrieve": [],
+      "summary": "Permission set-driven security architecture transitions from profile-centric to permission set-based access control. This pattern provides more granular permission management, especially at scale, and enables flexible role-based access control without creating multiple profiles.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Permission Set-Driven Security Architecture"
+    },
+    {
+      "domain": "security",
+      "file": "salesforce-llm-data-governance.md",
+      "path": "rag/security/salesforce-llm-data-governance.md",
+      "whenToRetrieve": [],
+      "summary": "This document covers how to choose *what* data to expose from Salesforce to LLMs and how to do that safely. It addresses scoping strategy (which objects, fields, and records to include), security considerations (how to reflect Salesforce access controls in LLM data extraction), data masking and redaction strategies, and governance and lifecycle management.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce LLM Data Governance"
+    },
+    {
+      "domain": "security",
+      "file": "sharing-fundamentals.md",
+      "path": "rag/security/sharing-fundamentals.md",
+      "whenToRetrieve": [],
+      "summary": "This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions. These are the foundational mechanisms that control record-level access in Salesforce.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Sharing Fundamentals"
+    },
+    {
+      "domain": "security",
+      "file": "sharing-rules-and-manual-sharing.md",
+      "path": "rag/security/sharing-rules-and-manual-sharing.md",
+      "whenToRetrieve": [],
+      "summary": "This document covers sharing rules (owner-based, criteria-based, territory-based), manual sharing, and Apex managed sharing. These mechanisms extend access beyond Org-Wide Defaults and Role Hierarchy.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Sharing Rules and Manual Sharing"
+    },
+    {
+      "domain": "security",
+      "file": "sharing-sets-and-portals.md",
+      "path": "rag/security/sharing-sets-and-portals.md",
+      "whenToRetrieve": [],
+      "summary": "This document covers Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Salesforce Sharing Sets and Portal Sharing"
+    },
+    {
+      "domain": "testing",
+      "file": "apex-testing-patterns.md",
+      "path": "rag/testing/apex-testing-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories.",
+      "keyTopics": [],
+      "status": "completed"
+    },
+    {
+      "domain": "testing",
+      "file": "automated-testing-patterns.md",
+      "path": "rag/testing/automated-testing-patterns.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns. These patterns are essential for ensuring code quality, preventing regressions, and maintaining system reliability at enterprise scale.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Automated Testing Patterns for Salesforce"
+    },
+    {
+      "domain": "testing",
+      "file": "lwc-accessibility-testing.md",
+      "path": "rag/testing/lwc-accessibility-testing.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides testing patterns, best practices, and examples for ensuring Lightning Web Components meet WCAG 2.2 accessibility standards. It covers Jest accessibility testing, manual testing checklists, and automated testing tools.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "LWC Accessibility Testing Patterns"
     },
     {
       "domain": "testing",
       "file": "lwc-jest-testing.md",
       "path": "rag/testing/lwc-jest-testing.md",
-      "whenToRetrieve": [
-        "Writing Jest tests for Lightning Web Components",
-        "Testing component behavior",
-        "Testing wire adapters",
-        "Testing Apex calls from LWC"
-      ],
-      "summary": "Comprehensive guide to Jest testing for Lightning Web Components. Covers setting up Jest, writing test cases, testing events and conditional rendering, testing wire adapters and Apex calls, testing child components, and integrating Jest tests into CI/CD pipelines.",
-      "keyTopics": [
-        "Jest testing setup",
-        "Testing component properties and behavior",
-        "Testing events and interactions",
-        "Testing wire adapters",
-        "Testing Apex method calls",
-        "Testing child components",
-        "Jest testing patterns and best practices"
-      ],
+      "whenToRetrieve": [],
+      "summary": "LWC Jest Testing - Unit Testing Lightning Web Components",
+      "keyTopics": [],
       "status": "completed",
-      "hasCodeExamples": true
+      "title": "LWC Jest Testing - Unit Testing Lightning Web Components"
     },
     {
-      "domain": "best-practices",
-      "file": "salesforce-product-evaluation.md",
-      "path": "rag/architecture/salesforce-product-evaluation.md",
-      "whenToRetrieve": [
-        "Evaluating Salesforce products",
-        "Understanding platform foundation",
-        "Comparing Sales Cloud vs Service Cloud",
-        "Choosing between Analytics Cloud options",
-        "Understanding industry-specific clouds"
-      ],
-      "summary": "Comprehensive guide to Salesforce product evaluation. Covers the platform foundation, Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Analytics Cloud, Integration Cloud, and industry-specific clouds. Includes key features, use cases, and considerations for each product.",
-      "keyTopics": [
-        "Platform foundation and core capabilities",
-        "Sales Cloud features and use cases",
-        "Service Cloud features and use cases",
-        "Marketing Cloud overview",
-        "Experience Cloud (Communities) overview",
-        "Analytics Cloud (CRM Analytics, Tableau) overview",
-        "Integration Cloud overview",
-        "Industry-specific clouds"
-      ],
-      "status": "completed"
+      "domain": "testing",
+      "file": "non-functional-requirements.md",
+      "path": "rag/testing/non-functional-requirements.md",
+      "whenToRetrieve": [],
+      "summary": "This guide covers non-functional requirements testing for Salesforce, including security testing, accessibility testing for LWCs and portals, and performance benchmarks. These patterns are essential for ensuring systems meet quality standards beyond functional requirements.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Non-Functional Requirements for Salesforce"
     },
     {
-      "domain": "best-practices",
-      "file": "org-edition-selection.md",
-      "path": "rag/architecture/org-edition-selection.md",
-      "whenToRetrieve": [
-        "Choosing a Salesforce org edition",
-        "Understanding edition differences",
-        "Evaluating feature availability by edition",
-        "Planning org upgrades"
-      ],
-      "summary": "Guide to Salesforce org editions and their implications. Covers Essentials, Professional, Enterprise, Unlimited, and Developer editions, including feature availability, scalability, and cost considerations.",
-      "keyTopics": [
-        "Essentials edition features and limitations",
-        "Professional edition features and limitations",
-        "Enterprise edition features and capabilities",
-        "Unlimited edition features and capabilities",
-        "Developer edition overview",
-        "Edition comparison and selection criteria"
-      ],
-      "status": "completed"
+      "domain": "testing",
+      "file": "test-data-factories.md",
+      "path": "rag/testing/test-data-factories.md",
+      "whenToRetrieve": [],
+      "summary": "Test data factories provide reusable methods for creating test data, ensuring consistency and reducing duplication across test classes.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Test Data Factory Patterns"
     },
     {
-      "domain": "best-practices",
-      "file": "user-license-selection.md",
-      "path": "rag/architecture/user-license-selection.md",
-      "whenToRetrieve": [
-        "Selecting user licenses",
-        "Understanding license types",
-        "Planning license allocation",
-        "Optimizing license costs"
-      ],
-      "summary": "Guide to Salesforce user license selection. Covers Standard User, Platform User, Community/Experience Cloud User, Integration User, and Chatter User licenses, including use cases and selection criteria.",
-      "keyTopics": [
-        "Standard User license features and use cases",
-        "Platform User license features and use cases",
-        "Community/Experience Cloud User license features",
-        "Integration User license (free API-only license)",
-        "Chatter User license features",
-        "License selection criteria and cost optimization"
-      ],
-      "status": "completed"
+      "domain": "troubleshooting",
+      "file": "common-apex-errors.md",
+      "path": "rag/troubleshooting/common-apex-errors.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides solutions for common Apex errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Common Apex Errors and Solutions"
     },
     {
-      "domain": "best-practices",
-      "file": "salesforce-pricing-negotiation.md",
-      "path": "rag/architecture/salesforce-pricing-negotiation.md",
-      "whenToRetrieve": [
-        "Negotiating Salesforce contracts",
-        "Understanding pricing models",
-        "Optimizing costs",
-        "Planning Salesforce investments"
-      ],
-      "summary": "Guide to Salesforce pricing negotiation. Covers pricing models, contract negotiation strategies, cost optimization tips, and best practices for managing Salesforce costs.",
-      "keyTopics": [
-        "Salesforce pricing models",
-        "Contract negotiation strategies",
-        "Cost optimization tips",
-        "License optimization",
-        "Best practices for cost management"
-      ],
-      "status": "completed"
+      "domain": "troubleshooting",
+      "file": "common-lwc-errors.md",
+      "path": "rag/troubleshooting/common-lwc-errors.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides solutions for common LWC errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Common LWC Errors and Solutions"
     },
     {
-      "domain": "best-practices",
-      "file": "salesforce-org-staffing.md",
-      "path": "rag/best-practices/salesforce-org-staffing.md",
-      "whenToRetrieve": [
-        "Planning Salesforce org staffing",
-        "Understanding roles in the Salesforce ecosystem",
-        "Building a Salesforce team",
-        "Optimizing team structure"
-      ],
-      "summary": "Guide to Salesforce org staffing. Covers roles in the Salesforce ecosystem (Admin, Developer, Architect, Business Analyst, Project Manager), team composition, and staffing best practices.",
-      "keyTopics": [
-        "Salesforce administrator role",
-        "Salesforce developer role",
-        "Salesforce architect role",
-        "Business analyst role",
-        "Project manager role",
-        "Team composition and structure",
-        "Staffing best practices"
-      ],
-      "status": "completed"
+      "domain": "troubleshooting",
+      "file": "data-reconciliation.md",
+      "path": "rag/troubleshooting/data-reconciliation.md",
+      "whenToRetrieve": [],
+      "summary": "Systematic approaches to reconciling data between Salesforce and external systems, identifying discrepancies, and ensuring data consistency. These techniques use external IDs, integration job tracking, and comparison queries to validate data synchronization.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Data Reconciliation Techniques"
     },
     {
-      "domain": "best-practices",
-      "file": "reports-dashboards.md",
-      "path": "rag/best-practices/reports-dashboards.md",
-      "whenToRetrieve": [
-        "Creating reports and dashboards",
-        "Understanding report types",
-        "Building dashboards",
-        "Optimizing report performance"
-      ],
-      "summary": "Guide to reports and dashboards in Salesforce. Covers creating reports, building dashboards, report types, dashboard components, and best practices for reports and dashboards.",
-      "keyTopics": [
-        "Report creation and configuration",
-        "Dashboard building and components",
-        "Report types (Tabular, Summary, Matrix, Joined)",
-        "Dashboard best practices",
-        "Report performance optimization"
-      ],
-      "status": "completed"
+      "domain": "troubleshooting",
+      "file": "governor-limit-errors.md",
+      "path": "rag/troubleshooting/governor-limit-errors.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides solutions for governor limit errors, including error messages, causes, solutions, and prevention strategies.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Governor Limit Errors and Solutions"
     },
     {
-      "domain": "best-practices",
-      "file": "sales-cloud-features.md",
-      "path": "rag/best-practices/sales-cloud-features.md",
-      "whenToRetrieve": [
-        "Understanding Sales Cloud features",
-        "Implementing sales processes",
-        "Managing opportunities and leads",
-        "Configuring products and pricebooks"
-      ],
-      "summary": "Guide to Sales Cloud features. Covers opportunities, leads, accounts, contacts, products, pricebooks, quotes, and sales processes.",
-      "keyTopics": [
-        "Opportunity management",
-        "Lead management",
-        "Account and contact management",
-        "Products and pricebooks",
-        "Quotes and contracts",
-        "Sales processes and automation"
-      ],
-      "status": "completed"
+      "domain": "troubleshooting",
+      "file": "integration-debugging.md",
+      "path": "rag/troubleshooting/integration-debugging.md",
+      "whenToRetrieve": [],
+      "summary": "Systematic approaches to troubleshooting integration failures, identifying root causes, and resolving data synchronization issues. These methods focus on finding root causes rather than symptoms, using SOQL queries, history objects, and error analysis.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "Integration Debugging Methods"
     },
     {
-      "domain": "best-practices",
-      "file": "service-cloud-features.md",
-      "path": "rag/best-practices/service-cloud-features.md",
-      "whenToRetrieve": [
-        "Understanding Service Cloud features",
-        "Implementing service processes",
-        "Managing cases",
-        "Configuring knowledge and entitlements"
-      ],
-      "summary": "Guide to Service Cloud features. Covers cases, knowledge, entitlements, service processes, and service automation.",
-      "keyTopics": [
-        "Case management",
-        "Knowledge base",
-        "Entitlements and service level agreements",
-        "Service processes",
-        "Service automation"
-      ],
-      "status": "completed"
-    },
-    {
-      "domain": "best-practices",
-      "file": "complex-reporting.md",
-      "path": "rag/best-practices/complex-reporting.md",
-      "whenToRetrieve": [
-        "Deciding between Salesforce Reports, CRM Analytics, and Tableau for complex reporting needs",
-        "Understanding reporting tool capabilities",
-        "Planning reporting strategy"
-      ],
-      "summary": "Guide to complex reporting in Salesforce. Covers when to use Salesforce Reports vs CRM Analytics vs Tableau, capabilities of each tool, and decision frameworks for reporting tool selection.",
-      "keyTopics": [
-        "Salesforce Reports capabilities and limitations",
-        "CRM Analytics capabilities and use cases",
-        "Tableau capabilities and use cases",
-        "Decision framework for reporting tool selection",
-        "Reporting strategy planning"
-      ],
-      "status": "completed"
+      "domain": "troubleshooting",
+      "file": "lwc-accessibility-errors.md",
+      "path": "rag/troubleshooting/lwc-accessibility-errors.md",
+      "whenToRetrieve": [],
+      "summary": "This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies. All solutions follow WCAG 2.2 standards.",
+      "keyTopics": [],
+      "status": "completed",
+      "title": "LWC Accessibility Errors and Solutions"
     }
   ],
   "retrievalGuidelines": {
@@ -2669,32 +1427,32 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 104,
-    "completedFiles": 104,
+    "totalFiles": 139,
+    "completedFiles": 139,
     "plannedFiles": 0,
     "domains": 20,
     "domainsWithFiles": 20
   },
   "coverage": {
-    "architecture": 10,
-    "integrations": 6,
+    "architecture": 14,
+    "integrations": 7,
     "identity-sso": 1,
     "data-modeling": 9,
-    "security": 3,
-    "operations": 3,
-    "observability": 3,
-    "data-governance": 2,
-    "adoption": 2,
-    "project-methods": 4,
+    "security": 5,
+    "best-practices": 5,
     "development": 16,
     "troubleshooting": 6,
     "patterns": 1,
     "glossary": 1,
+    "project-methods": 4,
+    "operations": 3,
+    "observability": 3,
+    "data-governance": 2,
+    "adoption": 2,
     "testing": 6,
     "quick-start": 3,
     "api-reference": 5,
     "mcp-knowledge": 5,
-    "code-examples": 24,
-    "best-practices": 9
+    "code-examples": 41
   }
 }

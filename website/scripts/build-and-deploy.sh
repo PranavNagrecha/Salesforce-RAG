@@ -26,6 +26,14 @@ if [ -d "website/_layouts" ]; then
 fi
 if [ -d "website/assets" ]; then
   cp -r website/assets assets
+  # Create empty style.scss to avoid SCSS processing errors
+  mkdir -p assets/css
+  cat > assets/css/style.scss << 'SCSSEOF'
+---
+---
+
+/* Empty SCSS file - using main.css instead */
+SCSSEOF
 fi
 if [ -d "website/root" ]; then
   cp website/root/* .
@@ -33,6 +41,7 @@ fi
 
 # Step 4: Install Jekyll dependencies
 echo -e "${BLUE}📝 Step 4: Installing Jekyll dependencies...${NC}"
+bundle config set --local path 'vendor/bundle'
 bundle install
 
 # Step 5: Build Jekyll site
