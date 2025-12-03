@@ -1,0 +1,77 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'rag/**'
+      - 'index.md'
+      - '_config.yml'
+      - 'website/**'
+      - 'sitemap.xml'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Update website files
+        run: |
+          python scripts/update-website.py --verbose
+      
+      - name: Validate changes
+        run: |
+          python scripts/update-website.py --validate-only
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      
+      - name: Setup Jekyll
+        run: |
+          bundle install
+      
+      - name: Prepare Jekyll directories
+        run: |
+          # Copy layouts and assets to root (Jekyll requires them in root for GitHub Pages)
+          if [ -d "website/_layouts" ]; then
+            cp -r website/_layouts _layouts
+          fi
+          if [ -d "website/assets" ]; then
+            cp -r website/assets assets
+          fi
+      
+      - name: Build site
+        run: |
+          bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./_site
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
