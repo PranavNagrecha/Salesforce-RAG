@@ -320,7 +320,7 @@ if (fields.containsKey('CustomField__c')) {
 - Use `WITH SECURITY_ENFORCED` to catch FLS issues
 - Test queries in developer console first
 
-**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Referential Integrity</a>
+**Related Patterns**: <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Referential Integrity</a>
 
 ---
 

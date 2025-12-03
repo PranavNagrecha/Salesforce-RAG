@@ -339,5 +339,5 @@ static void testMethod() {
 - <a href="{{ '/rag/api-reference/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex design patterns
 - <a href="{{ '/rag/api-reference/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer code examples
 - <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
-- <a href="{{ '/rag/api-reference/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - SOQL query patterns
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - SOQL query patterns
 

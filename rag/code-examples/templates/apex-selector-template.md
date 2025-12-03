@@ -67,5 +67,5 @@ public with sharing class [ObjectName]Selector {
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/templates/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a>
 - [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
-- <a href="{{ '/rag/code-examples/templates/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>
 

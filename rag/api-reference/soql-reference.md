@@ -372,14 +372,14 @@ FROM Profile
 WHERE Id NOT IN (SELECT ProfileId FROM User WHERE IsActive = true)
 ```
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#maintenance-queries)
+**Related Patterns**: <a href="{{ '/rag/development/soql-query-patterns.html#maintenance-queries' | relative_url }}">SOQL Query Patterns</a>
 
 ---
 
 ## Related Patterns
 
-- <a href="{{ '/rag/api-reference/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Complete SOQL patterns and examples
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Complete SOQL patterns and examples
 - <a href="{{ '/rag/api-reference/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex query patterns
 - <a href="{{ '/rag/api-reference/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a> - Query optimization
-- [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer) - Selector pattern implementation
+- <a href="{{ '/rag/development/apex-patterns.html#selector-layer' | relative_url }}">Selector Layer</a> - Selector pattern implementation
 

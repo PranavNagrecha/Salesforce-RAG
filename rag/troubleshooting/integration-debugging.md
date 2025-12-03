@@ -24,7 +24,7 @@ Systematic approaches to troubleshooting integration failures, identifying root 
 - Familiarity with history objects and field tracking
 
 **Recommended Reading**:
-- <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query patterns for debugging
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query patterns for debugging
 - <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data validation patterns
 - <a href="{{ '/rag/troubleshooting/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
@@ -445,13 +445,13 @@ Avoid these methods when:
 - <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Systematic data validation between systems
 
 **Related Domains**:
-- <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query patterns for debugging
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query patterns for debugging
 - <a href="{{ '/rag/troubleshooting/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout error handling
 - <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 
 - <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Systematic data validation between systems
-- <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query patterns for debugging
+- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query patterns for debugging
 - <a href="{{ '/rag/troubleshooting/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout error handling
 - <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
