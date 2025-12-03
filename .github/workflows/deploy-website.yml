@@ -1,4 +1,5 @@
 name: Deploy Website
+# Auto-deploy on push to main
 
 on:
   push:
