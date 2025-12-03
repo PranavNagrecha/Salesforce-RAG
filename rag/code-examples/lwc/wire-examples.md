@@ -16,7 +16,7 @@ Wire services provide reactive data access in Lightning Web Components. The `@wi
 
 **Related Patterns**:
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
-- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - Lightning Data Service API reference
+- <a href="{{ '/rag/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - Lightning Data Service API reference
 - <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 
 ## Examples
@@ -402,6 +402,6 @@ export default class DynamicForm extends LightningElement {
 ## See Also
 
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - Lightning Data Service API reference
+- <a href="{{ '/rag/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - Lightning Data Service API reference
 - <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference
+- <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference

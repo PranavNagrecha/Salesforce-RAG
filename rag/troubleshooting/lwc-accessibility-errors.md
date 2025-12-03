@@ -14,7 +14,7 @@ permalink: /rag/troubleshooting/lwc-accessibility-errors.html
 This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies. All solutions follow WCAG 2.2 standards.
 
 **Related Patterns**:
-- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
 - <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
 - <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 
@@ -900,11 +900,11 @@ handleClose() {
 - <a href="{{ '/rag/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
 
 **Related Domains**:
-- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
 - <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
 - <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 
-- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
 - <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
 - <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 - <a href="{{ '/rag/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting

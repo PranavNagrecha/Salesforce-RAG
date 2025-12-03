@@ -16,7 +16,7 @@ Lightning Web Components (LWC) are modern, standards-based web components for bu
 
 **Related Patterns**:
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
-- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC API method signatures
+- <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC API method signatures
 
 ## Examples
 
@@ -271,7 +271,7 @@ export default class ContactEdit extends LightningElement {
 
 - <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Apex service methods called from LWC
 - <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/lwc/accessibility-examples.html' | relative_url }}">Accessibility Examples</a> - Accessible LWC patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference
+- <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference
 
 ## See Also
 

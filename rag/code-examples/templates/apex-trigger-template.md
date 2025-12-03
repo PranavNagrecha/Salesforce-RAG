@@ -82,7 +82,7 @@ trigger [ObjectName]Trigger on [ObjectName] (before insert, before update, after
 - Delegate to Service layer for complex workflows
 
 **Related Patterns**:
-- <a href="{{ '/rag/code-examples/templates/code-examples/apex/trigger-examples.html' | relative_url }}">Trigger Examples</a>
+- <a href="{{ '/rag/code-examples/apex/trigger-examples.html' | relative_url }}">Trigger Examples</a>
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a>
 - <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a>
 

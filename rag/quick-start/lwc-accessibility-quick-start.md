@@ -14,10 +14,10 @@ permalink: /rag/quick-start/lwc-accessibility-quick-start.html
 This quick-start guide provides step-by-step instructions for making Lightning Web Components accessible, following WCAG 2.2 standards and Salesforce best practices.
 
 **Related Patterns**:
-- <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
-- <a href="{{ '/rag/quick-start/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
-- <a href="{{ '/rag/quick-start/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
-- <a href="{{ '/rag/quick-start/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
+- <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
+- <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
+- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
 
 ## Quick Accessibility Checklist
 
@@ -594,18 +594,18 @@ export default class AccessibleModal extends LightningElement {
 
 ## Next Steps
 
-1. **Review Examples**: See <a href="{{ '/rag/quick-start/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> for complete code examples
-2. **Learn Guidelines**: Read <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> for WCAG 2.2 compliance
-3. **Test Your Components**: Follow <a href="{{ '/rag/quick-start/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> patterns
-4. **Fix Issues**: Use <a href="{{ '/rag/quick-start/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> for common errors
+1. **Review Examples**: See <a href="{{ '/rag/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> for complete code examples
+2. **Learn Guidelines**: Read <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> for WCAG 2.2 compliance
+3. **Test Your Components**: Follow <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> patterns
+4. **Fix Issues**: Use <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> for common errors
 
 ---
 
 ## Related Patterns
 
-- <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
-- <a href="{{ '/rag/quick-start/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
-- <a href="{{ '/rag/quick-start/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
-- <a href="{{ '/rag/quick-start/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
+- <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
+- <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
+- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
 - <a href="{{ '/rag/quick-start/lwc-quick-start.html' | relative_url }}">LWC Quick Start</a> - General LWC quick start
 
