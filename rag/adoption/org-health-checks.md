@@ -31,7 +31,7 @@ This guide covers org health check patterns for Salesforce, including technical 
 **Recommended Reading**:
 - <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
 - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource optimization
-- <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
+- <a href="{{ '/rag/observability/monitoring-and-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 
 ## Consensus Best Practices
 
