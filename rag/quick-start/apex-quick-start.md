@@ -270,25 +270,25 @@ private class ContactUpdateServiceTest {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [Apex Patterns](/rag/development/apex-patterns.html) - Complete Apex patterns
-   - [Service Layer Examples](/rag/code-examples/apex/service-layer-examples.html) - Service examples
-   - [Selector Layer Examples](/rag/code-examples/apex/selector-layer-examples.html) - Selector examples
+   - [Apex Patterns](development/apex-patterns.html) - Complete Apex patterns
+   - [Service Layer Examples](code-examples/apex/service-layer-examples.html) - Service examples
+   - [Selector Layer Examples](code-examples/apex/selector-layer-examples.html) - Selector examples
 
 2. **Explore Templates**:
-   - [Service Template](/rag/code-examples/templates/apex-service-template.html)
-   - [Selector Template](/rag/code-examples/templates/apex-selector-template.html)
-   - [Domain Template](/rag/code-examples/templates/apex-domain-template.html)
+   - [Service Template](code-examples/templates/apex-service-template.html)
+   - [Selector Template](code-examples/templates/apex-selector-template.html)
+   - [Domain Template](code-examples/templates/apex-domain-template.html)
 
 3. **Understand Best Practices**:
-   - [Error Handling](/rag/development/error-handling-and-logging.html)
-   - [Governor Limits](/rag/development/governor-limits-and-optimization.html)
-   - [Testing Patterns](/rag/testing/apex-testing-patterns.html)
+   - [Error Handling](development/error-handling-and-logging.html)
+   - [Governor Limits](development/governor-limits-and-optimization.html)
+   - [Testing Patterns](testing/apex-testing-patterns.html)
 
 ---
 
 ## Related Resources
 
-- [Apex Patterns](/rag/development/apex-patterns.html) - Complete Apex patterns
+- [Apex Patterns](development/apex-patterns.html) - Complete Apex patterns
 - [Code Examples](../code-examples) - Working code examples
-- [API Reference](/rag/api-reference/apex-api-reference.html) - API reference
+- [API Reference](api-reference/apex-api-reference.html) - API reference
 

@@ -24,10 +24,10 @@ Systematic approaches to reconciling data between Salesforce and external system
 - Familiarity with data quality concepts
 
 **Recommended Reading**:
-- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - External ID patterns
-- [Integration Debugging](/rag/troubleshooting/integration-debugging.html) - Debugging integration issues
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [Data Migration Patterns](/rag/data-modeling/data-migration-patterns.html) - Data validation patterns
+- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns
+- [Integration Debugging](troubleshooting/integration-debugging.html) - Debugging integration issues
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data validation patterns
 
 ## Reconciliation Patterns
 
@@ -428,16 +428,16 @@ Avoid reconciliation when:
 ## Related Patterns
 
 **See Also**:
-- [Integration Debugging](/rag/troubleshooting/integration-debugging.html) - Debugging integration issues
+- [Integration Debugging](troubleshooting/integration-debugging.html) - Debugging integration issues
 
 **Related Domains**:
-- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
-- [Data Migration Patterns](/rag/data-modeling/data-migration-patterns.html) - Data migration and validation
-- [Data Quality Stewardship](/rag/data-governance/data-quality-stewardship.html) - Data quality management
+- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
+- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration and validation
+- [Data Quality Stewardship](data-governance/data-quality-stewardship.html) - Data quality management
 
-- [Integration Debugging](/rag/troubleshooting/integration-debugging.html) - Debugging integration issues
-- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
-- [Data Migration Patterns](/rag/data-modeling/data-migration-patterns.html) - Data validation patterns
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [SIS Sync Patterns](/rag/integrations/sis-sync-patterns.html) - High-volume synchronization patterns
+- [Integration Debugging](troubleshooting/integration-debugging.html) - Debugging integration issues
+- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
+- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data validation patterns
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [SIS Sync Patterns](integrations/sis-sync-patterns.html) - High-volume synchronization patterns
 

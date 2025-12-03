@@ -8,8 +8,8 @@
 Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce. These examples demonstrate common LWC patterns for data access, user interactions, and business logic.
 
 **Related Patterns**:
-- [LWC Patterns](/rag/code-examples/development/lwc-patterns.html) - LWC development patterns and best practices
-- [LWC API Reference](/rag/code-examples/api-reference/lwc-api-reference.html) - LWC API method signatures
+- [LWC Patterns](code-examples/development/lwc-patterns.html) - LWC development patterns and best practices
+- [LWC API Reference](code-examples/api-reference/lwc-api-reference.html) - LWC API method signatures
 
 ## Examples
 
@@ -174,7 +174,7 @@ export default class ContactAction extends LightningElement {
 **Pattern**: Collecting user input and updating records
 **Use Case**: Allowing users to edit record data
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](/rag/code-examples/development/lwc-patterns.html)
+**Related Patterns**: [LWC Patterns](code-examples/development/lwc-patterns.html)
 
 **Problem**:
 You need to allow users to edit record fields in a custom component.
@@ -262,13 +262,13 @@ export default class ContactEdit extends LightningElement {
 
 ## Related Examples
 
-- [Service Layer Examples](/rag/code-examples/lwc/apex/service-layer-examples.html) - Apex service methods called from LWC
-- [Accessibility Examples](/rag/code-examples/lwc/lwc/accessibility-examples.html) - Accessible LWC patterns
-- [LWC API Reference](/rag/code-examples/api-reference/lwc-api-reference.html) - Complete LWC API reference
+- [Service Layer Examples](code-examples/lwc/apex/service-layer-examples.html) - Apex service methods called from LWC
+- [Accessibility Examples](code-examples/lwc/lwc/accessibility-examples.html) - Accessible LWC patterns
+- [LWC API Reference](code-examples/api-reference/lwc-api-reference.html) - Complete LWC API reference
 
 ## See Also
 
-- [LWC Patterns](/rag/code-examples/development/lwc-patterns.html) - Complete LWC development patterns
-- [LWC Best Practices](/rag/code-examples/mcp-knowledge/lwc-best-practices.html) - Official LWC best practices
-- [LWC Development Guide](/rag/code-examples/mcp-knowledge/lwc-development-guide.html) - LWC development guidance
+- [LWC Patterns](code-examples/development/lwc-patterns.html) - Complete LWC development patterns
+- [LWC Best Practices](code-examples/mcp-knowledge/lwc-best-practices.html) - Official LWC best practices
+- [LWC Development Guide](code-examples/mcp-knowledge/lwc-development-guide.html) - LWC development guidance
 

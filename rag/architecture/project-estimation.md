@@ -416,10 +416,10 @@ Think of estimation as a communication tool, not just a prediction. Good estimat
 ## Related Patterns
 
 **See Also**:
-- [Stakeholder Communication](/rag/architecture/stakeholder-communication.html) - Communicating with stakeholders
-- [Team Leadership](/rag/architecture/team-leadership.html) - Leading development teams
+- [Stakeholder Communication](architecture/stakeholder-communication.html) - Communicating with stakeholders
+- [Team Leadership](architecture/team-leadership.html) - Leading development teams
 
 **Related Domains**:
-- [Delivery Framework](/rag/project-methods/delivery-framework.html) - Sprint-based delivery approach
-- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Testing time estimation
+- [Delivery Framework](project-methods/delivery-framework.html) - Sprint-based delivery approach
+- [Testing Strategy](project-methods/testing-strategy.html) - Testing time estimation
 

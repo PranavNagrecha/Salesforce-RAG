@@ -11,7 +11,7 @@ Complete, working code examples organized by category. All examples are copy-pas
 
 ## Browse Code Examples
 
-For complete code examples, see the [Code Examples section](/rag/code-examples/code-examples-index.html) in the knowledge index.
+For complete code examples, see the [Code Examples section](code-examples/code-examples-index.html) in the knowledge index.
 
 The code examples directory contains:
 
@@ -23,7 +23,7 @@ The code examples directory contains:
 
 ## Quick Links
 
-- 📖 **[Complete Knowledge Index](/rag/rag-index.html)** - Browse all knowledge files by domain
-- 📋 **[JSON Metadata](/rag/rag-library.json)** - Machine-readable metadata for RAG systems
-- 💡 **[Code Examples](/rag/code-examples/code-examples-index.html)** - Complete, working code examples
+- 📖 **[Complete Knowledge Index](rag-index.html)** - Browse all knowledge files by domain
+- 📋 **[JSON Metadata](rag-library.json)** - Machine-readable metadata for RAG systems
+- 💡 **[Code Examples](code-examples/code-examples-index.html)** - Complete, working code examples
 

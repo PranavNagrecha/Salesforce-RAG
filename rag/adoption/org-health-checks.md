@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers org health check patterns for Salesforce, including technical debt triage, baseline audits, and remediation playbooks. These patterns are essential for maintaining org health, identifying optimization opportunities, and ensuring long-term system sustainability.
 
 **Related Patterns**:
-- [User Readiness](/rag/adoption/user-readiness.html) - User training and adoption
-- [Performance Tuning](/rag/observability/performance-tuning.html) - Performance optimization
-- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Resource optimization
+- [User Readiness](adoption/user-readiness.html) - User training and adoption
+- [Performance Tuning](observability/performance-tuning.html) - Performance optimization
+- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Resource optimization
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ This guide covers org health check patterns for Salesforce, including technical 
 - Familiarity with governance and compliance requirements
 
 **Recommended Reading**:
-- [Performance Tuning](/rag/observability/performance-tuning.html) - Performance optimization patterns
-- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Resource optimization
-- [Monitoring and Alerting](/rag/observability/monitoring-alerting.html) - Monitoring patterns
+- [Performance Tuning](observability/performance-tuning.html) - Performance optimization patterns
+- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Resource optimization
+- [Monitoring and Alerting](observability/monitoring-alerting.html) - Monitoring patterns
 
 ## Consensus Best Practices
 
@@ -333,8 +333,8 @@ This guide covers org health check patterns for Salesforce, including technical 
 
 ## Related Patterns
 
-- [User Readiness](/rag/adoption/user-readiness.html) - User training and adoption
-- [Performance Tuning](/rag/observability/performance-tuning.html) - Performance optimization
-- [Governor Limits and Optimization](/rag/development/governor-limits-and-optimization.html) - Resource optimization
-- [Monitoring and Alerting](/rag/observability/monitoring-alerting.html) - System monitoring patterns
+- [User Readiness](adoption/user-readiness.html) - User training and adoption
+- [Performance Tuning](observability/performance-tuning.html) - Performance optimization
+- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Resource optimization
+- [Monitoring and Alerting](observability/monitoring-alerting.html) - System monitoring patterns
 

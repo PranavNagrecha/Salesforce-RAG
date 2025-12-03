@@ -88,7 +88,10 @@ git push
 ### Link Rules
 
 1. **Use Jekyll Filters**: Always use `{{ '/path' | relative_url }}` for internal links in HTML/templates
-2. **Absolute Paths in Markdown**: In markdown files (like rag-index.md), use absolute paths starting with `/` (e.g., `/rag/adoption/org-health-checks.html`)
+2. **Relative Paths in Markdown**: In markdown files (like rag-index.md and all content files), use **relative paths** (e.g., `adoption/org-health-checks.html`)
+   - **CRITICAL**: Jekyll's kramdown markdown processor does NOT apply baseurl to absolute paths in markdown links
+   - Relative paths work correctly: `adoption/org-health-checks.html` resolves to `/Salesforce-RAG/rag/adoption/org-health-checks.html`
+   - Absolute paths like `/rag/...` will NOT work - they become `/rag/...` without baseurl
 3. **Baseurl Handling**: All internal links must work with `baseurl: /Salesforce-RAG`
 4. **File Extensions**: Convert `.md` to `.html` in all links
 5. **Anchor Format**: Section anchors use lowercase with hyphens (e.g., `#architecture-patterns`, `#adoption`, `#api-reference`)
@@ -137,9 +140,14 @@ git push
 
 ### Internal Links
 
-1. **Absolute Paths**: Use absolute paths starting with `/rag/` in markdown files (e.g., `/rag/adoption/org-health-checks.html`)
+1. **Relative Paths Required**: Use **relative paths** in markdown files (e.g., `adoption/org-health-checks.html`)
+   - **IMPORTANT**: Jekyll's kramdown does NOT apply baseurl to absolute paths in markdown links
+   - ✅ Correct: `adoption/org-health-checks.html` (relative path)
+   - ✅ Correct: `../project-methods/delivery-framework.html` (relative with parent)
+   - ❌ Wrong: `/rag/adoption/org-health-checks.html` (absolute path - won't work with baseurl)
+   - ❌ Wrong: `rag/adoption/org-health-checks.html` (absolute path without leading / - still wrong)
 2. **HTML Extension**: Always use `.html` extension (not `.md`)
-3. **Baseurl Handling**: Jekyll automatically handles baseurl for absolute paths starting with `/`
+3. **Baseurl Handling**: Jekyll automatically resolves relative paths with baseurl correctly
 4. **Anchor Links**: Use lowercase with hyphens for section anchors (e.g., `#adoption`, `#architecture-patterns`)
    - Section "Architecture Patterns" → anchor `#architecture-patterns`
    - Section "API Reference" → anchor `#api-reference`
@@ -149,10 +157,11 @@ git push
 
 ### In rag-index.md
 
-1. **Absolute Paths Required**: All links must use absolute paths starting with `/rag/`
-   - ✅ Correct: `/rag/adoption/org-health-checks.html`
-   - ❌ Wrong: `rag/adoption/org-health-checks.html` (relative path)
-   - ❌ Wrong: `adoption/org-health-checks.html` (relative path)
+1. **Relative Paths Required**: All links must use **relative paths** (rag-index.md is in rag/ folder)
+   - ✅ Correct: `adoption/org-health-checks.html` (relative from rag-index.md location)
+   - ✅ Correct: `api-reference/apex-api-reference.html` (relative path)
+   - ❌ Wrong: `/rag/adoption/org-health-checks.html` (absolute path - kramdown doesn't apply baseurl)
+   - ❌ Wrong: `rag/adoption/org-health-checks.html` (absolute path without leading /)
 2. **HTML Extension**: Always use `.html` extension (Jekyll converts `.md` to `.html`)
 3. **Anchor Links**: Section headings automatically get anchor IDs
    - Format: Section name → lowercase with hyphens

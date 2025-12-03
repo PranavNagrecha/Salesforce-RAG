@@ -411,9 +411,9 @@ When evaluating Salesforce products, always ask:
 ## Related Patterns
 
 **See Also**:
-- [Org Edition Selection](/rag/architecture/org-edition-selection.html) - Edition selection framework
-- [User License Selection](/rag/architecture/user-license-selection.html) - License type selection patterns
-- [Salesforce Pricing Negotiation](/rag/architecture/salesforce-pricing-negotiation.html) - Pricing and negotiation strategies
-- [Portal Architecture](/rag/architecture/portal-architecture.html) - Experience Cloud evaluation
-- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - MuleSoft and Dell Boomi evaluation
+- [Org Edition Selection](architecture/org-edition-selection.html) - Edition selection framework
+- [User License Selection](architecture/user-license-selection.html) - License type selection patterns
+- [Salesforce Pricing Negotiation](architecture/salesforce-pricing-negotiation.html) - Pricing and negotiation strategies
+- [Portal Architecture](architecture/portal-architecture.html) - Experience Cloud evaluation
+- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - MuleSoft and Dell Boomi evaluation
 

@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Robust error handling ensures applications gracefully handle failures and provide meaningful feedback. These examples demonstrate try-catch patterns, custom exceptions, retry logic, error logging, and user-friendly error messages.
 
 **Related Patterns**:
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Comprehensive error handling framework
-- [Logging Examples](/rag/code-examples/utilities/logging-examples.html) - Logging patterns
-- [Locking and Concurrency Strategies](/rag/development/locking-and-concurrency-strategies.html) - Retry patterns
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Comprehensive error handling framework
+- [Logging Examples](code-examples/utilities/logging-examples.html) - Logging patterns
+- [Locking and Concurrency Strategies](development/locking-and-concurrency-strategies.html) - Retry patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Robust error handling ensures applications gracefully handle failures and provid
 **Pattern**: Try-catch error handling
 **Use Case**: Handling exceptions in Apex code
 **Complexity**: Basic
-**Related Patterns**: [Error Handling and Logging](/rag/development/error-handling-and-logging.html)
+**Related Patterns**: [Error Handling and Logging](development/error-handling-and-logging.html)
 
 **Problem**:
 You need to handle exceptions gracefully in your Apex code.
@@ -175,7 +175,7 @@ public with sharing class ContactService {
 **Pattern**: Retry logic with exponential backoff
 **Use Case**: Handling transient failures (e.g., UNABLE_TO_LOCK_ROW)
 **Complexity**: Intermediate
-**Related Patterns**: [Locking and Concurrency Strategies](/rag/development/locking-and-concurrency-strategies.html)
+**Related Patterns**: [Locking and Concurrency Strategies](development/locking-and-concurrency-strategies.html)
 
 **Problem**:
 You need to retry operations that may fail due to transient errors.
@@ -306,7 +306,7 @@ List<Id> result = (List<Id>) RetryService.retryWithBackoff(new RetryService.Retr
 **Pattern**: Retrying operations using Queueable
 **Use Case**: Retrying operations asynchronously
 **Complexity**: Intermediate
-**Related Patterns**: [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html)
+**Related Patterns**: [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html)
 
 **Problem**:
 You need to retry operations asynchronously without blocking the current transaction.
@@ -433,12 +433,12 @@ System.enqueueJob(new QueueableRetryService('updateContacts', params));
 
 ## Related Examples
 
-- [Logging Examples](/rag/code-examples/utilities/logging-examples.html) - Logging patterns
-- [Validation Examples](/rag/code-examples/utilities/validation-examples.html) - Validation patterns
+- [Logging Examples](code-examples/utilities/logging-examples.html) - Logging patterns
+- [Validation Examples](code-examples/utilities/validation-examples.html) - Validation patterns
 
 ## See Also
 
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Comprehensive error handling framework
-- [Locking and Concurrency Strategies](/rag/development/locking-and-concurrency-strategies.html) - Retry patterns
-- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Async patterns
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Comprehensive error handling framework
+- [Locking and Concurrency Strategies](development/locking-and-concurrency-strategies.html) - Retry patterns
+- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Async patterns
 

@@ -94,6 +94,6 @@ public with sharing class [ObjectName]Domain {
 - Add business rules as needed
 
 **Related Patterns**:
-- [Domain Layer Examples](/rag/code-examples/apex/domain-layer-examples.html)
+- [Domain Layer Examples](code-examples/apex/domain-layer-examples.html)
 - [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
 

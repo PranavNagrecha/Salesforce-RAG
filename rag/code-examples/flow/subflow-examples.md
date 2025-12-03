@@ -21,9 +21,9 @@ Subflows are reusable flow components that can be called from other Flows or Ape
 ⚠️ **Note**: Process Builder is deprecated - use Record-Triggered Flows instead. Subflows can be called from Record-Triggered Flows.
 
 **Related Patterns**:
-- [Flow Patterns](/rag/code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Record-Triggered Examples](/rag/code-examples/flow/record-triggered-examples.html) - Automated flow patterns
-- [Screen Flow Examples](/rag/code-examples/flow/screen-flow-examples.html) - User interaction flows
+- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
+- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Automated flow patterns
+- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flows
 
 ## Examples
 
@@ -391,10 +391,10 @@ Design Subflows for reuse:
 
 ## Related Examples
 
-- [Record-Triggered Examples](/rag/code-examples/flow/record-triggered-examples.html) - Automated flow patterns
-- [Screen Flow Examples](/rag/code-examples/flow/screen-flow-examples.html) - User interaction flows
+- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Automated flow patterns
+- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flows
 
 ## See Also
 
-- [Flow Patterns](/rag/code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Error Handling and Logging](/rag/code-examples/development/error-handling-and-logging.html) - Error handling patterns
+- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
+- [Error Handling and Logging](code-examples/development/error-handling-and-logging.html) - Error handling patterns

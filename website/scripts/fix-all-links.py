@@ -50,11 +50,18 @@ def fix_links_in_file(file_path: Path):
         if "{{" in link_url or "|" in link_url:
             return match.group(0)
         
-        # Skip if already absolute path starting with /rag/
+        # Skip if already absolute path starting with /rag/ - convert to relative
         if link_url.startswith("/rag/"):
-            return match.group(0)
+            # Convert absolute path to relative path
+            # /rag/adoption/org-health-checks.html -> adoption/org-health-checks.html
+            relative_path = link_url[5:]  # Remove "/rag/" prefix
+            # Convert .md to .html if needed
+            if relative_path.endswith(".md"):
+                relative_path = relative_path[:-3] + ".html"
+            modified = True
+            return f"[{link_text}]({relative_path})"
         
-        # Convert relative path to absolute path
+        # Keep relative paths as-is (they work correctly with Jekyll baseurl)
         if link_url.endswith(".html") or link_url.endswith(".md"):
             # Handle relative paths
             if not link_url.startswith("/"):

@@ -368,11 +368,11 @@ Think of governance as enabling quality, security, and sustainability, not const
 ## Related Patterns
 
 **See Also**:
-- [Org Strategy](/rag/architecture/org-strategy.html) - Org structure and governance implications
-- [Project Estimation](/rag/architecture/project-estimation.html) - Project planning and governance
+- [Org Strategy](architecture/org-strategy.html) - Org structure and governance implications
+- [Project Estimation](architecture/project-estimation.html) - Project planning and governance
 
 **Related Domains**:
-- [CI/CD Patterns](/rag/operations/cicd-patterns.html) - Deployment and change management
-- [Release Governance](/rag/operations/release-governance.html) - Release approval and risk management
-- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Quality assurance and testing governance
+- [CI/CD Patterns](operations/cicd-patterns.html) - Deployment and change management
+- [Release Governance](operations/release-governance.html) - Release approval and risk management
+- [Testing Strategy](project-methods/testing-strategy.html) - Quality assurance and testing governance
 

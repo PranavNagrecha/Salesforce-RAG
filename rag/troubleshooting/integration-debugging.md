@@ -24,10 +24,10 @@ Systematic approaches to troubleshooting integration failures, identifying root 
 - Familiarity with history objects and field tracking
 
 **Recommended Reading**:
-- [SOQL Query Patterns](/rag/development/soql-query-patterns.html) - Query patterns for debugging
-- [Data Reconciliation](/rag/troubleshooting/data-reconciliation.html) - Data validation patterns
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [SOQL Query Patterns](development/soql-query-patterns.html) - Query patterns for debugging
+- [Data Reconciliation](troubleshooting/data-reconciliation.html) - Data validation patterns
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
 
 ## SOQL Debugging Patterns
 
@@ -442,17 +442,17 @@ Avoid these methods when:
 ## Related Patterns
 
 **See Also**:
-- [Data Reconciliation](/rag/troubleshooting/data-reconciliation.html) - Systematic data validation between systems
+- [Data Reconciliation](troubleshooting/data-reconciliation.html) - Systematic data validation between systems
 
 **Related Domains**:
-- [SOQL Query Patterns](/rag/development/soql-query-patterns.html) - Query patterns for debugging
-- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - HTTP callout error handling
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [SOQL Query Patterns](development/soql-query-patterns.html) - Query patterns for debugging
+- [Callout Best Practices](integrations/callout-best-practices.html) - HTTP callout error handling
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
 
-- [Data Reconciliation](/rag/troubleshooting/data-reconciliation.html) - Systematic data validation between systems
-- [SOQL Query Patterns](/rag/development/soql-query-patterns.html) - Query patterns for debugging
-- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - HTTP callout error handling
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Data Reconciliation](troubleshooting/data-reconciliation.html) - Systematic data validation between systems
+- [SOQL Query Patterns](development/soql-query-patterns.html) - Query patterns for debugging
+- [Callout Best Practices](integrations/callout-best-practices.html) - HTTP callout error handling
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
 

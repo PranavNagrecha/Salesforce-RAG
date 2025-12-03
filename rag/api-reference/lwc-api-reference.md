@@ -55,7 +55,7 @@ handleSuccess() {
 }
 ```
 
-**Related Patterns**: [LWC Patterns](/rag/development/lwc-patterns.html), [Design System Patterns](/rag/mcp-knowledge/design-system-patterns.html)
+**Related Patterns**: [LWC Patterns](development/lwc-patterns.html), [Design System Patterns](mcp-knowledge/design-system-patterns.html)
 
 ---
 
@@ -95,7 +95,7 @@ export default class MyComponent extends NavigationMixin(LightningElement) {
 }
 ```
 
-**Related Patterns**: [LWC Patterns](/rag/development/lwc-patterns.html)
+**Related Patterns**: [LWC Patterns](development/lwc-patterns.html)
 
 ---
 
@@ -190,7 +190,7 @@ wiredObjectInfo({ data, error }) {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html), [LWC Patterns](/rag/development/lwc-patterns.html)
+**Related Patterns**: [LDS Patterns](mcp-knowledge/lds-patterns.html), [LWC Patterns](development/lwc-patterns.html)
 
 ---
 
@@ -227,7 +227,7 @@ wiredAccounts({ data, error }) {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html)
+**Related Patterns**: [LDS Patterns](mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -302,7 +302,7 @@ disconnectedCallback() {
 }
 ```
 
-**Related Patterns**: [LWC Best Practices](/rag/mcp-knowledge/lwc-best-practices.html)
+**Related Patterns**: [LWC Best Practices](mcp-knowledge/lwc-best-practices.html)
 
 ---
 
@@ -343,7 +343,7 @@ export default class AccountViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html), [Referential Integrity](/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity)
+**Related Patterns**: [LDS Patterns](mcp-knowledge/lds-patterns.html), [Referential Integrity](/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity)
 
 ---
 
@@ -417,7 +417,7 @@ export default class MyComponent extends LightningElement {
 - Handle both `data` and `error` in wire functions
 - Use `refreshApex()` after mutations
 
-**Related Patterns**: [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html), [LWC Patterns](/rag/development/lwc-patterns.html)
+**Related Patterns**: [LDS Patterns](mcp-knowledge/lds-patterns.html), [LWC Patterns](development/lwc-patterns.html)
 
 ---
 
@@ -456,8 +456,8 @@ export default class MyComponent extends LightningElement {
 
 ## Related Patterns
 
-- [LWC Patterns](/rag/development/lwc-patterns.html) - Complete LWC patterns
-- [LWC Best Practices](/rag/mcp-knowledge/lwc-best-practices.html) - LWC best practices
-- [LDS Patterns](/rag/mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
-- [Design System Patterns](/rag/mcp-knowledge/design-system-patterns.html) - SLDS patterns
+- [LWC Patterns](development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](mcp-knowledge/lwc-best-practices.html) - LWC best practices
+- [LDS Patterns](mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [Design System Patterns](mcp-knowledge/design-system-patterns.html) - SLDS patterns
 

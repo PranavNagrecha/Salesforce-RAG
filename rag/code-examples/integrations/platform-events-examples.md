@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems. These examples demonstrate publishing events from Apex and Flows, subscribing to events, handling event payloads, and integrating with external event buses.
 
 **Related Patterns**:
-- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Event-driven architecture patterns
-- [Change Data Capture Examples](/rag/code-examples/integrations/cdc-examples.html) - CDC event patterns
-- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Integration patterns
+- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Event-driven architecture patterns
+- [Change Data Capture Examples](code-examples/integrations/cdc-examples.html) - CDC event patterns
+- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - Integration patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Platform Events enable event-driven architecture in Salesforce, allowing decoupl
 **Pattern**: Publishing Platform Events from Apex code
 **Use Case**: Publishing business events from Apex triggers or services
 **Complexity**: Basic
-**Related Patterns**: [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html)
+**Related Patterns**: [Event-Driven Architecture](architecture/event-driven-architecture.html)
 
 **Problem**:
 You need to publish Platform Events when records are created or updated to notify external systems.
@@ -142,7 +142,7 @@ trigger ApplicationTrigger on Application__c (after insert, after update) {
 **Pattern**: Publishing Platform Events declaratively from Flow
 **Use Case**: Publishing events without code
 **Complexity**: Basic
-**Related Patterns**: [Flow Patterns](/rag/development/flow-patterns.html)
+**Related Patterns**: [Flow Patterns](development/flow-patterns.html)
 
 **Problem**:
 You need to publish Platform Events from a Record-Triggered Flow when records are created or updated.
@@ -177,7 +177,7 @@ You need to publish Platform Events from a Record-Triggered Flow when records ar
 **Pattern**: Subscribing to Platform Events using Apex triggers
 **Use Case**: Processing events internally within Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html)
+**Related Patterns**: [Event-Driven Architecture](architecture/event-driven-architecture.html)
 
 **Problem**:
 You need to subscribe to Platform Events and process them (e.g., logging, triggering workflows).
@@ -260,7 +260,7 @@ trigger ApplicationEventTrigger on Application_Submitted__e (after insert) {
 **Pattern**: Designing self-contained event payloads
 **Use Case**: Enabling event subscribers to process events without querying Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html)
+**Related Patterns**: [Event-Driven Architecture](architecture/event-driven-architecture.html)
 
 **Problem**:
 You need to design event payloads that include all necessary context for subscribers.
@@ -338,7 +338,7 @@ public with sharing class EnrollmentEventService {
 **Pattern**: Handling event publication and processing errors
 **Use Case**: Ensuring reliable event delivery and processing
 **Complexity**: Advanced
-**Related Patterns**: [Error Handling and Logging](/rag/development/error-handling-and-logging.html)
+**Related Patterns**: [Error Handling and Logging](development/error-handling-and-logging.html)
 
 **Problem**:
 You need to handle errors when publishing or processing Platform Events.
@@ -472,13 +472,13 @@ public with sharing class EventErrorHandler {
 
 ## Related Examples
 
-- [Change Data Capture Examples](/rag/code-examples/integrations/cdc-examples.html) - CDC event patterns
-- [REST API Examples](/rag/code-examples/integrations/rest-api-examples.html) - REST API patterns
-- [Integration Examples](/rag/code-examples/apex/integration-examples.html) - Integration patterns
+- [Change Data Capture Examples](code-examples/integrations/cdc-examples.html) - CDC event patterns
+- [REST API Examples](code-examples/integrations/rest-api-examples.html) - REST API patterns
+- [Integration Examples](code-examples/apex/integration-examples.html) - Integration patterns
 
 ## See Also
 
-- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Event-driven architecture patterns
-- [Integration Platform Patterns](/rag/integrations/integration-platform-patterns.html) - Integration patterns
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
+- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Event-driven architecture patterns
+- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - Integration patterns
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
 

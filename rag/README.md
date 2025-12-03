@@ -87,11 +87,11 @@ Files are tagged with levels to indicate target audience:
 
 ## Contributing
 
-See [CONTRIBUTING.md](/rag/CONTRIBUTING.html) for contribution guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.html) for contribution guidelines.
 
 ## Maintenance
 
-See [MAINTENANCE.md](/rag/MAINTENANCE.html) for maintenance procedures and schedules.
+See [MAINTENANCE.md](MAINTENANCE.html) for maintenance procedures and schedules.
 
 ## License
 

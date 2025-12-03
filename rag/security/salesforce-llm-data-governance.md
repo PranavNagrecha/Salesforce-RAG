@@ -26,10 +26,10 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 - Familiarity with PII/PHI handling and data masking
 
 **Recommended Reading**:
-- [Salesforce to LLM Data Pipelines](/rag/integrations/salesforce-to-llm-data-pipelines.html) - Data pipeline patterns
-- [Data Residency & Compliance](/rag/data-governance/data-residency-compliance.html) - Compliance patterns
-- [Permission Set Architecture](/rag/security/permission-set-architecture.html) - Access control patterns
-- [Sharing Fundamentals](/rag/security/sharing-fundamentals.html) - Security and sharing model
+- [Salesforce to LLM Data Pipelines](integrations/salesforce-to-llm-data-pipelines.html) - Data pipeline patterns
+- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Compliance patterns
+- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
+- [Sharing Fundamentals](security/sharing-fundamentals.html) - Security and sharing model
 
 ## Data Scoping Principles
 
@@ -479,7 +479,7 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 
 ## Related Patterns
 
-- [Salesforce to LLM Data Pipelines](/rag/integrations/salesforce-to-llm-data-pipelines.html) - Data pipeline patterns
-- [Data Residency & Compliance](/rag/data-governance/data-residency-compliance.html) - Compliance patterns
-- [Permission Set Architecture](/rag/security/permission-set-architecture.html) - Access control patterns
+- [Salesforce to LLM Data Pipelines](integrations/salesforce-to-llm-data-pipelines.html) - Data pipeline patterns
+- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Compliance patterns
+- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
 

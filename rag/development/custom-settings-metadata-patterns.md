@@ -18,8 +18,8 @@ last_reviewed: "2025-01-XX"
 This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.
 
 **Related Patterns**:
-- [Apex Patterns](/rag/development/apex-patterns.html) - Apex development patterns
-- [Integration Patterns](/rag/integrations/integration-platform-patterns.html) - Integration configuration
+- [Apex Patterns](development/apex-patterns.html) - Apex development patterns
+- [Integration Patterns](integrations/integration-platform-patterns.html) - Integration configuration
 
 ## Prerequisites
 
@@ -30,8 +30,8 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 - Familiarity with custom objects and fields
 
 **Recommended Reading**:
-- [Apex Patterns](/rag/development/apex-patterns.html) - Apex development patterns
-- [Deployment Patterns](/rag/project-methods/deployment-patterns.html) - Deployment strategies
+- [Apex Patterns](development/apex-patterns.html) - Apex development patterns
+- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment strategies
 
 ## Consensus Best Practices
 
@@ -263,10 +263,10 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](/rag/development/apex-patterns.html) - Apex development patterns
+- [Apex Patterns](development/apex-patterns.html) - Apex development patterns
 
 **Related Domains**:
-- [Integration Patterns](/rag/integrations/integration-platform-patterns.html) - Integration configuration
-- [Custom Settings Examples](/rag/code-examples/utilities/custom-settings-examples.html) - Custom Settings code examples
-- [Custom Metadata Examples](/rag/code-examples/utilities/custom-metadata-examples.html) - Custom Metadata code examples
+- [Integration Patterns](integrations/integration-platform-patterns.html) - Integration configuration
+- [Custom Settings Examples](code-examples/utilities/custom-settings-examples.html) - Custom Settings code examples
+- [Custom Metadata Examples](code-examples/utilities/custom-metadata-examples.html) - Custom Metadata code examples
 

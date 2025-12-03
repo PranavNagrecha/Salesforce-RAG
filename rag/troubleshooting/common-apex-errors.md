@@ -129,7 +129,7 @@ public static void processContactsInBatches() {
 - Avoid long-running transactions
 - Use Platform Events for decoupled processing
 
-**Related Patterns**: [Locking and Concurrency](/rag/development/locking-and-concurrency-strategies.html)
+**Related Patterns**: [Locking and Concurrency](development/locking-and-concurrency-strategies.html)
 
 ---
 
@@ -320,7 +320,7 @@ if (fields.containsKey('CustomField__c')) {
 - Use `WITH SECURITY_ENFORCED` to catch FLS issues
 - Test queries in developer console first
 
-**Related Patterns**: [SOQL Patterns](/rag/development/soql-query-patterns.html), [LDS Referential Integrity](/rag/mcp-knowledge/lds-patterns.html)
+**Related Patterns**: [SOQL Patterns](development/soql-query-patterns.html), [LDS Referential Integrity](mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -450,7 +450,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor governor limits proactively
 
-**Related Patterns**: [Governor Limits](/rag/development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
+**Related Patterns**: [Governor Limits](development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
 
 ---
 
@@ -512,7 +512,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Governor Limits](/rag/development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
+**Related Patterns**: [Governor Limits](development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
 
 ---
 
@@ -694,16 +694,16 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 ## Related Patterns
 
 **See Also**:
-- [Governor Limit Errors](/rag/troubleshooting/governor-limit-errors.html) - Governor limit-specific errors
+- [Governor Limit Errors](troubleshooting/governor-limit-errors.html) - Governor limit-specific errors
 
 **Related Domains**:
-- [Locking and Concurrency](/rag/development/locking-and-concurrency-strategies.html) - Row locking patterns
-- [Error Handling](/rag/development/error-handling-and-logging.html) - Error handling patterns
-- [Governor Limits](/rag/development/governor-limits-and-optimization.html) - Limit management
-- [Apex Patterns](/rag/development/apex-patterns.html) - Apex best practices
+- [Locking and Concurrency](development/locking-and-concurrency-strategies.html) - Row locking patterns
+- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
+- [Governor Limits](development/governor-limits-and-optimization.html) - Limit management
+- [Apex Patterns](development/apex-patterns.html) - Apex best practices
 
-- [Locking and Concurrency](/rag/development/locking-and-concurrency-strategies.html) - Row locking patterns
-- [Error Handling](/rag/development/error-handling-and-logging.html) - Error handling patterns
-- [Governor Limits](/rag/development/governor-limits-and-optimization.html) - Limit management
-- [Apex Patterns](/rag/development/apex-patterns.html) - Apex best practices
+- [Locking and Concurrency](development/locking-and-concurrency-strategies.html) - Row locking patterns
+- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
+- [Governor Limits](development/governor-limits-and-optimization.html) - Limit management
+- [Apex Patterns](development/apex-patterns.html) - Apex best practices
 

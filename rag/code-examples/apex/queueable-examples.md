@@ -9,7 +9,7 @@ Queueable Apex is used for lightweight async processing, chaining jobs, and perf
 
 **Related Patterns**:
 - [Asynchronous Apex Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#queueable-apex-patterns)
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html)
+- [Error Handling and Logging](development/error-handling-and-logging.html)
 
 ## Examples
 
@@ -615,7 +615,7 @@ Integer queueDepth = QueueableJobMonitor.getQueueDepth();
 
 ## Related Patterns
 
-- [Asynchronous Apex Patterns](/rag/development/asynchronous-apex-patterns.html) - Complete async patterns guide
-- [Error Handling and Logging](/rag/development/error-handling-and-logging.html) - Error handling patterns
-- [Queueable Template](/rag/code-examples/templates/apex-queueable-template.html) - Queueable Apex template
+- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Complete async patterns guide
+- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
+- [Queueable Template](code-examples/templates/apex-queueable-template.html) - Queueable Apex template
 

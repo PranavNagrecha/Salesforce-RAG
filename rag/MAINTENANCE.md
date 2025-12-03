@@ -260,7 +260,7 @@ This document outlines maintenance procedures for the Salesforce RAG repository 
 ## Questions?
 
 For questions about maintenance procedures, refer to:
-- [Style Guide](/rag/../website/meta/style-guide.html)
-- [Terminology Mapping](/rag/../website/meta/terminology-mapping.html)
-- [Contributing Guidelines](/rag/CONTRIBUTING.html)
+- [Style Guide](../website/meta/style-guide.html)
+- [Terminology Mapping](../website/meta/terminology-mapping.html)
+- [Contributing Guidelines](CONTRIBUTING.html)
 

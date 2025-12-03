@@ -24,10 +24,10 @@ Integration platforms serve as middleware between Salesforce and external system
 - Familiarity with authentication mechanisms (OAuth, API keys)
 
 **Recommended Reading**:
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [Integration User License Guide](/rag/integrations/integration-user-license-guide.html) - Authentication and licensing
-- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - HTTP callout patterns
-- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - Data mapping patterns
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration User License Guide](integrations/integration-user-license-guide.html) - Authentication and licensing
+- [Callout Best Practices](integrations/callout-best-practices.html) - HTTP callout patterns
+- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - Data mapping patterns
 
 ## MuleSoft Integration Platform
 
@@ -229,7 +229,7 @@ Both platforms should support:
 
 - Interface configuration stored in Custom Metadata Types
 
-**Related**: [Custom Settings and Custom Metadata Patterns](/rag/development/custom-settings-metadata-patterns.html) - Complete guide to Custom Settings and Custom Metadata
+**Related**: [Custom Settings and Custom Metadata Patterns](development/custom-settings-metadata-patterns.html) - Complete guide to Custom Settings and Custom Metadata
 - Environment-specific settings (endpoints, timeouts, headers)
 - Reusable across multiple integrations
 - Version-controlled configuration
@@ -380,14 +380,14 @@ Both platforms should support:
 ## Related Patterns
 
 **See Also**:
-- [ETL vs API vs Events](/rag/integrations/etl-vs-api-vs-events.html) - Integration pattern selection framework
-- [Integration User License Guide](/rag/integrations/integration-user-license-guide.html) - Authentication and licensing for integrations
-- [Callout Best Practices](/rag/integrations/callout-best-practices.html) - HTTP callout patterns and error handling
-- [Change Data Capture Patterns](/rag/integrations/change-data-capture-patterns.html) - Real-time change notification patterns
+- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection framework
+- [Integration User License Guide](integrations/integration-user-license-guide.html) - Authentication and licensing for integrations
+- [Callout Best Practices](integrations/callout-best-practices.html) - HTTP callout patterns and error handling
+- [Change Data Capture Patterns](integrations/change-data-capture-patterns.html) - Real-time change notification patterns
 
 **Related Domains**:
-- [External IDs and Integration Keys](/rag/data-modeling/external-ids-and-integration-keys.html) - Data mapping and stable record identification
-- [SIS Sync Patterns](/rag/integrations/sis-sync-patterns.html) - High-volume batch synchronization patterns
-- [Integration Debugging](/rag/troubleshooting/integration-debugging.html) - Troubleshooting integration failures
-- [Data Reconciliation](/rag/troubleshooting/data-reconciliation.html) - Reconciling data between systems
+- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - Data mapping and stable record identification
+- [SIS Sync Patterns](integrations/sis-sync-patterns.html) - High-volume batch synchronization patterns
+- [Integration Debugging](troubleshooting/integration-debugging.html) - Troubleshooting integration failures
+- [Data Reconciliation](troubleshooting/data-reconciliation.html) - Reconciling data between systems
 

@@ -311,7 +311,7 @@ List<Contact> nextPage = [
 - `OFFSET` has performance limitations (max 2000)
 - Cursor-based approach scales better
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#cursor-based-pagination), [Governor Limits](/rag/development/governor-limits-and-optimization.html)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#cursor-based-pagination), [Governor Limits](development/governor-limits-and-optimization.html)
 
 ---
 
@@ -378,8 +378,8 @@ WHERE Id NOT IN (SELECT ProfileId FROM User WHERE IsActive = true)
 
 ## Related Patterns
 
-- [SOQL Query Patterns](/rag/development/soql-query-patterns.html) - Complete SOQL patterns and examples
-- [Apex Patterns](/rag/development/apex-patterns.html) - Apex query patterns
-- [Governor Limits](/rag/development/governor-limits-and-optimization.html) - Query optimization
+- [SOQL Query Patterns](development/soql-query-patterns.html) - Complete SOQL patterns and examples
+- [Apex Patterns](development/apex-patterns.html) - Apex query patterns
+- [Governor Limits](development/governor-limits-and-optimization.html) - Query optimization
 - [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer) - Selector pattern implementation
 

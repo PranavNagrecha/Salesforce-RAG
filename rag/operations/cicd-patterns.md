@@ -16,10 +16,10 @@ last_reviewed: "2025-01-XX"
 This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation strategies, and rollback patterns. These patterns are essential for managing complex Salesforce development lifecycles with multiple teams and environments.
 
 **Related Patterns**:
-- [Deployment Patterns](/rag/project-methods/deployment-patterns.html) - Deployment methods and best practices
-- [Salesforce DX Patterns](/rag/project-methods/sfdx-patterns.html) - SFDX-specific patterns
-- [Environment Strategy](/rag/operations/environment-strategy.html) - Org topology and environment management
-- [Release Governance](/rag/operations/release-governance.html) - Release approval and risk management
+- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment methods and best practices
+- [Salesforce DX Patterns](project-methods/sfdx-patterns.html) - SFDX-specific patterns
+- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
+- [Release Governance](operations/release-governance.html) - Release approval and risk management
 
 ## Prerequisites
 
@@ -404,17 +404,17 @@ This guide covers comprehensive CI/CD patterns for Salesforce, including metadat
 ## Related Patterns
 
 **See Also**:
-- [Environment Strategy](/rag/operations/environment-strategy.html) - Org topology and environment management
-- [Release Governance](/rag/operations/release-governance.html) - Release approval and risk management
+- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
+- [Release Governance](operations/release-governance.html) - Release approval and risk management
 
 **Related Domains**:
-- [Deployment Patterns](/rag/project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
-- [Salesforce DX Patterns](/rag/project-methods/sfdx-patterns.html) - SFDX project structure and commands
-- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Comprehensive testing approaches
+- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
+- [Salesforce DX Patterns](project-methods/sfdx-patterns.html) - SFDX project structure and commands
+- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing approaches
 
-- [Deployment Patterns](/rag/project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
-- [Salesforce DX Patterns](/rag/project-methods/sfdx-patterns.html) - SFDX project structure and commands
-- [Environment Strategy](/rag/operations/environment-strategy.html) - Org topology and environment management
-- [Release Governance](/rag/operations/release-governance.html) - Release approval and risk management
-- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Comprehensive testing approaches
+- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
+- [Salesforce DX Patterns](project-methods/sfdx-patterns.html) - SFDX project structure and commands
+- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
+- [Release Governance](operations/release-governance.html) - Release approval and risk management
+- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing approaches
 

@@ -19,8 +19,8 @@ last_reviewed: "2025-01-XX"
 Record-Triggered Flows run automatically when records are created or updated. They can run before save (to modify field values) or after save (to create related records, send notifications, etc.). This document provides practical examples of common Record-Triggered Flow patterns.
 
 **Related Patterns**:
-- [Flow Patterns](/rag/code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Order of Execution](/rag/code-examples/development/order-of-execution.html) - Understanding when Flows execute
+- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
+- [Order of Execution](code-examples/development/order-of-execution.html) - Understanding when Flows execute
 
 ## Examples
 
@@ -309,11 +309,11 @@ Handle errors by:
 
 ## Related Examples
 
-- [Screen Flow Examples](/rag/code-examples/flow/screen-flow-examples.html) - User interaction flows
-- [Subflow Examples](/rag/code-examples/flow/subflow-examples.html) - Reusable flow components
+- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flows
+- [Subflow Examples](code-examples/flow/subflow-examples.html) - Reusable flow components
 
 ## See Also
 
-- [Flow Patterns](/rag/code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Order of Execution](/rag/code-examples/development/order-of-execution.html) - Understanding when Flows execute
-- [Error Handling and Logging](/rag/code-examples/development/error-handling-and-logging.html) - Error handling patterns
+- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
+- [Order of Execution](code-examples/development/order-of-execution.html) - Understanding when Flows execute
+- [Error Handling and Logging](code-examples/development/error-handling-and-logging.html) - Error handling patterns

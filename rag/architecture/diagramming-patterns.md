@@ -381,10 +381,10 @@ When creating diagrams:
 ## Related Patterns
 
 **See Also**:
-- [Architect Role](/rag/architecture/architect-role.html) - Architect responsibilities and skills
-- [Stakeholder Communication](/rag/architecture/stakeholder-communication.html) - Communicating with stakeholders
+- [Architect Role](architecture/architect-role.html) - Architect responsibilities and skills
+- [Stakeholder Communication](architecture/stakeholder-communication.html) - Communicating with stakeholders
 
 **Related Domains**:
-- [Event-Driven Architecture](/rag/architecture/event-driven-architecture.html) - Architecture diagram examples
-- [Portal Architecture](/rag/architecture/portal-architecture.html) - Portal architecture diagrams
+- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Architecture diagram examples
+- [Portal Architecture](architecture/portal-architecture.html) - Portal architecture diagrams
 

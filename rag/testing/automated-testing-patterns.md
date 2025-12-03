@@ -17,10 +17,10 @@ last_reviewed: "2025-01-XX"
 This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns. These patterns are essential for ensuring code quality, preventing regressions, and maintaining system reliability at enterprise scale.
 
 **Related Patterns**:
-- [Apex Testing Patterns](/rag/testing/apex-testing-patterns.html) - Apex test class patterns
-- [Test Data Factories](/rag/testing/test-data-factories.html) - Test data factory patterns
-- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Comprehensive testing strategies
-- [Non-Functional Requirements](/rag/testing/non-functional-requirements.html) - Security, accessibility, and performance testing
+- [Apex Testing Patterns](testing/apex-testing-patterns.html) - Apex test class patterns
+- [Test Data Factories](testing/test-data-factories.html) - Test data factory patterns
+- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing strategies
+- [Non-Functional Requirements](testing/non-functional-requirements.html) - Security, accessibility, and performance testing
 
 ## Consensus Best Practices
 
@@ -351,9 +351,9 @@ This guide covers automated testing patterns for Salesforce at scale, including 
 
 ## Related Patterns
 
-- [Apex Testing Patterns](/rag/testing/apex-testing-patterns.html) - Apex test class patterns
-- [Test Data Factories](/rag/testing/test-data-factories.html) - Test data factory patterns
-- [Testing Strategy](/rag/project-methods/testing-strategy.html) - Comprehensive testing strategies
-- [Non-Functional Requirements](/rag/testing/non-functional-requirements.html) - Security, accessibility, and performance testing
-- [Performance Tuning](/rag/observability/performance-tuning.html) - Performance optimization patterns
+- [Apex Testing Patterns](testing/apex-testing-patterns.html) - Apex test class patterns
+- [Test Data Factories](testing/test-data-factories.html) - Test data factory patterns
+- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing strategies
+- [Non-Functional Requirements](testing/non-functional-requirements.html) - Security, accessibility, and performance testing
+- [Performance Tuning](observability/performance-tuning.html) - Performance optimization patterns
 

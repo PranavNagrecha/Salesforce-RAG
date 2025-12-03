@@ -398,10 +398,10 @@ When negotiating Salesforce pricing, always ask:
 ## Related Patterns
 
 **See Also**:
-- [Org Edition Selection](/rag/architecture/org-edition-selection.html) - Edition selection and pricing
-- [User License Selection](/rag/architecture/user-license-selection.html) - License type selection and cost optimization
-- [Salesforce Product Evaluation](/rag/architecture/salesforce-product-evaluation.html) - Product selection and pricing
+- [Org Edition Selection](architecture/org-edition-selection.html) - Edition selection and pricing
+- [User License Selection](architecture/user-license-selection.html) - License type selection and cost optimization
+- [Salesforce Product Evaluation](architecture/salesforce-product-evaluation.html) - Product selection and pricing
 
 **Related Domains**:
-- [Org Strategy](/rag/architecture/org-strategy.html) - Multi-org vs single-org cost implications
+- [Org Strategy](architecture/org-strategy.html) - Multi-org vs single-org cost implications
 
