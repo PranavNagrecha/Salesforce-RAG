@@ -28,6 +28,10 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: Install Python dependencies
+        run: |
+          pip install pyyaml
+      
       - name: Sync RAG index and homepage
         run: |
           python website/scripts/sync-homepage.py
