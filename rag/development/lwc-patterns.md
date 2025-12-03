@@ -500,7 +500,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - <a href="{{ '/rag/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete working code examples
 - <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns and tools
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
-- <a href="{{ '/rag/development/quick-start/lwc-accessibility-quick-start.html' | relative_url }}">LWC Accessibility Quick Start</a> - Quick start guide
+- <a href="{{ '/rag/quick-start/lwc-accessibility-quick-start.html' | relative_url }}">LWC Accessibility Quick Start</a> - Quick start guide
 
 ### WCAG Guidelines
 

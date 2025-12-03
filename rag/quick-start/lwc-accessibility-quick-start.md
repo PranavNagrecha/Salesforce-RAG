@@ -1,5 +1,8 @@
 ---
-title: "LWC Accessibility Quick Start Guide"
+layout: default
+title: LWC Accessibility Quick Start Guide
+description: Getting started with Lightning Web Component accessibility in Salesforce
+permalink: /rag/quick-start/lwc-accessibility-quick-start.html
 level: "Beginner"
 tags:
   - quick-start
