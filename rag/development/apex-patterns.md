@@ -6,6 +6,8 @@ permalink: /rag/development/apex-patterns.html
 ---
 - <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a> - Apex testing best practices
 - <a href="{{ '/rag/code-examples/apex/' | relative_url }}">Code Examples</a> - Complete working code examples
+- <a href="{{ '/rag/development/apex-interfaces-patterns.html' | relative_url }}">Interface Patterns</a> - Using interfaces for testability and decoupling
+- <a href="{{ '/rag/development/wrapper-classes-patterns.html' | relative_url }}">Wrapper Class Patterns</a> - Shaping data for UI and integrations
 
 ## Q&A
 

@@ -117,6 +117,41 @@ public static List<Account> getRecords(String categoryId, String region, String 
 **Why This Approach**:
 - Cascading loads reduce initial page load time
 - Only loads data that's needed based on user selections
+
+## SOSL vs SOQL – When to Use Which
+
+### When SOQL Was Used
+
+- For **filterable list views**, reports, and components that require precise WHERE clauses and ordering.
+- For **aggregations** (COUNT, SUM, GROUP BY) and selective queries tied to specific objects.
+
+### When SOSL Was Used
+
+- For **global search-style experiences** where users type free-text across multiple objects (e.g., Account, Contact, Case).
+- For **“quick find”** components in LWCs where results come from multiple objects and fields in a single call.
+
+Example SOSL pattern:
+```apex
+List<List<SObject>> searchResults = [
+    FIND :searchText IN ALL FIELDS
+    RETURNING
+        Account(Id, Name LIMIT 20),
+        Contact(Id, FirstName, LastName, Email LIMIT 20)
+];
+
+List<Account> accounts = (List<Account>) searchResults[0];
+List<Contact> contacts = (List<Contact>) searchResults[1];
+```
+
+### Selection Guidelines
+
+- Use **SOQL** when you:
+  - Need exact filters, joins via relationships, or aggregates.
+  - Are driving deterministic logic (e.g., integrations, flows, batch jobs).
+
+- Use **SOSL** when you:
+  - Need “search box” behavior over many fields and objects.
+  - Can tolerate less deterministic ranking but need broad recall.
 - Cacheable methods reduce server round trips
 - Picklist metadata avoids queries entirely for static reference data
 

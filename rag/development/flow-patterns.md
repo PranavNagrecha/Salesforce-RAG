@@ -742,6 +742,24 @@ This section provides comprehensive coverage of all Flow elements, including wha
   - Create Records: Create `NewTask`
 - **Use Case**: Create tasks for multiple Contacts
 
+**Example 4: NPSP Opportunity Payment Calculation**
+- **Purpose**: Recalculate household lifetime giving when Opportunity/Payment changes
+- **Trigger**: Opportunity or Payment created/updated
+- **Get Records**: Get all Opportunities for Account where Stage = "Closed Won"
+- **Loop Logic**:
+  - Assignment: Add to `TotalLifetimeGiving = TotalLifetimeGiving + CurrentOpportunity.Amount`
+- **Update Records**: Update Account custom field `Lifetime_Giving__c = TotalLifetimeGiving`
+- **Use Case**: Maintain accurate household lifetime giving totals for donor stewardship
+
+**Example 5: NPSP Campaign Total Calculation**
+- **Purpose**: Calculate campaign total from all related Opportunities
+- **Trigger**: Opportunity created/updated with Campaign
+- **Get Records**: Get all Opportunities for Campaign where Stage = "Closed Won"
+- **Loop Logic**:
+  - Assignment: Add to `CampaignTotal = CampaignTotal + CurrentOpportunity.Amount`
+- **Update Records**: Update Campaign custom field `Total_Raised__c = CampaignTotal`
+- **Use Case**: Track fundraising campaign progress and totals
+
 **Best Practices**:
 - Check if collection is empty before looping
 - Use bulk DML operations when possible (outside loop)

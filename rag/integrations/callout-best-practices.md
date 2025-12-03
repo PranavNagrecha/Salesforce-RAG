@@ -63,7 +63,9 @@ req.setEndpoint('https://api.example.com/endpoint');
 - **Authentication Protocol**: OAuth 2.0, Basic Auth, Certificate
 - **Per-User Callout**: Enable if user-specific authentication required
 
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials' | relative_url }}">Integration Examples</a>
+**Related Patterns**:
+- <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials' | relative_url }}">Integration Examples</a>
+- <a href="{{ '/rag/integrations/named-credentials-patterns.html' | relative_url }}">Named Credentials Patterns</a>
 
 ## Implement Proper Error Handling
 
@@ -722,4 +724,38 @@ private class ComprehensiveCalloutTest {
 
 **Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
 - <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
+
+## Q&A
+
+### Q: What are the best practices for making API callouts in Salesforce?
+
+**A**: Best practices include: (1) **Use Named Credentials** (secure credential management), (2) **Implement retry logic** (exponential backoff for transient failures), (3) **Use circuit breakers** (prevent cascading failures), (4) **Handle errors gracefully** (catch exceptions, log errors), (5) **Use async patterns** (Queueable/@future for DML + callout), (6) **Monitor callout health** (track metrics, alert on failures), (7) **Test with mocks** (never make real callouts in tests). Following these practices ensures reliable, resilient integrations.
+
+### Q: Why should I use Named Credentials instead of hardcoding credentials?
+
+**A**: **Named Credentials** provide: (1) **Secure storage** (credentials stored securely, not in code), (2) **No code changes** (update credentials without code changes), (3) **Certificate management** (manage SSL certificates), (4) **IP whitelisting** (configure allowed IPs), (5) **Audit trail** (track credential usage). Hardcoding credentials creates security risks and maintenance issues.
+
+### Q: How do I implement retry logic for callouts?
+
+**A**: Implement retry logic by: (1) **Exponential backoff** (increase delay between retries: 1s, 2s, 4s, 8s), (2) **Retry only transient failures** (5xx errors, timeouts), (3) **Limit retry attempts** (max 3-5 retries), (4) **Use Queueable** (retry in separate transaction), (5) **Log retry attempts** (track retry history). Retry logic handles transient failures without overwhelming external systems.
+
+### Q: What is a circuit breaker pattern and when should I use it?
+
+**A**: **Circuit breaker pattern** prevents cascading failures by: (1) **Opening circuit** (stop making callouts after failure threshold), (2) **Failing fast** (return error immediately when circuit open), (3) **Half-open state** (test if service recovered), (4) **Closing circuit** (resume normal operation when service healthy). Use circuit breakers for **critical integrations** where failures can cascade to other systems.
+
+### Q: Why can't I perform DML before a callout in the same transaction?
+
+**A**: Salesforce **does not allow DML before callouts** in the same transaction to prevent data inconsistency. If callout fails after DML, data is committed but external system isn't updated. **Solution**: Use **Queueable** or **@future** to separate DML and callouts into different transactions, ensuring data consistency.
+
+### Q: How do I test callouts without making real API calls?
+
+**A**: Test callouts using: (1) **HttpCalloutMock** (implement HttpCalloutMock interface), (2) **Test.setMock()** (set mock for test context), (3) **Mock different scenarios** (success, error, timeout), (4) **Test retry logic** (mock transient failures), (5) **Test circuit breaker** (mock failures to open circuit). Never make real callouts in tests - always use mocks.
+
+### Q: How do I monitor callout health and performance?
+
+**A**: Monitor by: (1) **Log all callouts** (log success and failure cases), (2) **Track metrics** (duration, status codes, response sizes), (3) **Monitor failure rates** (alert on high failure rates), (4) **Track circuit breaker state** (monitor when circuits open/close), (5) **Correlate requests** (use request IDs for tracing), (6) **Create dashboards** (visualize callout health). Monitoring enables proactive issue detection and resolution.
+
+### Q: What are common callout anti-patterns to avoid?
+
+**A**: Common anti-patterns: (1) **Hardcoding credentials** (use Named Credentials), (2) **No retry logic** (fail immediately on transient errors), (3) **DML before callout** (causes transaction errors), (4) **No error handling** (exceptions not caught), (5) **No monitoring** (no visibility into callout health), (6) **Synchronous callouts in triggers** (blocks user, hits limits), (7) **Making real callouts in tests** (use mocks). Avoiding these patterns ensures reliable integrations.
 

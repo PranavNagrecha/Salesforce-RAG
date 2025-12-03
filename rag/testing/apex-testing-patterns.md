@@ -69,6 +69,11 @@ private class ContactServiceTest {
 }
 ```
 
+### Pattern 2: Testing with Interface-Based Repositories
+
+See `dml-mocking-patterns.md` for repository and DML mocking patterns that complement these testing approaches, especially when you want to avoid real DML in certain tests.
+```
+
 **Best Practices**:
 - Use Arrange-Act-Assert pattern
 - Create test data in setup methods or factories

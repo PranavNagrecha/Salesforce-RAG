@@ -188,7 +188,25 @@ Enable sales forecasting for revenue prediction.
 - Enable forecasting for sales teams
 - Configure forecast hierarchy
 
-**Best practice**: Design opportunity management to match sales process. Configure sales stages accurately. Use opportunity products for revenue tracking. Enable forecasting for management visibility.
+**Pattern 4 - NPSP/Education Opportunity Management**:
+Nonprofit and education organizations repurpose Opportunities to represent gifts, grants, and donations.
+
+**Configuration**:
+- Use Record Types to differentiate gift types (Donation, Grant, Major Gift, Sponsorship)
+- Configure stages for fundraising pipelines (Prospecting, Cultivation, Solicitation, Pledged, Posted, Closed Won)
+- Use NPSP Payment objects to track individual payments against Opportunities (enables multi-payment pledges)
+- Configure Recurring Donations for ongoing monthly, quarterly, or annual giving
+- Use Allocations to track gift distribution across funds, programs, or designations
+- Implement soft credits to attribute gift influence to board members, volunteers, or event hosts
+
+**NPSP-specific considerations**:
+- Opportunity Amount represents total gift commitment (not revenue until paid)
+- Close Date represents gift date or expected payment date
+- Stage progression based on payment status (Pledged → Posted → Closed Won when payments received)
+- Account represents donor (Household, Organization, or Individual)
+- Contact represents primary donor contact
+
+**Best practice**: Design opportunity management to match sales process. Configure sales stages accurately. Use opportunity products for revenue tracking. Enable forecasting for management visibility. For NPSP/Education implementations, configure Record Types and stages for fundraising workflows, use Payments for multi-payment pledges, and implement Recurring Donations for ongoing giving programs. See <a href="{{ '/rag/data-modeling/npsp-opportunity-gift-model.html' | relative_url }}">NPSP Opportunity and Gift Data Model</a> and <a href="{{ '/rag/development/npsp-opportunity-processing-patterns.html' | relative_url }}">NPSP Opportunity Processing Patterns</a> for comprehensive guidance.
 
 ## Account and Contact Management Patterns
 

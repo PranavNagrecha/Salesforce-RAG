@@ -151,6 +151,14 @@ permalink: /rag/data-modeling/lead-management-patterns.html
 - Use Record-Triggered Flows for simple conversion triggers (⚠️ **Note**: Process Builder and Workflow Rules are deprecated - use Record-Triggered Flows instead)
 - Handle conversion errors gracefully with try-catch blocks
 
+**Nonprofit/Education Conversion Patterns**:
+- Nonprofits may skip Leads and create Opportunities directly from online giving forms or campaign members
+- When using Leads, convert to create Account (Household/Organization), Contact, and Opportunity (Gift)
+- Configure Opportunity Record Type based on gift type (Donation, Grant, Major Gift) during conversion
+- Set Opportunity Stage = "Pledged" or "Posted" based on payment status
+- Link converted Opportunity to Campaign for attribution if Lead was campaign member
+- For NPSP implementations, create Payment records when converting Leads with payment information
+
 **Conversion Error Handling**:
 - Validation rules on Account/Contact/Opportunity can block conversion
 - Required fields on target objects must be populated
@@ -722,4 +730,6 @@ Avoid this model when:
 - <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for lead integration
 - <a href="{{ '/rag/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality and Stewardship</a> - Duplicate prevention patterns
 - <a href="{{ '/rag/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Object configuration patterns
+- <a href="{{ '/rag/data-modeling/npsp-opportunity-gift-model.html' | relative_url }}">NPSP Opportunity and Gift Data Model</a> - How Opportunities represent gifts and donations in nonprofit/education contexts
+- <a href="{{ '/rag/development/npsp-opportunity-processing-patterns.html' | relative_url }}">NPSP Opportunity Processing Patterns</a> - Process patterns for gift processing and donor stewardship
 

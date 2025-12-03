@@ -336,6 +336,66 @@ Function-specific metrics and insights for specific teams.
 - Summarize Amount field (SUM)
 - Filter for open opportunities (IsClosed = false)
 - Add formulas for conversion rates if needed
+
+## NPSP/Education Fundraising Reporting Patterns
+
+**Pattern 1 - Fundraising Pipeline Report**:
+Track gift pipeline by stage and expected payment date for fundraising visibility.
+
+**Configuration**:
+- Create Summary report on Opportunity object
+- Group by Stage (Prospecting, Cultivation, Solicitation, Pledged, Posted)
+- Group by Record Type (Donation, Grant, Major Gift)
+- Summarize Amount field (SUM)
+- Filter for open opportunities (IsClosed = false)
+- Add formula fields for pipeline conversion rates
+
+**Pattern 2 - Lifetime Giving by Household**:
+Track total giving history by donor household for donor stewardship.
+
+**Configuration**:
+- Create Summary report on Opportunity object
+- Group by Account (Household) and Contact (Primary Donor)
+- Summarize Amount field (SUM) for lifetime giving
+- Filter for closed won opportunities (Stage = "Closed Won")
+- Add formula fields for giving frequency and average gift size
+- Use cross-filters to show giving by Campaign or fiscal year
+
+**Pattern 3 - Major Gift Pipeline by Stage**:
+Track major gift pipeline with expected payment dates for major gift officers.
+
+**Configuration**:
+- Create Summary report on Opportunity object
+- Filter for Record Type = "Major Gift" AND Amount >= $10,000
+- Group by Stage and Expected Payment Date (custom field)
+- Summarize Amount field (SUM)
+- Filter for open opportunities (IsClosed = false)
+- Add formula fields for days in stage and expected close date
+
+**Pattern 4 - Grant Pipeline and Awarded vs. Received**:
+Track grant opportunities from application through award and payment receipt.
+
+**Configuration**:
+- Create Summary report on Opportunity object
+- Filter for Record Type = "Grant"
+- Group by Stage (Application, Under Review, Awarded, Posted)
+- Summarize Amount field (SUM) for awarded amount
+- Create related report on Payment object to show received amount
+- Use joined reports to compare awarded vs. received amounts
+- Add formula fields for grant fulfillment percentage
+
+**Pattern 5 - Recurring Donation Performance**:
+Track recurring donation retention and lifetime value.
+
+**Configuration**:
+- Create Summary report on Recurring Donation object
+- Group by Status (Active, Paused, Failed, Cancelled)
+- Summarize Amount field (SUM) and Count for active recurring donations
+- Create related report on Opportunity (child Opportunities from Recurring Donations)
+- Use cross-filters to show recurring donation performance by Campaign
+- Add formula fields for retention rate and average lifetime value
+
+**Best practice**: For NPSP/Education implementations, configure reports to track fundraising pipeline, lifetime giving, major gifts, grants, and recurring donations. Use Record Types and custom fields to differentiate gift types and support fundraising-specific reporting. See <a href="{{ '/rag/data-modeling/npsp-opportunity-gift-model.html' | relative_url }}">NPSP Opportunity and Gift Data Model</a> for data model guidance.
 - Share with sales team and managers
 
 **Key decisions**: Use Summary report for grouping. Group by Stage and Owner for pipeline analysis. Summarize Amount for pipeline value. Filter for open opportunities only.

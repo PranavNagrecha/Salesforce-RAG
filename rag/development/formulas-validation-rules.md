@@ -648,7 +648,28 @@ AND(
 **When It Fires**: Insert, Update
 **Explanation**: Simple conditional check using AND
 
-### Example 4: Date Range Validation
+### Example 4: NPSP Donation Opportunity Validation
+
+**Use Case**: Enforce Close Date and Amount when Opportunity Stage is "Posted" or "Closed Won" for donation Opportunities
+**Formula**:
+```
+AND(
+  RecordType.DeveloperName = "Donation",
+  OR(
+    StageName = "Posted",
+    StageName = "Closed Won"
+  ),
+  OR(
+    ISBLANK(CloseDate),
+    Amount <= 0
+  )
+)
+```
+**Error Message**: "Close Date and Amount are required when Donation Opportunity is Posted or Closed Won"
+**When It Fires**: Insert, Update
+**Explanation**: Ensures donation Opportunities have required fields when moved to Posted or Closed Won stages
+
+### Example 5: Date Range Validation
 
 **Use Case**: Close Date must be within current fiscal year
 **Formula**:
