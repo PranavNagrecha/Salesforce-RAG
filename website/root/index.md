@@ -16,62 +16,62 @@ permalink: /
 <div class="domain-grid">
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#architecture-patterns">🏗️ Architecture Patterns</a></h3>
-    <p>Event-driven architecture, portal architecture, multi-tenant solutions, and system design patterns</p>
+    <p>Architecture patterns for designing system structure, integration patterns, multi-tenant solutions, and portal architecture</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#integration-patterns">🔌 Integration Patterns</a></h3>
-    <p>ETL vs. API vs. Events decision frameworks, MuleSoft, Dell Boomi, SIS synchronization, CDC, and Salesforce-to-LLM pipelines</p>
+    <p>Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#development">💻 Development</a></h3>
-    <p>Apex patterns, Flow design, Lightning Web Components (LWC), OmniStudio, error handling, and performance optimization</p>
+    <p>Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, concurrency control, and performance optimization</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#data-modeling">📊 Data Modeling</a></h3>
-    <p>External IDs, integration keys, student lifecycle models, case management, lead management, and data migration</p>
+    <p>Data modeling patterns for designing external IDs, integration keys, student lifecycle models, and case management models</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#security">🔒 Security</a></h3>
-    <p>Permission set-driven security, field-level security, sharing patterns, and Salesforce-to-LLM data governance</p>
+    <p>Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#testing">✅ Testing</a></h3>
-    <p>Apex testing patterns, test data factories, automated testing, Jest testing, and non-functional requirements</p>
+    <p>Testing patterns and examples for Apex, LWC, and integration testing</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#operations">🚀 Operations</a></h3>
-    <p>CI/CD patterns, environment strategy, release governance, monitoring, performance tuning, and high availability</p>
+    <p>Delivery and operations patterns for CI/CD, environment strategy, and release governance</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#code-examples">📝 Code Examples</a></h3>
-    <p>Complete, working code examples for Apex, LWC, Flow, integrations, utilities, and templates - all copy-paste ready</p>
+    <p>Complete, working code examples organized by category. All examples are copy-paste ready and include tests</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#troubleshooting">🔧 Troubleshooting</a></h3>
-    <p>Integration debugging, data reconciliation, common Apex/LWC errors, governor limit errors, and root cause analysis</p>
+    <p>Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#quick-start-guides">⚡ Quick Start</a></h3>
-    <p>Step-by-step guides for getting started with Apex, LWC, and other Salesforce technologies</p>
+    <p>Step-by-step guides for getting started with Salesforce development</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#api-reference">📚 API Reference</a></h3>
-    <p>Quick reference for common APIs, methods, and patterns (Apex, LWC, LDS, SOQL, Platform Events)</p>
+    <p>Quick reference for common APIs, methods, and patterns</p>
   </div>
   
   <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#glossary">📖 Glossary</a></h3>
-    <p>Core terminology and definitions for integration, identity, data modeling, security, platform, and development terms</p>
+    <p>Terminology and definitions for clarifying what terms mean and understanding core concepts</p>
   </div>
 </div>
 
