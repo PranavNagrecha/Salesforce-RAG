@@ -1,3 +1,10 @@
+---
+layout: default
+title: RAG Knowledge Library Index
+description: Complete index of all knowledge files organized by domain.
+permalink: /rag/rag-index.html
+---
+
 # RAG Knowledge Library Index
 ## Adoption
 

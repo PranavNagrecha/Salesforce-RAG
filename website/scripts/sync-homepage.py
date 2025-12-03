@@ -221,7 +221,15 @@ def find_markdown_files():
 
 def build_rag_index(files_by_folder):
     """Build rag-index.md content."""
-    lines = ["# RAG Knowledge Library Index\n"]
+    lines = [
+        "---\n",
+        "layout: default\n",
+        "title: RAG Knowledge Library Index\n",
+        "description: Complete index of all knowledge files organized by domain.\n",
+        "permalink: /rag/rag-index.html\n",
+        "---\n\n",
+        "# RAG Knowledge Library Index\n"
+    ]
     
     # Sort folders by section name
     sorted_folders = sorted(
