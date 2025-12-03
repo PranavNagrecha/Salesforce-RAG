@@ -1,3 +1,10 @@
+---
+layout: default
+title: LWC Accessibility Guidelines
+description: Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2.2 standards
+permalink: /rag/mcp-knowledge/lwc-accessibility.html
+---
+
 # LWC Accessibility - MCP Knowledge
 
 > This file contains knowledge extracted from Salesforce MCP Service tools.  
