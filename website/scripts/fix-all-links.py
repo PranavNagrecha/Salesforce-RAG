@@ -65,7 +65,8 @@ def fix_links_in_file(file_path: Path):
                 resolved = (file_dir / link_url).resolve()
                 try:
                     rel_to_rag = resolved.relative_to(RAG_DIR.resolve())
-                    new_url = f"/rag/{str(rel_to_rag).replace('\\', '/')}"
+                    rel_str = str(rel_to_rag).replace('\\', '/')
+                    new_url = f"/rag/{rel_str}"
                 except ValueError:
                     # Link points outside rag/ directory, keep as is
                     return match.group(0)
