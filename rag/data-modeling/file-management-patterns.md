@@ -2,7 +2,7 @@
 layout: default
 title: File Management Patterns
 description: Salesforce provides multiple mechanisms for file storage and management
-permalink: /rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex file management patterns
+permalink: /rag/data-modeling/file-management-patterns.html
 
 ## References
 

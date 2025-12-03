@@ -2,7 +2,7 @@
 layout: default
 title: Change Data Capture (CDC) Patterns
 description: Change Data Capture (CDC) provides real-time change notifications for Salesforce records
-permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+permalink: /rag/integrations/change-data-capture-patterns.html
 
 ## Consensus Best Practices
 

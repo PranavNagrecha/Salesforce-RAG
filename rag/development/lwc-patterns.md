@@ -2,7 +2,7 @@
 layout: default
 title: Lightning Web Component (LWC) Patterns
 description: LWCs are built for complex business logic that standard page layouts cannot handle
-permalink: /rag/development/lightning-app-builder.html' | relative_url }}">Lightning App Builder</a> - Understanding when to use declarative vs custom components
+permalink: /rag/development/lwc-patterns.html
 - <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Accessibility best practices
 
 ## LWC Fundamentals

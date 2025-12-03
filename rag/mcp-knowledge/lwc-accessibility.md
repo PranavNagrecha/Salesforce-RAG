@@ -2,7 +2,7 @@
 layout: default
 title: LWC Accessibility - MCP Knowledge
 description: Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2
-permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Accessibility considerations
+permalink: /rag/mcp-knowledge/lwc-accessibility.html
 - <a href="{{ '/rag/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS accessibility
 
 **How This Complements Existing RAG**:

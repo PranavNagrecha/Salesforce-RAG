@@ -2,7 +2,7 @@
 layout: default
 title: Salesforce Lightning Design System (SLDS) Patterns - MCP Knowledge
 description: Comprehensive guidelines for using Salesforce Lightning Design System (SLDS) to design enterprise software, covering UX principles, visual design, component usage, interaction patterns, and accessibility
-permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Component implementation patterns
+permalink: /rag/mcp-knowledge/design-system-patterns.html
 - <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility</a> - Accessibility requirements
 
 **How This Complements Existing RAG**:

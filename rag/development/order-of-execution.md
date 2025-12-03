@@ -2,7 +2,7 @@
 layout: default
 title: Order of Execution
 description: Understanding the order of execution in Salesforce is critical for architects and developers
-permalink: /rag/development/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Async processing patterns
+permalink: /rag/development/order-of-execution.html
 
 ## Q&A
 

@@ -2,7 +2,7 @@
 layout: default
 title: Error Handling and Logging Framework
 description: Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance
-permalink: /rag/development/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
+permalink: /rag/development/error-handling-and-logging.html
 
 ## Logging Architecture
 

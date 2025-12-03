@@ -2,7 +2,7 @@
 layout: default
 title: LWC Jest Testing Code Examples
 description: Jest is the testing framework for Lightning Web Components
-permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
+permalink: /rag/code-examples/lwc/test-examples.html
 - <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns
 
 ## Examples

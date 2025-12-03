@@ -2,7 +2,7 @@
 layout: default
 title: Error Handling Code Examples
 description: Robust error handling ensures applications gracefully handle failures and provide meaningful feedback
-permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+permalink: /rag/code-examples/utilities/error-handling-examples.html
 
 **Problem**:
 You need to handle exceptions gracefully in your Apex code.

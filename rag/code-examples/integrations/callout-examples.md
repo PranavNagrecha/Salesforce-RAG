@@ -2,7 +2,7 @@
 layout: default
 title: HTTP Callout Code Examples
 description: HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs
-permalink: /rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
+permalink: /rag/code-examples/integrations/callout-examples.html
 
 ## Examples
 

@@ -2,7 +2,7 @@
 layout: default
 title: LWC Service Layer Code Examples
 description: LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic
-permalink: /rag/development/lwc-patterns.html#data-access-patterns' | relative_url }}">LWC Data Access Patterns</a>
+permalink: /rag/code-examples/lwc/service-examples.html
 
 **Problem**:
 You need to format dates, currency, and other data types consistently across multiple components.

@@ -2,7 +2,7 @@
 layout: default
 title: Logging Code Examples
 description: Structured logging enables consistent, searchable logging across Salesforce applications
-permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+permalink: /rag/code-examples/utilities/logging-examples.html
 
 **Problem**:
 You need a consistent logging mechanism across your application.

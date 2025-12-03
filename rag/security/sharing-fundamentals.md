@@ -2,7 +2,7 @@
 layout: default
 title: Salesforce Sharing Fundamentals
 description: This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions
-permalink: /rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+permalink: /rag/security/sharing-fundamentals.html
 - <a href="{{ '/rag/security/sharing-rules-and-manual-sharing.html' | relative_url }}">Sharing Rules and Manual Sharing</a> - Advanced sharing patterns
 
 ## Sharing Model Fundamentals
