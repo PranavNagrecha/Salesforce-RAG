@@ -66,8 +66,8 @@ Files are tagged with levels to indicate target audience:
 
 - **`rag-index.md`** - Comprehensive index of all files
 - **`rag-library.json`** - Machine-readable metadata for all files
-- **`meta/style-guide.md`** - Writing and formatting standards
-- **`meta/terminology-mapping.md`** - Standard terminology definitions
+- **`website/meta/style-guide.md`** - Writing and formatting standards
+- **`website/meta/terminology-mapping.md`** - Standard terminology definitions
 
 ## Usage
 

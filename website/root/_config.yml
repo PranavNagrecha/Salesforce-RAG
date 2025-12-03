@@ -37,6 +37,7 @@ exclude:
   - Knowledge/
   - scripts/
   - website/docs/
+  - website/meta/
   - .cursor/
   - check-cursor-indexing.sh
   - clear-research.sh

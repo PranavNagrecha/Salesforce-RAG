@@ -50,7 +50,7 @@ All new files must include:
 
 ### Terminology
 
-- Follow `meta/terminology-mapping.md` for standard terms
+- Follow `../website/meta/terminology-mapping.md` for standard terms
 - Use "Experience Cloud" not "Communities"
 - Use "Permission Set" not "Perm Set"
 - Use "Record-Triggered Flow" not "RTF"
@@ -137,8 +137,8 @@ Before submitting:
 
 ## Questions?
 
-- Review `meta/style-guide.md` for detailed style guidelines
-- Check `meta/terminology-mapping.md` for terminology standards
+- Review `../website/meta/style-guide.md` for detailed style guidelines
+- Check `../website/meta/terminology-mapping.md` for terminology standards
 - Look at existing files for examples of good structure
 - Review `MAINTENANCE.md` for maintenance procedures
 
