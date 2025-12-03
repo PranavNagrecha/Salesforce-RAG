@@ -419,16 +419,22 @@ def main():
     
     print("Building rag-index.md...")
     index_content = build_rag_index(files_by_folder)
+    # Ensure directory exists before writing
+    INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.write_text(index_content, encoding='utf-8')
     print(f"✓ Wrote {INDEX_PATH}")
     
     print("Building rag-library.json...")
     library_data = build_rag_library(files_by_folder)
+    # Ensure directory exists before writing
+    LIBRARY_PATH.parent.mkdir(parents=True, exist_ok=True)
     LIBRARY_PATH.write_text(json.dumps(library_data, indent=2, ensure_ascii=False), encoding='utf-8')
     print(f"✓ Wrote {LIBRARY_PATH}")
     
     print("Building homepage...")
     homepage_content = build_homepage(files_by_folder)
+    # Ensure directory exists before writing
+    HOMEPAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
     HOMEPAGE_PATH.write_text(homepage_content, encoding='utf-8')
     print(f"✓ Wrote {HOMEPAGE_PATH}")
     
