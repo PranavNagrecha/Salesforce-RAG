@@ -2,7 +2,8 @@
 layout: default
 title: SOQL Query Patterns
 description: This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects
-permalink: /rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when queries execute
+permalink: /rag/development/soql-query-patterns.html
+---
 
 ## What Was Actually Done
 
