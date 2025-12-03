@@ -378,3 +378,13 @@ When creating diagrams:
 
 **A:** Make diagrams accessible by: (1) Using business language, not technical jargon, (2) Focusing on business value and capabilities, (3) Keeping diagrams high-level and clear, (4) Providing clear explanations and context, (5) Using visual elements effectively, (6) Creating multiple versions for different audiences if needed. Tailor diagrams to audience needs.
 
+## Related Patterns
+
+**See Also**:
+- [Architect Role](architect-role.html) - Architect responsibilities and skills
+- [Stakeholder Communication](stakeholder-communication.html) - Communicating with stakeholders
+
+**Related Domains**:
+- [Event-Driven Architecture](event-driven-architecture.html) - Architecture diagram examples
+- [Portal Architecture](portal-architecture.html) - Portal architecture diagrams
+

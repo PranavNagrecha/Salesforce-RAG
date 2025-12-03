@@ -642,9 +642,12 @@ User management in Salesforce encompasses creating, configuring, and maintaining
 
 ## Related Patterns
 
-- [Permission Set Architecture](../security/permission-set-architecture.md) - Permission set-driven security patterns
-- [Sharing Fundamentals](../security/sharing-fundamentals.md) - Organization-wide defaults and role hierarchy
-- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.md) - Object and field configuration
-- [Flow Patterns](flow-patterns.md) - Automation configuration patterns
-- [Formulas and Validation Rules](formulas-validation-rules.md) - Declarative business logic
+**See Also**:
+- [Flow Patterns](flow-patterns.html) - Automation configuration patterns
+
+**Related Domains**:
+- [Permission Set Architecture](../security/permission-set-architecture.html) - Permission set-driven security patterns
+- [Sharing Fundamentals](../security/sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
+- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html) - Object and field configuration
+- [Formulas and Validation Rules](formulas-validation-rules.html) - Declarative business logic
 

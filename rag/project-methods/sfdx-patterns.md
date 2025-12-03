@@ -16,8 +16,8 @@ last_reviewed: "2025-01-XX"
 Salesforce DX provides a modern, source-driven development workflow for Salesforce. This guide covers SFDX project structure, commands, scratch org patterns, source tracking, and CI/CD integration.
 
 **Related Patterns**:
-- [Deployment Patterns](deployment-patterns.md) - General deployment patterns
-- [Delivery Framework](delivery-framework.md) - Project delivery methodology
+- [Deployment Patterns](deployment-patterns.html) - General deployment patterns
+- [Delivery Framework](delivery-framework.html) - Project delivery methodology
 
 ## Consensus Best Practices
 
@@ -193,7 +193,7 @@ project-root/
 
 ## Related Patterns
 
-- [Deployment Patterns](deployment-patterns.md) - General deployment patterns
-- [Delivery Framework](delivery-framework.md) - Project delivery methodology
-- [CI/CD Patterns](../operations/cicd-patterns.md) - CI/CD automation patterns
+- [Deployment Patterns](deployment-patterns.html) - General deployment patterns
+- [Delivery Framework](delivery-framework.html) - Project delivery methodology
+- [CI/CD Patterns](../operations/cicd-patterns.html) - CI/CD automation patterns
 

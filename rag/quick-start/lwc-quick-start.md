@@ -1,3 +1,14 @@
+---
+title: "LWC Quick Start Guide"
+level: "Beginner"
+tags:
+  - quick-start
+  - lwc
+  - lightning-web-components
+  - getting-started
+last_reviewed: "2025-01-XX"
+---
+
 # LWC Quick Start Guide
 
 > Getting started with Lightning Web Components development in Salesforce.
@@ -265,23 +276,23 @@ export default class ContactViewer extends LightningElement {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
-   - [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - Best practices
-   - [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Data service patterns
+   - [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
+   - [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - Best practices
+   - [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Data service patterns
 
 2. **Explore Examples**:
-   - [LWC API Reference](../api-reference/lwc-api-reference.md) - API reference
-   - [LDS API Reference](../api-reference/lds-api-reference.md) - LDS reference
+   - [LWC API Reference](../api-reference/lwc-api-reference.html) - API reference
+   - [LDS API Reference](../api-reference/lds-api-reference.html) - LDS reference
 
 3. **Understand Best Practices**:
-   - [LWC Accessibility](../mcp-knowledge/lwc-accessibility.md) - Accessibility
-   - [Design System Patterns](../mcp-knowledge/design-system-patterns.md) - SLDS patterns
+   - [LWC Accessibility](../mcp-knowledge/lwc-accessibility.html) - Accessibility
+   - [Design System Patterns](../mcp-knowledge/design-system-patterns.html) - SLDS patterns
 
 ---
 
 ## Related Resources
 
-- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
-- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - Best practices
-- [LWC API Reference](../api-reference/lwc-api-reference.md) - API reference
+- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - Best practices
+- [LWC API Reference](../api-reference/lwc-api-reference.html) - API reference
 

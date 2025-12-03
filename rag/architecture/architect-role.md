@@ -388,3 +388,14 @@ When defining architect role:
 
 **A:** Become a Salesforce Architect by: (1) Building deep Salesforce platform knowledge, (2) Gaining architecture and design experience, (3) Developing communication and leadership skills, (4) Earning Salesforce certifications (Platform Developer, Application Architect, System Architect, CTA), (5) Working on complex projects with architectural responsibilities, (6) Learning from experienced architects, (7) Building portfolio of architectural work.
 
+## Related Patterns
+
+**See Also**:
+- [Team Leadership](team-leadership.html) - Leading development teams
+- [Stakeholder Communication](stakeholder-communication.html) - Communicating with stakeholders
+- [Project Estimation](project-estimation.html) - Estimating project work
+
+**Related Domains**:
+- [Diagramming Patterns](diagramming-patterns.html) - Creating architectural diagrams
+- [Governance Patterns](governance-patterns.html) - Establishing org governance
+

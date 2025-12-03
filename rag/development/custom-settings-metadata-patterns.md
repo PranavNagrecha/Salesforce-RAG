@@ -18,8 +18,8 @@ last_reviewed: "2025-01-XX"
 This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.
 
 **Related Patterns**:
-- [Apex Patterns](apex-patterns.md) - Apex development patterns
-- [Integration Patterns](../integrations/integration-platform-patterns.md) - Integration configuration
+- [Apex Patterns](apex-patterns.html) - Apex development patterns
+- [Integration Patterns](../integrations/integration-platform-patterns.html) - Integration configuration
 
 ## Prerequisites
 
@@ -30,8 +30,8 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 - Familiarity with custom objects and fields
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex development patterns
-- [Deployment Patterns](../project-methods/deployment-patterns.md) - Deployment strategies
+- [Apex Patterns](apex-patterns.html) - Apex development patterns
+- [Deployment Patterns](../project-methods/deployment-patterns.html) - Deployment strategies
 
 ## Consensus Best Practices
 
@@ -262,8 +262,11 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 
 ## Related Patterns
 
-- [Apex Patterns](apex-patterns.md) - Apex development patterns
-- [Integration Patterns](../integrations/integration-platform-patterns.md) - Integration configuration
-- [Custom Settings Examples](../code-examples/utilities/custom-settings-examples.md) - Custom Settings code examples
-- [Custom Metadata Examples](../code-examples/utilities/custom-metadata-examples.md) - Custom Metadata code examples
+**See Also**:
+- [Apex Patterns](apex-patterns.html) - Apex development patterns
+
+**Related Domains**:
+- [Integration Patterns](../integrations/integration-platform-patterns.html) - Integration configuration
+- [Custom Settings Examples](../code-examples/utilities/custom-settings-examples.html) - Custom Settings code examples
+- [Custom Metadata Examples](../code-examples/utilities/custom-metadata-examples.html) - Custom Metadata code examples
 

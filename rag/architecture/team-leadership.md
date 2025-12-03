@@ -384,3 +384,14 @@ Think of yourself as an enabler, not a controller. Your job is to:
 
 **A**: Maintain technical expertise to guide and mentor, but focus leadership on enabling success rather than doing all technical work yourself. Delegate technical work to team, focus your time on removing obstacles, providing resources, and supporting growth. Balance hands-on technical work with leadership responsibilities.
 
+## Related Patterns
+
+**See Also**:
+- [Architect Role](architect-role.html) - Architect leadership responsibilities
+- [Stakeholder Communication](stakeholder-communication.html) - Communication patterns
+- [Project Estimation](project-estimation.html) - Team estimation patterns
+
+**Related Domains**:
+- [Governance Patterns](governance-patterns.html) - Team governance and standards
+- [Delivery Framework](../project-methods/delivery-framework.html) - Team coordination in sprints
+

@@ -429,9 +429,9 @@ Salesforce provides multiple mechanisms for file storage and management. Underst
 
 ## Related Patterns
 
-- [Object Setup and Configuration](object-setup-and-configuration.md) - Object setup patterns
-- [Flow Patterns](../development/flow-patterns.md) - Flow file upload patterns
-- [Apex Patterns](../development/apex-patterns.md) - Apex file management patterns
+- [Object Setup and Configuration](object-setup-and-configuration.html) - Object setup patterns
+- [Flow Patterns](../development/flow-patterns.html) - Flow file upload patterns
+- [Apex Patterns](../development/apex-patterns.html) - Apex file management patterns
 
 ## References
 

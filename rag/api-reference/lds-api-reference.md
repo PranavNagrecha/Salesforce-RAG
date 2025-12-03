@@ -1,3 +1,15 @@
+---
+title: "Lightning Data Service (LDS) API Reference"
+level: "Intermediate"
+tags:
+  - api-reference
+  - lds
+  - lightning-data-service
+  - reference
+  - wire-adapters
+last_reviewed: "2025-01-XX"
+---
+
 # Lightning Data Service (LDS) API Reference
 
 > Quick reference for Lightning Data Service wire adapters and methods.
@@ -58,7 +70,7 @@ export default class ContactViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md), [LWC API Reference](lwc-api-reference.md)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html), [LWC API Reference](lwc-api-reference.html)
 
 **Best Practices**:
 - Use schema imports instead of string literals
@@ -382,7 +394,7 @@ async handleApexUpdate() {
 
 ## Related Patterns
 
-- [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Complete LDS guidance
-- [LWC API Reference](lwc-api-reference.md) - LWC module reference
-- [LWC Patterns](../development/lwc-patterns.md) - LWC component patterns
+- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Complete LDS guidance
+- [LWC API Reference](lwc-api-reference.html) - LWC module reference
+- [LWC Patterns](../development/lwc-patterns.html) - LWC component patterns
 

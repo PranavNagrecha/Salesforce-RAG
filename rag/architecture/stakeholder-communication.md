@@ -334,3 +334,13 @@ Think of yourself as a translator between business language and technical langua
 
 **A**: Frequency depends on project phase and stakeholder needs. Daily during critical phases, weekly during steady-state, ad-hoc for urgent issues. Match communication cadence to project needs and stakeholder preferences.
 
+## Related Patterns
+
+**See Also**:
+- [Architect Role](architect-role.html) - Architect communication responsibilities
+- [Team Leadership](team-leadership.html) - Team communication patterns
+- [Project Estimation](project-estimation.html) - Managing stakeholder expectations
+
+**Related Domains**:
+- [Delivery Framework](../project-methods/delivery-framework.html) - Stakeholder coordination in sprints
+

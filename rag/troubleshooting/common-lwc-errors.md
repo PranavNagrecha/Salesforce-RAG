@@ -26,9 +26,9 @@ This guide provides solutions for common LWC errors encountered during Salesforc
 - Familiarity with field-level security and object permissions
 
 **Recommended Reading**:
-- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC development patterns
-- [LWC Jest Testing](../testing/lwc-jest-testing.md) - LWC testing patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC development patterns
+- [LWC Jest Testing](../testing/lwc-jest-testing.html) - LWC testing patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
 
 ## Cannot read property 'value' of undefined
 
@@ -97,7 +97,7 @@ wiredRecord({ data, error }) {
 - Check for null/undefined before accessing nested properties
 - Use loading states to prevent access before data loads
 
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.md), [LDS Patterns](../mcp-knowledge/lds-patterns.md)
+**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html), [LDS Patterns](../mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -153,7 +153,7 @@ export default class MyComponent extends LightningElement {
 - Use camelCase in JavaScript, kebab-case in HTML
 - Verify property names match between JS and HTML
 
-**Related Patterns**: [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md#property-and-attribute-naming)
+**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming)
 
 ---
 
@@ -206,7 +206,7 @@ const event = new CustomEvent('recordupdate', { // Valid
 - Event handlers in HTML: `on` + lowercase event name
 - Follow LWC naming conventions strictly
 
-**Related Patterns**: [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md#custom-events)
+**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#custom-events)
 
 ---
 
@@ -260,7 +260,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: [LWC API Reference](rag/api-reference/lwc-api-reference.md#wire), [LDS Patterns](../mcp-knowledge/lds-patterns.md)
+**Related Patterns**: [LWC API Reference](/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire), [LDS Patterns](../mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -324,7 +324,7 @@ export default class MyComponent extends LightningElement {
 - Implement `render()` method for multiple templates
 - Return template reference, not string
 
-**Related Patterns**: [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md#multiple-templates)
+**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates)
 
 ---
 
@@ -389,7 +389,7 @@ handleClick() {
 - Bind methods when passing as callbacks
 - Avoid using `this` in unbound callbacks
 
-**Related Patterns**: [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md)
+**Related Patterns**: [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html)
 
 ---
 
@@ -452,7 +452,7 @@ wiredRecord({ data, error }) {
 - Validate parameter types
 - Handle parameter changes properly
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md), [LWC API Reference](../api-reference/lwc-api-reference.md)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html), [LWC API Reference](../api-reference/lwc-api-reference.html)
 
 ---
 
@@ -585,9 +585,9 @@ Result: Field works correctly
 A field has proper FLS permissions and object access, but the component still fails with "Unable to create/update fields". The issue is that the field is not on the page layout. Adding the field to the layout (even in a collapsed section) resolves the issue immediately.
 
 **Related Patterns**: 
-- [Sharing Sets and Portals](../security/sharing-sets-and-portals.md#field-level-sharing-considerations) - Field-level security patterns
-- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.md#field-level-security) - Field configuration best practices
-- [LWC Patterns](../development/lwc-patterns.md) - LWC component patterns
+- [Sharing Sets and Portals](../security/sharing-sets-and-portals.html#field-level-sharing-considerations) - Field-level security patterns
+- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html#field-level-security) - Field configuration best practices
+- [LWC Patterns](../development/lwc-patterns.html) - LWC component patterns
 
 ---
 
@@ -629,11 +629,92 @@ A field has proper FLS permissions and object access, but the component still fa
 
 **A**: Best practices include: (1) **Always check data is loaded** (verify wire adapter data before accessing), (2) **Use optional chaining** (prevent undefined errors), (3) **Handle wire adapter errors** (check error property, display errors), (4) **Test error scenarios** (test Apex errors, network errors), (5) **Provide user-friendly messages** (clear error messages), (6) **Log errors for debugging** (structured logging), (7) **Follow LWC patterns** (proven patterns reduce errors).
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Wire Adapter Race Conditions
+
+**Scenario**: Multiple wire adapters loading data simultaneously, causing race conditions and undefined access errors.
+
+**Consideration**:
+- Use reactive properties to handle wire adapter dependencies
+- Check all wire adapter data before accessing
+- Use conditional rendering to wait for data
+- Implement loading states for better UX
+- Test with slow network conditions
+- Consider imperative Apex for complex dependencies
+
+### Edge Case 2: Field-Level Security Errors in Production
+
+**Scenario**: Component works in sandbox but fails in production due to field-level security restrictions.
+
+**Consideration**:
+- Test with different user profiles and permission sets
+- Verify field-level security in production-like environments
+- Use `getRecord` with field-level security awareness
+- Handle FLS errors gracefully with user-friendly messages
+- Document field access requirements
+- Consider permission set assignments for component access
+
+### Edge Case 3: Component Lifecycle Timing Issues
+
+**Scenario**: Component accessing data before lifecycle hooks complete, causing undefined errors.
+
+**Consideration**:
+- Use `connectedCallback` for initialization
+- Check component state before accessing properties
+- Use reactive properties for data dependencies
+- Implement proper lifecycle management
+- Test component initialization scenarios
+- Document component lifecycle expectations
+
+### Edge Case 4: Large Data Sets Causing Performance Issues
+
+**Scenario**: Component loading large datasets causing performance degradation and timeout errors.
+
+**Consideration**:
+- Implement pagination for large datasets
+- Use lazy loading for data-heavy components
+- Optimize SOQL queries (select only needed fields)
+- Consider server-side filtering and sorting
+- Monitor component performance
+- Test with realistic data volumes
+
+### Edge Case 5: Cross-Browser Compatibility Issues
+
+**Scenario**: Component works in one browser but fails in another due to JavaScript compatibility.
+
+**Consideration**:
+- Test in multiple browsers (Chrome, Firefox, Safari, Edge)
+- Use polyfills for older browser support
+- Avoid browser-specific JavaScript features
+- Test with different browser versions
+- Document browser compatibility requirements
+- Consider Salesforce-supported browsers only
+
+### Limitations
+
+- **Wire Adapter Limitations**: Wire adapters have caching and refresh limitations
+- **Field-Level Security**: FLS restrictions may limit component functionality
+- **Browser Compatibility**: Components must work in Salesforce-supported browsers
+- **Performance Limits**: Large datasets may cause performance issues
+- **Lifecycle Complexity**: Component lifecycle can be complex with multiple wire adapters
+- **Error Handling**: Some errors may not be easily caught or handled
+- **Testing Limitations**: Some scenarios are difficult to test (network failures, timing issues)
+
 ## Related Patterns
 
-- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
-- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - LWC best practices
-- [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Lightning Data Service patterns
-- [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
-- [LWC Accessibility Errors](lwc-accessibility-errors.md) - Accessibility-specific errors
+**See Also**:
+- [LWC Accessibility Errors](lwc-accessibility-errors.html) - Accessibility-specific errors
+
+**Related Domains**:
+- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - LWC best practices
+- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
+
+- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - LWC best practices
+- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
+- [LWC Accessibility Errors](lwc-accessibility-errors.html) - Accessibility-specific errors
 

@@ -26,10 +26,10 @@ This topic covers Salesforce governor limits, performance optimization strategie
 - Familiarity with DML operations and bulkification
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex class structure and bulkification patterns
-- [SOQL Query Patterns](soql-query-patterns.md) - Query optimization and selectivity
-- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Async processing for large operations
-- [Order of Execution](order-of-execution.md) - Transaction execution order
+- [Apex Patterns](apex-patterns.html) - Apex class structure and bulkification patterns
+- [SOQL Query Patterns](soql-query-patterns.html) - Query optimization and selectivity
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Async processing for large operations
+- [Order of Execution](order-of-execution.html) - Transaction execution order
 
 ## Consensus Best Practices
 
@@ -116,8 +116,8 @@ This topic covers Salesforce governor limits, performance optimization strategie
 
 **Example scenario**: A nightly sync of 500,000 records from an external system uses Batch Apex to process records in batches of 200. Each batch executes in its own context with fresh governor limits, allowing the entire sync to complete successfully.
 
-**Related**: [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Complete guide to Batch, Queueable, and Scheduled Apex patterns
-- [Performance Tuning](../observability/performance-tuning.md) - LDV handling, caching strategies, and advanced performance optimization
+**Related**: [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Complete guide to Batch, Queueable, and Scheduled Apex patterns
+- [Performance Tuning](../observability/performance-tuning.html) - LDV handling, caching strategies, and advanced performance optimization
 
 ### Pattern 5: Heap Size Optimization
 
@@ -188,6 +188,74 @@ These tradeoffs require human judgment based on specific use cases, data volumes
 
 - **Heap size optimization strategies**: The balance between query efficiency and heap usage requires evaluation based on data volumes, record complexity, and available memory.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Governor Limits in Complex Triggers
+
+**Scenario**: Multiple triggers, flows, and validation rules executing on the same record, causing cumulative governor limit usage.
+
+**Consideration**:
+- Monitor total limit usage across all automation
+- Use `Limits` class to check usage before expensive operations
+- Design automation to minimize cumulative limit usage
+- Consider async processing for complex operations
+- Test with bulk data (200+ records) to identify limit issues
+
+### Edge Case 2: Selective Query Threshold Variations
+
+**Scenario**: Query appears selective but performs poorly due to data distribution or missing indexes.
+
+**Consideration**:
+- Use Query Plan in Developer Console to verify index usage
+- Test query performance with actual data volumes
+- Consider data distribution (e.g., 90% of records have same status)
+- Add custom indexes for frequently queried fields
+- Monitor query performance over time as data grows
+
+### Edge Case 3: Heap Size with Large Collections
+
+**Scenario**: Processing large collections of records with complex objects causes heap size exceptions.
+
+**Consideration**:
+- Process records in smaller batches
+- Select only necessary fields in queries
+- Avoid storing entire record collections in memory
+- Use streaming or cursor-based processing for large datasets
+- Consider Batch Apex for very large operations
+
+### Edge Case 4: CPU Time Limits in Complex Calculations
+
+**Scenario**: Complex calculations or loops consuming excessive CPU time, causing CPU time limit exceptions.
+
+**Consideration**:
+- Optimize algorithms to reduce complexity
+- Cache calculation results when possible
+- Break complex operations into smaller chunks
+- Use async processing for CPU-intensive operations
+- Profile code to identify CPU bottlenecks
+
+### Edge Case 5: DML Limits with Related Records
+
+**Scenario**: Creating/updating records with many related records (e.g., Account with 200 Contacts) causing DML limit exceptions.
+
+**Consideration**:
+- Process related records in batches
+- Use bulk DML operations (insert/update with collections)
+- Consider async processing for large related record operations
+- Monitor DML statement count in complex operations
+- Design data model to minimize cascading DML operations
+
+### Limitations
+
+- **Selective Query Threshold**: 10% threshold is a guideline, not a guarantee; actual performance depends on indexes and data distribution
+- **Limit Checking Overhead**: Frequent limit checking adds small performance overhead
+- **Batch Size Limits**: Batch Apex batch size limited by heap size and DML limits
+- **CPU Time Measurement**: CPU time includes all processing, not just Apex execution
+- **Heap Size Calculation**: Heap size includes all variables, collections, and object overhead
+- **Async Limit Differences**: Async contexts have different limits but also different constraints
+- **Platform Cache Limits**: Platform Cache has size and time-based limits
+- **Query Result Limits**: SOQL queries return maximum 50,000 records (use pagination for more)
+
 ## Q&A
 
 ### Q: What are the most important governor limits to monitor?
@@ -240,10 +308,11 @@ These tradeoffs require human judgment based on specific use cases, data volumes
 
 ## Related Patterns
 
-- [SOQL Query Patterns](soql-query-patterns.md) - Query optimization and selectivity
-- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Batch, Queueable, and Scheduled Apex for large operations
-- [Large Data Loads](large-data-loads.md) - Bulk API and data load optimization
-- [Locking and Concurrency Strategies](locking-and-concurrency-strategies.md) - Concurrency and resource management
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling for limit exceptions
-- [Apex Patterns](apex-patterns.md) - Bulkification and optimization patterns
+**See Also**:
+- [SOQL Query Patterns](soql-query-patterns.html) - Query optimization and selectivity
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Batch, Queueable, and Scheduled Apex for large operations
+- [Large Data Loads](large-data-loads.html) - Bulk API and data load optimization
+- [Locking and Concurrency Strategies](locking-and-concurrency-strategies.html) - Concurrency and resource management
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling for limit exceptions
+- [Apex Patterns](apex-patterns.html) - Bulkification and optimization patterns
 

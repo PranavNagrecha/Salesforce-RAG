@@ -24,10 +24,10 @@ Systematic approaches to reconciling data between Salesforce and external system
 - Familiarity with data quality concepts
 
 **Recommended Reading**:
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns
-- [Integration Debugging](integration-debugging.md) - Debugging integration issues
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data validation patterns
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns
+- [Integration Debugging](integration-debugging.html) - Debugging integration issues
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data validation patterns
 
 ## Reconciliation Patterns
 
@@ -353,11 +353,91 @@ Avoid reconciliation when:
 
 **A**: Tradeoffs include: (1) **Advantages** - ensures data consistency, identifies issues early, supports data quality, enables audit/compliance, (2) **Challenges** - requires external ID management, time-intensive for large datasets, complex reconciliation logic, ongoing maintenance required. Balance reconciliation frequency with effort and data criticality.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Reconciliation with Missing External IDs
+
+**Scenario**: Records missing External IDs making reconciliation impossible or inaccurate.
+
+**Consideration**:
+- Implement External ID population for existing records
+- Use alternative matching strategies (name, email, etc.)
+- Document External ID requirements
+- Validate External ID population
+- Handle records without External IDs gracefully
+- Plan for External ID migration
+
+### Edge Case 2: High-Volume Reconciliation Performance
+
+**Scenario**: Reconciling millions of records causing performance issues and timeout errors.
+
+**Consideration**:
+- Implement batch reconciliation processing
+- Use efficient SOQL queries (selective WHERE clauses)
+- Process reconciliation in chunks
+- Monitor reconciliation performance
+- Consider async processing for large volumes
+- Optimize reconciliation logic
+
+### Edge Case 3: Reconciliation with Data Transformations
+
+**Scenario**: Data transformed between systems (normalized, aggregated) making direct comparison difficult.
+
+**Consideration**:
+- Document data transformation rules
+- Implement transformation-aware reconciliation
+- Use business rules for comparison
+- Test reconciliation with transformed data
+- Consider reconciliation at transformation boundaries
+- Document transformation impact on reconciliation
+
+### Edge Case 4: Reconciliation During Active Integration
+
+**Scenario**: Reconciliation running while integration is actively syncing data, causing false discrepancies.
+
+**Consideration**:
+- Schedule reconciliation during low-activity periods
+- Use reconciliation windows
+- Account for in-flight integration operations
+- Implement reconciliation locking if needed
+- Monitor reconciliation timing
+- Document reconciliation scheduling
+
+### Edge Case 5: Reconciliation with Soft Deletes
+
+**Scenario**: Systems using soft deletes (status flags) instead of hard deletes, complicating reconciliation.
+
+**Consideration**:
+- Account for soft delete status in reconciliation
+- Filter soft-deleted records appropriately
+- Document soft delete handling
+- Test reconciliation with soft deletes
+- Consider reconciliation scope (active vs all records)
+- Handle soft delete discrepancies
+
+### Limitations
+
+- **External ID Requirements**: Reconciliation requires External IDs for accurate matching
+- **Performance Limits**: Large datasets may cause performance issues
+- **Reconciliation Complexity**: Complex data transformations complicate reconciliation
+- **Timing Constraints**: Reconciliation during active integration may show false discrepancies
+- **Data Volume**: Very large datasets make reconciliation time-intensive
+- **Transformation Complexity**: Data transformations may make direct comparison impossible
+- **Reconciliation Frequency**: Frequent reconciliation may impact system performance
+
 ## Related Patterns
 
-- [Integration Debugging](integration-debugging.md) - Debugging integration issues
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns for reconciliation
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data validation patterns
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
-- [SIS Sync Patterns](../integrations/sis-sync-patterns.md) - High-volume synchronization patterns
+**See Also**:
+- [Integration Debugging](integration-debugging.html) - Debugging integration issues
+
+**Related Domains**:
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration and validation
+- [Data Quality Stewardship](../data-governance/data-quality-stewardship.html) - Data quality management
+
+- [Integration Debugging](integration-debugging.html) - Debugging integration issues
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data validation patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [SIS Sync Patterns](../integrations/sis-sync-patterns.html) - High-volume synchronization patterns
 

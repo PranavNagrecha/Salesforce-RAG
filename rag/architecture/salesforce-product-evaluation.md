@@ -32,7 +32,7 @@ Evaluating Salesforce products requires understanding not just what each product
 
 **Key capabilities**:
 - Custom data model and relationships
-- Declarative automation (Flows, Process Builder)
+- Declarative automation (Flows - ⚠️ **Note**: Process Builder is deprecated, use Record-Triggered Flows instead)
 - Programmatic automation (Apex, Lightning Web Components)
 - Security and sharing model
 - Integration APIs (REST, SOAP, Bulk, GraphQL)
@@ -410,9 +410,10 @@ When evaluating Salesforce products, always ask:
 
 ## Related Patterns
 
-- [Org Edition Selection](org-edition-selection.md) - Edition selection framework
-- [User License Selection](user-license-selection.md) - License type selection patterns
-- [Salesforce Pricing Negotiation](salesforce-pricing-negotiation.md) - Pricing and negotiation strategies
-- [Portal Architecture](portal-architecture.md) - Experience Cloud evaluation
-- [Integration Platform Patterns](../integrations/integration-platform-patterns.md) - MuleSoft and Dell Boomi evaluation
+**See Also**:
+- [Org Edition Selection](org-edition-selection.html) - Edition selection framework
+- [User License Selection](user-license-selection.html) - License type selection patterns
+- [Salesforce Pricing Negotiation](salesforce-pricing-negotiation.html) - Pricing and negotiation strategies
+- [Portal Architecture](portal-architecture.html) - Experience Cloud evaluation
+- [Integration Platform Patterns](../integrations/integration-platform-patterns.html) - MuleSoft and Dell Boomi evaluation
 

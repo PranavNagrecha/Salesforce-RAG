@@ -526,7 +526,7 @@ Avoid this model when:
 
 ## Related Patterns
 
-- [Multi-Tenant Identity Architecture](../identity-sso/multi-tenant-identity-architecture.md) - Identity provider patterns
-- [Sharing Sets and Portals](../security/sharing-sets-and-portals.md) - Experience Cloud sharing patterns
-- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns
+- [Multi-Tenant Identity Architecture](../identity-sso/multi-tenant-identity-architecture.html) - Identity provider patterns
+- [Sharing Sets and Portals](../security/sharing-sets-and-portals.html) - Experience Cloud sharing patterns
+- [External IDs and Integration Keys](external-ids-and-integration-keys.html) - External ID patterns
 

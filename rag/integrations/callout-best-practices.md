@@ -17,11 +17,20 @@ last_reviewed: "2025-01-XX"
 
 This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring. Following these patterns ensures robust, maintainable, and efficient callout implementations.
 
-**Related Patterns**:
-- [Integration Examples](../../code-examples/apex/integration-examples.md) - Complete callout code examples
-- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.md) - Queueable and @future patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of HTTP callouts and REST APIs
+- Basic understanding of Apex programming
+- Familiarity with Salesforce governor limits
+- Knowledge of error handling patterns
+
+**Recommended Reading**:
+- [Apex Patterns](../development/apex-patterns.html) - Apex development patterns
+- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html) - Queueable and @future patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration Examples](../code-examples/apex/integration-examples.html) - Complete callout code examples
 
 ## Callout Limitations
 
@@ -79,7 +88,7 @@ req.setEndpoint('https://api.example.com/endpoint');
 - **Authentication Protocol**: OAuth 2.0, Basic Auth, Certificate
 - **Per-User Callout**: Enable if user-specific authentication required
 
-**Related Patterns**: [Integration Examples](../../code-examples/apex/integration-examples.md#example-1-rest-api-callout-with-named-credentials)
+**Related Patterns**: [Integration Examples](../../code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials)
 
 ## Implement Proper Error Handling
 
@@ -148,7 +157,7 @@ private static Boolean isRetryableError(Integer statusCode, Exception e) {
 - **Provide user-friendly messages**: Transform technical errors into actionable messages
 - **Handle timeout scenarios**: Explicitly handle timeout exceptions
 
-**Related Patterns**: [Error Handling and Logging](../development/error-handling-and-logging.md)
+**Related Patterns**: [Error Handling and Logging](../development/error-handling-and-logging.html)
 
 ## Leverage Asynchronous Patterns
 
@@ -225,7 +234,7 @@ public static void makeAsyncCallout(String endpoint, String payloadJson) {
 
 **Note**: Prefer Queueable over @future for new development due to better error handling and chaining capabilities.
 
-**Related Patterns**: [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.md), [Queueable Examples](../../code-examples/apex/queueable-examples.md)
+**Related Patterns**: [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html), [Queueable Examples](../../code-examples/apex/queueable-examples.html)
 
 ## Implement Circuit Breaker Pattern
 
@@ -381,7 +390,7 @@ public class CalloutWithProcessingQueueable implements Queueable, Database.Allow
 }
 ```
 
-**Related Patterns**: [Queueable Examples](../../code-examples/apex/queueable-examples.md), [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.md)
+**Related Patterns**: [Queueable Examples](../../code-examples/apex/queueable-examples.html), [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html)
 
 ## Optimize Response Processing
 
@@ -466,7 +475,7 @@ public static void processResponseInBatches(HttpResponse response) {
 - **Use streaming parsers**: For very large JSON responses
 - **Extract only needed fields**: Reduce memory footprint
 
-**Related Patterns**: [Governor Limits and Optimization](../development/governor-limits-and-optimization.md)
+**Related Patterns**: [Governor Limits and Optimization](../development/governor-limits-and-optimization.html)
 
 ## Monitor and Log Callout Performance
 
@@ -555,7 +564,7 @@ public static void checkCalloutHealth(String integrationName) {
 - **Correlate requests**: Use request IDs for tracing
 - **Set up dashboards**: Visualize callout health and performance
 
-**Related Patterns**: [Monitoring and Alerting](../observability/monitoring-alerting.md)
+**Related Patterns**: [Monitoring and Alerting](../observability/monitoring-alerting.html)
 
 ## Avoid DML Before Callout
 
@@ -608,7 +617,7 @@ insert contact;
 - Proper error handling
 - Better user experience (non-blocking)
 
-**Related Patterns**: [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.md)
+**Related Patterns**: [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html)
 
 ## Testing Callout Best Practices
 
@@ -736,7 +745,7 @@ private class ComprehensiveCalloutTest {
 - **Test async patterns**: Test Queueable and @future callouts
 - **Achieve 100% coverage**: Cover all code paths
 
-**Related Patterns**: [Apex Testing Patterns](../testing/apex-testing-patterns.md)
+**Related Patterns**: [Apex Testing Patterns](../testing/apex-testing-patterns.html)
 
 ## Key Takeaways
 
@@ -788,12 +797,94 @@ Remember that callouts are often the most fragile part of your Salesforce integr
 
 **A**: Process responses incrementally (don't load entire response into memory), use streaming parsers for large JSON responses, extract only needed fields to reduce memory footprint, clear processed data to free memory, and monitor heap size with `Limits.getHeapSize()`. Batch process large responses.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Callout Timeout with Critical Operations
+
+**Scenario**: Critical operation requiring callout that may timeout, causing business impact.
+
+**Consideration**:
+- Use async patterns for non-critical operations
+- Implement timeout handling with fallback logic
+- Consider circuit breaker pattern for unreliable systems
+- Monitor callout success rates
+- Plan for timeout scenarios
+- Document timeout handling procedures
+
+### Edge Case 2: Large Response Processing
+
+**Scenario**: External system returning very large responses causing heap size exceptions.
+
+**Consideration**:
+- Process responses incrementally
+- Use streaming parsers for large JSON
+- Extract only needed fields
+- Clear processed data to free memory
+- Consider pagination if external system supports it
+- Monitor heap size usage
+
+### Edge Case 3: Callout Retry with Idempotency
+
+**Scenario**: Retrying failed callouts causing duplicate operations in external system.
+
+**Consideration**:
+- Design external APIs to be idempotent
+- Use idempotency keys in callout requests
+- Implement idempotent retry logic
+- Track callout attempts to prevent duplicates
+- Test retry scenarios thoroughly
+- Document idempotency requirements
+
+### Edge Case 4: Callout Authentication Failures
+
+**Scenario**: OAuth token expiration or authentication failures during long-running operations.
+
+**Consideration**:
+- Implement token refresh logic
+- Handle authentication errors gracefully
+- Monitor token expiration times
+- Use Named Credentials for automatic token management
+- Implement fallback authentication mechanisms
+- Test authentication failure scenarios
+
+### Edge Case 5: Callout Rate Limiting
+
+**Scenario**: External system rate-limiting callouts causing integration failures.
+
+**Consideration**:
+- Implement rate limiting and throttling
+- Use exponential backoff for retries
+- Monitor callout rate limit usage
+- Coordinate callouts across integrations
+- Consider async processing to spread load
+- Document rate limit handling
+
+### Limitations
+
+- **Timeout Limits**: Synchronous callouts have 10-second timeout (120s async)
+- **Callout Count Limits**: 100 callouts per synchronous transaction
+- **Heap Size Limits**: Response processing limited by 6MB heap size (sync)
+- **Authentication Complexity**: OAuth token management adds complexity
+- **Error Handling**: External system errors may not be easily handled
+- **Rate Limiting**: External systems may rate-limit callouts
+- **Network Reliability**: Network issues may cause callout failures
+
 ## Related Patterns
 
-- [Integration Examples](../../code-examples/apex/integration-examples.md) - Complete callout code examples
-- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.md) - Queueable and @future patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
-- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Performance optimization
-- [Monitoring and Alerting](../observability/monitoring-alerting.md) - Monitoring patterns
+**See Also**:
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html) - Queueable and @future patterns
+
+**Related Domains**:
+- [Integration Examples](../code-examples/apex/integration-examples.html) - Complete callout code examples
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Performance optimization
+- [Monitoring and Alerting](../observability/monitoring-alerting.html) - Monitoring patterns
+
+- [Integration Examples](../../code-examples/apex/integration-examples.html) - Complete callout code examples
+- [Asynchronous Apex Patterns](../development/asynchronous-apex-patterns.html) - Queueable and @future patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Performance optimization
+- [Monitoring and Alerting](../observability/monitoring-alerting.html) - Monitoring patterns
 

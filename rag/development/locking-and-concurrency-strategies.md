@@ -26,9 +26,9 @@ This topic covers Salesforce row locking, concurrency control patterns, UNABLE_T
 - Familiarity with error handling patterns
 
 **Recommended Reading**:
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
-- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Queueable and Batch Apex patterns
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Resource management
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Queueable and Batch Apex patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Resource management
 
 ## Consensus Best Practices
 
@@ -265,9 +265,10 @@ These tradeoffs require human judgment based on system load, concurrency pattern
 
 ## Related Patterns
 
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns for locking errors
-- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Queueable patterns for retry operations
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Resource management and limit handling
-- [Large Data Loads](large-data-loads.md) - Concurrency patterns for bulk operations
-- [Integration Patterns](../integrations/etl-vs-api-vs-events.md) - Concurrency in integration scenarios
+**See Also**:
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns for locking errors
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Queueable patterns for retry operations
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Resource management and limit handling
+- [Large Data Loads](large-data-loads.html) - Concurrency patterns for bulk operations
+- [Integration Patterns](../integrations/etl-vs-api-vs-events.html) - Concurrency in integration scenarios
 

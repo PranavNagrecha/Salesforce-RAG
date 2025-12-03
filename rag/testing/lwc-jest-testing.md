@@ -531,10 +531,10 @@ Think of Jest tests as testing what components do (behavior), not how they do it
 
 ## Related Patterns
 
-- [LWC Patterns](../development/lwc-patterns.md) - LWC component patterns
-- [LWC Accessibility Testing](lwc-accessibility-testing.md) - Accessibility testing patterns
-- [Automated Testing Patterns](automated-testing-patterns.md) - Automated testing approaches
-- [Testing Strategy](../project-methods/testing-strategy.md) - Comprehensive testing strategies
+- [LWC Patterns](../development/lwc-patterns.html) - LWC component patterns
+- [LWC Accessibility Testing](lwc-accessibility-testing.html) - Accessibility testing patterns
+- [Automated Testing Patterns](automated-testing-patterns.html) - Automated testing approaches
+- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing strategies
 
 
 

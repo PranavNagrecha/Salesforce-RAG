@@ -20,14 +20,14 @@ OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI
 
 **Required Knowledge**:
 - Understanding of Salesforce declarative automation
-- Knowledge of Flow and Process Builder concepts
+- Knowledge of Flow concepts (⚠️ **Note**: Process Builder is deprecated, use Record-Triggered Flows instead)
 - Understanding of data transformation and validation
 - Familiarity with Experience Cloud (for portal implementations)
 
 **Recommended Reading**:
-- [Flow Patterns](flow-patterns.md) - Flow automation patterns
-- [Portal Architecture](../architecture/portal-architecture.md) - Experience Cloud patterns
-- [LWC Patterns](lwc-patterns.md) - Lightning Web Component patterns
+- [Flow Patterns](flow-patterns.html) - Flow automation patterns
+- [Portal Architecture](../architecture/portal-architecture.html) - Experience Cloud patterns
+- [LWC Patterns](lwc-patterns.html) - Lightning Web Component patterns
 
 ## OmniScripts for Guided Processes
 
@@ -404,7 +404,10 @@ Avoid OmniStudio when:
 
 ## Related Patterns
 
-- [Flow Patterns](flow-patterns.md) - Flow automation patterns
-- [LWC Patterns](lwc-patterns.md) - Lightning Web Component patterns
-- [Portal Architecture](../architecture/portal-architecture.md) - Experience Cloud patterns
+**See Also**:
+- [Flow Patterns](flow-patterns.html) - Flow automation patterns
+- [LWC Patterns](lwc-patterns.html) - Lightning Web Component patterns
+
+**Related Domains**:
+- [Portal Architecture](../architecture/portal-architecture.html) - Experience Cloud patterns
 

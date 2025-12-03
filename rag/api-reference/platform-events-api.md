@@ -1,3 +1,15 @@
+---
+title: "Platform Events API Reference"
+level: "Intermediate"
+tags:
+  - api-reference
+  - platform-events
+  - events
+  - reference
+  - integration
+last_reviewed: "2025-01-XX"
+---
+
 # Platform Events API Reference
 
 > Quick reference for Platform Events publication, subscription, and payload patterns.
@@ -55,7 +67,7 @@ public with sharing class EventPublisher {
 - Include timestamp and idempotency keys
 - Keep payloads self-contained and minimal
 
-**Related Patterns**: [Event-Driven Architecture](../architecture/event-driven-architecture.md)
+**Related Patterns**: [Event-Driven Architecture](../architecture/event-driven-architecture.html)
 
 ---
 
@@ -196,7 +208,7 @@ CustomEvent__e event = new CustomEvent__e(
 );
 ```
 
-**Related Patterns**: [Event-Driven Architecture](rag/architecture/event-driven-architecture.md#event-payload-design)
+**Related Patterns**: [Event-Driven Architecture](/Salesforce-RAG/rag/architecture/event-driven-architecture.html#event-payload-design)
 
 ---
 
@@ -243,13 +255,13 @@ public static void handleEvents(List<CustomEvent__e> events) {
 }
 ```
 
-**Related Patterns**: [Error Handling](../development/error-handling-and-logging.md)
+**Related Patterns**: [Error Handling](../development/error-handling-and-logging.html)
 
 ---
 
 ## Related Patterns
 
-- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Complete event-driven patterns
+- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Complete event-driven patterns
 - [Integration Patterns](../integrations) - Integration with external systems
-- [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
+- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
 

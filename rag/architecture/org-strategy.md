@@ -357,3 +357,14 @@ Think of org strategy as starting with simplest approach (single org) and adding
 
 **A**: Central org (hub) for shared functions (CRM, core processes) with satellite orgs (spokes) for specific functions (field service, partner management). Provides isolation for specific functions while sharing core capabilities. More complex than single org but less than full multi-org.
 
+## Related Patterns
+
+**See Also**:
+- [Org Edition Selection](org-edition-selection.html) - Edition selection for org strategy
+- [Governance Patterns](governance-patterns.html) - Governance implications of org strategy
+
+**Related Domains**:
+- [Integration Platform Patterns](../integrations/integration-platform-patterns.html) - Multi-org integration patterns
+- [Environment Strategy](../operations/environment-strategy.html) - Environment management for multi-org
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration for org strategy
+

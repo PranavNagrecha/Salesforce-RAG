@@ -129,7 +129,7 @@ public static void processContactsInBatches() {
 - Avoid long-running transactions
 - Use Platform Events for decoupled processing
 
-**Related Patterns**: [Locking and Concurrency](../development/locking-and-concurrency-strategies.md)
+**Related Patterns**: [Locking and Concurrency](../development/locking-and-concurrency-strategies.html)
 
 ---
 
@@ -320,7 +320,7 @@ if (fields.containsKey('CustomField__c')) {
 - Use `WITH SECURITY_ENFORCED` to catch FLS issues
 - Test queries in developer console first
 
-**Related Patterns**: [SOQL Patterns](../development/soql-query-patterns.md), [LDS Referential Integrity](../mcp-knowledge/lds-patterns.md)
+**Related Patterns**: [SOQL Patterns](../development/soql-query-patterns.html), [LDS Referential Integrity](../mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -450,7 +450,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor governor limits proactively
 
-**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.md), [Apex Patterns](rag/development/apex-patterns.md#bulkification)
+**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
 
 ---
 
@@ -512,7 +512,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.md), [Apex Patterns](rag/development/apex-patterns.md#bulkification)
+**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
 
 ---
 
@@ -573,7 +573,7 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 - Separate DML and callout operations
 - Plan transaction boundaries carefully
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#asynchronous-apex-patterns)
+**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
 
 ---
 
@@ -619,10 +619,91 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 
 **A**: Best practices include: (1) **Bulkify all code** (no DML/SOQL in loops), (2) **Null check everything** before accessing properties, (3) **Validate data** before processing, (4) **Handle exceptions** gracefully with try-catch, (5) **Test with bulk data** (200+ records), (6) **Use defensive coding** patterns, (7) **Follow Salesforce best practices** for Apex development.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Concurrent Updates with Complex Triggers
+
+**Scenario**: Multiple triggers and flows executing on the same record simultaneously, causing lock conflicts and unexpected behavior.
+
+**Consideration**:
+- Understand trigger execution order
+- Design triggers to avoid conflicts
+- Use static variables to prevent recursion
+- Test with concurrent update scenarios
+- Monitor trigger performance
+- Consider trigger framework for coordination
+
+### Edge Case 2: Governor Limits in Batch Apex
+
+**Scenario**: Batch Apex hitting governor limits due to large batch sizes or complex processing.
+
+**Consideration**:
+- Optimize batch size based on record complexity
+- Monitor governor limit usage in batches
+- Use Database.executeBatch with appropriate batch size
+- Test with realistic data volumes
+- Implement limit checking in batch logic
+- Consider splitting batches if needed
+
+### Edge Case 3: SOQL Query Selectivity Issues
+
+**Scenario**: Query appears selective but performs poorly due to data distribution or missing indexes.
+
+**Consideration**:
+- Use Query Plan to verify index usage
+- Test query performance with actual data
+- Consider data distribution (e.g., 90% same status)
+- Add custom indexes for frequently queried fields
+- Monitor query performance over time
+- Optimize WHERE clause criteria
+
+### Edge Case 4: DML Exception Handling with Partial Success
+
+**Scenario**: DML operation partially succeeds (some records succeed, some fail), requiring careful error handling.
+
+**Consideration**:
+- Use Database methods with allOrNone=false
+- Process partial success results
+- Handle individual record errors
+- Log failed records for retry
+- Provide detailed error reporting
+- Test partial success scenarios
+
+### Edge Case 5: Callout Timeout with Retry Logic
+
+**Scenario**: External system slow or unavailable, causing callout timeouts and retry failures.
+
+**Consideration**:
+- Implement exponential backoff for retries
+- Set appropriate timeout values
+- Use async patterns for non-critical callouts
+- Implement circuit breaker pattern
+- Monitor callout success rates
+- Handle timeout errors gracefully
+
+### Limitations
+
+- **Governor Limit Hard Limits**: Some limits cannot be exceeded (SOQL: 100 sync, 200 async)
+- **Lock Timeout**: Record locks timeout after 10 seconds
+- **Query Selectivity**: Queries must be selective for optimal performance
+- **DML Partial Success**: Partial success requires careful error handling
+- **Callout Timeouts**: Callouts have strict timeout limits (10s sync, 120s async)
+- **Batch Size Limits**: Batch size limited by heap size and DML limits
+- **Error Message Clarity**: Some error messages may not clearly indicate root cause
+
 ## Related Patterns
 
-- [Locking and Concurrency](../development/locking-and-concurrency-strategies.md) - Row locking patterns
-- [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
-- [Governor Limits](../development/governor-limits-and-optimization.md) - Limit management
-- [Apex Patterns](../development/apex-patterns.md) - Apex best practices
+**See Also**:
+- [Governor Limit Errors](governor-limit-errors.html) - Governor limit-specific errors
+
+**Related Domains**:
+- [Locking and Concurrency](../development/locking-and-concurrency-strategies.html) - Row locking patterns
+- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
+- [Governor Limits](../development/governor-limits-and-optimization.html) - Limit management
+- [Apex Patterns](../development/apex-patterns.html) - Apex best practices
+
+- [Locking and Concurrency](../development/locking-and-concurrency-strategies.html) - Row locking patterns
+- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
+- [Governor Limits](../development/governor-limits-and-optimization.html) - Limit management
+- [Apex Patterns](../development/apex-patterns.html) - Apex best practices
 

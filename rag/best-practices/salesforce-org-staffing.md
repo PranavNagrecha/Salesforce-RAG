@@ -33,7 +33,7 @@ Understanding staffing needs requires evaluating current requirements, growth pr
 - Object and field configuration
 - Page layout and record type management
 - Security and sharing configuration
-- Basic automation (Flows, Process Builder)
+- Basic automation (Flows - ⚠️ **Note**: Process Builder is deprecated, use Record-Triggered Flows instead)
 - Reports and dashboards
 - Data management and quality
 - User training and support

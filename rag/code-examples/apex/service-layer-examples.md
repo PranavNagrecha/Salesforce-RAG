@@ -9,8 +9,8 @@ The Service Layer coordinates between domain, selector, and integration layers. 
 
 **Related Patterns**:
 
-- [Apex Class Layering](rag/development/apex-patterns.md#apex-class-layering)
-- [Service Layer Pattern](rag/development/apex-patterns.md#service-layer)
+- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
+- [Service Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer)
 
 ## Examples
 
@@ -19,7 +19,7 @@ The Service Layer coordinates between domain, selector, and integration layers. 
 **Pattern**: Service Layer with Domain and Selector Delegation
 **Use Case**: Orchestrating a simple update workflow
 **Complexity**: Basic
-**Related Patterns**: [Domain Layer](rag/development/apex-patterns.md#domain-layer), [Selector Layer](rag/development/apex-patterns.md#selector-layer)
+**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer), [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
 
 **Problem**:
 You need to update records with validation and business logic. The service layer orchestrates the workflow by delegating to domain and selector layers.
@@ -171,7 +171,7 @@ private class ContactUpdateServiceTest {
 **Pattern**: Service Layer Orchestrating Multi-Step Workflow
 **Use Case**: Complex business process with multiple steps
 **Complexity**: Intermediate
-**Related Patterns**: [Service Layer](rag/development/apex-patterns.md#service-layer), [Error Handling](../../development/error-handling-and-logging.md)
+**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), [Error Handling](../../development/error-handling-and-logging.html)
 
 **Problem**:
 You need to orchestrate a complex workflow: query related records → validate → update multiple objects → send notifications → log results.
@@ -336,7 +336,7 @@ private class AccountContactUpdateServiceTest {
 **Pattern**: Service Layer with Asynchronous Processing
 **Use Case**: Long-running operations that should be async
 **Complexity**: Advanced
-**Related Patterns**: [Queueable Pattern](rag/development/apex-patterns.md#queueable), [Asynchronous Apex](rag/development/apex-patterns.md#asynchronous-apex-patterns)
+**Related Patterns**: [Queueable Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#queueable), [Asynchronous Apex](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
 
 **Problem**:
 You need to process a large number of records asynchronously, potentially chaining multiple jobs.

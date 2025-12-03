@@ -238,6 +238,6 @@ This document defines the standard terminology to be used consistently across th
 
 ## Cross-Reference
 
-- See [Core Terminology](../glossary/core-terminology.md) for complete definitions
-- See [Style Guide](style-guide.md) for voice and tone standards
+- See [Core Terminology](../glossary/core-terminology.html) for complete definitions
+- See [Style Guide](style-guide.html) for voice and tone standards
 

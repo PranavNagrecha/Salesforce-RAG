@@ -24,9 +24,9 @@ Flow is used as the primary automation engine across projects, with Apex reserve
 - Familiarity with Salesforce security model (profiles, permission sets)
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Understanding when to use Apex vs Flow
-- [Order of Execution](order-of-execution.md) - Understanding when Flows execute
-- [Admin Basics](admin-basics.md) - Foundation Salesforce administration knowledge
+- [Apex Patterns](apex-patterns.html) - Understanding when to use Apex vs Flow
+- [Order of Execution](order-of-execution.html) - Understanding when Flows execute
+- [Admin Basics](admin-basics.html) - Foundation Salesforce administration knowledge
 
 ## Flow Type Selection
 
@@ -369,10 +369,6 @@ The "Flow User" user permission is being deprecated in Winter '26 (2025). This a
 - Screen Flow visibility controlled by object permissions
 - Field-level security applies to Flow fields
 
-### Related Patterns
-
-- See `rag/security/permission-set-architecture.md` for permission management
-- See `rag/development/order-of-execution.md` for Flow execution timing
 
 ## Best Practices Summary
 
@@ -451,13 +447,13 @@ The "Flow User" user permission is being deprecated in Winter '26 (2025). This a
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](apex-patterns.md) - Understanding when to use Apex vs Flow
-- [Order of Execution](order-of-execution.md) - Understanding when Flows execute in the save sequence
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns for Flow integration
-- [Admin Basics](admin-basics.md) - Foundation Salesforce administration knowledge
+- [Apex Patterns](apex-patterns.html) - Understanding when to use Apex vs Flow
+- [Order of Execution](order-of-execution.html) - Understanding when Flows execute in the save sequence
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns for Flow integration
+- [Admin Basics](admin-basics.html) - Foundation Salesforce administration knowledge
 
 **Related Domains**:
-- [Testing Strategy](../project-methods/testing-strategy.md) - Testing Flow automation
+- [Testing Strategy](../project-methods/testing-strategy.html) - Testing Flow automation
 - [Code Examples](../code-examples/flow/) - Flow pattern examples (coming soon)
 
 ### Change Management

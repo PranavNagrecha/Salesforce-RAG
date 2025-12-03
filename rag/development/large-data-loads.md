@@ -431,9 +431,13 @@ Think of large data loads as four-phase process: Plan thoroughly, test in sandbo
 
 ## Related Patterns
 
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data migration strategies and patterns
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns for data loads
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection for large loads
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Limit management for large operations
-- [SIS Sync Patterns](../integrations/sis-sync-patterns.md) - High-volume batch synchronization patterns
+**See Also**:
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Limit management for large operations
+
+**Related Domains**:
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration strategies and patterns
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns for data loads
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection for large loads
+- [Bulk API Examples](../code-examples/integrations/bulk-api-examples.html) - Bulk API code examples
+- [SIS Sync Patterns](../integrations/sis-sync-patterns.html) - High-volume batch synchronization patterns
 

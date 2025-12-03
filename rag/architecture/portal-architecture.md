@@ -454,3 +454,14 @@ Avoid portal architecture when:
 
 **A**: Optimize Lightning components for performance, configure mobile-responsive layouts, use efficient SOQL queries in components, implement proper caching strategies, monitor site analytics for performance insights, and test portal performance with realistic data volumes.
 
+## Related Patterns
+
+**See Also**:
+- [Multi-Tenant Identity Architecture](../identity-sso/multi-tenant-identity-architecture.html) - Identity and SSO patterns for portals
+- [Sharing Sets and Portals](../security/sharing-sets-and-portals.html) - Experience Cloud sharing patterns
+
+**Related Domains**:
+- [Mobile Strategy](mobile-strategy.html) - Mobile portal optimization
+- [LWC Patterns](../development/lwc-patterns.html) - Custom component development for portals
+- [OmniStudio Patterns](../development/omnistudio-patterns.html) - OmniStudio patterns for portals
+

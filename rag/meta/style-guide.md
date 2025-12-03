@@ -141,11 +141,11 @@ Standard format for "Related Patterns" section:
 ## Related Patterns
 
 **See Also**:
-- [Pattern Name](rag/path/to/pattern-file.md) - Brief description of relationship
-- [Another Pattern](rag/path/to/another-pattern.md) - Brief description
+- [Pattern Name](/Salesforce-RAG/rag/path/to/pattern-file.html) - Brief description of relationship
+- [Another Pattern](/Salesforce-RAG/rag/path/to/another-pattern.html) - Brief description
 
 **Related Domains**:
-- [Domain File](rag/path/to/domain-file.md) - Brief description
+- [Domain File](/Salesforce-RAG/rag/path/to/domain-file.html) - Brief description
 ```
 
 ### Internal Link Format

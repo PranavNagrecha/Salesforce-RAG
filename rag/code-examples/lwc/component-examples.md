@@ -8,8 +8,8 @@
 Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce. These examples demonstrate common LWC patterns for data access, user interactions, and business logic.
 
 **Related Patterns**:
-- [LWC Patterns](../development/lwc-patterns.md) - LWC development patterns and best practices
-- [LWC API Reference](../api-reference/lwc-api-reference.md) - LWC API method signatures
+- [LWC Patterns](../development/lwc-patterns.html) - LWC development patterns and best practices
+- [LWC API Reference](../api-reference/lwc-api-reference.html) - LWC API method signatures
 
 ## Examples
 
@@ -18,7 +18,7 @@ Lightning Web Components (LWC) are modern, standards-based web components for bu
 **Pattern**: Display record data using Lightning Data Service
 **Use Case**: Displaying record information on a record page
 **Complexity**: Basic
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.md#data-access-patterns)
+**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
 
 **Problem**:
 You need to display record data in a custom component on a record page.
@@ -97,7 +97,7 @@ export default class ContactDisplay extends LightningElement {
 **Pattern**: Calling Apex methods imperatively for user actions
 **Use Case**: Performing actions that require user interaction
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.md#data-access-patterns)
+**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
 
 **Problem**:
 You need to call an Apex method when a user clicks a button.
@@ -174,7 +174,7 @@ export default class ContactAction extends LightningElement {
 **Pattern**: Collecting user input and updating records
 **Use Case**: Allowing users to edit record data
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.md)
+**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html)
 
 **Problem**:
 You need to allow users to edit record fields in a custom component.
@@ -262,13 +262,13 @@ export default class ContactEdit extends LightningElement {
 
 ## Related Examples
 
-- [Service Layer Examples](apex/service-layer-examples.md) - Apex service methods called from LWC
-- [Accessibility Examples](lwc/accessibility-examples.md) - Accessible LWC patterns
-- [LWC API Reference](../api-reference/lwc-api-reference.md) - Complete LWC API reference
+- [Service Layer Examples](apex/service-layer-examples.html) - Apex service methods called from LWC
+- [Accessibility Examples](lwc/accessibility-examples.html) - Accessible LWC patterns
+- [LWC API Reference](../api-reference/lwc-api-reference.html) - Complete LWC API reference
 
 ## See Also
 
-- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC development patterns
-- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - Official LWC best practices
-- [LWC Development Guide](../mcp-knowledge/lwc-development-guide.md) - LWC development guidance
+- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC development patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - Official LWC best practices
+- [LWC Development Guide](../mcp-knowledge/lwc-development-guide.html) - LWC development guidance
 

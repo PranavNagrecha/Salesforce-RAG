@@ -16,9 +16,24 @@ last_reviewed: "2025-01-XX"
 This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences. These patterns are essential for managing complex Salesforce implementations with multiple teams, compliance requirements, and efficient development workflows.
 
 **Related Patterns**:
-- [CI/CD Patterns](cicd-patterns.md) - CI/CD and deployment automation
-- [Release Governance](release-governance.md) - Release approval and risk management
-- [Data Residency & Compliance](../data-governance/data-residency-compliance.md) - Data protection and compliance patterns
+- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
+- [Release Governance](release-governance.html) - Release approval and risk management
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.html) - Data protection and compliance patterns
+
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce org types and sandbox types
+- Knowledge of data masking and data protection requirements
+- Familiarity with multi-team development workflows
+- Understanding of compliance and data residency requirements
+- Basic knowledge of org topology and environment management
+
+**Recommended Reading**:
+- `rag/operations/cicd-patterns.md` - CI/CD and deployment automation
+- `rag/operations/release-governance.md` - Release approval processes
+- `rag/data-governance/data-residency-compliance.md` - Data protection patterns
+- `rag/architecture/org-strategy.md` - Multi-org vs single-org decisions
 
 ## Consensus Best Practices
 
@@ -123,7 +138,7 @@ This guide covers environment strategy patterns for Salesforce, including org to
 
 **Process Isolation**:
 - Separate automation per team/feature
-- Independent Flow and Process Builder processes
+- Independent Flow processes (⚠️ **Note**: Process Builder is deprecated, use Record-Triggered Flows instead)
 - Team-specific validation rules
 - Document process ownership
 
@@ -295,10 +310,92 @@ This guide covers environment strategy patterns for Salesforce, including org to
 
 **A**: Best practices include: (1) **Design org topology early** (before development), (2) **Isolate teams when possible** (separate orgs or clear boundaries), (3) **Mask sensitive data** in non-production, (4) **Establish refresh cadences** (documented schedules), (5) **Automate data masking** (consistent processes), (6) **Document environment purposes** (clear usage guidelines), (7) **Maintain environment parity** (keep environments similar), (8) **Plan for scaling** (support future growth).
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Sandbox Refresh During Active Development
+
+**Scenario**: Sandbox refresh occurs while developers have active work, causing data loss or metadata conflicts.
+
+**Consideration**:
+- Communicate refresh schedules clearly to all teams
+- Require all work to be committed to source control before refresh
+- Plan refresh windows during low-activity periods
+- Implement refresh approval process
+- Document refresh procedures and expectations
+- Use source control to preserve uncommitted changes
+
+### Edge Case 2: Data Masking with Complex Relationships
+
+**Scenario**: Masking data while preserving referential integrity and relationship structure.
+
+**Consideration**:
+- Mask related records consistently (maintain relationships)
+- Use deterministic masking for relationship preservation
+- Test data masking with complex relationship structures
+- Document masking rules for related records
+- Validate data integrity after masking
+- Consider relationship-aware masking tools
+
+### Edge Case 3: Multi-Org Coordination with Shared Data
+
+**Scenario**: Multiple orgs requiring shared data or synchronization, causing coordination complexity.
+
+**Consideration**:
+- Define data sharing requirements clearly
+- Use integration patterns for data synchronization
+- Implement data reconciliation processes
+- Document data ownership and sharing rules
+- Consider single org if data sharing is critical
+- Plan for data consistency across orgs
+
+### Edge Case 4: Environment Scaling with Growing Teams
+
+**Scenario**: Org topology needs to scale as teams grow, requiring restructuring and migration.
+
+**Consideration**:
+- Design topology with scaling in mind
+- Plan for team growth and additional orgs
+- Document migration procedures for topology changes
+- Consider topology evolution paths
+- Balance isolation with coordination needs
+- Plan for topology restructuring costs
+
+### Edge Case 5: Compliance Requirements Across Environments
+
+**Scenario**: Different compliance requirements for different environments, causing configuration complexity.
+
+**Consideration**:
+- Document compliance requirements per environment
+- Implement environment-specific compliance controls
+- Use configuration management for compliance settings
+- Test compliance controls in each environment
+- Monitor compliance across environments
+- Plan for compliance audit requirements
+
+### Limitations
+
+- **Sandbox Refresh Limits**: Sandbox refresh frequency and timing constraints
+- **Data Masking Complexity**: Complex relationships may limit masking options
+- **Environment Cost**: Multiple environments increase licensing and maintenance costs
+- **Data Synchronization Limits**: Data synchronization between orgs has practical limits
+- **Topology Change Complexity**: Changing org topology requires migration and coordination
+- **Compliance Configuration**: Different compliance requirements increase configuration complexity
+- **Environment Parity**: Maintaining exact parity across environments is challenging
+- **Refresh Window Constraints**: Sandbox refresh windows may conflict with development schedules
+
 ## Related Patterns
 
-- [CI/CD Patterns](cicd-patterns.md) - CI/CD and deployment automation
-- [Release Governance](release-governance.md) - Release approval and risk management
-- [Data Residency & Compliance](../data-governance/data-residency-compliance.md) - Data protection and compliance
-- [Sandbox Seeding](rag/operations/cicd-patterns.md#sandbox-seeding) - Test data management patterns
+**See Also**:
+- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
+- [Release Governance](release-governance.html) - Release approval and risk management
+
+**Related Domains**:
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.html) - Data protection and compliance
+- [Org Strategy](../architecture/org-strategy.html) - Multi-org vs single-org decisions
+- [Sandbox Seeding](cicd-patterns.html#sandbox-seeding) - Test data management patterns
+
+- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
+- [Release Governance](release-governance.html) - Release approval and risk management
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.html) - Data protection and compliance
+- [Sandbox Seeding](/Salesforce-RAG/rag/operations/cicd-patterns.html#sandbox-seeding) - Test data management patterns
 

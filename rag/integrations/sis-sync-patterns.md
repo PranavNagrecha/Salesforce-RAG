@@ -484,8 +484,8 @@ Avoid this pattern when:
 
 ## Related Patterns
 
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
-- [Integration Platform Patterns](integration-platform-patterns.md) - MuleSoft and Dell Boomi patterns
-- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data migration strategies
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.html) - Data migration strategies
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - External ID patterns
 

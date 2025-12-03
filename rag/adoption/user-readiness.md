@@ -16,8 +16,8 @@ last_reviewed: "2025-01-XX"
 This guide covers user readiness patterns for Salesforce, including training plans, support models, and telemetry for feature adoption. These patterns are essential for ensuring successful user adoption, maximizing system value, and driving organizational change.
 
 **Related Patterns**:
-- [Org Health Checks](org-health-checks.md) - Technical debt and org optimization
-- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
+- [Org Health Checks](org-health-checks.html) - Technical debt and org optimization
+- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
 
 ## Prerequisites
 
@@ -28,8 +28,8 @@ This guide covers user readiness patterns for Salesforce, including training pla
 - Familiarity with project delivery methodologies
 
 **Recommended Reading**:
-- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery patterns
-- [Org Health Checks](org-health-checks.md) - Technical optimization patterns
+- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery patterns
+- [Org Health Checks](org-health-checks.html) - Technical optimization patterns
 
 ## Consensus Best Practices
 
@@ -312,7 +312,7 @@ This guide covers user readiness patterns for Salesforce, including training pla
 
 ## Related Patterns
 
-- [Org Health Checks](org-health-checks.md) - Technical debt and org optimization
-- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
-- [Testing Strategy](../project-methods/testing-strategy.md) - User acceptance testing patterns
+- [Org Health Checks](org-health-checks.html) - Technical debt and org optimization
+- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
+- [Testing Strategy](../project-methods/testing-strategy.html) - User acceptance testing patterns
 

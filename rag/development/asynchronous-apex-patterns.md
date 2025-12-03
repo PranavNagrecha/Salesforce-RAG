@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods. Asynchronous Apex is essential for processing large data volumes, performing long-running operations, and avoiding governor limit exceptions in synchronous contexts.
 
 **Related Patterns**:
-- [Apex Patterns](apex-patterns.md) - General Apex patterns and class layering
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Governor limit management
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
+- [Apex Patterns](apex-patterns.html) - General Apex patterns and class layering
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Governor limit management
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns
 
 ## Prerequisites
 
@@ -32,10 +32,10 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 - Familiarity with DML operations and SOQL queries
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex class structure and patterns
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Limit management
-- [Order of Execution](order-of-execution.md) - Transaction execution order
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
+- [Apex Patterns](apex-patterns.html) - Apex class structure and patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Limit management
+- [Order of Execution](order-of-execution.html) - Transaction execution order
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns
 
 ## Consensus Best Practices
 
@@ -557,10 +557,13 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 
 ## Related Patterns
 
-- [Apex Patterns](apex-patterns.md) - General Apex patterns
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Governor limit management
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
-- [Batch Examples](../code-examples/apex/batch-examples.md) - Complete Batch Apex code examples
-- [Queueable Examples](../code-examples/apex/queueable-examples.md) - Complete Queueable code examples
-- [Scheduled Examples](../code-examples/apex/scheduled-examples.md) - Complete Scheduled Apex code examples
+**See Also**:
+- [Apex Patterns](apex-patterns.html) - General Apex patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Governor limit management
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling patterns
+
+**Related Domains**:
+- [Batch Examples](../code-examples/apex/batch-examples.html) - Complete Batch Apex code examples
+- [Queueable Examples](../code-examples/apex/queueable-examples.html) - Complete Queueable code examples
+- [Scheduled Examples](../code-examples/apex/scheduled-examples.html) - Complete Scheduled Apex code examples
 

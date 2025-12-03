@@ -33,6 +33,11 @@ body {
   padding: 0 20px;
 }
 
+/* Hide any theme-generated navigation */
+.site-nav, .trigger, .page-nav, .site-header nav:not(.navbar) {
+  display: none !important;
+}
+
 /* Header */
 .site-header {
   background: var(--bg-color);

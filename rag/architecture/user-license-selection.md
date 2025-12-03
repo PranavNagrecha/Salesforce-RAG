@@ -247,6 +247,50 @@ Use free Integration User licenses for system-to-system integrations rather than
 
 **Better approach**: Evaluate user needs carefully. Use Platform licenses for users who don't need standard CRM objects. Use Service Cloud licenses for service-focused users who don't need Sales Cloud functionality.
 
+## Q&A
+
+### Q: What is the difference between Standard User and Platform User licenses?
+
+**A**: **Standard User** licenses provide access to standard Sales and Service Cloud objects (Accounts, Contacts, Opportunities, Cases, etc.) plus custom objects. **Platform User** licenses provide access only to custom objects and limited standard objects (Contacts, custom objects). Use Standard User for users who need CRM functionality; use Platform User for users who only need custom applications.
+
+### Q: When should I use Experience Cloud licenses vs Standard User licenses?
+
+**A**: Use **Experience Cloud licenses** for external users (customers, partners, citizens) who need portal access. Use **Standard User licenses** for internal employees who need full Salesforce access. Experience Cloud licenses are typically less expensive and designed for external user scenarios.
+
+### Q: What is an Integration User License and when should I use it?
+
+**A**: **Integration User License** is a free API-only license included with Enterprise, Performance, and Unlimited editions. Use it for system-to-system integrations that require API access but don't need UI access. Each org gets 5 free Integration User Licenses. Use Integration User Licenses instead of full user licenses for integration scenarios.
+
+### Q: Can I mix different license types in the same org?
+
+**A**: Yes, you can mix different license types in the same org. Users with different license types can work together, but each user's access is determined by their license type and assigned permissions. Mix license types strategically to optimize costs while meeting access requirements.
+
+### Q: How do I determine which license type a user needs?
+
+**A**: Determine license type by evaluating: (1) **Object access needs** (standard CRM objects vs custom objects only), (2) **User type** (internal employee vs external user), (3) **Access pattern** (UI access vs API-only), (4) **Feature requirements** (Sales Cloud, Service Cloud, custom apps). Match license type to user needs and responsibilities.
+
+### Q: What happens if I assign the wrong license type to a user?
+
+**A**: Users with insufficient license types may not be able to access required objects or features. Users with excessive license types increase costs without providing value. Test license types in sandbox before assigning in production. Monitor user access issues and adjust license assignments as needed.
+
+### Q: How do I optimize license costs?
+
+**A**: Optimize license costs by: (1) **Use Platform licenses** for users who don't need standard CRM objects, (2) **Use Experience Cloud licenses** for external users, (3) **Use Integration User licenses** for system integrations, (4) **Review license assignments regularly** to identify unused or over-licensed users, (5) **Right-size licenses** to user needs, (6) **Consider license consolidation** when appropriate.
+
+### Q: Can I change a user's license type after assignment?
+
+**A**: Yes, you can change a user's license type, but this may affect their access to objects and features. Test license type changes in sandbox first. Communicate changes to users. Update permission sets if needed. Monitor for access issues after license type changes.
+
+## Related Patterns
+
+**See Also**:
+- [Org Edition Selection](org-edition-selection.html) - Edition selection and license availability
+- [Salesforce Pricing Negotiation](salesforce-pricing-negotiation.html) - License cost optimization
+
+**Related Domains**:
+- [Integration User License Guide](../integrations/integration-user-license-guide.html) - Integration User License setup and configuration
+- [Permission Set Architecture](../security/permission-set-architecture.html) - Permission management for different license types
+
 ## Under-Licensing Users
 
 **Bad pattern**: Assigning Platform licenses to users who need access to Opportunities, Cases, or other standard objects not included in Platform licenses.

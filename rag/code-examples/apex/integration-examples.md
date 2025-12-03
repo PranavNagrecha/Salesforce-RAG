@@ -8,8 +8,8 @@
 The Integration Layer handles external API callouts, data transformation, authentication, and error handling. It should NOT contain business logic or SOQL queries.
 
 **Related Patterns**:
-- [Apex Class Layering](rag/development/apex-patterns.md#apex-class-layering)
-- [Integration Layer Pattern](rag/development/apex-patterns.md#integration-layer)
+- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
+- [Integration Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer)
 
 ## Examples
 
@@ -17,7 +17,7 @@ The Integration Layer handles external API callouts, data transformation, authen
 **Pattern**: Integration Layer with Named Credentials  
 **Use Case**: Outbound REST API callout  
 **Complexity**: Basic  
-**Related Patterns**: [Integration Layer](rag/development/apex-patterns.md#integration-layer)
+**Related Patterns**: [Integration Layer](/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer)
 
 **Problem**: 
 You need to make HTTP callouts to external systems using Named Credentials for authentication.
@@ -369,7 +369,7 @@ Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.md) - Service layer patterns
+- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
 - [Integration Patterns](../../integrations) - Integration architecture patterns
-- [Error Handling](../../development/error-handling-and-logging.md) - Error handling patterns
+- [Error Handling](../../development/error-handling-and-logging.html) - Error handling patterns
 

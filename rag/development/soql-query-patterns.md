@@ -33,9 +33,9 @@ This document captures SOQL query patterns and practices derived from actual imp
 - Familiarity with Apex or LWC development
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex class structure and Selector layer patterns
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Limit management and optimization
-- [Order of Execution](order-of-execution.md) - Understanding when queries execute
+- [Apex Patterns](apex-patterns.html) - Apex class structure and Selector layer patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Limit management and optimization
+- [Order of Execution](order-of-execution.html) - Understanding when queries execute
 
 ## What Was Actually Done
 
@@ -569,11 +569,15 @@ ORDER BY ApiVersion ASC, Name ASC
 
 ## Related Patterns
 
-- [Apex Patterns](apex-patterns.md) - Apex class layering and Selector layer patterns
-- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Query optimization and limit management
-- [Large Data Loads](large-data-loads.md) - Bulk query patterns for large datasets
-- [Integration Debugging](../troubleshooting/integration-debugging.md) - Query patterns for debugging integrations
-- [Data Reconciliation](../troubleshooting/data-reconciliation.md) - Query patterns for data validation
+**See Also**:
+- [Apex Patterns](apex-patterns.html) - Apex class layering and Selector layer patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.html) - Query optimization and limit management
+- [Large Data Loads](large-data-loads.html) - Bulk query patterns for large datasets
+
+**Related Domains**:
+- [Integration Debugging](../troubleshooting/integration-debugging.html) - Query patterns for debugging integrations
+- [SOQL Reference](../api-reference/soql-reference.html) - SOQL syntax reference
+- [Data Reconciliation](../troubleshooting/data-reconciliation.html) - Query patterns for data validation
 
 ## Q&A
 

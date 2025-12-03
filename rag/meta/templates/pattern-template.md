@@ -92,11 +92,11 @@ last_reviewed: "YYYY-MM-DD"
 
 ## Related Patterns
 
-- [Related Pattern 1](rag/path/to/pattern-1.md) - [Brief description]
-- [Related Pattern 2](rag/path/to/pattern-2.md) - [Brief description]
+- [Related Pattern 1](/Salesforce-RAG/rag/path/to/pattern-1.html) - [Brief description]
+- [Related Pattern 2](/Salesforce-RAG/rag/path/to/pattern-2.html) - [Brief description]
 
 ## See Also
 
-- [Implementation Guide](rag/path/to/implementation.md)
-- [Code Examples](rag/path/to/examples.md)
+- [Implementation Guide](/Salesforce-RAG/rag/path/to/implementation.html)
+- [Code Examples](/Salesforce-RAG/rag/path/to/examples.html)
 

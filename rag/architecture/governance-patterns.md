@@ -365,3 +365,14 @@ Think of governance as enabling quality, security, and sustainability, not const
 
 **A**: Without governance, orgs become unmaintainable, insecure, and costly. Technical debt accumulates, quality issues emerge, security risks increase, and costs rise. Even minimal governance is better than none.
 
+## Related Patterns
+
+**See Also**:
+- [Org Strategy](org-strategy.html) - Org structure and governance implications
+- [Project Estimation](project-estimation.html) - Project planning and governance
+
+**Related Domains**:
+- [CI/CD Patterns](../operations/cicd-patterns.html) - Deployment and change management
+- [Release Governance](../operations/release-governance.html) - Release approval and risk management
+- [Testing Strategy](../project-methods/testing-strategy.html) - Quality assurance and testing governance
+

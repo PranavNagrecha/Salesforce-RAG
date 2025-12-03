@@ -395,3 +395,13 @@ When negotiating Salesforce pricing, always ask:
 
 **A:** Start negotiating contract renewal 6-12 months before contract expiration. This provides: (1) Sufficient time for evaluation and negotiation, (2) Better negotiation leverage before expiration pressure, (3) Time to research competitive alternatives, (4) Time to optimize license types and user counts, (5) Time for budget planning and approval. Starting early significantly improves negotiation outcomes.
 
+## Related Patterns
+
+**See Also**:
+- [Org Edition Selection](org-edition-selection.html) - Edition selection and pricing
+- [User License Selection](user-license-selection.html) - License type selection and cost optimization
+- [Salesforce Product Evaluation](salesforce-product-evaluation.html) - Product selection and pricing
+
+**Related Domains**:
+- [Org Strategy](org-strategy.html) - Multi-org vs single-org cost implications
+

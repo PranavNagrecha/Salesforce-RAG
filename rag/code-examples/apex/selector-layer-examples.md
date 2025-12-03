@@ -8,8 +8,8 @@
 The Selector Layer provides centralized SOQL queries and data access abstraction. It enforces security, optimizes queries, and provides reusable query methods.
 
 **Related Patterns**:
-- [Apex Class Layering](rag/development/apex-patterns.md#apex-class-layering)
-- [Selector Layer Pattern](rag/development/apex-patterns.md#selector-layer)
+- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
+- [Selector Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
 
 ## Examples
 
@@ -17,7 +17,7 @@ The Selector Layer provides centralized SOQL queries and data access abstraction
 **Pattern**: Selector Layer with Security Enforcement  
 **Use Case**: Centralized data access for Contact object  
 **Complexity**: Basic  
-**Related Patterns**: [Selector Layer](rag/development/apex-patterns.md#selector-layer)
+**Related Patterns**: [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
 
 **Problem**: 
 You need to query Contact records with security enforcement and provide reusable query methods.
@@ -395,8 +395,8 @@ public static List<Contact> selectByIdWithCases(Set<Id> ids) {
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.md) - Service layer patterns
-- [Domain Layer Examples](domain-layer-examples.md) - Domain layer patterns
-- [SOQL Patterns](../../development/soql-query-patterns.md) - SOQL query patterns
-- [Apex Patterns](../../development/apex-patterns.md) - Complete Apex patterns
+- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
+- [Domain Layer Examples](domain-layer-examples.html) - Domain layer patterns
+- [SOQL Patterns](../../development/soql-query-patterns.html) - SOQL query patterns
+- [Apex Patterns](../../development/apex-patterns.html) - Complete Apex patterns
 

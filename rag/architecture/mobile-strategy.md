@@ -379,3 +379,13 @@ Think of mobile strategy as starting with standard options (Salesforce Mobile Ap
 
 **A**: Mobile app provides better offline capabilities, native feel, and device feature access. Mobile web is easier to deploy and update (no app store), works across platforms, and may be sufficient for many use cases. Consider requirements, user preferences, and maintenance complexity.
 
+## Related Patterns
+
+**See Also**:
+- [Portal Architecture](portal-architecture.html) - Experience Cloud mobile patterns
+- [LWC Patterns](../development/lwc-patterns.html) - Mobile-optimized LWC patterns
+
+**Related Domains**:
+- [LWC Accessibility](../development/lwc-patterns.html) - Mobile accessibility patterns
+- [Mobile LWC Patterns](../mcp-knowledge/lwc-development-guide.html) - Official mobile LWC guidance
+

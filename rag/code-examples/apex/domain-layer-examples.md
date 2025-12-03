@@ -8,8 +8,8 @@
 The Domain Layer encapsulates object-specific business logic and validation. It can be called from triggers OR from Service layer, and should NOT contain SOQL queries or external callouts.
 
 **Related Patterns**:
-- [Apex Class Layering](rag/development/apex-patterns.md#apex-class-layering)
-- [Domain Layer Pattern](rag/development/apex-patterns.md#domain-layer)
+- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
+- [Domain Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
 
 ## Examples
 
@@ -17,7 +17,7 @@ The Domain Layer encapsulates object-specific business logic and validation. It 
 **Pattern**: Domain Layer with Validation  
 **Use Case**: Object-specific validation and business rules  
 **Complexity**: Basic  
-**Related Patterns**: [Domain Layer](rag/development/apex-patterns.md#domain-layer)
+**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
 
 **Problem**: 
 You need to validate Contact records and apply business rules before DML operations. The domain layer encapsulates Contact-specific logic.
@@ -235,7 +235,7 @@ public with sharing class ContactUpdateService {
 }
 ```
 
-**Related Examples**: [Service Layer Examples](service-layer-examples.md)
+**Related Examples**: [Service Layer Examples](service-layer-examples.html)
 
 ---
 
@@ -322,7 +322,7 @@ private static String formatPhone(String phone) {
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.md) - Service layer patterns
-- [Selector Layer Examples](selector-layer-examples.md) - Data access patterns
-- [Apex Patterns](../../development/apex-patterns.md) - Complete Apex patterns
+- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
+- [Selector Layer Examples](selector-layer-examples.html) - Data access patterns
+- [Apex Patterns](../../development/apex-patterns.html) - Complete Apex patterns
 

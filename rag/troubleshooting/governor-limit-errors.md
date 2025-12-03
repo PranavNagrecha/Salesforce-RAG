@@ -26,10 +26,10 @@ This guide provides solutions for governor limit errors, including error message
 - Familiarity with error handling
 
 **Recommended Reading**:
-- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Limit management and optimization
-- [SOQL Query Patterns](../development/soql-query-patterns.md) - Query optimization
-- [Apex Patterns](../development/apex-patterns.md) - Bulkification patterns
-- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Limit management and optimization
+- [SOQL Query Patterns](../development/soql-query-patterns.html) - Query optimization
+- [Apex Patterns](../development/apex-patterns.html) - Bulkification patterns
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
 
 ## Too many SOQL queries
 
@@ -101,7 +101,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor query count proactively
 
-**Related Patterns**: [SOQL Patterns](../development/soql-query-patterns.md), [Governor Limits](../development/governor-limits-and-optimization.md)
+**Related Patterns**: [SOQL Patterns](../development/soql-query-patterns.html), [Governor Limits](../development/governor-limits-and-optimization.html)
 
 ---
 
@@ -162,7 +162,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#bulkification), [Governor Limits](../development/governor-limits-and-optimization.md)
+**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification), [Governor Limits](../development/governor-limits-and-optimization.html)
 
 ---
 
@@ -216,7 +216,7 @@ public static void processCalloutsAsync(Set<Id> contactIds) {
 - Batch callouts when possible
 - Monitor callout count
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#asynchronous-apex-patterns)
+**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
 
 ---
 
@@ -282,7 +282,7 @@ public class LargeDataProcessor implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Monitor CPU time usage
 
-**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.md), [Apex Patterns](../development/apex-patterns.md)
+**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.html), [Apex Patterns](../development/apex-patterns.html)
 
 ---
 
@@ -355,7 +355,7 @@ List<Contact> contacts = [
 - Use batch processing for large datasets
 - Avoid loading entire datasets into memory
 
-**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.md), [SOQL Patterns](../development/soql-query-patterns.md)
+**Related Patterns**: [Governor Limits](../development/governor-limits-and-optimization.html), [SOQL Patterns](../development/soql-query-patterns.html)
 
 ---
 
@@ -425,7 +425,7 @@ public class ProcessQueueable implements Queueable {
 - Use Queueable for chained async processing
 - Monitor future call count
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#asynchronous-apex-patterns)
+**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
 
 ---
 
@@ -471,10 +471,90 @@ public class ProcessQueueable implements Queueable {
 
 **A**: When hitting limits in production: (1) **Identify the limit** (check error message and debug logs), (2) **Analyze the code** causing the limit, (3) **Implement bulkification** or optimization, (4) **Test thoroughly** in sandbox, (5) **Deploy fix** as soon as possible, (6) **Monitor** to ensure fix works, (7) **Consider async processing** if operation is long-running. Always have a rollback plan.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Cumulative Limit Usage Across Automation
+
+**Scenario**: Multiple triggers, flows, and validation rules executing on the same record, causing cumulative governor limit usage.
+
+**Consideration**:
+- Monitor total limit usage across all automation
+- Use `Limits` class to check usage before expensive operations
+- Design automation to minimize cumulative usage
+- Test with bulk data to identify limit issues
+- Consider async processing for complex operations
+- Document automation execution order
+
+### Edge Case 2: Governor Limits in Complex Calculations
+
+**Scenario**: Complex calculations or loops consuming excessive CPU time, causing CPU time limit exceptions.
+
+**Consideration**:
+- Optimize algorithms to reduce complexity
+- Cache calculation results when possible
+- Break complex operations into smaller chunks
+- Use async processing for CPU-intensive operations
+- Profile code to identify CPU bottlenecks
+- Monitor CPU time usage
+
+### Edge Case 3: Heap Size with Large Collections
+
+**Scenario**: Processing large collections of records with complex objects causes heap size exceptions.
+
+**Consideration**:
+- Process records in smaller batches
+- Select only necessary fields in queries
+- Avoid storing entire record collections in memory
+- Use streaming or cursor-based processing
+- Consider Batch Apex for very large operations
+- Monitor heap size usage
+
+### Edge Case 4: SOQL Query Limits with Related Records
+
+**Scenario**: Querying records with many related records (e.g., Account with 200 Contacts) causing SOQL query limit exceptions.
+
+**Consideration**:
+- Use relationship queries efficiently
+- Consider separate queries for related records
+- Use aggregate queries when appropriate
+- Limit related record queries
+- Monitor SOQL query count
+- Optimize query structure
+
+### Edge Case 5: DML Limits with Cascading Updates
+
+**Scenario**: Updating records triggers cascading updates to related records, causing DML limit exceptions.
+
+**Consideration**:
+- Understand cascading update behavior
+- Monitor DML statement count in complex operations
+- Consider async processing for cascading updates
+- Design data model to minimize cascading DML
+- Test with realistic data volumes
+- Document cascading update logic
+
+### Limitations
+
+- **Hard Limits**: Governor limits are hard limits that cannot be exceeded
+- **Limit Checking Overhead**: Frequent limit checking adds small performance overhead
+- **Async Limit Differences**: Async contexts have different limits but also different constraints
+- **Limit Measurement**: Limit usage includes all processing, not just Apex execution
+- **Batch Size Limits**: Batch Apex batch size limited by heap size and DML limits
+- **Query Result Limits**: SOQL queries return maximum 50,000 records
+- **CPU Time Measurement**: CPU time includes all processing, making optimization complex
+
 ## Related Patterns
 
-- [Governor Limits and Optimization](../development/governor-limits-and-optimization.md) - Complete governor limits guide
-- [Apex Patterns](../development/apex-patterns.md) - Apex best practices
-- [SOQL Patterns](../development/soql-query-patterns.md) - Query optimization
+**See Also**:
+- [Common Apex Errors](common-apex-errors.html) - Other common Apex errors
+
+**Related Domains**:
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Complete governor limits guide
+- [Apex Patterns](../development/apex-patterns.html) - Apex best practices
+- [SOQL Patterns](../development/soql-query-patterns.html) - Query optimization
+
+- [Governor Limits and Optimization](../development/governor-limits-and-optimization.html) - Complete governor limits guide
+- [Apex Patterns](../development/apex-patterns.html) - Apex best practices
+- [SOQL Patterns](../development/soql-query-patterns.html) - Query optimization
 - [Troubleshooting](.) - Other troubleshooting guides
 

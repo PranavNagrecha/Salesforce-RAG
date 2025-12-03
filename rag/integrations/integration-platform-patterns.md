@@ -24,10 +24,10 @@ Integration platforms serve as middleware between Salesforce and external system
 - Familiarity with authentication mechanisms (OAuth, API keys)
 
 **Recommended Reading**:
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
-- [Integration User License Guide](integration-user-license-guide.md) - Authentication and licensing
-- [Callout Best Practices](callout-best-practices.md) - HTTP callout patterns
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - Data mapping patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration User License Guide](integration-user-license-guide.html) - Authentication and licensing
+- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - Data mapping patterns
 
 ## MuleSoft Integration Platform
 
@@ -229,7 +229,7 @@ Both platforms should support:
 
 - Interface configuration stored in Custom Metadata Types
 
-**Related**: [Custom Settings and Custom Metadata Patterns](../development/custom-settings-metadata-patterns.md) - Complete guide to Custom Settings and Custom Metadata
+**Related**: [Custom Settings and Custom Metadata Patterns](../development/custom-settings-metadata-patterns.html) - Complete guide to Custom Settings and Custom Metadata
 - Environment-specific settings (endpoints, timeouts, headers)
 - Reusable across multiple integrations
 - Version-controlled configuration
@@ -266,6 +266,74 @@ Both platforms should support:
 - Log all operations for troubleshooting
 - Implement retry logic for transient failures
 - Monitor integration health and performance
+
+## Edge Cases and Limitations
+
+### Edge Case 1: High-Volume ETL with Network Failures
+
+**Scenario**: Large ETL job fails mid-process due to network timeout or connection issues, requiring partial retry.
+
+**Consideration**:
+- Implement checkpoint/resume functionality in ETL processes
+- Use idempotent operations with External IDs for safe retries
+- Track processed records to avoid duplicate processing
+- Implement exponential backoff for retry logic
+- Log job progress for troubleshooting and recovery
+
+### Edge Case 2: MuleSoft Transformation with Complex Data Structures
+
+**Scenario**: Complex nested data structures causing DataWeave transformation failures or performance issues.
+
+**Consideration**:
+- Validate data structure before transformation
+- Handle null values and missing fields gracefully
+- Optimize DataWeave transformations for performance
+- Test transformations with edge case data
+- Implement error handling for transformation failures
+
+### Edge Case 3: Boomi Batch Processing with Very Large Files
+
+**Scenario**: Processing files with millions of records causing memory or timeout issues in Boomi.
+
+**Consideration**:
+- Break large files into smaller chunks for processing
+- Use file-based staging for very large datasets
+- Implement streaming processing for large files
+- Monitor Boomi process memory usage
+- Optimize batch sizes based on record complexity
+
+### Edge Case 4: Integration Platform Authentication Failures
+
+**Scenario**: OAuth token expiration or authentication failures during long-running integration jobs.
+
+**Consideration**:
+- Implement token refresh logic for long-running jobs
+- Handle authentication errors gracefully with retry logic
+- Monitor token expiration times
+- Use service accounts with appropriate token lifetimes
+- Implement fallback authentication mechanisms
+
+### Edge Case 5: Multi-System Integration Coordination
+
+**Scenario**: Coordinating integrations across multiple external systems with different response times and error handling.
+
+**Consideration**:
+- Implement circuit breakers for unreliable systems
+- Use async patterns for long-running integrations
+- Handle partial failures gracefully
+- Implement correlation IDs for tracking across systems
+- Monitor integration health across all systems
+
+### Limitations
+
+- **MuleSoft Performance**: DataWeave transformations have performance limits with very large datasets
+- **Boomi Batch Size**: Optimal batch sizes depend on record complexity and system resources
+- **Network Timeouts**: Integration platforms subject to network timeout constraints
+- **API Rate Limits**: External systems may have rate limits affecting integration throughput
+- **Token Expiration**: OAuth tokens expire and require refresh logic
+- **File Size Limits**: File-based staging has practical size limits
+- **Concurrent Job Limits**: Integration platforms have limits on concurrent jobs
+- **Transformation Complexity**: Complex transformations may hit platform limits
 
 ## Q&A
 
@@ -312,14 +380,14 @@ Both platforms should support:
 ## Related Patterns
 
 **See Also**:
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection framework
-- [Integration User License Guide](integration-user-license-guide.md) - Authentication and licensing for integrations
-- [Callout Best Practices](callout-best-practices.md) - HTTP callout patterns and error handling
-- [Change Data Capture Patterns](change-data-capture-patterns.md) - Real-time change notification patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection framework
+- [Integration User License Guide](integration-user-license-guide.html) - Authentication and licensing for integrations
+- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns and error handling
+- [Change Data Capture Patterns](change-data-capture-patterns.html) - Real-time change notification patterns
 
 **Related Domains**:
-- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - Data mapping and stable record identification
-- [SIS Sync Patterns](sis-sync-patterns.md) - High-volume batch synchronization patterns
-- [Integration Debugging](../troubleshooting/integration-debugging.md) - Troubleshooting integration failures
-- [Data Reconciliation](../troubleshooting/data-reconciliation.md) - Reconciling data between systems
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - Data mapping and stable record identification
+- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume batch synchronization patterns
+- [Integration Debugging](../troubleshooting/integration-debugging.html) - Troubleshooting integration failures
+- [Data Reconciliation](../troubleshooting/data-reconciliation.html) - Reconciling data between systems
 

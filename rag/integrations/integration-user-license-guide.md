@@ -36,6 +36,20 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Users needing mobile app access
 - Interactive user scenarios
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce user licenses and permissions
+- Knowledge of OAuth 2.0 authentication flows
+- Familiarity with Permission Sets and security models
+- Understanding of API authentication patterns
+
+**Recommended Reading**:
+- [Permission Set Architecture](../security/permission-set-architecture.html) - Permission management patterns
+- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns
+- [Integration Platform Patterns](integration-platform-patterns.html) - Integration platform patterns
+- [Admin Basics](../development/admin-basics.html) - User management basics
+
 ## License Details
 
 ### License Availability
@@ -644,7 +658,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Use MuleSoft's Salesforce connector
 - Document MuleSoft-Salesforce integration
 
-**Related**: [Integration Platform Patterns](integration-platform-patterns.md) - Patterns for MuleSoft and Dell Boomi integrations
+**Related**: [Integration Platform Patterns](integration-platform-patterns.html) - Patterns for MuleSoft and Dell Boomi integrations
 
 ### Integration with Dell Boomi
 
@@ -660,7 +674,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Use Boomi's Salesforce connector for operations
 - Document Boomi-Salesforce integration
 
-**Related**: [Integration Platform Patterns](integration-platform-patterns.md) - Patterns for MuleSoft and Dell Boomi integrations
+**Related**: [Integration Platform Patterns](integration-platform-patterns.html) - Patterns for MuleSoft and Dell Boomi integrations
 
 ### REST API Integration Patterns
 
@@ -676,7 +690,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Handle API limits appropriately
 - Monitor API usage
 
-**Related**: [ETL vs API vs Events](etl-vs-api-vs-events.md) - Decision framework for integration patterns
+**Related**: [ETL vs API vs Events](etl-vs-api-vs-events.html) - Decision framework for integration patterns
 
 ### Bulk API Considerations
 
@@ -692,7 +706,7 @@ The Salesforce Integration User License is a free API-only license designed for 
 - Implement error handling for failed records
 - Use appropriate batch sizes
 
-**Related**: [SIS Sync Patterns](sis-sync-patterns.md) - High-volume batch synchronization patterns
+**Related**: [SIS Sync Patterns](sis-sync-patterns.html) - High-volume batch synchronization patterns
 
 ## Summary
 
@@ -740,11 +754,92 @@ The Salesforce Integration User License provides a cost-effective and secure way
 
 **A**: Enable **Event Monitoring** for Integration Users, review API usage logs in Setup → Monitoring, track API call volumes and patterns, monitor for failed authentication attempts, review audit logs regularly, and set up dashboards for API usage. Monitor for security anomalies.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Integration User License Limits
+
+**Scenario**: Organization requiring more than 5 Integration User Licenses, causing license constraints.
+
+**Consideration**:
+- Understand license limits (5 free with qualifying editions)
+- Plan for license allocation across integrations
+- Consider consolidating integrations when possible
+- Document license usage and requirements
+- Request additional licenses if needed
+- Monitor license usage regularly
+
+### Edge Case 2: Permission Set Management at Scale
+
+**Scenario**: Managing permissions for many Integration Users with different access requirements.
+
+**Consideration**:
+- Use Permission Set Groups for role-based assignment
+- Document permission requirements per integration
+- Review permissions regularly
+- Use least-privilege principle
+- Test permissions in sandbox
+- Monitor permission changes
+
+### Edge Case 3: Integration User Authentication Failures
+
+**Scenario**: OAuth token expiration or authentication failures causing integration disruptions.
+
+**Consideration**:
+- Implement token refresh logic
+- Monitor authentication success rates
+- Handle authentication errors gracefully
+- Use Named Credentials for automatic token management
+- Document authentication procedures
+- Test authentication failure scenarios
+
+### Edge Case 4: Integration User Audit Trail Complexity
+
+**Scenario**: Multiple Integration Users making it difficult to track which integration performed actions.
+
+**Consideration**:
+- Use one Integration User per external system
+- Enable Event Monitoring for Integration Users
+- Review audit logs regularly
+- Correlate API calls with integration jobs
+- Document integration user assignments
+- Monitor for security anomalies
+
+### Edge Case 5: Migration from Connected App to Integration User
+
+**Scenario**: Migrating existing integrations from Connected App authentication to Integration User Licenses.
+
+**Consideration**:
+- Plan migration carefully with dual-authentication period
+- Test new authentication in sandbox
+- Update integration code for new authentication
+- Monitor authentication during transition
+- Document migration procedures
+- Plan for rollback if needed
+
+### Limitations
+
+- **License Limits**: Maximum 5 free Integration User Licenses (with qualifying editions)
+- **UI Access**: Integration Users cannot access Salesforce UI
+- **Mobile Access**: Integration Users cannot use Salesforce Mobile App
+- **Portal Access**: Integration Users cannot access Experience Cloud portals
+- **Permission Complexity**: Managing permissions for many Integration Users can be complex
+- **Audit Trail**: Multiple Integration Users require careful audit trail management
+- **Authentication**: OAuth token management adds complexity
+
 ## Related Patterns
 
-- [Integration Platform Patterns](integration-platform-patterns.md) - MuleSoft and Dell Boomi integration patterns
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection framework
-- [Permission Set Architecture](../security/permission-set-architecture.md) - Permission management patterns
-- [Callout Best Practices](callout-best-practices.md) - HTTP callout patterns for integration users
-- [SIS Sync Patterns](sis-sync-patterns.md) - High-volume batch synchronization patterns
+**See Also**:
+- [Permission Set Architecture](../security/permission-set-architecture.html) - Permission management patterns
+- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns for integration users
+
+**Related Domains**:
+- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi integration patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection framework
+- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume batch synchronization patterns
+
+- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi integration patterns
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection framework
+- [Permission Set Architecture](../security/permission-set-architecture.html) - Permission management patterns
+- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns for integration users
+- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume batch synchronization patterns
 

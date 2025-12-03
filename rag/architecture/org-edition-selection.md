@@ -30,7 +30,7 @@ Understanding edition differences requires evaluating your customization needs, 
 
 **Key characteristics**:
 - Limited custom objects (typically 2-10 depending on configuration)
-- Basic automation (Workflow Rules, Process Builder, limited Flow capabilities)
+- Basic automation (Flows - ⚠️ **Note**: Workflow Rules and Process Builder are deprecated, use Record-Triggered Flows instead; limited Flow capabilities in Professional)
 - Standard reports and dashboards
 - Limited API access
 - No Apex or Visualforce development
@@ -46,7 +46,7 @@ Understanding edition differences requires evaluating your customization needs, 
 
 **Key characteristics**:
 - Unlimited custom objects
-- Full automation capabilities (Flows, Process Builder, Workflow Rules)
+- Full automation capabilities (Flows - ⚠️ **Note**: Process Builder and Workflow Rules are deprecated, use Record-Triggered Flows instead)
 - Apex and Visualforce development
 - Full API access (REST, SOAP, Bulk, Metadata)
 - Advanced security features (field-level security, sharing rules, profiles, permission sets)
@@ -373,8 +373,11 @@ When selecting a Salesforce edition, always ask:
 
 ## Related Patterns
 
-- [User License Selection](user-license-selection.md) - License type selection patterns
-- [Salesforce Product Evaluation](salesforce-product-evaluation.md) - Product selection framework
-- [Salesforce Pricing Negotiation](salesforce-pricing-negotiation.md) - Pricing and negotiation strategies
-- [Org Strategy](org-strategy.md) - Multi-org vs single-org decisions
+**See Also**:
+- [Org Strategy](org-strategy.html) - Multi-org vs single-org decisions
+
+**Related Domains**:
+- [User License Selection](user-license-selection.html) - License type selection patterns
+- [Salesforce Product Evaluation](salesforce-product-evaluation.html) - Product selection framework
+- [Salesforce Pricing Negotiation](salesforce-pricing-negotiation.html) - Pricing and negotiation strategies
 

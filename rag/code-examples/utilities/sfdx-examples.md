@@ -8,8 +8,8 @@
 Salesforce DX provides command-line tools and workflows for modern Salesforce development. These examples show common SFDX patterns and scripts.
 
 **Related Patterns**:
-- [Salesforce DX Patterns](../../project-methods/sfdx-patterns.md)
-- [Deployment Patterns](../../project-methods/deployment-patterns.md)
+- [Salesforce DX Patterns](../../project-methods/sfdx-patterns.html)
+- [Deployment Patterns](../../project-methods/deployment-patterns.html)
 
 ## Examples
 
@@ -80,6 +80,6 @@ fi
 
 ## Related Patterns
 
-- [Salesforce DX Patterns](../../project-methods/sfdx-patterns.md) - Complete SFDX guide
-- [Deployment Patterns](../../project-methods/deployment-patterns.md) - Deployment patterns
+- [Salesforce DX Patterns](../../project-methods/sfdx-patterns.html) - Complete SFDX guide
+- [Deployment Patterns](../../project-methods/deployment-patterns.html) - Deployment patterns
 

@@ -174,7 +174,7 @@ A comprehensive data model and process guide for Salesforce lead management, sup
 **Automated Conversion Patterns**:
 - Use Flow to automate conversion when lead status = "Qualified"
 - Use Apex to handle complex conversion logic (duplicate detection, custom matching)
-- Use Process Builder or Workflow Rules for simple conversion triggers
+- Use Record-Triggered Flows for simple conversion triggers (⚠️ **Note**: Process Builder and Workflow Rules are deprecated - use Record-Triggered Flows instead)
 - Handle conversion errors gracefully with try-catch blocks
 
 **Conversion Error Handling**:
@@ -745,7 +745,7 @@ Avoid this model when:
 
 ## Related Patterns
 
-- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns for lead integration
-- [Data Quality and Stewardship](../data-governance/data-quality-stewardship.md) - Duplicate prevention patterns
-- [Object Setup and Configuration](object-setup-and-configuration.md) - Object configuration patterns
+- [External IDs and Integration Keys](external-ids-and-integration-keys.html) - External ID patterns for lead integration
+- [Data Quality and Stewardship](../data-governance/data-quality-stewardship.html) - Duplicate prevention patterns
+- [Object Setup and Configuration](object-setup-and-configuration.html) - Object configuration patterns
 

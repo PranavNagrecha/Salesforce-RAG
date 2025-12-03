@@ -27,9 +27,9 @@ Lightning Web Components (LWC) are modern, standards-based web components built 
 - Basic understanding of Apex (for calling server-side methods)
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex service layer patterns for LWC integration
-- [Lightning App Builder](lightning-app-builder.md) - Understanding when to use declarative vs custom components
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Accessibility best practices
+- [Apex Patterns](apex-patterns.html) - Apex service layer patterns for LWC integration
+- [Lightning App Builder](lightning-app-builder.html) - Understanding when to use declarative vs custom components
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Accessibility best practices
 
 ## LWC Fundamentals
 
@@ -359,7 +359,7 @@ export default class DynamicRecordEditForm extends LightningElement {
 - **Maintainable**: Field changes don't require component updates
 - **Flexible**: Supports conditional field display based on various criteria
 
-**Related Patterns**: [Custom Settings and Metadata Patterns](custom-settings-metadata-patterns.md), [Config-Driven UI](#config-driven-ui)
+**Related Patterns**: [Custom Settings and Metadata Patterns](custom-settings-metadata-patterns.html), [Config-Driven UI](#config-driven-ui)
 
 ### Performance-Aware Patterns
 
@@ -496,11 +496,11 @@ export default class DynamicRecordEditForm extends LightningElement {
 Accessibility ensures that all users, including those using assistive technologies, can access and interact with your components. All LWC components should follow WCAG 2.2 standards.
 
 **Related Resources**:
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - Comprehensive WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Complete working code examples
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns and tools
-- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) - Common errors and fixes
-- [LWC Accessibility Quick Start](../quick-start/lwc-accessibility-quick-start.md) - Quick start guide
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - Comprehensive WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Complete working code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns and tools
+- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
+- [LWC Accessibility Quick Start](../quick-start/lwc-accessibility-quick-start.html) - Quick start guide
 
 ### WCAG Guidelines
 
@@ -522,7 +522,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Autocomplete**: Use appropriate autocomplete tokens for personal information fields
 - **Fieldset/Legend**: Use fieldset/legend for grouped form controls
 
-**Example**: See [Accessible Form Examples](rag/code-examples/lwc/accessibility-examples.md#form-accessibility-examples)
+**Example**: See [Accessible Form Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#form-accessibility-examples)
 
 ### Keyboard Navigation
 
@@ -533,7 +533,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Focus Return**: Focus returns to trigger element after modal close
 - **No Keyboard Traps**: Ensure users can navigate away from all areas
 
-**Example**: See [Keyboard Navigation Examples](rag/code-examples/lwc/accessibility-examples.md#keyboard-navigation-examples)
+**Example**: See [Keyboard Navigation Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#keyboard-navigation-examples)
 
 ### Semantic HTML
 
@@ -544,7 +544,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - Proper list markup (`<ul>`, `<ol>`, `<dl>`)
 - Proper table structure with headers and scope attributes
 
-**Example**: See [Semantic HTML Examples](rag/code-examples/lwc/accessibility-examples.md#semantic-html-examples)
+**Example**: See [Semantic HTML Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#semantic-html-examples)
 
 ### ARIA Labels and Attributes
 
@@ -555,7 +555,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **ARIA Descriptions**: Use `aria-describedby` to associate help text and error messages
 - **Modal Dialogs**: Use `role="dialog"` and `aria-modal="true"` for modals
 
-**Example**: See [ARIA Patterns Examples](rag/code-examples/lwc/accessibility-examples.md#aria-patterns)
+**Example**: See [ARIA Patterns Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#aria-patterns)
 
 ### Image Accessibility
 
@@ -564,7 +564,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Image Links**: Provide `aria-label` on the link, use `alt=""` on the image
 - **Complex Images**: Use `aria-describedby` with `figcaption` for detailed descriptions
 
-**Example**: See [Image Accessibility Examples](rag/code-examples/lwc/accessibility-examples.md#image-accessibility)
+**Example**: See [Image Accessibility Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#image-accessibility)
 
 ### Color and Contrast
 
@@ -573,7 +573,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Not Color Alone**: Information must not be conveyed by color alone (use icons/text)
 - **SLDS Tokens**: Use SLDS color tokens for proper contrast
 
-**Example**: See [Color and Contrast Examples](rag/code-examples/lwc/accessibility-examples.md#color-and-contrast)
+**Example**: See [Color and Contrast Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#color-and-contrast)
 
 ### Dynamic Content Accessibility
 
@@ -582,7 +582,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Success Messages**: Use `role="status"` and `aria-live="polite"` for success messages
 - **Status Updates**: Announce dynamic content changes to screen readers
 
-**Example**: See [Dynamic Content Examples](rag/code-examples/lwc/accessibility-examples.md#dynamic-content-accessibility)
+**Example**: See [Dynamic Content Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#dynamic-content-accessibility)
 
 ### Testing Accessibility
 
@@ -592,7 +592,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Color Contrast Testing**: Use WebAIM Contrast Checker
 - **Jest Testing**: Include accessibility tests in Jest test suites
 
-**See**: [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) for complete testing patterns
+**See**: [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) for complete testing patterns
 
 ### Common Accessibility Mistakes
 
@@ -605,7 +605,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - Incorrect heading hierarchy
 - Missing semantic HTML
 
-**See**: [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) for solutions to common errors
+**See**: [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) for solutions to common errors
 
 ## Responsive Design
 
@@ -664,16 +664,16 @@ Accessibility ensures that all users, including those using assistive technologi
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](apex-patterns.md) - Apex service layer patterns for LWC integration
-- [Flow Patterns](flow-patterns.md) - Understanding when to use declarative vs custom components
-- [Lightning App Builder](lightning-app-builder.md) - Declarative component configuration
-- [Order of Execution](order-of-execution.md) - Understanding when LWCs execute
+- [Apex Patterns](apex-patterns.html) - Apex service layer patterns for LWC integration
+- [Flow Patterns](flow-patterns.html) - Understanding when to use declarative vs custom components
+- [Lightning App Builder](lightning-app-builder.html) - Declarative component configuration
+- [Order of Execution](order-of-execution.html) - Understanding when LWCs execute
 
 **Related Domains**:
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Accessibility testing patterns
-- [LWC Jest Testing](../testing/lwc-jest-testing.md) - Unit testing Lightning Web Components
-- [Common LWC Errors](../troubleshooting/common-lwc-errors.md) - Troubleshooting LWC issues
-- [LWC Accessibility Errors](../troubleshooting/lwc-accessibility-errors.md) - Accessibility error resolution
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Accessibility testing patterns
+- [LWC Jest Testing](../testing/lwc-jest-testing.html) - Unit testing Lightning Web Components
+- [Common LWC Errors](../troubleshooting/common-lwc-errors.html) - Troubleshooting LWC issues
+- [LWC Accessibility Errors](../troubleshooting/lwc-accessibility-errors.html) - Accessibility error resolution
 - [Code Examples](../code-examples/lwc/) - Complete LWC code examples
 
 ## Q&A

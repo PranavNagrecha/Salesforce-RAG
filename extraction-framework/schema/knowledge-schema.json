@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "domains": [
+    "architecture",
+    "integrations",
+    "identity-sso",
+    "data-modeling",
+    "security",
+    "project-methods",
+    "templates",
+    "misc"
+  ],
+  "fileConventions": {
+    "architecture": [
+      "overview.md",
+      "salesforce-architecture-patterns.md",
+      "event-driven-architecture.md",
+      "govcloud-and-public-sector.md"
+    ],
+    "integrations": [
+      "integration-overview.md",
+      "boomi-patterns.md",
+      "mulesoft-patterns.md",
+      "platform-events-and-eventbridge.md",
+      "etl-and-batch-strategies.md"
+    ],
+    "identity-sso": [
+      "identity-architecture-overview.md",
+      "oidc-and-saml-flows.md",
+      "hybrid-identity-models.md"
+    ],
+    "data-modeling": [
+      "data-modeling-overview.md",
+      "education-cloud-modeling.md",
+      "public-sector-case-modeling.md",
+      "external-id-and-integration-keys.md"
+    ],
+    "security": [
+      "security-overview.md",
+      "govcloud-and-compliance.md",
+      "logging-monitoring-and-audit.md"
+    ],
+    "project-methods": [
+      "delivery-approach.md",
+      "testing-and-qa-strategy.md",
+      "release-and-deployment-practices.md"
+    ],
+    "templates": [
+      "email-templates.md",
+      "jira-ticket-patterns.md",
+      "design-doc-templates.md"
+    ],
+    "misc": [
+      "notes-to-refine.md"
+    ]
+  }
+}
+

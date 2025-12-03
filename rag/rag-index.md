@@ -40,8 +40,8 @@ rag/
 
 Architecture patterns for designing system structure, integration patterns, multi-tenant solutions, and portal architecture.
 
-- [event-driven-architecture.md](architecture/event-driven-architecture.md) — Guide to implementing event-driven architecture with Platform Events, including event publication, payload design, and integration with external event buses
-- [portal-architecture.md](architecture/portal-architecture.md) — Experience Cloud portal architecture patterns for multiple user communities with different identity providers and security requirements
+- [event-driven-architecture.md](architecture/event-driven-architecture.html) — Guide to implementing event-driven architecture with Platform Events, including event publication, payload design, and integration with external event buses
+- [portal-architecture.md](architecture/portal-architecture.html) — Experience Cloud portal architecture patterns for multiple user communities with different identity providers and security requirements
 
 ### event-driven-architecture.md
 
@@ -181,13 +181,13 @@ Architecture patterns for designing system structure, integration patterns, mult
 
 Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.
 
-- [etl-vs-api-vs-events.md](integrations/etl-vs-api-vs-events.md) — Decision framework for choosing between ETL (batch), API (synchronous), or Events (asynchronous) integration patterns
-- [integration-platform-patterns.md](integrations/integration-platform-patterns.md) — Patterns for implementing integrations using MuleSoft and Dell Boomi platforms as security boundaries and transformation layers
-- [sis-sync-patterns.md](integrations/sis-sync-patterns.md) — High-volume batch synchronization patterns for integrating with Student Information Systems using file-based staging and idempotent upserts
-- [salesforce-to-llm-data-pipelines.md](integrations/salesforce-to-llm-data-pipelines.md) — Pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
-- [change-data-capture-patterns.md](integrations/change-data-capture-patterns.md) — Change Data Capture patterns: CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns
-- [integration-user-license-guide.md](integrations/integration-user-license-guide.md) — Comprehensive guide to Salesforce Integration User Licenses (free API-only license): setup, authentication, permissions, security, and best practices
-- [callout-best-practices.md](integrations/callout-best-practices.md) — Comprehensive callout best practices: limitations, Named Credentials, error handling, asynchronous patterns, circuit breakers, response optimization, DML restrictions, testing, and monitoring
+- [etl-vs-api-vs-events.md](integrations/etl-vs-api-vs-events.html) — Decision framework for choosing between ETL (batch), API (synchronous), or Events (asynchronous) integration patterns
+- [integration-platform-patterns.md](integrations/integration-platform-patterns.html) — Patterns for implementing integrations using MuleSoft and Dell Boomi platforms as security boundaries and transformation layers
+- [sis-sync-patterns.md](integrations/sis-sync-patterns.html) — High-volume batch synchronization patterns for integrating with Student Information Systems using file-based staging and idempotent upserts
+- [salesforce-to-llm-data-pipelines.md](integrations/salesforce-to-llm-data-pipelines.html) — Pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
+- [change-data-capture-patterns.md](integrations/change-data-capture-patterns.html) — Change Data Capture patterns: CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns
+- [integration-user-license-guide.md](integrations/integration-user-license-guide.html) — Comprehensive guide to Salesforce Integration User Licenses (free API-only license): setup, authentication, permissions, security, and best practices
+- [callout-best-practices.md](integrations/callout-best-practices.html) — Comprehensive callout best practices: limitations, Named Credentials, error handling, asynchronous patterns, circuit breakers, response optimization, DML restrictions, testing, and monitoring
 
 ### etl-vs-api-vs-events.md
 
@@ -277,7 +277,7 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 
 Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.
 
-- [multi-tenant-identity-architecture.md](identity-sso/multi-tenant-identity-architecture.md) — Guide to multi-tenant identity architecture supporting multiple user communities with different identity providers (OIDC, SAML, organization tenant)
+- [multi-tenant-identity-architecture.md](identity-sso/multi-tenant-identity-architecture.html) — Guide to multi-tenant identity architecture supporting multiple user communities with different identity providers (OIDC, SAML, organization tenant)
 
 ### multi-tenant-identity-architecture.md
 
@@ -297,15 +297,15 @@ Identity and SSO patterns for implementing SSO, multi-identity provider architec
 
 Data modeling patterns for designing external IDs, integration keys, student lifecycle models, and case management models.
 
-- [external-ids-and-integration-keys.md](data-modeling/external-ids-and-integration-keys.md) — Guide to external ID strategies for stable record mapping, composite external IDs, and integration job tracking
-- [student-lifecycle-data-model.md](data-modeling/student-lifecycle-data-model.md) — Salesforce Education Cloud (EDA) data model patterns for higher education institutions
-- [case-management-data-model.md](data-modeling/case-management-data-model.md) — Data model patterns for public sector case management supporting multi-agency portals
-- [lead-management-patterns.md](data-modeling/lead-management-patterns.md) — Comprehensive data model and process guide for Salesforce lead management, conversion, duplicate rules, and assignment patterns
-- [object-setup-and-configuration.md](data-modeling/object-setup-and-configuration.md) — Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
-- [file-management-patterns.md](data-modeling/file-management-patterns.md) — File management patterns covering ContentVersion vs Attachments vs Documents, file storage, sharing, versioning, and migration strategies
-- [data-migration-patterns.md](data-modeling/data-migration-patterns.md) — Data migration patterns: import strategies, transformation patterns, validation approaches, rollback strategies, and migration best practices
-- [data-storage-planning.md](data-modeling/data-storage-planning.md) — Data storage planning: calculating storage usage, understanding storage limits, planning for future growth, and storage optimization strategies
-- [standard-object-oddities.md](data-modeling/standard-object-oddities.md) — Standard object oddities and constraints: objects where quick actions aren't available, queue support, fixed CRUD permissions, lookup constraints, and dynamic forms support
+- [external-ids-and-integration-keys.md](data-modeling/external-ids-and-integration-keys.html) — Guide to external ID strategies for stable record mapping, composite external IDs, and integration job tracking
+- [student-lifecycle-data-model.md](data-modeling/student-lifecycle-data-model.html) — Salesforce Education Cloud (EDA) data model patterns for higher education institutions
+- [case-management-data-model.md](data-modeling/case-management-data-model.html) — Data model patterns for public sector case management supporting multi-agency portals
+- [lead-management-patterns.md](data-modeling/lead-management-patterns.html) — Comprehensive data model and process guide for Salesforce lead management, conversion, duplicate rules, and assignment patterns
+- [object-setup-and-configuration.md](data-modeling/object-setup-and-configuration.html) — Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
+- [file-management-patterns.md](data-modeling/file-management-patterns.html) — File management patterns covering ContentVersion vs Attachments vs Documents, file storage, sharing, versioning, and migration strategies
+- [data-migration-patterns.md](data-modeling/data-migration-patterns.html) — Data migration patterns: import strategies, transformation patterns, validation approaches, rollback strategies, and migration best practices
+- [data-storage-planning.md](data-modeling/data-storage-planning.html) — Data storage planning: calculating storage usage, understanding storage limits, planning for future growth, and storage optimization strategies
+- [standard-object-oddities.md](data-modeling/standard-object-oddities.html) — Standard object oddities and constraints: objects where quick actions aren't available, queue support, fixed CRUD permissions, lookup constraints, and dynamic forms support
 
 ### external-ids-and-integration-keys.md
 
@@ -425,11 +425,11 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 
 Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms.
 
-- [permission-set-architecture.md](security/permission-set-architecture.md) — Guide to permission set-driven security architecture with Profiles for UI configuration and Permission Sets for access control
-- [salesforce-llm-data-governance.md](security/salesforce-llm-data-governance.md) — Security and governance patterns for choosing what data to expose from Salesforce to LLMs and how to do that safely
-- [sharing-fundamentals.md](security/sharing-fundamentals.md) — Fundamentals of Salesforce sharing: Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions
-- [sharing-rules-and-manual-sharing.md](security/sharing-rules-and-manual-sharing.md) — Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, and Apex Managed Sharing
-- [sharing-sets-and-portals.md](security/sharing-sets-and-portals.md) — Experience Cloud sharing patterns, Sharing Sets, field-level considerations, performance optimization, best practices, troubleshooting, and code examples
+- [permission-set-architecture.md](security/permission-set-architecture.html) — Guide to permission set-driven security architecture with Profiles for UI configuration and Permission Sets for access control
+- [salesforce-llm-data-governance.md](security/salesforce-llm-data-governance.html) — Security and governance patterns for choosing what data to expose from Salesforce to LLMs and how to do that safely
+- [sharing-fundamentals.md](security/sharing-fundamentals.html) — Fundamentals of Salesforce sharing: Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions
+- [sharing-rules-and-manual-sharing.md](security/sharing-rules-and-manual-sharing.html) — Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, and Apex Managed Sharing
+- [sharing-sets-and-portals.md](security/sharing-sets-and-portals.html) — Experience Cloud sharing patterns, Sharing Sets, field-level considerations, performance optimization, best practices, troubleshooting, and code examples
 
 ### permission-set-architecture.md
 
@@ -505,15 +505,15 @@ Security and access control patterns for implementing permission set-driven secu
 
 Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features.
 
-- [salesforce-product-evaluation.md](architecture/salesforce-product-evaluation.md) — Salesforce product evaluation: platform foundation, Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Analytics Cloud, Integration Cloud, and industry-specific clouds
-- [org-edition-selection.md](architecture/org-edition-selection.md) — Salesforce org edition selection: Essentials, Professional, Enterprise, Unlimited, Developer editions and their implications
-- [user-license-selection.md](architecture/user-license-selection.md) — User license selection: Standard User, Platform User, Community/Experience Cloud User, Integration User, Chatter User licenses and selection criteria
-- [salesforce-pricing-negotiation.md](architecture/salesforce-pricing-negotiation.md) — Salesforce pricing negotiation: pricing models, contract negotiation strategies, and cost optimization
-- [salesforce-org-staffing.md](best-practices/salesforce-org-staffing.md) — Salesforce org staffing: roles in the Salesforce ecosystem, team composition, and staffing best practices
-- [reports-dashboards.md](best-practices/reports-dashboards.md) — Reports and dashboards: creating reports, building dashboards, report types, and dashboard best practices
-- [sales-cloud-features.md](best-practices/sales-cloud-features.md) — Sales Cloud features: opportunities, leads, accounts, contacts, products, pricebooks, quotes, and sales processes
-- [service-cloud-features.md](best-practices/service-cloud-features.md) — Service Cloud features: cases, knowledge, entitlements, service processes, and service automation
-- [complex-reporting.md](best-practices/complex-reporting.md) — Complex reporting: deciding between Salesforce Reports, CRM Analytics, and Tableau for complex reporting needs
+- [salesforce-product-evaluation.md](architecture/salesforce-product-evaluation.html) — Salesforce product evaluation: platform foundation, Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Analytics Cloud, Integration Cloud, and industry-specific clouds
+- [org-edition-selection.md](architecture/org-edition-selection.html) — Salesforce org edition selection: Essentials, Professional, Enterprise, Unlimited, Developer editions and their implications
+- [user-license-selection.md](architecture/user-license-selection.html) — User license selection: Standard User, Platform User, Community/Experience Cloud User, Integration User, Chatter User licenses and selection criteria
+- [salesforce-pricing-negotiation.md](architecture/salesforce-pricing-negotiation.html) — Salesforce pricing negotiation: pricing models, contract negotiation strategies, and cost optimization
+- [salesforce-org-staffing.md](best-practices/salesforce-org-staffing.html) — Salesforce org staffing: roles in the Salesforce ecosystem, team composition, and staffing best practices
+- [reports-dashboards.md](best-practices/reports-dashboards.html) — Reports and dashboards: creating reports, building dashboards, report types, and dashboard best practices
+- [sales-cloud-features.md](best-practices/sales-cloud-features.html) — Sales Cloud features: opportunities, leads, accounts, contacts, products, pricebooks, quotes, and sales processes
+- [service-cloud-features.md](best-practices/service-cloud-features.html) — Service Cloud features: cases, knowledge, entitlements, service processes, and service automation
+- [complex-reporting.md](best-practices/complex-reporting.html) — Complex reporting: deciding between Salesforce Reports, CRM Analytics, and Tableau for complex reporting needs
 
 ### salesforce-product-evaluation.md
 
@@ -644,22 +644,22 @@ Best practices for Salesforce product evaluation, org edition selection, user li
 
 Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, concurrency control, and performance optimization.
 
-- [error-handling-and-logging.md](development/error-handling-and-logging.md) — Error handling and logging framework using custom logging objects with platform event fallbacks and external logging integration
-- [apex-patterns.md](development/apex-patterns.md) — Apex design patterns including class layering (Service, Domain, Selector, Integration), SOQL optimization, and asynchronous patterns
-- [flow-patterns.md](development/flow-patterns.md) — Flow design and orchestration patterns for Record-Triggered, Screen, and other Flow types with Apex integration, including Flow User permission deprecation guidance
-- [order-of-execution.md](development/order-of-execution.md) — Complete guide to Salesforce order of execution, covering before-save vs after-save decision framework, trigger and flow execution timing, and debugging techniques
-- [lwc-patterns.md](development/lwc-patterns.md) — Lightning Web Component patterns for complex business logic, console-style components, and service-layer patterns
-- [omnistudio-patterns.md](development/omnistudio-patterns.md) — OmniStudio patterns for OmniScripts and FlexCards in guided workflows and reusable UI components
-- [locking-and-concurrency-strategies.md](development/locking-and-concurrency-strategies.md) — Row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, and deadlock prevention
-- [governor-limits-and-optimization.md](development/governor-limits-and-optimization.md) — Governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management
-- [soql-query-patterns.md](development/soql-query-patterns.md) — Practical SOQL query patterns and examples for common scenarios, including relationship queries, aggregate queries, subqueries, maintenance queries, and cursor-based pagination
-- [asynchronous-apex-patterns.md](development/asynchronous-apex-patterns.md) — Comprehensive guide to asynchronous Apex: Batch, Queueable, Scheduled, and @future methods with decision frameworks, patterns, and best practices
-- [custom-settings-metadata-patterns.md](development/custom-settings-metadata-patterns.md) — Guide to Custom Settings and Custom Metadata: decision framework, usage patterns, migration strategies, and best practices
-- [admin-basics.md](development/admin-basics.md) — Salesforce administration basics: navigation, org setup, company information, UI settings, user management (creating users, managing licenses, password management, proxy login, and user access), and admin fundamentals
-- [formulas-validation-rules.md](development/formulas-validation-rules.md) — Formulas and validation rules: creating formulas, validation rules with formulas, lookup filters, and custom labels
-- [lightning-app-builder.md](development/lightning-app-builder.md) — Lightning App Builder: creating Lightning pages, component configuration, dynamic forms and actions, and best practices
-- [email-management.md](development/email-management.md) — Email management: email limits, email logs, email templates, list email, mass email, and flow email
-- [large-data-loads.md](development/large-data-loads.md) — Large data loads: tools for data loads, data quality considerations, preventing data skew, testing environments, and data load planning
+- [error-handling-and-logging.md](development/error-handling-and-logging.html) — Error handling and logging framework using custom logging objects with platform event fallbacks and external logging integration
+- [apex-patterns.md](development/apex-patterns.html) — Apex design patterns including class layering (Service, Domain, Selector, Integration), SOQL optimization, and asynchronous patterns
+- [flow-patterns.md](development/flow-patterns.html) — Flow design and orchestration patterns for Record-Triggered, Screen, and other Flow types with Apex integration, including Flow User permission deprecation guidance
+- [order-of-execution.md](development/order-of-execution.html) — Complete guide to Salesforce order of execution, covering before-save vs after-save decision framework, trigger and flow execution timing, and debugging techniques
+- [lwc-patterns.md](development/lwc-patterns.html) — Lightning Web Component patterns for complex business logic, console-style components, and service-layer patterns
+- [omnistudio-patterns.md](development/omnistudio-patterns.html) — OmniStudio patterns for OmniScripts and FlexCards in guided workflows and reusable UI components
+- [locking-and-concurrency-strategies.md](development/locking-and-concurrency-strategies.html) — Row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, and deadlock prevention
+- [governor-limits-and-optimization.md](development/governor-limits-and-optimization.html) — Governor limits, performance optimization strategies, SOQL query optimization, selective query patterns, and resource management
+- [soql-query-patterns.md](development/soql-query-patterns.html) — Practical SOQL query patterns and examples for common scenarios, including relationship queries, aggregate queries, subqueries, maintenance queries, and cursor-based pagination
+- [asynchronous-apex-patterns.md](development/asynchronous-apex-patterns.html) — Comprehensive guide to asynchronous Apex: Batch, Queueable, Scheduled, and @future methods with decision frameworks, patterns, and best practices
+- [custom-settings-metadata-patterns.md](development/custom-settings-metadata-patterns.html) — Guide to Custom Settings and Custom Metadata: decision framework, usage patterns, migration strategies, and best practices
+- [admin-basics.md](development/admin-basics.html) — Salesforce administration basics: navigation, org setup, company information, UI settings, user management (creating users, managing licenses, password management, proxy login, and user access), and admin fundamentals
+- [formulas-validation-rules.md](development/formulas-validation-rules.html) — Formulas and validation rules: creating formulas, validation rules with formulas, lookup filters, and custom labels
+- [lightning-app-builder.md](development/lightning-app-builder.html) — Lightning App Builder: creating Lightning pages, component configuration, dynamic forms and actions, and best practices
+- [email-management.md](development/email-management.html) — Email management: email limits, email logs, email templates, list email, mass email, and flow email
+- [large-data-loads.md](development/large-data-loads.html) — Large data loads: tools for data loads, data quality considerations, preventing data skew, testing environments, and data load planning
 
 ### error-handling-and-logging.md
 
@@ -884,12 +884,12 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis.
 
-- [integration-debugging.md](troubleshooting/integration-debugging.md) — Systematic approaches to troubleshooting integration failures using SOQL debugging, history object queries, and root cause analysis
-- [data-reconciliation.md](troubleshooting/data-reconciliation.md) — Approaches to reconciling data between Salesforce and external systems using external IDs and integration job tracking
-- [common-apex-errors.md](troubleshooting/common-apex-errors.md) — Common Apex errors with solutions: UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION
-- [common-lwc-errors.md](troubleshooting/common-lwc-errors.md) — Common LWC errors with solutions: property access errors, wire adapter errors, event handling errors, INVALID_FIELD_FOR_INSERT_UPDATE field update errors
-- [lwc-accessibility-errors.md](troubleshooting/lwc-accessibility-errors.md) — Common LWC accessibility errors with solutions: missing labels, ARIA issues, keyboard traps, focus indicators, color contrast, WCAG violations
-- [governor-limit-errors.md](troubleshooting/governor-limit-errors.md) — Governor limit errors and solutions: too many SOQL queries, too many DML statements, CPU time limits, heap size limits
+- [integration-debugging.md](troubleshooting/integration-debugging.html) — Systematic approaches to troubleshooting integration failures using SOQL debugging, history object queries, and root cause analysis
+- [data-reconciliation.md](troubleshooting/data-reconciliation.html) — Approaches to reconciling data between Salesforce and external systems using external IDs and integration job tracking
+- [common-apex-errors.md](troubleshooting/common-apex-errors.html) — Common Apex errors with solutions: UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION
+- [common-lwc-errors.md](troubleshooting/common-lwc-errors.html) — Common LWC errors with solutions: property access errors, wire adapter errors, event handling errors, INVALID_FIELD_FOR_INSERT_UPDATE field update errors
+- [lwc-accessibility-errors.md](troubleshooting/lwc-accessibility-errors.html) — Common LWC accessibility errors with solutions: missing labels, ARIA issues, keyboard traps, focus indicators, color contrast, WCAG violations
+- [governor-limit-errors.md](troubleshooting/governor-limit-errors.html) — Governor limit errors and solutions: too many SOQL queries, too many DML statements, CPU time limits, heap size limits
 
 ### integration-debugging.md
 
@@ -937,7 +937,7 @@ Debugging and troubleshooting approaches for integration debugging, data reconci
 
 Reusable design patterns that span multiple domains, including governor limit management, bulkification, and cross-cutting design patterns.
 
-- [cross-cutting-patterns.md](patterns/cross-cutting-patterns.md) — Summary of cross-cutting patterns including governor limit management, bulkification, external IDs, error handling, and security patterns
+- [cross-cutting-patterns.md](patterns/cross-cutting-patterns.html) — Summary of cross-cutting patterns including governor limit management, bulkification, external IDs, error handling, and security patterns
 
 ### cross-cutting-patterns.md
 
@@ -960,7 +960,7 @@ Reusable design patterns that span multiple domains, including governor limit ma
 
 Terminology and definitions for clarifying what terms mean and understanding core concepts.
 
-- [core-terminology.md](glossary/core-terminology.md) — Core terminology and definitions for integration, identity, data modeling, security, platform, development, and project method terms
+- [core-terminology.md](glossary/core-terminology.html) — Core terminology and definitions for integration, identity, data modeling, security, platform, development, and project method terms
 
 ### core-terminology.md
 
@@ -983,18 +983,18 @@ Terminology and definitions for clarifying what terms mean and understanding cor
 
 Project delivery and methodology for sprint-based delivery, testing strategies, and quality standards.
 
-- [delivery-framework.md](project-methods/delivery-framework.md) — Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects
-- [testing-strategy.md](project-methods/testing-strategy.md) — Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
-- [deployment-patterns.md](project-methods/deployment-patterns.md) — Deployment and CI/CD patterns: deployment methods, source control strategies, Metadata API patterns, package development, and deployment best practices
-- [sfdx-patterns.md](project-methods/sfdx-patterns.md) — Salesforce DX patterns: project structure, commands, scratch org patterns, source tracking, and CI/CD integration
+- [delivery-framework.md](project-methods/delivery-framework.html) — Sprint-based delivery approach for managing complex multi-stakeholder Salesforce projects
+- [testing-strategy.md](project-methods/testing-strategy.html) — Comprehensive testing strategies covering integration testing, data quality testing, user migration testing, and UAT
+- [deployment-patterns.md](project-methods/deployment-patterns.html) — Deployment and CI/CD patterns: deployment methods, source control strategies, Metadata API patterns, package development, and deployment best practices
+- [sfdx-patterns.md](project-methods/sfdx-patterns.html) — Salesforce DX patterns: project structure, commands, scratch org patterns, source tracking, and CI/CD integration
 
 ## Operations
 
 Delivery and operations patterns for CI/CD, environment strategy, and release governance.
 
-- [cicd-patterns.md](operations/cicd-patterns.md) — Comprehensive CI/CD patterns: metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation, and rollback patterns
-- [environment-strategy.md](operations/environment-strategy.md) — Environment strategy: org topologies for multi-team programs, data masking, and refresh cadences
-- [release-governance.md](operations/release-governance.md) — Release governance: Change Advisory Boards, approval workflows, and risk-based release checklists
+- [cicd-patterns.md](operations/cicd-patterns.html) — Comprehensive CI/CD patterns: metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation, and rollback patterns
+- [environment-strategy.md](operations/environment-strategy.html) — Environment strategy: org topologies for multi-team programs, data masking, and refresh cadences
+- [release-governance.md](operations/release-governance.html) — Release governance: Change Advisory Boards, approval workflows, and risk-based release checklists
 
 ### cicd-patterns.md
 
@@ -1037,9 +1037,9 @@ Delivery and operations patterns for CI/CD, environment strategy, and release go
 
 Observability and resilience patterns for monitoring, performance tuning, and high availability.
 
-- [monitoring-alerting.md](observability/monitoring-alerting.md) — Monitoring and alerting: Platform Events monitoring, API health, async job failures, and log aggregation patterns
-- [performance-tuning.md](observability/performance-tuning.md) — Performance tuning: Query/selectivity tuning, Large Data Volumes (LDV) handling, governor limit mitigation, and caching strategies
-- [ha-dr-patterns.md](observability/ha-dr-patterns.md) — High availability and disaster recovery: Backup/restore approaches, failover patterns for integrations, and business continuity drills
+- [monitoring-alerting.md](observability/monitoring-alerting.html) — Monitoring and alerting: Platform Events monitoring, API health, async job failures, and log aggregation patterns
+- [performance-tuning.md](observability/performance-tuning.html) — Performance tuning: Query/selectivity tuning, Large Data Volumes (LDV) handling, governor limit mitigation, and caching strategies
+- [ha-dr-patterns.md](observability/ha-dr-patterns.html) — High availability and disaster recovery: Backup/restore approaches, failover patterns for integrations, and business continuity drills
 
 ### monitoring-alerting.md
 
@@ -1081,8 +1081,8 @@ Observability and resilience patterns for monitoring, performance tuning, and hi
 
 Data governance and compliance patterns for data residency, compliance, and data quality.
 
-- [data-residency-compliance.md](data-governance/data-residency-compliance.md) — Data residency and compliance: PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices
-- [data-quality-stewardship.md](data-governance/data-quality-stewardship.md) — Data quality and stewardship: Duplicate prevention beyond leads, survivorship rules, and master data governance
+- [data-residency-compliance.md](data-governance/data-residency-compliance.html) — Data residency and compliance: PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices
+- [data-quality-stewardship.md](data-governance/data-quality-stewardship.html) — Data quality and stewardship: Duplicate prevention beyond leads, survivorship rules, and master data governance
 
 ### data-residency-compliance.md
 
@@ -1112,8 +1112,8 @@ Data governance and compliance patterns for data residency, compliance, and data
 
 Adoption and change management patterns for user readiness and org health.
 
-- [user-readiness.md](adoption/user-readiness.md) — User readiness: Training plans, support models, and telemetry for feature adoption
-- [org-health-checks.md](adoption/org-health-checks.md) — Org health checks: Technical debt triage, baseline audits, and remediation playbooks
+- [user-readiness.md](adoption/user-readiness.html) — User readiness: Training plans, support models, and telemetry for feature adoption
+- [org-health-checks.md](adoption/org-health-checks.html) — Org health checks: Technical debt triage, baseline audits, and remediation playbooks
 
 ### user-readiness.md
 
@@ -1143,11 +1143,11 @@ Adoption and change management patterns for user readiness and org health.
 
 Testing patterns and examples for Apex, LWC, and integration testing.
 
-- [apex-testing-patterns.md](testing/apex-testing-patterns.md) — Apex testing patterns: test class structure, test data factories, bulk testing, error scenario testing, mocking
-- [test-data-factories.md](testing/test-data-factories.md) — Test data factory patterns: basic factories, relationship factories, customization, bulk data creation
-- [automated-testing-patterns.md](testing/automated-testing-patterns.md) — Automated testing at scale: Apex test data factories, UI test automation for LWC/Experience Cloud, contract tests for integrations, and load testing patterns
-- [non-functional-requirements.md](testing/non-functional-requirements.md) — Non-functional requirements: Security testing, accessibility for LWCs/portals, and performance benchmarks
-- [lwc-jest-testing.md](testing/lwc-jest-testing.md) — LWC Jest testing: setting up Jest, writing test cases, testing wire adapters and Apex calls, testing events, and Jest testing patterns
+- [apex-testing-patterns.md](testing/apex-testing-patterns.html) — Apex testing patterns: test class structure, test data factories, bulk testing, error scenario testing, mocking
+- [test-data-factories.md](testing/test-data-factories.html) — Test data factory patterns: basic factories, relationship factories, customization, bulk data creation
+- [automated-testing-patterns.md](testing/automated-testing-patterns.html) — Automated testing at scale: Apex test data factories, UI test automation for LWC/Experience Cloud, contract tests for integrations, and load testing patterns
+- [non-functional-requirements.md](testing/non-functional-requirements.html) — Non-functional requirements: Security testing, accessibility for LWCs/portals, and performance benchmarks
+- [lwc-jest-testing.md](testing/lwc-jest-testing.html) — LWC Jest testing: setting up Jest, writing test cases, testing wire adapters and Apex calls, testing events, and Jest testing patterns
 
 ### automated-testing-patterns.md
 
@@ -1192,29 +1192,29 @@ Testing patterns and examples for Apex, LWC, and integration testing.
 
 Step-by-step guides for getting started with Salesforce development.
 
-- [apex-quick-start.md](quick-start/apex-quick-start.md) — Getting started with Apex: create your first service, selector, domain, and test classes
-- [lwc-quick-start.md](quick-start/lwc-quick-start.md) — Getting started with LWC: create your first component with data access and interactivity
-- [lwc-accessibility-quick-start.md](quick-start/lwc-accessibility-quick-start.md) — Getting started with LWC accessibility: quick checklist, step-by-step guide, essential patterns
+- [apex-quick-start.md](quick-start/apex-quick-start.html) — Getting started with Apex: create your first service, selector, domain, and test classes
+- [lwc-quick-start.md](quick-start/lwc-quick-start.html) — Getting started with LWC: create your first component with data access and interactivity
+- [lwc-accessibility-quick-start.md](quick-start/lwc-accessibility-quick-start.html) — Getting started with LWC accessibility: quick checklist, step-by-step guide, essential patterns
 
 ## API Reference
 
 Quick reference for common APIs, methods, and patterns.
 
-- [apex-api-reference.md](api-reference/apex-api-reference.md) — Apex API reference: Service, Domain, Selector, Integration, Utility classes with method signatures
-- [lwc-api-reference.md](api-reference/lwc-api-reference.md) — LWC API reference: modules, decorators, wire adapters, Lightning Data Service
-- [lds-api-reference.md](api-reference/lds-api-reference.md) — Lightning Data Service API reference: getRecord, updateRecord, createRecord, deleteRecord, cache management
-- [soql-reference.md](api-reference/soql-reference.md) — SOQL reference: syntax, functions, relationship queries, aggregate queries, date/time functions
-- [platform-events-api.md](api-reference/platform-events-api.md) — Platform Events API reference: publishing, subscribing, payload design, error handling
+- [apex-api-reference.md](api-reference/apex-api-reference.html) — Apex API reference: Service, Domain, Selector, Integration, Utility classes with method signatures
+- [lwc-api-reference.md](api-reference/lwc-api-reference.html) — LWC API reference: modules, decorators, wire adapters, Lightning Data Service
+- [lds-api-reference.md](api-reference/lds-api-reference.html) — Lightning Data Service API reference: getRecord, updateRecord, createRecord, deleteRecord, cache management
+- [soql-reference.md](api-reference/soql-reference.html) — SOQL reference: syntax, functions, relationship queries, aggregate queries, date/time functions
+- [platform-events-api.md](api-reference/platform-events-api.html) — Platform Events API reference: publishing, subscribing, payload design, error handling
 
 ## MCP Knowledge
 
 Knowledge extracted from Salesforce MCP Service tools, providing official guidance and best practices.
 
-- [lwc-development-guide.md](mcp-knowledge/lwc-development-guide.md) — LWC development guidance: core principles, technical stack, best practices, project structure
-- [lwc-best-practices.md](mcp-knowledge/lwc-best-practices.md) — LWC best practices: custom events, property naming, decorators, Lightning Message Service, template directives
-- [lwc-accessibility.md](mcp-knowledge/lwc-accessibility.md) — LWC accessibility: WCAG 2.2 compliance, images, lists, form labels, keyboard accessibility, link purpose
-- [lds-patterns.md](mcp-knowledge/lds-patterns.md) — Lightning Data Service patterns: data consistency, referential integrity, choosing UIAPI vs Apex
-- [design-system-patterns.md](mcp-knowledge/design-system-patterns.md) — Salesforce Lightning Design System patterns: UX principles, visual design, component usage, interaction patterns
+- [lwc-development-guide.md](mcp-knowledge/lwc-development-guide.html) — LWC development guidance: core principles, technical stack, best practices, project structure
+- [lwc-best-practices.md](mcp-knowledge/lwc-best-practices.html) — LWC best practices: custom events, property naming, decorators, Lightning Message Service, template directives
+- [lwc-accessibility.md](mcp-knowledge/lwc-accessibility.html) — LWC accessibility: WCAG 2.2 compliance, images, lists, form labels, keyboard accessibility, link purpose
+- [lds-patterns.md](mcp-knowledge/lds-patterns.html) — Lightning Data Service patterns: data consistency, referential integrity, choosing UIAPI vs Apex
+- [design-system-patterns.md](mcp-knowledge/design-system-patterns.html) — Salesforce Lightning Design System patterns: UX principles, visual design, component usage, interaction patterns
 
 ### delivery-framework.md
 
@@ -1249,59 +1249,59 @@ Knowledge extracted from Salesforce MCP Service tools, providing official guidan
 
 Complete, working code examples organized by category. All examples are copy-paste ready and include tests.
 
-- [Code Examples Index](code-examples/code-examples-index.md) — Complete index of all code examples
+- [Code Examples Index](code-examples/code-examples-index.html) — Complete index of all code examples
 
 ### Apex Examples
-- [Service Layer Examples](code-examples/apex/service-layer-examples.md) — Service class implementations with domain and selector delegation
-- [Domain Layer Examples](code-examples/apex/domain-layer-examples.md) — Object-specific business logic and validation
-- [Selector Layer Examples](code-examples/apex/selector-layer-examples.md) — SOQL queries and data access patterns
-- [Integration Examples](code-examples/apex/integration-examples.md) — External API callouts and transformations
-- [Trigger Examples](code-examples/apex/trigger-examples.md) — Trigger handler patterns with bulkification
-- [Batch Examples](code-examples/apex/batch-examples.md) — Batch Apex implementations: stateless, stateful, chaining, error handling, and monitoring
-- [Queueable Examples](code-examples/apex/queueable-examples.md) — Queueable patterns: basic, chaining, callouts, retry logic, and monitoring
-- [Scheduled Examples](code-examples/apex/scheduled-examples.md) — Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, and monitoring
+- [Service Layer Examples](code-examples/apex/service-layer-examples.html) — Service class implementations with domain and selector delegation
+- [Domain Layer Examples](code-examples/apex/domain-layer-examples.html) — Object-specific business logic and validation
+- [Selector Layer Examples](code-examples/apex/selector-layer-examples.html) — SOQL queries and data access patterns
+- [Integration Examples](code-examples/apex/integration-examples.html) — External API callouts and transformations
+- [Trigger Examples](code-examples/apex/trigger-examples.html) — Trigger handler patterns with bulkification
+- [Batch Examples](code-examples/apex/batch-examples.html) — Batch Apex implementations: stateless, stateful, chaining, error handling, and monitoring
+- [Queueable Examples](code-examples/apex/queueable-examples.html) — Queueable patterns: basic, chaining, callouts, retry logic, and monitoring
+- [Scheduled Examples](code-examples/apex/scheduled-examples.html) — Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, and monitoring
 
 ### Code Templates
-- [Service Template](code-examples/templates/apex-service-template.md) — Service class template
-- [Domain Template](code-examples/templates/apex-domain-template.md) — Domain class template
-- [Selector Template](code-examples/templates/apex-selector-template.md) — Selector class template
-- [Trigger Template](code-examples/templates/apex-trigger-template.md) — Trigger handler template
-- [Test Template](code-examples/templates/test-class-template.md) — Test class template
-- [Batch Template](code-examples/templates/apex-batch-template.md) — Batch Apex template
-- [Queueable Template](code-examples/templates/apex-queueable-template.md) — Queueable Apex template
-- [Scheduled Template](code-examples/templates/apex-scheduled-template.md) — Scheduled Apex template
-- [Accessible Component Template](code-examples/templates/lwc-accessible-component-template.md) — Accessible LWC component template with all accessibility best practices
-- [SFDX Project Template](code-examples/templates/sfdx-project-template.md) — SFDX project setup template
-- [CI/CD Template](code-examples/templates/ci-cd-template.md) — CI/CD pipeline template
+- [Service Template](code-examples/templates/apex-service-template.html) — Service class template
+- [Domain Template](code-examples/templates/apex-domain-template.html) — Domain class template
+- [Selector Template](code-examples/templates/apex-selector-template.html) — Selector class template
+- [Trigger Template](code-examples/templates/apex-trigger-template.html) — Trigger handler template
+- [Test Template](code-examples/templates/test-class-template.html) — Test class template
+- [Batch Template](code-examples/templates/apex-batch-template.html) — Batch Apex template
+- [Queueable Template](code-examples/templates/apex-queueable-template.html) — Queueable Apex template
+- [Scheduled Template](code-examples/templates/apex-scheduled-template.html) — Scheduled Apex template
+- [Accessible Component Template](code-examples/templates/lwc-accessible-component-template.html) — Accessible LWC component template with all accessibility best practices
+- [SFDX Project Template](code-examples/templates/sfdx-project-template.html) — SFDX project setup template
+- [CI/CD Template](code-examples/templates/ci-cd-template.html) — CI/CD pipeline template
 
 ### LWC Examples
-- [Component Examples](rag/code-examples/lwc/component-examples.md) — Lightning Web Component implementations (coming soon)
-- [Service Examples](rag/code-examples/lwc/service-examples.md) — LWC service layer patterns (coming soon)
-- [Wire Examples](rag/code-examples/lwc/wire-examples.md) — Wire service and imperative call patterns (coming soon)
-- [Accessibility Examples](code-examples/lwc/accessibility-examples.md) — Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
-- [Test Examples](rag/code-examples/lwc/test-examples.md) — Jest test examples for LWC (coming soon)
+- [Component Examples](code-examples/lwc/component-examples.html) — Lightning Web Component implementations: record display, form input, user interactions
+- [Service Examples](code-examples/lwc/service-examples.html) — LWC service layer patterns: data formatting, validation, transformation utilities
+- [Wire Examples](code-examples/lwc/wire-examples.html) — Wire service patterns: reactive data access, relationship queries, Apex method calls, object metadata
+- [Accessibility Examples](code-examples/lwc/accessibility-examples.html) — Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
+- [Test Examples](code-examples/lwc/test-examples.html) — Jest test examples for LWC: component testing, Apex mocking, wire adapters, user interactions
 
 ### Flow Examples
-- [Record-Triggered Examples](rag/code-examples/flow/record-triggered-examples.md) — Before-save and after-save flow patterns (coming soon)
-- [Screen Flow Examples](rag/code-examples/flow/screen-flow-examples.md) — User interaction flow patterns (coming soon)
-- [Subflow Examples](rag/code-examples/flow/subflow-examples.md) — Reusable subflow patterns (coming soon)
+- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) — Before-save and after-save flow patterns: field validation, related record creation, notifications, calculated fields
+- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) — User interaction flow patterns: multi-step forms, conditional navigation, lookups, data validation
+- [Subflow Examples](code-examples/flow/subflow-examples.html) — Reusable subflow patterns: task creation, status updates, integration wrappers, validation, notifications
 
 ### Integration Examples
-- [REST API Examples](rag/code-examples/integrations/rest-api-examples.md) — Outbound and inbound REST API patterns (coming soon)
-- [Platform Events Examples](rag/code-examples/integrations/platform-events-examples.md) — Event publishing and subscription patterns (coming soon)
-- [Callout Examples](rag/code-examples/integrations/callout-examples.md) — HTTP callout patterns with error handling (coming soon)
-- [Bulk API Examples](rag/code-examples/integrations/bulk-api-examples.md) — Bulk data operations (coming soon)
-- [CDC Examples](code-examples/integrations/cdc-examples.md) — Change Data Capture patterns: trigger handlers, Platform Event integration, error handling, and replay
+- [REST API Examples](code-examples/integrations/rest-api-examples.html) — Outbound and inbound REST API patterns: Named Credentials, error handling, async callouts
+- [Platform Events Examples](code-examples/integrations/platform-events-examples.html) — Event publishing and subscription patterns: Apex and Flow publishing, event subscribers, payload design
+- [Callout Examples](code-examples/integrations/callout-examples.html) — HTTP callout patterns with error handling: Named Credentials, comprehensive error handling, async patterns, circuit breakers
+- [Bulk API Examples](code-examples/integrations/bulk-api-examples.html) — Bulk data operations: job creation, batch upload, status monitoring, async monitoring
+- [CDC Examples](code-examples/integrations/cdc-examples.html) — Change Data Capture patterns: trigger handlers, Platform Event integration, error handling, and replay
 
 ### Utility Examples
-- [Logging Examples](rag/code-examples/utilities/logging-examples.md) — Structured logging patterns (coming soon)
-- [Error Handling Examples](rag/code-examples/utilities/error-handling-examples.md) — Error handling and retry patterns (coming soon)
-- [Validation Examples](rag/code-examples/utilities/validation-examples.md) — Data validation patterns (coming soon)
-- [Custom Settings Examples](code-examples/utilities/custom-settings-examples.md) — Custom Settings usage: hierarchical and list custom settings in Apex and Flows
-- [Custom Metadata Examples](code-examples/utilities/custom-metadata-examples.md) — Custom Metadata usage: configuration patterns, Apex queries, Flow integration, and migration from Custom Settings
-- [Metadata API Examples](code-examples/utilities/metadata-api-examples.md) — Metadata API patterns: deployment, retrieval, and automation
-- [SFDX Examples](code-examples/utilities/sfdx-examples.md) — Salesforce DX patterns: project setup, deployment scripts, and CI/CD integration
-- [Data Migration Examples](code-examples/utilities/data-migration-examples.md) — Data migration patterns: import with validation, transformation, error handling, and rollback
+- [Logging Examples](code-examples/utilities/logging-examples.html) — Structured logging patterns: custom logging objects, platform event fallbacks, external logging integration
+- [Error Handling Examples](code-examples/utilities/error-handling-examples.html) — Error handling and retry patterns: try-catch, custom exceptions, exponential backoff, Queueable retries
+- [Validation Examples](code-examples/utilities/validation-examples.html) — Data validation patterns: field validation, record validation, bulk validation, error handling
+- [Custom Settings Examples](code-examples/utilities/custom-settings-examples.html) — Custom Settings usage: hierarchical and list custom settings in Apex and Flows
+- [Custom Metadata Examples](code-examples/utilities/custom-metadata-examples.html) — Custom Metadata usage: configuration patterns, Apex queries, Flow integration, and migration from Custom Settings
+- [Metadata API Examples](code-examples/utilities/metadata-api-examples.html) — Metadata API patterns: deployment, retrieval, and automation
+- [SFDX Examples](code-examples/utilities/sfdx-examples.html) — Salesforce DX patterns: project setup, deployment scripts, and CI/CD integration
+- [Data Migration Examples](code-examples/utilities/data-migration-examples.html) — Data migration patterns: import with validation, transformation, error handling, and rollback
 
 **When to Retrieve**: Need complete, working code examples, implementing specific patterns, looking for copy-paste ready code, or need test examples for code patterns.
 

@@ -17,6 +17,20 @@ last_reviewed: "2025-01-XX"
 
 Different integration patterns serve different use cases. Understanding when to use ETL (batch), API (synchronous), or Events (asynchronous) is critical for building scalable, maintainable integrations.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of integration patterns (ETL, API, Events)
+- Basic understanding of Salesforce APIs (REST, SOAP, Bulk)
+- Familiarity with authentication mechanisms (OAuth, API keys)
+- Knowledge of data synchronization concepts
+
+**Recommended Reading**:
+- [Integration Platform Patterns](integration-platform-patterns.html) - Integration platform patterns
+- [Callout Best Practices](callout-best-practices.html) - HTTP callout patterns
+- [Platform Events Examples](../code-examples/integrations/platform-events-examples.html) - Event-driven patterns
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.html) - Data mapping patterns
+
 ## Integration Pattern Types
 
 ### ETL (Extract, Transform, Load) - Batch Integration
@@ -304,12 +318,94 @@ Combine patterns when:
 
 **A**: For large volumes, prefer ETL or Events over API. If API is required, implement pagination, batch processing, and consider using Bulk API for large operations. Monitor API call limits and implement rate limiting/throttling to avoid hitting governor limits.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Hybrid Integration Patterns
+
+**Scenario**: Integration requiring both real-time API calls and batch ETL processing, causing pattern selection complexity.
+
+**Consideration**:
+- Use API for real-time critical operations
+- Use ETL for bulk data synchronization
+- Coordinate between patterns using External IDs
+- Document pattern boundaries clearly
+- Monitor both patterns for consistency
+- Consider Events as alternative to hybrid approach
+
+### Edge Case 2: Event Delivery Failures
+
+**Scenario**: Platform Events failing to deliver to subscribers, causing data synchronization gaps.
+
+**Consideration**:
+- Implement event replay capabilities
+- Monitor event delivery success rates
+- Use idempotent subscribers for safe replay
+- Log event delivery failures
+- Consider CDC as alternative for critical data
+- Plan for event delivery failure recovery
+
+### Edge Case 3: API Rate Limiting Across Systems
+
+**Scenario**: External systems rate-limiting API calls, causing integration failures and delays.
+
+**Consideration**:
+- Implement rate limiting and throttling
+- Use exponential backoff for retries
+- Monitor API rate limit usage
+- Coordinate API calls across integrations
+- Consider ETL for high-volume scenarios
+- Document rate limit handling
+
+### Edge Case 4: ETL Job Failures with Partial Data
+
+**Scenario**: ETL job failing mid-process with partial data loaded, causing data inconsistency.
+
+**Consideration**:
+- Use External IDs for idempotent operations
+- Implement checkpoint/resume functionality
+- Track processed records to avoid duplicates
+- Test ETL job failure scenarios
+- Plan for partial failure recovery
+- Document ETL failure procedures
+
+### Edge Case 5: Integration Pattern Migration
+
+**Scenario**: Migrating from one integration pattern to another (e.g., API to Events), causing transition complexity.
+
+**Consideration**:
+- Plan migration carefully with dual-write period
+- Test new pattern thoroughly before cutover
+- Monitor both patterns during transition
+- Document migration procedures
+- Plan for rollback if needed
+- Coordinate with external systems
+
+### Limitations
+
+- **API Call Limits**: API integrations subject to governor limits (100 sync, higher async)
+- **ETL Performance**: ETL jobs may be slow for very large datasets
+- **Event Delivery**: Platform Events have delivery guarantees but not immediate delivery
+- **Pattern Complexity**: Hybrid patterns increase complexity and maintenance
+- **Rate Limiting**: External systems may rate-limit API calls
+- **Data Volume**: Very large volumes may require ETL even for real-time needs
+- **Error Handling**: Different patterns require different error handling approaches
+
 ## Related Patterns
 
-- [Integration Platform Patterns](integration-platform-patterns.md) - MuleSoft and Dell Boomi patterns
-- [SIS Sync Patterns](sis-sync-patterns.md) - High-volume ETL synchronization patterns
-- [Change Data Capture Patterns](change-data-capture-patterns.md) - CDC for event-driven integration
-- [Callout Best Practices](callout-best-practices.md) - API callout patterns
-- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
-- [Large Data Loads](../development/large-data-loads.md) - Bulk data operation patterns
+**See Also**:
+- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
+- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume ETL synchronization patterns
+
+**Related Domains**:
+- [Change Data Capture Patterns](change-data-capture-patterns.html) - CDC for event-driven integration
+- [Callout Best Practices](callout-best-practices.html) - API callout patterns
+- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
+- [Large Data Loads](../development/large-data-loads.html) - Bulk data operation patterns
+
+- [Integration Platform Patterns](integration-platform-patterns.html) - MuleSoft and Dell Boomi patterns
+- [SIS Sync Patterns](sis-sync-patterns.html) - High-volume ETL synchronization patterns
+- [Change Data Capture Patterns](change-data-capture-patterns.html) - CDC for event-driven integration
+- [Callout Best Practices](callout-best-practices.html) - API callout patterns
+- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
+- [Large Data Loads](../development/large-data-loads.html) - Bulk data operation patterns
 

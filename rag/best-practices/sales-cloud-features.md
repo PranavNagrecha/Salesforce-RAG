@@ -164,7 +164,7 @@ Score leads based on criteria to prioritize follow-up.
 
 **Configuration**:
 - Define scoring criteria (company size, industry, behavior)
-- Create scoring automation (Flow or Process Builder)
+- Create scoring automation (Flow - ⚠️ **Note**: Process Builder is deprecated, use Record-Triggered Flows instead)
 - Use scores for lead prioritization and routing
 
 **Best practice**: Design lead management process to match sales workflow. Automate lead assignment and routing. Use lead scoring for prioritization. Plan lead conversion process.

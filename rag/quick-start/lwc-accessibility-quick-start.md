@@ -1,3 +1,15 @@
+---
+title: "LWC Accessibility Quick Start Guide"
+level: "Beginner"
+tags:
+  - quick-start
+  - lwc
+  - accessibility
+  - wcag
+  - getting-started
+last_reviewed: "2025-01-XX"
+---
+
 # LWC Accessibility Quick Start Guide
 
 > Getting started with Lightning Web Component accessibility in Salesforce.
@@ -7,10 +19,10 @@
 This quick-start guide provides step-by-step instructions for making Lightning Web Components accessible, following WCAG 2.2 standards and Salesforce best practices.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Complete code examples
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns
-- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) - Common errors and fixes
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Complete code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns
+- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
 
 ## Quick Accessibility Checklist
 
@@ -587,18 +599,18 @@ export default class AccessibleModal extends LightningElement {
 
 ## Next Steps
 
-1. **Review Examples**: See [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) for complete code examples
-2. **Learn Guidelines**: Read [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) for WCAG 2.2 compliance
-3. **Test Your Components**: Follow [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) patterns
-4. **Fix Issues**: Use [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) for common errors
+1. **Review Examples**: See [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) for complete code examples
+2. **Learn Guidelines**: Read [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) for WCAG 2.2 compliance
+3. **Test Your Components**: Follow [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) patterns
+4. **Fix Issues**: Use [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) for common errors
 
 ---
 
 ## Related Patterns
 
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Complete code examples
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns
-- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.md) - Common errors and fixes
-- [LWC Quick Start](lwc-quick-start.md) - General LWC quick start
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Complete code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns
+- [LWC Accessibility Troubleshooting](../troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
+- [LWC Quick Start](lwc-quick-start.html) - General LWC quick start
 

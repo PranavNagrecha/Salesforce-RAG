@@ -25,9 +25,9 @@ Understanding the order of execution in Salesforce is critical for architects an
 - Familiarity with record save operations
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex trigger patterns
-- [Flow Patterns](flow-patterns.md) - Flow automation patterns
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling in automation
+- [Apex Patterns](apex-patterns.html) - Apex trigger patterns
+- [Flow Patterns](flow-patterns.html) - Flow automation patterns
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling in automation
 
 ## Complete Order of Execution
 
@@ -362,9 +362,12 @@ If multiple triggers exist for the same object and event:
 
 ## Related Patterns
 
-- See `rag/development/flow-patterns.md` for Flow execution patterns
-- See `rag/development/apex-patterns.md` for Apex trigger patterns
-- See `rag/architecture/event-driven-architecture.md` for async processing patterns
+**See Also**:
+- [Flow Patterns](flow-patterns.html) - Flow execution patterns and timing
+- [Apex Patterns](apex-patterns.html) - Apex trigger patterns and execution
+
+**Related Domains**:
+- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Async processing patterns
 
 ## Q&A
 

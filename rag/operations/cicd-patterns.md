@@ -16,10 +16,25 @@ last_reviewed: "2025-01-XX"
 This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation strategies, and rollback patterns. These patterns are essential for managing complex Salesforce development lifecycles with multiple teams and environments.
 
 **Related Patterns**:
-- [Deployment Patterns](../project-methods/deployment-patterns.md) - Deployment methods and best practices
-- [Salesforce DX Patterns](../project-methods/sfdx-patterns.md) - SFDX-specific patterns
-- [Environment Strategy](environment-strategy.md) - Org topology and environment management
-- [Release Governance](release-governance.md) - Release approval and risk management
+- [Deployment Patterns](../project-methods/deployment-patterns.html) - Deployment methods and best practices
+- [Salesforce DX Patterns](../project-methods/sfdx-patterns.html) - SFDX-specific patterns
+- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+- [Release Governance](release-governance.html) - Release approval and risk management
+
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce metadata and deployment concepts
+- Familiarity with version control systems (Git)
+- Knowledge of Salesforce CLI and deployment tools
+- Understanding of sandbox types and their purposes
+- Basic knowledge of CI/CD concepts and pipelines
+
+**Recommended Reading**:
+- `rag/project-methods/deployment-patterns.md` - Deployment methods and patterns
+- `rag/project-methods/sfdx-patterns.md` - Salesforce DX patterns
+- `rag/operations/environment-strategy.md` - Environment management
+- `rag/operations/release-governance.md` - Release approval processes
 
 ## Consensus Best Practices
 
@@ -313,11 +328,93 @@ This guide covers comprehensive CI/CD patterns for Salesforce, including metadat
 
 **A**: Include in deployment checklist: (1) **Metadata backup** (version control, export), (2) **Test execution** (all tests pass, coverage met), (3) **Validation** (no errors, dependencies resolved), (4) **Security review** (profiles, permission sets), (5) **Rollback plan** (documented, tested), (6) **Communication** (notify stakeholders), (7) **Monitoring** (watch for errors after deployment).
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Deployment Conflicts with Multiple Teams
+
+**Scenario**: Multiple teams deploying to the same org simultaneously, causing metadata conflicts and deployment failures.
+
+**Consideration**:
+- Coordinate deployments through release governance
+- Use feature flags to isolate team changes
+- Implement deployment locks or scheduling
+- Test deployment order and dependencies
+- Use unlocked packages to isolate team work
+- Monitor deployment conflicts and adjust processes
+
+### Edge Case 2: Sandbox Refresh During Active Development
+
+**Scenario**: Sandbox refresh occurs while developers have uncommitted work, causing data loss or metadata conflicts.
+
+**Consideration**:
+- Communicate refresh schedules clearly
+- Require all work to be committed before refresh
+- Use source control to preserve uncommitted changes
+- Plan refresh windows during low-activity periods
+- Implement refresh approval process
+- Document refresh procedures and expectations
+
+### Edge Case 3: Package Dependency Conflicts
+
+**Scenario**: Unlocked packages with conflicting dependencies or version mismatches causing deployment failures.
+
+**Consideration**:
+- Document package dependencies clearly
+- Test package combinations before deployment
+- Use package versioning strategy
+- Resolve dependency conflicts early
+- Consider package consolidation when appropriate
+- Monitor package dependency health
+
+### Edge Case 4: Test Failures in CI/CD Pipeline
+
+**Scenario**: Flaky tests or environment-specific test failures causing CI/CD pipeline failures and deployment delays.
+
+**Consideration**:
+- Identify and fix flaky tests
+- Use test data factories for consistent test data
+- Isolate environment-specific test issues
+- Implement retry logic for transient failures
+- Monitor test stability and performance
+- Document test dependencies and requirements
+
+### Edge Case 5: Rollback Complexity with Data Changes
+
+**Scenario**: Deployment includes data changes that cannot be easily rolled back, causing rollback complexity.
+
+**Consideration**:
+- Separate metadata and data deployments when possible
+- Document data changes and rollback procedures
+- Test rollback procedures in sandbox
+- Use feature flags to disable features without rollback
+- Plan for data migration during rollback
+- Consider data backup before data-changing deployments
+
+### Limitations
+
+- **Deployment Time Limits**: Large deployments may hit timeout limits
+- **Test Execution Limits**: Test execution time limits may affect CI/CD pipelines
+- **Package Version Limits**: Package versioning has practical limits
+- **Sandbox Refresh Limits**: Sandbox refresh frequency and timing constraints
+- **Metadata API Limits**: Metadata API has rate limits affecting deployment speed
+- **Source-Tracked Org Limits**: Source-tracked orgs have limitations with certain metadata types
+- **CI/CD Tool Limits**: CI/CD tools may have execution time and resource limits
+- **Rollback Complexity**: Some changes cannot be easily rolled back (data, certain metadata types)
+
 ## Related Patterns
 
-- [Deployment Patterns](../project-methods/deployment-patterns.md) - Deployment methods and Metadata API patterns
-- [Salesforce DX Patterns](../project-methods/sfdx-patterns.md) - SFDX project structure and commands
-- [Environment Strategy](environment-strategy.md) - Org topology and environment management
-- [Release Governance](release-governance.md) - Release approval and risk management
-- [Testing Strategy](../project-methods/testing-strategy.md) - Comprehensive testing approaches
+**See Also**:
+- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+- [Release Governance](release-governance.html) - Release approval and risk management
+
+**Related Domains**:
+- [Deployment Patterns](../project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
+- [Salesforce DX Patterns](../project-methods/sfdx-patterns.html) - SFDX project structure and commands
+- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing approaches
+
+- [Deployment Patterns](../project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
+- [Salesforce DX Patterns](../project-methods/sfdx-patterns.html) - SFDX project structure and commands
+- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+- [Release Governance](release-governance.html) - Release approval and risk management
+- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing approaches
 

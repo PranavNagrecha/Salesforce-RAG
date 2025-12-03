@@ -26,9 +26,9 @@ Comprehensive error handling and logging framework ensures all errors are captur
 - Familiarity with custom objects and field types
 
 **Recommended Reading**:
-- [Apex Patterns](apex-patterns.md) - Apex class structure and patterns
-- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Queueable patterns for error handling
-- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
+- [Apex Patterns](apex-patterns.html) - Apex class structure and patterns
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.html) - Queueable patterns for error handling
+- [Event-Driven Architecture](../architecture/event-driven-architecture.html) - Platform Events patterns
 
 ## Logging Architecture
 
@@ -333,6 +333,12 @@ Avoid comprehensive logging when:
 
 ## Related Patterns
 
-- [Monitoring and Alerting](../observability/monitoring-alerting.md) - Monitoring patterns, log aggregation, and alerting strategies
-- [Performance Tuning](../observability/performance-tuning.md) - Performance optimization patterns
+**See Also**:
+- [Apex Patterns](apex-patterns.html) - Apex error handling patterns
+- [Flow Patterns](flow-patterns.html) - Flow error handling patterns
+
+**Related Domains**:
+- [Monitoring and Alerting](../observability/monitoring-alerting.html) - Monitoring patterns, log aggregation, and alerting strategies
+- [Performance Tuning](../observability/performance-tuning.html) - Performance optimization patterns
+- [Logging Examples](../code-examples/utilities/logging-examples.html) - Logging code examples
 

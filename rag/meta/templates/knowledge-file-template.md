@@ -141,11 +141,11 @@ Common questions and answers to help RAG systems and readers understand key conc
 Links to related content in the knowledge library.
 
 **See Also**:
-- [Related Pattern 1](rag/path/to/related-pattern-1.md) - Brief description
-- [Related Pattern 2](rag/path/to/related-pattern-2.md) - Brief description
-- [Related Pattern 3](rag/path/to/related-pattern-3.md) - Brief description
+- [Related Pattern 1](/Salesforce-RAG/rag/path/to/related-pattern-1.html) - Brief description
+- [Related Pattern 2](/Salesforce-RAG/rag/path/to/related-pattern-2.html) - Brief description
+- [Related Pattern 3](/Salesforce-RAG/rag/path/to/related-pattern-3.html) - Brief description
 
 **Related Domains**:
-- [Domain 1](rag/path/to/domain-file.md)
-- [Domain 2](rag/path/to/domain-file.md)
+- [Domain 1](/Salesforce-RAG/rag/path/to/domain-file.html)
+- [Domain 2](/Salesforce-RAG/rag/path/to/domain-file.html)
 

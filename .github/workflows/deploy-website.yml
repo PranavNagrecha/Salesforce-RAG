@@ -6,10 +6,7 @@ on:
       - main
     paths:
       - 'rag/**'
-      - 'index.md'
-      - '_config.yml'
       - 'website/**'
-      - 'sitemap.xml'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
@@ -51,12 +48,15 @@ jobs:
       
       - name: Prepare Jekyll directories
         run: |
-          # Copy layouts and assets to root (Jekyll requires them in root for GitHub Pages)
+          # Copy website files to root (Jekyll requires them in root for GitHub Pages)
           if [ -d "website/_layouts" ]; then
             cp -r website/_layouts _layouts
           fi
           if [ -d "website/assets" ]; then
             cp -r website/assets assets
+          fi
+          if [ -d "website/root" ]; then
+            cp website/root/* .
           fi
       
       - name: Build site

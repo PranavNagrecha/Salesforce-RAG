@@ -95,9 +95,9 @@ async handleUpdate() {
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- [LWC Patterns](../development/lwc-patterns.md) - LWC component patterns
-- [Apex Patterns](../development/apex-patterns.md) - When to use Apex vs LDS
-- [SOQL Patterns](../development/soql-query-patterns.md) - Query patterns
+- [LWC Patterns](../development/lwc-patterns.html) - LWC component patterns
+- [Apex Patterns](../development/apex-patterns.html) - When to use Apex vs LDS
+- [SOQL Patterns](../development/soql-query-patterns.html) - Query patterns
 
 **How This Complements Existing RAG**:
 - Provides official guidance on LDS usage

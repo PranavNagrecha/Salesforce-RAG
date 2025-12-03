@@ -1,120 +1,319 @@
+---
+title: "Record-Triggered Flow Code Examples"
+level: "Intermediate"
+tags:
+  - flow
+  - code-examples
+  - automation
+  - record-triggered
+last_reviewed: "2025-01-XX"
+---
+
 # Record-Triggered Flow Code Examples
 
 > This file contains complete, working examples for Record-Triggered Flow patterns.
-> All examples follow Salesforce Flow best practices.
+> All examples follow Salesforce best practices and can be used as templates.
 
 ## Overview
 
-Record-Triggered Flows run automatically when records are created or updated. These examples demonstrate common patterns for before-save and after-save automation.
+Record-Triggered Flows run automatically when records are created or updated. They can run before save (to modify field values) or after save (to create related records, send notifications, etc.). This document provides practical examples of common Record-Triggered Flow patterns.
 
 **Related Patterns**:
-- [Flow Patterns](../development/flow-patterns.md) - Complete Flow development patterns
-- [Order of Execution](../development/order-of-execution.md) - Understanding when Flows execute
+- [Flow Patterns](../development/flow-patterns.html) - Complete Flow design patterns
+- [Order of Execution](../development/order-of-execution.html) - Understanding when Flows execute
 
 ## Examples
 
-### Example 1: Before-Save Field Update
+### Example 1: Before-Save Flow - Field Validation and Default Values
 
-**Pattern**: Updating field values before record save
-**Use Case**: Auto-populating fields or calculating values
+**Pattern**: Before-save flow for field validation and default values
+**Use Case**: Setting default values or validating data before save
 **Complexity**: Basic
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.md#record-triggered-flow-structure)
+**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#record-triggered-flows)
 
 **Problem**:
-You need to automatically set a field value when a record is created or updated.
+You need to set default values for fields and validate data before a record is saved.
 
 **Solution**:
 
 **Flow Configuration**:
-- **Trigger**: Record-Triggered Flow
+- **Flow Type**: Record-Triggered Flow
 - **Object**: Contact
-- **Entry Criteria**: `IsNew = true OR Email != null`
-- **Trigger Type**: Before Save
+- **Trigger**: A record is created or updated
+- **Entry Conditions**: None (runs for all records)
+- **Optimize for**: Actions and Related Records
 
 **Flow Elements**:
-1. **Start** - Entry criteria: `{!$Record.IsNew} = true OR {!$Record.Email} != null`
-2. **Assignment** - Set `{!$Record.Full_Name__c}` = `{!$Record.FirstName} + ' ' + {!$Record.LastName}`
-3. **Decision** - Check if Email changed
-4. **Assignment** (if Email changed) - Set `{!$Record.Email_Verified__c}` = false
+
+1. **Decision Element**: Check if Email is empty
+   - **Outcome 1**: Email is empty
+     - **Criteria**: `{!$Record.Email}` IS NULL
+   - **Outcome 2**: Email is not empty (Default Outcome)
+
+2. **Assignment Element** (in Email is empty outcome):
+   - **Variable**: `$Record.Email`
+   - **Value**: `{!$Record.FirstName} + '.' + {!$Record.LastName} + '@example.com'`
+
+3. **Decision Element**: Validate Email format
+   - **Outcome 1**: Email is valid
+     - **Criteria**: `{!$Record.Email}` CONTAINS '@'
+   - **Outcome 2**: Email is invalid (Default Outcome)
+
+4. **Formula Element** (in Email is invalid outcome):
+   - **Name**: ErrorMessage
+   - **Formula**: `'Email must contain @ symbol'`
+
+5. **Fault Element** (in Email is invalid outcome):
+   - **Fault Message**: `{!ErrorMessage}`
 
 **Best Practices**:
-- Use before-save for field updates on the same record
-- Set strict entry criteria to avoid unnecessary execution
-- Use formulas for simple calculations
-- Test with bulk data (200+ records)
+- Use before-save flows for field modifications
+- Validate data early in the process
+- Provide clear error messages
+- Use formulas for complex default value logic
 
-### Example 2: After-Save Related Record Creation
+### Example 2: After-Save Flow - Create Related Records
 
-**Pattern**: Creating related records after save
-**Use Case**: Auto-creating child records or tasks
+**Pattern**: After-save flow for creating related records
+**Use Case**: Creating child records when parent is created
 **Complexity**: Intermediate
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.md)
+**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#record-triggered-flows)
 
 **Problem**:
-You need to create a related record when a parent record is saved.
+When an Account is created, you need to automatically create a default Contact record.
 
 **Solution**:
 
 **Flow Configuration**:
-- **Trigger**: Record-Triggered Flow
+- **Flow Type**: Record-Triggered Flow
+- **Object**: Account
+- **Trigger**: A record is created
+- **Entry Conditions**: None
+- **Optimize for**: Actions and Related Records
+
+**Flow Elements**:
+
+1. **Decision Element**: Check if Account has Contacts
+   - **Outcome 1**: No Contacts
+     - **Criteria**: `{!$Record.Contacts__r}` IS NULL
+   - **Outcome 2**: Has Contacts (Default Outcome)
+
+2. **Create Records Element** (in No Contacts outcome):
+   - **Object**: Contact
+   - **How Many Records to Create**: One
+   - **Field Values**:
+     - `AccountId`: `{!$Record.Id}`
+     - `FirstName`: `'Default'`
+     - `LastName`: `{!$Record.Name}`
+     - `Email`: `'contact@' + {!$Record.Name} + '.com'`
+
+**Best Practices**:
+- Use after-save flows for creating related records
+- Check for existing records to avoid duplicates
+- Use formulas for dynamic field values
+- Handle bulk operations (flows automatically bulkify)
+
+### Example 3: After-Save Flow - Send Email Notification
+
+**Pattern**: After-save flow for sending notifications
+**Use Case**: Sending email notifications when records are created or updated
+**Complexity**: Intermediate
+**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#record-triggered-flows)
+
+**Problem**:
+When a Case is created with high priority, you need to send an email notification to the account owner.
+
+**Solution**:
+
+**Flow Configuration**:
+- **Flow Type**: Record-Triggered Flow
 - **Object**: Case
-- **Entry Criteria**: `Status = 'New'`
-- **Trigger Type**: After Save
+- **Trigger**: A record is created or updated
+- **Entry Conditions**: 
+  - `{!$Record.Priority}` EQUALS `High`
+- **Optimize for**: Actions and Related Records
 
 **Flow Elements**:
-1. **Start** - Entry criteria: `{!$Record.Status} = 'New'`
-2. **Create Records** - Create Task
-   - Subject: `'Follow up on Case: ' + {!$Record.CaseNumber}`
-   - WhatId: `{!$Record.Id}`
-   - Status: `'Not Started'`
-   - Priority: `'Normal'`
-   - OwnerId: `{!$Record.OwnerId}`
+
+1. **Get Records Element**: Get Account Owner
+   - **Object**: User
+   - **Filter**: `Id` EQUALS `{!$Record.Account.OwnerId}`
+   - **Store**: `AccountOwner`
+
+2. **Decision Element**: Check if Account Owner exists
+   - **Outcome 1**: Owner exists
+     - **Criteria**: `{!AccountOwner.Id}` IS NOT NULL
+   - **Outcome 2**: Owner does not exist (Default Outcome)
+
+3. **Email Alerts Element** (in Owner exists outcome):
+   - **Email Alert**: High Priority Case Alert
+   - **Recipients**: `{!AccountOwner.Email}`
+   - **Related To**: `{!$Record.Id}`
+
+**Email Alert Configuration** (created separately):
+- **Name**: High Priority Case Alert
+- **Object**: Case
+- **Email Template**: High Priority Case Notification
+- **Recipients**: User (Account Owner)
 
 **Best Practices**:
-- Use after-save for related record operations
-- Set entry criteria to avoid unnecessary execution
-- Use collection variables for bulk operations
-- Handle errors with fault paths
+- Use entry conditions to limit flow execution
+- Get related records before using their fields
+- Use Email Alerts for reusable email templates
+- Handle cases where related records don't exist
 
-### Example 3: After-Save Status Update with Decision
+### Example 4: Before-Save Flow - Calculate Field Values
 
-**Pattern**: Updating related records based on conditions
-**Use Case**: Status synchronization across related records
+**Pattern**: Before-save flow for calculated fields
+**Use Case**: Calculating field values based on other fields
 **Complexity**: Intermediate
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.md)
+**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#record-triggered-flows)
 
 **Problem**:
-You need to update related records when a parent record status changes.
+You need to calculate a Contact's full name and set it in a custom field when FirstName or LastName changes.
 
 **Solution**:
 
 **Flow Configuration**:
-- **Trigger**: Record-Triggered Flow
-- **Object**: Opportunity
-- **Entry Criteria**: `StageName` in ('Closed Won', 'Closed Lost')
-- **Trigger Type**: After Save
+- **Flow Type**: Record-Triggered Flow
+- **Object**: Contact
+- **Trigger**: A record is created or updated
+- **Entry Conditions**: 
+  - `{!$Record.FirstName}` IS CHANGED OR
+  - `{!$Record.LastName}` IS CHANGED
+- **Optimize for**: Actions and Related Records
 
 **Flow Elements**:
-1. **Start** - Entry criteria: `{!$Record.StageName} = 'Closed Won' OR {!$Record.StageName} = 'Closed Lost'`
-2. **Get Records** - Get related Quotes where `OpportunityId = {!$Record.Id}`
-3. **Decision** - Check `{!$Record.StageName}`
-   - Outcome 1: `'Closed Won'` → Update Quotes: `Status = 'Approved'`
-   - Outcome 2: `'Closed Lost'` → Update Quotes: `Status = 'Rejected'`
-4. **Update Records** - Update Quotes collection
+
+1. **Formula Element**: Calculate Full Name
+   - **Name**: FullName
+   - **Formula**: `TRIM({!$Record.FirstName} + ' ' + {!$Record.LastName})`
+
+2. **Assignment Element**: Set Full Name Field
+   - **Variable**: `$Record.Full_Name__c`
+   - **Value**: `{!FullName}`
 
 **Best Practices**:
-- Use Decision elements for routing logic
-- Process collections, not single records
-- Set entry criteria to reduce execution
-- Handle bulk operations efficiently
+- Use before-save flows for field calculations
+- Use entry conditions to run only when needed
+- Use TRIM() to remove extra spaces
+- Handle null values in formulas
+
+### Example 5: After-Save Flow - Update Related Records
+
+**Pattern**: After-save flow for updating related records
+**Use Case**: Updating child records when parent changes
+**Complexity**: Intermediate
+**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#record-triggered-flows)
+
+**Problem**:
+When an Account's Industry changes, you need to update all related Contacts' Industry field.
+
+**Solution**:
+
+**Flow Configuration**:
+- **Flow Type**: Record-Triggered Flow
+- **Object**: Account
+- **Trigger**: A record is updated
+- **Entry Conditions**: 
+  - `{!$Record.Industry}` IS CHANGED
+- **Optimize for**: Actions and Related Records
+
+**Flow Elements**:
+
+1. **Get Records Element**: Get Related Contacts
+   - **Object**: Contact
+   - **Filter**: `AccountId` EQUALS `{!$Record.Id}`
+   - **Store**: `RelatedContacts`
+
+2. **Decision Element**: Check if Contacts exist
+   - **Outcome 1**: Contacts exist
+     - **Criteria**: `{!RelatedContacts}` IS NOT NULL
+   - **Outcome 2**: No Contacts (Default Outcome)
+
+3. **Update Records Element** (in Contacts exist outcome):
+   - **Object**: Contact
+   - **Records to Update**: `{!RelatedContacts}`
+   - **Field Values**:
+     - `Industry__c`: `{!$Record.Industry}`
+
+**Best Practices**:
+- Use entry conditions to run only when needed
+- Get related records before updating
+- Handle bulk operations (flows automatically bulkify)
+- Check for null/empty collections before updating
+
+### Example 6: Before-Save Flow - Prevent Save with Validation
+
+**Pattern**: Before-save flow for validation
+**Use Case**: Preventing record save when validation fails
+**Complexity**: Intermediate
+**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#record-triggered-flows)
+
+**Problem**:
+You need to prevent saving a Contact if the Email domain is not allowed.
+
+**Solution**:
+
+**Flow Configuration**:
+- **Flow Type**: Record-Triggered Flow
+- **Object**: Contact
+- **Trigger**: A record is created or updated
+- **Entry Conditions**: 
+  - `{!$Record.Email}` IS NOT NULL
+- **Optimize for**: Actions and Related Records
+
+**Flow Elements**:
+
+1. **Formula Element**: Extract Email Domain
+   - **Name**: EmailDomain
+   - **Formula**: `RIGHT({!$Record.Email}, LEN({!$Record.Email}) - FIND('@', {!$Record.Email}))`
+
+2. **Decision Element**: Check if Domain is Allowed
+   - **Outcome 1**: Domain not allowed
+     - **Criteria**: `{!EmailDomain}` NOT IN `['example.com', 'company.com']`
+   - **Outcome 2**: Domain allowed (Default Outcome)
+
+3. **Fault Element** (in Domain not allowed outcome):
+   - **Fault Message**: `'Email domain ' + {!EmailDomain} + ' is not allowed. Please use example.com or company.com.'`
+
+**Best Practices**:
+- Use before-save flows for validation
+- Use formulas for complex validation logic
+- Provide clear, actionable error messages
+- Use entry conditions to limit flow execution
+
+## Common Patterns
+
+### Pattern 1: Bulkification
+
+Record-Triggered Flows automatically bulkify. When processing multiple records:
+- Use collection variables to store related records
+- Use loops to process collections
+- Avoid DML or SOQL inside loops (flows handle this automatically)
+
+### Pattern 2: Entry Conditions
+
+Use entry conditions to:
+- Limit flow execution to specific scenarios
+- Improve performance by avoiding unnecessary runs
+- Reduce complexity by focusing on specific use cases
+
+### Pattern 3: Error Handling
+
+Handle errors by:
+- Using fault paths for all operations
+- Providing clear error messages
+- Logging errors for troubleshooting
+- Handling partial failures gracefully
 
 ## Related Examples
 
-- [Screen Flow Examples](flow/screen-flow-examples.md) - User interaction flows
-- [Subflow Examples](flow/subflow-examples.md) - Reusable subflow patterns
+- [Screen Flow Examples](screen-flow-examples.html) - User interaction flows
+- [Subflow Examples](subflow-examples.html) - Reusable flow components
 
 ## See Also
 
-- [Flow Patterns](../development/flow-patterns.md) - Complete Flow development patterns
-- [Order of Execution](../development/order-of-execution.md) - Understanding Flow execution timing
-
+- [Flow Patterns](../development/flow-patterns.html) - Complete Flow design patterns
+- [Order of Execution](../development/order-of-execution.html) - Understanding when Flows execute
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns

@@ -1,3 +1,15 @@
+---
+title: "SOQL Reference"
+level: "Intermediate"
+tags:
+  - api-reference
+  - soql
+  - queries
+  - reference
+  - database
+last_reviewed: "2025-01-XX"
+---
+
 # SOQL Reference
 
 > Quick reference for SOQL syntax, functions, and common query patterns.
@@ -43,7 +55,7 @@ FROM Contact
 WHERE Account.Industry = 'Technology'
 ```
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#relationship-queries)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#relationship-queries)
 
 ---
 
@@ -59,7 +71,7 @@ FROM Account
 WHERE Id = '001000000000001'
 ```
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#relationship-queries)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#relationship-queries)
 
 ---
 
@@ -97,7 +109,7 @@ GROUP BY AccountId
 HAVING COUNT(Id) > 5
 ```
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#aggregate-queries)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#aggregate-queries)
 
 ---
 
@@ -143,7 +155,7 @@ Common date literals:
 - `THIS_YEAR`
 - `NEXT_YEAR`
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#date-and-time-queries)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#date-and-time-queries)
 
 ---
 
@@ -168,7 +180,7 @@ WHERE AccountId = :accountId
 - Required for security compliance
 - Fails fast if user lacks access
 
-**Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#security-enforcement), [Security Patterns](../security)
+**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#security-enforcement), [Security Patterns](../security)
 
 ---
 
@@ -299,7 +311,7 @@ List<Contact> nextPage = [
 - `OFFSET` has performance limitations (max 2000)
 - Cursor-based approach scales better
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#cursor-based-pagination), [Governor Limits](../development/governor-limits-and-optimization.md)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#cursor-based-pagination), [Governor Limits](../development/governor-limits-and-optimization.html)
 
 ---
 
@@ -329,7 +341,7 @@ List<SObject> results = Database.query(query);
 - Validate object and field names
 - Use bind variables when possible
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#dynamic-soql)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#dynamic-soql)
 
 ---
 
@@ -360,14 +372,14 @@ FROM Profile
 WHERE Id NOT IN (SELECT ProfileId FROM User WHERE IsActive = true)
 ```
 
-**Related Patterns**: [SOQL Query Patterns](rag/development/soql-query-patterns.md#maintenance-queries)
+**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#maintenance-queries)
 
 ---
 
 ## Related Patterns
 
-- [SOQL Query Patterns](../development/soql-query-patterns.md) - Complete SOQL patterns and examples
-- [Apex Patterns](../development/apex-patterns.md) - Apex query patterns
-- [Governor Limits](../development/governor-limits-and-optimization.md) - Query optimization
-- [Selector Layer](rag/development/apex-patterns.md#selector-layer) - Selector pattern implementation
+- [SOQL Query Patterns](../development/soql-query-patterns.html) - Complete SOQL patterns and examples
+- [Apex Patterns](../development/apex-patterns.html) - Apex query patterns
+- [Governor Limits](../development/governor-limits-and-optimization.html) - Query optimization
+- [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer) - Selector pattern implementation
 

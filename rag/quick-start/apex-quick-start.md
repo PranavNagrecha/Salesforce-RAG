@@ -1,3 +1,13 @@
+---
+title: "Apex Quick Start Guide"
+level: "Beginner"
+tags:
+  - quick-start
+  - apex
+  - getting-started
+last_reviewed: "2025-01-XX"
+---
+
 # Apex Quick Start Guide
 
 > Getting started with Apex development in Salesforce.
@@ -260,25 +270,25 @@ private class ContactUpdateServiceTest {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [Apex Patterns](../development/apex-patterns.md) - Complete Apex patterns
-   - [Service Layer Examples](../code-examples/apex/service-layer-examples.md) - Service examples
-   - [Selector Layer Examples](../code-examples/apex/selector-layer-examples.md) - Selector examples
+   - [Apex Patterns](../development/apex-patterns.html) - Complete Apex patterns
+   - [Service Layer Examples](../code-examples/apex/service-layer-examples.html) - Service examples
+   - [Selector Layer Examples](../code-examples/apex/selector-layer-examples.html) - Selector examples
 
 2. **Explore Templates**:
-   - [Service Template](../code-examples/templates/apex-service-template.md)
-   - [Selector Template](../code-examples/templates/apex-selector-template.md)
-   - [Domain Template](../code-examples/templates/apex-domain-template.md)
+   - [Service Template](../code-examples/templates/apex-service-template.html)
+   - [Selector Template](../code-examples/templates/apex-selector-template.html)
+   - [Domain Template](../code-examples/templates/apex-domain-template.html)
 
 3. **Understand Best Practices**:
-   - [Error Handling](../development/error-handling-and-logging.md)
-   - [Governor Limits](../development/governor-limits-and-optimization.md)
-   - [Testing Patterns](../testing/apex-testing-patterns.md)
+   - [Error Handling](../development/error-handling-and-logging.html)
+   - [Governor Limits](../development/governor-limits-and-optimization.html)
+   - [Testing Patterns](../testing/apex-testing-patterns.html)
 
 ---
 
 ## Related Resources
 
-- [Apex Patterns](../development/apex-patterns.md) - Complete Apex patterns
+- [Apex Patterns](../development/apex-patterns.html) - Complete Apex patterns
 - [Code Examples](../code-examples) - Working code examples
-- [API Reference](../api-reference/apex-api-reference.md) - API reference
+- [API Reference](../api-reference/apex-api-reference.html) - API reference
 

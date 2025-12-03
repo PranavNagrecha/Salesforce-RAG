@@ -30,9 +30,9 @@ This document covers the fundamental concepts of Salesforce sharing, including O
 - Familiarity with record ownership concepts
 
 **Recommended Reading**:
-- [Permission Set Architecture](permission-set-architecture.md) - Permission management patterns
-- [Admin Basics](../development/admin-basics.md) - User management and basic administration
-- [Sharing Rules and Manual Sharing](sharing-rules-and-manual-sharing.md) - Advanced sharing patterns
+- [Permission Set Architecture](permission-set-architecture.html) - Permission management patterns
+- [Admin Basics](../development/admin-basics.html) - User management and basic administration
+- [Sharing Rules and Manual Sharing](sharing-rules-and-manual-sharing.html) - Advanced sharing patterns
 
 ## Sharing Model Fundamentals
 
@@ -324,6 +324,74 @@ View All Fields and Modify All Fields are field-level permissions that bypass fi
 - **Consider FLS Alternatives**: Consider field-level security as alternative
 - **Monitor Usage**: Monitor who has these permissions and why
 - **Compliance Review**: Ensure compliance with data protection requirements
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Sharing with Large Data Volumes
+
+**Scenario**: Sharing rules and role hierarchy performance issues with millions of records.
+
+**Consideration**:
+- Use selective sharing rules (criteria-based with indexed fields)
+- Optimize role hierarchy depth (deeper hierarchies impact performance)
+- Consider data archiving for old records
+- Monitor sharing calculation performance
+- Use View All/Modify All for system-wide access when appropriate
+
+### Edge Case 2: Complex Role Hierarchy with Multiple Paths
+
+**Scenario**: Users with multiple role assignments or complex role hierarchy paths causing unexpected access.
+
+**Consideration**:
+- Understand role hierarchy evaluation (users see records from roles below them)
+- Test sharing with complex role hierarchies
+- Document role hierarchy structure and access patterns
+- Monitor role hierarchy depth and complexity
+- Consider flattening role hierarchy if too complex
+
+### Edge Case 3: Sharing Rule Criteria with Formula Fields
+
+**Scenario**: Sharing rules using formula fields in criteria causing performance issues or unexpected behavior.
+
+**Consideration**:
+- Avoid formula fields in sharing rule criteria (not indexed)
+- Use standard fields or indexed custom fields in criteria
+- Test sharing rule performance with formula fields
+- Consider calculated fields (workflow/flow) instead of formula fields
+- Monitor sharing rule calculation time
+
+### Edge Case 4: View All/Modify All with Large Teams
+
+**Scenario**: Granting View All/Modify All to large teams causing performance or security concerns.
+
+**Consideration**:
+- Use View All/Modify All sparingly (system administrators, data management)
+- Consider sharing rules as alternative for team access
+- Monitor performance impact of View All/Modify All
+- Document justification for View All/Modify All grants
+- Review View All/Modify All assignments regularly
+
+### Edge Case 5: Sharing Rule Evaluation Order Conflicts
+
+**Scenario**: Multiple sharing rules matching the same record, causing unexpected access or performance issues.
+
+**Consideration**:
+- Understand sharing rule evaluation order (all matching rules apply)
+- Test sharing rules with overlapping criteria
+- Document sharing rule logic and evaluation order
+- Monitor sharing rule performance
+- Simplify sharing rules to avoid conflicts
+
+### Limitations
+
+- **Sharing Rule Limits**: Maximum 300 sharing rules per object (varies by org edition)
+- **Role Hierarchy Depth**: Deeper role hierarchies impact sharing calculation performance
+- **Sharing Calculation**: Sharing calculations can be slow with large data volumes
+- **Formula Fields in Criteria**: Formula fields in sharing rules are not indexed (performance impact)
+- **View All/Modify All Scope**: System-level permissions apply to all objects
+- **Sharing Rule Criteria**: Limited to certain field types and operators
+- **Manual Sharing Limits**: Manual sharing has record limits per user
+- **Sharing Recalculation**: Sharing recalculation can be resource-intensive
 
 ## Q&A
 

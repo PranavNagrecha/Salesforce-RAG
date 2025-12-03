@@ -432,8 +432,12 @@ When creating formulas, validation rules, or lookup filters:
 
 ## Related Patterns
 
-- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.md) - Field and object configuration
-- [Flow Patterns](flow-patterns.md) - Automation patterns for business logic
-- [Admin Basics](admin-basics.md) - Declarative configuration patterns
-- [Error Handling and Logging](error-handling-and-logging.md) - Error handling in validation rules
+**See Also**:
+- [Flow Patterns](flow-patterns.html) - Automation patterns for business logic
+- [Admin Basics](admin-basics.html) - Declarative configuration patterns
+- [Error Handling and Logging](error-handling-and-logging.html) - Error handling in validation rules
+
+**Related Domains**:
+- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html) - Field and object configuration
+- [Validation Examples](../code-examples/utilities/validation-examples.html) - Validation code examples
 

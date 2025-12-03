@@ -83,7 +83,7 @@ The fundamental pipeline consists of four stages:
 - Real-time or near-real-time processing
 - Event stream processing
 
-**Related**: [Change Data Capture Patterns](change-data-capture-patterns.md) - Complete CDC patterns guide
+**Related**: [Change Data Capture Patterns](change-data-capture-patterns.html) - Complete CDC patterns guide
 
 **Pros**:
 - Real-time data freshness
@@ -667,8 +667,8 @@ Manifest-style descriptions are **not sufficient** to define:
 
 ## Related Patterns
 
-- [Change Data Capture Patterns](change-data-capture-patterns.md) - CDC event processing
-- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
-- [Integration Platform Patterns](integration-platform-patterns.md) - ETL platform patterns
-- [Salesforce LLM Data Governance](../security/salesforce-llm-data-governance.md) - Data governance for LLM systems
+- [Change Data Capture Patterns](change-data-capture-patterns.html) - CDC event processing
+- [ETL vs API vs Events](etl-vs-api-vs-events.html) - Integration pattern selection
+- [Integration Platform Patterns](integration-platform-patterns.html) - ETL platform patterns
+- [Salesforce LLM Data Governance](../security/salesforce-llm-data-governance.html) - Data governance for LLM systems
 

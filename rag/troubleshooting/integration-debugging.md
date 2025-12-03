@@ -24,10 +24,10 @@ Systematic approaches to troubleshooting integration failures, identifying root 
 - Familiarity with history objects and field tracking
 
 **Recommended Reading**:
-- [SOQL Query Patterns](../development/soql-query-patterns.md) - Query patterns for debugging
-- [Data Reconciliation](data-reconciliation.md) - Data validation patterns
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
-- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+- [SOQL Query Patterns](../development/soql-query-patterns.html) - Query patterns for debugging
+- [Data Reconciliation](data-reconciliation.html) - Data validation patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
 
 ## SOQL Debugging Patterns
 
@@ -367,11 +367,92 @@ Avoid these methods when:
 
 **A**: Tools for integration debugging: (1) **SOQL queries** (query history, related objects), (2) **Developer Console** (debug logs, query editor), (3) **Integration job tracking fields** (correlation, status), (4) **History objects** (data change tracking), (5) **Integration logs** (error details), (6) **Data export tools** (compare data between systems), (7) **Debug logs** (trace execution, errors).
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Intermittent Integration Failures
+
+**Scenario**: Integration failures that occur intermittently, making root cause identification difficult.
+
+**Consideration**:
+- Log all integration attempts (success and failure)
+- Track correlation IDs across systems
+- Monitor integration health metrics
+- Implement retry logic with exponential backoff
+- Correlate failures with external system events
+- Document intermittent failure patterns
+
+### Edge Case 2: Data Synchronization Race Conditions
+
+**Scenario**: Multiple systems updating the same data simultaneously, causing synchronization conflicts.
+
+**Consideration**:
+- Use External IDs for record matching
+- Implement conflict resolution strategies
+- Use timestamps for last-write-wins logic
+- Monitor synchronization conflicts
+- Document data ownership rules
+- Test concurrent update scenarios
+
+### Edge Case 3: Large Data Volume Debugging
+
+**Scenario**: Debugging integration issues with very large datasets, making analysis difficult.
+
+**Consideration**:
+- Use sampling for large dataset analysis
+- Implement data filtering and pagination
+- Use aggregate queries for summary analysis
+- Export data for external analysis tools
+- Focus on error patterns, not individual records
+- Consider data archiving for old records
+
+### Edge Case 4: Cross-System Correlation Challenges
+
+**Scenario**: Correlating errors across multiple systems without shared correlation IDs.
+
+**Consideration**:
+- Implement correlation ID tracking
+- Use timestamps for approximate correlation
+- Log correlation IDs in all systems
+- Use integration job tracking fields
+- Document correlation strategies
+- Test correlation across systems
+
+### Edge Case 5: Historical Data Analysis
+
+**Scenario**: Analyzing historical integration data to identify patterns or root causes.
+
+**Consideration**:
+- Use history objects for data change tracking
+- Implement data retention policies
+- Export historical data for analysis
+- Use reporting tools for pattern analysis
+- Document historical analysis procedures
+- Consider data archiving strategies
+
+### Limitations
+
+- **Log Retention**: Integration logs have retention limits
+- **History Object Limits**: History objects have storage limits
+- **Correlation Complexity**: Correlating across systems can be complex
+- **Data Volume**: Large datasets make analysis difficult
+- **Intermittent Issues**: Intermittent failures are hard to reproduce
+- **External System Access**: Limited access to external system logs
+- **Debug Log Limits**: Debug logs have size and retention limits
+
 ## Related Patterns
 
-- [Data Reconciliation](data-reconciliation.md) - Systematic data validation between systems
-- [SOQL Query Patterns](../development/soql-query-patterns.md) - Query patterns for debugging
-- [Callout Best Practices](../integrations/callout-best-practices.md) - HTTP callout error handling
-- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
-- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+**See Also**:
+- [Data Reconciliation](data-reconciliation.html) - Systematic data validation between systems
+
+**Related Domains**:
+- [SOQL Query Patterns](../development/soql-query-patterns.html) - Query patterns for debugging
+- [Callout Best Practices](../integrations/callout-best-practices.html) - HTTP callout error handling
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+
+- [Data Reconciliation](data-reconciliation.html) - Systematic data validation between systems
+- [SOQL Query Patterns](../development/soql-query-patterns.html) - Query patterns for debugging
+- [Callout Best Practices](../integrations/callout-best-practices.html) - HTTP callout error handling
+- [Error Handling and Logging](../development/error-handling-and-logging.html) - Error handling patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
 

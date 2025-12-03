@@ -19,9 +19,24 @@ last_reviewed: "2025-01-XX"
 This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies. All solutions follow WCAG 2.2 standards.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Accessibility code examples
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Accessibility code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns
+
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Lightning Web Component (LWC) development
+- Knowledge of HTML accessibility attributes and ARIA
+- Understanding of WCAG 2.2 accessibility standards
+- Familiarity with screen readers and assistive technologies
+- Basic knowledge of keyboard navigation patterns
+
+**Recommended Reading**:
+- `rag/mcp-knowledge/lwc-accessibility.md` - WCAG 2.2 compliance guidance
+- `rag/code-examples/lwc/accessibility-examples.md` - Accessibility code examples
+- `rag/testing/lwc-accessibility-testing.md` - Testing patterns
+- `rag/troubleshooting/common-lwc-errors.md` - Common LWC errors
 
 ## Common Accessibility Errors
 
@@ -812,10 +827,90 @@ handleClose() {
 
 **A**: Best practices include: (1) **Always add labels** to form controls, (2) **Make all interactive elements keyboard accessible**, (3) **Never remove focus indicators**, (4) **Use SLDS color tokens** for proper contrast, (5) **Add alt text to all images**, (6) **Follow proper heading hierarchy**, (7) **Use semantic HTML** (header, nav, main, footer), (8) **Test with screen readers** regularly, (9) **Include accessibility in code reviews**.
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Dynamic Content with Screen Readers
+
+**Scenario**: Screen readers not announcing dynamic content changes, causing accessibility issues.
+
+**Consideration**:
+- Use `aria-live` regions for dynamic content
+- Implement proper ARIA roles for live regions
+- Test with actual screen readers
+- Announce changes appropriately (polite vs assertive)
+- Use `aria-atomic` for complete region announcements
+- Document dynamic content behavior
+
+### Edge Case 2: Keyboard Navigation in Complex Components
+
+**Scenario**: Complex components with nested interactive elements causing keyboard navigation issues.
+
+**Consideration**:
+- Implement proper tab order
+- Trap focus in modals and dialogs
+- Return focus to trigger element
+- Support Escape key for cancellation
+- Test keyboard navigation thoroughly
+- Document keyboard interaction patterns
+
+### Edge Case 3: Color Contrast with Custom Themes
+
+**Scenario**: Custom themes or branding causing color contrast violations.
+
+**Consideration**:
+- Verify contrast ratios meet WCAG requirements
+- Test with color blindness simulators
+- Don't rely on color alone for information
+- Provide alternative indicators (icons, text)
+- Document color contrast requirements
+- Test with different themes
+
+### Edge Case 4: Form Validation Accessibility
+
+**Scenario**: Form validation errors not properly announced to screen readers.
+
+**Consideration**:
+- Associate error messages with form fields
+- Use `aria-describedby` for error messages
+- Use `aria-invalid` for invalid fields
+- Announce errors immediately (assertive)
+- Provide clear, actionable error messages
+- Test with screen readers
+
+### Edge Case 5: Third-Party Component Accessibility
+
+**Scenario**: Third-party components or libraries not meeting accessibility standards.
+
+**Consideration**:
+- Evaluate third-party components for accessibility
+- Request accessibility documentation
+- Test third-party components with screen readers
+- Consider accessibility in component selection
+- Document accessibility limitations
+- Provide alternatives when needed
+
+### Limitations
+
+- **Screen Reader Compatibility**: Different screen readers may interpret ARIA differently
+- **Browser Support**: Some ARIA features have limited browser support
+- **Testing Complexity**: Accessibility testing requires specialized tools and knowledge
+- **Third-Party Components**: Third-party components may have accessibility limitations
+- **WCAG Compliance**: Full WCAG 2.2 compliance requires ongoing effort
+- **Dynamic Content**: Dynamic content accessibility can be complex
+- **Keyboard Navigation**: Complex components may have keyboard navigation challenges
+
 ## Related Patterns
 
-- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.md) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.md) - Accessibility code examples
-- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.md) - Testing patterns
-- [Common LWC Errors](common-lwc-errors.md) - General LWC troubleshooting
+**See Also**:
+- [Common LWC Errors](common-lwc-errors.html) - General LWC troubleshooting
+
+**Related Domains**:
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Accessibility code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns
+
+- [LWC Accessibility Guidelines](../mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
+- [LWC Accessibility Examples](../code-examples/lwc/accessibility-examples.html) - Accessibility code examples
+- [LWC Accessibility Testing](../testing/lwc-accessibility-testing.html) - Testing patterns
+- [Common LWC Errors](common-lwc-errors.html) - General LWC troubleshooting
 

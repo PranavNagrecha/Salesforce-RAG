@@ -25,10 +25,10 @@ This document summarizes reusable patterns that appear across multiple domains i
 - Familiarity with security and data modeling concepts
 
 **Recommended Reading**:
-- [Apex Patterns](../development/apex-patterns.md) - Apex development patterns
-- [Flow Patterns](../development/flow-patterns.md) - Flow automation patterns
-- [LWC Patterns](../development/lwc-patterns.md) - Lightning Web Component patterns
-- [Integration Patterns](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [Apex Patterns](../development/apex-patterns.html) - Apex development patterns
+- [Flow Patterns](../development/flow-patterns.html) - Flow automation patterns
+- [LWC Patterns](../development/lwc-patterns.html) - Lightning Web Component patterns
+- [Integration Patterns](../integrations/etl-vs-api-vs-events.html) - Integration pattern selection
 
 ## Governor Limit Management
 

@@ -413,3 +413,13 @@ Think of estimation as a communication tool, not just a prediction. Good estimat
 
 **A**: Clarify requirements first through questions and stakeholder discussions. Document assumptions explicitly. Provide wider ranges when requirements are uncertain. Consider phased approach: estimate discovery phase first, then implementation. Include time for requirement clarification and changes in estimate.
 
+## Related Patterns
+
+**See Also**:
+- [Stakeholder Communication](stakeholder-communication.html) - Communicating with stakeholders
+- [Team Leadership](team-leadership.html) - Leading development teams
+
+**Related Domains**:
+- [Delivery Framework](../project-methods/delivery-framework.html) - Sprint-based delivery approach
+- [Testing Strategy](../project-methods/testing-strategy.html) - Testing time estimation
+

@@ -8,7 +8,7 @@
 Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas. Hierarchical Custom Settings support user-level configuration, while List Custom Settings provide simple key-value lookups.
 
 **Related Patterns**:
-- [Custom Settings and Custom Metadata Patterns](../../development/custom-settings-metadata-patterns.md)
+- [Custom Settings and Custom Metadata Patterns](../../development/custom-settings-metadata-patterns.html)
 
 ## Examples
 
@@ -104,5 +104,5 @@ public class CountryCodeLookup {
 
 ## Related Patterns
 
-- [Custom Settings and Custom Metadata Patterns](../../development/custom-settings-metadata-patterns.md) - Complete patterns guide
+- [Custom Settings and Custom Metadata Patterns](../../development/custom-settings-metadata-patterns.html) - Complete patterns guide
 

@@ -1,3 +1,14 @@
+---
+title: "Apex API Reference"
+level: "Intermediate"
+tags:
+  - api-reference
+  - apex
+  - reference
+  - methods
+last_reviewed: "2025-01-XX"
+---
+
 # Apex API Reference
 
 > Quick reference for common Apex classes, methods, and patterns used in Salesforce development.
@@ -30,7 +41,7 @@ Set<Id> contactIds = new Set<Id>{ '003000000000001', '003000000000002' };
 List<Id> processedIds = ContactUpdateService.processContacts(contactIds);
 ```
 
-**Related Patterns**: [Service Layer](rag/development/apex-patterns.md#service-layer), [Service Layer Examples](../code-examples/apex/service-layer-examples.md)
+**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), [Service Layer Examples](../code-examples/apex/service-layer-examples.html)
 
 **Best Practices**:
 - Always use `with sharing` or `without sharing` explicitly
@@ -66,7 +77,7 @@ ContactDomain.validateAndPrepareForUpdate(contacts);
 update contacts;
 ```
 
-**Related Patterns**: [Domain Layer](rag/development/apex-patterns.md#domain-layer)
+**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
 
 **Best Practices**:
 - Should NOT contain SOQL queries (delegate to Selector layer)
@@ -116,7 +127,7 @@ Set<String> externalIds = new Set<String>{ 'EXT-001', 'EXT-002' };
 List<Contact> contacts = ContactSelector.selectByExternalId(externalIds);
 ```
 
-**Related Patterns**: [Selector Layer](rag/development/apex-patterns.md#selector-layer)
+**Related Patterns**: [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
 
 **Best Practices**:
 - ALL SOQL queries MUST use `WITH SECURITY_ENFORCED` or `WITH USER_MODE`
@@ -160,7 +171,7 @@ HttpResponse response = RestIntegrationService.makeCallout(
 );
 ```
 
-**Related Patterns**: [Integration Layer](rag/development/apex-patterns.md#integration-layer)
+**Related Patterns**: [Integration Layer](/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer)
 
 **Best Practices**:
 - Use Named Credentials for endpoints (NO hardcoded URLs)
@@ -228,7 +239,7 @@ try {
 }
 ```
 
-**Related Patterns**: [Error Handling and Logging](../development/error-handling-and-logging.md)
+**Related Patterns**: [Error Handling and Logging](../development/error-handling-and-logging.html)
 
 **Best Practices**:
 - ALL exceptions MUST be logged
@@ -325,8 +336,8 @@ static void testMethod() {
 
 ## Related Patterns
 
-- [Apex Patterns](../development/apex-patterns.md) - Complete Apex design patterns
-- [Service Layer Examples](../code-examples/apex/service-layer-examples.md) - Service layer code examples
-- [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
-- [SOQL Patterns](../development/soql-query-patterns.md) - SOQL query patterns
+- [Apex Patterns](../development/apex-patterns.html) - Complete Apex design patterns
+- [Service Layer Examples](../code-examples/apex/service-layer-examples.html) - Service layer code examples
+- [Error Handling](../development/error-handling-and-logging.html) - Error handling patterns
+- [SOQL Patterns](../development/soql-query-patterns.html) - SOQL query patterns
 

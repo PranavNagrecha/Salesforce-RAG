@@ -1,12 +1,24 @@
-# Private knowledge sources (never publish)
-Knowledge/
-archive/
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+vendor/
 
-# Private authoring prompts / outputs
-cursor/prompts/RAG Command .md
-cursor/outputs/
+# Dependencies
+node_modules/
+Gemfile.lock
 
-# Misc local files
-*.log
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
 
+# Logs
+*.log

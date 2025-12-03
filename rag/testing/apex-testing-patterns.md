@@ -18,8 +18,8 @@ last_reviewed: "2025-01-XX"
 This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories.
 
 **Related Patterns**:
-- [Testing Strategy](../project-methods/testing-strategy.md) - Overall testing strategy
-- [Apex Patterns](../development/apex-patterns.md) - Apex development patterns
+- [Testing Strategy](../project-methods/testing-strategy.html) - Overall testing strategy
+- [Apex Patterns](../development/apex-patterns.html) - Apex development patterns
 
 ## Core Principles
 
@@ -451,7 +451,7 @@ private class ContactServiceTest {
 
 ## Related Patterns
 
-- [Testing Strategy](../project-methods/testing-strategy.md) - Overall testing strategy
-- [Apex Patterns](../development/apex-patterns.md) - Apex development patterns
-- [Test Class Template](../code-examples/templates/test-class-template.md) - Test class template
+- [Testing Strategy](../project-methods/testing-strategy.html) - Overall testing strategy
+- [Apex Patterns](../development/apex-patterns.html) - Apex development patterns
+- [Test Class Template](../code-examples/templates/test-class-template.html) - Test class template
 

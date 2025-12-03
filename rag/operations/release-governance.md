@@ -16,9 +16,24 @@ last_reviewed: "2025-01-XX"
 This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists. These patterns are essential for managing complex Salesforce releases with multiple stakeholders, compliance requirements, and risk mitigation.
 
 **Related Patterns**:
-- [CI/CD Patterns](cicd-patterns.md) - CI/CD and deployment automation
-- [Environment Strategy](environment-strategy.md) - Org topology and environment management
-- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
+- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
+- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
+
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of change management and release processes
+- Knowledge of risk assessment and approval workflows
+- Familiarity with Change Advisory Board (CAB) processes
+- Understanding of Salesforce deployment and release cycles
+- Basic knowledge of stakeholder management and communication
+
+**Recommended Reading**:
+- `rag/operations/cicd-patterns.md` - CI/CD and deployment automation
+- `rag/operations/environment-strategy.md` - Environment management
+- `rag/project-methods/delivery-framework.md` - Project delivery methodology
+- `rag/architecture/governance-patterns.md` - Org governance patterns
 
 ## Consensus Best Practices
 
@@ -256,10 +271,92 @@ This guide covers release governance patterns for Salesforce, including Change A
 
 **A**: Best practices include: (1) **Establish clear governance** early (roles, processes), (2) **Use risk-based approval** (tailor to change risk), (3) **Document all changes** (comprehensive documentation), (4) **Involve stakeholders early** (planning, approval), (5) **Automate workflows** where possible, (6) **Maintain release calendars** (coordinate releases), (7) **Conduct post-release reviews** (continuous improvement), (8) **Plan for emergencies** (urgent change procedures).
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Emergency Releases Outside Normal Process
+
+**Scenario**: Critical production issue requiring immediate fix outside normal release governance process.
+
+**Consideration**:
+- Define emergency release procedures clearly
+- Establish emergency approval authority
+- Document emergency releases for post-review
+- Balance speed with risk management
+- Conduct post-emergency review
+- Learn from emergencies to prevent future issues
+
+### Edge Case 2: CAB Approval Delays Blocking Releases
+
+**Scenario**: CAB approval delays causing release schedule conflicts and deployment delays.
+
+**Consideration**:
+- Define approval SLAs and timelines
+- Use risk-based approval (auto-approve low-risk)
+- Schedule CAB meetings regularly
+- Enable asynchronous approval when possible
+- Escalate approval delays appropriately
+- Balance governance with agility
+
+### Edge Case 3: Conflicting Release Requirements
+
+**Scenario**: Multiple teams requiring conflicting changes or release windows, causing coordination issues.
+
+**Consideration**:
+- Coordinate releases through release calendar
+- Resolve conflicts through CAB or release coordination
+- Use feature flags to isolate changes
+- Plan release sequencing and dependencies
+- Communicate release schedules clearly
+- Balance team needs with overall release strategy
+
+### Edge Case 4: High-Risk Changes Requiring Special Approval
+
+**Scenario**: High-risk changes requiring additional approval or special processes, causing complexity.
+
+**Consideration**:
+- Define high-risk change criteria clearly
+- Establish special approval processes for high-risk
+- Involve additional stakeholders for high-risk changes
+- Document high-risk change procedures
+- Test high-risk changes thoroughly
+- Plan for high-risk change rollback
+
+### Edge Case 5: Post-Release Issues Requiring Immediate Rollback
+
+**Scenario**: Production issues discovered after release requiring immediate rollback decision.
+
+**Consideration**:
+- Define rollback decision authority
+- Establish rollback procedures and criteria
+- Test rollback procedures regularly
+- Document rollback decisions and rationale
+- Conduct post-rollback review
+- Learn from rollback incidents
+
+### Limitations
+
+- **Approval Process Overhead**: Governance processes add time to releases
+- **CAB Availability**: CAB member availability may delay approvals
+- **Risk Assessment Complexity**: Risk assessment is subjective and may vary
+- **Emergency Process Balance**: Balancing emergency speed with risk management
+- **Release Coordination**: Coordinating multiple teams and releases is complex
+- **Stakeholder Availability**: Stakeholder availability may delay approvals
+- **Process Rigidity**: Overly rigid processes may slow releases unnecessarily
+- **Documentation Overhead**: Comprehensive documentation requires time and effort
+
 ## Related Patterns
 
-- [CI/CD Patterns](cicd-patterns.md) - CI/CD and deployment automation
-- [Environment Strategy](environment-strategy.md) - Org topology and environment management
-- [Delivery Framework](../project-methods/delivery-framework.md) - Project delivery methodology
-- [Testing Strategy](../project-methods/testing-strategy.md) - Comprehensive testing approaches
+**See Also**:
+- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
+- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+
+**Related Domains**:
+- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
+- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing approaches
+- [Governance Patterns](../architecture/governance-patterns.html) - Org governance patterns
+
+- [CI/CD Patterns](cicd-patterns.html) - CI/CD and deployment automation
+- [Environment Strategy](environment-strategy.html) - Org topology and environment management
+- [Delivery Framework](../project-methods/delivery-framework.html) - Project delivery methodology
+- [Testing Strategy](../project-methods/testing-strategy.html) - Comprehensive testing approaches
 

@@ -7,8 +7,8 @@
 This example demonstrates [pattern/concept] for [use case]. It shows [key learning points].
 
 **Related Patterns**:
-- [Pattern Name](rag/path/to/pattern-file.md) - Link to related pattern documentation
-- [Another Pattern](rag/path/to/another-pattern.md) - Link to another related pattern
+- [Pattern Name](/Salesforce-RAG/rag/path/to/pattern-file.html) - Link to related pattern documentation
+- [Another Pattern](/Salesforce-RAG/rag/path/to/another-pattern.html) - Link to another related pattern
 
 ## Example Details
 
@@ -94,12 +94,12 @@ private class ExampleClassTest {
 
 ## Related Examples
 
-- [Related Example 1](rag/path/to/related-example-1.md) - Brief description
-- [Related Example 2](rag/path/to/related-example-2.md) - Brief description
+- [Related Example 1](/Salesforce-RAG/rag/path/to/related-example-1.html) - Brief description
+- [Related Example 2](/Salesforce-RAG/rag/path/to/related-example-2.html) - Brief description
 
 ## See Also
 
-- [Pattern Documentation](rag/path/to/pattern-file.md)
-- [API Reference](rag/path/to/api-reference.md)
-- [Best Practices](rag/path/to/best-practices.md)
+- [Pattern Documentation](/Salesforce-RAG/rag/path/to/pattern-file.html)
+- [API Reference](/Salesforce-RAG/rag/path/to/api-reference.html)
+- [Best Practices](/Salesforce-RAG/rag/path/to/best-practices.html)
 

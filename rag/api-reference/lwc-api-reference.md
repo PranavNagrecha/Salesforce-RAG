@@ -1,3 +1,15 @@
+---
+title: "LWC API Reference"
+level: "Intermediate"
+tags:
+  - api-reference
+  - lwc
+  - lightning-web-components
+  - reference
+  - methods
+last_reviewed: "2025-01-XX"
+---
+
 # LWC API Reference
 
 > Quick reference for Lightning Web Component modules, decorators, and wire adapters.
@@ -43,7 +55,7 @@ handleSuccess() {
 }
 ```
 
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.md), [Design System Patterns](../mcp-knowledge/design-system-patterns.md)
+**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html), [Design System Patterns](../mcp-knowledge/design-system-patterns.html)
 
 ---
 
@@ -83,7 +95,7 @@ export default class MyComponent extends NavigationMixin(LightningElement) {
 }
 ```
 
-**Related Patterns**: [LWC Patterns](../development/lwc-patterns.md)
+**Related Patterns**: [LWC Patterns](../development/lwc-patterns.html)
 
 ---
 
@@ -178,7 +190,7 @@ wiredObjectInfo({ data, error }) {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md), [LWC Patterns](../development/lwc-patterns.md)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html), [LWC Patterns](../development/lwc-patterns.html)
 
 ---
 
@@ -215,7 +227,7 @@ wiredAccounts({ data, error }) {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html)
 
 ---
 
@@ -290,7 +302,7 @@ disconnectedCallback() {
 }
 ```
 
-**Related Patterns**: [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md)
+**Related Patterns**: [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html)
 
 ---
 
@@ -331,7 +343,7 @@ export default class AccountViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md), [Referential Integrity](rag/mcp-knowledge/lds-patterns.md#referential-integrity)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html), [Referential Integrity](/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity)
 
 ---
 
@@ -367,7 +379,7 @@ export default class MyComponent extends LightningElement {
 - For getters/setters: Decorate only the getter
 - Do not mutate @api properties internally
 
-**Related Patterns**: [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md#decorators)
+**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators)
 
 ---
 
@@ -405,7 +417,7 @@ export default class MyComponent extends LightningElement {
 - Handle both `data` and `error` in wire functions
 - Use `refreshApex()` after mutations
 
-**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.md), [LWC Patterns](../development/lwc-patterns.md)
+**Related Patterns**: [LDS Patterns](../mcp-knowledge/lds-patterns.html), [LWC Patterns](../development/lwc-patterns.html)
 
 ---
 
@@ -438,14 +450,14 @@ export default class MyComponent extends LightningElement {
 - Not needed for primitives (strings, numbers, booleans)
 - Not needed when entire object/array is reassigned
 
-**Related Patterns**: [LWC Best Practices](rag/mcp-knowledge/lwc-best-practices.md#track-decorator)
+**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#track-decorator)
 
 ---
 
 ## Related Patterns
 
-- [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
-- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - LWC best practices
-- [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Lightning Data Service patterns
-- [Design System Patterns](../mcp-knowledge/design-system-patterns.md) - SLDS patterns
+- [LWC Patterns](../development/lwc-patterns.html) - Complete LWC patterns
+- [LWC Best Practices](../mcp-knowledge/lwc-best-practices.html) - LWC best practices
+- [LDS Patterns](../mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
+- [Design System Patterns](../mcp-knowledge/design-system-patterns.html) - SLDS patterns
 

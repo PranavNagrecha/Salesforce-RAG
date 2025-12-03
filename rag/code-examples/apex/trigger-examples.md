@@ -8,8 +8,8 @@
 Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation. Triggers should be thin and delegate to Domain or Service layers.
 
 **Related Patterns**:
-- [Apex Patterns](../../development/apex-patterns.md) - Apex design patterns
-- [Order of Execution](../../development/order-of-execution.md) - Execution order
+- [Apex Patterns](../../development/apex-patterns.html) - Apex design patterns
+- [Order of Execution](../../development/order-of-execution.html) - Execution order
 
 ## Examples
 
@@ -17,7 +17,7 @@ Trigger handlers process trigger events with bulkification, error handling, and 
 **Pattern**: Trigger Handler with Domain Layer  
 **Use Case**: Simple validation in triggers  
 **Complexity**: Basic  
-**Related Patterns**: [Domain Layer](rag/development/apex-patterns.md#domain-layer)
+**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
 
 **Problem**: 
 You need a trigger handler that validates Contact records before insert/update.
@@ -307,8 +307,8 @@ for (Contact newContact : newContacts) {
 
 ## Related Patterns
 
-- [Service Layer Examples](service-layer-examples.md) - Service layer patterns
-- [Domain Layer Examples](domain-layer-examples.md) - Domain layer patterns
-- [Apex Patterns](../../development/apex-patterns.md) - Complete Apex patterns
-- [Order of Execution](../../development/order-of-execution.md) - Execution order
+- [Service Layer Examples](service-layer-examples.html) - Service layer patterns
+- [Domain Layer Examples](domain-layer-examples.html) - Domain layer patterns
+- [Apex Patterns](../../development/apex-patterns.html) - Complete Apex patterns
+- [Order of Execution](../../development/order-of-execution.html) - Execution order
 
