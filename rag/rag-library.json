@@ -21,7 +21,8 @@
     "testing": "Testing patterns and examples",
     "quick-start": "Quick-start guides",
     "api-reference": "API references and method signatures",
-    "mcp-knowledge": "MCP-extracted knowledge"
+    "mcp-knowledge": "MCP-extracted knowledge",
+    "best-practices": "Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features"
   },
   "files": [
     {
@@ -62,6 +63,168 @@
         "Citizen/client portal patterns",
         "Identity-aware behavior and routing",
         "Sharing and security for portals"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "architect-role.md",
+      "path": "rag/architecture/architect-role.md",
+      "whenToRetrieve": [
+        "Understanding the Salesforce architect role",
+        "Differences between architects and developers",
+        "Types of architects",
+        "Resources for Salesforce architects"
+      ],
+      "summary": "Guide to the Salesforce architect role, covering what architects do, how they differ from developers, different types of architects (Solution, Technical, System, Enterprise), and useful resources for architects.",
+      "keyTopics": [
+        "Architect role and responsibilities",
+        "Architect vs developer differences",
+        "Types of architects (Solution, Technical, System, Enterprise)",
+        "Architect career paths",
+        "Resources for architects"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "diagramming-patterns.md",
+      "path": "rag/architecture/diagramming-patterns.md",
+      "whenToRetrieve": [
+        "Creating system architecture diagrams",
+        "Entity relationship diagrams",
+        "Sequence diagrams",
+        "Other architectural diagrams for Salesforce implementations"
+      ],
+      "summary": "Comprehensive guide to diagramming for Salesforce architects. Covers system architecture diagrams, entity relationship diagrams (ERD), sequence diagrams, activity diagrams, use case diagrams, class diagrams, environment diagrams, actors and licenses diagrams, and role hierarchy diagrams.",
+      "keyTopics": [
+        "System architecture diagrams",
+        "Entity relationship diagrams (ERD)",
+        "Sequence diagrams",
+        "Activity diagrams",
+        "Use case diagrams",
+        "Class diagrams",
+        "Environment diagrams",
+        "Role hierarchy diagrams"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "stakeholder-communication.md",
+      "path": "rag/architecture/stakeholder-communication.md",
+      "whenToRetrieve": [
+        "Communicating with stakeholders",
+        "Asking effective questions",
+        "Setting realistic expectations",
+        "Establishing trust as an architect"
+      ],
+      "summary": "Guide to stakeholder communication for Salesforce architects. Covers importance of communication, how to communicate with stakeholders, asking effective questions, setting realistic expectations, and establishing trust.",
+      "keyTopics": [
+        "Stakeholder communication strategies",
+        "Asking effective questions",
+        "Setting realistic expectations",
+        "Establishing trust",
+        "Communication best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "team-leadership.md",
+      "path": "rag/architecture/team-leadership.md",
+      "whenToRetrieve": [
+        "Building and leading development teams",
+        "Finding the right talent",
+        "Leadership styles",
+        "Training team members"
+      ],
+      "summary": "Guide to team leadership for Salesforce architects. Covers how to effectively build, lead, and train a team of developers, focusing on finding the right talent, leadership styles, and training.",
+      "keyTopics": [
+        "Team building strategies",
+        "Finding the right talent",
+        "Leadership styles",
+        "Training and development",
+        "Team management best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "project-estimation.md",
+      "path": "rag/architecture/project-estimation.md",
+      "whenToRetrieve": [
+        "Estimating project work",
+        "Understanding roles on a team",
+        "Guarding against unrealistic expectations",
+        "Estimating OOTB options",
+        "Estimating to median talent",
+        "Solving work from broken requirements"
+      ],
+      "summary": "Guide to project estimation for Salesforce architects. Covers project work estimation, roles on a team, guarding against unrealistic expectations, estimating OOTB options, estimating to median talent, and solving work from broken requirements.",
+      "keyTopics": [
+        "Project work estimation",
+        "Roles on a team",
+        "Guarding against unrealistic expectations",
+        "Estimating OOTB options",
+        "Estimating to median talent",
+        "Solving work from broken requirements"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "org-strategy.md",
+      "path": "rag/architecture/org-strategy.md",
+      "whenToRetrieve": [
+        "Determining Salesforce org strategy",
+        "Choosing between single org and multiple orgs",
+        "Understanding org strategy implications"
+      ],
+      "summary": "Guide to determining Salesforce org strategy. Covers how to choose between a single Salesforce org and multiple orgs, including considerations, tradeoffs, and decision frameworks.",
+      "keyTopics": [
+        "Single org strategy",
+        "Multi-org strategy",
+        "Decision frameworks",
+        "Tradeoffs and considerations",
+        "Org strategy best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "mobile-strategy.md",
+      "path": "rag/architecture/mobile-strategy.md",
+      "whenToRetrieve": [
+        "Choosing a mobile strategy for Salesforce",
+        "Understanding different mobile options",
+        "When to pick each mobile option"
+      ],
+      "summary": "Guide to choosing a mobile strategy for a Salesforce org. Covers different mobile options and when to pick each, including considerations and best practices.",
+      "keyTopics": [
+        "Mobile options in Salesforce",
+        "When to pick each mobile option",
+        "Mobile strategy considerations",
+        "Mobile best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "architecture",
+      "file": "governance-patterns.md",
+      "path": "rag/architecture/governance-patterns.md",
+      "whenToRetrieve": [
+        "Defining Salesforce org governance",
+        "How and when to staff a Center of Excellence (COE)",
+        "Understanding governance patterns"
+      ],
+      "summary": "Guide to Salesforce org governance and how and when to staff a Center of Excellence (COE). Covers governance patterns, COE structure, and best practices.",
+      "keyTopics": [
+        "Salesforce org governance",
+        "Center of Excellence (COE)",
+        "Governance patterns",
+        "COE structure and staffing",
+        "Governance best practices"
       ],
       "status": "completed"
     },
@@ -343,32 +506,69 @@
     },
     {
       "domain": "security",
-      "file": "sharing-mechanisms.md",
-      "path": "rag/security/sharing-mechanisms.md",
+      "file": "sharing-fundamentals.md",
+      "path": "rag/security/sharing-fundamentals.md",
       "whenToRetrieve": [
-        "Understanding how Salesforce sharing works",
-        "Implementing sharing rules for internal users",
-        "Designing Experience Cloud sharing with Sharing Sets",
-        "Deciding between different sharing mechanisms",
-        "Troubleshooting sharing access issues",
-        "Implementing Apex managed sharing",
-        "Understanding View All/Modify All permissions",
-        "Designing multi-tenant data isolation patterns",
-        "Optimizing sharing for large data volumes"
+        "Understanding the fundamentals of Salesforce sharing",
+        "Setting Org-Wide Defaults for objects",
+        "Designing role hierarchy for access control",
+        "Deciding when to use View All/Modify All permissions",
+        "Understanding the order of sharing evaluation"
       ],
-      "summary": "Comprehensive guide to all Salesforce sharing mechanisms. Covers Org-Wide Defaults (OWD), Role Hierarchy, Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, Apex Managed Sharing, View All/Modify All permissions (object and system level), View All Fields/Modify All Fields permissions, Sharing Sets for Experience Cloud, community sharing patterns, sharing calculation and performance, decision frameworks for selecting sharing mechanisms, best practices, common patterns, troubleshooting, and code examples.",
+      "summary": "Fundamentals of Salesforce sharing including Org-Wide Defaults (OWD), Role Hierarchy, View All/Modify All permissions (object and system level), and View All Fields/Modify All Fields permissions.",
       "keyTopics": [
         "Org-Wide Defaults (Private, Public Read Only, Public Read/Write)",
         "Role Hierarchy and hierarchical access patterns",
-        "Sharing Rules (Owner-based, Criteria-based, Territory-based)",
-        "Manual Sharing and Apex Managed Sharing",
         "View All/Modify All permissions (object and system level)",
         "View All Fields/Modify All Fields permissions",
+        "Sharing vs. Permissions distinction",
+        "Order of sharing evaluation"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "security",
+      "file": "sharing-rules-and-manual-sharing.md",
+      "path": "rag/security/sharing-rules-and-manual-sharing.md",
+      "whenToRetrieve": [
+        "Implementing sharing rules for internal users",
+        "Deciding between sharing rules and Apex managed sharing",
+        "Implementing Apex managed sharing for complex requirements",
+        "Understanding manual sharing use cases",
+        "Troubleshooting sharing rule issues"
+      ],
+      "summary": "Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, and Apex Managed Sharing. Includes implementation patterns, decision frameworks, and code examples.",
+      "keyTopics": [
+        "Owner-based sharing rules",
+        "Criteria-based sharing rules",
+        "Territory-based sharing rules",
+        "Manual sharing",
+        "Apex Managed Sharing and Apex Sharing Reasons",
+        "Decision frameworks for selecting sharing mechanisms",
+        "Code examples and testing patterns"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "security",
+      "file": "sharing-sets-and-portals.md",
+      "path": "rag/security/sharing-sets-and-portals.md",
+      "whenToRetrieve": [
+        "Designing Experience Cloud sharing with Sharing Sets",
+        "Implementing portal sharing patterns",
+        "Understanding field-level sharing considerations",
+        "Optimizing sharing for large data volumes",
+        "Troubleshooting sharing access issues",
+        "Designing multi-tenant data isolation patterns"
+      ],
+      "summary": "Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples.",
+      "keyTopics": [
         "Sharing Sets for Experience Cloud (Community) users",
         "Community sharing patterns and multi-tenant data isolation",
+        "Field-Level Security (FLS) and sharing interactions",
         "Sharing calculation, performance, and optimization",
-        "Decision frameworks for selecting sharing mechanisms",
-        "Best practices, common patterns, and troubleshooting"
+        "Best practices, common patterns, and troubleshooting",
+        "Code examples for community sharing"
       ],
       "status": "completed"
     },
@@ -2057,6 +2257,363 @@
         "Org health monitoring"
       ],
       "status": "completed"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "data-storage-planning.md",
+      "path": "rag/data-modeling/data-storage-planning.md",
+      "whenToRetrieve": [
+        "Planning data storage capacity",
+        "Calculating current storage usage",
+        "Understanding storage limits",
+        "Planning for future growth",
+        "Optimizing storage usage"
+      ],
+      "summary": "Comprehensive guide to data storage planning in Salesforce. Covers how Salesforce calculates storage, calculating current storage usage, objects that don't count toward storage, planning for future growth, and storage optimization strategies.",
+      "keyTopics": [
+        "How Salesforce calculates storage (data and file storage)",
+        "Calculating current storage usage",
+        "Objects that don't count toward storage",
+        "Planning for future growth",
+        "Storage optimization strategies (archiving, file management)"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "data-modeling",
+      "file": "standard-object-oddities.md",
+      "path": "rag/data-modeling/standard-object-oddities.md",
+      "whenToRetrieve": [
+        "Understanding standard object constraints",
+        "Objects where quick actions aren't available",
+        "Objects that support queues",
+        "Objects with fixed CRUD permissions",
+        "Objects that can't be used in lookup relationships"
+      ],
+      "summary": "Guide to standard object oddities and constraints in Salesforce. Covers objects where quick actions aren't available, objects that can have queues own them, objects with fixed CRUD permissions, objects that can't be used in lookup relationships, and objects that support dynamic forms.",
+      "keyTopics": [
+        "Objects where quick actions aren't available",
+        "Objects that support queue ownership",
+        "Objects with fixed CRUD permissions",
+        "Objects that can't be lookup parents",
+        "Objects that support dynamic forms"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "admin-basics.md",
+      "path": "rag/development/admin-basics.md",
+      "whenToRetrieve": [
+        "Understanding Salesforce administration basics",
+        "Navigating Salesforce UI",
+        "Setting up orgs",
+        "Configuring org settings",
+        "Learning admin fundamentals"
+      ],
+      "summary": "Comprehensive guide to Salesforce administration basics. Covers the Salesforce administrator role, navigating Lightning and Classic UI, sandbox setup, company information, language and time zone settings, storage limits, UI settings, theme and branding, and business hours.",
+      "keyTopics": [
+        "Salesforce administrator role and responsibilities",
+        "Navigating Lightning and Classic UI",
+        "Sandbox setup and management",
+        "Org setup and configuration",
+        "UI settings and branding"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "formulas-validation-rules.md",
+      "path": "rag/development/formulas-validation-rules.md",
+      "whenToRetrieve": [
+        "Creating formulas",
+        "Validation rules",
+        "Custom labels",
+        "Lookup filters",
+        "Understanding formula functions in Salesforce"
+      ],
+      "summary": "Comprehensive guide to formulas, validation rules, custom labels, and lookup filters. Covers formula introduction, creating validation rules with formulas, lookup field filters, custom labels, and best practices.",
+      "keyTopics": [
+        "Formula fundamentals and functions",
+        "Validation rules with formulas",
+        "Lookup field filters",
+        "Custom labels",
+        "Best practices and patterns"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "lightning-app-builder.md",
+      "path": "rag/development/lightning-app-builder.md",
+      "whenToRetrieve": [
+        "Using Lightning App Builder",
+        "Creating Lightning pages",
+        "Configuring Lightning Experience components",
+        "Implementing dynamic forms and actions"
+      ],
+      "summary": "Guide to Lightning App Builder for creating and customizing Lightning pages. Covers Lightning App Builder basics, creating Lightning pages, component configuration, dynamic forms and actions, and best practices.",
+      "keyTopics": [
+        "Lightning App Builder basics",
+        "Creating Lightning pages",
+        "Component configuration",
+        "Dynamic forms and actions",
+        "Best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "email-management.md",
+      "path": "rag/development/email-management.md",
+      "whenToRetrieve": [
+        "Managing email in Salesforce",
+        "Understanding email limits",
+        "Creating email templates",
+        "Sending emails from Salesforce",
+        "Configuring email settings"
+      ],
+      "summary": "Guide to email management in Salesforce. Covers email limits, email logs, email templates, list email, mass email, flow email, and email best practices.",
+      "keyTopics": [
+        "Email limits and constraints",
+        "Email logs and tracking",
+        "Email templates",
+        "List and mass email",
+        "Flow email actions"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "development",
+      "file": "large-data-loads.md",
+      "path": "rag/development/large-data-loads.md",
+      "whenToRetrieve": [
+        "Planning large data loads",
+        "Selecting tools for data loads",
+        "Preventing data skew",
+        "Testing large data loads",
+        "Executing data migration projects"
+      ],
+      "summary": "Comprehensive guide to large data loads in Salesforce. Covers tools for large data loads (Data Loader, Bulk API, ETL tools), data quality considerations, preventing data skew, testing environments, and data load planning.",
+      "keyTopics": [
+        "Tools for large data loads (Data Loader, Bulk API, ETL)",
+        "Data quality considerations (deduplication, cleanup)",
+        "Preventing data skew",
+        "Testing environments",
+        "Data load planning and execution"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "testing",
+      "file": "lwc-jest-testing.md",
+      "path": "rag/testing/lwc-jest-testing.md",
+      "whenToRetrieve": [
+        "Writing Jest tests for Lightning Web Components",
+        "Testing component behavior",
+        "Testing wire adapters",
+        "Testing Apex calls from LWC"
+      ],
+      "summary": "Comprehensive guide to Jest testing for Lightning Web Components. Covers setting up Jest, writing test cases, testing events and conditional rendering, testing wire adapters and Apex calls, testing child components, and integrating Jest tests into CI/CD pipelines.",
+      "keyTopics": [
+        "Jest testing setup",
+        "Testing component properties and behavior",
+        "Testing events and interactions",
+        "Testing wire adapters",
+        "Testing Apex method calls",
+        "Testing child components",
+        "Jest testing patterns and best practices"
+      ],
+      "status": "completed",
+      "hasCodeExamples": true
+    },
+    {
+      "domain": "best-practices",
+      "file": "salesforce-product-evaluation.md",
+      "path": "rag/architecture/salesforce-product-evaluation.md",
+      "whenToRetrieve": [
+        "Evaluating Salesforce products",
+        "Understanding platform foundation",
+        "Comparing Sales Cloud vs Service Cloud",
+        "Choosing between Analytics Cloud options",
+        "Understanding industry-specific clouds"
+      ],
+      "summary": "Comprehensive guide to Salesforce product evaluation. Covers the platform foundation, Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Analytics Cloud, Integration Cloud, and industry-specific clouds. Includes key features, use cases, and considerations for each product.",
+      "keyTopics": [
+        "Platform foundation and core capabilities",
+        "Sales Cloud features and use cases",
+        "Service Cloud features and use cases",
+        "Marketing Cloud overview",
+        "Experience Cloud (Communities) overview",
+        "Analytics Cloud (CRM Analytics, Tableau) overview",
+        "Integration Cloud overview",
+        "Industry-specific clouds"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "org-edition-selection.md",
+      "path": "rag/architecture/org-edition-selection.md",
+      "whenToRetrieve": [
+        "Choosing a Salesforce org edition",
+        "Understanding edition differences",
+        "Evaluating feature availability by edition",
+        "Planning org upgrades"
+      ],
+      "summary": "Guide to Salesforce org editions and their implications. Covers Essentials, Professional, Enterprise, Unlimited, and Developer editions, including feature availability, scalability, and cost considerations.",
+      "keyTopics": [
+        "Essentials edition features and limitations",
+        "Professional edition features and limitations",
+        "Enterprise edition features and capabilities",
+        "Unlimited edition features and capabilities",
+        "Developer edition overview",
+        "Edition comparison and selection criteria"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "user-license-selection.md",
+      "path": "rag/architecture/user-license-selection.md",
+      "whenToRetrieve": [
+        "Selecting user licenses",
+        "Understanding license types",
+        "Planning license allocation",
+        "Optimizing license costs"
+      ],
+      "summary": "Guide to Salesforce user license selection. Covers Standard User, Platform User, Community/Experience Cloud User, Integration User, and Chatter User licenses, including use cases and selection criteria.",
+      "keyTopics": [
+        "Standard User license features and use cases",
+        "Platform User license features and use cases",
+        "Community/Experience Cloud User license features",
+        "Integration User license (free API-only license)",
+        "Chatter User license features",
+        "License selection criteria and cost optimization"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "salesforce-pricing-negotiation.md",
+      "path": "rag/architecture/salesforce-pricing-negotiation.md",
+      "whenToRetrieve": [
+        "Negotiating Salesforce contracts",
+        "Understanding pricing models",
+        "Optimizing costs",
+        "Planning Salesforce investments"
+      ],
+      "summary": "Guide to Salesforce pricing negotiation. Covers pricing models, contract negotiation strategies, cost optimization tips, and best practices for managing Salesforce costs.",
+      "keyTopics": [
+        "Salesforce pricing models",
+        "Contract negotiation strategies",
+        "Cost optimization tips",
+        "License optimization",
+        "Best practices for cost management"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "salesforce-org-staffing.md",
+      "path": "rag/best-practices/salesforce-org-staffing.md",
+      "whenToRetrieve": [
+        "Planning Salesforce org staffing",
+        "Understanding roles in the Salesforce ecosystem",
+        "Building a Salesforce team",
+        "Optimizing team structure"
+      ],
+      "summary": "Guide to Salesforce org staffing. Covers roles in the Salesforce ecosystem (Admin, Developer, Architect, Business Analyst, Project Manager), team composition, and staffing best practices.",
+      "keyTopics": [
+        "Salesforce administrator role",
+        "Salesforce developer role",
+        "Salesforce architect role",
+        "Business analyst role",
+        "Project manager role",
+        "Team composition and structure",
+        "Staffing best practices"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "reports-dashboards.md",
+      "path": "rag/best-practices/reports-dashboards.md",
+      "whenToRetrieve": [
+        "Creating reports and dashboards",
+        "Understanding report types",
+        "Building dashboards",
+        "Optimizing report performance"
+      ],
+      "summary": "Guide to reports and dashboards in Salesforce. Covers creating reports, building dashboards, report types, dashboard components, and best practices for reports and dashboards.",
+      "keyTopics": [
+        "Report creation and configuration",
+        "Dashboard building and components",
+        "Report types (Tabular, Summary, Matrix, Joined)",
+        "Dashboard best practices",
+        "Report performance optimization"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "sales-cloud-features.md",
+      "path": "rag/best-practices/sales-cloud-features.md",
+      "whenToRetrieve": [
+        "Understanding Sales Cloud features",
+        "Implementing sales processes",
+        "Managing opportunities and leads",
+        "Configuring products and pricebooks"
+      ],
+      "summary": "Guide to Sales Cloud features. Covers opportunities, leads, accounts, contacts, products, pricebooks, quotes, and sales processes.",
+      "keyTopics": [
+        "Opportunity management",
+        "Lead management",
+        "Account and contact management",
+        "Products and pricebooks",
+        "Quotes and contracts",
+        "Sales processes and automation"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "service-cloud-features.md",
+      "path": "rag/best-practices/service-cloud-features.md",
+      "whenToRetrieve": [
+        "Understanding Service Cloud features",
+        "Implementing service processes",
+        "Managing cases",
+        "Configuring knowledge and entitlements"
+      ],
+      "summary": "Guide to Service Cloud features. Covers cases, knowledge, entitlements, service processes, and service automation.",
+      "keyTopics": [
+        "Case management",
+        "Knowledge base",
+        "Entitlements and service level agreements",
+        "Service processes",
+        "Service automation"
+      ],
+      "status": "completed"
+    },
+    {
+      "domain": "best-practices",
+      "file": "complex-reporting.md",
+      "path": "rag/best-practices/complex-reporting.md",
+      "whenToRetrieve": [
+        "Deciding between Salesforce Reports, CRM Analytics, and Tableau for complex reporting needs",
+        "Understanding reporting tool capabilities",
+        "Planning reporting strategy"
+      ],
+      "summary": "Guide to complex reporting in Salesforce. Covers when to use Salesforce Reports vs CRM Analytics vs Tableau, capabilities of each tool, and decision frameworks for reporting tool selection.",
+      "keyTopics": [
+        "Salesforce Reports capabilities and limitations",
+        "CRM Analytics capabilities and use cases",
+        "Tableau capabilities and use cases",
+        "Decision framework for reporting tool selection",
+        "Reporting strategy planning"
+      ],
+      "status": "completed"
     }
   ],
   "retrievalGuidelines": {
@@ -2112,31 +2669,32 @@
   },
   "plannedFiles": [],
   "statistics": {
-    "totalFiles": 85,
-    "completedFiles": 85,
+    "totalFiles": 104,
+    "completedFiles": 104,
     "plannedFiles": 0,
-    "domains": 19,
-    "domainsWithFiles": 19
+    "domains": 20,
+    "domainsWithFiles": 20
   },
   "coverage": {
-    "architecture": 2,
-    "integrations": 5,
+    "architecture": 10,
+    "integrations": 6,
     "identity-sso": 1,
-    "data-modeling": 7,
-    "security": 2,
+    "data-modeling": 9,
+    "security": 3,
     "operations": 3,
     "observability": 3,
     "data-governance": 2,
     "adoption": 2,
     "project-methods": 4,
-    "development": 10,
+    "development": 16,
     "troubleshooting": 6,
     "patterns": 1,
     "glossary": 1,
-    "testing": 4,
+    "testing": 6,
     "quick-start": 3,
     "api-reference": 5,
     "mcp-knowledge": 5,
-    "code-examples": 24
+    "code-examples": 24,
+    "best-practices": 9
   }
 }

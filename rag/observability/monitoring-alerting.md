@@ -1,3 +1,14 @@
+---
+title: "Monitoring and Alerting for Salesforce"
+level: "Intermediate"
+tags:
+  - observability
+  - monitoring
+  - alerting
+  - platform-events
+last_reviewed: "2025-01-XX"
+---
+
 # Monitoring and Alerting for Salesforce
 
 ## Overview
@@ -266,6 +277,48 @@ This guide covers monitoring and alerting patterns for Salesforce, including Pla
 - Request context (request ID, correlation ID)
 - System context (org ID, environment)
 - Business context (record ID, transaction ID)
+
+## Q&A
+
+### Q: What should I monitor in Salesforce?
+
+**A**: Monitor: (1) **Platform Events** (events published, processed, failed, processing time), (2) **API health** (external API availability, response times, error rates), (3) **Async jobs** (Batch, Queueable, Scheduled job success/failure rates), (4) **System performance** (response times, throughput, error rates), (5) **User activity** (login failures, API usage), (6) **Data quality** (data validation failures, sync issues).
+
+### Q: How do I set up alerting for Salesforce?
+
+**A**: Set up alerting by: (1) **Defining alert thresholds** (error rates, response times, failure counts), (2) **Using Platform Events** to publish alert events, (3) **Configuring alert rules** (when to alert, who to notify), (4) **Integrating with external systems** (email, Slack, PagerDuty), (5) **Setting up escalation** (escalate if not acknowledged), (6) **Avoiding alert fatigue** (meaningful thresholds, avoid false positives).
+
+### Q: How do I monitor Platform Events?
+
+**A**: Monitor Platform Events by: (1) **Tracking metrics** (events published, processed, failed, processing time), (2) **Monitoring trends** over time, (3) **Setting up alerts** for high failure rates, (4) **Tracking event lag** (delay between publication and processing), (5) **Monitoring retry counts** for failed events, (6) **Correlating events** using correlation IDs.
+
+### Q: How do I monitor async job health?
+
+**A**: Monitor async jobs by: (1) **Tracking job status** (success, failure, in progress), (2) **Monitoring job completion rates**, (3) **Tracking job execution time**, (4) **Monitoring retry counts** and patterns, (5) **Setting up alerts** for job failures, (6) **Tracking job queue depth** (jobs waiting to execute), (7) **Monitoring governor limit usage** in jobs.
+
+### Q: What is structured logging and why should I use it?
+
+**A**: **Structured logging** uses consistent log formats (JSON, key-value pairs) for better analysis. Benefits: (1) **Easier log parsing** and analysis, (2) **Better correlation** across systems, (3) **Easier filtering** and searching, (4) **Better integration** with log aggregation tools. Include correlation IDs, timestamps, log levels, and context information.
+
+### Q: How do I aggregate logs from Salesforce?
+
+**A**: Aggregate logs by: (1) **Using Salesforce Event Monitoring** for native log aggregation, (2) **Using external platforms** (Splunk, ELK Stack, Datadog), (3) **Publishing log events** via Platform Events, (4) **Streaming logs** via REST API, (5) **Exporting logs** in batches, (6) **Centralizing logs** for correlation and analysis. Choose approach based on retention needs and analysis requirements.
+
+### Q: What log retention policies should I use?
+
+**A**: Use retention policies: (1) **Short-term** (7-30 days) - Debug logs, transaction logs, (2) **Medium-term** (90-180 days) - Application logs, integration logs, (3) **Long-term** (1-7 years) - Audit logs, compliance logs, (4) **Archive** - Historical logs for compliance. Configure retention per log type based on business and compliance requirements.
+
+### Q: How do I avoid alert fatigue?
+
+**A**: Avoid alert fatigue by: (1) **Setting meaningful thresholds** (not too sensitive), (2) **Grouping related alerts** (avoid duplicate alerts), (3) **Using alert severity** (critical, warning, info), (4) **Reviewing and tuning alerts** regularly, (5) **Suppressing known issues** (maintenance windows), (6) **Using alert aggregation** (group similar alerts), (7) **Ensuring alerts are actionable** (clear what to do).
+
+### Q: What correlation IDs should I use for monitoring?
+
+**A**: Use correlation IDs: (1) **Request ID** - unique ID per request/transaction, (2) **User ID** - track user activity, (3) **Session ID** - track user sessions, (4) **Integration Job ID** - track integration operations, (5) **Transaction ID** - track business transactions. Include correlation IDs in all logs and events to enable cross-system correlation.
+
+### Q: How do I monitor API health for external integrations?
+
+**A**: Monitor API health by: (1) **Tracking API availability** (uptime, response times), (2) **Monitoring error rates** (4xx, 5xx errors), (3) **Tracking API usage** (call volume, rate limits), (4) **Setting up health checks** (periodic API calls), (5) **Alerting on API failures** (unavailable, high error rates), (6) **Tracking API performance** (response times, throughput).
 
 ## Related Patterns
 

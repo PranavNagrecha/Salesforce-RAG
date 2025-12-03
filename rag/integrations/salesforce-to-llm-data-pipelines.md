@@ -1,3 +1,15 @@
+---
+title: "Salesforce to LLM Data Pipelines"
+level: "Advanced"
+tags:
+  - integrations
+  - llm
+  - rag
+  - data-pipelines
+  - ai
+last_reviewed: "2025-01-XX"
+---
+
 # Salesforce → LLM Data Pipelines
 
 ## Overview
@@ -513,4 +525,53 @@ Manifest-style descriptions are **not sufficient** to define:
 - **Hybrid Pattern Complexity**: Combining multiple extraction patterns (batch + event-driven + on-demand) adds complexity. Need to evaluate when the benefits outweigh the complexity.
 
 - **Metadata Extraction Completeness**: Whether Metadata API captures all necessary schema information for LLM understanding, or if additional sources are needed.
+
+## Q&A
+
+### Q: What is a Salesforce to LLM data pipeline?
+
+**A**: A **Salesforce to LLM data pipeline** extracts, transforms, and loads Salesforce data and metadata into LLM-powered systems (RAG, tools, agents). The pipeline consists of four stages: (1) **Extract** - pull data/metadata from Salesforce via APIs, (2) **Transform** - normalize, enrich, structure data for LLM consumption, (3) **Index** - generate embeddings and store in vector database for RAG, (4) **Retrieve** - query vector store to retrieve relevant context for LLM.
+
+### Q: What extraction APIs should I use for Salesforce to LLM pipelines?
+
+**A**: Use extraction APIs based on requirements: (1) **REST/Composite APIs** - real-time extraction, targeted queries, (2) **Bulk API** - high-volume extraction (millions of records), initial index population, (3) **Metadata/Tooling APIs** - schema extraction (object definitions, field metadata), (4) **Change Data Capture (CDC)** - real-time incremental updates, event-driven refresh. Choose based on volume, freshness requirements, and use case.
+
+### Q: What is the difference between full loads and incremental loads?
+
+**A**: **Full loads** extract all records from selected objects (initial index population, periodic full refresh). **Incremental loads** extract only changed records since last extraction (timestamp-based or event-based). Full loads: complete data, simpler logic, but resource-intensive. Incremental loads: efficient, faster, but more complex logic requiring change tracking.
+
+### Q: How do I chunk Salesforce data for RAG systems?
+
+**A**: Chunk Salesforce data by: (1) **Per-record chunks** - one chunk per record (simple, clear boundaries), (2) **Aggregated logical documents** - multiple related records in one chunk (Account + Contacts, preserves relationships), (3) **Field selection** - include descriptive fields (Name, Description, Status), exclude system/technical fields, (4) **Flattening relationships** - include related record info as text, (5) **Natural-language labels** - include field labels and help text for better retrieval.
+
+### Q: What should I include in RAG chunks from Salesforce?
+
+**A**: Include in chunks: (1) **Descriptive fields** (Name, Description, Notes, Comments), (2) **Status fields** (Status, Stage, State), (3) **Relationship context** (related record names), (4) **Temporal fields** (Created Date, Last Modified Date), (5) **Field labels and help text** (better semantic understanding). Exclude: system fields, audit fields, technical fields, large binary data (unless needed).
+
+### Q: What are the tradeoffs between batch and event-driven extraction?
+
+**A**: **Batch extraction** (nightly/periodic): predictable resource usage, efficient for large volumes, can run off-peak, simpler error recovery, but data may be stale, requires job scheduling. **Event-driven extraction** (CDC-based): real-time freshness, efficient incremental updates, but complex event handling, event retention limits (24 hours), requires event subscription infrastructure.
+
+### Q: How do I handle security and governance in LLM data pipelines?
+
+**A**: Handle security by: (1) **Evaluating Field-Level Security (FLS)** - respect FLS when extracting data, (2) **Evaluating Object-Level Security (OLS)** - respect object access, (3) **Understanding sharing rules** - consider sharing model, (4) **Data retention policies** - comply with retention requirements, (5) **Audit trail requirements** - track data extraction, (6) **Redacting sensitive data** - exclude PII/PHI if not needed. Security evaluation is critical for compliance.
+
+### Q: What is the difference between per-record and aggregated chunking?
+
+**A**: **Per-record chunking** creates one chunk per Salesforce record (simple, clear boundaries, but may lose relationship context). **Aggregated chunking** includes multiple related records in one chunk (Account + Contacts, preserves relationships, richer context, but larger chunks, more complex logic). Choose based on use case - per-record for simple retrieval, aggregated for relationship-aware retrieval.
+
+### Q: How do I choose between REST API, Bulk API, and CDC for extraction?
+
+**A**: Choose based on: (1) **REST API** - real-time, targeted extraction, flexible queries, but rate limits, (2) **Bulk API** - high-volume (millions of records), efficient for full loads, but not real-time, requires job polling, (3) **CDC** - real-time incremental updates, event-driven, but event retention limits, complex event handling. Use REST for on-demand, Bulk for initial/full loads, CDC for real-time incremental.
+
+### Q: What are best practices for Salesforce to LLM pipelines?
+
+**A**: Best practices include: (1) **Choose appropriate extraction API** (REST, Bulk, CDC based on requirements), (2) **Implement chunking strategy** (per-record or aggregated based on use case), (3) **Include relevant fields** (descriptive, status, relationships), (4) **Respect security model** (FLS, OLS, sharing rules), (5) **Handle errors gracefully** (retry logic, error recovery), (6) **Monitor pipeline health** (extraction metrics, indexing status), (7) **Optimize for retrieval** (chunking, metadata, embeddings).
+
+## Related Patterns
+
+- [Change Data Capture Patterns](change-data-capture-patterns.md) - CDC event processing
+- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
+- [Integration Platform Patterns](integration-platform-patterns.md) - ETL platform patterns
+- [Salesforce LLM Data Governance](../security/salesforce-llm-data-governance.md) - Data governance for LLM systems
 

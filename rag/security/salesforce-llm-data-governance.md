@@ -1,3 +1,16 @@
+---
+title: "Salesforce LLM Data Governance"
+level: "Advanced"
+tags:
+  - security
+  - llm
+  - rag
+  - data-governance
+  - data-scoping
+  - data-security
+last_reviewed: "2025-01-XX"
+---
+
 # Salesforce Data Scope & Security for LLMs
 
 ## Overview
@@ -407,4 +420,52 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 - **Separate Index Storage Costs**: Whether separate indexes per role are cost-effective at scale, or if attribute-based filtering is preferable.
 
 - **Data Minimization Balance**: Finding the right balance between data minimization and LLM utility - too little data may reduce LLM effectiveness, too much may increase risk.
+
+## Q&A
+
+### Q: What is Salesforce LLM data governance?
+
+**A**: **Salesforce LLM data governance** is the process of choosing what data to expose from Salesforce to LLMs and doing so safely. It includes: (1) **Data scoping** (which objects, fields, records to include), (2) **Security considerations** (reflecting Salesforce access controls in LLM data extraction), (3) **Data masking and redaction** (protecting sensitive data), (4) **Governance and lifecycle management** (policies, procedures, monitoring).
+
+### Q: How do I scope data for LLM systems?
+
+**A**: Scope data by: (1) **Including relevant data** (provides context for answering questions, enables relationship understanding), (2) **Excluding irrelevant data** (doesn't contribute to LLM understanding, redundant, operational/technical only), (3) **Considering sensitivity** (PII/PHI, classification), (4) **Evaluating use case** (what data is needed for LLM use case), (5) **Balancing utility and risk** (enough data for utility, not too much risk).
+
+### Q: How do I reflect Salesforce security in LLM data extraction?
+
+**A**: Reflect security by: (1) **Evaluating Field-Level Security (FLS)** (respect FLS when extracting data), (2) **Evaluating Object-Level Security (OLS)** (respect object access), (3) **Understanding sharing rules** (consider sharing model), (4) **Respecting user context** (extract data based on user permissions), (5) **Using attribute-based filtering** (filter by user attributes, roles), (6) **Implementing role-based access** (different data per role).
+
+### Q: What data masking strategies should I use?
+
+**A**: Use masking strategies: (1) **Field-level masking** (mask specific fields - SSN, email, phone), (2) **Record-level masking** (mask entire records if sensitive), (3) **Tokenization** (replace sensitive data with tokens), (4) **Redaction** (remove sensitive data completely), (5) **Pseudonymization** (replace with pseudonyms), (6) **Aggregation** (aggregate sensitive data). Choose strategy based on sensitivity and use case requirements.
+
+### Q: How do I handle PII/PHI in LLM data pipelines?
+
+**A**: Handle PII/PHI by: (1) **Identifying PII/PHI** (inventory sensitive data), (2) **Classifying by sensitivity** (high, medium, low), (3) **Masking or redacting** sensitive fields, (4) **Excluding if not needed** (don't include if not required for use case), (5) **Using encryption** (Shield Encryption for sensitive fields), (6) **Complying with regulations** (GDPR, HIPAA, FERPA), (7) **Documenting handling** (policies, procedures).
+
+### Q: What is attribute-based filtering for LLM data?
+
+**A**: **Attribute-based filtering** filters data based on user attributes (roles, departments, regions). It enables: (1) **Role-based data access** (different data per role), (2) **Department-based filtering** (filter by department), (3) **Region-based filtering** (filter by region), (4) **Dynamic filtering** (filter based on user context). Attribute-based filtering provides fine-grained data access control.
+
+### Q: How do I implement data governance for LLM systems?
+
+**A**: Implement governance by: (1) **Defining data scoping policies** (what data to include/exclude), (2) **Establishing security policies** (how to reflect Salesforce security), (3) **Creating masking policies** (what to mask, how), (4) **Setting up monitoring** (track data extraction, access), (5) **Documenting procedures** (policies, processes), (6) **Regular reviews** (audit data usage, compliance), (7) **Training teams** (governance requirements).
+
+### Q: What are the risks of exposing too much data to LLMs?
+
+**A**: Risks include: (1) **Privacy violations** (exposing PII/PHI), (2) **Compliance violations** (GDPR, HIPAA, FERPA), (3) **Security breaches** (sensitive data in LLM systems), (4) **Data leakage** (data exposed to unauthorized users), (5) **Increased token costs** (more data = more tokens), (6) **Reduced LLM performance** (too much irrelevant data). Balance data utility with risk.
+
+### Q: How do I balance data minimization with LLM utility?
+
+**A**: Balance by: (1) **Including necessary data** (data needed for LLM use case), (2) **Excluding unnecessary data** (data that doesn't contribute), (3) **Using selective extraction** (extract only relevant records), (4) **Masking sensitive data** (protect while maintaining utility), (5) **Testing LLM effectiveness** (verify LLM works with minimized data), (6) **Iterating based on results** (adjust based on LLM performance). Too little data reduces utility, too much increases risk.
+
+### Q: What are best practices for LLM data governance?
+
+**A**: Best practices include: (1) **Scope data carefully** (include only necessary data), (2) **Respect Salesforce security** (FLS, OLS, sharing rules), (3) **Mask sensitive data** (PII/PHI, sensitive fields), (4) **Monitor data extraction** (track what data is extracted), (5) **Document policies** (clear governance policies), (6) **Regular audits** (review data usage, compliance), (7) **Train teams** (governance requirements), (8) **Comply with regulations** (GDPR, HIPAA, FERPA).
+
+## Related Patterns
+
+- [Salesforce to LLM Data Pipelines](../integrations/salesforce-to-llm-data-pipelines.md) - Data pipeline patterns
+- [Data Residency & Compliance](../data-governance/data-residency-compliance.md) - Compliance patterns
+- [Permission Set Architecture](permission-set-architecture.md) - Access control patterns
 

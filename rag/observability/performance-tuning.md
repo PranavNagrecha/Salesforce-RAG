@@ -1,3 +1,14 @@
+---
+title: "Performance Tuning for Salesforce"
+level: "Advanced"
+tags:
+  - observability
+  - performance
+  - optimization
+  - ldv
+last_reviewed: "2025-01-XX"
+---
+
 # Performance Tuning for Salesforce
 
 ## Overview
@@ -276,6 +287,48 @@ This guide covers performance tuning patterns for Salesforce, including query/se
 - External load testing tools
 - Custom performance test scripts
 - Production monitoring
+
+## Q&A
+
+### Q: How do I optimize SOQL queries for performance?
+
+**A**: Optimize SOQL queries by: (1) **Using indexed fields** in WHERE clauses (Id, Name, Email, External IDs, Lookup fields, Date fields), (2) **Ensuring selectivity** (queries return less than 10% of records), (3) **Using selective filters** (multiple indexed fields), (4) **Limiting fields** (select only needed fields), (5) **Using LIMIT clause** when possible, (6) **Avoiding functions** in WHERE clauses (prevents index usage).
+
+### Q: What is query selectivity and why is it important?
+
+**A**: **Query selectivity** is the percentage of records returned by a query. Queries should return **less than 10% of records** to be considered selective and use indexes efficiently. Non-selective queries (returning >10% of records) can't use indexes and perform full table scans, causing performance issues. Use indexed fields and multiple filters to improve selectivity.
+
+### Q: How do I handle Large Data Volumes (LDV) in Salesforce?
+
+**A**: Handle LDV by: (1) **Designing data models** with LDV in mind from the start, (2) **Using indexed fields** for queries, (3) **Implementing data archiving** strategies, (4) **Using Batch Apex** for large data processing, (5) **Optimizing queries** for selectivity, (6) **Using Platform Cache** for frequently accessed data, (7) **Monitoring query performance** regularly.
+
+### Q: How do I mitigate governor limit issues?
+
+**A**: Mitigate governor limits by: (1) **Bulkifying all code** (no DML/SOQL in loops), (2) **Using async processing** (Batch, Queueable, @future) for long-running operations, (3) **Optimizing queries** (reduce query count, improve selectivity), (4) **Using Platform Cache** to reduce query load, (5) **Monitoring limit usage** proactively, (6) **Breaking work into chunks** for large datasets.
+
+### Q: When should I use Platform Cache?
+
+**A**: Use Platform Cache for: (1) **Frequently accessed data** (read many times), (2) **Rarely changing data** (doesn't change often), (3) **Expensive to query** (complex queries, large datasets), (4) **Shared across users** (same data for multiple users), (5) **Not time-sensitive** (slight staleness acceptable). Don't cache frequently changing or user-specific data.
+
+### Q: How do I measure performance improvements?
+
+**A**: Measure performance by: (1) **Establishing baselines** (measure current performance), (2) **Profiling code** (identify bottlenecks), (3) **Measuring before and after** optimizations, (4) **Tracking metrics** (response times, query performance, governor limit usage), (5) **Using performance monitoring tools**, (6) **Testing with production-like data volumes**, (7) **Documenting performance improvements**.
+
+### Q: What are best practices for performance tuning?
+
+**A**: Best practices include: (1) **Optimize queries for selectivity** (use indexed fields, <10% of records), (2) **Plan for LDV** from the start, (3) **Monitor governor limit usage** proactively, (4) **Implement caching strategically** (Platform Cache for appropriate data), (5) **Profile and measure** (always measure before/after), (6) **Test with production-like data**, (7) **Optimize iteratively** (incremental improvements), (8) **Document performance baselines**.
+
+### Q: How do I optimize queries that can't use indexes?
+
+**A**: Optimize non-indexed queries by: (1) **Adding custom indexes** for frequently queried fields, (2) **Requesting Salesforce support** for additional indexes if needed, (3) **Restructuring queries** to use indexed fields, (4) **Using compound indexes** for multi-field queries, (5) **Reducing data volume** (archiving old data), (6) **Using Batch Apex** for large data processing, (7) **Caching query results** when appropriate.
+
+### Q: What is the difference between Platform Cache and database queries?
+
+**A**: **Platform Cache** stores data in memory for fast access (milliseconds), while **database queries** read from database (hundreds of milliseconds). Use cache for frequently accessed, rarely changing data. Cache has size limits and TTL (Time To Live), while database queries always return current data. Balance cache benefits with data freshness requirements.
+
+### Q: How do I test performance with Large Data Volumes?
+
+**A**: Test LDV performance by: (1) **Creating test data** that matches production volumes, (2) **Testing queries** with large datasets, (3) **Monitoring query performance** (response times, selectivity), (4) **Testing governor limit usage** (ensure no limit violations), (5) **Profiling code** to identify bottlenecks, (6) **Testing with realistic scenarios** (production-like usage patterns), (7) **Documenting performance characteristics**.
 
 ## Related Patterns
 

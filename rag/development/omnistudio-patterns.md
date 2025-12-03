@@ -1,3 +1,15 @@
+---
+title: "OmniStudio Patterns"
+level: "Intermediate"
+tags:
+  - omnistudio
+  - development
+  - patterns
+  - omniscripts
+  - flexcards
+last_reviewed: "2025-01-XX"
+---
+
 # OmniStudio Patterns
 
 ## Overview
@@ -334,4 +346,52 @@ Avoid OmniStudio when:
 - No guided workflow requirements
 - Different UI framework preferred
 - Performance-critical real-time operations
+
+## Q&A
+
+### Q: What is OmniStudio and when should I use it?
+
+**A**: **OmniStudio** (OmniScripts and FlexCards) provides guided workflows and reusable UI components for complex business processes. Use OmniStudio when: (1) **Guided multi-step processes** (application workflows, grant processes), (2) **Complex data collection** (multi-step forms with business rules), (3) **Reusable UI components** (FlexCards for dashboards), (4) **Both internal and portal users** (works in Experience Cloud), (5) **Business rule enforcement** (validation and conditional logic).
+
+### Q: What is the difference between OmniScripts and FlexCards?
+
+**A**: **OmniScripts** are guided workflows that walk users through multi-step processes (application submission, grant workflows). **FlexCards** are reusable UI components for displaying data (dashboards, cards, lists). OmniScripts guide users through processes, FlexCards display information. Both are part of OmniStudio and can be used together.
+
+### Q: How do I implement OmniScripts for guided processes?
+
+**A**: Implement by: (1) **Designing workflow steps** (define process steps), (2) **Creating OmniScript** (configure steps, fields, validation), (3) **Adding business rules** (conditional logic, validation), (4) **Configuring data actions** (save data, call Apex, integrate), (5) **Testing workflow** (test all paths), (6) **Deploying to users** (assign to profiles, permission sets). OmniScripts provide step-by-step guidance.
+
+### Q: How do I use FlexCards for reusable UI components?
+
+**A**: Use FlexCards by: (1) **Designing card layout** (define data to display), (2) **Creating FlexCard** (configure layout, fields, styling), (3) **Adding data sources** (SOQL queries, Apex methods), (4) **Configuring interactions** (click actions, navigation), (5) **Embedding in pages** (add to Lightning pages, Experience Cloud), (6) **Reusing across pages** (same card, different contexts). FlexCards provide reusable UI components.
+
+### Q: Can OmniStudio be used in Experience Cloud (portals)?
+
+**A**: Yes, OmniStudio works in Experience Cloud. OmniScripts can be embedded in Experience Cloud pages for external users (customers, partners, citizens). FlexCards can be used in Experience Cloud dashboards and pages. OmniStudio supports both internal users (Salesforce org) and external users (Experience Cloud), making it suitable for multi-user-type scenarios.
+
+### Q: How do I handle data in OmniScripts?
+
+**A**: Handle data by: (1) **Collecting data** in OmniScript steps (form fields, user input), (2) **Validating data** (business rules, required fields), (3) **Saving data** (DataRaptor, Apex methods), (4) **Loading existing data** (pre-populate fields from records), (5) **Transforming data** (DataRaptor for transformation), (6) **Integrating with external systems** (callouts, integrations). OmniScripts provide data collection and processing capabilities.
+
+### Q: What are DataRaptors in OmniStudio?
+
+**A**: **DataRaptors** are data transformation components in OmniStudio. They: (1) **Extract data** from Salesforce (SOQL queries), (2) **Transform data** (field mapping, calculations), (3) **Load data** to Salesforce (DML operations), (4) **Integrate with external systems** (callouts, APIs). DataRaptors enable data transformation and integration within OmniScripts and FlexCards.
+
+### Q: How do I test OmniStudio components?
+
+**A**: Test by: (1) **Testing OmniScripts** (walk through all steps, test all paths), (2) **Testing FlexCards** (verify data display, interactions), (3) **Testing data actions** (verify data saves correctly), (4) **Testing business rules** (test conditional logic, validation), (5) **Testing in different contexts** (internal users, portal users), (6) **Testing error handling** (test error scenarios). Comprehensive testing ensures OmniStudio components work correctly.
+
+### Q: What are best practices for OmniStudio?
+
+**A**: Best practices include: (1) **Design workflows clearly** (define steps, data flow), (2) **Use business rules** for validation and conditional logic, (3) **Test thoroughly** (all paths, error scenarios), (4) **Optimize data actions** (efficient queries, bulk operations), (5) **Reuse FlexCards** (create reusable components), (6) **Document workflows** (document process, data flow), (7) **Monitor performance** (track execution time, errors).
+
+### Q: When should I use OmniStudio vs. Flows vs. custom LWC?
+
+**A**: Use **OmniStudio** for: guided multi-step workflows, reusable UI components, complex business processes. Use **Flows** for: declarative automation, simple workflows, standard Salesforce processes. Use **custom LWC** for: custom UI requirements, complex interactions, specialized functionality. Choose based on requirements: OmniStudio for guided workflows, Flows for automation, LWC for custom UI.
+
+## Related Patterns
+
+- [Flow Patterns](flow-patterns.md) - Flow automation patterns
+- [LWC Patterns](lwc-patterns.md) - Lightning Web Component patterns
+- [Portal Architecture](../architecture/portal-architecture.md) - Experience Cloud patterns
 

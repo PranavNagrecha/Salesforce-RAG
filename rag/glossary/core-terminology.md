@@ -1,3 +1,13 @@
+---
+title: "Core Terminology and Definitions"
+level: "Beginner"
+tags:
+  - glossary
+  - terminology
+  - definitions
+last_reviewed: "2025-01-XX"
+---
+
 # Core Terminology and Definitions
 
 ## Overview
@@ -134,7 +144,7 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: Used in portal implementations to ensure users see only their own records or records for their associated organizations. Replaces traditional sharing rules for portal users.
 
-**Related Patterns**: See `rag/architecture/portal-architecture.md` for sharing set patterns and `rag/security/sharing-mechanisms.md` for comprehensive sharing guidance.
+**Related Patterns**: See `rag/architecture/portal-architecture.md` for sharing set patterns, `rag/security/sharing-fundamentals.md` for OWD and role hierarchy, `rag/security/sharing-rules-and-manual-sharing.md` for sharing rules, and `rag/security/sharing-sets-and-portals.md` for Experience Cloud sharing.
 
 ### Org-Wide Defaults (OWD)
 
@@ -142,7 +152,7 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: OWD settings (Private, Public Read Only, Public Read/Write) determine the default access level before sharing rules are applied. Private is most restrictive, requiring sharing rules for access beyond owners and role hierarchy.
 
-**Related Patterns**: See `rag/security/sharing-mechanisms.md` for OWD selection framework and sharing patterns.
+**Related Patterns**: See `rag/security/sharing-fundamentals.md` for OWD selection framework and sharing patterns.
 
 ### Apex Managed Sharing
 
@@ -150,7 +160,7 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: Used for complex sharing requirements that cannot be met through declarative sharing rules. Requires Apex Sharing Reasons and allows dynamic, logic-based sharing patterns.
 
-**Related Patterns**: See `rag/security/sharing-mechanisms.md` for Apex managed sharing patterns and code examples.
+**Related Patterns**: See `rag/security/sharing-rules-and-manual-sharing.md` for Apex managed sharing patterns and code examples.
 
 ### View All / Modify All Permissions
 
@@ -158,7 +168,7 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: View All grants read access to all records; Modify All grants full CRUD access. These permissions bypass all sharing rules and org-wide defaults. Should be used sparingly.
 
-**Related Patterns**: See `rag/security/sharing-mechanisms.md` for when to use View All/Modify All and security implications.
+**Related Patterns**: See `rag/security/sharing-fundamentals.md` for when to use View All/Modify All and security implications.
 
 ### View All Data / Modify All Data
 
@@ -166,7 +176,7 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: View All Data grants read access; Modify All Data grants full CRUD access. These permissions bypass all security mechanisms and are typically reserved for system administrators.
 
-**Related Patterns**: See `rag/security/sharing-mechanisms.md` for security implications and best practices.
+**Related Patterns**: See `rag/security/sharing-fundamentals.md` for security implications and best practices.
 
 ### Sharing Rules
 
@@ -174,7 +184,7 @@ This glossary defines core terms used throughout the RAG knowledge library. Term
 
 **Context**: Types include Owner-based (share records owned by specific users/roles), Criteria-based (share records meeting field criteria), and Territory-based (share records in territories). Sharing rules are evaluated after OWD and role hierarchy.
 
-**Related Patterns**: See `rag/security/sharing-mechanisms.md` for sharing rule types, configuration patterns, and decision frameworks.
+**Related Patterns**: See `rag/security/sharing-rules-and-manual-sharing.md` for sharing rule types, configuration patterns, and decision frameworks.
 
 ## Platform Terms
 
@@ -533,7 +543,7 @@ For domain-specific terminology and definitions, see:
 - **Integration Terms**: `rag/integrations/etl-vs-api-vs-events.md`, `rag/integrations/salesforce-to-llm-data-pipelines.md`
 - **Identity Terms**: `rag/identity-sso/multi-tenant-identity-architecture.md`
 - **Data Model Terms**: `rag/data-modeling/student-lifecycle-data-model.md`
-- **Security Terms**: `rag/security/permission-set-architecture.md`, `rag/security/salesforce-llm-data-governance.md`, `rag/security/sharing-mechanisms.md`
+- **Security Terms**: `rag/security/permission-set-architecture.md`, `rag/security/salesforce-llm-data-governance.md`, `rag/security/sharing-fundamentals.md`, `rag/security/sharing-rules-and-manual-sharing.md`, `rag/security/sharing-sets-and-portals.md`
 - **Development Terms**: `rag/development/apex-patterns.md`, `rag/development/flow-patterns.md`, `rag/development/lwc-patterns.md`, `rag/development/locking-and-concurrency-strategies.md`, `rag/development/governor-limits-and-optimization.md`
 - **Operations Terms**: `rag/operations/cicd-patterns.md`, `rag/operations/environment-strategy.md`, `rag/operations/release-governance.md`
 - **Observability Terms**: `rag/observability/monitoring-alerting.md`, `rag/observability/performance-tuning.md`, `rag/observability/ha-dr-patterns.md`

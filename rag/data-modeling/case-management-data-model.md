@@ -1,3 +1,15 @@
+---
+title: "Case Management Data Model"
+level: "Advanced"
+tags:
+  - data-modeling
+  - case-management
+  - public-sector
+  - multi-tenant
+  - data-model
+last_reviewed: "2025-01-XX"
+---
+
 # Case Management Data Model
 
 ## Overview
@@ -385,4 +397,52 @@ Avoid this model when:
 - No external system integration
 - Single user type
 - Different data model requirements exist
+
+## Q&A
+
+### Q: What is a case management data model for public sector?
+
+**A**: A **case management data model** for public sector supports multi-agency public benefits and services portals. It handles: (1) **Clients** (citizens/clients accessing services), (2) **External partner organizations** (service providers), (3) **Staff** (internal employees managing cases), (4) **Cases** (service requests, benefits applications), (5) **Notices and transactions** (from external systems). The model supports multiple user types with different identity providers and access patterns.
+
+### Q: How do I separate different user types in a case management model?
+
+**A**: Separate user types by: (1) **Record Types** on Account/Contact (client vs. external partner vs. internal staff), (2) **Different identity providers** (OIDC for clients, SAML for staff, organization tenant for partners), (3) **Sharing rules** (data visibility per user type), (4) **Portal experiences** (Experience Cloud for clients, internal Service Cloud for staff), (5) **Login handlers** (route users to appropriate experiences).
+
+### Q: How do I model external partner organizations in case management?
+
+**A**: Model external partners by: (1) **Separate Account Record Type** for external partners, (2) **Link to external partner staff** through Contact relationships, (3) **Support multiple partners per client** (client can have multiple service providers), (4) **External partner performance tracking** (track provider performance), (5) **Organization tenant identity** (external partner staff use organization tenant identity provider).
+
+### Q: How do I handle cases in a multi-tenant case management model?
+
+**A**: Handle cases by: (1) **Case object** for service requests and benefits applications, (2) **Link cases to clients** (Contact relationships), (3) **Link cases to external partners** (if applicable), (4) **Link cases to staff** (case assignment, ownership), (5) **Case sharing rules** (clients see their cases, partners see assigned cases, staff see based on sharing), (6) **Case status tracking** (track case progression).
+
+### Q: How do I integrate with external benefits/eligibility systems?
+
+**A**: Integrate by: (1) **External system IDs** (correlate Salesforce records with external systems), (2) **Notices object** (track notices from external systems), (3) **Transactions object** (track transactions from external systems), (4) **Integration jobs** (batch or real-time synchronization), (5) **Data reconciliation** (ensure data consistency). External IDs enable stable record mapping.
+
+### Q: What is the difference between client Accounts and external partner Accounts?
+
+**A**: **Client Accounts** represent individual citizens/clients (potentially person-style accounts for 1:1 Account-Contact relationships). **External partner Accounts** represent organizations providing services (separate Record Type, link to partner staff, support multiple partners per client). Use Record Types to differentiate and apply different sharing rules and access patterns.
+
+### Q: How do I track notices and transactions from external systems?
+
+**A**: Track by: (1) **Notices object** (track notices received from external systems), (2) **Transactions object** (track transactions from external systems), (3) **Link to Cases** (associate notices/transactions with cases), (4) **External system IDs** (correlate with external systems), (5) **Integration tracking** (track when notices/transactions were received). Notices and transactions provide audit trail and integration tracking.
+
+### Q: How do I ensure data isolation between user types?
+
+**A**: Ensure isolation by: (1) **Record Type-based separation** (different Record Types per user type), (2) **Sharing rules** (restrict data visibility per user type), (3) **Field-level security** (control field access per user type), (4) **Portal sharing** (Experience Cloud sharing for clients), (5) **Login handlers** (route users to appropriate experiences). Data isolation is critical for multi-tenant models.
+
+### Q: When should I use this case management model?
+
+**A**: Use when: (1) **Implementing public sector case management** (multi-agency, public benefits), (2) **Supporting multiple user types** (clients, external partners, staff), (3) **Integrating with external systems** (benefits/eligibility systems), (4) **Tracking notices and transactions** (from external systems), (5) **Requiring multi-tenant data isolation** (different access per user type).
+
+### Q: What are best practices for case management data models?
+
+**A**: Best practices include: (1) **Use Record Types** to separate user types, (2) **Implement sharing rules** for data isolation, (3) **Use external IDs** for integration, (4) **Track external system data** (notices, transactions), (5) **Support multiple identity providers** (OIDC, SAML, organization tenant), (6) **Design for scalability** (handle large case volumes), (7) **Maintain data quality** (validation, duplicate prevention).
+
+## Related Patterns
+
+- [Multi-Tenant Identity Architecture](../identity-sso/multi-tenant-identity-architecture.md) - Identity provider patterns
+- [Sharing Sets and Portals](../security/sharing-sets-and-portals.md) - Experience Cloud sharing patterns
+- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns
 

@@ -1,3 +1,14 @@
+---
+title: "Event-Driven Architecture"
+level: "Advanced"
+tags:
+  - architecture
+  - platform-events
+  - event-driven
+  - integration
+last_reviewed: "2025-01-XX"
+---
+
 # Event-Driven Architecture
 
 ## Overview
@@ -194,4 +205,38 @@ Avoid event-driven architecture when:
 - Event ordering is critical and complex to maintain
 - Simple point-to-point integrations are sufficient
 - Event volume is very low and overhead isn't justified
+
+## Q&A
+
+### Q: What is the difference between Platform Events and Change Data Capture (CDC)?
+
+**A**: **Platform Events** are custom events you publish explicitly from your code/flows for business events. **CDC** automatically publishes change events when records are created, updated, or deleted. Use Platform Events for business events (e.g., "application submitted"); use CDC for data change tracking.
+
+### Q: Should I use Flows or Apex to publish Platform Events?
+
+**A**: Prefer **Flows** for event publication when possible, as they're declarative and easier to maintain. Reserve **Apex** for complex logic that cannot be expressed declaratively. Flows are preferred for most event publication scenarios.
+
+### Q: How do I handle event ordering in event-driven architecture?
+
+**A**: Event ordering can be complex. Use sequence numbers or timestamps in event payloads if ordering matters. Consider using a single-threaded subscriber or implementing ordering logic in the subscriber. For most use cases, exact ordering may not be required.
+
+### Q: What happens if an event subscriber fails?
+
+**A**: Implement retry logic in subscribers, use event replay capabilities, and monitor event delivery. Design subscribers to be idempotent so they can safely replay events. Use dead letter queues for events that fail after multiple retry attempts.
+
+### Q: How do I design event payloads?
+
+**A**: Include External IDs for correlation, minimal necessary PII, change metadata (who, when), and business context fields needed by downstream systems. Keep payloads focused - include only what subscribers need, not entire record data.
+
+### Q: Can I use Platform Events for internal automation?
+
+**A**: Yes, Platform Events can be consumed by Channel Members within Salesforce for internal automation, logging, audit trails, and triggering workflows. This enables decoupled internal automation patterns.
+
+### Q: What are the performance implications of event-driven architecture?
+
+**A**: Events are asynchronous and scalable, enabling high-volume scenarios. However, there's no immediate feedback, and event processing adds latency. Monitor event delivery, subscriber performance, and implement proper error handling and retry logic.
+
+### Q: How do I test event-driven integrations?
+
+**A**: Publish test events, verify subscribers receive events, test error scenarios and retry logic, test event replay, and verify idempotency. Use test events with known payloads and verify subscriber behavior in different scenarios.
 

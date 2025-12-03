@@ -1,3 +1,14 @@
+---
+title: "Data Migration Patterns"
+level: "Intermediate"
+tags:
+  - data-modeling
+  - data-migration
+  - data-import
+  - transformation
+last_reviewed: "2025-01-XX"
+---
+
 # Data Migration Patterns
 
 ## Overview
@@ -264,6 +275,40 @@ This guide covers data migration strategies, transformation patterns, validation
 - **Detect failures**: Identify and handle failures
 - **Log operations**: Log all migration operations
 - **Send notifications**: Notify on completion or failure
+
+## Q&A
+
+### Q: What is the best tool for importing data into Salesforce?
+
+**A**: The best tool depends on data volume and requirements: **Data Import Wizard** for small datasets (up to 50,000 records) and simple imports, **Data Loader** for larger datasets and automated imports, **Bulk API** for very large datasets (millions of records) and programmatic control, **ETL tools** (MuleSoft, Boomi) for complex transformations and multi-system migrations.
+
+### Q: How do I handle record relationships during migration?
+
+**A**: Use **External IDs** to map relationships. Create External ID fields on parent objects, populate them with source system IDs, then reference those External IDs in child records. This enables idempotent operations and allows you to migrate parent records first, then child records referencing parent External IDs.
+
+### Q: What is the recommended approach for validating data before migration?
+
+**A**: Validate data **before migration** by: (1) Checking data quality (completeness, accuracy, format), (2) Validating relationships (parent records exist), (3) Checking business rules (validation rules, required fields), (4) Testing with sample data first, (5) Using staging objects for complex validation.
+
+### Q: How do I implement rollback strategies for data migrations?
+
+**A**: Implement rollback by: (1) **Backing up data** before migration, (2) **Logging all operations** (what was created/updated/deleted), (3) **Using External IDs** to track source records, (4) **Creating rollback scripts** that can reverse operations, (5) **Testing rollback procedures** in sandbox before production.
+
+### Q: What is the difference between upsert and insert/update operations?
+
+**A**: **Upsert** uses External IDs or a specified field to match existing records and update them, or create new records if no match is found. **Insert** always creates new records. **Update** requires existing record IDs. Use upsert for idempotent operations where you want to update existing records or create new ones based on External IDs.
+
+### Q: How do I handle large data migrations (millions of records)?
+
+**A**: For large migrations: (1) Use **Bulk API** or **Bulk API 2.0** for high-volume operations, (2) **Batch processing** - split into smaller batches, (3) **Parallel processing** - run multiple batches concurrently, (4) **Monitor progress** - track batch completion and failures, (5) **Error handling** - log errors and retry failed records, (6) **Test with sample data** first.
+
+### Q: What should I consider when migrating data between Salesforce orgs?
+
+**A**: When migrating between orgs: (1) **Field mapping** - map source fields to target fields, (2) **Data transformation** - transform data to match target org structure, (3) **Relationship preservation** - maintain relationships using External IDs, (4) **Permission considerations** - ensure user has access to create/update records, (5) **Validation rules** - understand target org validation rules, (6) **Test in sandbox** first.
+
+### Q: How do I ensure data migration is idempotent?
+
+**A**: Make migrations idempotent by: (1) **Using External IDs** for record matching, (2) **Using upsert operations** instead of insert/update, (3) **Checking for existing records** before creating, (4) **Logging operations** to track what was done, (5) **Testing with re-runs** to ensure same results.
 
 ## Related Patterns
 

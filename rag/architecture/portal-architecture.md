@@ -1,8 +1,21 @@
+---
+title: "Portal Architecture Patterns"
+level: "Advanced"
+tags:
+  - architecture
+  - experience-cloud
+  - portals
+  - multi-tenant
+last_reviewed: "2025-01-XX"
+---
+
 # Portal Architecture Patterns
 
 ## Overview
 
 Experience Cloud portal architecture patterns for supporting multiple user types (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns. These patterns enable single-org multi-tenant portal implementations.
+
+Experience Cloud (formerly Communities) enables organizations to create branded portals for external users (customers, partners, citizens) with controlled access to Salesforce data and functionality. Effective Experience Cloud configuration requires understanding site setup, authentication, branding, security, and user experience design.
 
 ## Portal Types
 
@@ -275,4 +288,169 @@ Avoid portal architecture when:
 - Security requirements cannot be met
 - Different data model requirements
 - Performance requirements cannot be met
+
+## Experience Cloud Administration
+
+### Site Setup and Configuration
+
+**Site creation**:
+- Create Experience Cloud site with appropriate template
+- Configure site URL and domain
+- Set up site preferences and settings
+- Configure site navigation and pages
+
+**Site templates**:
+- Customer Service template for support portals
+- Partner Central template for partner portals
+- Build Your Own (LWR) template for custom sites
+- Choose template based on use case
+
+**Site configuration**:
+- Configure site branding and theming
+- Set up site navigation and pages
+- Configure site preferences and settings
+- Set up site search and content management
+
+### Authentication Configuration
+
+**Authentication methods**:
+- Salesforce authentication (username/password)
+- SAML for enterprise SSO
+- OIDC for external identity providers
+- Social authentication (if enabled)
+- Guest user access (read-only, no authentication)
+
+**Login handler configuration**:
+- Configure login handlers for identity routing
+- Route users based on identity provider type
+- Handle identity matching and user creation
+- Configure authentication flows
+
+**Best practice**: Configure authentication based on user type and security requirements. Use SAML for enterprise SSO, OIDC for external users. Configure login handlers for identity-aware routing.
+
+### Branding and Theming
+
+**Branding configuration**:
+- Configure site logo and branding
+- Set up color schemes and themes
+- Customize fonts and typography
+- Configure mobile branding
+
+**Theme customization**:
+- Use Lightning Design System tokens
+- Customize component styling
+- Configure responsive design
+- Test branding across devices
+
+**Best practice**: Brand sites to match organizational identity. Use Lightning Design System for consistency. Test branding on different devices. Keep branding professional and accessible.
+
+### Security Configuration
+
+**Sharing Sets**:
+- Configure Sharing Sets for portal user data access
+- Define which records portal users can access
+- Set up record-level sharing rules
+- Test sharing with different user types
+
+**Field-Level Security**:
+- Configure field-level security for portal users
+- Restrict sensitive field access
+- Align FLS with compliance requirements
+- Test field visibility with portal users
+
+**Profile and Permission Sets**:
+- Configure Experience Cloud profiles
+- Assign permission sets for portal users
+- Remove delete permissions for portal users
+- Test permissions with portal users
+
+**Best practice**: Configure security carefully for portal users. Use Sharing Sets for record access. Restrict field access appropriately. Remove delete permissions. Test security thoroughly.
+
+### User Experience Configuration
+
+**Page configuration**:
+- Configure site pages and navigation
+- Set up landing pages for different user types
+- Configure page layouts and components
+- Test page functionality with portal users
+
+**Component configuration**:
+- Add Lightning components to pages
+- Configure component visibility and behavior
+- Test components with portal users
+- Optimize component performance
+
+**Mobile configuration**:
+- Configure mobile-responsive layouts
+- Test mobile user experience
+- Optimize for mobile devices
+- Ensure touch-friendly interfaces
+
+**Best practice**: Design user experience for portal users. Keep navigation simple and clear. Test with real portal users. Optimize for mobile devices.
+
+### Content Management
+
+**CMS (Content Management System)**:
+- Configure CMS for content management
+- Create and manage content items
+- Organize content by channels and topics
+- Publish content for portal users
+
+**Knowledge base integration**:
+- Publish knowledge articles to portal
+- Configure article search and browsing
+- Organize articles by categories
+- Enable article feedback
+
+**Best practice**: Use CMS for content management. Publish knowledge articles for self-service. Organize content for easy discovery. Maintain content regularly.
+
+### Analytics and Moderation
+
+**Site analytics**:
+- Configure site analytics and tracking
+- Monitor site usage and performance
+- Track user engagement and behavior
+- Analyze site effectiveness
+
+**Content moderation**:
+- Configure content moderation rules
+- Set up moderation workflows
+- Monitor user-generated content
+- Handle moderation actions
+
+**Best practice**: Monitor site analytics for insights. Configure content moderation for user-generated content. Review analytics regularly for optimization opportunities.
+
+## Q&A
+
+### Q: What is the difference between Experience Cloud and Communities?
+
+**A**: **Experience Cloud** is the current name for what was previously called "Communities" or "Community Cloud". They refer to the same platform for creating branded portals for external users. Use "Experience Cloud" in current documentation.
+
+### Q: When should I use a single portal vs multiple portals?
+
+**A**: Use a **single portal** when user types have similar access patterns, security requirements can be met with Sharing Sets and profiles, and you want to simplify administration. Use **multiple portals** when user types need complete isolation, have different security requirements, or require different data models.
+
+### Q: How do I implement multi-tenant data isolation in Experience Cloud?
+
+**A**: Use multiple Sharing Sets for different profiles, combine with Record Type-based separation, use Apex managed sharing for complex patterns, and ensure Sharing Sets only grant access to the user's tenant records. Use restrictive OWD (Private) and validation rules to prevent cross-tenant access.
+
+### Q: What authentication methods are available for Experience Cloud?
+
+**A**: Available methods include Salesforce authentication (username/password), SAML for enterprise SSO, OIDC for external identity providers, social authentication (if enabled), and guest user access (read-only, no authentication). Choose based on user type and security requirements.
+
+### Q: How do Sharing Sets work for Experience Cloud users?
+
+**A**: Sharing Sets grant community users access to records based on user (records associated with user's contact), account (records associated with user's account), or owner (records owned by the user). They replace traditional sharing rules for portal users, as Customer Community licenses do not support sharing rules.
+
+### Q: What are the security considerations for Experience Cloud portals?
+
+**A**: Configure Sharing Sets for record access, configure field-level security appropriately, remove delete permissions for portal users, test security thoroughly with different user types, and align security with compliance requirements. Portal users should have minimal necessary access.
+
+### Q: How do I handle different user types in a single portal?
+
+**A**: Use different Experience Cloud profiles for different user types, configure Sharing Sets per profile, use Record Types to separate data if needed, configure login handlers for identity-aware routing, and set up different landing pages for different user types.
+
+### Q: What are the performance considerations for Experience Cloud portals?
+
+**A**: Optimize Lightning components for performance, configure mobile-responsive layouts, use efficient SOQL queries in components, implement proper caching strategies, monitor site analytics for performance insights, and test portal performance with realistic data volumes.
 

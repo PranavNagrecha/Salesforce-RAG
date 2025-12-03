@@ -1,3 +1,16 @@
+---
+title: "Governor Limits and Performance Optimization"
+level: "Advanced"
+tags:
+  - apex
+  - development
+  - patterns
+  - governor-limits
+  - performance
+  - optimization
+last_reviewed: "2025-01-XX"
+---
+
 # Governor Limits and Performance Optimization
 
 ## Overview
@@ -160,4 +173,63 @@ These tradeoffs require human judgment based on specific use cases, data volumes
 - **Limit monitoring frequency**: The frequency of limit checking (every operation vs. only expensive operations) requires evaluation based on performance impact and code complexity.
 
 - **Heap size optimization strategies**: The balance between query efficiency and heap usage requires evaluation based on data volumes, record complexity, and available memory.
+
+## Q&A
+
+### Q: What are the most important governor limits to monitor?
+
+**A**: Monitor **SOQL queries** (100 synchronous, 200 async), **DML statements** (150 synchronous, 200 async), **CPU time** (10,000ms synchronous, 60,000ms async), **heap size** (6MB synchronous, 12MB async), and **callouts** (100 synchronous, unlimited async). Use `Limits` class methods to check current usage.
+
+### Q: How do I make SOQL queries selective?
+
+**A**: Use **indexed fields** in WHERE clauses (e.g., Id, Name, Email, Status, Type), ensure queries return less than 10% of records, use selective criteria (e.g., Status = 'Active'), and avoid formula fields in WHERE clauses. Selective queries use indexes and perform much better.
+
+### Q: What is the difference between bulkification and optimization?
+
+**A**: **Bulkification** ensures code handles collections of records (avoids loops with DML/SOQL). **Optimization** improves performance and reduces resource usage (selective queries, efficient algorithms). Both are important: bulkification prevents limit exceptions, optimization improves performance.
+
+### Q: How do I handle governor limit exceptions gracefully?
+
+**A**: Implement proactive limit checking using `Limits` class methods, implement graceful degradation when approaching limits, use async processing for large operations, batch operations to stay within limits, and log limit usage for monitoring. Handle exceptions with appropriate error messages.
+
+### Q: When should I use Batch Apex vs standard DML?
+
+**A**: Use **Batch Apex** for processing thousands or millions of records, operations that exceed synchronous limits, or when you need separate transaction contexts. Use **standard DML** for smaller operations (hundreds of records) that fit within synchronous limits.
+
+### Q: What is query selectivity and why does it matter?
+
+**A**: **Query selectivity** refers to how selective a query is (how many records it returns relative to total records). Queries returning more than 10% of records may be non-selective and cause performance issues. Use indexed fields and selective criteria to ensure queries are selective.
+
+### Q: How do I optimize heap size usage?
+
+**A**: Avoid storing large collections in memory, use streaming patterns for large datasets, release object references when no longer needed, process data in batches, use efficient data structures, and avoid unnecessary object creation. Monitor heap usage with `Limits.getHeapSize()`.
+
+### Q: What are the governor limits for async Apex?
+
+**A**: Async Apex (Batch, Queueable, Scheduled) has **higher limits** than synchronous: 200 SOQL queries, 200 DML statements, 60,000ms CPU time, 12MB heap size. However, there are limits on concurrent jobs (50 batch jobs, 50,000 Queueable jobs per 24 hours).
+
+## Edge Cases and Limitations
+
+### Large Data Volume Scenarios
+
+- **Non-selective queries**: Queries returning >10% of records may be non-selective
+- **Heap size limits**: Large collections can exceed heap size limits
+- **Batch job limits**: 50 concurrent batch jobs, 250,000 batch executions per 24 hours
+- **Query timeout**: Very large queries may timeout
+
+### Performance Considerations
+
+- **Index usage**: Queries must use indexed fields for optimal performance
+- **Query complexity**: Complex queries with many joins may be slow
+- **Data skew**: Uneven data distribution can impact query performance
+- **Concurrent operations**: High concurrency can cause contention and performance issues
+
+## Related Patterns
+
+- [SOQL Query Patterns](soql-query-patterns.md) - Query optimization and selectivity
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Batch, Queueable, and Scheduled Apex for large operations
+- [Large Data Loads](large-data-loads.md) - Bulk API and data load optimization
+- [Locking and Concurrency Strategies](locking-and-concurrency-strategies.md) - Concurrency and resource management
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling for limit exceptions
+- [Apex Patterns](apex-patterns.md) - Bulkification and optimization patterns
 

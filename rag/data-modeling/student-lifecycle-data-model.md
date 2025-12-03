@@ -1,3 +1,15 @@
+---
+title: "Student Lifecycle Data Model"
+level: "Advanced"
+tags:
+  - data-modeling
+  - education-cloud
+  - eda
+  - student-lifecycle
+  - sis-integration
+last_reviewed: "2025-01-XX"
+---
+
 # Student Lifecycle Data Model
 
 ## Overview
@@ -279,4 +291,52 @@ Avoid this model when:
 - No SIS integration required
 - No program enrollment tracking needed
 - Different data model requirements exist
+
+## Q&A
+
+### Q: What is the Education Cloud (EDA) data model?
+
+**A**: The **Education Cloud (EDA) data model** supports higher education institutions, focusing on online and adult-learning programs. It integrates with legacy Student Information Systems (SIS) while supporting CRM workflows for admissions and student engagement. The model uses Contacts as core student/applicant records, Program Enrollment objects for program-level enrollments, and Application objects for application tracking.
+
+### Q: Why use Contact as the core student record instead of a custom object?
+
+**A**: Use Contact because: (1) **Consistent person record** across Education Cloud implementations, (2) **Supports both applicants and enrolled students** (same record type), (3) **Enables relationship modeling** with programs and institutions, (4) **Aligns with Education Cloud standard model**, (5) **Leverages standard Salesforce features** (sharing, relationships). Contacts provide flexibility for student lifecycle management.
+
+### Q: How do I model program enrollments in Education Cloud?
+
+**A**: Model enrollments by: (1) **Program Enrollment object** for program-level enrollments (Education Cloud standard), (2) **Course Enrollment object** for course-level enrollments (if needed), (3) **Link enrollments to Contacts** (students) and Accounts (programs), (4) **Track enrollment status** (Active, Completed, Withdrawn), (5) **Track dates** (start date, end date), (6) **Support multiple active enrollments** per student if institution allows.
+
+### Q: How do I handle applications in the student lifecycle model?
+
+**A**: Handle applications by: (1) **Application objects** (custom or standard) representing applications per student, (2) **Support multiple applications** per student (different programs, different terms), (3) **Include application fields** (status, program, term, modality), (4) **Link to Contacts** (applicants) and Accounts (programs), (5) **Support application checklists** (required documents, tasks), (6) **Track dates** (submission date, decision date).
+
+### Q: How do I integrate with legacy Student Information Systems (SIS)?
+
+**A**: Integrate with SIS by: (1) **External IDs** mirroring SIS primary keys (e.g., EMPLID on Contact), (2) **Batch synchronization** (high-volume batch sync patterns), (3) **ETL platforms** (Dell Boomi, MuleSoft for transformation), (4) **File-based staging** for large datasets, (5) **Data reconciliation** (ensure data consistency). External IDs enable stable record mapping and idempotent operations.
+
+### Q: What is the difference between Program Enrollment and Course Enrollment?
+
+**A**: **Program Enrollment** tracks program-level enrollments (student enrolled in a program/degree). **Course Enrollment** tracks course-level enrollments (student enrolled in specific courses). Use Program Enrollment for program tracking, Course Enrollment for detailed course tracking. Both link to Contacts (students) and can link to Accounts (programs/courses).
+
+### Q: How do I model Accounts in Education Cloud?
+
+**A**: Model Accounts as: (1) **Academic programs** (programs/degrees students enroll in), (2) **Institutions** (if multi-institution model), (3) **Link to Program Enrollments** (students enrolled in programs), (4) **Link to Applications** (applications to programs), (5) **Support hierarchy** (institution → program if needed). Account structure depends on institution model (single vs. multi-institution).
+
+### Q: How do I track student lifecycle stages?
+
+**A**: Track lifecycle by: (1) **Record Types** on Contact (Applicant, Student, Alumni if needed), (2) **Application status** (tracking application stage), (3) **Enrollment status** (tracking enrollment stage), (4) **Status fields** (explicit status tracking), (5) **Date fields** (application date, enrollment date, graduation date). Lifecycle stages help track student progression from applicant to enrolled to alumni.
+
+### Q: When should I use the Education Cloud data model?
+
+**A**: Use when: (1) **Implementing higher education CRM** (admissions, student engagement), (2) **Supporting online/adult-learning programs** (flexible enrollment models), (3) **Integrating with legacy SIS** (batch synchronization), (4) **Tracking program enrollments** (program-level tracking), (5) **Managing applications** (application tracking, multiple applications per student).
+
+### Q: What are best practices for Education Cloud data models?
+
+**A**: Best practices include: (1) **Use Contact as core student record** (consistent with EDA model), (2) **Use Program Enrollment objects** (Education Cloud standard), (3) **Use external IDs** for SIS integration (mirror SIS primary keys), (4) **Support multiple applications** per student, (5) **Track lifecycle stages** (applicant → student → alumni), (6) **Design for SIS integration** (batch sync, reconciliation), (7) **Maintain data quality** (validation, duplicate prevention).
+
+## Related Patterns
+
+- [SIS Synchronization Patterns](../integrations/sis-sync-patterns.md) - High-volume batch sync patterns
+- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns
+- [Data Migration Patterns](data-migration-patterns.md) - Data migration strategies
 

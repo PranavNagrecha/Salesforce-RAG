@@ -1,3 +1,15 @@
+---
+title: "High Availability and Disaster Recovery for Salesforce"
+level: "Advanced"
+tags:
+  - observability
+  - ha
+  - dr
+  - disaster-recovery
+  - business-continuity
+last_reviewed: "2025-01-XX"
+---
+
 # High Availability and Disaster Recovery for Salesforce
 
 ## Overview
@@ -249,6 +261,48 @@ This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for
 - Maintain retention schedules
 - Track retention compliance
 - Review retention policies regularly
+
+## Q&A
+
+### Q: What is High Availability (HA) and Disaster Recovery (DR)?
+
+**A**: **High Availability (HA)** ensures system uptime and minimizes downtime through redundancy and failover. **Disaster Recovery (DR)** is the process of recovering from disasters (data loss, system failures) through backups and restore procedures. HA focuses on preventing downtime, while DR focuses on recovering from disasters.
+
+### Q: What backup strategies should I use for Salesforce?
+
+**A**: Use backup strategies: (1) **Full backup** - complete data export of all objects (daily for critical data), (2) **Incremental backup** - only changed data since last backup, (3) **Differential backup** - all changes since last full backup, (4) **Selective backup** - specific objects or data sets, (5) **On-demand backup** - before major changes. Combine strategies based on data criticality and RPO requirements.
+
+### Q: How often should I backup Salesforce data?
+
+**A**: Backup frequency depends on: (1) **Data criticality** (critical data more frequently), (2) **RPO requirements** (Recovery Point Objective - maximum acceptable data loss), (3) **Change frequency** (how often data changes). Common frequencies: **Daily** for critical production data, **Weekly** for less critical data, **Monthly** for archival data, **On-demand** before major changes.
+
+### Q: What is RTO and RPO?
+
+**A**: **RTO (Recovery Time Objective)** is the maximum acceptable downtime (time to recover). **RPO (Recovery Point Objective)** is the maximum acceptable data loss (point in time to recover to). RTO categories: Critical (minutes to hours), Important (hours to days), Standard (days to weeks). RPO categories: Zero data loss (real-time), Minimal (minutes), Acceptable (hours to days).
+
+### Q: How do I implement failover for integrations?
+
+**A**: Implement failover by: (1) **Designing integrations** with failover capabilities (primary and secondary endpoints), (2) **Implementing retry logic** with exponential backoff, (3) **Using circuit breakers** to prevent cascading failures, (4) **Monitoring integration health** (detect failures quickly), (5) **Automating failover** (switch to backup automatically), (6) **Testing failover procedures** regularly.
+
+### Q: How do I test disaster recovery procedures?
+
+**A**: Test DR procedures by: (1) **Conducting regular DR drills** (quarterly or semi-annually), (2) **Testing backup and restore** procedures, (3) **Testing failover** scenarios, (4) **Documenting test results** and issues, (5) **Updating procedures** based on test findings, (6) **Training team** on DR procedures, (7) **Measuring RTO and RPO** during tests to verify they're met.
+
+### Q: What backup retention policies should I use?
+
+**A**: Use retention policies: (1) **Short-term** (30-90 days) - operational recovery, (2) **Medium-term** (90-365 days) - compliance requirements, (3) **Long-term** (1-7 years) - regulatory compliance, (4) **Archive** (indefinite) - historical records. Retention varies by data type: Production data (business requirements), Metadata (indefinite in version control), Logs (compliance requirements), Backups (RPO requirements).
+
+### Q: How do I automate backups in Salesforce?
+
+**A**: Automate backups by: (1) **Using Salesforce Data Export** (weekly automated exports), (2) **Using third-party backup tools** (OwnBackup, Spanning, etc.), (3) **Using APIs** to automate data export, (4) **Scheduling backups** (daily, weekly, monthly), (5) **Automating backup verification** (ensure backups are valid), (6) **Automating backup archival** (move old backups to archive).
+
+### Q: What should be included in a disaster recovery plan?
+
+**A**: Include in DR plan: (1) **RTO and RPO requirements** per system, (2) **Backup procedures** (what, when, how), (3) **Restore procedures** (step-by-step recovery), (4) **Failover procedures** (how to switch to backup), (5) **Contact information** (who to notify), (6) **Escalation procedures** (when to escalate), (7) **Testing schedule** (when to test DR), (8) **Documentation** (maintain detailed runbooks).
+
+### Q: How do I ensure business continuity during disasters?
+
+**A**: Ensure business continuity by: (1) **Developing DR plans** proactively (before disasters), (2) **Testing DR procedures** regularly, (3) **Maintaining backup systems** (keep backups current and tested), (4) **Training team** on DR procedures, (5) **Monitoring system health** (detect issues early), (6) **Automating failover** where possible, (7) **Documenting procedures** clearly, (8) **Conducting regular drills** to verify readiness.
 
 ## Related Patterns
 

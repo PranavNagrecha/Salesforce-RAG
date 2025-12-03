@@ -1,3 +1,14 @@
+---
+title: "Governor Limit Errors and Solutions"
+level: "Advanced"
+tags:
+  - troubleshooting
+  - apex
+  - governor-limits
+  - performance
+last_reviewed: "2025-01-XX"
+---
+
 # Governor Limit Errors and Solutions
 
 > Troubleshooting guide for Salesforce governor limit errors with solutions and optimization strategies.
@@ -403,6 +414,48 @@ public class ProcessQueueable implements Queueable {
 **Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#asynchronous-apex-patterns)
 
 ---
+
+## Q&A
+
+### Q: What are Salesforce governor limits and why do they exist?
+
+**A**: **Governor limits** are runtime limits enforced by Salesforce to ensure fair resource usage and system stability. They prevent one organization from consuming excessive resources and ensure all organizations have access to shared platform resources. Limits include SOQL queries (100 per transaction), DML statements (150), CPU time (10 seconds), heap size (6MB/12MB), and callouts (100).
+
+### Q: How do I fix "Too many SOQL queries" errors?
+
+**A**: Fix SOQL query limit errors by: (1) **Bulkifying queries** (no queries in loops), (2) **Using maps** to store query results and reuse them, (3) **Querying once** and processing results in memory, (4) **Using aggregate queries** to get summary data, (5) **Optimizing queries** to get all needed data in one query. Never put SOQL queries inside loops - collect IDs first, then query once.
+
+### Q: How do I prevent "Too many DML statements" errors?
+
+**A**: Prevent DML limit errors by: (1) **Bulkifying DML operations** (collect records in lists, then DML once), (2) **Using collections** to batch DML operations, (3) **Avoiding DML in loops**, (4) **Using Database methods** with `allOrNone=false` for partial success, (5) **Batching operations** when processing large datasets. Always collect records first, then perform DML once.
+
+### Q: What causes "CPU time limit exceeded" errors and how do I fix them?
+
+**A**: **CPU time limit exceeded** occurs when code execution exceeds 10 seconds of CPU time. Fix by: (1) **Optimizing algorithms** (reduce complexity), (2) **Using asynchronous processing** (Batch, Queueable, @future) for long-running operations, (3) **Reducing loop iterations**, (4) **Caching expensive calculations**, (5) **Breaking work into smaller chunks**. Move long-running operations to async processing.
+
+### Q: How do I handle "Heap size limit exceeded" errors?
+
+**A**: Handle heap size errors by: (1) **Processing data in batches** instead of loading all at once, (2) **Clearing large collections** when no longer needed, (3) **Using streaming** for large datasets, (4) **Avoiding deep object hierarchies**, (5) **Using Batch Apex** for large data processing. Don't load all data into memory - process incrementally.
+
+### Q: How do I prevent "Too many callouts" errors?
+
+**A**: Prevent callout limit errors by: (1) **Batching callouts** when possible, (2) **Using async processing** (@future, Queueable) for callouts, (3) **Caching callout results** when appropriate, (4) **Using Platform Events** for decoupled integrations, (5) **Monitoring callout count** using `Limits.getCallouts()`. Move callouts to async processing when possible.
+
+### Q: What is the difference between synchronous and asynchronous governor limits?
+
+**A**: **Synchronous limits** apply to code running in the same transaction (SOQL: 100, DML: 150, CPU: 10s). **Asynchronous limits** are higher (SOQL: 200, DML: 150, CPU: 60s) and apply to Batch, Queueable, and @future methods. Use async processing when you need higher limits or long-running operations.
+
+### Q: How do I monitor governor limits in my code?
+
+**A**: Monitor limits using the **`Limits` class**: (1) **`Limits.getQueries()`** - current SOQL queries, (2) **`Limits.getDmlStatements()`** - current DML statements, (3) **`Limits.getCpuTime()`** - current CPU time, (4) **`Limits.getHeapSize()`** - current heap size, (5) **`Limits.getCallouts()`** - current callouts. Use these to check limits before operations and log warnings.
+
+### Q: How do I optimize code to avoid governor limit errors?
+
+**A**: Optimize code by: (1) **Bulkifying all operations** (no DML/SOQL in loops), (2) **Using efficient data structures** (maps, sets), (3) **Caching query results** and calculations, (4) **Using async processing** for long-running operations, (5) **Optimizing SOQL queries** (selective WHERE clauses, indexed fields), (6) **Reducing code complexity** (simpler algorithms), (7) **Testing with bulk data** (200+ records).
+
+### Q: What should I do when I hit a governor limit in production?
+
+**A**: When hitting limits in production: (1) **Identify the limit** (check error message and debug logs), (2) **Analyze the code** causing the limit, (3) **Implement bulkification** or optimization, (4) **Test thoroughly** in sandbox, (5) **Deploy fix** as soon as possible, (6) **Monitor** to ensure fix works, (7) **Consider async processing** if operation is long-running. Always have a rollback plan.
 
 ## Related Patterns
 

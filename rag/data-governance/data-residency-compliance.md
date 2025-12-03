@@ -1,3 +1,16 @@
+---
+title: "Data Residency and Compliance for Salesforce"
+level: "Intermediate"
+tags:
+  - data-governance
+  - compliance
+  - gdpr
+  - ccpa
+  - data-residency
+  - shield
+last_reviewed: "2025-01-XX"
+---
+
 # Data Residency and Compliance for Salesforce
 
 ## Overview
@@ -310,6 +323,48 @@ This guide covers data residency and compliance patterns for Salesforce, includi
 - Document audit findings
 - Address audit findings
 - Follow up on remediation
+
+## Q&A
+
+### Q: What is PII and PHI in Salesforce?
+
+**A**: **PII (Personally Identifiable Information)** includes: Direct identifiers (Name, SSN, email, phone), Indirect identifiers (Date of birth, zip code, IP address), Biometric data, Location data. **PHI (Protected Health Information)** includes: Health information (medical records, diagnoses), Health identifiers (medical record numbers), Payment information (insurance, billing), Research data. Both require special handling and protection.
+
+### Q: How do I handle GDPR compliance in Salesforce?
+
+**A**: Handle GDPR compliance by: (1) **Identifying personal data** (PII inventory), (2) **Implementing data subject rights** (right to access, delete, portability), (3) **Obtaining consent** (consent management), (4) **Implementing data minimization** (collect only necessary data), (5) **Encrypting sensitive data** (Shield Encryption), (6) **Maintaining audit trails** (track data access), (7) **Documenting compliance** (compliance documentation).
+
+### Q: What is Shield Encryption and when should I use it?
+
+**A**: **Shield Encryption** (Platform Encryption) encrypts data at rest in Salesforce. Use it for: (1) **Sensitive fields** (PII, PHI, financial data), (2) **Compliance requirements** (GDPR, HIPAA, PCI-DSS), (3) **Data residency requirements** (data must be encrypted), (4) **Regulatory requirements** (encryption mandated). Shield encrypts standard and custom fields, files, attachments, and search indexes.
+
+### Q: How do I implement field-level encryption?
+
+**A**: Implement field-level encryption by: (1) **Enabling Platform Encryption** in Salesforce, (2) **Identifying fields for encryption** (PII, PHI, sensitive data), (3) **Configuring field encryption** (deterministic or probabilistic), (4) **Configuring Field-Level Security (FLS)** to control access, (5) **Testing encryption functionality**, (6) **Monitoring encryption performance**. Consider performance impact and search functionality with encryption.
+
+### Q: What are GDPR data subject rights and how do I implement them?
+
+**A**: GDPR data subject rights include: (1) **Right to access** (provide data copy), (2) **Right to deletion** (delete personal data), (3) **Right to portability** (export data in machine-readable format), (4) **Right to rectification** (correct inaccurate data), (5) **Right to object** (object to processing). Implement by: creating processes for each right, automating where possible, documenting responses, maintaining audit trails.
+
+### Q: How do I maintain audit trails for compliance?
+
+**A**: Maintain audit trails by: (1) **Enabling Field Audit Trail** for sensitive fields, (2) **Using Event Monitoring** to track data access, (3) **Tracking field value changes** (who, when, what changed), (4) **Maintaining audit trail retention** (based on compliance requirements), (5) **Exporting audit data** for compliance, (6) **Reviewing audit trails regularly**, (7) **Documenting audit trail configuration**.
+
+### Q: What is data residency and how do I handle it?
+
+**A**: **Data residency** requires data to be stored in specific geographic locations. Handle by: (1) **Identifying data residency requirements** (which data, which regions), (2) **Using Salesforce data centers** in required regions, (3) **Configuring data storage** per region, (4) **Ensuring compliance** with residency requirements, (5) **Documenting residency configuration**, (6) **Monitoring data location** (verify data stays in required regions).
+
+### Q: What compliance controls should I implement for SOC2?
+
+**A**: Implement SOC2 controls: (1) **Access controls** (authentication, authorization, FLS), (2) **Encryption** (data at rest, in transit), (3) **Monitoring and logging** (Event Monitoring, audit trails), (4) **Change management** (deployment controls, approval processes), (5) **Incident response** (security incident procedures), (6) **Documentation** (compliance documentation, procedures), (7) **Regular audits** (internal and external audits).
+
+### Q: How do I prepare for compliance audits?
+
+**A**: Prepare for audits by: (1) **Maintaining compliance documentation** (data inventory, procedures), (2) **Conducting internal audits** regularly, (3) **Preparing audit evidence** (logs, documentation, configurations), (4) **Training staff** on audit procedures, (5) **Scheduling regular audits** (quarterly, annually), (6) **Addressing audit findings** promptly, (7) **Following up on remediation** (verify fixes).
+
+### Q: What are best practices for data compliance?
+
+**A**: Best practices include: (1) **Classify data by sensitivity** (identify PII/PHI), (2) **Encrypt sensitive data** (Shield Encryption), (3) **Implement field-level security** (FLS), (4) **Maintain audit trails** (track access and changes), (5) **Document compliance controls** (clear documentation), (6) **Regular compliance reviews** (audits, assessments), (7) **Train teams** on compliance requirements, (8) **Monitor compliance continuously** (alerts, violations).
 
 ## Related Patterns
 

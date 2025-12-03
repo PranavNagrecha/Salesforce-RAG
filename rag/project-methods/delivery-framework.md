@@ -1,3 +1,14 @@
+---
+title: "Project Delivery Framework"
+level: "Intermediate"
+tags:
+  - project-methods
+  - delivery
+  - sprint-based
+  - agile
+last_reviewed: "2025-01-XX"
+---
+
 # Project Delivery Framework
 
 ## Overview
@@ -255,6 +266,48 @@ Avoid this framework when:
 - Rapid prototyping needs
 - Different methodology preferred
 - Minimal quality requirements
+
+## Q&A
+
+### Q: What is a sprint-based delivery framework for Salesforce?
+
+**A**: A **sprint-based delivery framework** manages complex multi-stakeholder Salesforce projects using iterative sprints. It includes: (1) **Clear sprint definitions** with defined scope, (2) **Stakeholder coordination** (aligning with multiple stakeholders), (3) **Testing window coordination** (scheduling testing with stakeholders), (4) **Quality standards** (comprehensive quality requirements), (5) **Iterative delivery** (incremental functionality delivery).
+
+### Q: How do I structure sprints for Salesforce projects?
+
+**A**: Structure sprints by: (1) **Defining clear scope** for each sprint (specific deliverables), (2) **Tracking work separately** (Salesforce config, integrations, portal functionality), (3) **Aligning with testing windows** (schedule testing with stakeholders), (4) **Delivering incrementally** (portal functionality across sprints), (5) **Avoiding scope creep** (clear scope definition and tracking), (6) **Reviewing and adjusting** based on velocity and dependencies.
+
+### Q: How do I coordinate with multiple stakeholders?
+
+**A**: Coordinate stakeholders by: (1) **Identifying all stakeholders** (who needs to be involved), (2) **Defining roles and responsibilities** (who does what), (3) **Scheduling regular meetings** (sprint planning, reviews, standups), (4) **Communicating clearly** (sprint scope, deliverables, timelines), (5) **Managing dependencies** (coordinate across teams), (6) **Resolving conflicts** (address disagreements promptly), (7) **Keeping stakeholders informed** (regular updates, status reports).
+
+### Q: How do I coordinate testing windows with stakeholders?
+
+**A**: Coordinate testing by: (1) **Scheduling testing windows** (align with stakeholder availability), (2) **Defining testing scope** (what to test in each window), (3) **Providing test environments** (sandboxes, test data), (4) **Communicating test requirements** (what stakeholders need to test), (5) **Collecting test feedback** (structured feedback collection), (6) **Addressing test issues** (fix issues, retest), (7) **Tracking test progress** (monitor completion, blockers).
+
+### Q: What quality standards should I enforce?
+
+**A**: Enforce quality standards: (1) **Code quality** (code reviews, static analysis), (2) **Test coverage** (minimum 75%, target 90%+), (3) **Documentation** (code comments, technical docs), (4) **Security** (security reviews, vulnerability scanning), (5) **Performance** (performance testing, optimization), (6) **Accessibility** (WCAG compliance for LWCs), (7) **Compliance** (regulatory requirements). Define standards upfront and enforce consistently.
+
+### Q: How do I manage change in a sprint-based framework?
+
+**A**: Manage change by: (1) **Defining change process** (how to request changes), (2) **Evaluating change impact** (scope, timeline, resources), (3) **Prioritizing changes** (urgent vs. can wait), (4) **Communicating changes** (notify stakeholders), (5) **Adjusting sprint scope** (incorporate approved changes), (6) **Tracking change requests** (log all requests, decisions), (7) **Balancing flexibility with stability** (allow changes but control scope creep).
+
+### Q: When should I use a sprint-based delivery framework?
+
+**A**: Use this framework when: (1) **Complex projects** (multiple stakeholders, integrations), (2) **Multi-stakeholder coordination** (need to align multiple teams), (3) **Integration requirements** (complex integrations need coordination), (4) **Quality requirements** (comprehensive quality standards needed), (5) **Iterative delivery** (incremental functionality delivery), (6) **Change management** (need structured change process).
+
+### Q: What are the tradeoffs of sprint-based delivery?
+
+**A**: Tradeoffs include: (1) **Advantages** - structured approach, stakeholder coordination, quality standards, iterative delivery, (2) **Challenges** - more overhead, requires discipline, stakeholder availability, can be slower than ad-hoc, requires planning. Balance structure with flexibility based on project needs.
+
+### Q: How do I measure sprint delivery success?
+
+**A**: Measure success by: (1) **Sprint velocity** (work completed per sprint), (2) **Scope adherence** (staying within sprint scope), (3) **Quality metrics** (test coverage, defect rates), (4) **Stakeholder satisfaction** (feedback, satisfaction surveys), (5) **Timeline adherence** (on-time delivery), (6) **Change management** (change request volume, handling), (7) **Team velocity** (improving over time).
+
+### Q: What are best practices for sprint-based delivery?
+
+**A**: Best practices include: (1) **Define clear scope** for each sprint, (2) **Coordinate stakeholders** effectively, (3) **Schedule testing windows** with stakeholders, (4) **Enforce quality standards** consistently, (5) **Manage change** through structured process, (6) **Communicate clearly** (scope, deliverables, timelines), (7) **Track progress** (monitor velocity, blockers), (8) **Iterate and improve** (retrospectives, continuous improvement).
 
 ## Related Patterns
 

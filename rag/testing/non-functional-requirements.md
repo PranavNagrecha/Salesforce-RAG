@@ -1,3 +1,15 @@
+---
+title: "Non-Functional Requirements for Salesforce"
+level: "Intermediate"
+tags:
+  - testing
+  - security
+  - accessibility
+  - performance
+  - nfr
+last_reviewed: "2025-01-XX"
+---
+
 # Non-Functional Requirements for Salesforce
 
 ## Overview
@@ -254,6 +266,48 @@ This guide covers non-functional requirements testing for Salesforce, including 
 - Run NFR tests on every build
 - Report NFR test results
 - Alert on NFR violations
+
+## Q&A
+
+### Q: What are non-functional requirements (NFRs) in Salesforce?
+
+**A**: **Non-functional requirements** are quality attributes that define how a system should perform, not what it should do. Key NFRs for Salesforce include: (1) **Security** (authentication, authorization, data protection), (2) **Accessibility** (WCAG compliance for users with disabilities), (3) **Performance** (response times, throughput, scalability), (4) **Reliability** (uptime, error handling).
+
+### Q: How do I test security in Salesforce?
+
+**A**: Test security by: (1) **Vulnerability scanning** for known vulnerabilities, (2) **Penetration testing** by security experts, (3) **Security code review** for security issues, (4) **Security configuration review** of org settings, (5) **Testing authentication and authorization** (access controls), (6) **Testing data protection** (encryption, field-level security), (7) **Testing input validation** and sanitization.
+
+### Q: What accessibility standards should I follow for Lightning Web Components?
+
+**A**: Follow **WCAG 2.1 Level AA standards** for accessibility. This includes: (1) **Keyboard navigation** (all functionality accessible via keyboard), (2) **Screen reader support** (proper ARIA labels and roles), (3) **Color contrast** (sufficient contrast ratios), (4) **Focus indicators** (visible focus states), (5) **Alternative text** for images and icons. Use automated accessibility testing tools and manual testing.
+
+### Q: How do I define performance benchmarks for Salesforce?
+
+**A**: Define performance benchmarks by: (1) **Establishing SLAs** (Service Level Agreements) for response times, (2) **Defining throughput requirements** (requests per second), (3) **Setting scalability targets** (concurrent users, data volume), (4) **Measuring baseline performance**, (5) **Setting performance targets** based on business requirements, (6) **Monitoring performance metrics** continuously.
+
+### Q: When should I test non-functional requirements?
+
+**A**: **Test NFRs early and continuously**: (1) **Include NFR testing in development cycle** (not just at the end), (2) **Automate NFR testing** in CI/CD pipelines, (3) **Run NFR tests on every build**, (4) **Monitor NFR metrics continuously**, (5) **Review NFR requirements regularly**. Early testing prevents costly fixes later.
+
+### Q: How do I automate non-functional requirement testing?
+
+**A**: Automate NFR testing by: (1) **Integrating NFR tests in CI/CD** pipelines, (2) **Using automated security scanning tools**, (3) **Using automated accessibility testing tools** (axe, Pa11y), (4) **Using performance testing tools** (JMeter, Gatling), (5) **Setting up automated monitoring** for NFR metrics, (6) **Alerting on NFR violations**.
+
+### Q: What accessibility testing tools should I use for LWCs?
+
+**A**: Use accessibility testing tools including: (1) **Jest with accessibility matchers** for unit testing, (2) **axe-core** for automated accessibility testing, (3) **Pa11y** for command-line accessibility testing, (4) **Screen readers** (NVDA, JAWS) for manual testing, (5) **Keyboard navigation testing** for keyboard accessibility, (6) **Color contrast analyzers** for color accessibility.
+
+### Q: How do I measure performance in Salesforce?
+
+**A**: Measure performance by: (1) **API response times** (SOQL queries, REST/SOAP calls), (2) **Page load times** (Lightning pages, Experience Cloud), (3) **Transaction times** (DML operations, complex processes), (4) **Throughput** (requests per second), (5) **Resource utilization** (CPU, memory, database), (6) **User experience metrics** (time to interactive, perceived performance).
+
+### Q: What security testing should I perform for Experience Cloud (Communities)?
+
+**A**: Test Experience Cloud security by: (1) **Testing guest user access** (what guests can see/do), (2) **Testing authenticated user access** (permission sets, sharing rules), (3) **Testing data isolation** (users can't see other users' data), (4) **Testing API security** (guest user API access), (5) **Testing file sharing** (who can access files), (6) **Testing form security** (input validation, CSRF protection).
+
+### Q: How do I ensure non-functional requirements are met in production?
+
+**A**: Ensure NFRs in production by: (1) **Continuous monitoring** of security, accessibility, and performance metrics, (2) **Setting up alerts** for NFR violations, (3) **Regular security audits** and penetration testing, (4) **Regular accessibility audits**, (5) **Performance monitoring** and optimization, (6) **Regular NFR reviews** and updates, (7) **Documenting NFR requirements** and SLAs.
 
 ## Related Patterns
 

@@ -69,6 +69,114 @@ Architecture patterns for designing system structure, integration patterns, mult
 - Identity-aware behavior and routing
 - Sharing and security for portals
 
+### architect-role.md
+
+**When to Retrieve**: Understanding the Salesforce architect role, differences between architects and developers, types of architects, or resources for Salesforce architects.
+
+**Summary**: Guide to the Salesforce architect role, covering what architects do, how they differ from developers, different types of architects (Solution, Technical, System, Enterprise), and useful resources for architects.
+
+**Key Topics**:
+- Architect role and responsibilities
+- Architect vs developer differences
+- Types of architects (Solution, Technical, System, Enterprise)
+- Architect career paths
+- Resources for architects
+
+### diagramming-patterns.md
+
+**When to Retrieve**: Creating system architecture diagrams, entity relationship diagrams, sequence diagrams, or other architectural diagrams for Salesforce implementations.
+
+**Summary**: Comprehensive guide to diagramming for Salesforce architects. Covers system architecture diagrams, entity relationship diagrams (ERD), sequence diagrams, activity diagrams, use case diagrams, class diagrams, environment diagrams, actors and licenses diagrams, and role hierarchy diagrams.
+
+**Key Topics**:
+- System architecture diagrams
+- Entity relationship diagrams (ERD)
+- Sequence diagrams
+- Activity diagrams
+- Use case diagrams
+- Class diagrams
+- Environment diagrams
+- Role hierarchy diagrams
+
+### stakeholder-communication.md
+
+**When to Retrieve**: Communicating with stakeholders, managing expectations, asking effective questions, building trust, or presenting architecture options.
+
+**Summary**: Guide to effective stakeholder communication for Salesforce architects. Covers understanding stakeholder audiences, asking effective questions, setting realistic expectations, building trust, and communication patterns for different scenarios.
+
+**Key Topics**:
+- Understanding stakeholder audiences
+- Asking effective questions
+- Setting realistic expectations
+- Building trust with stakeholders
+- Communication patterns and best practices
+
+### team-leadership.md
+
+**When to Retrieve**: Building development teams, leading teams effectively, training developers, or creating learning cultures.
+
+**Summary**: Guide to building, leading, and training Salesforce development teams. Covers finding the right developers, leading through service, training and development approaches, and creating learning cultures.
+
+**Key Topics**:
+- Finding the right developers
+- Service leadership principles
+- Training and development approaches
+- Creating learning cultures
+- Team structure patterns
+
+### project-estimation.md
+
+**When to Retrieve**: Estimating project work, accounting for all team roles, guarding against unrealistic expectations, or solving work from broken requirements.
+
+**Summary**: Comprehensive guide to accurately estimating Salesforce project work. Covers what project estimation is, accounting for all team roles, guarding against unrealistic expectations, estimating to median talent, and solving work from broken requirements.
+
+**Key Topics**:
+- Project work estimation fundamentals
+- Accounting for all team roles
+- Guarding against unrealistic expectations
+- Estimating to median talent
+- Solving work from broken requirements
+- Estimation techniques and patterns
+
+### org-strategy.md
+
+**When to Retrieve**: Choosing between single org and multiple orgs, evaluating org strategy options, or understanding org strategy tradeoffs.
+
+**Summary**: Guide to determining Salesforce org strategy. Covers single org vs multiple orgs decision framework, evaluating factors like data isolation, security requirements, business unit independence, integration needs, and cost.
+
+**Key Topics**:
+- Single org strategy
+- Multiple org strategy
+- Hybrid org strategy
+- Decision framework
+- Org strategy tradeoffs
+
+### mobile-strategy.md
+
+**When to Retrieve**: Choosing mobile strategy for Salesforce, evaluating mobile options, or understanding mobile platform capabilities.
+
+**Summary**: Guide to choosing mobile strategy for Salesforce orgs. Covers Salesforce Mobile App, Experience Cloud mobile, custom mobile apps, decision framework, and mobile-optimized LWC patterns.
+
+**Key Topics**:
+- Salesforce Mobile App
+- Experience Cloud mobile
+- Custom mobile apps
+- Mobile strategy decision framework
+- Mobile-optimized LWC patterns
+
+### governance-patterns.md
+
+**When to Retrieve**: Establishing Salesforce org governance, setting up Center of Excellence (COE), defining governance policies, or implementing change management.
+
+**Summary**: Comprehensive guide to Salesforce org governance. Covers what governance is, Center of Excellence (COE) models, governance policies, change management, and governance maturity model.
+
+**Key Topics**:
+- Governance fundamentals
+- Center of Excellence (COE) models
+- Governance policies
+- Change management
+- Governance maturity model
+
 ## Integration Patterns
 
 Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.
@@ -79,6 +187,7 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 - [salesforce-to-llm-data-pipelines.md](integrations/salesforce-to-llm-data-pipelines.md) — Pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents)
 - [change-data-capture-patterns.md](integrations/change-data-capture-patterns.md) — Change Data Capture patterns: CDC event processing, Platform Event integration, error handling, replay strategies, and real-time integration patterns
 - [integration-user-license-guide.md](integrations/integration-user-license-guide.md) — Comprehensive guide to Salesforce Integration User Licenses (free API-only license): setup, authentication, permissions, security, and best practices
+- [callout-best-practices.md](integrations/callout-best-practices.md) — Comprehensive callout best practices: limitations, Named Credentials, error handling, asynchronous patterns, circuit breakers, response optimization, DML restrictions, testing, and monitoring
 
 ### etl-vs-api-vs-events.md
 
@@ -147,6 +256,23 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 - Integration patterns with MuleSoft and Dell Boomi
 - Operational monitoring and troubleshooting
 
+### callout-best-practices.md
+
+**When to Retrieve**: Implementing HTTP callouts in Salesforce, understanding callout limitations and constraints, designing robust callout patterns with error handling, implementing circuit breaker patterns for high-volume integrations, optimizing callout response processing, handling DML before callout restrictions, testing callouts with mocking, or monitoring callout performance.
+
+**Summary**: Comprehensive best practices for implementing HTTP callouts in Salesforce. Covers callout limitations (10s sync timeout, 100 callouts per transaction, 6MB heap limit, 120s async timeout), Named Credentials for authentication, comprehensive error handling patterns, asynchronous callout patterns (Queueable, @future), circuit breaker pattern implementation, response processing optimization, DML before callout restrictions, comprehensive testing patterns with mocking, and callout monitoring and performance logging.
+
+**Key Topics**:
+- Callout limitations and constraints
+- Named Credentials for authentication and endpoint management
+- Comprehensive error handling with status code checking
+- Asynchronous callout patterns (Queueable, @future)
+- Circuit breaker pattern for high-volume integrations
+- Response processing optimization to avoid heap size limits
+- DML before callout restrictions and solutions
+- Comprehensive testing patterns with HTTP callout mocking
+- Callout monitoring and performance logging
+
 ## Identity and SSO
 
 Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.
@@ -178,6 +304,8 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - [object-setup-and-configuration.md](data-modeling/object-setup-and-configuration.md) — Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
 - [file-management-patterns.md](data-modeling/file-management-patterns.md) — File management patterns covering ContentVersion vs Attachments vs Documents, file storage, sharing, versioning, and migration strategies
 - [data-migration-patterns.md](data-modeling/data-migration-patterns.md) — Data migration patterns: import strategies, transformation patterns, validation approaches, rollback strategies, and migration best practices
+- [data-storage-planning.md](data-modeling/data-storage-planning.md) — Data storage planning: calculating storage usage, understanding storage limits, planning for future growth, and storage optimization strategies
+- [standard-object-oddities.md](data-modeling/standard-object-oddities.md) — Standard object oddities and constraints: objects where quick actions aren't available, queue support, fixed CRUD permissions, lookup constraints, and dynamic forms support
 
 ### external-ids-and-integration-keys.md
 
@@ -267,13 +395,41 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 - External file storage integration
 - File migration patterns
 
+### data-storage-planning.md
+
+**When to Retrieve**: Planning data storage capacity, calculating current storage usage, understanding storage limits, planning for future growth, or optimizing storage usage.
+
+**Summary**: Comprehensive guide to data storage planning in Salesforce. Covers how Salesforce calculates storage, calculating current storage usage, objects that don't count toward storage, planning for future growth, and storage optimization strategies.
+
+**Key Topics**:
+- How Salesforce calculates storage (data and file storage)
+- Calculating current storage usage
+- Objects that don't count toward storage
+- Planning for future growth
+- Storage optimization strategies (archiving, file management)
+
+### standard-object-oddities.md
+
+**When to Retrieve**: Understanding standard object constraints, objects where quick actions aren't available, objects that support queues, objects with fixed CRUD permissions, or objects that can't be used in lookup relationships.
+
+**Summary**: Guide to standard object oddities and constraints in Salesforce. Covers objects where quick actions aren't available, objects that can have queues own them, objects with fixed CRUD permissions, objects that can't be used in lookup relationships, and objects that support dynamic forms.
+
+**Key Topics**:
+- Objects where quick actions aren't available
+- Objects that support queue ownership
+- Objects with fixed CRUD permissions
+- Objects that can't be lookup parents
+- Objects that support dynamic forms
+
 ## Security
 
 Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms.
 
 - [permission-set-architecture.md](security/permission-set-architecture.md) — Guide to permission set-driven security architecture with Profiles for UI configuration and Permission Sets for access control
 - [salesforce-llm-data-governance.md](security/salesforce-llm-data-governance.md) — Security and governance patterns for choosing what data to expose from Salesforce to LLMs and how to do that safely
-- [sharing-mechanisms.md](security/sharing-mechanisms.md) — Comprehensive guide to all Salesforce sharing mechanisms including OWD, Role Hierarchy, Sharing Rules, Apex Managed Sharing, View All/Modify All permissions, Sharing Sets, and community sharing patterns
+- [sharing-fundamentals.md](security/sharing-fundamentals.md) — Fundamentals of Salesforce sharing: Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions
+- [sharing-rules-and-manual-sharing.md](security/sharing-rules-and-manual-sharing.md) — Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, and Apex Managed Sharing
+- [sharing-sets-and-portals.md](security/sharing-sets-and-portals.md) — Experience Cloud sharing patterns, Sharing Sets, field-level considerations, performance optimization, best practices, troubleshooting, and code examples
 
 ### permission-set-architecture.md
 
@@ -302,24 +458,187 @@ Security and access control patterns for implementing permission set-driven secu
 - Data masking and redaction strategies
 - Governance and compliance (GDPR, CCPA, HIPAA, FERPA)
 
-### sharing-mechanisms.md
+### sharing-fundamentals.md
 
-**When to Retrieve**: Understanding how Salesforce sharing works, implementing sharing rules for internal users, designing Experience Cloud sharing with Sharing Sets, deciding between different sharing mechanisms, troubleshooting sharing access issues, implementing Apex managed sharing, understanding View All/Modify All permissions, designing multi-tenant data isolation patterns, or optimizing sharing for large data volumes.
+**When to Retrieve**: Understanding the fundamentals of Salesforce sharing, setting Org-Wide Defaults for objects, designing role hierarchy for access control, deciding when to use View All/Modify All permissions, or understanding the order of sharing evaluation.
 
-**Summary**: Comprehensive guide to all Salesforce sharing mechanisms. Covers Org-Wide Defaults (OWD), Role Hierarchy, Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, Apex Managed Sharing, View All/Modify All permissions (object and system level), View All Fields/Modify All Fields permissions, Sharing Sets for Experience Cloud, community sharing patterns, sharing calculation and performance, decision frameworks for selecting sharing mechanisms, best practices, common patterns, troubleshooting, and code examples.
+**Summary**: Fundamentals of Salesforce sharing including Org-Wide Defaults (OWD), Role Hierarchy, View All/Modify All permissions (object and system level), and View All Fields/Modify All Fields permissions.
 
 **Key Topics**:
 - Org-Wide Defaults (Private, Public Read Only, Public Read/Write)
 - Role Hierarchy and hierarchical access patterns
-- Sharing Rules (Owner-based, Criteria-based, Territory-based)
-- Manual Sharing and Apex Managed Sharing
 - View All/Modify All permissions (object and system level)
 - View All Fields/Modify All Fields permissions
+- Sharing vs. Permissions distinction
+- Order of sharing evaluation
+
+### sharing-rules-and-manual-sharing.md
+
+**When to Retrieve**: Implementing sharing rules for internal users, deciding between sharing rules and Apex managed sharing, implementing Apex managed sharing for complex requirements, understanding manual sharing use cases, or troubleshooting sharing rule issues.
+
+**Summary**: Sharing Rules (Owner-based, Criteria-based, Territory-based), Manual Sharing, and Apex Managed Sharing. Includes implementation patterns, decision frameworks, and code examples.
+
+**Key Topics**:
+- Owner-based sharing rules
+- Criteria-based sharing rules
+- Territory-based sharing rules
+- Manual sharing
+- Apex Managed Sharing and Apex Sharing Reasons
+- Decision frameworks for selecting sharing mechanisms
+- Code examples and testing patterns
+
+### sharing-sets-and-portals.md
+
+**When to Retrieve**: Designing Experience Cloud sharing with Sharing Sets, implementing portal sharing patterns, understanding field-level sharing considerations, optimizing sharing for large data volumes, troubleshooting sharing access issues, or designing multi-tenant data isolation patterns.
+
+**Summary**: Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples.
+
+**Key Topics**:
 - Sharing Sets for Experience Cloud (Community) users
 - Community sharing patterns and multi-tenant data isolation
+- Field-Level Security (FLS) and sharing interactions
 - Sharing calculation, performance, and optimization
-- Decision frameworks for selecting sharing mechanisms
 - Best practices, common patterns, and troubleshooting
+- Code examples for community sharing
+
+## Best Practices
+
+Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features.
+
+- [salesforce-product-evaluation.md](architecture/salesforce-product-evaluation.md) — Salesforce product evaluation: platform foundation, Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Analytics Cloud, Integration Cloud, and industry-specific clouds
+- [org-edition-selection.md](architecture/org-edition-selection.md) — Salesforce org edition selection: Essentials, Professional, Enterprise, Unlimited, Developer editions and their implications
+- [user-license-selection.md](architecture/user-license-selection.md) — User license selection: Standard User, Platform User, Community/Experience Cloud User, Integration User, Chatter User licenses and selection criteria
+- [salesforce-pricing-negotiation.md](architecture/salesforce-pricing-negotiation.md) — Salesforce pricing negotiation: pricing models, contract negotiation strategies, and cost optimization
+- [salesforce-org-staffing.md](best-practices/salesforce-org-staffing.md) — Salesforce org staffing: roles in the Salesforce ecosystem, team composition, and staffing best practices
+- [reports-dashboards.md](best-practices/reports-dashboards.md) — Reports and dashboards: creating reports, building dashboards, report types, and dashboard best practices
+- [sales-cloud-features.md](best-practices/sales-cloud-features.md) — Sales Cloud features: opportunities, leads, accounts, contacts, products, pricebooks, quotes, and sales processes
+- [service-cloud-features.md](best-practices/service-cloud-features.md) — Service Cloud features: cases, knowledge, entitlements, service processes, and service automation
+- [complex-reporting.md](best-practices/complex-reporting.md) — Complex reporting: deciding between Salesforce Reports, CRM Analytics, and Tableau for complex reporting needs
+
+### salesforce-product-evaluation.md
+
+**When to Retrieve**: Evaluating Salesforce products, understanding platform foundation, comparing Sales Cloud vs Service Cloud, choosing between Analytics Cloud options, or understanding industry-specific clouds.
+
+**Summary**: Comprehensive guide to Salesforce product evaluation. Covers the platform foundation, Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Analytics Cloud, Integration Cloud, and industry-specific clouds. Includes key features, use cases, and considerations for each product.
+
+**Key Topics**:
+- Platform foundation and core capabilities
+- Sales Cloud features and use cases
+- Service Cloud features and use cases
+- Marketing Cloud overview
+- Experience Cloud (Communities) overview
+- Analytics Cloud (CRM Analytics, Tableau) overview
+- Integration Cloud overview
+- Industry-specific clouds
+
+### org-edition-selection.md
+
+**When to Retrieve**: Choosing a Salesforce org edition, understanding edition differences, evaluating feature availability by edition, or planning org upgrades.
+
+**Summary**: Guide to Salesforce org editions and their implications. Covers Essentials, Professional, Enterprise, Unlimited, and Developer editions, including feature availability, scalability, and cost considerations.
+
+**Key Topics**:
+- Essentials edition features and limitations
+- Professional edition features and limitations
+- Enterprise edition features and capabilities
+- Unlimited edition features and capabilities
+- Developer edition overview
+- Edition comparison and selection criteria
+
+### user-license-selection.md
+
+**When to Retrieve**: Selecting user licenses, understanding license types, planning license allocation, or optimizing license costs.
+
+**Summary**: Guide to Salesforce user license selection. Covers Standard User, Platform User, Community/Experience Cloud User, Integration User, and Chatter User licenses, including use cases and selection criteria.
+
+**Key Topics**:
+- Standard User license features and use cases
+- Platform User license features and use cases
+- Community/Experience Cloud User license features
+- Integration User license (free API-only license)
+- Chatter User license features
+- License selection criteria and cost optimization
+
+### salesforce-pricing-negotiation.md
+
+**When to Retrieve**: Negotiating Salesforce contracts, understanding pricing models, optimizing costs, or planning Salesforce investments.
+
+**Summary**: Guide to Salesforce pricing negotiation. Covers pricing models, contract negotiation strategies, cost optimization tips, and best practices for managing Salesforce costs.
+
+**Key Topics**:
+- Salesforce pricing models
+- Contract negotiation strategies
+- Cost optimization tips
+- License optimization
+- Best practices for cost management
+
+### salesforce-org-staffing.md
+
+**When to Retrieve**: Planning Salesforce org staffing, understanding roles in the Salesforce ecosystem, building a Salesforce team, or optimizing team structure.
+
+**Summary**: Guide to Salesforce org staffing. Covers roles in the Salesforce ecosystem (Admin, Developer, Architect, Business Analyst, Project Manager), team composition, and staffing best practices.
+
+**Key Topics**:
+- Salesforce administrator role
+- Salesforce developer role
+- Salesforce architect role
+- Business analyst role
+- Project manager role
+- Team composition and structure
+- Staffing best practices
+
+### reports-dashboards.md
+
+**When to Retrieve**: Creating reports and dashboards, understanding report types, building dashboards, or optimizing report performance.
+
+**Summary**: Guide to reports and dashboards in Salesforce. Covers creating reports, building dashboards, report types, dashboard components, and best practices for reports and dashboards.
+
+**Key Topics**:
+- Report creation and configuration
+- Dashboard building and components
+- Report types (Tabular, Summary, Matrix, Joined)
+- Dashboard best practices
+- Report performance optimization
+
+### sales-cloud-features.md
+
+**When to Retrieve**: Understanding Sales Cloud features, implementing sales processes, managing opportunities and leads, or configuring products and pricebooks.
+
+**Summary**: Guide to Sales Cloud features. Covers opportunities, leads, accounts, contacts, products, pricebooks, quotes, and sales processes.
+
+**Key Topics**:
+- Opportunity management
+- Lead management
+- Account and contact management
+- Products and pricebooks
+- Quotes and contracts
+- Sales processes and automation
+
+### service-cloud-features.md
+
+**When to Retrieve**: Understanding Service Cloud features, implementing service processes, managing cases, or configuring knowledge and entitlements.
+
+**Summary**: Guide to Service Cloud features. Covers cases, knowledge, entitlements, service processes, and service automation.
+
+**Key Topics**:
+- Case management
+- Knowledge base
+- Entitlements and service level agreements
+- Service processes
+- Service automation
+
+### complex-reporting.md
+
+**When to Retrieve**: Deciding between Salesforce Reports, CRM Analytics, and Tableau for complex reporting needs, understanding reporting tool capabilities, or planning reporting strategy.
+
+**Summary**: Guide to complex reporting in Salesforce. Covers when to use Salesforce Reports vs CRM Analytics vs Tableau, capabilities of each tool, and decision frameworks for reporting tool selection.
+
+**Key Topics**:
+- Salesforce Reports capabilities and limitations
+- CRM Analytics capabilities and use cases
+- Tableau capabilities and use cases
+- Decision framework for reporting tool selection
+- Reporting strategy planning
 
 ## Development
 
@@ -336,6 +655,11 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - [soql-query-patterns.md](development/soql-query-patterns.md) — Practical SOQL query patterns and examples for common scenarios, including relationship queries, aggregate queries, subqueries, maintenance queries, and cursor-based pagination
 - [asynchronous-apex-patterns.md](development/asynchronous-apex-patterns.md) — Comprehensive guide to asynchronous Apex: Batch, Queueable, Scheduled, and @future methods with decision frameworks, patterns, and best practices
 - [custom-settings-metadata-patterns.md](development/custom-settings-metadata-patterns.md) — Guide to Custom Settings and Custom Metadata: decision framework, usage patterns, migration strategies, and best practices
+- [admin-basics.md](development/admin-basics.md) — Salesforce administration basics: navigation, org setup, company information, UI settings, user management (creating users, managing licenses, password management, proxy login, and user access), and admin fundamentals
+- [formulas-validation-rules.md](development/formulas-validation-rules.md) — Formulas and validation rules: creating formulas, validation rules with formulas, lookup filters, and custom labels
+- [lightning-app-builder.md](development/lightning-app-builder.md) — Lightning App Builder: creating Lightning pages, component configuration, dynamic forms and actions, and best practices
+- [email-management.md](development/email-management.md) — Email management: email limits, email logs, email templates, list email, mass email, and flow email
+- [large-data-loads.md](development/large-data-loads.md) — Large data loads: tools for data loads, data quality considerations, preventing data skew, testing environments, and data load planning
 
 ### error-handling-and-logging.md
 
@@ -403,9 +727,9 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 ### lwc-patterns.md
 
-**When to Retrieve**: Building console-style Lightning Web Components, implementing complex business logic in LWCs, designing service-layer patterns for LWCs, creating config-driven UI components, optimizing LWC performance and accessibility, or implementing performance-optimized LWC controller patterns with cache busting and lazy loading.
+**When to Retrieve**: Building console-style Lightning Web Components, implementing complex business logic in LWCs, designing service-layer patterns for LWCs, creating config-driven UI components, optimizing LWC performance and accessibility, implementing performance-optimized LWC controller patterns with cache busting and lazy loading, or dynamically displaying fields in lightning-record-edit-form based on Custom Metadata configuration.
 
-**Summary**: Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, and performance optimization with accessibility considerations. Includes detailed Performance-Optimized LWC Controller Pattern with cache busting, lazy loading, and single Apex call strategies.
+**Summary**: Lightning Web Component (LWC) patterns for complex business logic. Covers console-style LWC patterns, fraud/risk scoring component implementation, program-selection component patterns, service-layer patterns for LWCs, config-driven UI patterns, dynamic field display patterns using Custom Metadata, and performance optimization with accessibility considerations. Includes detailed Performance-Optimized LWC Controller Pattern with cache busting, lazy loading, and single Apex call strategies.
 
 **Key Topics**:
 - Console-style LWC patterns
@@ -413,6 +737,7 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Program-selection LWC patterns
 - Service-layer pattern for LWCs
 - Config-driven UI patterns
+- Dynamic field display patterns (Custom Metadata-driven fields in lightning-record-edit-form)
 - Performance optimization and accessibility
 - Performance-Optimized LWC Controller Pattern
 - Cache busting with random parameters
@@ -477,6 +802,84 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 - Security enforcement in Apex queries
 - Common query patterns (IN, LIKE, NULL checks, comparisons)
 
+### custom-settings-metadata-patterns.md
+
+**When to Retrieve**: Deciding between Custom Settings and Custom Metadata, implementing configuration management, migrating from Custom Settings to Custom Metadata, or using configuration in Apex and Flows.
+
+**Summary**: Guide to Custom Settings and Custom Metadata Types. Covers decision framework for choosing between Custom Settings and Custom Metadata, usage patterns, migration strategies, and best practices for configuration management.
+
+**Key Topics**:
+- Custom Settings vs Custom Metadata decision framework
+- Hierarchical and List Custom Settings
+- Custom Metadata Types
+- Migration from Custom Settings to Custom Metadata
+- Configuration management best practices
+
+### admin-basics.md
+
+**When to Retrieve**: Understanding Salesforce administration basics, navigating Salesforce UI, setting up orgs, configuring org settings, or learning admin fundamentals.
+
+**Summary**: Comprehensive guide to Salesforce administration basics. Covers the Salesforce administrator role, navigating Lightning and Classic UI, sandbox setup, company information, language and time zone settings, storage limits, UI settings, theme and branding, and business hours.
+
+**Key Topics**:
+- Salesforce administrator role and responsibilities
+- Navigating Lightning and Classic UI
+- Sandbox setup and management
+- Org setup and configuration
+- UI settings and branding
+
+### formulas-validation-rules.md
+
+**When to Retrieve**: Creating formulas, validation rules, custom labels, lookup filters, or understanding formula functions in Salesforce.
+
+**Summary**: Comprehensive guide to formulas, validation rules, custom labels, and lookup filters. Covers formula introduction, creating validation rules with formulas, lookup field filters, custom labels, and best practices.
+
+**Key Topics**:
+- Formula fundamentals and functions
+- Validation rules with formulas
+- Lookup field filters
+- Custom labels
+- Best practices and patterns
+
+### lightning-app-builder.md
+
+**When to Retrieve**: Using Lightning App Builder, creating Lightning pages, configuring Lightning Experience components, or implementing dynamic forms and actions.
+
+**Summary**: Guide to Lightning App Builder for creating and customizing Lightning pages. Covers Lightning App Builder basics, creating Lightning pages, component configuration, dynamic forms and actions, and best practices.
+
+**Key Topics**:
+- Lightning App Builder basics
+- Creating Lightning pages
+- Component configuration
+- Dynamic forms and actions
+- Best practices
+
+### email-management.md
+
+**When to Retrieve**: Managing email in Salesforce, understanding email limits, creating email templates, sending emails from Salesforce, or configuring email settings.
+
+**Summary**: Guide to email management in Salesforce. Covers email limits, email logs, email templates, list email, mass email, flow email, and email best practices.
+
+**Key Topics**:
+- Email limits and constraints
+- Email logs and tracking
+- Email templates
+- List and mass email
+- Flow email actions
+
+### large-data-loads.md
+
+**When to Retrieve**: Planning large data loads, selecting tools for data loads, preventing data skew, testing large data loads, or executing data migration projects.
+
+**Summary**: Comprehensive guide to large data loads in Salesforce. Covers tools for large data loads (Data Loader, Bulk API, ETL tools), data quality considerations, preventing data skew, testing environments, and data load planning.
+
+**Key Topics**:
+- Tools for large data loads (Data Loader, Bulk API, ETL)
+- Data quality considerations (deduplication, cleanup)
+- Preventing data skew
+- Testing environments
+- Data load planning and execution
+
 ## Troubleshooting
 
 Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis.
@@ -484,7 +887,7 @@ Debugging and troubleshooting approaches for integration debugging, data reconci
 - [integration-debugging.md](troubleshooting/integration-debugging.md) — Systematic approaches to troubleshooting integration failures using SOQL debugging, history object queries, and root cause analysis
 - [data-reconciliation.md](troubleshooting/data-reconciliation.md) — Approaches to reconciling data between Salesforce and external systems using external IDs and integration job tracking
 - [common-apex-errors.md](troubleshooting/common-apex-errors.md) — Common Apex errors with solutions: UNABLE_TO_LOCK_ROW, NULL_POINTER_EXCEPTION, QUERY_EXCEPTION, DML_EXCEPTION, LIMIT_EXCEPTION
-- [common-lwc-errors.md](troubleshooting/common-lwc-errors.md) — Common LWC errors with solutions: property access errors, wire adapter errors, event handling errors
+- [common-lwc-errors.md](troubleshooting/common-lwc-errors.md) — Common LWC errors with solutions: property access errors, wire adapter errors, event handling errors, INVALID_FIELD_FOR_INSERT_UPDATE field update errors
 - [lwc-accessibility-errors.md](troubleshooting/lwc-accessibility-errors.md) — Common LWC accessibility errors with solutions: missing labels, ARIA issues, keyboard traps, focus indicators, color contrast, WCAG violations
 - [governor-limit-errors.md](troubleshooting/governor-limit-errors.md) — Governor limit errors and solutions: too many SOQL queries, too many DML statements, CPU time limits, heap size limits
 
@@ -513,6 +916,22 @@ Debugging and troubleshooting approaches for integration debugging, data reconci
 - Field-level reconciliation
 - Discrepancy identification
 - Reconciliation reporting and alerting
+
+### common-lwc-errors.md
+
+**When to Retrieve**: Troubleshooting common Lightning Web Component errors, resolving property access errors, fixing wire adapter errors, handling event handling errors, or resolving INVALID_FIELD_FOR_INSERT_UPDATE field update errors in lightning-record-edit-form.
+
+**Summary**: Troubleshooting guide for common Lightning Web Component errors with solutions and prevention strategies. Covers property access errors (undefined value access), wire adapter errors (invalid parameters, reactive parameters), event handling errors (invalid event names, dispatchEvent context), template errors (multiple templates), and field update errors (INVALID_FIELD_FOR_INSERT_UPDATE with page layout requirements).
+
+**Key Topics**:
+- Property access errors and null checking patterns
+- Wire adapter errors and reactive parameter handling
+- Event handling errors and event naming conventions
+- Template structure errors
+- INVALID_FIELD_FOR_INSERT_UPDATE: Unable to create/update fields error
+- Page layout requirement for lightning-record-edit-form fields
+- Field-Level Security troubleshooting
+- Step-by-step field update error resolution checklist
 
 ## Patterns
 
@@ -728,6 +1147,7 @@ Testing patterns and examples for Apex, LWC, and integration testing.
 - [test-data-factories.md](testing/test-data-factories.md) — Test data factory patterns: basic factories, relationship factories, customization, bulk data creation
 - [automated-testing-patterns.md](testing/automated-testing-patterns.md) — Automated testing at scale: Apex test data factories, UI test automation for LWC/Experience Cloud, contract tests for integrations, and load testing patterns
 - [non-functional-requirements.md](testing/non-functional-requirements.md) — Non-functional requirements: Security testing, accessibility for LWCs/portals, and performance benchmarks
+- [lwc-jest-testing.md](testing/lwc-jest-testing.md) — LWC Jest testing: setting up Jest, writing test cases, testing wire adapters and Apex calls, testing events, and Jest testing patterns
 
 ### automated-testing-patterns.md
 
@@ -752,6 +1172,21 @@ Testing patterns and examples for Apex, LWC, and integration testing.
 - Accessibility testing (WCAG compliance)
 - Performance benchmarks and SLAs
 - NFR test automation
+
+### lwc-jest-testing.md
+
+**When to Retrieve**: Writing Jest tests for Lightning Web Components, testing component behavior, testing wire adapters, or testing Apex calls from LWC.
+
+**Summary**: Comprehensive guide to Jest testing for Lightning Web Components. Covers setting up Jest, writing test cases, testing events and conditional rendering, testing wire adapters and Apex calls, testing child components, and integrating Jest tests into CI/CD pipelines.
+
+**Key Topics**:
+- Jest testing setup
+- Testing component properties and behavior
+- Testing events and interactions
+- Testing wire adapters
+- Testing Apex method calls
+- Testing child components
+- Jest testing patterns and best practices
 
 ## Quick Start Guides
 
@@ -930,23 +1365,32 @@ See individual RAG files for domain-specific terminology and definitions.
 
 ## File Status
 
-### Completed Files (68 total)
+### Completed Files (104 total)
 
-**Architecture (2 files)**:
+**Architecture (10 files)**:
 - ✅ `architecture/event-driven-architecture.md`
 - ✅ `architecture/portal-architecture.md`
+- ✅ `architecture/architect-role.md`
+- ✅ `architecture/diagramming-patterns.md`
+- ✅ `architecture/stakeholder-communication.md`
+- ✅ `architecture/team-leadership.md`
+- ✅ `architecture/project-estimation.md`
+- ✅ `architecture/org-strategy.md`
+- ✅ `architecture/mobile-strategy.md`
+- ✅ `architecture/governance-patterns.md`
 
-**Integrations (5 files)**:
+**Integrations (6 files)**:
 - ✅ `integrations/etl-vs-api-vs-events.md`
 - ✅ `integrations/integration-platform-patterns.md`
 - ✅ `integrations/sis-sync-patterns.md`
 - ✅ `integrations/salesforce-to-llm-data-pipelines.md`
 - ✅ `integrations/change-data-capture-patterns.md`
+- ✅ `integrations/callout-best-practices.md`
 
 **Identity & SSO (1 file)**:
 - ✅ `identity-sso/multi-tenant-identity-architecture.md`
 
-**Data Modeling (7 files)**:
+**Data Modeling (9 files)**:
 - ✅ `data-modeling/external-ids-and-integration-keys.md`
 - ✅ `data-modeling/student-lifecycle-data-model.md`
 - ✅ `data-modeling/case-management-data-model.md`
@@ -954,13 +1398,17 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `data-modeling/object-setup-and-configuration.md`
 - ✅ `data-modeling/file-management-patterns.md`
 - ✅ `data-modeling/data-migration-patterns.md`
+- ✅ `data-modeling/data-storage-planning.md`
+- ✅ `data-modeling/standard-object-oddities.md`
 
-**Security (3 files)**:
+**Security (5 files)**:
 - ✅ `security/permission-set-architecture.md`
 - ✅ `security/salesforce-llm-data-governance.md`
-- ✅ `security/sharing-mechanisms.md`
+- ✅ `security/sharing-fundamentals.md`
+- ✅ `security/sharing-rules-and-manual-sharing.md`
+- ✅ `security/sharing-sets-and-portals.md`
 
-**Development (10 files)**:
+**Development (16 files)**:
 - ✅ `development/error-handling-and-logging.md`
 - ✅ `development/apex-patterns.md`
 - ✅ `development/flow-patterns.md`
@@ -971,6 +1419,12 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `development/governor-limits-and-optimization.md`
 - ✅ `development/asynchronous-apex-patterns.md`
 - ✅ `development/custom-settings-metadata-patterns.md`
+- ✅ `development/admin-basics.md`
+- ✅ `development/admin-basics.md` (includes user management section)
+- ✅ `development/formulas-validation-rules.md`
+- ✅ `development/lightning-app-builder.md`
+- ✅ `development/email-management.md`
+- ✅ `development/large-data-loads.md`
 
 **Troubleshooting (6 files)**:
 - ✅ `troubleshooting/integration-debugging.md`
@@ -980,12 +1434,13 @@ See individual RAG files for domain-specific terminology and definitions.
 - ✅ `troubleshooting/governor-limit-errors.md`
 - ✅ `troubleshooting/lwc-accessibility-errors.md`
 
-**Testing (3 files)**:
+**Testing (6 files)**:
 - ✅ `testing/apex-testing-patterns.md`
 - ✅ `testing/test-data-factories.md`
 - ✅ `testing/automated-testing-patterns.md`
 - ✅ `testing/non-functional-requirements.md`
 - ✅ `testing/lwc-accessibility-testing.md`
+- ✅ `testing/lwc-jest-testing.md`
 
 **Quick Start (3 files)**:
 - ✅ `quick-start/apex-quick-start.md`
@@ -1062,6 +1517,17 @@ See individual RAG files for domain-specific terminology and definitions.
 
 **Glossary (1 file)**:
 - ✅ `glossary/core-terminology.md`
+
+**Best Practices (9 files)**:
+- ✅ `architecture/salesforce-product-evaluation.md`
+- ✅ `architecture/org-edition-selection.md`
+- ✅ `architecture/user-license-selection.md`
+- ✅ `architecture/salesforce-pricing-negotiation.md`
+- ✅ `best-practices/salesforce-org-staffing.md`
+- ✅ `best-practices/reports-dashboards.md`
+- ✅ `best-practices/sales-cloud-features.md`
+- ✅ `best-practices/service-cloud-features.md`
+- ✅ `best-practices/complex-reporting.md`
 
 ### Open Gaps / To Validate
 

@@ -1,3 +1,14 @@
+---
+title: "Common Apex Errors and Solutions"
+level: "Intermediate"
+tags:
+  - troubleshooting
+  - apex
+  - errors
+  - debugging
+last_reviewed: "2025-01-XX"
+---
+
 # Common Apex Errors and Solutions
 
 > Troubleshooting guide for common Apex errors with solutions and prevention strategies.
@@ -565,6 +576,48 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 **Related Patterns**: [Apex Patterns](rag/development/apex-patterns.md#asynchronous-apex-patterns)
 
 ---
+
+## Q&A
+
+### Q: What causes UNABLE_TO_LOCK_ROW errors and how do I fix them?
+
+**A**: **UNABLE_TO_LOCK_ROW** errors occur when multiple processes try to update the same record simultaneously. Fix by: (1) **Implementing retry logic** with exponential backoff, (2) **Reducing transaction time** to minimize lock duration, (3) **Bulkifying operations** to reduce concurrent updates, (4) **Using FOR UPDATE** in SOQL to lock records explicitly, (5) **Separating batch jobs** to avoid conflicts.
+
+### Q: How do I prevent LIST_EXCEPTION: List index out of bounds errors?
+
+**A**: Prevent list index errors by: (1) **Checking list size** before accessing by index, (2) **Using safe access patterns** (`list.isEmpty()` checks), (3) **Using enhanced for loops** when possible, (4) **Validating data** before processing, (5) **Handling empty lists** gracefully. Always check if a list has elements before accessing `list[0]` or `list[index]`.
+
+### Q: What causes NULL_POINTER_EXCEPTION and how do I prevent it?
+
+**A**: **NULL_POINTER_EXCEPTION** occurs when accessing methods or properties on null objects. Prevent by: (1) **Null checking** before accessing object properties, (2) **Using safe navigation** patterns, (3) **Initializing variables** before use, (4) **Validating SOQL results** (check if list is empty), (5) **Using defensive coding** patterns. Always check `if (obj != null)` before accessing `obj.property`.
+
+### Q: How do I fix QUERY_EXCEPTION: No such column errors?
+
+**A**: Fix query exceptions by: (1) **Verifying field API names** are correct (case-sensitive), (2) **Checking field visibility** (field-level security), (3) **Ensuring fields exist** on the object, (4) **Checking object relationships** for related fields, (5) **Using Schema methods** to validate field existence dynamically. Always use correct API names (not labels).
+
+### Q: What causes DML_EXCEPTION: Required field missing errors?
+
+**A**: **Required field missing** errors occur when creating/updating records without required fields. Fix by: (1) **Identifying required fields** (check object schema), (2) **Setting required fields** before DML operations, (3) **Using field defaults** when appropriate, (4) **Validating data** before DML, (5) **Handling validation errors** gracefully with try-catch blocks.
+
+### Q: How do I prevent LIMIT_EXCEPTION: Too many SOQL queries?
+
+**A**: Prevent SOQL query limit errors by: (1) **Bulkifying queries** (no queries in loops), (2) **Using maps** to store query results, (3) **Querying once** and reusing results, (4) **Using aggregate queries** when possible, (5) **Optimizing queries** to get all needed data in one query. Never put SOQL queries inside loops.
+
+### Q: How do I fix LIMIT_EXCEPTION: Too many DML statements?
+
+**A**: Fix DML limit errors by: (1) **Bulkifying DML operations** (collect records in lists, then DML once), (2) **Using collections** to batch DML operations, (3) **Avoiding DML in loops**, (4) **Using Database methods** with `allOrNone=false` for partial success, (5) **Batching operations** when processing large datasets.
+
+### Q: What causes CALLOUT_EXCEPTION: Uncommitted work pending?
+
+**A**: **Uncommitted work pending** errors occur when making callouts after DML operations in the same transaction. Fix by: (1) **Using `@future(callout=true)`** for callouts after DML, (2) **Using Queueable** for async callouts, (3) **Separating DML and callout operations**, (4) **Planning transaction boundaries** carefully, (5) **Using Platform Events** for decoupled callouts.
+
+### Q: How do I debug Apex errors effectively?
+
+**A**: Debug Apex errors by: (1) **Reading error messages carefully** (they often indicate the cause), (2) **Using Debug Logs** to trace execution, (3) **Adding System.debug statements** at key points, (4) **Checking governor limits** (use `Limits` class), (5) **Reviewing stack traces** to identify error location, (6) **Testing in isolation** to reproduce errors, (7) **Using Developer Console** for debugging.
+
+### Q: What are best practices for preventing common Apex errors?
+
+**A**: Best practices include: (1) **Bulkify all code** (no DML/SOQL in loops), (2) **Null check everything** before accessing properties, (3) **Validate data** before processing, (4) **Handle exceptions** gracefully with try-catch, (5) **Test with bulk data** (200+ records), (6) **Use defensive coding** patterns, (7) **Follow Salesforce best practices** for Apex development.
 
 ## Related Patterns
 

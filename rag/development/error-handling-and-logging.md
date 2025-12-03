@@ -1,3 +1,16 @@
+---
+title: "Error Handling and Logging Framework"
+level: "Intermediate"
+tags:
+  - apex
+  - development
+  - patterns
+  - error-handling
+  - logging
+  - observability
+last_reviewed: "2025-01-XX"
+---
+
 # Error Handling and Logging Framework
 
 ## Overview
@@ -220,6 +233,40 @@ Avoid comprehensive logging when:
 - Storage constraints prevent logging
 - Performance impact is unacceptable
 - Logging overhead outweighs benefits
+
+## Q&A
+
+### Q: Why should I use a custom logging object instead of System.debug()?
+
+**A**: Custom logging objects provide **persistent, queryable logs** that can be analyzed, reported on, and retained for compliance. `System.debug()` logs are temporary and not accessible in production. Custom logging supports audit trails, troubleshooting, and compliance requirements.
+
+### Q: What log levels should I use?
+
+**A**: Use **Debug** for detailed debugging information, **Info** for general informational messages, **Warning** for warning conditions that don't prevent operation, **Error** for error conditions that prevent operation, and **Fatal** for critical errors that cause system failure. Choose the appropriate level based on severity.
+
+### Q: How do I handle DML exceptions in error handling?
+
+**A**: Use `Database.insert/update/delete` with `allOrNone=false` for partial success, catch `DmlException` and check `getDmlType()` for specific error types, handle errors per record using `getDmlFields()` and `getDmlMessage()`, and log errors appropriately. This enables graceful handling of partial failures.
+
+### Q: What is the difference between try-catch and Database methods with allOrNone?
+
+**A**: **try-catch** stops execution on first error and requires exception handling. **Database methods with allOrNone=false** allow partial success, continue processing remaining records, and return results with success/failure per record. Use Database methods for bulk operations where partial success is acceptable.
+
+### Q: How do I implement platform event fallback for logging?
+
+**A**: If logging to custom object fails, publish platform events as fallback. This ensures errors are never lost even if the logging object is unavailable. Implement fallback logic in the logging utility class to publish events when DML fails.
+
+### Q: What should I include in error logs?
+
+**A**: Include source (class/method name), source function, error message, debug level, payload/context data, stack trace, user context, timestamp, and correlation IDs. This provides comprehensive context for troubleshooting and root cause analysis.
+
+### Q: How do I monitor and alert on errors?
+
+**A**: Query logs regularly for errors, create reports and dashboards on log data, set up alerts for fatal errors, monitor error rates and trends, and implement automated notifications for critical errors. Use monitoring tools to track system health.
+
+### Q: What are the performance implications of comprehensive logging?
+
+**A**: Logging adds DML operations which count against governor limits. Use async logging (Queueable, Platform Events) for high-volume scenarios, batch log writes when possible, and consider log retention policies to manage storage. Balance logging comprehensiveness with performance.
 
 ## Related Patterns
 

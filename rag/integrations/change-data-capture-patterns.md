@@ -1,3 +1,15 @@
+---
+title: "Change Data Capture (CDC) Patterns"
+level: "Intermediate"
+tags:
+  - integrations
+  - cdc
+  - change-data-capture
+  - real-time
+  - event-driven
+last_reviewed: "2025-01-XX"
+---
+
 # Change Data Capture (CDC) Patterns
 
 ## Overview
@@ -220,6 +232,40 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 - **CDC for change detection**: Use CDC to detect changes
 - **Platform Events for business logic**: Publish Platform Events from CDC triggers
 - **Best of both worlds**: Real-time change tracking + flexible event processing
+
+## Q&A
+
+### Q: What is the difference between CDC and Platform Events?
+
+**A**: **CDC** automatically publishes change events when records are created, updated, deleted, or undeleted. It provides field-level change tracking and has 24-hour retention. **Platform Events** are custom events you publish explicitly from code/flows, with custom payloads and longer retention. Use CDC for change tracking; use Platform Events for business events.
+
+### Q: How do I enable CDC for an object?
+
+**A**: Enable CDC in Setup → Integrations → Change Data Capture. Select objects to enable CDC for. Once enabled, CDC events are automatically published for all changes to those objects. No code is required to publish CDC events.
+
+### Q: What is the retention period for CDC events?
+
+**A**: CDC events have a **24-hour retention period**. Events expire after 24 hours and cannot be replayed. Plan for event replay within this window. For longer retention, consider using Platform Events or storing events in custom objects.
+
+### Q: How do I process CDC events?
+
+**A**: Create a trigger on the CDC event object (e.g., `CaseChangeEvent`), process events asynchronously (use triggers or Platform Events), implement error handling and replay logic, design idempotent event handlers, and monitor event processing. Process events in bulk to handle high volumes.
+
+### Q: Can I filter CDC events?
+
+**A**: **No, CDC events cannot be filtered** before publishing. All changes to enabled objects generate CDC events. If you need filtering, use CDC to detect changes and publish Platform Events with filtered logic, or filter events in your subscriber code.
+
+### Q: How do I handle CDC event failures?
+
+**A**: Implement error handling in CDC event triggers, log failures to custom logging objects, implement retry logic for transient failures, use event replay for failed events (within 24-hour window), and monitor event processing to detect failures early.
+
+### Q: What are the performance implications of CDC?
+
+**A**: CDC events are published automatically and don't impact transaction performance. However, processing CDC events in triggers can impact performance. Process events asynchronously, bulkify event processing, and monitor event processing performance. High-volume CDC scenarios may require careful design.
+
+### Q: Can I combine CDC with Platform Events?
+
+**A**: Yes, combining CDC with Platform Events is a common pattern. Use **CDC to detect changes** and **Platform Events for business logic**. Publish Platform Events from CDC triggers to add business context, filter events, or enable longer retention. This provides the best of both worlds.
 
 ## Related Patterns
 

@@ -1,3 +1,14 @@
+---
+title: "Apex Testing Patterns"
+level: "Intermediate"
+tags:
+  - testing
+  - apex
+  - test-classes
+  - test-data-factories
+last_reviewed: "2025-01-XX"
+---
+
 # Apex Testing Patterns
 
 > Comprehensive testing patterns and examples for Apex development.
@@ -395,6 +406,48 @@ private class ContactServiceTest {
 12. **Use mocking** for external dependencies
 
 ---
+
+## Q&A
+
+### Q: What is the minimum code coverage required for Apex classes?
+
+**A**: The **minimum code coverage is 75%** for deployment, but best practice is to **aim for 100% coverage** (with a minimum of 90%). Higher coverage reduces risk of bugs in production and ensures all code paths are tested. Focus on quality over quantity - meaningful assertions are more important than just hitting lines.
+
+### Q: Should I use @SeeAllData annotation in test classes?
+
+**A**: **No, avoid `@SeeAllData` annotation**. Test classes should create their own test data using test data factories. Using `@SeeAllData` makes tests dependent on org data, unreliable, and difficult to maintain. Always create test data within test methods or use test data factories.
+
+### Q: What is the purpose of Test.startTest() and Test.stopTest()?
+
+**A**: `Test.startTest()` and `Test.stopTest()` **reset governor limits** for code between these calls. This allows you to test governor limit scenarios and ensures your test code has fresh limits. Minimize logic within these blocks - they're primarily for testing governor limit scenarios.
+
+### Q: How do I test bulk operations (200+ records)?
+
+**A**: Test bulk operations by: (1) **Creating 200+ test records** using test data factories, (2) **Calling your method with bulk data**, (3) **Asserting results for all records**, (4) **Testing both positive and negative scenarios**. This ensures your code handles bulk operations correctly and doesn't hit governor limits.
+
+### Q: What is a test data factory and why should I use one?
+
+**A**: A **test data factory** is a reusable class or method that creates test data. Use factories to: (1) **Ensure consistent test data** across tests, (2) **Reduce code duplication**, (3) **Make tests easier to maintain**, (4) **Support bulk test data creation**. Create factory methods for common test data scenarios.
+
+### Q: How do I test private methods in Apex?
+
+**A**: **Test private methods indirectly** by testing the public methods that call them. If you need to test private methods directly, you can use the `@TestVisible` annotation to make them accessible to test classes, but prefer testing through public interfaces when possible.
+
+### Q: Should I test getters and setters?
+
+**A**: **Generally no**, unless they contain business logic. Simple getters and setters don't need explicit testing. However, if getters/setters contain validation, transformation, or business logic, they should be tested. Focus testing on methods with business logic.
+
+### Q: How do I test async methods (@future, Queueable, Batchable)?
+
+**A**: Test async methods by: (1) **Calling the async method** in your test, (2) **Using `Test.startTest()` and `Test.stopTest()`** to execute async methods synchronously in tests, (3) **Asserting results** after `Test.stopTest()`. For Batchable classes, use `Database.executeBatch()` and `Test.stopTest()` to execute the batch.
+
+### Q: What assertions should I include in test methods?
+
+**A**: Include assertions that verify: (1) **Expected outcomes** (records created, updated, deleted), (2) **Data correctness** (field values are correct), (3) **Error handling** (exceptions thrown when expected), (4) **Business logic** (calculations, validations work correctly). Use the new Salesforce `System.Assert` class for assertions.
+
+### Q: How do I test error scenarios and exceptions?
+
+**A**: Test error scenarios by: (1) **Creating test data that triggers errors** (invalid data, missing required fields), (2) **Using try-catch blocks** to verify exceptions are thrown, (3) **Asserting exception types and messages**, (4) **Testing both positive and negative scenarios**. Ensure your code handles errors gracefully.
 
 ## Related Patterns
 

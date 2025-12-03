@@ -1,3 +1,16 @@
+---
+title: "Custom Settings and Custom Metadata Patterns"
+level: "Intermediate"
+tags:
+  - apex
+  - development
+  - patterns
+  - custom-settings
+  - custom-metadata
+  - configuration
+last_reviewed: "2025-01-XX"
+---
+
 # Custom Settings and Custom Metadata Patterns
 
 ## Overview
@@ -200,6 +213,40 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 - **Cache queries**: Store Custom Metadata queries in static variables
 - **Bulk queries**: Query all needed records in one query
 - **Avoid in loops**: Don't query Custom Metadata in loops
+
+## Q&A
+
+### Q: What is the difference between Custom Settings and Custom Metadata?
+
+**A**: **Custom Settings** are data records that can be changed at runtime, support user-specific configuration (Hierarchical), and are simple key-value lookups (List). **Custom Metadata** are metadata records that deploy with packages, support metadata relationships, and cannot be changed at runtime (except in Developer Edition).
+
+### Q: When should I use Custom Settings vs Custom Metadata?
+
+**A**: Use **Custom Settings** for user-specific configuration (Hierarchical), simple key-value lookups (List), or legacy code. Use **Custom Metadata** for new development, package-deployable configuration, metadata relationships, or when you need validation rules or field-level security on configuration.
+
+### Q: Can I change Custom Metadata values at runtime?
+
+**A**: **Custom Metadata** cannot be changed at runtime in production orgs (except in Developer Edition). They are metadata and require deployment to change. **Custom Settings** can be changed at runtime, making them suitable for runtime configuration changes.
+
+### Q: How do I query Custom Settings and Custom Metadata?
+
+**A**: Query **Custom Settings** like standard objects using SOQL (e.g., `SELECT Id, Name FROM Custom_Setting__c`). Query **Custom Metadata** using `SELECT` statements but they're cached automatically. Use static variables to cache Custom Metadata queries for performance.
+
+### Q: What are Hierarchical Custom Settings?
+
+**A**: **Hierarchical Custom Settings** support user-specific, profile-specific, and org-level configuration. They follow a hierarchy: user-level overrides profile-level, profile-level overrides org-level. Use for user-specific configuration that varies by user or profile.
+
+### Q: What are List Custom Settings?
+
+**A**: **List Custom Settings** are simple key-value lookups where each record has a unique Name field. They're useful for simple configuration lookups (e.g., state codes, country codes, status mappings). Access via `Custom_Setting__c.getInstance('Key')`.
+
+### Q: Should I migrate from Custom Settings to Custom Metadata?
+
+**A**: Consider migration for new development, package-deployable configuration, or when you need metadata relationships. However, migration requires code changes and testing. Evaluate based on requirements: if you need runtime changes, Custom Settings may be more appropriate.
+
+### Q: How do I use Custom Metadata in packages?
+
+**A**: Custom Metadata **deploys with packages**, making it ideal for package configuration. Create Custom Metadata records in the package, and they'll be available in orgs where the package is installed. This enables package-specific configuration that doesn't require manual setup.
 
 ## Related Patterns
 

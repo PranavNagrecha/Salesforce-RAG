@@ -1,8 +1,32 @@
+---
+title: "Flow Design and Orchestration Patterns"
+level: "Intermediate"
+tags:
+  - flow
+  - development
+  - patterns
+  - automation
+  - declarative
+last_reviewed: "2025-01-XX"
+---
+
 # Flow Design and Orchestration Patterns
 
 ## Overview
 
 Flow is used as the primary automation engine across projects, with Apex reserved for complex logic, integrations, and performance-critical scenarios. The approach emphasizes declarative automation where possible, with clear patterns for when to use different Flow types.
+
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce data model (objects, fields, relationships)
+- Basic understanding of Salesforce automation concepts
+- Familiarity with Salesforce security model (profiles, permission sets)
+
+**Recommended Reading**:
+- [Apex Patterns](apex-patterns.md) - Understanding when to use Apex vs Flow
+- [Order of Execution](order-of-execution.md) - Understanding when Flows execute
+- [Admin Basics](admin-basics.md) - Foundation Salesforce administration knowledge
 
 ## Flow Type Selection
 
@@ -278,6 +302,32 @@ Invocable Apex handles:
 
 The "Flow User" user permission is being deprecated in Winter '26 (2025). This affects how Flows execute and which users can run Flows.
 
+### Migration Considerations
+
+**Before Winter '26**:
+- Users with Flow User permission could run Flows without object permissions
+- This created security risks and bypassed proper access control
+
+**After Winter '26**:
+- Users must have appropriate object and field permissions to run Flows
+- Flow User permission will no longer grant access to run Flows
+- Flows will respect object-level and field-level security
+
+**Migration Steps**:
+1. Identify all users with Flow User permission
+2. Review which Flows these users need to run
+3. Grant appropriate object and field permissions via Permission Sets
+4. Test Flows with new permissions before Winter '26
+5. Remove Flow User permission after migration is complete
+6. Document permission changes for audit purposes
+
+**Best Practices**:
+- Migrate before Winter '26 to avoid disruption
+- Grant minimal permissions needed (principle of least privilege)
+- Use Permission Sets (not Profiles) for access control
+- Test thoroughly with different user types
+- Document permission requirements for each Flow
+
 ### Deprecation Timeline
 
 - **Winter '26 (2025)**: Flow User permission deprecated
@@ -355,6 +405,60 @@ The "Flow User" user permission is being deprecated in Winter '26 (2025). This a
 - Optimize queries and DML
 - Use collection variables efficiently
 - Profile Flows to identify bottlenecks
+
+## Q&A
+
+### Q: When should I use Flow vs Apex for automation?
+
+**A**: Use Flow as the default choice for most automation. Flow is declarative, easier to maintain, and sufficient for most business logic. Use Apex when you need complex logic Flow cannot handle, require tight control over governor limits, need heavy reuse across multiple contexts, or need to integrate with external APIs requiring complex authentication.
+
+### Q: What is the difference between Record-Triggered Flow and Process Builder?
+
+**A**: Record-Triggered Flows are the modern replacement for Process Builder. Process Builder is deprecated. Record-Triggered Flows run before or after save, support more complex logic, and provide better error handling. Migrate from Process Builder to Record-Triggered Flows.
+
+### Q: Should I use before-save or after-save Record-Triggered Flows?
+
+**A**: Use before-save flows when you need to modify field values on the same record, validate data, or prevent save operations. Use after-save flows when you need to create or update related records, send notifications, or perform operations that require the record to be saved first.
+
+### Q: How do I handle errors in Flows?
+
+**A**: Implement fault paths for all operations (DML, Apex calls, subflows). Provide clear, user-friendly error messages. Log errors to a logging service for troubleshooting. Handle partial failures gracefully by using decision elements to check operation results. Use try-catch patterns with fault connectors.
+
+### Q: Can I call Apex from Flows?
+
+**A**: Yes, use Invocable Apex methods (methods annotated with `@InvocableMethod`) to call Apex from Flows. This allows you to use complex Apex logic within Flow automation. Parameters must be lists (even for single values), and return values should also be lists.
+
+### Q: How do I optimize Flow performance?
+
+**A**: Set strict entry criteria to avoid unnecessary Flow execution. Use Decision nodes early for routing to reduce unnecessary element execution. Extract complex logic into Subflows for reuse and testing. Minimize DML operations by batching updates. Monitor execution time and element count. Profile Flows to identify bottlenecks.
+
+### Q: What is the Flow User permission and why is it being deprecated?
+
+**A**: The Flow User permission allowed users to run Flows without object permissions. It's being deprecated in Winter '26 because it created security risks. Users must now have appropriate object and field permissions to run Flows. Migrate users from Flow User permission to proper object permissions before Winter '26.
+
+### Q: How do I test Flows?
+
+**A**: Test Flows with bulk data (200+ records) to ensure bulkification works. Test both positive and negative scenarios. Test error handling by triggering fault paths. Use debug mode to step through Flow execution. Test with different user profiles to ensure proper permissions. Document test scenarios and results.
+
+### Q: When should I use Screen Flows vs Record-Triggered Flows?
+
+**A**: Use Screen Flows for guided user interactions, multi-step data capture, or when you need user input during a process. Use Record-Triggered Flows for automated processes that run when records are created or updated. Screen Flows are user-initiated; Record-Triggered Flows are system-initiated.
+
+### Q: How do I handle bulk operations in Record-Triggered Flows?
+
+**A**: Record-Triggered Flows automatically bulkify - they process all records in the trigger context. Use collection variables to store related records. Use loops to process collections. Avoid DML or SOQL inside loops. Design Flows to handle 200+ records efficiently.
+
+## Related Patterns
+
+**See Also**:
+- [Apex Patterns](apex-patterns.md) - Understanding when to use Apex vs Flow
+- [Order of Execution](order-of-execution.md) - Understanding when Flows execute in the save sequence
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns for Flow integration
+- [Admin Basics](admin-basics.md) - Foundation Salesforce administration knowledge
+
+**Related Domains**:
+- [Testing Strategy](../project-methods/testing-strategy.md) - Testing Flow automation
+- [Code Examples](../code-examples/flow/) - Flow pattern examples (coming soon)
 
 ### Change Management
 

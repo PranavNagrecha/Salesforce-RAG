@@ -1,3 +1,16 @@
+---
+title: "Locking and Concurrency Strategies"
+level: "Advanced"
+tags:
+  - apex
+  - development
+  - patterns
+  - concurrency
+  - locking
+  - error-handling
+last_reviewed: "2025-01-XX"
+---
+
 # Locking and Concurrency Strategies
 
 ## Overview
@@ -152,4 +165,46 @@ These tradeoffs require human judgment based on system load, concurrency pattern
 - **Lock-free design complexity**: The complexity of implementing lock-free patterns may not be justified for all scenarios. The decision requires evaluation based on concurrency levels and development resources.
 
 - **Deadlock prevention strategies**: Consistent lock ordering is effective but may not be feasible for all scenarios. The decision requires evaluation based on operation complexity and lock acquisition patterns.
+
+## Q&A
+
+### Q: What causes UNABLE_TO_LOCK_ROW errors?
+
+**A**: `UNABLE_TO_LOCK_ROW` errors occur when multiple transactions attempt to update the same record simultaneously. Salesforce uses row-level locking, and if a record is locked by another transaction, subsequent attempts to lock it will fail until the lock is released.
+
+### Q: How do I implement retry logic for row locking errors?
+
+**A**: Catch `DmlException` and check for `UNABLE_TO_LOCK_ROW` status code, implement retry loop with configurable maximum attempts (typically 3-5), use exponential backoff (e.g., 1s, 2s, 4s delays), and handle partial success scenarios. Use Queueable for retry operations to defer to separate transaction context.
+
+### Q: What is exponential backoff and why should I use it?
+
+**A**: **Exponential backoff** increases delay between retry attempts exponentially (1s, 2s, 4s, 8s). This reduces contention by allowing locks to clear, prevents retry storms, and improves success rates. It's more effective than fixed delays or immediate retries.
+
+### Q: How do I prevent deadlocks?
+
+**A**: Design operations to acquire locks in **consistent order** to prevent deadlocks. Always lock records in the same order (e.g., by ID), avoid circular lock dependencies, and implement deadlock detection and retry mechanisms. Consistent ordering prevents most deadlock scenarios.
+
+### Q: What is the difference between FOR UPDATE and FOR UPDATE NOWAIT?
+
+**A**: **FOR UPDATE** waits for the lock to be released before proceeding. **FOR UPDATE NOWAIT** fails immediately if the record is locked, enabling faster failure handling and retry logic. Use NOWAIT for read operations where waiting isn't necessary.
+
+### Q: When should I use Queueable for retry operations?
+
+**A**: Use Queueable for retries when you need to defer retry attempts to a separate transaction context, avoid additional governor limit consumption in the original transaction, or chain multiple retry attempts. Queueable provides better isolation and governor limit management.
+
+### Q: How do I handle partial success in bulk operations with locking errors?
+
+**A**: Use `Database.insert/update/delete` with `allOrNone=false` to allow partial success, implement idempotent operations to allow safe retries, track which records succeeded/failed, and retry only failed records. This enables graceful handling of partial failures.
+
+### Q: What are the performance implications of row locking?
+
+**A**: Row locking can cause contention and performance degradation under high concurrency. Minimize lock duration by performing expensive operations before acquiring locks, release locks as soon as possible, design for lock-free operations when possible, and monitor lock contention patterns to identify optimization opportunities.
+
+## Related Patterns
+
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns for locking errors
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Queueable patterns for retry operations
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Resource management and limit handling
+- [Large Data Loads](large-data-loads.md) - Concurrency patterns for bulk operations
+- [Integration Patterns](../integrations/etl-vs-api-vs-events.md) - Concurrency in integration scenarios
 

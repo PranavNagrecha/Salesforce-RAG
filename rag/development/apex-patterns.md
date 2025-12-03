@@ -1,8 +1,95 @@
+---
+title: "Apex Design Patterns and Best Practices"
+level: "Intermediate"
+tags:
+  - apex
+  - development
+  - patterns
+  - service-layer
+  - domain-layer
+  - selector-layer
+last_reviewed: "2025-01-XX"
+---
+
 # Apex Design Patterns and Best Practices
 
 ## Overview
 
 Apex is used strategically when Flows are insufficient or need optimization/bulkification. The approach emphasizes proper layering, bulkification, comprehensive testing, and integration with declarative automation.
+
+Apex is Salesforce's proprietary programming language, similar to Java, that enables developers to build custom business logic, integrations, and complex automation. Understanding Apex fundamentals, language features, and design patterns enables developers to build robust, maintainable, and performant solutions.
+
+## Prerequisites
+
+**Required Knowledge**:
+- Basic understanding of object-oriented programming concepts
+- Familiarity with Salesforce data model (objects, fields, relationships)
+- Understanding of Salesforce security model (profiles, permission sets, sharing)
+- Knowledge of SOQL (Salesforce Object Query Language)
+
+**Recommended Reading**:
+- [Flow Patterns](flow-patterns.md) - Understanding when to use Flow vs Apex
+- [SOQL Query Patterns](soql-query-patterns.md) - SOQL query best practices
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Understanding platform limits
+- [Error Handling and Logging](error-handling-and-logging.md) - Error handling patterns
+
+## Apex Language Fundamentals
+
+### Data Types and Variables
+
+**Primitive types**:
+- Integer, Long, Double, Decimal for numbers
+- String for text
+- Boolean for true/false
+- Date, DateTime, Time for dates and times
+- ID for Salesforce record IDs
+- Blob for binary data
+
+**Collections**:
+- **List**: Ordered collection with index access
+- **Set**: Unordered collection of unique values
+- **Map**: Key-value pairs for lookup
+
+**Best practice**: Use appropriate data types for variables. Prefer `List<Type>` over `Type[]` for clarity. Use Sets for uniqueness, Maps for key-value lookups.
+
+### Control Structures
+
+**Conditionals**:
+- `if-else` for conditional logic
+- `switch` for multiple value comparisons
+- Ternary operator for simple conditionals
+
+**Loops**:
+- `for` loops for iteration with index
+- `for-each` loops for collection iteration
+- `while` loops for conditional iteration
+- `do-while` loops for post-condition iteration
+
+**Best practice**: Use for-each loops for collection iteration. Avoid loops with DML or SOQL inside. Use early returns to reduce nesting.
+
+### Exception Handling
+
+**Try-catch-finally**:
+- `try` block for code that may throw exceptions
+- `catch` block for exception handling
+- `finally` block for cleanup code
+
+**Exception types**:
+- Standard exceptions (DmlException, QueryException, etc.)
+- Custom exceptions for business logic errors
+- Exception messages and stack traces
+
+**Best practice**: Wrap DML operations in try-catch blocks. Use custom exceptions for business logic errors. Log exceptions for troubleshooting. Handle exceptions gracefully.
+
+### Access Modifiers
+
+**Public**: Accessible from any Apex class or external contexts (Flows, LWCs).
+
+**Private**: Accessible only within the same class.
+
+**Global**: Accessible from external systems (web services, managed packages).
+
+**Best practice**: Use `public` for service methods called from Flows or LWCs. Use `private` for internal helper methods. Use `global` only when required (web services, managed packages).
 
 ## When to Choose Apex
 
@@ -523,3 +610,62 @@ Use for:
 - Detailed breakdowns build user trust and enable feedback for model improvement
 - Transparency in automated decisions helps users understand and trust the system
 - Balance complexity with user needs and compliance requirements
+
+## Related Patterns
+
+**See Also**:
+- [Flow Patterns](flow-patterns.md) - Understanding when to use Flow vs Apex
+- [SOQL Query Patterns](soql-query-patterns.md) - SOQL query best practices and patterns
+- [Asynchronous Apex Patterns](asynchronous-apex-patterns.md) - Batch, Queueable, and Scheduled Apex patterns
+- [Error Handling and Logging](error-handling-and-logging.md) - Comprehensive error handling framework
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Performance optimization and limit management
+- [Locking and Concurrency Strategies](locking-and-concurrency-strategies.md) - Row locking and retry patterns
+- [Custom Settings and Custom Metadata Patterns](custom-settings-metadata-patterns.md) - Configuration management patterns
+- [Order of Execution](order-of-execution.md) - Understanding when Apex executes in the save sequence
+
+**Related Domains**:
+- [LWC Patterns](lwc-patterns.md) - Integrating Apex with Lightning Web Components
+- [Testing Patterns](../testing/apex-testing-patterns.md) - Apex testing best practices
+- [Code Examples](../code-examples/apex/) - Complete working code examples
+
+## Q&A
+
+### Q: When should I use Apex instead of Flow?
+
+**A**: Use Apex when you need complex logic that Flow cannot handle efficiently, require tight control over governor limits, need heavy reuse across multiple contexts (LWCs, external APIs, other Apex), or need to integrate with external APIs requiring complex authentication and error handling. Flow should be the default choice for most automation; Apex is for cases where Flow is insufficient or needs optimization.
+
+### Q: What is the difference between Service, Domain, and Selector layers?
+
+**A**: The Service layer orchestrates workflows and exposes clean method signatures for Flows and LWCs. The Domain layer contains object-specific business logic and validation. The Selector layer provides centralized SOQL queries with security enforcement. Service delegates to Domain for validation and Selector for data access, keeping concerns separated and code maintainable.
+
+### Q: Should I put SOQL queries in Service classes or Selector classes?
+
+**A**: Always put SOQL queries in Selector classes. Service classes should delegate data access to Selector classes. This centralizes queries, enables security enforcement, and makes queries reusable across different service methods.
+
+### Q: How do I handle bulk operations in Apex?
+
+**A**: Always process collections, never single records in loops. Design all methods to accept and process `List<Type>` or `Set<Id>` parameters. Use bulk DML operations (insert, update, upsert with collections). Test with 200+ records to ensure bulkification works correctly.
+
+### Q: When should I use Queueable vs Batch vs Scheduled Apex?
+
+**A**: Use Queueable for asynchronous processing of small to medium datasets (up to 50,000 records), when you need to chain jobs, or need to make callouts. Use Batch for large datasets (50,000+ records) that need to be processed in chunks. Use Scheduled Apex for time-based automation that runs on a schedule.
+
+### Q: How do I test Apex code that makes callouts?
+
+**A**: Use `Test.setMock()` to set mock HTTP callout responses. Create mock response classes that implement `HttpCalloutMock`. This allows you to test callout logic without making actual HTTP requests during tests.
+
+### Q: What is the best way to handle errors in Apex?
+
+**A**: Wrap DML operations in try-catch blocks. Use custom exceptions for business logic errors. Log all errors to a custom logging object (e.g., `LOG_LogMessage__c`) with platform event fallback if DML fails. Include context information (source, function, payload) in error logs for troubleshooting.
+
+### Q: How do I make Apex methods callable from Flow?
+
+**A**: Use `@InvocableMethod` annotation on static methods. Methods must be in a public class. Parameters should be lists (even for single values). Return values should also be lists. Use `@InvocableVariable` for complex input parameters.
+
+### Q: What is the difference between `with sharing` and `without sharing`?
+
+**A**: `with sharing` enforces sharing rules and respects the user's record-level access. `without sharing` ignores sharing rules and can access all records (subject to field-level security). Use `with sharing` by default; use `without sharing` only when you need to bypass sharing for legitimate reasons (e.g., system operations).
+
+### Q: How do I optimize SOQL queries for performance?
+
+**A**: Use selective WHERE clauses with indexed fields (queries returning <10% of records). Use `WITH SECURITY_ENFORCED` to enforce field-level security. Select only fields you need. Use relationship queries to avoid multiple queries. Test query selectivity using Query Plan in Developer Console.

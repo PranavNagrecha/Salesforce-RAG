@@ -1,3 +1,14 @@
+---
+title: "Common LWC Errors and Solutions"
+level: "Intermediate"
+tags:
+  - troubleshooting
+  - lwc
+  - errors
+  - debugging
+last_reviewed: "2025-01-XX"
+---
+
 # Common LWC Errors and Solutions
 
 > Troubleshooting guide for common Lightning Web Component errors with solutions and prevention strategies.
@@ -432,10 +443,184 @@ wiredRecord({ data, error }) {
 
 ---
 
+## INVALID_FIELD_FOR_INSERT_UPDATE: Unable to create/update fields
+
+**Error Message**: `INVALID_FIELD_FOR_INSERT_UPDATE: Unable to create/update fields: [FieldName]`
+
+**Common Causes**:
+- Field not added to page layout (most common cause)
+- Field-Level Security (FLS) permissions not granted
+- Field accessibility settings restrict access
+- Profile or Permission Set doesn't have field access
+- Field not included in object's field-level security settings
+
+**Solutions**:
+
+### Solution 1: Add Field to Page Layout (CRITICAL STEP)
+
+**Most Important**: Even if a field has proper FLS permissions, it must be added to the page layout for `lightning-record-edit-form` to work.
+
+**Before: Field missing from layout**
+```
+Field has FLS permissions ✓
+Field has object permissions ✓
+Field NOT on page layout ✗
+Result: Error "Unable to create/update fields"
+```
+
+**After: Field added to layout**
+```
+Field has FLS permissions ✓
+Field has object permissions ✓
+Field on page layout ✓
+Result: Field works correctly
+```
+
+**Steps to Fix**:
+1. Go to **Setup** → **Object Manager** → Select your object
+2. Click **Page Layouts**
+3. Edit the page layout used by your component
+4. Add the field to the layout (even if hidden or in a collapsed section)
+5. Save the layout
+6. Test the component again
+
+**Note**: The field doesn't need to be visible on the layout - it just needs to be present. You can place it in a collapsed section or hide it if needed.
+
+### Solution 2: Check Field-Level Security Permissions
+
+**Before: Missing FLS permissions**
+```apex
+// User doesn't have read/edit access to field
+// Component tries to update field
+// Error: Unable to create/update fields
+```
+
+**After: Grant FLS permissions**
+1. Go to **Setup** → **Object Manager** → Select your object
+2. Click **Fields & Relationships** → Select the field
+3. Click **Set Field-Level Security**
+4. Grant **Read** and **Edit** access to appropriate Profiles or Permission Sets
+5. Save
+
+**Verification**:
+- Check Profile: **Setup** → **Profiles** → Select profile → **Field-Level Security** → Verify field access
+- Check Permission Set: **Setup** → **Permission Sets** → Select permission set → **Field Permissions** → Verify field access
+
+### Solution 3: Verify Field Accessibility Settings
+
+**Check Field Accessibility**:
+1. Go to **Setup** → **Object Manager** → Select your object
+2. Click **Fields & Relationships** → Select the field
+3. Check **Field Accessibility** section
+4. Ensure field is accessible (not restricted by object settings)
+
+**Common Issues**:
+- Field marked as "Required" but user doesn't have access
+- Field restricted by object-level security
+- Field not available for the record type
+
+### Solution 4: Check Profile and Permission Set Permissions
+
+**Verify Object Permissions**:
+1. **Object Access**: Profile/Permission Set must have **Read** and **Edit** access to the object
+2. **Field Access**: Profile/Permission Set must have **Read** and **Edit** access to the field
+3. **Record Type Access**: If using record types, verify record type access
+
+**Checklist**:
+- [ ] Profile/Permission Set has object-level **Read** access
+- [ ] Profile/Permission Set has object-level **Edit** access
+- [ ] Profile/Permission Set has field-level **Read** access
+- [ ] Profile/Permission Set has field-level **Edit** access
+- [ ] Field is on the page layout (CRITICAL)
+- [ ] Field accessibility is not restricted
+
+### Solution 5: Complete Troubleshooting Checklist
+
+**Step-by-Step Resolution**:
+
+1. **Add Field to Page Layout** (MOST IMPORTANT)
+   - Edit the page layout used by your component
+   - Add the field to the layout
+   - Save the layout
+
+2. **Check Field-Level Security**
+   - Verify field has Read and Edit permissions
+   - Check both Profile and Permission Set permissions
+   - Grant access if missing
+
+3. **Verify Object Permissions**
+   - Check object-level Read and Edit access
+   - Verify record type access if applicable
+
+4. **Check Field Accessibility**
+   - Verify field is not restricted by object settings
+   - Check field is available for the record type
+
+5. **Test with Different Users**
+   - Test with user who has full access (System Admin)
+   - Test with user who has limited access
+   - Compare results to identify permission gaps
+
+**Prevention**:
+- **Always add fields to page layouts** when using `lightning-record-edit-form`
+- **Set FLS permissions** as part of field creation process
+- **Document field requirements** in deployment checklists
+- **Test with appropriate user profiles** before deployment
+- **Include page layout updates** in deployment packages
+
+**Common Scenario**:
+A field has proper FLS permissions and object access, but the component still fails with "Unable to create/update fields". The issue is that the field is not on the page layout. Adding the field to the layout (even in a collapsed section) resolves the issue immediately.
+
+**Related Patterns**: 
+- [Sharing Sets and Portals](../security/sharing-sets-and-portals.md#field-level-sharing-considerations) - Field-level security patterns
+- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.md#field-level-security) - Field configuration best practices
+- [LWC Patterns](../development/lwc-patterns.md) - LWC component patterns
+
+---
+
+## Q&A
+
+### Q: What are the most common LWC errors?
+
+**A**: Most common errors: (1) **"Cannot read property 'value' of undefined"** (accessing field before data loads), (2) **"Invalid field"** (field not in query, FLS issues), (3) **"Unable to create/update fields"** (field not on page layout, FLS issues), (4) **"Component not found"** (import path errors, component not deployed), (5) **"Wire adapter errors"** (Apex method errors, data access issues), (6) **"Event errors"** (event not dispatched, listener not registered).
+
+### Q: How do I fix "Cannot read property 'value' of undefined" errors?
+
+**A**: Fix by: (1) **Checking if data is loaded** (verify wire adapter returned data), (2) **Using optional chaining** (`record?.field?.value`), (3) **Adding null checks** (check for null/undefined before accessing), (4) **Waiting for data** (use `@wire` reactive properties), (5) **Verifying field exists** (check field is in query, exists on object). Always check data is loaded before accessing properties.
+
+### Q: How do I fix "Invalid field" errors in LWC?
+
+**A**: Fix by: (1) **Verifying field exists** (check field API name, object), (2) **Checking FLS permissions** (user has field access), (3) **Including field in query** (field must be in SOQL query), (4) **Checking field type** (verify field type matches usage), (5) **Verifying object access** (user has object access). Invalid field errors usually indicate field doesn't exist or user lacks access.
+
+### Q: How do I fix "Unable to create/update fields" errors?
+
+**A**: Fix by: (1) **Adding field to page layout** (field must be on layout, even in collapsed section), (2) **Checking FLS permissions** (user has edit access to field), (3) **Verifying object access** (user has object access), (4) **Checking field requirements** (required fields, validation rules), (5) **Verifying field is editable** (not read-only, formula field). Field must be on page layout for create/update operations.
+
+### Q: How do I debug LWC component errors?
+
+**A**: Debug by: (1) **Using browser console** (check JavaScript errors), (2) **Using Salesforce Debug Logs** (check Apex errors, wire adapter errors), (3) **Using Lightning Debug Mode** (enable in Setup), (4) **Checking component markup** (verify HTML structure), (5) **Testing wire adapters** (verify data is returned), (6) **Checking event handling** (verify events are dispatched/received). Browser console and debug logs are primary debugging tools.
+
+### Q: How do I handle wire adapter errors?
+
+**A**: Handle by: (1) **Checking Apex method** (verify method exists, is accessible), (2) **Checking error property** (`@wire` provides error property), (3) **Displaying error messages** (show errors to users), (4) **Handling gracefully** (fallback behavior, retry logic), (5) **Logging errors** (log for debugging), (6) **Testing error scenarios** (test Apex errors, network errors). Wire adapters provide error property for error handling.
+
+### Q: How do I fix component import errors?
+
+**A**: Fix by: (1) **Verifying import path** (check path is correct, component exists), (2) **Checking component is deployed** (verify component is in org), (3) **Verifying component name** (check component name matches file), (4) **Checking namespace** (verify namespace if applicable), (5) **Refreshing metadata** (refresh in VS Code, redeploy). Import errors usually indicate path or component issues.
+
+### Q: How do I prevent LWC errors?
+
+**A**: Prevent by: (1) **Adding null checks** (check for null/undefined), (2) **Using optional chaining** (`?.` operator), (3) **Verifying data is loaded** (check wire adapter data), (4) **Testing thoroughly** (test all scenarios, error cases), (5) **Following best practices** (LWC patterns, error handling), (6) **Code reviews** (catch issues early), (7) **Using TypeScript** (type safety helps prevent errors).
+
+### Q: What are best practices for LWC error handling?
+
+**A**: Best practices include: (1) **Always check data is loaded** (verify wire adapter data before accessing), (2) **Use optional chaining** (prevent undefined errors), (3) **Handle wire adapter errors** (check error property, display errors), (4) **Test error scenarios** (test Apex errors, network errors), (5) **Provide user-friendly messages** (clear error messages), (6) **Log errors for debugging** (structured logging), (7) **Follow LWC patterns** (proven patterns reduce errors).
+
 ## Related Patterns
 
 - [LWC Patterns](../development/lwc-patterns.md) - Complete LWC patterns
 - [LWC Best Practices](../mcp-knowledge/lwc-best-practices.md) - LWC best practices
 - [LDS Patterns](../mcp-knowledge/lds-patterns.md) - Lightning Data Service patterns
 - [Error Handling](../development/error-handling-and-logging.md) - Error handling patterns
+- [LWC Accessibility Errors](lwc-accessibility-errors.md) - Accessibility-specific errors
 

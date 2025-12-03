@@ -1,3 +1,16 @@
+---
+title: "ETL vs API vs Events: Integration Pattern Selection"
+level: "Intermediate"
+tags:
+  - integrations
+  - patterns
+  - etl
+  - api
+  - platform-events
+  - decision-framework
+last_reviewed: "2025-01-XX"
+---
+
 # ETL vs API vs Events: Integration Pattern Selection
 
 ## Overview
@@ -256,4 +269,47 @@ Combine patterns when:
 3. **Coupling**: Tight coupling → API, Loose coupling → Events
 4. **Subscribers**: Single → API or ETL, Multiple → Events
 5. **Feedback**: Immediate → API, Delayed → ETL or Events
+
+## Q&A
+
+### Q: When should I use ETL vs API vs Events?
+
+**A**: Use **ETL** for high-volume, scheduled batch synchronization (hundreds of thousands of records). Use **API** for real-time, synchronous integrations requiring immediate feedback. Use **Events** for asynchronous, decoupled integrations with multiple subscribers or when you need loose coupling between systems.
+
+### Q: Can I combine different integration patterns?
+
+**A**: Yes, combining patterns is common and recommended. For example: use ETL for initial data loads, Events for incremental updates, and API for user-initiated actions. Different systems may require different patterns based on their characteristics and requirements.
+
+### Q: What are the performance implications of each pattern?
+
+**A**: **ETL** handles high volumes efficiently but runs on a schedule. **API** provides immediate response but has lower throughput and requires synchronous processing. **Events** are asynchronous and scalable but don't provide immediate feedback. Choose based on volume, timing, and feedback requirements.
+
+### Q: How do I handle errors in each integration pattern?
+
+**A**: **ETL**: Use job tracking, retry logic, and error logging. **API**: Implement retry logic with exponential backoff, handle HTTP errors gracefully, and log failures. **Events**: Use event replay capabilities, implement idempotent subscribers, and monitor event delivery.
+
+### Q: What are the tradeoffs between tight and loose coupling?
+
+**A**: **Tight coupling (API)**: Provides immediate feedback and simpler error handling but creates dependencies between systems. **Loose coupling (Events)**: Enables scalability and resilience but requires more complex error handling and monitoring. Choose based on whether systems need to be decoupled.
+
+### Q: How do I decide between REST API and SOAP API?
+
+**A**: Use **REST API** for modern integrations, mobile apps, and when you need JSON payloads. Use **SOAP API** for legacy systems, when you need WSDL contracts, or when working with systems that only support SOAP. REST is generally preferred for new integrations.
+
+### Q: What is the difference between Platform Events and Change Data Capture (CDC)?
+
+**A**: **Platform Events** are custom events you publish explicitly from your code/flows. **CDC** automatically publishes change events when records are created, updated, or deleted. Use Platform Events for business events; use CDC for data change tracking.
+
+### Q: How do I handle large data volumes in API integrations?
+
+**A**: For large volumes, prefer ETL or Events over API. If API is required, implement pagination, batch processing, and consider using Bulk API for large operations. Monitor API call limits and implement rate limiting/throttling to avoid hitting governor limits.
+
+## Related Patterns
+
+- [Integration Platform Patterns](integration-platform-patterns.md) - MuleSoft and Dell Boomi patterns
+- [SIS Sync Patterns](sis-sync-patterns.md) - High-volume ETL synchronization patterns
+- [Change Data Capture Patterns](change-data-capture-patterns.md) - CDC for event-driven integration
+- [Callout Best Practices](callout-best-practices.md) - API callout patterns
+- [Event-Driven Architecture](../architecture/event-driven-architecture.md) - Platform Events patterns
+- [Large Data Loads](../development/large-data-loads.md) - Bulk data operation patterns
 

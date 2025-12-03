@@ -1,3 +1,17 @@
+---
+title: "Asynchronous Apex Patterns"
+level: "Advanced"
+tags:
+  - apex
+  - development
+  - patterns
+  - batch
+  - queueable
+  - scheduled
+  - asynchronous
+last_reviewed: "2025-01-XX"
+---
+
 # Asynchronous Apex Patterns
 
 ## Overview
@@ -442,6 +456,40 @@ This guide provides comprehensive patterns for asynchronous Apex processing, cov
 - Testing and debugging
 
 **Tradeoff**: Scheduled provides automation but less control. Manual execution provides control but requires manual intervention.
+
+## Q&A
+
+### Q: When should I use Batch Apex vs Queueable vs Scheduled Apex?
+
+**A**: Use **Batch Apex** for processing thousands or millions of records in batches of 200. Use **Queueable** for chaining jobs, performing callouts after DML, or lightweight async processing. Use **Scheduled Apex** for time-based operations and periodic maintenance tasks.
+
+### Q: What is the difference between stateful and stateless Batch Apex?
+
+**A**: **Stateful** batches maintain state across batch executions using instance variables, useful for aggregating data or tracking processed records. **Stateless** batches don't maintain state between executions, making them faster and more efficient for simple bulk operations.
+
+### Q: Can I chain Queueable jobs?
+
+**A**: Yes, Queueable jobs can chain up to **50 jobs** in a single transaction. Chain jobs by calling `System.enqueueJob()` from within a Queueable's `execute()` method. This enables sequential processing where one job triggers the next.
+
+### Q: Should I use @future methods or Queueable?
+
+**A**: For new development, prefer **Queueable** over @future methods. Queueable provides better error handling, ability to chain jobs, more flexible parameter passing, and better monitoring. Migrate existing @future methods to Queueable when possible.
+
+### Q: What are the governor limits for async Apex?
+
+**A**: **Batch Apex**: 50 concurrent batch jobs, 250,000 batch executions per 24 hours. **Queueable**: 50 chained jobs per transaction, 50,000 Queueable jobs per 24 hours. **Scheduled**: 100 scheduled jobs per org. Each async context has its own governor limits (separate from synchronous limits).
+
+### Q: How do I monitor async job execution?
+
+**A**: Query `AsyncApexJob` for Batch and Queueable jobs, query `CronTrigger` and `CronJobDetail` for Scheduled jobs, monitor job status (Queued, Processing, Completed, Failed), track execution time and errors, and implement notifications for job failures.
+
+### Q: Can I perform callouts in async Apex?
+
+**A**: Yes, async Apex (Batch, Queueable, Scheduled) can perform callouts. Queueable is particularly useful for callouts after DML operations, as it can perform callouts in the same transaction context. Batch and Scheduled can also perform callouts within their execution contexts.
+
+### Q: How do I handle errors in async Apex?
+
+**A**: Implement try-catch blocks in async methods, log errors to custom logging objects, send error notifications, implement retry logic for failed jobs, monitor job failures, and handle partial failures gracefully. Use `Database.executeBatch()` with error handling for Batch Apex.
 
 ## Related Patterns
 

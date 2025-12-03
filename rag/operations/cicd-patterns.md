@@ -1,3 +1,14 @@
+---
+title: "CI/CD Patterns for Salesforce"
+level: "Intermediate"
+tags:
+  - operations
+  - cicd
+  - deployment
+  - devops
+last_reviewed: "2025-01-XX"
+---
+
 # CI/CD Patterns for Salesforce
 
 ## Overview
@@ -259,6 +270,48 @@ This guide covers comprehensive CI/CD patterns for Salesforce, including metadat
 - Test thoroughly before deployment
 - Document hotfix in change log
 - Plan for proper merge back to main
+
+## Q&A
+
+### Q: What is the difference between metadata orgs and source-tracked orgs?
+
+**A**: **Metadata orgs** use Change Sets or Metadata API for deployments and require manual tracking of changes. **Source-tracked orgs** automatically track changes and integrate with Git and CI/CD pipelines. Use source-tracked orgs for new projects or when modernizing existing projects. Metadata orgs are for legacy projects not yet converted.
+
+### Q: When should I use unlocked packages?
+
+**A**: Use **unlocked packages** when: (1) **Breaking down large codebases** into manageable modules, (2) **Enabling modular development** across teams, (3) **Versioning components** independently, (4) **Sharing components** across projects, (5) **Managing dependencies** between components. Unlocked packages provide better organization and versioning than monolithic deployments.
+
+### Q: How do I automate sandbox seeding?
+
+**A**: Automate sandbox seeding by: (1) **Creating seed data scripts** (Apex, Data Loader, ETL tools), (2) **Using test data factories** for consistent data, (3) **Automating seed execution** in CI/CD pipelines, (4) **Scheduling regular refreshes** of seed data, (5) **Versioning seed data** in source control, (6) **Documenting seed data requirements**. Ensure consistent test data across environments.
+
+### Q: What validation should I perform before deployments?
+
+**A**: Validate before deployments by: (1) **Running Apex tests** (minimum 75% coverage), (2) **Validating metadata** (check for errors, dependencies), (3) **Checking governor limits** (ensure no limit violations), (4) **Reviewing security** (profiles, permission sets), (5) **Testing in sandbox** first, (6) **Running smoke tests** after deployment. Never skip validation before production deployments.
+
+### Q: How do I implement rollback strategies for Salesforce deployments?
+
+**A**: Implement rollback by: (1) **Backing up metadata** before deployment, (2) **Using version control** to track changes, (3) **Creating rollback scripts** (reverse deployment steps), (4) **Testing rollback procedures** in sandbox, (5) **Documenting rollback steps**, (6) **Using feature flags** for quick rollbacks without code changes. Always have a rollback plan before production deployments.
+
+### Q: What are feature flags and how do I use them in Salesforce?
+
+**A**: **Feature flags** are configuration settings that enable/disable features without code changes. Use them for: (1) **Gradual rollouts** (enable for subset of users first), (2) **Quick rollbacks** (disable feature without deployment), (3) **A/B testing** (test different feature versions), (4) **Environment-specific behavior** (different behavior per environment). Implement using Custom Metadata Types or Custom Settings.
+
+### Q: How do I set up CI/CD pipelines for Salesforce?
+
+**A**: Set up CI/CD pipelines by: (1) **Using source control** (Git) for metadata, (2) **Automating deployments** (Salesforce CLI, Metadata API), (3) **Running tests** on every commit, (4) **Validating deployments** before production, (5) **Automating sandbox seeding**, (6) **Using CI/CD tools** (Jenkins, GitHub Actions, GitLab CI), (7) **Monitoring deployments** and test results.
+
+### Q: What is the difference between validation and deployment?
+
+**A**: **Validation** runs tests and checks without deploying to the org (dry run). **Deployment** actually applies changes to the org. Always validate before deploying to production. Validation catches errors without affecting the org, while deployment makes changes permanent. Use validation in CI/CD pipelines to catch issues early.
+
+### Q: How do I handle hotfixes in a CI/CD workflow?
+
+**A**: Handle hotfixes by: (1) **Creating hotfix branch** from production, (2) **Fixing issue** in hotfix branch, (3) **Testing thoroughly** before deployment, (4) **Deploying to production** from hotfix branch, (5) **Merging hotfix back** to main branch, (6) **Documenting hotfix** in change log. Ensure hotfixes don't break existing functionality.
+
+### Q: What should I include in a deployment checklist?
+
+**A**: Include in deployment checklist: (1) **Metadata backup** (version control, export), (2) **Test execution** (all tests pass, coverage met), (3) **Validation** (no errors, dependencies resolved), (4) **Security review** (profiles, permission sets), (5) **Rollback plan** (documented, tested), (6) **Communication** (notify stakeholders), (7) **Monitoring** (watch for errors after deployment).
 
 ## Related Patterns
 

@@ -1,3 +1,15 @@
+---
+title: "File Management Patterns"
+level: "Intermediate"
+tags:
+  - data-modeling
+  - file-management
+  - contentversion
+  - attachments
+  - documents
+last_reviewed: "2025-01-XX"
+---
+
 # File Management Patterns
 
 ## Overview
@@ -372,6 +384,54 @@ Salesforce provides multiple mechanisms for file storage and management. Underst
 - See `rag/data-modeling/object-setup-and-configuration.md` for object setup patterns
 - See `rag/development/flow-patterns.md` for Flow file upload patterns
 - See `rag/development/apex-patterns.md` for Apex file management patterns
+
+## Q&A
+
+### Q: What is the difference between ContentVersion (Files) and Attachments?
+
+**A**: **ContentVersion (Files)** is the modern file storage mechanism (recommended for new implementations). It supports versioning, sharing, collaboration, and is integrated with Lightning Experience. **Attachments** is the legacy mechanism (still supported but not recommended). It has no versioning, limited sharing, and is not fully integrated with Lightning. Use ContentVersion for all new file storage needs.
+
+### Q: When should I use ContentVersion vs. Attachments vs. Documents?
+
+**A**: Use **ContentVersion** for: user-uploaded files, document management, files needing versioning, modern implementations. Use **Attachments** for: legacy implementations only, simple attachments without versioning. Use **Documents** for: internal document libraries, template storage, documents not linked to records. Prefer ContentVersion for all new implementations.
+
+### Q: How do I link files to records in Salesforce?
+
+**A**: Link files by: (1) **ContentDocumentLink** - links ContentVersion files to records (many-to-many relationship), (2) **Attachment.ParentId** - links Attachments to parent record (direct relationship), (3) **ContentVersion sharing** - share files across multiple records using ContentDocumentLink. ContentDocumentLink provides flexible file-to-record relationships.
+
+### Q: What is file versioning and how does it work?
+
+**A**: **File versioning** allows multiple versions of the same file. ContentVersion supports versioning (each upload creates a new version), while Attachments do not. Versioning enables: (1) **Track file history** (see all versions), (2) **Revert to previous versions** (if needed), (3) **Collaborative editing** (multiple users can upload versions), (4) **Audit trail** (who uploaded which version). Use ContentVersion when versioning is needed.
+
+### Q: How do I manage file storage in Salesforce?
+
+**A**: Manage storage by: (1) **Monitor file storage usage** (separate from data storage), (2) **Archive old files** to external storage, (3) **Delete unused files** regularly, (4) **Compress files** when possible, (5) **Set file retention policies** (automated cleanup), (6) **Use ContentVersion** (more efficient than Attachments). File storage has separate limits from data storage.
+
+### Q: What is the difference between Files and Documents?
+
+**A**: **Files (ContentVersion)** are user-uploaded files attached to records, support versioning and sharing, integrated with Lightning Experience. **Documents** are internal document libraries, typically templates or reference documents, not linked to records, stored in Documents tab. Use Files for record attachments, Documents for internal libraries.
+
+### Q: How do I share files across multiple records?
+
+**A**: Share files by: (1) **ContentDocumentLink** - create multiple ContentDocumentLink records linking same file to multiple records, (2) **File sharing** - share files with users, groups, or records, (3) **Library sharing** - share document libraries. ContentDocumentLink enables many-to-many file-to-record relationships, allowing files to be shared across multiple records.
+
+### Q: What are file storage limits in Salesforce?
+
+**A**: File storage limits: (1) **Professional** - 1 GB file storage, (2) **Enterprise/Performance/Unlimited** - 10 GB file storage (can purchase additional), (3) **File storage separate from data storage** (different limits), (4) **Big Objects** have separate storage (doesn't count toward file storage). Monitor file storage separately and plan for growth.
+
+### Q: How do I handle file uploads in Flows and Apex?
+
+**A**: Handle uploads by: (1) **Flow** - use File Upload component in Screen Flows, (2) **Apex** - use ContentVersion and ContentDocumentLink APIs, (3) **REST API** - use ContentVersion API endpoints, (4) **Bulk API** - for bulk file uploads. ContentVersion API provides programmatic file management. Always use ContentVersion for new implementations.
+
+### Q: What are best practices for file management?
+
+**A**: Best practices include: (1) **Use ContentVersion** for all new file storage (not Attachments), (2) **Leverage versioning** for document management, (3) **Use ContentDocumentLink** for record associations, (4) **Monitor file storage** usage regularly, (5) **Archive old files** to external storage, (6) **Set retention policies** (automated cleanup), (7) **Compress files** when possible, (8) **Delete unused files** regularly.
+
+## Related Patterns
+
+- [Object Setup and Configuration](object-setup-and-configuration.md) - Object setup patterns
+- [Flow Patterns](../development/flow-patterns.md) - Flow file upload patterns
+- [Apex Patterns](../development/apex-patterns.md) - Apex file management patterns
 
 ## References
 

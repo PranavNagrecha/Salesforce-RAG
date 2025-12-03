@@ -1,3 +1,14 @@
+---
+title: "LWC Accessibility Testing Patterns"
+level: "Intermediate"
+tags:
+  - testing
+  - lwc
+  - accessibility
+  - wcag
+last_reviewed: "2025-01-XX"
+---
+
 # LWC Accessibility Testing Patterns
 
 > Comprehensive testing patterns and examples for Lightning Web Component accessibility validation.
@@ -485,6 +496,48 @@ it('should pass accessibility scan', async () => {
 8. **Train Team**: Ensure team understands accessibility requirements
 
 ---
+
+## Q&A
+
+### Q: How do I test LWC accessibility with Jest?
+
+**A**: Test LWC accessibility with Jest by: (1) **Installing @salesforce/sa11y** package, (2) **Importing accessibility matchers** (`import '@salesforce/sa11y/dist/jest'`), (3) **Rendering component** in test, (4) **Using `expect(element).toBeAccessible()`** matcher, (5) **Running tests** to catch accessibility violations. Jest accessibility tests catch common issues automatically.
+
+### Q: What accessibility testing tools should I use?
+
+**A**: Use accessibility testing tools: (1) **@salesforce/sa11y** for Jest unit tests, (2) **axe-core** for automated testing, (3) **Lighthouse** for page-level testing, (4) **Pa11y** for command-line testing, (5) **Screen readers** (NVDA, JAWS, VoiceOver) for manual testing, (6) **WebAIM Contrast Checker** for color contrast. Combine automated and manual testing.
+
+### Q: What should I test manually for accessibility?
+
+**A**: Test manually: (1) **Keyboard navigation** (Tab, Enter, Space, Escape keys), (2) **Screen reader testing** (NVDA, JAWS, VoiceOver), (3) **Focus indicators** (visible focus styles), (4) **Color contrast** (verify on different backgrounds), (5) **Dynamic content announcements** (screen reader announces changes), (6) **Modal focus trapping** (focus stays in modal). Manual testing catches issues automated tools miss.
+
+### Q: How do I test keyboard accessibility?
+
+**A**: Test keyboard accessibility by: (1) **Using Tab key** to navigate through interactive elements, (2) **Using Enter/Space** to activate buttons/links, (3) **Using Escape** to close modals/cancel actions, (4) **Verifying focus order** (logical tab order), (5) **Verifying no keyboard traps** (can navigate away), (6) **Testing all interactive states** (loading, error, success). Disable mouse to test keyboard-only navigation.
+
+### Q: How do I test with screen readers?
+
+**A**: Test with screen readers by: (1) **Installing screen reader** (NVDA for Windows, VoiceOver for Mac, JAWS for Windows), (2) **Navigating component** using screen reader commands, (3) **Verifying announcements** (labels, roles, states), (4) **Verifying dynamic content** is announced, (5) **Verifying form labels** are read correctly, (6) **Testing all interactive elements**. Screen reader testing is essential for accessibility.
+
+### Q: What accessibility issues can automated tools catch?
+
+**A**: Automated tools catch: (1) **Missing labels** on form controls, (2) **Missing alt text** on images, (3) **Color contrast violations**, (4) **Missing ARIA attributes**, (5) **Incorrect heading hierarchy**, (6) **Keyboard accessibility issues** (some), (7) **Semantic HTML violations**. Automated tools catch about 30-40% of accessibility issues - manual testing is still essential.
+
+### Q: What accessibility issues require manual testing?
+
+**A**: Require manual testing: (1) **Screen reader announcements** (how content is read), (2) **Keyboard navigation flow** (logical tab order), (3) **Focus management** (focus trapping, focus indicators), (4) **Dynamic content announcements** (live regions), (5) **Context and meaning** (does content make sense when read), (6) **User experience** (is it usable with assistive technology). Manual testing catches issues automated tools miss.
+
+### Q: How often should I test accessibility?
+
+**A**: Test accessibility: (1) **During development** (include in unit tests), (2) **Before code review** (run automated tests), (3) **During code review** (review accessibility checklist), (4) **Before deployment** (full accessibility audit), (5) **After deployment** (verify in production), (6) **Regularly** (ongoing accessibility testing). Include accessibility in every development cycle.
+
+### Q: What is the minimum accessibility standard I should meet?
+
+**A**: Meet **WCAG 2.1 Level AA standards** as minimum: (1) **Level A** (basic accessibility - required), (2) **Level AA** (enhanced accessibility - recommended), (3) **Level AAA** (highest accessibility - optional). Most organizations target Level AA. Check your organization's accessibility requirements and compliance needs.
+
+### Q: How do I integrate accessibility testing into CI/CD?
+
+**A**: Integrate accessibility testing by: (1) **Running Jest accessibility tests** in CI pipeline, (2) **Running automated tools** (axe-core, Lighthouse) in CI, (3) **Failing builds** on accessibility violations, (4) **Reporting accessibility results** in CI output, (5) **Setting accessibility thresholds** (minimum score), (6) **Including accessibility in code review** process. Automate accessibility testing to catch issues early.
 
 ## Related Patterns
 

@@ -1,3 +1,14 @@
+---
+title: "Environment Strategy for Salesforce"
+level: "Intermediate"
+tags:
+  - operations
+  - environment-strategy
+  - sandboxes
+  - data-masking
+last_reviewed: "2025-01-XX"
+---
+
 # Environment Strategy for Salesforce
 
 ## Overview
@@ -241,6 +252,48 @@ This guide covers environment strategy patterns for Salesforce, including org to
 - Monitor refresh duration
 - Log refresh activities
 - Alert on refresh failures
+
+## Q&A
+
+### Q: What is environment strategy in Salesforce?
+
+**A**: **Environment strategy** defines how Salesforce orgs are organized and managed across development, testing, and production. It includes: (1) **Org topology** (single org vs. multiple orgs), (2) **Sandbox strategy** (types, refresh cadences), (3) **Data masking** (protecting sensitive data), (4) **Team isolation** (separating team work), (5) **Environment parity** (keeping environments similar).
+
+### Q: When should I use a single org vs. multiple orgs for development?
+
+**A**: Use **single org** for small teams (1-2 teams), tightly coupled features, limited budget, and simple deployments. Use **multiple orgs** for large teams (3+ teams), independent features, complex deployments, and need for team isolation. Design org topology early to avoid costly restructuring later.
+
+### Q: How do I mask sensitive data in sandbox environments?
+
+**A**: Mask sensitive data by: (1) **Identifying sensitive fields** (PII, PHI, financial data), (2) **Using data masking tools** (automated scripts, ETL tools), (3) **Replacing real data** with anonymized data, (4) **Automating masking** in refresh processes, (5) **Validating masking** (ensure no real data remains), (6) **Documenting masking rules**. Always mask PII/PHI in non-production environments.
+
+### Q: What is the recommended sandbox refresh cadence?
+
+**A**: Refresh cadence depends on: (1) **Team needs** (how often fresh data is needed), (2) **Data requirements** (test data freshness), (3) **Refresh costs** (time, resources), (4) **Compliance requirements** (data retention policies). Common cadences: **Weekly** for development sandboxes, **Monthly** for testing sandboxes, **Quarterly** for staging sandboxes. Document refresh schedules clearly.
+
+### Q: How do I maintain environment parity across sandboxes?
+
+**A**: Maintain parity by: (1) **Deploying same metadata** to all environments, (2) **Using same configuration** (profiles, permission sets), (3) **Seeding consistent test data**, (4) **Automating deployments** to ensure consistency, (5) **Documenting differences** when parity isn't possible, (6) **Regular audits** to verify parity. Keep environments as similar as possible to production.
+
+### Q: What sandbox types should I use for different purposes?
+
+**A**: Use sandbox types based on purpose: (1) **Developer** - individual development, (2) **Developer Pro** - individual development with more storage, (3) **Partial Copy** - integration testing with subset of production data, (4) **Full Copy** - full production copy for UAT, (5) **Metadata Only** - configuration testing without data. Choose based on data needs and testing requirements.
+
+### Q: How do I isolate teams in a multi-team environment?
+
+**A**: Isolate teams by: (1) **Using separate orgs** for independent teams, (2) **Using separate sandboxes** per team, (3) **Defining clear boundaries** (objects, features per team), (4) **Using unlocked packages** for modular development, (5) **Coordinating deployments** to avoid conflicts, (6) **Documenting team responsibilities**. Isolate when possible to enable independent work.
+
+### Q: What should I consider when planning org topology?
+
+**A**: Consider: (1) **Team size and structure** (how many teams, how independent), (2) **Feature coupling** (how tightly coupled features are), (3) **Budget constraints** (cost of multiple orgs), (4) **Deployment complexity** (cross-org deployments), (5) **Data sharing needs** (need for unified reporting), (6) **Future growth** (scalability requirements). Design topology early to avoid restructuring.
+
+### Q: How do I handle data requirements across environments?
+
+**A**: Handle data requirements by: (1) **Defining data needs** per environment (what data is needed), (2) **Automating data seeding** (consistent test data), (3) **Masking sensitive data** (PII, PHI), (4) **Refreshing data regularly** (based on cadence), (5) **Documenting data requirements**, (6) **Validating data quality** (ensure data is usable). Balance data freshness with refresh costs.
+
+### Q: What are best practices for environment strategy?
+
+**A**: Best practices include: (1) **Design org topology early** (before development), (2) **Isolate teams when possible** (separate orgs or clear boundaries), (3) **Mask sensitive data** in non-production, (4) **Establish refresh cadences** (documented schedules), (5) **Automate data masking** (consistent processes), (6) **Document environment purposes** (clear usage guidelines), (7) **Maintain environment parity** (keep environments similar), (8) **Plan for scaling** (support future growth).
 
 ## Related Patterns
 

@@ -1,3 +1,14 @@
+---
+title: "Data Quality and Stewardship for Salesforce"
+level: "Intermediate"
+tags:
+  - data-governance
+  - data-quality
+  - duplicate-prevention
+  - master-data
+last_reviewed: "2025-01-XX"
+---
+
 # Data Quality and Stewardship for Salesforce
 
 ## Overview
@@ -291,6 +302,48 @@ This guide covers data quality and stewardship patterns for Salesforce, includin
 - Track issue status
 - Measure resolution time
 - Report on issue trends
+
+## Q&A
+
+### Q: How do I prevent duplicates beyond Leads in Salesforce?
+
+**A**: Prevent duplicates by: (1) **Configuring duplicate rules** for Account, Contact, and other objects, (2) **Using matching rules** to define match criteria (Name, Email, Domain, Address), (3) **Setting blocking vs. alerting rules** (block duplicates or alert users), (4) **Using composite matching** (combine multiple fields), (5) **Implementing data quality checks** at entry, (6) **Using external IDs** for integration-based duplicates.
+
+### Q: What are survivorship rules and when should I use them?
+
+**A**: **Survivorship rules** determine which field values to keep when merging duplicate records. Use survivorship rules when: (1) **Merging duplicate records** (decide which values to keep), (2) **Data consolidation** (combining data from multiple sources), (3) **Master data management** (maintaining single source of truth). Rules can be: Most recent, Most complete, Specific field priority, Custom logic.
+
+### Q: What is master data governance?
+
+**A**: **Master data governance** is the process of managing master data (core business data like Accounts, Contacts) to ensure quality, consistency, and accuracy. It includes: (1) **Data stewardship** (assigning data owners and stewards), (2) **Data quality rules** (defining quality standards), (3) **Data quality monitoring** (tracking quality metrics), (4) **Data quality automation** (automated quality checks), (5) **Single source of truth** (one authoritative source).
+
+### Q: What are data quality metrics and how do I track them?
+
+**A**: Data quality metrics include: (1) **Completeness** - percentage of required fields populated, (2) **Accuracy** - percentage of accurate data values, (3) **Consistency** - consistency across related records, (4) **Uniqueness** - duplicate rate, (5) **Timeliness** - data freshness and update frequency. Track metrics by: defining metrics, calculating regularly, reporting to stakeholders, setting quality targets, monitoring trends.
+
+### Q: How do I implement data stewardship?
+
+**A**: Implement data stewardship by: (1) **Assigning data stewards** (Data Owner, Data Steward, Data Custodian roles), (2) **Defining stewardship responsibilities** (monitor quality, resolve issues, maintain rules), (3) **Creating stewardship workflows** (issue identification, assignment, resolution), (4) **Training stewards** on data quality, (5) **Providing tools** for stewards (dashboards, reports), (6) **Measuring stewardship effectiveness** (track resolution times, quality improvements).
+
+### Q: How do I automate data quality checks?
+
+**A**: Automate data quality by: (1) **Validation rules** for data entry (real-time validation), (2) **Automated duplicate detection** (duplicate rules, matching rules), (3) **Data quality scoring** (calculate quality scores automatically), (4) **Automated data cleansing** (fix common data issues), (5) **Batch quality checks** (periodic quality audits), (6) **Quality alerts** (notify on quality issues). Balance automation with user control.
+
+### Q: What is the difference between blocking and alerting duplicate rules?
+
+**A**: **Blocking rules** prevent duplicate records from being created (users must resolve duplicates before saving). **Alerting rules** allow duplicates but warn users (users can choose to proceed or resolve). Use blocking for critical duplicates (Accounts, Contacts), alerting for less critical duplicates. Configure rule actions (block, alert, allow) based on business requirements.
+
+### Q: How do I monitor data quality?
+
+**A**: Monitor data quality by: (1) **Setting up quality dashboards** (display key quality metrics), (2) **Configuring quality alerts** (notify on quality issues), (3) **Scheduling quality reports** (regular quality reports), (4) **Reviewing quality metrics** regularly, (5) **Tracking quality trends** over time, (6) **Identifying quality issues** (automated detection, user reports, audits), (7) **Measuring resolution** (track issue resolution times).
+
+### Q: What are best practices for data quality?
+
+**A**: Best practices include: (1) **Prevent duplicates at creation** (duplicate rules, matching rules), (2) **Implement data quality checks** (validation rules, automated checks), (3) **Establish data stewardship** (assign stewards, define responsibilities), (4) **Monitor data quality metrics** (track KPIs, trends), (5) **Automate data quality processes** (where possible), (6) **Document data quality rules** (clear procedures), (7) **Regular data quality reviews** (audits, improvements), (8) **Train users** on data quality requirements.
+
+### Q: How do I handle data quality issues?
+
+**A**: Handle data quality issues by: (1) **Identifying issues** (automated detection, user reports, audits), (2) **Assigning issues to stewards** (track assignment), (3) **Resolving issues** (follow resolution process), (4) **Verifying resolution** (quality verification), (5) **Closing issues** (document resolution), (6) **Reporting on issues** (track trends, resolution times), (7) **Preventing future issues** (update rules, train users).
 
 ## Related Patterns
 

@@ -1,3 +1,14 @@
+---
+title: "Data Reconciliation Techniques"
+level: "Intermediate"
+tags:
+  - troubleshooting
+  - data-quality
+  - reconciliation
+  - integration
+last_reviewed: "2025-01-XX"
+---
+
 # Data Reconciliation Techniques
 
 ## Overview
@@ -285,4 +296,54 @@ Avoid reconciliation when:
 - Data volumes make reconciliation impractical
 - Different validation approach preferred
 - Real-time validation sufficient
+
+## Q&A
+
+### Q: What is data reconciliation in Salesforce?
+
+**A**: **Data reconciliation** is the process of comparing data between Salesforce and external systems to ensure consistency, identify discrepancies, and validate data synchronization. It uses external IDs, integration job tracking, and comparison queries to validate that data matches between systems.
+
+### Q: How do I use external IDs for data reconciliation?
+
+**A**: Use external IDs for reconciliation by: (1) **Mirroring external system primary keys** in Salesforce external ID fields, (2) **Using external IDs to find corresponding records** in both systems, (3) **Comparing field values** between systems using external IDs, (4) **Identifying records** that exist in one system but not the other, (5) **Tracking reconciliation results** using external IDs as correlation keys.
+
+### Q: What fields should I use for integration job tracking?
+
+**A**: Use integration job tracking fields: (1) **`Last_Sync_Timestamp__c`** - when record was last synced, (2) **`Last_Sync_Status__c`** - sync job status (Success, Error, In Progress), (3) **`Last_Sync_Error__c`** - error message if sync failed, (4) **`Integration_Job_ID__c`** - correlation ID with external system. These fields enable tracking sync operations and identifying issues.
+
+### Q: How do I identify discrepancies between systems?
+
+**A**: Identify discrepancies by: (1) **Querying records by external ID** in both systems, (2) **Comparing field values** between systems, (3) **Identifying missing records** (exist in one system but not the other), (4) **Tracking reconciliation results** (match, mismatch, missing), (5) **Generating reconciliation reports** showing discrepancies. Use SOQL queries and comparison logic to find differences.
+
+### Q: How often should I run data reconciliation?
+
+**A**: Run reconciliation based on: (1) **Data criticality** (critical data more frequently), (2) **Integration frequency** (match reconciliation to sync frequency), (3) **Data volume** (larger volumes may need less frequent reconciliation), (4) **Business requirements** (compliance, audit needs). Common cadences: **Daily** for critical data, **Weekly** for standard data, **Monthly** for reference data.
+
+### Q: What tools can I use for data reconciliation?
+
+**A**: Use tools including: (1) **SOQL queries** to query and compare records, (2) **Integration job tracking fields** for correlation, (3) **Data export and comparison** (export from both systems, compare), (4) **Apex scripts** for automated reconciliation, (5) **ETL tools** for complex reconciliation, (6) **Reconciliation dashboards** for monitoring. Choose tools based on data volume and complexity.
+
+### Q: How do I handle reconciliation errors?
+
+**A**: Handle reconciliation errors by: (1) **Logging reconciliation failures** with error details, (2) **Handling errors gracefully** (don't fail entire reconciliation), (3) **Supporting manual reconciliation** when needed, (4) **Providing clear error messages** for troubleshooting, (5) **Enabling error recovery workflows** (retry failed reconciliations), (6) **Alerting on significant discrepancies**.
+
+### Q: What are best practices for data reconciliation?
+
+**A**: Best practices include: (1) **Always use external IDs** for integrated objects, (2) **Schedule regular reconciliation jobs** (automated reconciliation), (3) **Track reconciliation results** and history, (4) **Monitor reconciliation metrics** (success rate, discrepancy count), (5) **Alert on significant discrepancies**, (6) **Document reconciliation processes**, (7) **Maintain reconciliation history** for audit purposes.
+
+### Q: When should I use data reconciliation?
+
+**A**: Use reconciliation when: (1) **Integrating with external systems** (ensure data consistency), (2) **Data quality is critical** (need to validate data), (3) **Compliance requires data validation** (audit requirements), (4) **Integration issues need identification** (troubleshooting), (5) **Data synchronization needs validation** (verify sync success).
+
+### Q: What are the tradeoffs of data reconciliation?
+
+**A**: Tradeoffs include: (1) **Advantages** - ensures data consistency, identifies issues early, supports data quality, enables audit/compliance, (2) **Challenges** - requires external ID management, time-intensive for large datasets, complex reconciliation logic, ongoing maintenance required. Balance reconciliation frequency with effort and data criticality.
+
+## Related Patterns
+
+- [Integration Debugging](integration-debugging.md) - Debugging integration issues
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns for reconciliation
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data validation patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
+- [SIS Sync Patterns](../integrations/sis-sync-patterns.md) - High-volume synchronization patterns
 

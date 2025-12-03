@@ -1,3 +1,14 @@
+---
+title: "Object Setup and Configuration"
+level: "Intermediate"
+tags:
+  - data-modeling
+  - object-setup
+  - configuration
+  - best-practices
+last_reviewed: "2025-01-XX"
+---
+
 # Object Setup and Configuration
 
 ## Overview
@@ -28,11 +39,33 @@ Comprehensive checklist and best practices for setting up custom and standard ob
 
 ### Record Types (Optional)
 
+**What they are**: Record Types enable different business processes, picklist values, and page layouts for the same object. They allow the same object to support multiple workflows or use cases.
+
+**When to use**:
+- Different business processes for the same object
+- Different picklist values needed for different record categories
+- Different page layouts needed for different user groups or workflows
+- Different validation rules or automation needed based on record category
+
+**When NOT to use**:
+- Simple variations that can be handled with fields or picklists
+- Variations that would be better served by separate objects
+- When record types add unnecessary complexity
+
 **Steps**:
 1. Create Record Types if needed for different record workflows
 2. Configure Record Type-specific page layouts
-3. Set Record Type defaults
+3. Set Record Type defaults for profiles
 4. Configure Record Type visibility in profiles/permission sets
+5. Configure Record Type-specific picklist values
+6. Set up Record Type-specific automation if needed
+
+**Best Practices**:
+- Use Record Types when you need different business processes for the same object
+- Keep Record Type count manageable (typically 2-5 Record Types per object)
+- Consider whether separate objects would be better than Record Types
+- Document Record Type purpose and usage
+- Test Record Type assignment and visibility
 
 ### Field Configuration
 
@@ -51,14 +84,43 @@ Comprehensive checklist and best practices for setting up custom and standard ob
 
 ### Page Layout Configuration
 
+**What they are**: Page Layouts control which fields appear on record detail pages, field order and organization, related lists, and actions available to users. They provide the user interface structure for viewing and editing records.
+
+**Key components**:
+- Field organization in sections
+- Field visibility and required settings
+- Related lists and their visibility
+- Actions (buttons, links, quick actions)
+- Field read-only settings
+- Mobile layout configuration
+
+**Layout assignment**:
+- Page layouts are assigned to profiles and record types
+- Different profiles can have different layouts for the same record type
+- Different record types can have different layouts
+- Layouts can be shared across profiles when appropriate
+
 **Steps**:
 1. Edit the Page Layout to ensure all fields are visible and in the right location
-2. Make the Section header visible for System Fields
-3. Ensure required fields are marked as required
-4. Add Related Lists:
+2. Organize fields into logical sections
+3. Make the Section header visible for System Fields
+4. Ensure required fields are marked as required
+5. Configure field read-only settings where appropriate
+6. Add Related Lists:
    - Files and Notes related list (if using them)
    - Object History related list
-5. Configure Related List visibility and order
+   - Other related object lists
+7. Configure Related List visibility and order
+8. Configure actions (buttons, links, quick actions)
+9. Test layout with different profiles and record types
+
+**Best Practices**:
+- Organize fields logically in sections
+- Group related fields together
+- Make system fields visible with section headers
+- Configure related lists for easy navigation
+- Test layouts with end users
+- Keep layouts consistent across similar objects
 
 ### Actions Configuration
 
@@ -450,6 +512,40 @@ Comprehensive checklist and best practices for setting up custom and standard ob
 **Impact**: Community users see inappropriate data or views
 
 **Solution**: Test and configure objects specifically for community access
+
+## Q&A
+
+### Q: What is the recommended order for setting up a new object?
+
+**A**: The recommended order is: (1) Create object and basic configuration, (2) Create fields with FLS, (3) Create relationships, (4) Create tabs and assign to apps, (5) Create page layouts, (6) Create compact layouts, (7) Configure search layouts, (8) Set up actions, (9) Configure Lightning Record Pages, (10) Set permissions, (11) Test with test records, (12) Configure list views.
+
+### Q: When should I use Record Types?
+
+**A**: Use Record Types when you need different business processes, picklist values, or page layouts for the same object. Use them for different workflows or use cases. Avoid Record Types for simple variations that can be handled with fields or picklists, or when separate objects would be better.
+
+### Q: Should I use singular or plural object names?
+
+**A**: Use **singular object names** (e.g., `CaseReference__c` not `CasesReference__c`). This aligns with Salesforce standard objects (Account, Contact, Case), is consistent with object-oriented design principles, and is clearer in API references.
+
+### Q: What is the difference between Field Label and API Name?
+
+**A**: **Field Labels** are user-friendly and can change. **API Names** should be stable and remain constant. Use descriptive labels for users, stable API names for code. Labels can change without affecting API names, but API names should remain constant to avoid breaking integrations and code.
+
+### Q: When should I use Master-Detail vs Lookup relationships?
+
+**A**: Use **Master-Detail** for parent-child relationships with cascade delete requirements. Use **Lookup** relationships when you need more flexibility. Remember: You can always use triggers or Rollup Helper to create calculated fields if you don't have a Master-Detail relationship.
+
+### Q: Why are Search Layouts important?
+
+**A**: **Search Layouts** are critical because users rely on search to find records. Poor search layouts reduce productivity, and search is a primary navigation mechanism. Always configure Search Layouts as part of object setup to ensure users can find records efficiently.
+
+### Q: What should I consider when configuring objects for Experience Cloud (Communities)?
+
+**A**: When configuring objects for Experience Cloud: (1) Ensure you go back to Classic to configure Communities-specific settings, (2) Ensure Communities users can't see inappropriate Views, (3) Configure sharing settings for community users, (4) Test object access from community user perspective, (5) Verify field visibility for community users.
+
+### Q: Should I set Field-Level Security (FLS) during field creation or later?
+
+**A**: Set **FLS permissions as you create fields**. This is easier to configure during creation, prevents security gaps, and ensures proper access control from the start. Don't defer FLS configuration - it's a critical security step.
 
 ## Related Patterns
 

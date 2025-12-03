@@ -1,3 +1,15 @@
+---
+title: "Multi-Tenant Identity Architecture"
+level: "Advanced"
+tags:
+  - identity-sso
+  - multi-tenant
+  - sso
+  - oidc
+  - saml
+last_reviewed: "2025-01-XX"
+---
+
 # Multi-Tenant Identity Architecture
 
 ## Overview
@@ -241,4 +253,38 @@ Avoid multi-tenant identity architecture when:
 - Security requirements cannot be met with sharing rules
 - License costs are not a concern
 - Separate orgs provide better isolation
+
+## Q&A
+
+### Q: What is multi-tenant identity architecture in Salesforce?
+
+**A**: **Multi-tenant identity architecture** enables a single Salesforce org to support multiple distinct user communities with different identity providers, security requirements, and access patterns. This pattern is essential for public sector and higher education implementations where citizens, external partner organizations, and internal staff must coexist in the same org.
+
+### Q: When should I use multi-tenant identity architecture?
+
+**A**: Use this pattern when: (1) **Multiple distinct user communities** need access to the same org, (2) **Different identity providers** are required (OIDC, SAML, organization tenant), (3) **Shared data model** benefits outweigh complexity, (4) **License costs** need to be optimized, (5) **Unified reporting** is important.
+
+### Q: What identity providers can I use in a multi-tenant architecture?
+
+**A**: You can use: (1) **OIDC** for external users (citizens/clients) via authorization code flow, (2) **SAML 2.0** for internal staff via assertion-based authentication, (3) **Organization tenant identity** for external partner staff. Each user type can have different identity providers and authentication flows.
+
+### Q: How do I separate different user types in a multi-tenant org?
+
+**A**: Separate user types using: (1) **Record Types** on Account/Contact objects (client vs. external partner vs. internal), (2) **Different identity providers** per user type, (3) **Sharing rules and data visibility** configured per user type, (4) **Portal experiences** (Experience Cloud vs. internal Service Cloud), (5) **Login handlers** to route users to appropriate experiences.
+
+### Q: How do I handle user creation in a multi-tenant architecture?
+
+**A**: Handle user creation by: (1) **Pre-creating Contacts** during migration for external users, (2) **Using login handlers** to match external identity provider GUIDs to Contacts, (3) **Creating Users on first login** for external users, (4) **Mapping SAML attributes** to User and Contact fields for internal staff, (5) **Preventing duplicates** by matching on external GUID and email.
+
+### Q: What are the security considerations for multi-tenant identity?
+
+**A**: Security considerations include: (1) **Data isolation** between user communities using sharing rules, (2) **Record Type-based separation** to prevent cross-community data access, (3) **Identity provider security** (OIDC, SAML configuration), (4) **User profile and permission set** separation per community, (5) **Audit trails** to track access by user type.
+
+### Q: How do I route users to different experiences in a multi-tenant org?
+
+**A**: Route users by: (1) **Using login handlers** to detect user type based on identity provider, (2) **Configuring different landing pages** per user type, (3) **Using Experience Cloud sites** for external users, (4) **Using internal Service Cloud** for internal staff, (5) **Setting up different navigation** and app experiences per user type.
+
+### Q: What are the tradeoffs of multi-tenant identity architecture?
+
+**A**: Tradeoffs include: (1) **Complexity** - more complex identity provider configuration and sharing rules, (2) **Security** - requires careful sharing rule design to prevent cross-community access, (3) **Maintenance** - more complex to maintain than separate orgs, (4) **Benefits** - lower license costs, unified reporting, shared data model, single integration point.
 

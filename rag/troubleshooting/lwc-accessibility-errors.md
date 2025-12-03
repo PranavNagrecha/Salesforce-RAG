@@ -1,3 +1,15 @@
+---
+title: "LWC Accessibility Errors and Solutions"
+level: "Intermediate"
+tags:
+  - troubleshooting
+  - lwc
+  - accessibility
+  - errors
+  - wcag
+last_reviewed: "2025-01-XX"
+---
+
 # LWC Accessibility Errors and Solutions
 
 > Troubleshooting guide for common Lightning Web Component accessibility errors with solutions and prevention strategies.
@@ -757,6 +769,48 @@ handleClose() {
 - [ ] Verify focus management
 
 ---
+
+## Q&A
+
+### Q: What are the most common LWC accessibility errors?
+
+**A**: Most common errors include: (1) **Missing form labels** (inputs without labels), (2) **Keyboard inaccessibility** (custom components not keyboard accessible), (3) **Missing focus indicators** (no visible focus styles), (4) **Insufficient color contrast** (text doesn't meet 4.5:1 ratio), (5) **Missing alt text** (images without alt attributes), (6) **Incorrect heading hierarchy** (skipped heading levels), (7) **Missing ARIA roles** (custom components without roles).
+
+### Q: How do I fix missing form labels in LWC?
+
+**A**: Fix missing labels by: (1) **Adding `label` attribute** to Lightning Base Components (`<lightning-input label="Email">`), (2) **Using `<label>` element** with `for`/`id` for custom inputs, (3) **Using `aria-label`** when visual label not feasible, (4) **Never using placeholder** as label replacement. All form controls must have programmatically associated labels.
+
+### Q: How do I make custom components keyboard accessible?
+
+**A**: Make components keyboard accessible by: (1) **Adding keyboard event handlers** (`onkeydown`, `onkeyup`), (2) **Using `tabindex="0"`** for focusable elements, (3) **Implementing Enter/Space** for activation, (4) **Implementing Escape** for cancellation, (5) **Trapping focus in modals** (prevent focus from escaping), (6) **Returning focus** to trigger element when closing.
+
+### Q: What are the color contrast requirements for accessibility?
+
+**A**: Color contrast requirements: (1) **Normal text** (under 18pt or 14pt bold) - **4.5:1 contrast ratio**, (2) **Large text** (18pt+ or 14pt+ bold) - **3:1 contrast ratio**, (3) **UI components** (buttons, form controls) - **3:1 contrast ratio**, (4) **Focus indicators** - **3:1 contrast ratio**. Use WebAIM Contrast Checker to verify contrast.
+
+### Q: How do I handle images for accessibility?
+
+**A**: Handle images by: (1) **Adding `alt` attribute** to all images, (2) **Using `alt=""`** for decorative images (empty alt), (3) **Using descriptive alt text** for informative images, (4) **Adding `aria-label`** to image links, (5) **Using `aria-hidden="true"`** for decorative images. Never omit alt attribute - use empty alt for decorative images.
+
+### Q: What is the correct heading hierarchy?
+
+**A**: Correct heading hierarchy: (1) **Start with h1** (one per page), (2) **Use h2** for major sections, (3) **Use h3** for subsections, (4) **Never skip levels** (h1 → h3 is wrong, use h1 → h2 → h3), (5) **Use headings for structure**, not styling. Headings should form a logical outline of the page content.
+
+### Q: How do I announce dynamic content changes?
+
+**A**: Announce dynamic content by: (1) **Using `aria-live="polite"`** for status updates (non-urgent), (2) **Using `aria-live="assertive"`** for errors (urgent), (3) **Using `role="status"`** for status messages, (4) **Using `role="alert"`** for error messages, (5) **Using `aria-atomic="true"`** to announce entire region. Screen readers will announce changes to live regions.
+
+### Q: What ARIA roles should I use for custom components?
+
+**A**: Use appropriate ARIA roles: (1) **`role="button"`** for custom buttons, (2) **`role="switch"`** for toggles, (3) **`role="checkbox"`** for custom checkboxes, (4) **`role="dialog"`** for modals, (5) **`role="alert"`** for error messages, (6) **`role="status"`** for status messages. Always add ARIA states (aria-checked, aria-expanded, etc.) to match component state.
+
+### Q: How do I test LWC accessibility?
+
+**A**: Test accessibility by: (1) **Running automated tests** (axe-core, Lighthouse, Jest with @salesforce/sa11y), (2) **Testing with keyboard-only navigation** (Tab, Enter, Space, Escape), (3) **Testing with screen readers** (NVDA, JAWS, VoiceOver), (4) **Verifying color contrast** (WebAIM Contrast Checker), (5) **Testing all interactive states** (loading, error, success), (6) **Testing focus management** (focus indicators, focus trapping).
+
+### Q: What are best practices for preventing accessibility errors?
+
+**A**: Best practices include: (1) **Always add labels** to form controls, (2) **Make all interactive elements keyboard accessible**, (3) **Never remove focus indicators**, (4) **Use SLDS color tokens** for proper contrast, (5) **Add alt text to all images**, (6) **Follow proper heading hierarchy**, (7) **Use semantic HTML** (header, nav, main, footer), (8) **Test with screen readers** regularly, (9) **Include accessibility in code reviews**.
 
 ## Related Patterns
 

@@ -1,3 +1,16 @@
+---
+title: "SIS Synchronization Patterns"
+level: "Advanced"
+tags:
+  - integrations
+  - etl
+  - sis
+  - education-cloud
+  - batch-processing
+  - high-volume
+last_reviewed: "2025-01-XX"
+---
+
 # SIS Synchronization Patterns
 
 ## Overview
@@ -330,4 +343,53 @@ Avoid this pattern when:
 - Low data volumes (can use simpler patterns)
 - No legacy system integration
 - Different integration requirements exist
+
+## Q&A
+
+### Q: What are SIS synchronization patterns?
+
+**A**: **SIS synchronization patterns** are high-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS). They handle hundreds of thousands of student records daily through ETL platforms (Dell Boomi, MuleSoft) with file-based staging and dynamic SQL batching.
+
+### Q: How do I handle high-volume batch synchronization?
+
+**A**: Handle high-volume batch sync by: (1) **Using ETL platforms** (Dell Boomi, MuleSoft) for transformation, (2) **File-based staging** for large datasets (ID lists exceeding 50,000 records), (3) **Dynamic SQL batching** (split large ID lists into SQL IN-clause batches of 1,000 IDs), (4) **Chunking strategy** (1,000-10,000 records per batch), (5) **Bulk operations** (use Bulk API for efficiency), (6) **Connection pooling** (efficient database connection management).
+
+### Q: What is the recommended chunk size for batch processing?
+
+**A**: Recommended chunk sizes: (1) **1,000-10,000 records per batch** (adjust based on data complexity), (2) **1,000 IDs per SQL IN-clause** (for dynamic SQL batching), (3) **2,000 records per Bulk API call** (Salesforce API limit). Monitor performance and adjust chunk sizes as needed. Balance between throughput and resource usage.
+
+### Q: How do I use external IDs for SIS synchronization?
+
+**A**: Use external IDs by: (1) **Mirroring SIS primary keys** (e.g., EMPLID) in Salesforce external ID fields, (2) **Designing stable external IDs** (don't change over time), (3) **Using composite external IDs** when SIS uses multi-column keys, (4) **Including timestamp fields** to track last sync time, (5) **Using external IDs for record matching** (upsert operations). External IDs enable stable record mapping and idempotent operations.
+
+### Q: How do I handle errors in high-volume batch synchronization?
+
+**A**: Handle errors by: (1) **Capturing error details** at each step, (2) **Implementing retry logic** for transient failures (network, timeouts), (3) **Using dead-letter queues** for unprocessable records, (4) **Logging all errors** for troubleshooting, (5) **Supporting manual retry** for failed records, (6) **Tracking error patterns** for system improvements. Enable error recovery and data quality improvements.
+
+### Q: How do I monitor SIS synchronization health?
+
+**A**: Monitor by: (1) **Building dashboards** (records processed, success/failure rates, processing time), (2) **Setting up alerts** (high error rates, processing time thresholds, job failures), (3) **Logging all operations** (track processing metrics, error details), (4) **Tracking metrics** (records pending sync, error rates by type, API usage), (5) **Enabling audit trails** (support troubleshooting, compliance).
+
+### Q: What are the performance optimization strategies for SIS sync?
+
+**A**: Optimize performance by: (1) **Chunking large datasets** (manageable batch sizes), (2) **Using bulk operations** (Bulk API for efficiency), (3) **Implementing connection pooling** (reuse database connections), (4) **Monitoring API usage** (respect Salesforce limits), (5) **Profiling integration performance** (identify bottlenecks), (6) **Adjusting chunk sizes** based on performance data.
+
+### Q: When should I use SIS synchronization patterns?
+
+**A**: Use when: (1) **Integrating with legacy SIS systems** (Oracle-based, batch-oriented), (2) **Processing hundreds of thousands of records daily** (high-volume requirements), (3) **Need stable record mapping** (external IDs for matching), (4) **Require batch-oriented approach** (not real-time), (5) **Need error recovery** (retry logic, dead-letter queues). These patterns are designed for high-volume, batch-oriented SIS integrations.
+
+### Q: What is the difference between file-based staging and direct API calls?
+
+**A**: **File-based staging** stores ID lists in files when exceeding 50,000 records, then processes files in batches. **Direct API calls** make API calls directly without file staging. Use file-based staging for very large datasets (hundreds of thousands of records) to avoid memory issues and enable efficient batch processing. Direct API calls work for smaller datasets.
+
+### Q: What are best practices for SIS synchronization?
+
+**A**: Best practices include: (1) **Always use external IDs** for objects receiving integration data, (2) **Break large datasets into chunks** (1,000-10,000 records per batch), (3) **Use file-based staging** for ID lists exceeding 50,000 records, (4) **Implement retry logic** for transient failures, (5) **Monitor integration health** (dashboards, alerts, logging), (6) **Profile performance** and optimize, (7) **Support error recovery** (dead-letter queues, manual retry).
+
+## Related Patterns
+
+- [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection
+- [Integration Platform Patterns](integration-platform-patterns.md) - MuleSoft and Dell Boomi patterns
+- [Data Migration Patterns](../data-modeling/data-migration-patterns.md) - Data migration strategies
+- [External IDs and Integration Keys](../data-modeling/external-ids-and-integration-keys.md) - External ID patterns
 

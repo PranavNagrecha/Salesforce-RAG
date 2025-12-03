@@ -1,3 +1,15 @@
+---
+title: "Lead Management and Conversion Data Model"
+level: "Intermediate"
+tags:
+  - data-modeling
+  - lead-management
+  - lead-conversion
+  - duplicate-prevention
+  - marketing-attribution
+last_reviewed: "2025-01-XX"
+---
+
 # Lead Management and Conversion Data Model
 
 ## Overview
@@ -605,4 +617,52 @@ Avoid this model when:
 - All prospects are immediately qualified
 - Different data model requirements exist
 - Person Accounts only (may not need Leads)
+
+## Q&A
+
+### Q: What is the Lead object and when should I use it?
+
+**A**: The **Lead object** represents potential customers who have shown interest but haven't been qualified or converted. Use Leads when: (1) **Tracking unqualified prospects** (before qualification), (2) **Marketing attribution** (tracking lead sources, campaigns), (3) **Lead qualification process** (qualifying leads before conversion), (4) **Multiple lead sources** (web, phone, email, events), (5) **Integration with marketing automation** (marketing platforms create leads).
+
+### Q: How does lead conversion work in Salesforce?
+
+**A**: Lead conversion creates: (1) **Contact** (from Lead name/email), (2) **Account** (from Lead Company, or matched to existing), (3) **Opportunity** (optional, for qualified leads), (4) **Links converted records** (ConvertedAccountId, ConvertedContactId, ConvertedOpportunityId). Conversion can be manual or automated. Once converted, Lead.IsConverted = true and Lead cannot be edited.
+
+### Q: How do I prevent duplicate leads?
+
+**A**: Prevent duplicates by: (1) **Configuring duplicate rules** for Lead object (matching on Email, Name, Company), (2) **Using matching rules** to define match criteria, (3) **Setting blocking vs. alerting rules** (block duplicates or alert users), (4) **Using external IDs** for integration-based leads, (5) **Implementing data quality checks** at entry. Duplicate rules are essential for lead data quality.
+
+### Q: What is lead scoring and how do I implement it?
+
+**A**: **Lead scoring** assigns scores to leads based on criteria (demographics, behavior, engagement). Implement by: (1) **Creating score fields** (Lead Score, Behavioral Score), (2) **Using automation** (Flow, Process Builder) to calculate scores, (3) **Defining scoring criteria** (what increases/decreases score), (4) **Updating scores** based on lead activity, (5) **Using scores for routing** (route high-scoring leads to sales). Lead scoring helps prioritize leads for sales teams.
+
+### Q: How do I route leads to the right sales rep?
+
+**A**: Route leads by: (1) **Assignment rules** (automated routing based on criteria), (2) **Lead source routing** (route by LeadSource), (3) **Territory routing** (route by geography, industry), (4) **Round-robin routing** (distribute leads evenly), (5) **Manual assignment** (users assign leads). Assignment rules can be based on Lead fields (Source, Industry, State, etc.).
+
+### Q: What is the difference between Lead Status and Lead Rating?
+
+**A**: **Lead Status** tracks lead progression (Open - Not Contacted, Working - Contacted, Qualified, Nurturing, Unqualified). **Lead Rating** indicates lead quality (Hot, Warm, Cold). Status tracks process stage, Rating tracks quality. Both are picklist fields on Lead object. Use Status for workflow, Rating for prioritization.
+
+### Q: How do I track marketing attribution for leads?
+
+**A**: Track attribution by: (1) **LeadSource field** (source of lead - Web, Phone, Email, Trade Show), (2) **Campaign association** (link Leads to Campaigns via CampaignMember), (3) **External system IDs** (correlate with marketing automation platforms), (4) **First Touch/Last Touch** (track first and last touchpoints), (5) **Multi-touch attribution** (track all touchpoints). Marketing attribution helps measure marketing effectiveness.
+
+### Q: What happens to converted leads?
+
+**A**: After conversion: (1) **Lead.IsConverted = true** (Lead marked as converted), (2) **Lead becomes read-only** (cannot edit converted leads), (3) **Converted records created** (Contact, Account, Opportunity), (4) **Links maintained** (ConvertedAccountId, ConvertedContactId, ConvertedOpportunityId), (5) **Lead data preserved** (for historical tracking). Converted leads remain in system for reporting and historical tracking.
+
+### Q: How do I handle lead assignment to queues vs. users?
+
+**A**: Assign leads to: (1) **Users** - individual sales reps (direct assignment), (2) **Queues** - team assignment (round-robin, manual assignment from queue). Use queues for: team-based routing, workload distribution, shared lead pools. Use user assignment for: direct ownership, individual accountability. Assignment rules can route to users or queues.
+
+### Q: What are best practices for lead management?
+
+**A**: Best practices include: (1) **Prevent duplicates** (duplicate rules, matching rules), (2) **Implement lead scoring** (prioritize high-quality leads), (3) **Automate routing** (assignment rules for efficiency), (4) **Track marketing attribution** (LeadSource, Campaigns), (5) **Maintain data quality** (validation rules, data quality checks), (6) **Convert qualified leads** (convert when ready), (7) **Monitor lead metrics** (conversion rates, source performance).
+
+## Related Patterns
+
+- [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns for lead integration
+- [Data Quality and Stewardship](../data-governance/data-quality-stewardship.md) - Duplicate prevention patterns
+- [Object Setup and Configuration](object-setup-and-configuration.md) - Object configuration patterns
 

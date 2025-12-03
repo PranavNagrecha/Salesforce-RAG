@@ -1,3 +1,15 @@
+---
+title: "Integration User License Guide"
+level: "Intermediate"
+tags:
+  - integrations
+  - licensing
+  - security
+  - authentication
+  - oauth
+last_reviewed: "2025-01-XX"
+---
+
 # Integration User License Guide
 
 ## Overview
@@ -694,8 +706,45 @@ The Salesforce Integration User License provides a cost-effective and secure way
 - Permission Sets provide granular access control
 - Regular audits and monitoring ensure security and compliance
 
-**Related Documentation**:
+## Q&A
+
+### Q: What is the Salesforce Integration User License?
+
+**A**: The **Integration User License** is a free API-only license designed for system-to-system integrations. It provides API access without UI access, costs $0 (5 free licenses included with Enterprise/Performance/Unlimited), and enables dedicated users per integration for better security and audit trails.
+
+### Q: When should I use Integration User Licenses vs regular user licenses?
+
+**A**: Use **Integration User Licenses** for system-to-system integrations, scheduled batch processes, integration platforms (MuleSoft, Boomi), and API-only access scenarios. Use **regular user licenses** for users requiring Salesforce UI access, portal users, or mobile app access.
+
+### Q: How many Integration User Licenses do I get?
+
+**A**: **5 free Integration User Licenses** are included with Enterprise, Performance, and Unlimited editions. Professional Edition does not include them (requires upgrade). Additional licenses can be purchased at approximately $10 per user per month.
+
+### Q: What authentication methods can I use with Integration Users?
+
+**A**: Use **OAuth 2.0 Client Credentials Flow** (recommended), **JWT Bearer Token Flow** (for enterprise with certificates), or **Username-Password Flow** (not recommended). OAuth 2.0 Client Credentials is the preferred method for secure, token-based authentication.
+
+### Q: Can Integration Users access the Salesforce UI?
+
+**A**: **No, Integration Users cannot access the Salesforce UI**. They have API-only access. Login attempts to the UI will fail. All access must be through APIs (REST, SOAP, Bulk, Streaming, Metadata). The profile cannot be modified to enable UI access.
+
+### Q: How do I manage permissions for Integration Users?
+
+**A**: Grant permissions through **Permission Sets** (the profile cannot be modified). Create dedicated Permission Sets per integration, grant only necessary object and field permissions, document permission rationale, and regularly audit permissions. Follow the principle of least privilege.
+
+### Q: Should I use one Integration User per system or share users?
+
+**A**: Use **one Integration User per external system**. This enables clear audit trails per integration, simplifies permission management, improves security isolation, and makes troubleshooting easier. Sharing users across systems makes it difficult to track which system performed actions.
+
+### Q: How do I monitor Integration User activities?
+
+**A**: Enable **Event Monitoring** for Integration Users, review API usage logs in Setup → Monitoring, track API call volumes and patterns, monitor for failed authentication attempts, review audit logs regularly, and set up dashboards for API usage. Monitor for security anomalies.
+
+## Related Patterns
+
 - [Integration Platform Patterns](integration-platform-patterns.md) - MuleSoft and Dell Boomi integration patterns
 - [ETL vs API vs Events](etl-vs-api-vs-events.md) - Integration pattern selection framework
 - [Permission Set Architecture](../security/permission-set-architecture.md) - Permission management patterns
+- [Callout Best Practices](callout-best-practices.md) - HTTP callout patterns for integration users
+- [SIS Sync Patterns](sis-sync-patterns.md) - High-volume batch synchronization patterns
 

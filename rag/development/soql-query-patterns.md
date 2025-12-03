@@ -1,3 +1,15 @@
+---
+title: "SOQL Query Patterns"
+level: "Intermediate"
+tags:
+  - soql
+  - apex
+  - development
+  - queries
+  - data-access
+last_reviewed: "2025-01-XX"
+---
+
 # SOQL Query Patterns
 
 ## Overview
@@ -492,6 +504,56 @@ ORDER BY ApiVersion ASC, Name ASC
 - This file provides debugging query patterns
 - Troubleshooting file focuses on debugging methodology
 - Use together: query examples here + debugging approach there
+
+## Related Patterns
+
+- [Apex Patterns](apex-patterns.md) - Apex class layering and Selector layer patterns
+- [Governor Limits and Optimization](governor-limits-and-optimization.md) - Query optimization and limit management
+- [Large Data Loads](large-data-loads.md) - Bulk query patterns for large datasets
+- [Integration Debugging](../troubleshooting/integration-debugging.md) - Query patterns for debugging integrations
+- [Data Reconciliation](../troubleshooting/data-reconciliation.md) - Query patterns for data validation
+
+## Q&A
+
+### Q: How do I write efficient SOQL queries?
+
+**A**: Write efficient queries by: (1) **Using indexed fields** in WHERE clauses (Id, Name, Email, External IDs, Lookup fields, Date fields), (2) **Ensuring selectivity** (queries return less than 10% of records), (3) **Selecting only needed fields** (don't use SELECT *), (4) **Using LIMIT clause** when possible, (5) **Avoiding functions** in WHERE clauses (prevents index usage), (6) **Using selective filters** (multiple indexed fields).
+
+### Q: What is query selectivity and why does it matter?
+
+**A**: **Query selectivity** is the percentage of records returned by a query. Queries should return **less than 10% of records** to be considered selective and use indexes efficiently. Non-selective queries (returning >10% of records) can't use indexes and perform full table scans, causing performance issues and potential governor limit violations. Use indexed fields and multiple filters to improve selectivity.
+
+### Q: How do I write dynamic SOQL queries safely?
+
+**A**: Write safe dynamic SOQL by: (1) **Using String.escapeSingleQuotes()** for user input (prevents SOQL injection), (2) **Validating input** before building queries, (3) **Using bind variables** when possible (preferred over string concatenation), (4) **Testing with edge cases** (null, empty strings, special characters), (5) **Using Database.query()** with proper escaping, (6) **Avoiding string concatenation** for user input.
+
+### Q: How do I query related records efficiently?
+
+**A**: Query related records by: (1) **Using relationship queries** (parent-to-child, child-to-parent), (2) **Limiting related records** (using LIMIT in subqueries), (3) **Selecting only needed fields** (don't query all fields), (4) **Using aggregate queries** when appropriate (COUNT, SUM, etc.), (5) **Avoiding nested queries** when not needed (can be expensive). Relationship queries enable efficient data retrieval across related objects.
+
+### Q: What is the difference between SOQL and SOSL?
+
+**A**: **SOQL (Salesforce Object Query Language)** queries specific objects and fields (structured queries). **SOSL (Salesforce Object Search Language)** searches across multiple objects using text search (unstructured search). Use SOQL for specific object queries, SOSL for text-based search across objects. SOQL is more precise, SOSL is more flexible for search scenarios.
+
+### Q: How do I handle large result sets in SOQL?
+
+**A**: Handle large result sets by: (1) **Using LIMIT clause** to restrict results, (2) **Using pagination** (OFFSET, LIMIT for page-by-page retrieval), (3) **Using WHERE filters** to reduce result set, (4) **Using Batch Apex** for processing large datasets, (5) **Using Bulk API** for very large datasets, (6) **Processing in chunks** (avoid loading all records at once).
+
+### Q: How do I debug SOQL query issues?
+
+**A**: Debug queries by: (1) **Using Query Plan** in Developer Console (analyze query performance), (2) **Checking query selectivity** (ensure <10% of records), (3) **Reviewing query logs** (identify slow queries), (4) **Testing queries** in Developer Console, (5) **Using EXPLAIN PLAN** for query analysis, (6) **Monitoring governor limits** (query count, rows returned). Query Plan shows whether indexes are used.
+
+### Q: What are best practices for SOQL queries?
+
+**A**: Best practices include: (1) **Use indexed fields** in WHERE clauses, (2) **Ensure selectivity** (<10% of records), (3) **Select only needed fields** (not SELECT *), (4) **Use LIMIT clause** when possible, (5) **Avoid functions in WHERE** (prevents index usage), (6) **Escape user input** (String.escapeSingleQuotes()), (7) **Test query performance** (use Query Plan), (8) **Monitor governor limits** (query count, rows).
+
+### Q: How do I optimize queries for governor limits?
+
+**A**: Optimize by: (1) **Reducing query count** (combine queries when possible), (2) **Using relationship queries** (retrieve related data in one query), (3) **Limiting result sets** (use LIMIT, WHERE filters), (4) **Caching query results** (Platform Cache for frequently accessed data), (5) **Using aggregate queries** (COUNT, SUM instead of retrieving all records), (6) **Bulkifying code** (no queries in loops).
+
+### Q: When should I use relationship queries vs. separate queries?
+
+**A**: Use **relationship queries** when: (1) **Retrieving related data** (parent-to-child, child-to-parent), (2) **Reducing query count** (one query instead of multiple), (3) **Data is needed together** (related records used together). Use **separate queries** when: (1) **Data is independent** (not used together), (2) **Different filters needed** (different WHERE conditions), (3) **Avoiding large result sets** (relationship queries can return many records).
 
 ## To Validate
 

@@ -1,3 +1,15 @@
+---
+title: "Automated Testing Patterns for Salesforce"
+level: "Advanced"
+tags:
+  - testing
+  - automation
+  - ui-testing
+  - contract-testing
+  - load-testing
+last_reviewed: "2025-01-XX"
+---
+
 # Automated Testing Patterns for Salesforce
 
 ## Overview
@@ -294,6 +306,48 @@ This guide covers automated testing patterns for Salesforce at scale, including 
 - Maintain test data in version control
 - Document test data requirements
 - Clean up test data after tests
+
+## Q&A
+
+### Q: What types of automated testing should I implement for Salesforce?
+
+**A**: Implement testing at multiple levels: (1) **Unit tests** (Apex test classes) for code logic, (2) **Integration tests** for API and data synchronization, (3) **UI tests** for LWC components and Experience Cloud, (4) **Contract tests** for integrations, (5) **Load tests** for performance. Each level serves different purposes and catches different types of issues.
+
+### Q: How do I automate UI testing for Lightning Web Components?
+
+**A**: Automate LWC UI testing by: (1) **Using Jest** for unit testing LWC components, (2) **Using Playwright or Selenium** for end-to-end UI testing, (3) **Using Salesforce Test Automation Framework** for Salesforce-specific UI testing, (4) **Creating page object models** for maintainable test code, (5) **Testing accessibility** with automated accessibility testing tools.
+
+### Q: What are contract tests and why are they important for integrations?
+
+**A**: **Contract tests** verify that integration interfaces (APIs, events) match expected contracts. They're important because they: (1) **Prevent breaking changes** in integrations, (2) **Enable independent development** of integrated systems, (3) **Document integration contracts**, (4) **Catch integration issues early**. Use tools like Pact for contract testing.
+
+### Q: How do I implement load testing for Salesforce?
+
+**A**: Implement load testing by: (1) **Defining load test scenarios** (expected load, stress points), (2) **Using load testing tools** (JMeter, Gatling, k6), (3) **Testing in sandbox environments**, (4) **Monitoring system metrics** during tests, (5) **Analyzing results** to identify bottlenecks. Test under expected load, beyond expected load (stress), and with sudden spikes.
+
+### Q: Should I run all tests in CI/CD pipelines?
+
+**A**: **Run different tests at different stages**: (1) **Unit tests on every commit** for fast feedback, (2) **Integration tests on pull requests** to catch integration issues, (3) **Full test suite before deployment** to ensure quality, (4) **Smoke tests after deployment** to verify deployment success. Balance test coverage with execution time.
+
+### Q: How do I manage test data for automated tests?
+
+**A**: Manage test data by: (1) **Using test data factories** to generate data programmatically, (2) **Maintaining reusable test data sets** in version control, (3) **Isolating test data per test** to prevent interference, (4) **Cleaning up test data after tests** to maintain test environment, (5) **Documenting test data requirements** for each test.
+
+### Q: What is the difference between load testing, stress testing, and spike testing?
+
+**A**: **Load testing** tests under expected load to verify system handles normal usage. **Stress testing** tests beyond expected load to find breaking points. **Spike testing** tests sudden load increases to verify system handles traffic spikes. Each type reveals different performance characteristics and failure modes.
+
+### Q: How do I test integrations with external systems?
+
+**A**: Test integrations by: (1) **Mocking external systems** when possible to isolate tests, (2) **Using test environments** for integration testing, (3) **Testing both success and failure scenarios**, (4) **Testing batch and real-time integrations** separately, (5) **Monitoring integration test execution** for reliability. Use contract tests to verify integration interfaces.
+
+### Q: What metrics should I track for automated testing?
+
+**A**: Track metrics including: (1) **Test coverage** (code coverage percentage), (2) **Test execution time** (how long tests take to run), (3) **Test failure rate** (percentage of failing tests), (4) **Test flakiness** (tests that fail intermittently), (5) **Time to detect issues** (how quickly tests catch bugs). These metrics help improve test quality and effectiveness.
+
+### Q: How do I make automated tests maintainable?
+
+**A**: Make tests maintainable by: (1) **Using page object models** for UI tests, (2) **Creating reusable test data factories**, (3) **Following DRY principles** (Don't Repeat Yourself), (4) **Documenting test purpose and setup**, (5) **Treating test code with same quality standards** as production code, (6) **Refactoring tests** as requirements change.
 
 ## Related Patterns
 

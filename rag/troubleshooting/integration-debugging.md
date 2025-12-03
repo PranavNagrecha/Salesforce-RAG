@@ -1,3 +1,14 @@
+---
+title: "Integration Debugging Methods"
+level: "Intermediate"
+tags:
+  - troubleshooting
+  - integrations
+  - debugging
+  - root-cause-analysis
+last_reviewed: "2025-01-XX"
+---
+
 # Integration Debugging Methods
 
 ## Overview
@@ -299,4 +310,54 @@ Avoid these methods when:
 - Time constraints prevent thorough analysis
 - Different debugging approach preferred
 - Automated tools can handle the issue
+
+## Q&A
+
+### Q: How do I debug integration failures in Salesforce?
+
+**A**: Debug integration failures by: (1) **Finding root causes, not just symptoms** (use systematic approach), (2) **Querying history objects** to understand data changes, (3) **Analyzing error messages** and patterns, (4) **Correlating with integration job tracking** fields, (5) **Using SOQL queries** to trace data relationships, (6) **Reviewing integration logs** and error details, (7) **Testing integration scenarios** to reproduce issues.
+
+### Q: How do I use history objects for debugging?
+
+**A**: Use history objects by: (1) **Querying ContactHistory, AccountHistory, CaseHistory** to track field changes, (2) **Filtering by field name** to see specific field changes, (3) **Filtering by date range** to focus on relevant periods, (4) **Correlating with User records** to understand who made changes, (5) **Using history to understand data lineage** (how data changed over time). History objects show what changed, when, and by whom.
+
+### Q: What is root cause analysis for integrations?
+
+**A**: **Root cause analysis** finds underlying causes of integration issues, not just symptoms. Approach: (1) **Query multiple objects** to find relationships, (2) **Use aggregate queries** to identify patterns, (3) **Cross-reference multiple data sources**, (4) **Query metadata** when configuration issues are suspected, (5) **Trace data relationships** using SOQL, (6) **Document findings** and root causes.
+
+### Q: How do I analyze integration errors?
+
+**A**: Analyze integration errors by: (1) **Reviewing error messages** carefully (they often indicate cause), (2) **Identifying error patterns** (common errors, frequency), (3) **Correlating errors with data** (what data caused errors), (4) **Checking integration job tracking** fields (Last_Sync_Status__c, Last_Sync_Error__c), (5) **Reviewing integration logs** for detailed error information, (6) **Testing error scenarios** to reproduce issues.
+
+### Q: How do I debug data quality issues in integrations?
+
+**A**: Debug data quality issues by: (1) **Querying records with data quality problems** (missing required fields, invalid values), (2) **Comparing data between systems** (what's different), (3) **Identifying data transformation issues** (how data is transformed), (4) **Checking validation rules** (what validations are failing), (5) **Reviewing data mapping** (field mappings correct?), (6) **Testing data scenarios** to identify issues.
+
+### Q: What SOQL queries help with integration debugging?
+
+**A**: Useful SOQL queries for debugging: (1) **History object queries** (track field changes), (2) **Related object queries** (find relationships), (3) **Aggregate queries** (identify patterns), (4) **Filtered queries** (find specific records), (5) **Date range queries** (focus on relevant time periods), (6) **External ID queries** (correlate records between systems). Use queries to trace data relationships and identify issues.
+
+### Q: How do I troubleshoot data synchronization issues?
+
+**A**: Troubleshoot sync issues by: (1) **Checking integration job tracking** fields (Last_Sync_Timestamp__c, Last_Sync_Status__c), (2) **Identifying records that haven't synced** recently, (3) **Reviewing sync error messages** (Last_Sync_Error__c), (4) **Correlating with external system logs** (Integration_Job_ID__c), (5) **Testing sync scenarios** to reproduce issues, (6) **Checking data quality** (valid data for sync).
+
+### Q: What are best practices for integration debugging?
+
+**A**: Best practices include: (1) **Find root causes, not symptoms** (systematic approach), (2) **Use history objects** to understand data changes, (3) **Query multiple objects** to find relationships, (4) **Document findings** and root causes, (5) **Test scenarios** to reproduce issues, (6) **Review integration logs** regularly, (7) **Use integration job tracking** fields for correlation, (8) **Correlate with external system logs** when possible.
+
+### Q: When should I use these integration debugging methods?
+
+**A**: Use these methods when: (1) **Integration failures occur** (need to identify causes), (2) **Data synchronization issues arise** (data not syncing correctly), (3) **Error patterns need identification** (common errors, frequency), (4) **Root cause analysis required** (find underlying causes), (5) **Data quality issues need investigation** (data problems in integrations).
+
+### Q: What tools help with integration debugging?
+
+**A**: Tools for integration debugging: (1) **SOQL queries** (query history, related objects), (2) **Developer Console** (debug logs, query editor), (3) **Integration job tracking fields** (correlation, status), (4) **History objects** (data change tracking), (5) **Integration logs** (error details), (6) **Data export tools** (compare data between systems), (7) **Debug logs** (trace execution, errors).
+
+## Related Patterns
+
+- [Data Reconciliation](data-reconciliation.md) - Systematic data validation between systems
+- [SOQL Query Patterns](../development/soql-query-patterns.md) - Query patterns for debugging
+- [Callout Best Practices](../integrations/callout-best-practices.md) - HTTP callout error handling
+- [Error Handling and Logging](../development/error-handling-and-logging.md) - Error handling patterns
+- [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
 

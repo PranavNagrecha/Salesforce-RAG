@@ -1,3 +1,14 @@
+---
+title: "Permission Set-Driven Security Architecture"
+level: "Advanced"
+tags:
+  - security
+  - permission-sets
+  - access-control
+  - architecture
+last_reviewed: "2025-01-XX"
+---
+
 # Permission Set-Driven Security Architecture
 
 ## Overview
@@ -232,4 +243,46 @@ Avoid permission set-driven security when:
 - Profile-centric model meets all requirements
 - Migration effort outweighs benefits
 - Team lacks expertise in permission set management
+
+## Q&A
+
+### Q: What is the difference between Profiles and Permission Sets?
+
+**A**: **Profiles** define UI configuration (tab visibility, record type visibility, layout assignments) and assign user licenses. **Permission Sets** contain comprehensive access control (object permissions, field permissions, class access, user permissions). In permission set-driven architecture, profiles = UI configuration, permission sets = access control.
+
+### Q: Why should I use Permission Set Groups?
+
+**A**: Permission Set Groups organize related permission sets for role-based assignment, define roles through permission set groups (e.g., advisor, admissions officer), enable incremental capability assignment, and support role-based access control without creating multiple profiles. They simplify permission management at scale.
+
+### Q: How do I migrate from profile-centric to permission set-driven security?
+
+**A**: Create permission sets for each role, move object and field permissions from profiles to permission sets, organize permission sets into Permission Set Groups, assign Permission Set Groups to users, test thoroughly, and update profiles to contain only UI configuration. Migrate incrementally and document the process.
+
+### Q: Can I still use profiles for permissions?
+
+**A**: Yes, but in permission set-driven architecture, profiles should contain minimal permissions focused on UI configuration. Comprehensive access control should be in Permission Sets. This separation enables flexible permission management without profile changes.
+
+### Q: What are the benefits of permission set-driven security?
+
+**A**: Benefits include granular permission management, flexible role-based access control without multiple profiles, easier permission updates through permission sets, reduced profile proliferation, better compliance tracking, and support for incremental capability assignment.
+
+### Q: How many Permission Sets can a user have?
+
+**A**: A user can have up to **100 Permission Set assignments** (including Permission Set Groups). This is typically more than sufficient for most use cases. Permission Set Groups count as a single assignment but can contain multiple permission sets.
+
+### Q: What is the difference between Permission Sets and Permission Set Groups?
+
+**A**: **Permission Sets** contain individual permissions (object, field, class, user permissions). **Permission Set Groups** organize multiple permission sets together for role-based assignment. Assign Permission Set Groups to users rather than individual permission sets for better organization.
+
+### Q: How do I handle permission changes in permission set-driven architecture?
+
+**A**: Update permission sets (not profiles) to change permissions, assign or unassign permission sets to users as needed, use Permission Set Groups for role-based changes, test permission changes thoroughly, and document permission changes for compliance. Changes take effect immediately upon assignment.
+
+## Related Patterns
+
+- [Sharing Fundamentals](sharing-fundamentals.md) - Organization-wide defaults and role hierarchy
+- [Sharing Rules and Manual Sharing](sharing-rules-and-manual-sharing.md) - Sharing rules and manual sharing patterns
+- [Sharing Sets and Portals](sharing-sets-and-portals.md) - Experience Cloud sharing patterns
+- [Admin Basics](../development/admin-basics.md) - User management and basic administration
+- [Integration User License Guide](../integrations/integration-user-license-guide.md) - Permission management for integration users
 

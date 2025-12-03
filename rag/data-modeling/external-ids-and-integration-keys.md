@@ -1,3 +1,14 @@
+---
+title: "External IDs and Integration Keys"
+level: "Intermediate"
+tags:
+  - data-modeling
+  - external-ids
+  - integration-keys
+  - data-sync
+last_reviewed: "2025-01-XX"
+---
+
 # External IDs and Integration Keys
 
 ## Overview
@@ -252,4 +263,38 @@ Avoid external IDs when:
 - No external system integration exists
 - External system doesn't provide stable identifiers
 - Migration effort outweighs benefits
+
+## Q&A
+
+### Q: Why are External IDs important for integrations?
+
+**A**: External IDs enable idempotent upsert operations, support retry logic for failed integration jobs, allow partial syncs without data loss, and enable reconciliation between Salesforce and external systems. They provide stable record mapping that survives integration failures and retries.
+
+### Q: What makes a good External ID?
+
+**A**: A good External ID is **stable** (doesn't change when component fields change), **unique** (uniquely identifies records), **mirrors external system primary keys**, and **remains consistent** across integration runs. It should support long-term record correlation.
+
+### Q: When should I use composite External IDs?
+
+**A**: Use composite External IDs when external systems use multi-column primary keys, when you need account-level external IDs using composite keys (e.g., Institution + Program + Effective Date), or when handling effective-dated records where the same logical record has multiple versions over time.
+
+### Q: How do I handle null values in composite External IDs?
+
+**A**: Handle null values by using default values (e.g., "NULL" or empty string), excluding null fields from the composite key, or using separate External ID fields for different scenarios. Document the null handling strategy in field help text.
+
+### Q: What is the difference between External IDs and Integration Keys?
+
+**A**: **External IDs** are fields marked with the "External ID" attribute that enable upsert operations. **Integration Keys** are the actual values stored in External ID fields that uniquely identify records in external systems. External IDs are the mechanism; Integration Keys are the values.
+
+### Q: How do I migrate existing records to use External IDs?
+
+**A**: Create External ID fields, populate them with values from external systems (or generate stable values), mark fields as External IDs, test upsert operations, and update integration code to use External IDs. Migrate incrementally and test thoroughly.
+
+### Q: Can I have multiple External ID fields on the same object?
+
+**A**: Yes, you can have multiple External ID fields on the same object. This is useful when integrating with multiple external systems (e.g., `SIS_External_ID__c`, `ERP_External_ID__c`). Each External ID field should be clearly named to indicate its source system.
+
+### Q: What happens if an External ID value changes in the external system?
+
+**A**: If External ID values change in the external system, you'll need to update the External ID field values in Salesforce. This can break record correlation. Design External IDs to be stable - they should mirror external system primary keys that don't change.
 

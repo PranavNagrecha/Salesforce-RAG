@@ -1,3 +1,14 @@
+---
+title: "Release Governance for Salesforce"
+level: "Intermediate"
+tags:
+  - operations
+  - release-governance
+  - cab
+  - change-management
+last_reviewed: "2025-01-XX"
+---
+
 # Release Governance for Salesforce
 
 ## Overview
@@ -202,6 +213,48 @@ This guide covers release governance patterns for Salesforce, including Change A
 - **Medium risk**: Standard checklist, manual verification
 - **High risk**: Comprehensive checklist, multiple approvals
 - **Critical risk**: Extended checklist, executive approval, extended monitoring
+
+## Q&A
+
+### Q: What is release governance in Salesforce?
+
+**A**: **Release governance** defines processes, roles, and responsibilities for managing Salesforce releases. It includes: (1) **Change Advisory Boards (CAB)** for reviewing and approving changes, (2) **Approval workflows** for change requests, (3) **Risk-based checklists** for release validation, (4) **Release calendars** for coordination, (5) **Post-release reviews** for continuous improvement.
+
+### Q: What is a Change Advisory Board (CAB) and when do I need one?
+
+**A**: A **CAB** is a group that reviews and approves change requests. You need a CAB when: (1) **Multiple teams** are making changes, (2) **High-risk changes** require review, (3) **Compliance requirements** mandate approvals, (4) **Coordination** is needed across teams. CAB typically includes: Chair, Technical Lead, Business Owner, Security/Compliance, Change Manager.
+
+### Q: How do I implement risk-based approval workflows?
+
+**A**: Implement risk-based approval by: (1) **Categorizing changes** by risk (low, medium, high, critical), (2) **Defining approval requirements** per risk level, (3) **Automating low-risk approvals** where possible, (4) **Requiring manual review** for high-risk changes, (5) **Documenting approval criteria**, (6) **Tracking approval status**. Tailor approval processes based on change risk.
+
+### Q: What should be included in a release checklist?
+
+**A**: Include in release checklist: (1) **Change documentation** (what, why, impact), (2) **Test results** (all tests pass, coverage met), (3) **Security review** (profiles, permission sets, data access), (4) **Rollback plan** (documented, tested), (5) **Stakeholder approval** (business owner sign-off), (6) **Deployment validation** (no errors, dependencies resolved), (7) **Communication plan** (notify users, document changes).
+
+### Q: How do I handle emergency releases outside normal process?
+
+**A**: Handle emergency releases by: (1) **Defining emergency criteria** (what constitutes emergency), (2) **Establishing emergency procedures** (fast-track approval, simplified checklist), (3) **Documenting emergency releases** (why, what, who approved), (4) **Post-emergency review** (what went wrong, how to prevent), (5) **Retrospective** (learn from emergency). Have procedures for urgent changes outside normal process.
+
+### Q: What is the difference between low-risk and high-risk changes?
+
+**A**: **Low-risk changes** are routine, well-tested, low-impact (e.g., field label changes, minor bug fixes). **High-risk changes** are complex, high-impact, affect critical functionality (e.g., security model changes, data model changes, integration changes). Risk assessment considers: impact, complexity, testing coverage, rollback difficulty, business criticality.
+
+### Q: How do I coordinate releases across multiple teams?
+
+**A**: Coordinate releases by: (1) **Maintaining release calendar** (schedule releases, avoid conflicts), (2) **Communicating release plans** (share schedules, dependencies), (3) **Resolving conflicts** (CAB helps coordinate), (4) **Managing dependencies** (identify and plan for dependencies), (5) **Regular coordination meetings** (sync across teams). Use release calendars and CAB to coordinate.
+
+### Q: What should I include in post-release reviews?
+
+**A**: Include in post-release reviews: (1) **What went well** (successes, good practices), (2) **What went wrong** (issues, failures), (3) **Root cause analysis** (why issues occurred), (4) **Action items** (how to prevent issues), (5) **Metrics** (deployment time, error rate, rollback rate), (6) **Lessons learned** (document for future). Conduct post-release reviews to improve processes.
+
+### Q: How do I automate approval workflows?
+
+**A**: Automate approval workflows by: (1) **Using Flow** for approval processes, (2) **Defining approval rules** (auto-approve low-risk changes), (3) **Integrating with CI/CD** (automated checks, notifications), (4) **Using Custom Metadata** for approval criteria, (5) **Automating notifications** (email, Slack), (6) **Tracking approval status** (dashboards, reports). Automate where possible to streamline processes.
+
+### Q: What are best practices for release governance?
+
+**A**: Best practices include: (1) **Establish clear governance** early (roles, processes), (2) **Use risk-based approval** (tailor to change risk), (3) **Document all changes** (comprehensive documentation), (4) **Involve stakeholders early** (planning, approval), (5) **Automate workflows** where possible, (6) **Maintain release calendars** (coordinate releases), (7) **Conduct post-release reviews** (continuous improvement), (8) **Plan for emergencies** (urgent change procedures).
 
 ## Related Patterns
 

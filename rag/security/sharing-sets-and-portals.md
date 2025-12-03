@@ -1,618 +1,32 @@
-# Salesforce Sharing Mechanisms
+---
+title: "Salesforce Sharing Sets and Portal Sharing"
+level: "Intermediate"
+tags:
+  - salesforce
+  - security
+  - sharing
+  - experience-cloud
+  - sharing-sets
+  - portals
+last_reviewed: "2025-01-XX"
+---
+
+# Salesforce Sharing Sets and Portal Sharing
 
 ## Overview
 
-This document provides a comprehensive guide to all Salesforce sharing mechanisms, including how they work, when to use each type, implementation patterns, and best practices. This covers both internal user sharing and Experience Cloud (Community) sharing patterns.
+This document covers Experience Cloud (Community) sharing patterns, Sharing Sets, field-level sharing considerations, performance optimization, best practices, common patterns, troubleshooting, and code examples.
 
-**Related Patterns**: See `rag/security/permission-set-architecture.md` for permission context, `rag/architecture/portal-architecture.md` for portal sharing patterns, `rag/data-modeling/case-management-data-model.md` for multi-tenant sharing examples, and `rag/identity-sso/multi-tenant-identity-architecture.md` for identity-based sharing.
+**Related Patterns**: 
+- See `rag/security/sharing-fundamentals.md` for OWD, Role Hierarchy, and View All permissions
+- See `rag/security/sharing-rules-and-manual-sharing.md` for sharing rules and Apex managed sharing
+- See `rag/architecture/portal-architecture.md` for portal architecture patterns
 
-## Sharing Model Fundamentals
+## Prerequisites
 
-### How Salesforce Sharing Works
-
-Salesforce uses a layered security model where sharing determines **record-level access** after object and field permissions are evaluated:
-
-1. **Object Permissions**: User must have Read permission on the object
-2. **Field-Level Security (FLS)**: User must have Read permission on the field
-3. **Sharing**: User must have record-level access through sharing mechanisms
-
-**Key Principle**: Sharing rules determine **which records** a user can see, not **which fields** they can see. Field-level security is separate and evaluated independently.
-
-### Order of Evaluation
-
-Salesforce evaluates sharing in this order:
-
-1. **Org-Wide Defaults (OWD)**: Baseline access level
-2. **Role Hierarchy**: Users above record owner in hierarchy
-3. **Sharing Rules**: Owner-based, criteria-based, territory-based
-4. **Manual Sharing**: Individual record sharing
-5. **Apex Managed Sharing**: Programmatic sharing
-6. **View All / Modify All**: Object-level permissions that bypass sharing
-7. **View All Data / Modify All Data**: System-level permissions that bypass all sharing
-
-**Important**: The most permissive access wins. If any mechanism grants access, the user can see the record.
-
-### Sharing vs. Permissions Distinction
-
-- **Permissions**: Control what objects and fields users can access (object-level and field-level)
-- **Sharing**: Controls which specific records users can access (record-level)
-
-A user can have Read permission on the Account object but still not see specific Account records if sharing rules don't grant access.
-
-## Org-Wide Defaults (OWD)
-
-### What OWD Controls
-
-Org-Wide Defaults establish the baseline level of access to records for all users within the organization. OWD settings determine the default access level for each object before any sharing rules are applied.
-
-### OWD Settings
-
-#### Private
-
-**What It Means**: Only record owners and users above them in the role hierarchy can access records.
-
-**Use When**:
-- Data is sensitive and should be restricted by default
-- Need maximum control over record access
-- Compliance requires restrictive default access
-
-**Impact**: Requires sharing rules to grant access beyond owners and role hierarchy.
-
-**Example**: Cases are Private by default. Only the case owner and their manager can see the case unless sharing rules grant additional access.
-
-#### Public Read Only
-
-**What It Means**: All users can view records, but only owners and users above them in the role hierarchy can edit.
-
-**Use When**:
-- Data should be visible to all users but editable only by owners
-- Need transparency across the organization
-- Collaboration requires visibility but not edit access
-
-**Impact**: Sharing rules can grant edit access, but read access is already granted to all users.
-
-**Example**: Products are Public Read Only. All users can see product information, but only product managers can edit.
-
-#### Public Read/Write
-
-**What It Means**: All users can view and edit all records.
-
-**Use When**:
-- Data is non-sensitive and collaborative
-- Need maximum collaboration and transparency
-- Data is reference data that all users should maintain
-
-**Impact**: No sharing rules needed for basic access. All users can see and edit all records.
-
-**Example**: Knowledge articles might be Public Read/Write for collaborative editing.
-
-### OWD for Standard vs. Custom Objects
-
-- **Standard Objects**: Some standard objects have fixed OWD (e.g., User object is always Private)
-- **Custom Objects**: Can be set to Private, Public Read Only, or Public Read/Write
-- **Restrictions**: Some objects cannot be set to Public Read/Write (e.g., Cases, Leads)
-
-### Impact on Sharing Rule Requirements
-
-- **Private OWD**: Requires sharing rules for any access beyond owners and role hierarchy
-- **Public Read Only**: Sharing rules needed only for edit access (read is already granted)
-- **Public Read/Write**: Sharing rules not needed for basic access (all users already have access)
-
-### Best Practices for OWD Selection
-
-- **Start Restrictive**: Begin with Private OWD and open access through sharing rules as needed
-- **Security First**: Choose the most restrictive OWD that meets business requirements
-- **Document Decisions**: Document why each object has its OWD setting
-- **Review Regularly**: Review OWD settings as business requirements change
-- **Consider Compliance**: More restrictive OWD supports compliance requirements
-
-## Role Hierarchy
-
-### How Role Hierarchy Grants Access
-
-Role hierarchy allows users higher in the hierarchy to access records owned by users below them. This structure mirrors the organization's reporting structure.
-
-**Key Principle**: Role hierarchy grants access **downward** - managers can see subordinate records, but subordinates cannot see manager records (unless sharing rules grant access).
-
-### Role Hierarchy vs. Sharing Rules
-
-- **Role Hierarchy**: Automatic access based on organizational structure
-- **Sharing Rules**: Explicit access grants based on criteria or ownership
-
-**When Role Hierarchy is Sufficient**:
-- Organizational structure matches access requirements
-- Managers need to see all subordinate records
-- Simple hierarchical access patterns
-
-**When Sharing Rules are Needed**:
-- Cross-functional access requirements
-- Team-based access patterns
-- Criteria-based access (e.g., region, department)
-- Access patterns that don't follow organizational hierarchy
-
-### Limitations of Role Hierarchy
-
-- **One-Way Access**: Only grants access downward, not upward or sideways
-- **Organizational Structure Dependency**: Access tied to organizational reporting structure
-- **No Criteria-Based Access**: Cannot grant access based on record field values
-- **No Cross-Functional Access**: Cannot grant access across different branches of hierarchy
-
-### Best Practices for Role Hierarchy Design
-
-- **Mirror Organization**: Design role hierarchy to mirror actual organizational structure
-- **Keep It Simple**: Avoid overly complex hierarchies that are hard to maintain
-- **Document Structure**: Document role hierarchy and access patterns
-- **Review Regularly**: Review role hierarchy as organization changes
-- **Use Public Groups**: Use public groups for non-hierarchical access patterns
-
-## Sharing Rules
-
-Sharing rules extend access beyond OWD and role hierarchy settings. They provide exceptions to OWD settings by granting additional access to specific users or groups.
-
-### Owner-Based Sharing Rules
-
-#### How Owner-Based Rules Work
-
-Owner-based sharing rules share records owned by specific users or roles with other users, roles, or groups.
-
-**Configuration**:
-- **Rule Name**: Descriptive name for the sharing rule
-- **Share With**: Users, roles, roles and subordinates, or public groups
-- **Based on**: Record owner's role or record owner
-- **Access Level**: Read Only or Read/Write
-
-**Example**: Share all Cases owned by users in the "Support Team" role with users in the "Sales Team" role with Read Only access.
-
-#### Use Cases and Examples
-
-- **Team-Based Sharing**: Share records owned by team members with the entire team
-- **Cross-Functional Access**: Share records from one department with another
-- **Regional Access**: Share records owned by users in a region with regional managers
-
-**Example Pattern**:
-```
-Rule: Share Support Cases with Sales Team
-- Share With: Sales Team Role
-- Based on: Cases owned by Support Team Role
-- Access Level: Read Only
-```
-
-#### Configuration Patterns
-
-- **Role-Based Sharing**: Share records owned by users in a role with another role
-- **User-Based Sharing**: Share records owned by specific users with groups
-- **Subordinate Sharing**: Share records owned by users and their subordinates
-
-#### Limitations
-
-- **Owner-Based Only**: Cannot share based on record field values
-- **Static Configuration**: Cannot use dynamic criteria
-- **Access Level**: Can only grant Read Only or Read/Write (not Delete)
-
-### Criteria-Based Sharing Rules
-
-#### How Criteria-Based Rules Work
-
-Criteria-based sharing rules share records that meet specific field value criteria with users, roles, or groups.
-
-**Configuration**:
-- **Rule Name**: Descriptive name for the sharing rule
-- **Share With**: Users, roles, roles and subordinates, or public groups
-- **Criteria**: Field-based criteria (e.g., Region = "West", Status = "Open")
-- **Access Level**: Read Only (for most objects) or Read/Write (for limited objects)
-
-**Example**: Share all Cases where Region equals "West" with users in the "West Region Managers" role.
-
-#### Criteria Evaluation and Selectivity
-
-- **Selective Criteria**: Use indexed fields for better performance
-- **Criteria Complexity**: Keep criteria simple for better performance
-- **Field Types**: Can use text, picklist, number, date, and lookup fields
-- **Multiple Criteria**: Can combine multiple criteria with AND logic
-
-**Best Practices**:
-- Use indexed fields (e.g., Status, Region, Type)
-- Avoid formula fields in criteria
-- Keep criteria selective (narrow scope)
-
-#### Use Cases and Examples
-
-- **Regional Access**: Share records in a region with regional teams
-- **Status-Based Access**: Share records with specific status with relevant teams
-- **Type-Based Access**: Share records of specific types with specialized teams
-
-**Example Pattern**:
-```
-Rule: Share High Priority Cases with Management
-- Share With: Management Role
-- Criteria: Priority = "High"
-- Access Level: Read Only
-```
-
-#### Performance Considerations
-
-- **Selective Criteria**: Use selective criteria to limit record scope
-- **Indexed Fields**: Use indexed fields for better query performance
-- **Rule Count**: Limit number of criteria-based sharing rules per object
-- **Recalculation**: Criteria-based rules recalculate when records change
-
-#### Limitations
-
-- **Read-Only for Most Objects**: Most objects only support Read Only access via criteria-based rules
-- **Limited Objects Support Read/Write**: Only certain objects (e.g., Cases, Leads, Custom Objects) support Read/Write access
-- **No Formula Fields**: Cannot use formula fields in criteria
-- **Static Criteria**: Criteria are evaluated at rule creation time, not dynamically
-
-### Territory-Based Sharing Rules
-
-#### When Territory Management is Used
-
-Territory Management is used when sales organizations need to manage accounts and opportunities based on geographic territories or other business divisions.
-
-**Use Cases**:
-- Geographic sales territories
-- Product-based territories
-- Industry-based territories
-- Account-based territories
-
-#### Territory Hierarchy and Sharing
-
-Territory hierarchy allows:
-- **Territory Assignment**: Assign accounts and opportunities to territories
-- **Territory Sharing**: Users in a territory can access records assigned to that territory
-- **Territory Hierarchy**: Users in parent territories can access child territory records
-
-#### Use Cases
-
-- **Geographic Sales**: Sales teams organized by geographic regions
-- **Product Sales**: Sales teams organized by product lines
-- **Account Management**: Account teams organized by account assignments
-
-#### Configuration Patterns
-
-- **Territory Assignment Rules**: Automatically assign records to territories based on criteria
-- **Territory Sharing**: Share records with users in assigned territories
-- **Territory Hierarchy**: Grant access through territory hierarchy
-
-## Manual Sharing
-
-### When Manual Sharing is Used
-
-Manual sharing allows record owners or users with full access to share individual records with other users or groups on a case-by-case basis.
-
-**Use Cases**:
-- One-off access requirements
-- Temporary access needs
-- Exceptions not covered by sharing rules
-- Collaborative access for specific records
-
-### How Manual Sharing Works
-
-- **Record Owner**: Can share records they own
-- **Full Access Users**: Users with full access (e.g., View All, Modify All) can share records
-- **Share Button**: Available on record detail pages
-- **Access Level**: Can grant Read Only or Read/Write access
-- **Expiration**: Can set expiration date for manual shares (if enabled)
-
-### Limitations and Considerations
-
-- **Not Scalable**: Manual sharing is not scalable for large numbers of records
-- **Maintenance Overhead**: Requires manual maintenance for each record
-- **No Automation**: Cannot automate manual sharing
-- **Audit Trail**: Manual shares are tracked but require manual management
-
-### Best Practices
-
-- **Use Sparingly**: Use manual sharing only for exceptions
-- **Document Exceptions**: Document why manual sharing was used
-- **Review Regularly**: Review manual shares and remove when no longer needed
-- **Set Expiration**: Use expiration dates for temporary access
-- **Consider Alternatives**: Consider sharing rules or Apex managed sharing for recurring patterns
-
-## Apex Managed Sharing
-
-### When to Use Apex Managed Sharing
-
-Apex managed sharing is used for complex sharing requirements that cannot be met through declarative sharing rules.
-
-**Use Cases**:
-- Dynamic sharing based on complex business logic
-- Sharing based on custom relationships
-- Sharing that changes based on record field values
-- Sharing for Experience Cloud users (when sharing sets are insufficient)
-- Sharing based on external system data
-
-### Apex Sharing Reasons
-
-Apex Sharing Reasons define why a record is shared programmatically. Each custom object can have up to 10 Apex Sharing Reasons.
-
-**Configuration**:
-- **Sharing Reason Label**: User-friendly label
-- **Sharing Reason API Name**: API name for Apex code
-- **Description**: Description of when this sharing reason is used
-
-**Example**: "Project Team Member" sharing reason for sharing project records with team members.
-
-### Implementation Patterns
-
-#### Creating Shares
-
-```apex
-// Share a Case record with a user
-CaseShare caseShare = new CaseShare();
-caseShare.CaseId = caseRecord.Id;
-caseShare.UserOrGroupId = userId;
-caseShare.CaseAccessLevel = 'Read';
-caseShare.RowCause = Schema.CaseShare.RowCause.Manual; // or custom Apex Sharing Reason
-insert caseShare;
-```
-
-#### Bulk Sharing Pattern
-
-```apex
-public with sharing class CaseSharingService {
-    public static void shareCasesWithUsers(Map<Id, Set<Id>> caseIdToUserIds) {
-        List<CaseShare> sharesToInsert = new List<CaseShare>();
-        
-        for (Id caseId : caseIdToUserIds.keySet()) {
-            for (Id userId : caseIdToUserIds.get(caseId)) {
-                CaseShare share = new CaseShare();
-                share.CaseId = caseId;
-                share.UserOrGroupId = userId;
-                share.CaseAccessLevel = 'Read';
-                share.RowCause = Schema.CaseShare.RowCause.Manual;
-                sharesToInsert.add(share);
-            }
-        }
-        
-        if (!sharesToInsert.isEmpty()) {
-            Database.insert(sharesToInsert, false); // Allow partial success
-        }
-    }
-}
-```
-
-#### Using Custom Apex Sharing Reasons
-
-```apex
-// Define custom sharing reason in Apex Sharing Reasons
-// Then use in code:
-CaseShare caseShare = new CaseShare();
-caseShare.CaseId = caseRecord.Id;
-caseShare.UserOrGroupId = userId;
-caseShare.CaseAccessLevel = 'Read';
-caseShare.RowCause = Schema.CaseShare.RowCause.Project_Team_Member__c; // Custom reason
-insert caseShare;
-```
-
-#### Updating Shares
-
-```apex
-// Update existing share to change access level
-CaseShare existingShare = [SELECT Id, CaseAccessLevel 
-                            FROM CaseShare 
-                            WHERE CaseId = :caseId 
-                            AND UserOrGroupId = :userId 
-                            AND RowCause = 'Manual'
-                            LIMIT 1];
-                            
-if (existingShare != null) {
-    existingShare.CaseAccessLevel = 'Read/Write';
-    update existingShare;
-}
-```
-
-#### Deleting Shares
-
-```apex
-// Delete shares based on criteria
-List<CaseShare> sharesToDelete = [
-    SELECT Id 
-    FROM CaseShare 
-    WHERE CaseId = :caseId 
-    AND RowCause = 'Manual'
-    AND UserOrGroupId IN :userIdsToRemove
-];
-
-if (!sharesToDelete.isEmpty()) {
-    delete sharesToDelete;
-}
-```
-
-### Best Practices and Bulkification
-
-- **Bulkify Operations**: Always bulkify share creation, updates, and deletions
-- **Error Handling**: Use Database.insert/update/delete with allOrNone=false for partial success
-- **Avoid DML in Loops**: Never perform DML operations inside loops
-- **Use Custom Sharing Reasons**: Use custom Apex Sharing Reasons for programmatic shares
-- **Clean Up Old Shares**: Remove shares when they are no longer needed
-- **Test Sharing Logic**: Test sharing logic thoroughly, including edge cases
-
-### Testing Apex Managed Sharing
-
-```apex
-@isTest
-private class CaseSharingServiceTest {
-    @isTest
-    static void testShareCasesWithUsers() {
-        // Create test data
-        User testUser = TestDataFactory.createUser('Standard User');
-        Case testCase = TestDataFactory.createCase();
-        
-        Test.startTest();
-        // Test sharing
-        Map<Id, Set<Id>> caseIdToUserIds = new Map<Id, Set<Id>>{
-            testCase.Id => new Set<Id>{ testUser.Id }
-        };
-        CaseSharingService.shareCasesWithUsers(caseIdToUserIds);
-        Test.stopTest();
-        
-        // Verify share was created
-        CaseShare share = [
-            SELECT Id, CaseAccessLevel, RowCause 
-            FROM CaseShare 
-            WHERE CaseId = :testCase.Id 
-            AND UserOrGroupId = :testUser.Id
-            LIMIT 1
-        ];
-        
-        System.assertNotEquals(null, share, 'Share should be created');
-        System.assertEquals('Read', share.CaseAccessLevel, 'Access level should be Read');
-    }
-}
-```
-
-## View All / Modify All Permissions
-
-### View All Permission
-
-#### What It Does
-
-View All permission grants users the ability to view all records of a particular object, regardless of sharing settings. It bypasses all sharing rules and org-wide defaults.
-
-**Scope**: Object-level permission that applies to all records of the object.
-
-**Granted Through**: Profiles or Permission Sets.
-
-#### When to Use
-
-- **System Administrators**: Administrators who need to see all records
-- **Reporting Users**: Users who need access to all records for reporting
-- **Support Teams**: Support teams that need visibility into all cases
-- **Audit and Compliance**: Users who need to audit all records
-
-#### Security Implications
-
-- **Bypasses All Sharing**: View All bypasses all sharing mechanisms
-- **Broad Access**: Grants access to all records, including sensitive data
-- **No Granular Control**: Cannot restrict access to specific records
-- **Audit Considerations**: All access is logged, but access is very broad
-
-#### Best Practices
-
-- **Use Sparingly**: Only grant View All when absolutely necessary
-- **Document Justification**: Document why View All is needed
-- **Regular Review**: Review View All permissions regularly
-- **Consider Alternatives**: Consider sharing rules or role hierarchy as alternatives
-- **Monitor Usage**: Monitor who has View All and why
-
-### Modify All Permission
-
-#### What It Does
-
-Modify All permission grants users the ability to view, edit, delete, and transfer all records of a particular object, regardless of sharing settings. It bypasses all sharing rules and org-wide defaults.
-
-**Scope**: Object-level permission that applies to all records of the object.
-
-**Granted Through**: Profiles or Permission Sets.
-
-#### When to Use
-
-- **System Administrators**: Administrators who need to manage all records
-- **Data Management Teams**: Teams that need to maintain all records
-- **Migration and Integration**: Users who need to update all records during migrations
-
-#### Security Implications
-
-- **Bypasses All Sharing**: Modify All bypasses all sharing mechanisms
-- **Full Access**: Grants full CRUD access to all records
-- **Data Risk**: High risk of accidental data modification or deletion
-- **No Granular Control**: Cannot restrict access to specific records
-
-#### Best Practices
-
-- **Extreme Caution**: Use Modify All with extreme caution
-- **Limited Assignment**: Assign to very few users
-- **Document Justification**: Document why Modify All is needed
-- **Regular Review**: Review Modify All permissions regularly
-- **Consider Alternatives**: Consider sharing rules with Read/Write access as alternatives
-- **Monitor Changes**: Monitor all changes made by users with Modify All
-
-## View All Data / Modify All Data Permissions
-
-### System-Level Permissions
-
-View All Data and Modify All Data are system-level permissions that provide access to all records across all objects in the organization.
-
-### What They Grant
-
-#### View All Data
-
-- **Scope**: All records across all objects
-- **Access Level**: Read access to all records
-- **Bypasses**: All sharing rules, org-wide defaults, and object permissions
-
-#### Modify All Data
-
-- **Scope**: All records across all objects
-- **Access Level**: Full CRUD access to all records
-- **Bypasses**: All sharing rules, org-wide defaults, and object permissions
-
-### When to Use
-
-- **System Administrators**: Primary use case for system administrators
-- **Integration Users**: Service accounts that need to access all data for integrations
-- **Data Migration**: Users performing data migrations
-- **Emergency Access**: Emergency access for critical situations
-
-### Security Implications
-
-- **Maximum Access**: Grants maximum possible access to all data
-- **Bypasses All Security**: Bypasses all security mechanisms
-- **High Risk**: Highest risk permissions in Salesforce
-- **Audit Critical**: All access must be audited
-
-### Best Practices and Restrictions
-
-- **Minimal Assignment**: Assign to absolute minimum number of users
-- **Service Accounts Only**: Consider service accounts for integrations
-- **Time-Limited**: Use time-limited access when possible
-- **Document Justification**: Document why these permissions are needed
-- **Regular Review**: Review assignments regularly (quarterly minimum)
-- **Monitor All Activity**: Monitor all activity by users with these permissions
-- **Compliance Considerations**: Ensure compliance with data access requirements
-- **Separation of Duties**: Separate View All Data from Modify All Data when possible
-
-## View All Fields / Modify All Fields Permissions
-
-### Field-Level Permissions That Bypass FLS
-
-View All Fields and Modify All Fields are field-level permissions that bypass field-level security (FLS) restrictions.
-
-#### View All Fields
-
-- **What It Does**: Allows users to view all fields of a record, including those restricted by FLS
-- **Scope**: All fields across all objects
-- **Bypasses**: Field-level security read restrictions
-
-#### Modify All Fields
-
-- **What It Does**: Allows users to edit all fields of a record, including those restricted by FLS
-- **Scope**: All fields across all objects
-- **Bypasses**: Field-level security edit restrictions
-
-### When to Use
-
-- **System Administrators**: Administrators who need to see/edit all fields
-- **Data Management**: Users managing data who need access to all fields
-- **Reporting and Analytics**: Users who need access to all fields for reporting
-- **Integration Users**: Service accounts that need to read/write all fields
-
-### Security Implications
-
-- **Bypasses FLS**: Bypasses all field-level security restrictions
-- **Sensitive Data Access**: May grant access to sensitive fields (SSN, credit card numbers)
-- **Compliance Risk**: May violate compliance requirements if sensitive fields are exposed
-- **Audit Considerations**: All field access is logged
-
-### Best Practices
-
-- **Use Sparingly**: Only grant when absolutely necessary
-- **Document Justification**: Document why these permissions are needed
-- **Regular Review**: Review assignments regularly
-- **Consider FLS Alternatives**: Consider field-level security as alternative
-- **Monitor Usage**: Monitor who has these permissions and why
-- **Compliance Review**: Ensure compliance with data protection requirements
+- Understanding of Org-Wide Defaults (OWD) and Role Hierarchy
+- Basic knowledge of Experience Cloud (Communities)
+- Understanding of record ownership and user roles
 
 ## Experience Cloud (Community) Sharing
 
@@ -1538,22 +952,55 @@ public with sharing class CommunityCaseSharingService {
 }
 ```
 
+## Q&A
+
+### Q: What are Sharing Sets and when do I use them?
+
+**A**: Sharing Sets are Experience Cloud (Community) mechanisms for enforcing data visibility rules per user type. They replace traditional sharing rules for portal/community users, as Customer Community licenses do not support sharing rules. Use Sharing Sets when community users need record access based on user, account, or owner relationships.
+
+### Q: What is the difference between Sharing Sets and Sharing Rules?
+
+**A**: **Sharing Rules** are for internal users and support owner-based, criteria-based, and territory-based sharing. **Sharing Sets** are for Experience Cloud (Community) users and support user-based, account-based, and owner-based sharing. Customer Community licenses do not support sharing rules, so Sharing Sets are required for community user access.
+
+### Q: How do I implement multi-tenant data isolation in Experience Cloud?
+
+**A**: Use multiple Sharing Sets for different profiles, combine with Record Type-based separation, and use Apex managed sharing for complex patterns. Ensure Sharing Sets only grant access to the user's tenant records. Use restrictive OWD (Private) and validation rules to prevent cross-tenant data access.
+
+### Q: How does Field-Level Security (FLS) interact with sharing?
+
+**A**: FLS and sharing are evaluated independently. Sharing determines if a user can see the record; FLS determines if the user can see specific fields on the record. A user must have both record-level access (sharing) and field-level access (FLS) to see a field value. Sharing rules do not override FLS.
+
+### Q: What are the performance considerations for sharing?
+
+**A**: Limit the number of sharing rules per object (recommended: < 50 per object). Use selective, indexed criteria for criteria-based sharing rules. Use public groups to simplify sharing rule management. Limit role hierarchy depth. Monitor sharing calculation performance. Consider View All for reporting users instead of many sharing rules.
+
+### Q: How do I troubleshoot sharing access issues?
+
+**A**: Use sharing reasons to understand why users have access. Check OWD settings, verify role hierarchy structure, check sharing rule criteria and configuration, check for manual shares, verify View All/Modify All permissions, and use sharing debug tools and SOQL queries to analyze sharing.
+
+### Q: When should I use Apex managed sharing for Experience Cloud users?
+
+**A**: Use Apex managed sharing for Experience Cloud users when sharing requirements are complex and not met by Sharing Sets, when sharing is based on custom relationships, when sharing changes dynamically based on record field values, or when sharing is based on external system data.
+
+### Q: How do I optimize sharing for large data volumes?
+
+**A**: Use highly selective sharing rules with indexed criteria. Use public groups instead of individual user sharing. Consider Apex managed sharing for complex patterns. Optimize sharing rules for performance. Monitor sharing calculation performance. Consider View All/Modify All for reporting users instead of many sharing rules.
+
 ## Related Patterns
 
 - **Permission Set Architecture**: See `rag/security/permission-set-architecture.md` for permission context
 - **Portal Architecture**: See `rag/architecture/portal-architecture.md` for portal sharing patterns
 - **Case Management Data Model**: See `rag/data-modeling/case-management-data-model.md` for multi-tenant sharing examples
 - **Multi-Tenant Identity**: See `rag/identity-sso/multi-tenant-identity-architecture.md` for identity-based sharing
+- **Sharing Fundamentals**: See `rag/security/sharing-fundamentals.md` for OWD, Role Hierarchy, and View All permissions
+- **Sharing Rules and Manual Sharing**: See `rag/security/sharing-rules-and-manual-sharing.md` for sharing rules and Apex managed sharing
 
 ## When to Use This Document
 
-- Understanding how Salesforce sharing works
-- Implementing sharing rules for internal users
 - Designing Experience Cloud sharing with Sharing Sets
-- Deciding between different sharing mechanisms
-- Troubleshooting sharing access issues
-- Implementing Apex managed sharing
-- Understanding View All/Modify All permissions
-- Designing multi-tenant data isolation patterns
+- Implementing portal sharing patterns
+- Understanding field-level sharing considerations
 - Optimizing sharing for large data volumes
+- Troubleshooting sharing access issues
+- Designing multi-tenant data isolation patterns
 
