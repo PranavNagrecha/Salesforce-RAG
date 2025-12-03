@@ -18,12 +18,8 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    # CRITICAL: This environment name must match GitHub Pages settings
-    # Repository Settings → Pages → Source MUST be "GitHub Actions" (not a branch)
-    # NOTE: Some deployments work better without explicit environment - Pages auto-creates it
-    # If 404 persists, try removing the environment block entirely
-    environment:
-      name: github-pages
+    # REMOVED environment block - let GitHub Pages auto-create it
+    # This sometimes fixes "Cannot find any run" errors
     
     steps:
       - name: Checkout repository
