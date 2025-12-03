@@ -8,6 +8,7 @@
 !/scripts/
 !/website/
 !/rag/
+!/Knowledge/
 
 # Jekyll build artifacts
 _site/
