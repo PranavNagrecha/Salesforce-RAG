@@ -91,6 +91,24 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
+# Step 0: Validate Frontmatter (CRITICAL - must pass before proceeding)
+print_header "Step 0: Validating Jekyll Frontmatter (CRITICAL)"
+
+if [ "$VALIDATE_ONLY" = true ]; then
+    print_warning "Validation mode: Would run: python3 website/scripts/validate-frontmatter.py"
+else
+    if [ "$DRY_RUN" = true ]; then
+        echo "[DRY RUN] Would run: python3 website/scripts/validate-frontmatter.py"
+    else
+        if ! python3 website/scripts/validate-frontmatter.py; then
+            print_error "Frontmatter validation failed! Fix issues before deploying."
+            print_error "Run: python3 website/scripts/validate-frontmatter.py --verbose"
+            exit 1
+        fi
+        print_success "All files have proper Jekyll frontmatter!"
+    fi
+fi
+
 # Step 1: Sync RAG index, library JSON, and homepage
 print_header "Step 1: Syncing RAG Index, Library JSON, and Homepage"
 

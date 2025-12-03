@@ -500,7 +500,14 @@ The workflow:
 
 Before every deployment:
 
+- [ ] **CRITICAL: Validate Frontmatter**: `python website/scripts/validate-frontmatter.py`
+  - All markdown files must have proper Jekyll frontmatter
+  - This MUST pass before deploying
+  - Files without frontmatter will cause 404 errors
 - [ ] Run `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
+- [ ] **Validate Links**: `python website/scripts/validate-comprehensive-links.py`
+  - Check for broken links
+  - Verify all internal links work
 - [ ] Verify `rag-index.md` is up to date
 - [ ] Verify `rag-library.json` is up to date with correct file counts
 - [ ] Verify homepage categories match `rag-index.md`
