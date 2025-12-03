@@ -340,7 +340,7 @@ export default class DynamicRecordEditForm extends LightningElement {
 - <a href="{{ '/rag/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Unit testing Lightning Web Components
 - <a href="{{ '/rag/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - Troubleshooting LWC issues
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility error resolution
-- <a href="{{ '/rag/code-examples/lwc.html' | relative_url }}">Code Examples</a> - Complete LWC code examples
+- <a href="{{ '/rag/code-examples/lwc/' | relative_url }}">Code Examples</a> - Complete LWC code examples
 
 ## Q&A
 

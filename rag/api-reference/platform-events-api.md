@@ -62,7 +62,7 @@ public with sharing class EventPublisher {
 - Include timestamp and idempotency keys
 - Keep payloads self-contained and minimal
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 ---
 
@@ -203,7 +203,7 @@ CustomEvent__e event = new CustomEvent__e(
 );
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/architecture/event-driven-architecture.html#event-payload-design' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/architecture/event-driven-architecture.html#event-payload-design' | relative_url }}">Event-Driven Architecture</a>
 
 ---
 

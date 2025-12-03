@@ -4,7 +4,7 @@ title: Apex Design Patterns and Best Practices
 description: Apex is used strategically when Flows are insufficient or need optimization/bulkification
 permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Integrating Apex with Lightning Web Components
 - <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a> - Apex testing best practices
-- <a href="{{ '/rag/code-examples/apex.html' | relative_url }}">Code Examples</a> - Complete working code examples
+- <a href="{{ '/rag/code-examples/apex/' | relative_url }}">Code Examples</a> - Complete working code examples
 
 ## Q&A
 

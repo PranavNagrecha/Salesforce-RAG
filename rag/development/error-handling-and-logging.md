@@ -308,5 +308,5 @@ Avoid comprehensive logging when:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging code examples
+- <a href="{{ '/rag/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging code examples
 

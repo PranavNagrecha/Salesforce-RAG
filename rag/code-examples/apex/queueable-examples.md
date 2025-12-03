@@ -600,5 +600,5 @@ Integer queueDepth = QueueableJobMonitor.getQueueDepth();
 ## Related Patterns
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/code-examples/apex/templates/apex-queueable-template.html' | relative_url }}">Queueable Template</a> - Queueable Apex template
+- <a href="{{ '/rag/code-examples/templates/apex-queueable-template.html' | relative_url }}">Queueable Template</a> - Queueable Apex template
 

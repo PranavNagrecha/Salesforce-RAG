@@ -20,8 +20,8 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 - Familiarity with PII/PHI handling and data masking
 
 **Recommended Reading**:
-- <a href="{{ '/rag/security/integrations/salesforce-to-llm-data-pipelines.html' | relative_url }}">Salesforce to LLM Data Pipelines</a> - Data pipeline patterns
-- <a href="{{ '/rag/security/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Compliance patterns
+- <a href="{{ '/rag/integrations/salesforce-to-llm-data-pipelines.html' | relative_url }}">Salesforce to LLM Data Pipelines</a> - Data pipeline patterns
+- <a href="{{ '/rag/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Compliance patterns
 - <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
 - <a href="{{ '/rag/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Security and sharing model
 
@@ -473,7 +473,7 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 
 ## Related Patterns
 
-- <a href="{{ '/rag/security/integrations/salesforce-to-llm-data-pipelines.html' | relative_url }}">Salesforce to LLM Data Pipelines</a> - Data pipeline patterns
-- <a href="{{ '/rag/security/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Compliance patterns
+- <a href="{{ '/rag/integrations/salesforce-to-llm-data-pipelines.html' | relative_url }}">Salesforce to LLM Data Pipelines</a> - Data pipeline patterns
+- <a href="{{ '/rag/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Compliance patterns
 - <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
 

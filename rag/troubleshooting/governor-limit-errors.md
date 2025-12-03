@@ -399,5 +399,5 @@ public class ProcessQueueable implements Queueable {
 - Monitor future call count
 
 **Related Patterns**: <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
-- <a href="{{ '/rag/troubleshooting/..html' | relative_url }}">Troubleshooting</a> - Other troubleshooting guides
+- <a href="{{ '/rag/troubleshooting/' | relative_url }}">Troubleshooting</a> - Other troubleshooting guides
 

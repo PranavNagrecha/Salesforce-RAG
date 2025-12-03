@@ -537,7 +537,7 @@ ORDER BY ApiVersion ASC, Name ASC
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Query patterns for data validation
+- <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Query patterns for data validation
 
 ## Q&A
 
