@@ -25,8 +25,22 @@ def has_proper_frontmatter(file_path):
             return False, "Missing frontmatter (doesn't start with ---)"
         
         lines = stripped.split('\n')
-        if len(lines) < 2 or lines[1].strip() != '---':
-            return False, "Invalid frontmatter format"
+        if len(lines) < 2:
+            return False, "Invalid frontmatter format (too short)"
+        
+        # First line should be ---
+        if lines[0].strip() != '---':
+            return False, "Invalid frontmatter format (first line not ---)"
+        
+        # Find closing ---
+        closing_idx = None
+        for i in range(1, len(lines)):
+            if lines[i].strip() == '---':
+                closing_idx = i
+                break
+        
+        if closing_idx is None:
+            return False, "Invalid frontmatter format (no closing ---)"
         
         # Find where frontmatter ends
         end_idx = 1
