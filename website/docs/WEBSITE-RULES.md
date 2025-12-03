@@ -10,15 +10,27 @@ python website/scripts/sync-homepage.py
 That's it. The script will:
 - ✅ **Scan `rag/` folder** for all .md files
 - ✅ **Rebuild `rag-index.md`** from actual files (not just reference it)
+- ✅ **Rebuild `rag-library.json`** with all file metadata and statistics
 - ✅ **Find all categories** automatically
 - ✅ **Add missing categories** to homepage
 - ✅ **Update all descriptions** to match exactly
 - ✅ **Ensure all links** work correctly
 
+**Or use the complete update script:**
+```bash
+website/scripts/update-rag-and-website.sh
+```
+
+This script orchestrates the complete workflow:
+1. Runs `sync-homepage.py` (rebuilds `rag-index.md`, `rag-library.json`, and updates homepage)
+2. Runs `update-website.py` (generates sitemap, fixes links)
+3. Validates all changes
+4. Optionally commits changes
+
 **Then commit:**
 ```bash
-git add website/root/index.md
-git commit -m "Auto-sync homepage categories"
+git add rag/rag-index.md rag/rag-library.json website/root/index.md sitemap.xml
+git commit -m "Auto-sync RAG index, library JSON, and homepage"
 git push
 ```
 
@@ -45,12 +57,19 @@ git push
 ### When Adding New Files to rag/
 
 1. Add your .md file to the appropriate folder in `rag/`
-2. **Run**: `python website/scripts/sync-homepage.py`
+2. **Run**: `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
 3. The script will:
    - Find your new file automatically
    - Add it to `rag-index.md`
+   - Add it to `rag-library.json` with metadata
    - Update homepage if needed
-4. Commit changes
+   - Update statistics and coverage counts
+4. Commit changes:
+   ```bash
+   git add rag/rag-index.md rag/rag-library.json website/root/index.md
+   git commit -m "Add new RAG file: [filename]"
+   git push
+   ```
 5. Done!
 
 ### Link Rules
@@ -128,18 +147,37 @@ git push
 
 ### When Adding New Domain
 
-1. Add section to `rag/rag-index.md`
-2. **Run**: `python website/scripts/sync-homepage.py`
-3. Commit both files
-4. Deploy
+1. Add files to new domain folder in `rag/`
+2. **Run**: `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
+3. The script will:
+   - Automatically detect the new domain
+   - Add it to `rag-index.md`
+   - Add it to `rag-library.json`
+   - Update homepage with new category card
+4. Commit changes:
+   ```bash
+   git add rag/rag-index.md rag/rag-library.json website/root/index.md
+   git commit -m "Add new domain: [domain-name]"
+   git push
+   ```
 5. Done!
 
 ### When Updating Descriptions
 
-1. Update `rag/rag-index.md` first
+1. Update descriptions in your RAG files
 2. **Run**: `python website/scripts/sync-homepage.py`
-3. Commit both files
-4. Done!
+3. The script will:
+   - Extract updated descriptions from files
+   - Update `rag-index.md` with new descriptions
+   - Update `rag-library.json` with new summaries
+   - Update homepage to match
+4. Commit changes:
+   ```bash
+   git add rag/rag-index.md rag/rag-library.json website/root/index.md
+   git commit -m "Update descriptions"
+   git push
+   ```
+5. Done!
 
 **Never manually edit homepage categories - always use the sync script!**
 
@@ -147,7 +185,10 @@ git push
 
 Before every deployment:
 
-- [ ] Run `python website/scripts/sync-homepage.py`
+- [ ] Run `python website/scripts/sync-homepage.py` (or `website/scripts/update-rag-and-website.sh`)
+- [ ] Verify `rag-index.md` is up to date
+- [ ] Verify `rag-library.json` is up to date with correct file counts
+- [ ] Verify homepage categories match `rag-index.md`
 - [ ] All links use `relative_url` filter
 - [ ] All links work (test anchor links)
 - [ ] Mobile responsive layout works

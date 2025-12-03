@@ -88,27 +88,46 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
-# Step 1: Validate RAG structure
-print_header "Step 1: Validating RAG Content"
+# Step 1: Sync RAG index, library JSON, and homepage
+print_header "Step 1: Syncing RAG Index, Library JSON, and Homepage"
 
 if [ "$VALIDATE_ONLY" = true ]; then
-    python3 scripts/update-website.py --validate-only --verbose
+    print_warning "Validation mode: Skipping sync (would run: python3 website/scripts/sync-homepage.py)"
+else
+    if [ "$DRY_RUN" = true ]; then
+        echo "[DRY RUN] Would run: python3 website/scripts/sync-homepage.py"
+    else
+        python3 website/scripts/sync-homepage.py
+        print_success "RAG index, library JSON, and homepage synced!"
+    fi
+fi
+
+# Step 2: Update website files (sitemap, links)
+print_header "Step 2: Updating Website Files (Sitemap, Links)"
+
+if [ "$VALIDATE_ONLY" = true ]; then
+    python3 website/scripts/update-website.py --validate-only --verbose
     print_success "Validation complete!"
     exit 0
 fi
 
-# Step 2: Update website files
-print_header "Step 2: Updating Website Files"
-
 if [ "$DRY_RUN" = true ]; then
-    python3 scripts/update-website.py --dry-run --verbose
+    python3 website/scripts/update-website.py --dry-run --verbose
 else
-    python3 scripts/update-website.py --verbose
+    python3 website/scripts/update-website.py --verbose
     print_success "Website files updated!"
 fi
 
-# Step 3: Check for changes
-print_header "Step 3: Checking for Changes"
+# Step 3: Validate changes
+print_header "Step 3: Validating Changes"
+
+if [ "$DRY_RUN" = false ] && [ "$VALIDATE_ONLY" = false ]; then
+    python3 website/scripts/update-website.py --validate-only
+    print_success "Validation complete!"
+fi
+
+# Step 4: Check for changes
+print_header "Step 4: Checking for Changes"
 
 if git diff --quiet && git diff --cached --quiet; then
     print_warning "No changes detected. Everything is up to date!"
@@ -119,15 +138,16 @@ fi
 echo "Changes detected:"
 git status --short
 
-# Step 4: Commit if requested
+# Step 5: Commit if requested
 if [ -n "$COMMIT_MSG" ]; then
-    print_header "Step 4: Committing Changes"
+    print_header "Step 5: Committing Changes"
     
     if [ "$DRY_RUN" = true ]; then
         echo "[DRY RUN] Would commit with message: $COMMIT_MSG"
     else
         git add sitemap.xml
-        git add rag/ 2>/dev/null || true
+        git add rag/rag-index.md rag/rag-library.json 2>/dev/null || true
+        git add website/root/index.md 2>/dev/null || true
         
         if git diff --cached --quiet; then
             print_warning "No changes to commit"
@@ -147,12 +167,12 @@ else
     echo "  $0 --commit 'Your commit message'"
     echo ""
     echo "Or commit manually:"
-    echo "  git add sitemap.xml"
+    echo "  git add rag/rag-index.md rag/rag-library.json website/root/index.md sitemap.xml"
     echo "  git commit -m 'Update website files'"
     echo "  git push origin main"
 fi
 
-# Step 5: Summary
+# Step 6: Summary
 print_header "Summary"
 
 if [ "$DRY_RUN" = false ]; then
@@ -160,7 +180,7 @@ if [ "$DRY_RUN" = false ]; then
     echo ""
     echo "Next steps:"
     echo "  1. Review changes: git diff"
-    echo "  2. Commit: git add sitemap.xml && git commit -m 'Update website'"
+    echo "  2. Commit: git add rag/rag-index.md rag/rag-library.json website/root/index.md sitemap.xml && git commit -m 'Update website'"
     echo "  3. Push: git push origin main"
     echo "  4. GitHub Pages will automatically rebuild (1-2 minutes)"
     echo ""

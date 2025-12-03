@@ -40,9 +40,11 @@ LESSONS LEARNED (Don't repeat these mistakes):
 
 import re
 import sys
+import json
 import yaml
 from pathlib import Path
 from collections import defaultdict
+from datetime import datetime
 
 # Folder to section name mapping
 FOLDER_TO_SECTION = {
@@ -245,6 +247,174 @@ def scan_rag_folder(rag_path):
     
     print(f"   Found {sum(len(files) for files in files_by_domain.values())} files in {len(files_by_domain)} domains")
     return files_by_domain
+
+
+def rebuild_rag_library_json(rag_path, files_by_domain):
+    """Rebuild rag-library.json from scanned files"""
+    print("📝 Rebuilding rag-library.json...")
+    
+    json_path = rag_path / 'rag-library.json'
+    
+    # Build directory structure mapping
+    directory_structure = {}
+    for folder, section in FOLDER_TO_SECTION.items():
+        directory_structure[folder] = generate_section_description(section, []).replace(f"{section} patterns and practices.", "").strip()
+        if not directory_structure[folder]:
+            # Fallback descriptions
+            descriptions = {
+                "architecture": "System architecture patterns",
+                "integrations": "Integration patterns and platforms",
+                "identity-sso": "Identity and SSO patterns",
+                "data-modeling": "Data modeling patterns",
+                "security": "Security and access control patterns",
+                "operations": "Delivery & operations patterns",
+                "observability": "Observability & resilience patterns",
+                "data-governance": "Data governance & compliance patterns",
+                "adoption": "Adoption & change management patterns",
+                "project-methods": "Project delivery and methodology",
+                "development": "Development patterns and practices",
+                "troubleshooting": "Debugging and troubleshooting",
+                "patterns": "Reusable design patterns",
+                "glossary": "Terminology and definitions",
+                "code-examples": "Complete, working code examples",
+                "testing": "Testing patterns and examples",
+                "quick-start": "Quick-start guides",
+                "api-reference": "API references and method signatures",
+                "mcp-knowledge": "MCP-extracted knowledge",
+                "best-practices": "Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features",
+            }
+            directory_structure[folder] = descriptions.get(folder, f"{section} patterns and practices")
+    
+    # Build files array
+    files_array = []
+    for section_name in sorted(files_by_domain.keys()):
+        files = sorted(files_by_domain[section_name], key=lambda x: x['filename'])
+        
+        # Find folder name for this section
+        folder_name = None
+        for folder, section in FOLDER_TO_SECTION.items():
+            if section == section_name:
+                folder_name = folder
+                break
+        
+        if not folder_name:
+            continue
+        
+        for file_info in files:
+            # Build whenToRetrieve array
+            when_to_retrieve = []
+            if file_info['when_to_retrieve']:
+                # Split by common delimiters or use as single item
+                when_text = file_info['when_to_retrieve']
+                # Try to split by newlines or bullets
+                if '\n' in when_text or '- ' in when_text:
+                    lines = when_text.replace('- ', '').split('\n')
+                    when_to_retrieve = [line.strip() for line in lines if line.strip()]
+                else:
+                    when_to_retrieve = [when_text] if when_text else []
+            
+            file_entry = {
+                "domain": folder_name,
+                "file": file_info['filename'],
+                "path": f"rag/{file_info['full_path']}",
+                "whenToRetrieve": when_to_retrieve,
+                "summary": file_info['summary'] or file_info['title'],
+                "keyTopics": file_info['key_topics'] or [],
+                "status": "completed"
+            }
+            
+            # Add optional fields if they exist
+            if file_info.get('title') and file_info['title'] != file_info['filename'].replace('.md', '').replace('-', ' ').title():
+                file_entry["title"] = file_info['title']
+            
+            files_array.append(file_entry)
+    
+    # Calculate statistics
+    total_files = len(files_array)
+    completed_files = total_files  # All files are completed
+    domains = len(files_by_domain)
+    domains_with_files = domains
+    
+    # Calculate coverage (files per domain)
+    coverage = {}
+    for folder, section in FOLDER_TO_SECTION.items():
+        if section in files_by_domain:
+            coverage[folder] = len(files_by_domain[section])
+    
+    # Build JSON structure
+    library_json = {
+        "version": "2.0",
+        "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
+        "description": "RAG Knowledge Library - Structured knowledge derived from real Salesforce implementation experience. All content sanitized and organized for efficient AI retrieval.",
+        "directoryStructure": directory_structure,
+        "files": files_array,
+        "retrievalGuidelines": {
+            "whenToUse": [
+                "Architecture Questions: Designing system architecture, integration patterns, multi-tenant solutions, or portal architecture",
+                "Integration Questions: Implementing ETL, API, or event-driven integrations, SIS synchronization, integration platforms, or Change Data Capture (CDC) patterns",
+                "Identity Questions: Implementing SSO, multi-identity provider architectures, or login handlers",
+                "Data Modeling Questions: Designing external IDs, integration keys, student lifecycle models, case management models, lead management and conversion patterns, setting up custom objects with fields, layouts, and permissions, choosing file storage mechanisms (ContentVersion, Attachments, Documents), or planning data migrations",
+                "Security Questions: Implementing permission set-driven security, managing access control, or securing Salesforce data for LLM systems",
+                "Development Questions: Implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, understanding order of execution, choosing between before-save and after-save automation, handling row locking and concurrency, optimizing governor limits and performance, building dynamic SOQL queries, implementing relationship queries, performing org maintenance, implementing asynchronous Apex (Batch, Queueable, Scheduled), or using Custom Settings and Custom Metadata",
+                "Operations Questions: Implementing CI/CD, choosing between metadata and source-tracked orgs, using unlocked packages, automating sandbox seeding, implementing deployment validation, planning rollback strategies, designing org topologies, implementing data masking, planning refresh cadences, establishing release governance, or managing Change Advisory Boards",
+                "Observability Questions: Implementing monitoring and alerting, monitoring Platform Events, tracking API health, detecting async job failures, implementing log aggregation, optimizing query performance, handling Large Data Volumes, mitigating governor limits, implementing caching, planning backup/restore, implementing failover patterns, or conducting business continuity drills",
+                "Data Governance Questions: Handling PII/PHI data, implementing GDPR/CCPA/SOC2 compliance, configuring field-level encryption, implementing Shield best practices, preventing duplicates, configuring survivorship rules, or establishing master data governance",
+                "Adoption Questions: Creating training plans, establishing support models, implementing feature adoption telemetry, conducting technical debt triage, performing baseline audits, or creating remediation playbooks",
+                "Project Methods Questions: Sprint-based delivery, testing strategies, quality standards, deployment patterns, or Salesforce DX workflows",
+                "Troubleshooting Questions: Integration debugging, data reconciliation, common errors, or root cause analysis",
+                "Pattern Questions: Looking for reusable patterns or best practices",
+                "Code Generation Questions: Need complete, working code examples, implementing specific patterns, or looking for copy-paste ready code",
+                "Testing Questions: Writing test classes, creating test data factories, testing patterns, or test coverage strategies",
+                "Quick Start Questions: Getting started with Apex, LWC, or other Salesforce technologies",
+                "API Reference Questions: Looking up method signatures, API usage, or quick reference for common patterns",
+                "MCP Knowledge Questions: Official Salesforce guidance, best practices, or MCP-validated patterns"
+            ],
+            "howToUse": [
+                "Identify Domain: Determine which domain folder contains relevant knowledge",
+                "Review Index: Check rag-index.md for file summaries and retrieval guidance",
+                "Read Relevant Files: Read files that match the question domain",
+                "Cross-Reference: Check related files in other domains when needed",
+                "Apply Patterns: Use patterns and best practices from the library"
+            ]
+        },
+        "contentCharacteristics": {
+            "evidenceBased": "Derived from real implementation experience",
+            "sanitized": "All identifying information removed (company names, client names, project codenames)",
+            "patternFocused": "Emphasizes reusable patterns and best practices",
+            "decisionOriented": "Includes architectural decisions and tradeoffs",
+            "implementationReady": "Provides actionable guidance for implementation"
+        },
+        "terminology": {
+            "ETL": "Extract, Transform, Load - batch data synchronization",
+            "SIS": "Student Information System - external system for student data",
+            "OIDC": "OpenID Connect - identity provider protocol for external users",
+            "SAML": "Security Assertion Markup Language - identity provider protocol for enterprise SSO",
+            "Platform Events": "Salesforce event-driven integration mechanism",
+            "External ID": "Field marked as external ID for upsert operations",
+            "Permission Set": "Salesforce mechanism for granting incremental permissions",
+            "Record Type": "Salesforce mechanism for differentiating record types",
+            "Experience Cloud": "Salesforce portal/community platform",
+            "GovCloud": "Government Cloud - compliant cloud environment",
+            "OmniStudio": "Salesforce OmniStudio for guided workflows and reusable UI components",
+            "LWC": "Lightning Web Component - modern Salesforce UI component framework",
+            "EDA": "Education Data Architecture - Salesforce Education Cloud data model"
+        },
+        "plannedFiles": [],
+        "statistics": {
+            "totalFiles": total_files,
+            "completedFiles": completed_files,
+            "plannedFiles": 0,
+            "domains": domains,
+            "domainsWithFiles": domains_with_files
+        },
+        "coverage": coverage
+    }
+    
+    # Write JSON file
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(library_json, f, indent=2, ensure_ascii=False)
+    
+    print(f"   ✅ Rebuilt rag-library.json with {total_files} files in {domains} domains")
 
 
 def generate_section_description(section_name, files):
@@ -504,17 +674,22 @@ def main():
         print(f"❌ ERROR: {homepage_path} not found!")
         sys.exit(1)
     
-    print("🚀 Rebuilding rag-index.md and syncing homepage...\n")
+    print("🚀 Rebuilding rag-index.md, rag-library.json, and syncing homepage...\n")
     
     # Step 1: Scan rag/ folder and rebuild index
     files_by_domain = scan_rag_folder(rag_path)
+    
+    # Step 2: Rebuild rag-index.md
     rebuild_rag_index(rag_path, files_by_domain)
     
-    # Step 2: Sync homepage
+    # Step 3: Rebuild rag-library.json
+    rebuild_rag_library_json(rag_path, files_by_domain)
+    
+    # Step 4: Sync homepage
     update_homepage(rag_index_path, homepage_path)
     
-    print("\n✅ Done! Both rag-index.md and homepage are now in sync")
-    print("   Run: git add rag/rag-index.md website/root/index.md && git commit -m 'Auto-sync RAG index and homepage'")
+    print("\n✅ Done! rag-index.md, rag-library.json, and homepage are now in sync")
+    print("   Run: git add rag/rag-index.md rag/rag-library.json website/root/index.md && git commit -m 'Auto-sync RAG index, library JSON, and homepage'")
 
 
 if __name__ == '__main__':

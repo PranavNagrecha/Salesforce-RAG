@@ -63,6 +63,10 @@ defaults:
     values:
       layout: "default"
   - scope:
+      path: "rag/examples"
+    values:
+      layout: "default"
+  - scope:
       path: "examples"
     values:
       layout: "default"
