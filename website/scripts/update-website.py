@@ -24,7 +24,8 @@ from typing import List, Dict, Tuple
 import argparse
 
 # Configuration
-BASE_DIR = Path(__file__).parent.parent
+# LESSON LEARNED: Script is in website/scripts/, so parent.parent = website/, need one more parent for repo root
+BASE_DIR = Path(__file__).parent.parent.parent
 RAG_DIR = BASE_DIR / "rag"
 SITEMAP_PATH = BASE_DIR / "sitemap.xml"
 SITE_URL = "https://pranavnagrecha.github.io/Salesforce-RAG"

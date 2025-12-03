@@ -28,7 +28,11 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: Update website files
+      - name: Sync RAG index and homepage
+        run: |
+          python website/scripts/sync-homepage.py
+      
+      - name: Update website files (sitemap)
         run: |
           python website/scripts/update-website.py --verbose
       
