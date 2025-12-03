@@ -1,3 +1,10 @@
+---
+layout: default
+title: LWC Component Examples
+description: Complete, working code examples for Lightning Web Component patterns and implementations
+permalink: /rag/code-examples/lwc/component-examples.html
+---
+
 # Lightning Web Component Code Examples
 
 > This file contains complete, working code examples for Lightning Web Component patterns.
