@@ -75,6 +75,7 @@ trigger ContactTrigger on Contact (before insert, before update, after insert, a
 - **Bulkification**: Handles collections, not single records
 - **Delegation**: Delegates to Domain layer for validation
 - **Separation**: Before vs after logic separated
+- For broader framework guidance, see `trigger-framework-patterns.md` under Development patterns.
 
 **Test Example**:
 ```apex

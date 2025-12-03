@@ -94,7 +94,7 @@ Architecture patterns for designing system structure, integration patterns, mult
 
 <a href="{{ '/rag/architecture/mobile-strategy.html' | relative_url }}">View mobile-strategy.md</a>
 
-**Summary**: Documentation for Overview
+**Summary**: Patterns for designing Salesforce mobile strategies, including Salesforce mobile app, mobile-optimized LWCs, and offline considerations
 
 ### org-edition-selection.md
 
@@ -112,7 +112,7 @@ Architecture patterns for designing system structure, integration patterns, mult
 
 <a href="{{ '/rag/architecture/portal-architecture.html' | relative_url }}">View portal-architecture.md</a>
 
-**Summary**: Experience Cloud portal architecture patterns for supporting multiple user types (students/applicants, external partners/providers, citizens/clients) with different identity providers, security requirements, and access patterns
+**Summary**: Experience Cloud portal architecture patterns for supporting multiple user types with different identity providers, security requirements, and access patterns
 
 ### project-estimation.md
 
@@ -337,6 +337,12 @@ title: Integration Layer Code Examples
 description: The Integration Layer handles external API callouts, data transformation, authentication, and error handling
 permalink: /rag/code-examples/apex/integration-examples.html
 
+### list-view-button-examples.md
+
+<a href="{{ '/rag/code-examples/lwc/list-view-button-examples.html' | relative_url }}">View list-view-button-examples.md</a>
+
+**Summary**: Examples for adding custom LWC-powered buttons to list views
+
 ### logging-examples.md
 
 <a href="{{ '/rag/code-examples/utilities/logging-examples.html' | relative_url }}">View logging-examples.md</a>
@@ -355,11 +361,29 @@ permalink: /rag/code-examples/apex/integration-examples.html
 
 **Summary**: The Metadata API allows programmatic deployment and retrieval of Salesforce metadata
 
+### nebula-logger-examples.md
+
+<a href="{{ '/rag/code-examples/utilities/nebula-logger-examples.html' | relative_url }}">View nebula-logger-examples.md</a>
+
+**Summary**: Examples for using the Nebula Logger open-source library for structured logging in Salesforce
+
+### pdf-generation-examples.md
+
+<a href="{{ '/rag/code-examples/lwc/pdf-generation-examples.html' | relative_url }}">View pdf-generation-examples.md</a>
+
+**Summary**: Examples for generating PDFs from Lightning Web Components using Apex and external services
+
 ### platform-events-examples.md
 
 <a href="{{ '/rag/code-examples/integrations/platform-events-examples.html' | relative_url }}">View platform-events-examples.md</a>
 
 **Summary**: Platform Events enable event-driven architecture in Salesforce, allowing decoupled, asynchronous communication between systems
+
+### post-request-examples.md
+
+<a href="{{ '/rag/code-examples/integrations/post-request-examples.html' | relative_url }}">View post-request-examples.md</a>
+
+**Summary**: Examples for performing REST POST callouts from Apex using Named Credentials
 
 ### queueable-examples.md
 
@@ -375,13 +399,19 @@ permalink: /rag/code-examples/apex/queueable-examples.html
 
 <a href="{{ '/rag/code-examples/flow/record-triggered-examples.html' | relative_url }}">View record-triggered-examples.md</a>
 
-**Summary**: Record-Triggered Flows run automatically when records are created or updated
+**Summary**: Record-Triggered Flows run automatically when records are created or updated, providing declarative automation for common business processes
 
 ### rest-api-examples.md
 
 <a href="{{ '/rag/code-examples/integrations/rest-api-examples.html' | relative_url }}">View rest-api-examples.md</a>
 
 **Summary**: REST API integrations enable real-time, synchronous communication between Salesforce and external systems
+
+### rest-resource-examples.md
+
+<a href="{{ '/rag/code-examples/integrations/rest-resource-examples.html' | relative_url }}">View rest-resource-examples.md</a>
+
+**Summary**: Examples for implementing REST resources in Apex with @RestResource and HTTP method annotations
 
 ### scheduled-examples.md
 
@@ -397,7 +427,7 @@ permalink: /rag/code-examples/apex/scheduled-examples.html
 
 <a href="{{ '/rag/code-examples/flow/screen-flow-examples.html' | relative_url }}">View screen-flow-examples.md</a>
 
-**Summary**: Screen Flows provide guided user interactions for multi-step processes
+**Summary**: Screen Flows provide guided user interactions for multi-step processes, data collection, and complex forms with conditional logic
 
 ### selector-layer-examples.md
 
@@ -437,7 +467,7 @@ permalink: /rag/code-examples/apex/selector-layer-examples.html
 
 <a href="{{ '/rag/code-examples/flow/subflow-examples.html' | relative_url }}">View subflow-examples.md</a>
 
-**Summary**: Subflows are reusable flow components that can be called from other Flows or Apex
+**Summary**: Subflows are reusable flow components that can be called from other Flows or Apex, enabling code reuse and easier maintenance
 
 ### test-class-template.md
 
@@ -472,6 +502,12 @@ permalink: /rag/code-examples/apex/trigger-examples.html
 <a href="{{ '/rag/code-examples/lwc/wire-examples.html' | relative_url }}">View wire-examples.md</a>
 
 **Summary**: Wire services provide reactive data access in Lightning Web Components
+
+### word-document-generation-examples.md
+
+<a href="{{ '/rag/code-examples/lwc/word-document-generation-examples.html' | relative_url }}">View word-document-generation-examples.md</a>
+
+**Summary**: Examples for generating Word documents from Lightning Web Components using Apex and external services
 
 
 ## Data Governance
@@ -523,13 +559,19 @@ Data modeling patterns for designing external IDs, integration keys, student lif
 
 <a href="{{ '/rag/data-modeling/file-management-patterns.html' | relative_url }}">View file-management-patterns.md</a>
 
-**Summary**: Salesforce provides multiple mechanisms for file storage and management
+**Summary**: Salesforce provides multiple mechanisms for file storage and management, each with different use cases, limitations, and best practices
 
 ### lead-management-patterns.md
 
 <a href="{{ '/rag/data-modeling/lead-management-patterns.html' | relative_url }}">View lead-management-patterns.md</a>
 
 **Summary**: A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management
+
+### npsp-opportunity-gift-model.md
+
+<a href="{{ '/rag/data-modeling/npsp-opportunity-gift-model.html' | relative_url }}">View npsp-opportunity-gift-model.md</a>
+
+**Summary**: A comprehensive data model for nonprofit and education fundraising, covering how NPSP uses the standard Opportunity object to represent gifts, grants, and donations, along with related NPSP objects like Payments, Recurring Donations, and Allocations
 
 ### object-setup-and-configuration.md
 
@@ -558,7 +600,13 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">View admin-basics.md</a>
 
-**Summary**: Documentation for Overview
+**Summary**: Core responsibilities, skills, and configuration patterns for Salesforce administrators
+
+### apex-interfaces-patterns.md
+
+<a href="{{ '/rag/development/apex-interfaces-patterns.html' | relative_url }}">View apex-interfaces-patterns.md</a>
+
+**Summary**: Patterns and examples for using Apex interfaces to decouple implementations, enable mocking, and improve testability
 
 ### apex-patterns.md
 
@@ -570,19 +618,19 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">View asynchronous-apex-patterns.md</a>
 
-**Summary**: This guide provides comprehensive patterns for asynchronous Apex processing, covering Batch Apex, Queueable Apex, Scheduled Apex, and @future methods
+**Summary**: Comprehensive patterns for Batch, Queueable, Scheduled, and future methods in Salesforce
 
 ### custom-settings-metadata-patterns.md
 
 <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">View custom-settings-metadata-patterns.md</a>
 
-**Summary**: This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce
+**Summary**: Patterns for using Custom Settings and Custom Metadata Types for configuration management in Salesforce
 
 ### email-management.md
 
 <a href="{{ '/rag/development/email-management.html' | relative_url }}">View email-management.md</a>
 
-**Summary**: Documentation for Overview
+**Summary**: Patterns for sending, receiving, and tracking email in Salesforce using standard features and Apex
 
 ### error-handling-and-logging.md
 
@@ -612,19 +660,25 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 <a href="{{ '/rag/development/large-data-loads.html' | relative_url }}">View large-data-loads.md</a>
 
-**Summary**: Documentation for Overview
+**Summary**: Patterns for loading and migrating large data volumes into Salesforce safely
 
 ### lightning-app-builder.md
 
 <a href="{{ '/rag/development/lightning-app-builder.html' | relative_url }}">View lightning-app-builder.md</a>
 
-**Summary**: Documentation for Overview
+**Summary**: Patterns for composing Lightning pages, using Dynamic Forms, and structuring layouts
 
 ### locking-and-concurrency-strategies.md
 
 <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">View locking-and-concurrency-strategies.md</a>
 
-**Summary**: This topic covers Salesforce row locking, concurrency control patterns, UNABLE_TO_LOCK_ROW error handling, retry strategies, deadlock prevention, and high-concurrency scenario management
+**Summary**: Patterns for handling row locking, UNABLE_TO_LOCK_ROW errors, and high-concurrency scenarios in Salesforce
+
+### lwc-data-attributes-patterns.md
+
+<a href="{{ '/rag/development/lwc-data-attributes-patterns.html' | relative_url }}">View lwc-data-attributes-patterns.md</a>
+
+**Summary**: Patterns for using data-* attributes in Lightning Web Components to pass context, IDs, and metadata into event handlers
 
 ### lwc-patterns.md
 
@@ -632,11 +686,17 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 **Summary**: LWCs are built for complex business logic that standard page layouts cannot handle
 
+### npsp-opportunity-processing-patterns.md
+
+<a href="{{ '/rag/development/npsp-opportunity-processing-patterns.html' | relative_url }}">View npsp-opportunity-processing-patterns.md</a>
+
+**Summary**: Comprehensive process patterns for nonprofit and education fundraising opportunity processing, covering gift entry, pledge management, recurring donations, stage automation, and donor stewardship workflows
+
 ### omnistudio-patterns.md
 
 <a href="{{ '/rag/development/omnistudio-patterns.html' | relative_url }}">View omnistudio-patterns.md</a>
 
-**Summary**: OmniStudio (OmniScripts and FlexCards) provides guided workflows and reusable UI components for complex business processes
+**Summary**: Patterns for designing OmniScripts and FlexCards for guided, multi-step business processes
 
 ### order-of-execution.md
 
@@ -644,11 +704,35 @@ Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio,
 
 **Summary**: Understanding the order of execution in Salesforce is critical for architects and developers
 
+### platform-cache-patterns.md
+
+<a href="{{ '/rag/development/platform-cache-patterns.html' | relative_url }}">View platform-cache-patterns.md</a>
+
+**Summary**: Patterns for using Platform Cache to improve performance and reduce load on Salesforce and external systems
+
+### safe-navigation-patterns.md
+
+<a href="{{ '/rag/development/safe-navigation-patterns.html' | relative_url }}">View safe-navigation-patterns.md</a>
+
+**Summary**: Patterns for safely navigating nested relationships and avoiding null dereference errors in Apex
+
 ### soql-query-patterns.md
 
 <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">View soql-query-patterns.md</a>
 
 **Summary**: This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects
+
+### trigger-framework-patterns.md
+
+<a href="{{ '/rag/development/trigger-framework-patterns.html' | relative_url }}">View trigger-framework-patterns.md</a>
+
+**Summary**: Patterns for implementing a single-trigger-per-object framework with handlers and domain classes
+
+### wrapper-classes-patterns.md
+
+<a href="{{ '/rag/development/wrapper-classes-patterns.html' | relative_url }}">View wrapper-classes-patterns.md</a>
+
+**Summary**: Patterns for using Apex wrapper classes to shape data for UI, batch processing, and integrations
 
 
 ## Glossary
@@ -677,6 +761,12 @@ Identity and SSO patterns for implementing SSO, multi-identity provider architec
 
 Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.
 
+### auth-flows-patterns.md
+
+<a href="{{ '/rag/integrations/auth-flows-patterns.html' | relative_url }}">View auth-flows-patterns.md</a>
+
+**Summary**: Patterns for implementing OAuth and related authentication flows for Salesforce integrations
+
 ### callout-best-practices.md
 
 <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">View callout-best-practices.md</a>
@@ -693,12 +783,7 @@ Integration patterns and platforms for ETL, API, and event-driven integrations, 
 
 <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">View etl-vs-api-vs-events.md</a>
 
-**Summary**: ---
-layout: default
-title: ETL vs API vs Events: Integration Pattern Selection
-description: Different integration patterns serve different use cases
-permalink: /rag/integrations/etl-vs-api-vs-events.html
----
+**Summary**: Different integration patterns serve different use cases. This decision framework helps architects and developers choose the right integration pattern based on requirements for data volume, latency, directionality, and system coupling.
 
 ### integration-platform-patterns.md
 
@@ -711,6 +796,12 @@ permalink: /rag/integrations/etl-vs-api-vs-events.html
 <a href="{{ '/rag/integrations/integration-user-license-guide.html' | relative_url }}">View integration-user-license-guide.md</a>
 
 **Summary**: The Salesforce Integration User License is a free API-only license designed for system-to-system integrations
+
+### named-credentials-patterns.md
+
+<a href="{{ '/rag/integrations/named-credentials-patterns.html' | relative_url }}">View named-credentials-patterns.md</a>
+
+**Summary**: Patterns for using Named Credentials to manage external endpoint URLs and authentication
 
 ### salesforce-to-llm-data-pipelines.md
 
@@ -745,7 +836,7 @@ Knowledge extracted from Salesforce MCP Service tools, providing official guidan
 
 <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">View lwc-accessibility.md</a>
 
-**Summary**: Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2
+**Summary**: Comprehensive accessibility guidelines for Lightning Web Components, based on WCAG 2 and Salesforce MCP guidance
 
 ### lwc-best-practices.md
 
@@ -757,7 +848,36 @@ Knowledge extracted from Salesforce MCP Service tools, providing official guidan
 
 <a href="{{ '/rag/mcp-knowledge/lwc-development-guide.html' | relative_url }}">View lwc-development-guide.md</a>
 
-**Summary**: This guide provides comprehensive guidance for Lightning Web Components (LWC) development, covering core principles, technical stack, best practices, and development workflows
+**Summary**: Comprehensive guidance for Lightning Web Components (LWC) development, covering core principles, technical stack, best practices, and development workflows
+
+
+## Meta
+
+Meta documentation and patterns.
+
+### code-example-template.md
+
+<a href="{{ '/rag/meta/templates/code-example-template.html' | relative_url }}">View code-example-template.md</a>
+
+**Summary**: REPLACE with a one-sentence description of what these examples demonstrate
+
+### knowledge-file-template.md
+
+<a href="{{ '/rag/meta/templates/knowledge-file-template.html' | relative_url }}">View knowledge-file-template.md</a>
+
+**Summary**: REPLACE with a one-sentence summary of what this file covers
+
+### pattern-template.md
+
+<a href="{{ '/rag/meta/templates/pattern-template.html' | relative_url }}">View pattern-template.md</a>
+
+**Summary**: REPLACE with a one-sentence summary of the pattern and when it is used
+
+### style-guide.md
+
+<a href="{{ '/rag/meta/style-guide.html' | relative_url }}">View style-guide.md</a>
+
+**Summary**: Standards for structure, voice, formatting, and metadata across the Salesforce RAG knowledge library
 
 
 ## Observability
@@ -877,7 +997,7 @@ Security and access control patterns for implementing permission set-driven secu
 
 <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">View permission-set-architecture.md</a>
 
-**Summary**: Permission set-driven security architecture transitions from profile-centric to permission set-based access control
+**Summary**: Permission set-driven security architecture transitions from profile-centric to permission set-based access control, enabling flexible, modular security management
 
 ### salesforce-llm-data-governance.md
 
@@ -923,6 +1043,12 @@ permalink: /rag/testing/apex-testing-patterns.html
 <a href="{{ '/rag/testing/automated-testing-patterns.html' | relative_url }}">View automated-testing-patterns.md</a>
 
 **Summary**: This guide covers automated testing patterns for Salesforce at scale, including Apex test data factories, UI test automation for LWC and Experience Cloud, contract tests for integrations, and load testing patterns
+
+### dml-mocking-patterns.md
+
+<a href="{{ '/rag/testing/dml-mocking-patterns.html' | relative_url }}">View dml-mocking-patterns.md</a>
+
+**Summary**: Patterns for testing Apex logic that performs DML without relying on real database writes
 
 ### lwc-accessibility-testing.md
 

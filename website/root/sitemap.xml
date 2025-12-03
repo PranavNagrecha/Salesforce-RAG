@@ -265,7 +265,19 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/integrations/post-request-examples.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/integrations/rest-api-examples.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/integrations/rest-resource-examples.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -278,6 +290,18 @@
   </url>
   <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/lwc/component-examples.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/lwc/list-view-button-examples.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/lwc/pdf-generation-examples.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -296,6 +320,12 @@
   </url>
   <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/lwc/wire-examples.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/lwc/word-document-generation-examples.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -403,6 +433,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/utilities/nebula-logger-examples.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/code-examples/utilities/sfdx-examples.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -463,6 +499,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/data-modeling/npsp-opportunity-gift-model.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/data-modeling/object-setup-and-configuration.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -482,6 +524,12 @@
   </url>
   <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/admin-basics.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/apex-interfaces-patterns.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -553,7 +601,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/lwc-data-attributes-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/lwc-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/npsp-opportunity-processing-patterns.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -571,7 +631,31 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/platform-cache-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/safe-navigation-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/soql-query-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/trigger-framework-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/development/wrapper-classes-patterns.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -587,6 +671,12 @@
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/integrations/auth-flows-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/integrations/callout-best-practices.html</loc>
@@ -614,6 +704,12 @@
   </url>
   <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/integrations/integration-user-license-guide.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/integrations/named-credentials-patterns.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -782,6 +878,12 @@
   </url>
   <url>
     <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/testing/automated-testing-patterns.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pranavnagrecha.github.io/Salesforce-RAG/rag/testing/dml-mocking-patterns.html</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>

@@ -75,6 +75,11 @@ permalink: /
   </div>
 
   <div class="domain-card">
+    <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#meta">📄 Meta</a></h3>
+    <p>Meta documentation and patterns.</p>
+  </div>
+
+  <div class="domain-card">
     <h3><a href="{{ '/rag/rag-index.html' | relative_url }}#observability">📊 Observability</a></h3>
     <p>Observability and resilience patterns for monitoring, performance tuning, and high availability.</p>
   </div>
@@ -126,7 +131,7 @@ permalink: /
 
 ## About This Library
 
-This knowledge library contains **139+ files** covering:
+This knowledge library contains **160+ files** covering:
 
 - ✅ **Implementation patterns** from real Salesforce projects
 - ✅ **Best practices** for development, architecture, and operations
