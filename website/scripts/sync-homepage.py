@@ -200,7 +200,7 @@ def find_markdown_files():
             "folder": folder,
             "title": title,
             "description": description,
-            "url": f"rag/{url_path}",
+            "url": f"/rag/{url_path}",  # Absolute path starting with / for Jekyll
             "modified": datetime.fromtimestamp(file_path.stat().st_mtime).isoformat(),
             "size": file_path.stat().st_size,
         }

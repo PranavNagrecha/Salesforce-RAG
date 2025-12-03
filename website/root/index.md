@@ -121,7 +121,7 @@ permalink: /
 
 - 📖 **[Complete Index]({{ '/rag/rag-index.html' | relative_url }})** - Browse all knowledge files by domain
 - 📋 **[JSON Metadata]({{ '/rag/rag-library.json' | relative_url }})** - Machine-readable metadata for RAG systems
-- 💡 **[Usage Examples]({{ '/examples/' | relative_url }})** - Integration guides for Cursor, LangChain, and more
+- 💡 **[Code Examples]({{ '/rag/code-examples/code-examples-index.html' | relative_url }})** - Complete, working code examples ready to copy and use
 - 🔍 **[Search the Knowledge Base]({{ '/rag/rag-index.html' | relative_url }})** - Find specific patterns and best practices
 
 ## About This Library
