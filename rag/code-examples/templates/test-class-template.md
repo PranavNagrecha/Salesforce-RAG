@@ -1,3 +1,10 @@
+---
+layout: default
+title: Test Class Template
+description: Code examples for Test Class Template
+permalink: /rag/code-examples/templates/test-class-template.html
+---
+
 # Test Class Template
 
 **Use Case**: Basic test class with test data factory and assertions

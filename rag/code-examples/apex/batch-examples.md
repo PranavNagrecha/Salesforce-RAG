@@ -1,3 +1,10 @@
+---
+layout: default
+title: Batch Examples
+description: Code examples for Batch Examples
+permalink: /rag/code-examples/apex/batch-examples.html
+---
+
 # Batch Apex Code Examples
 
 > Complete, working code examples for Batch Apex patterns.

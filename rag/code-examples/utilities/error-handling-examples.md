@@ -1,12 +1,8 @@
 ---
-title: "Error Handling Code Examples"
-level: "Intermediate"
-tags:
-  - utilities
-  - code-examples
-  - error-handling
-  - retry-patterns
-last_reviewed: "2025-01-XX"
+layout: default
+title: Error Handling Examples
+description: Code examples for Error Handling Examples
+permalink: /rag/code-examples/utilities/error-handling-examples.html
 ---
 
 # Error Handling Code Examples

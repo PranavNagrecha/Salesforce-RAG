@@ -1,12 +1,8 @@
 ---
-title: "Subflow Code Examples"
-level: "Intermediate"
-tags:
-  - flow
-  - code-examples
-  - subflow
-  - reusable-components
-last_reviewed: "2025-01-XX"
+layout: default
+title: Subflow Examples
+description: Code examples for Subflow Examples
+permalink: /rag/code-examples/flow/subflow-examples.html
 ---
 
 # Subflow Code Examples

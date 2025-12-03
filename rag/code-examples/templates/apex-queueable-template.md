@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Queueable Template
+description: Code examples for Apex Queueable Template
+permalink: /rag/code-examples/templates/apex-queueable-template.html
+---
+
 # Queueable Apex Template
 
 **Use Case**: Basic Queueable for async processing

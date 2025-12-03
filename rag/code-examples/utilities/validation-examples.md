@@ -1,12 +1,8 @@
 ---
-title: "Validation Code Examples"
-level: "Intermediate"
-tags:
-  - utilities
-  - code-examples
-  - validation
-  - data-quality
-last_reviewed: "2025-01-XX"
+layout: default
+title: Validation Examples
+description: Code examples for Validation Examples
+permalink: /rag/code-examples/utilities/validation-examples.html
 ---
 
 # Validation Code Examples

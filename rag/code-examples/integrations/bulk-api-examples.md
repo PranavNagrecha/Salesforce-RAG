@@ -1,12 +1,8 @@
 ---
-title: "Bulk API Code Examples"
-level: "Advanced"
-tags:
-  - integrations
-  - code-examples
-  - bulk-api
-  - high-volume
-last_reviewed: "2025-01-XX"
+layout: default
+title: Bulk Api Examples
+description: Code examples for Bulk Api Examples
+permalink: /rag/code-examples/integrations/bulk-api-examples.html
 ---
 
 # Bulk API Code Examples

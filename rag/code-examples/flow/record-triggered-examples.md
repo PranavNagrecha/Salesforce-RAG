@@ -1,12 +1,8 @@
 ---
-title: "Record-Triggered Flow Code Examples"
-level: "Intermediate"
-tags:
-  - flow
-  - code-examples
-  - automation
-  - record-triggered
-last_reviewed: "2025-01-XX"
+layout: default
+title: Record Triggered Examples
+description: Code examples for Record Triggered Examples
+permalink: /rag/code-examples/flow/record-triggered-examples.html
 ---
 
 # Record-Triggered Flow Code Examples

@@ -1,12 +1,8 @@
 ---
-title: "Screen Flow Code Examples"
-level: "Intermediate"
-tags:
-  - flow
-  - code-examples
-  - screen-flow
-  - user-interaction
-last_reviewed: "2025-01-XX"
+layout: default
+title: Screen Flow Examples
+description: Code examples for Screen Flow Examples
+permalink: /rag/code-examples/flow/screen-flow-examples.html
 ---
 
 # Screen Flow Code Examples

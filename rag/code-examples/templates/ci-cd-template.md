@@ -1,3 +1,10 @@
+---
+layout: default
+title: Ci Cd Template
+description: Code examples for Ci Cd Template
+permalink: /rag/code-examples/templates/ci-cd-template.html
+---
+
 # CI/CD Template
 
 **Use Case**: CI/CD pipeline for Salesforce deployment

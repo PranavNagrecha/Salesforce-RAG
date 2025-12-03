@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Batch Template
+description: Code examples for Apex Batch Template
+permalink: /rag/code-examples/templates/apex-batch-template.html
+---
+
 # Batch Apex Template
 
 **Use Case**: Basic stateless Batch Apex for bulk processing

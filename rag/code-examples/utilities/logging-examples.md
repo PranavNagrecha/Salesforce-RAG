@@ -1,12 +1,8 @@
 ---
-title: "Logging Code Examples"
-level: "Intermediate"
-tags:
-  - utilities
-  - code-examples
-  - logging
-  - observability
-last_reviewed: "2025-01-XX"
+layout: default
+title: Logging Examples
+description: Code examples for Logging Examples
+permalink: /rag/code-examples/utilities/logging-examples.html
 ---
 
 # Logging Code Examples

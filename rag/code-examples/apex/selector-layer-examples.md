@@ -1,3 +1,10 @@
+---
+layout: default
+title: Selector Layer Examples
+description: Code examples for Selector Layer Examples
+permalink: /rag/code-examples/apex/selector-layer-examples.html
+---
+
 # Selector Layer Code Examples
 
 > This file contains complete, working code examples for Apex Selector Layer patterns.  

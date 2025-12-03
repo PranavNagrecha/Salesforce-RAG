@@ -1,12 +1,8 @@
 ---
-title: "REST API Code Examples"
-level: "Intermediate"
-tags:
-  - integrations
-  - code-examples
-  - rest-api
-  - callouts
-last_reviewed: "2025-01-XX"
+layout: default
+title: Rest Api Examples
+description: Code examples for Rest Api Examples
+permalink: /rag/code-examples/integrations/rest-api-examples.html
 ---
 
 # REST API Code Examples

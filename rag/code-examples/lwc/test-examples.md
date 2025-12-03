@@ -1,12 +1,8 @@
 ---
-title: "LWC Jest Testing Code Examples"
-level: "Intermediate"
-tags:
-  - lwc
-  - code-examples
-  - testing
-  - jest
-last_reviewed: "2025-01-XX"
+layout: default
+title: Test Examples
+description: Code examples for Test Examples
+permalink: /rag/code-examples/lwc/test-examples.html
 ---
 
 # LWC Jest Testing Code Examples

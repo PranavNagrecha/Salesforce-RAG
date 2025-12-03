@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Scheduled Template
+description: Code examples for Apex Scheduled Template
+permalink: /rag/code-examples/templates/apex-scheduled-template.html
+---
+
 # Scheduled Apex Template
 
 **Use Case**: Basic Scheduled Apex for time-based automation

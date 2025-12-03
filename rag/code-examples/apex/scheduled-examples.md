@@ -1,3 +1,10 @@
+---
+layout: default
+title: Scheduled Examples
+description: Code examples for Scheduled Examples
+permalink: /rag/code-examples/apex/scheduled-examples.html
+---
+
 # Scheduled Apex Code Examples
 
 > Complete, working code examples for Scheduled Apex patterns.

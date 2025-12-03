@@ -1,3 +1,10 @@
+---
+layout: default
+title: Service Layer Examples
+description: Code examples for Service Layer Examples
+permalink: /rag/code-examples/apex/service-layer-examples.html
+---
+
 # Service Layer Code Examples
 
 > This file contains complete, working code examples for Apex Service Layer patterns.

@@ -1,12 +1,8 @@
 ---
-title: "Platform Events Code Examples"
-level: "Intermediate"
-tags:
-  - integrations
-  - code-examples
-  - platform-events
-  - event-driven
-last_reviewed: "2025-01-XX"
+layout: default
+title: Platform Events Examples
+description: Code examples for Platform Events Examples
+permalink: /rag/code-examples/integrations/platform-events-examples.html
 ---
 
 # Platform Events Code Examples

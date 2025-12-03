@@ -1,12 +1,8 @@
 ---
-title: "LWC Wire Service Code Examples"
-level: "Intermediate"
-tags:
-  - lwc
-  - code-examples
-  - wire-service
-  - data-access
-last_reviewed: "2025-01-XX"
+layout: default
+title: Wire Examples
+description: Code examples for Wire Examples
+permalink: /rag/code-examples/lwc/wire-examples.html
 ---
 
 # LWC Wire Service Code Examples

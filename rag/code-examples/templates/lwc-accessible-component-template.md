@@ -1,3 +1,10 @@
+---
+layout: default
+title: Lwc Accessible Component Template
+description: Code examples for Lwc Accessible Component Template
+permalink: /rag/code-examples/templates/lwc-accessible-component-template.html
+---
+
 # Accessible LWC Component Template
 
 > Template for creating accessible Lightning Web Components following WCAG 2.2 standards.

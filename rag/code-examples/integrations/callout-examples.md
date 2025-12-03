@@ -1,12 +1,8 @@
 ---
-title: "HTTP Callout Code Examples"
-level: "Intermediate"
-tags:
-  - integrations
-  - code-examples
-  - callouts
-  - http
-last_reviewed: "2025-01-XX"
+layout: default
+title: Callout Examples
+description: Code examples for Callout Examples
+permalink: /rag/code-examples/integrations/callout-examples.html
 ---
 
 # HTTP Callout Code Examples

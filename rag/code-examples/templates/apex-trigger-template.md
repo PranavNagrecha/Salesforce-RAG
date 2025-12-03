@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Trigger Template
+description: Code examples for Apex Trigger Template
+permalink: /rag/code-examples/templates/apex-trigger-template.html
+---
+
 # Trigger Handler Template
 
 **Use Case**: Basic trigger handler with Domain layer delegation

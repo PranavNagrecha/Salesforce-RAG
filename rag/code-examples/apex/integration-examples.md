@@ -1,3 +1,10 @@
+---
+layout: default
+title: Integration Examples
+description: Code examples for Integration Examples
+permalink: /rag/code-examples/apex/integration-examples.html
+---
+
 # Integration Layer Code Examples
 
 > This file contains complete, working code examples for Apex Integration Layer patterns.  

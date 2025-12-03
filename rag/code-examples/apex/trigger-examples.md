@@ -1,3 +1,10 @@
+---
+layout: default
+title: Trigger Examples
+description: Code examples for Trigger Examples
+permalink: /rag/code-examples/apex/trigger-examples.html
+---
+
 # Trigger Handler Code Examples
 
 > This file contains complete, working code examples for Apex Trigger Handler patterns.  

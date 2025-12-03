@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Service Template
+description: Code examples for Apex Service Template
+permalink: /rag/code-examples/templates/apex-service-template.html
+---
+
 # Service Class Template
 
 **Use Case**: Basic service class with error handling and logging

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Selector Template
+description: Code examples for Apex Selector Template
+permalink: /rag/code-examples/templates/apex-selector-template.html
+---
+
 # Selector Class Template
 
 **Use Case**: Basic selector class with security enforcement

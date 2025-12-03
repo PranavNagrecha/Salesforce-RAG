@@ -1,12 +1,8 @@
 ---
-title: "LWC Service Layer Code Examples"
-level: "Intermediate"
-tags:
-  - lwc
-  - code-examples
-  - service-layer
-  - utilities
-last_reviewed: "2025-01-XX"
+layout: default
+title: Service Examples
+description: Code examples for Service Examples
+permalink: /rag/code-examples/lwc/service-examples.html
 ---
 
 # LWC Service Layer Code Examples

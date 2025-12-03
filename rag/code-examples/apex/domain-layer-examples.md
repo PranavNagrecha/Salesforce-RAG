@@ -1,3 +1,10 @@
+---
+layout: default
+title: Domain Layer Examples
+description: Code examples for Domain Layer Examples
+permalink: /rag/code-examples/apex/domain-layer-examples.html
+---
+
 # Domain Layer Code Examples
 
 > This file contains complete, working code examples for Apex Domain Layer patterns.  

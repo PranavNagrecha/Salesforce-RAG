@@ -1,3 +1,10 @@
+---
+layout: default
+title: Apex Domain Template
+description: Code examples for Apex Domain Template
+permalink: /rag/code-examples/templates/apex-domain-template.html
+---
+
 # Domain Class Template
 
 **Use Case**: Basic domain class with validation and business rules

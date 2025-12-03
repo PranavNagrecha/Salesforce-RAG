@@ -1,3 +1,10 @@
+---
+layout: default
+title: Queueable Examples
+description: Code examples for Queueable Examples
+permalink: /rag/code-examples/apex/queueable-examples.html
+---
+
 # Queueable Apex Code Examples
 
 > Complete, working code examples for Queueable Apex patterns.
