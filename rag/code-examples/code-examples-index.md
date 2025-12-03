@@ -119,9 +119,9 @@ This directory contains standalone code examples that complement the pattern doc
 
 ## Related Documentation
 
-- <a href="{{ '/rag/code-examples/rag-index.html' | relative_url }}">RAG Index</a> - Complete RAG library index
+- <a href="{{ '/rag/rag-index.html' | relative_url }}">RAG Index</a> - Complete RAG library index
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex design patterns
-- <a href="{{ '/rag/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Lightning Web Component patterns
-- <a href="{{ '/rag/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow design patterns
+- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Lightning Web Component patterns
+- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow design patterns
 - [Integration Patterns](../integrations/) - Integration patterns
 
