@@ -220,7 +220,7 @@ public with sharing class ContactUpdateService {
 }
 ```
 
-**Related Examples**: <a href="{{ '/rag/code-examples/apex/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
+**Related Examples**: <a href="{{ '/rag/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
 
 ---
 

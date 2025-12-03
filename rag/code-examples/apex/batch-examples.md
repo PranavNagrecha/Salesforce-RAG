@@ -680,5 +680,5 @@ AsyncApexJob status = BatchJobMonitor.getJobStatus(jobId);
 ## Related Patterns
 
 - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
-- <a href="{{ '/rag/code-examples/apex/templates/apex-batch-template.html' | relative_url }}">Batch Template</a> - Batch Apex template
+- <a href="{{ '/rag/code-examples/templates/apex-batch-template.html' | relative_url }}">Batch Template</a> - Batch Apex template
 

@@ -1131,7 +1131,7 @@ export default class StatusIndicator extends LightningElement {
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/lwc/templates/lwc-accessible-component-template.html' | relative_url }}">Accessible Component Template</a> - Template for accessible components
+- <a href="{{ '/rag/code-examples/templates/lwc-accessible-component-template.html' | relative_url }}">Accessible Component Template</a> - Template for accessible components
 - <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">Accessibility Testing</a> - Testing patterns
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">Accessibility Troubleshooting</a> - Common errors and fixes
 

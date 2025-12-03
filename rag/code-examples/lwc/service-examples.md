@@ -481,5 +481,5 @@ export default class ContactList extends LightningElement {
 ## Related Examples
 
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
-- <a href="{{ '/rag/code-examples/lwc/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
+- <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
 - <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference

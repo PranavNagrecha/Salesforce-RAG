@@ -496,5 +496,5 @@ List<CronTrigger> allJobs = ScheduledJobMonitor.getAllScheduledJobs();
 ## Related Patterns
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/code-examples/apex/templates/apex-scheduled-template.html' | relative_url }}">Scheduled Template</a> - Scheduled Apex template
+- <a href="{{ '/rag/code-examples/templates/apex-scheduled-template.html' | relative_url }}">Scheduled Template</a> - Scheduled Apex template
 
