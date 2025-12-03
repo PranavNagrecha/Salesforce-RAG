@@ -1,0 +1,80 @@
+name: Validate Links
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'rag/**/*.md'
+      - 'website/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'rag/**/*.md'
+      - 'website/**'
+  workflow_dispatch:
+
+jobs:
+  validate-links:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Discover all links
+        run: |
+          python3 website/scripts/discover-all-links.py
+      
+      - name: Validate all links
+        id: validate
+        run: |
+          python3 website/scripts/validate-comprehensive-links.py
+        continue-on-error: true
+      
+      - name: Generate link report
+        if: always()
+        run: |
+          python3 website/scripts/generate-link-report.py
+      
+      - name: Upload link reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-validation-reports
+          path: |
+            website/docs/link-discovery.json
+            website/docs/link-validation.json
+            website/docs/link-validation-report.md
+            website/docs/link-validation-report.json
+            website/docs/link-validation-report.csv
+          retention-days: 30
+      
+      - name: Comment PR with report
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = 'website/docs/link-validation-report.md';
+            if (fs.existsSync(reportPath)) {
+              const report = fs.readFileSync(reportPath, 'utf8');
+              const body = `## Link Validation Report\n\n${report}`;
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            }
+      
+      - name: Fail on critical errors
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "❌ Link validation found critical errors. Please review the report."
+          exit 1
+

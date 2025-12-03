@@ -257,6 +257,130 @@ git push
    - Parent directory (`../`): Go up from current_dir, then append remaining path
    - Subdirectory: Append to current_dir path
 
+## Comprehensive Link Validation
+
+### Overview
+
+The comprehensive link validation system reviews **ALL links** across the entire codebase, including:
+- Internal HTML links (with relative_url filter)
+- Internal markdown links (legacy)
+- External links (http/https)
+- Anchor links
+- Mailto links
+
+### Link Validation Workflow
+
+1. **Discover All Links**:
+   ```bash
+   python website/scripts/discover-all-links.py
+   ```
+   - Scans all markdown files
+   - Categorizes links by type
+   - Outputs: `website/docs/link-discovery.json`
+
+2. **Validate All Links**:
+   ```bash
+   python website/scripts/validate-comprehensive-links.py
+   ```
+   - Validates file existence
+   - Checks format correctness
+   - Verifies path accuracy
+   - Outputs: `website/docs/link-validation.json`
+
+3. **Generate Reports**:
+   ```bash
+   python website/scripts/generate-link-report.py
+   ```
+   - Generates Markdown report: `website/docs/link-validation-report.md`
+   - Generates JSON report: `website/docs/link-validation-report.json`
+   - Generates CSV report: `website/docs/link-validation-report.csv`
+
+4. **Fix Issues** (optional):
+   ```bash
+   python website/scripts/fix-comprehensive-links.py --dry-run  # Preview fixes
+   python website/scripts/fix-comprehensive-links.py --apply    # Apply fixes
+   ```
+
+### Validation Checks
+
+The comprehensive validator checks:
+
+1. **Internal HTML Links**:
+   - Path starts with `/rag/`
+   - Target file exists (converts `.html` to `.md`)
+   - Path correctness (not in wrong subdirectory)
+   - Format: `{{ '/rag/path/file.html' | relative_url }}`
+   - No duplicate directory patterns
+
+2. **Internal Markdown Links**:
+   - Target file exists
+   - Extension warnings (.md should be .html)
+   - Relative path resolution
+   - Flagged for conversion to HTML format
+
+3. **External Links**:
+   - Suspicious patterns (localhost, test domains)
+   - Note: Actual URL checking is optional (can be slow)
+
+4. **Anchor Links**:
+   - Target file exists
+   - Anchor ID exists in target file
+   - Format validation (lowercase with hyphens)
+
+5. **File Existence**:
+   - All internal links verified
+   - Relative paths resolved correctly
+   - Case sensitivity checked
+
+6. **Path Correctness**:
+   - Files in correct directories
+   - No duplicate directory paths
+   - Correct parent directory resolution
+
+7. **Duplicate Links**:
+   - Same URL with different text
+   - Multiple links to same file from same source
+
+### CI/CD Integration
+
+Link validation runs automatically on:
+- Every push to `main` branch
+- Every pull request
+- Manual trigger via `workflow_dispatch`
+
+The workflow:
+1. Discovers all links
+2. Validates all links
+3. Generates reports
+4. Uploads reports as artifacts
+5. Comments on PRs with validation results
+6. Fails build on critical errors
+
+### Troubleshooting Common Link Issues
+
+**Issue: Links not working on a page**
+- **Cause**: Missing Jekyll frontmatter
+- **Fix**: Add frontmatter to markdown file:
+  ```yaml
+  ---
+  layout: default
+  title: Page Title
+  permalink: /rag/path/to/page.html
+  ---
+  ```
+
+**Issue: Links resolve to wrong path (missing baseurl)**
+- **Cause**: Using markdown links instead of HTML with relative_url filter
+- **Fix**: Convert to HTML format: `<a href="{{ '/rag/path/file.html' | relative_url }}">text</a>`
+
+**Issue: Links point to wrong directory**
+- **Cause**: Incorrect relative path resolution
+- **Fix**: Use absolute paths starting with `/rag/` in HTML links
+
+**Issue: Duplicate directory in path**
+- **Cause**: Script incorrectly resolved relative paths
+- **Fix**: Run `fix-comprehensive-links.py` to auto-fix
+
 ## Maintenance Rules
 
 ### When Adding New Domain

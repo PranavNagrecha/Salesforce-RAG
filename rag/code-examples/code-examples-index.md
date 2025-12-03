@@ -1,3 +1,10 @@
+---
+layout: default
+title: Code Examples Index
+description: Complete, working code examples organized by category. All examples are copy-paste ready and follow Salesforce best practices.
+permalink: /rag/code-examples/code-examples-index.html
+---
+
 # Code Examples Index
 
 Complete, working code examples organized by category. All examples are copy-paste ready and follow Salesforce best practices.
@@ -123,5 +130,5 @@ This directory contains standalone code examples that complement the pattern doc
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex design patterns
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Lightning Web Component patterns
 - <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow design patterns
-- [Integration Patterns](../integrations/) - Integration patterns
+- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Patterns</a> - Integration patterns
 
