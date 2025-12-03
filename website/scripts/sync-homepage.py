@@ -231,40 +231,32 @@ def build_rag_index(files_by_folder):
             continue
         
         # Section header
-        lines.append(f"## {section_name}\n")
+        lines.append(f"## {section_name}\n\n")
         
-        # Section description (from first file or default)
-        if files:
-            first_desc = files[0].get("description", "")
-            if first_desc:
-                # Use a generic description based on section
-                desc_map = {
-                    "API Reference": "Quick reference for common APIs, methods, and patterns.",
-                    "Adoption": "Adoption and change management patterns for user readiness and org health.",
-                    "Architecture Patterns": "Architecture patterns for designing system structure, integration patterns, multi-tenant solutions, and portal architecture.",
-                    "Best Practices": "Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features.",
-                    "Code Examples": "Complete, working code examples organized by category. All examples are copy-paste ready and include tests.",
-                    "Data Governance": "Data governance and compliance patterns for data residency, compliance, and data quality.",
-                    "Data Modeling": "Data modeling patterns for designing external IDs, integration keys, student lifecycle models, and case management models.",
-                    "Development": "Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, concurrency control, and performance optimization.",
-                    "Glossary": "Terminology and definitions for clarifying what terms mean and understanding core concepts.",
-                    "Identity and SSO": "Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.",
-                    "Integration Patterns": "Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.",
-                    "MCP Knowledge": "Knowledge extracted from Salesforce MCP Service tools, providing official guidance and best practices.",
-                    "Observability": "Observability and resilience patterns for monitoring, performance tuning, and high availability.",
-                    "Operations": "Delivery and operations patterns for CI/CD, environment strategy, and release governance.",
-                    "Patterns": "Reusable design patterns that span multiple domains, including governor limit management, bulkification, and cross-cutting design patterns.",
-                    "Project Methods": "Project delivery and methodology for sprint-based delivery, testing strategies, and quality standards.",
-                    "Quick Start Guides": "Step-by-step guides for getting started with Salesforce development.",
-                    "Security": "Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms.",
-                    "Testing": "Testing patterns and examples for Apex, LWC, and integration testing.",
-                    "Troubleshooting": "Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis.",
-                }
-                desc = desc_map.get(section_name, f"{section_name} documentation and patterns.")
-            else:
-                desc = f"{section_name} documentation and patterns."
-        else:
-            desc = f"{section_name} documentation and patterns."
+        # Section description - always use the predefined descriptions
+        desc_map = {
+            "API Reference": "Quick reference for common APIs, methods, and patterns.",
+            "Adoption": "Adoption and change management patterns for user readiness and org health.",
+            "Architecture Patterns": "Architecture patterns for designing system structure, integration patterns, multi-tenant solutions, and portal architecture.",
+            "Best Practices": "Best practices for Salesforce product evaluation, org edition selection, user license selection, pricing negotiation, org staffing, reporting, and cloud features.",
+            "Code Examples": "Complete, working code examples organized by category. All examples are copy-paste ready and include tests.",
+            "Data Governance": "Data governance and compliance patterns for data residency, compliance, and data quality.",
+            "Data Modeling": "Data modeling patterns for designing external IDs, integration keys, student lifecycle models, and case management models.",
+            "Development": "Development patterns and practices for implementing Apex, Flow, LWC, OmniStudio, error handling, logging, troubleshooting patterns, concurrency control, and performance optimization.",
+            "Glossary": "Terminology and definitions for clarifying what terms mean and understanding core concepts.",
+            "Identity and SSO": "Identity and SSO patterns for implementing SSO, multi-identity provider architectures, and login handlers.",
+            "Integration Patterns": "Integration patterns and platforms for ETL, API, and event-driven integrations, SIS synchronization, integration platforms like MuleSoft and Dell Boomi, and Salesforce to LLM data pipelines.",
+            "MCP Knowledge": "Knowledge extracted from Salesforce MCP Service tools, providing official guidance and best practices.",
+            "Observability": "Observability and resilience patterns for monitoring, performance tuning, and high availability.",
+            "Operations": "Delivery and operations patterns for CI/CD, environment strategy, and release governance.",
+            "Patterns": "Reusable design patterns that span multiple domains, including governor limit management, bulkification, and cross-cutting design patterns.",
+            "Project Methods": "Project delivery and methodology for sprint-based delivery, testing strategies, and quality standards.",
+            "Quick Start Guides": "Step-by-step guides for getting started with Salesforce development.",
+            "Security": "Security and access control patterns for implementing permission set-driven security, managing access control, securing Salesforce data for LLM systems, and implementing comprehensive sharing mechanisms.",
+            "Testing": "Testing patterns and examples for Apex, LWC, and integration testing.",
+            "Troubleshooting": "Debugging and troubleshooting approaches for integration debugging, data reconciliation, common errors, and root cause analysis.",
+        }
+        desc = desc_map.get(section_name, f"{section_name} documentation and patterns.")
         
         lines.append(f"{desc}\n\n")
         
