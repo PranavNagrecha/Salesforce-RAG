@@ -237,3 +237,19 @@ python website/scripts/sync-homepage.py
 
 That's it. No manual work needed.
 
+---
+
+## Critical Reference: Lessons Learned
+
+**⚠️ IMPORTANT:** Before making any changes to the website infrastructure, **always read**:
+
+📚 **[LESSONS-LEARNED.md](LESSONS-LEARNED.md)** - Critical lessons from the website rebuild, including:
+- Directory creation before file writing
+- Gemfile placement in GitHub Actions
+- GitHub Pages gem conflicts
+- Link validation best practices
+- Workflow structure and ordering
+- Common pitfalls to avoid
+
+This document contains hard-won knowledge from debugging deployment issues. **Reference it first** when encountering problems or making infrastructure changes.
+

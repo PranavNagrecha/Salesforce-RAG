@@ -82,6 +82,9 @@ cd "$PROJECT_ROOT"
 
 print_header "Salesforce RAG → Website Update Script"
 
+# Reference lessons learned document
+print_warning "📚 Important: See website/docs/LESSONS-LEARNED.md for critical lessons and best practices"
+
 # Check if Python is available
 if ! command -v python3 &> /dev/null; then
     print_error "Python 3 is required but not installed."

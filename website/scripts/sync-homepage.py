@@ -11,6 +11,8 @@ This script:
 6. Ensures all links work correctly
 
 Just run: python website/scripts/sync-homepage.py
+
+IMPORTANT: See website/docs/LESSONS-LEARNED.md for critical lessons and best practices
 """
 
 import re

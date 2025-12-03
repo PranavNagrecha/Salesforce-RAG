@@ -12,6 +12,8 @@ Usage:
     python website/scripts/update-website.py
     python website/scripts/update-website.py --validate-only
     python website/scripts/update-website.py --dry-run
+
+IMPORTANT: See website/docs/LESSONS-LEARNED.md for critical lessons and best practices
 """
 
 import os
