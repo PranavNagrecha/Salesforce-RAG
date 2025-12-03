@@ -7,6 +7,7 @@
 !/.github/
 !/website/
 !/rag/
+!/google*.html
 
 # Jekyll build artifacts (only in root, not in website/)
 _site/
