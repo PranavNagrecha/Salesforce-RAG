@@ -16,6 +16,22 @@ last_reviewed: "2025-01-XX"
 
 This document covers high-level pipeline patterns for extracting, transforming, and loading Salesforce data and metadata into LLM-powered systems (RAG, tools, agents). It addresses how to move Salesforce data into RAG/LLM systems, common architectural variants and their tradeoffs, extraction strategies, transformation and chunking approaches, and interaction with manifest-style descriptions.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of RAG (Retrieval-Augmented Generation) systems and vector databases
+- Knowledge of Salesforce APIs (REST, Bulk, Metadata, CDC)
+- Familiarity with data extraction and transformation patterns
+- Understanding of LLM embeddings and vector similarity search
+- Knowledge of chunking strategies for document retrieval
+- Experience with data pipeline architectures (ETL, event-driven)
+
+**Recommended Reading**:
+- `rag/integrations/change-data-capture-patterns.md` - CDC event processing
+- `rag/integrations/etl-vs-api-vs-events.md` - Integration pattern selection
+- `rag/security/salesforce-llm-data-governance.md` - Data governance for LLM systems
+- `rag/data-modeling/data-migration-patterns.md` - Data migration strategies
+
 ## Conceptual Architecture
 
 ### Core Stages: Extract → Transform → Index → Retrieve
@@ -567,6 +583,87 @@ Manifest-style descriptions are **not sufficient** to define:
 ### Q: What are best practices for Salesforce to LLM pipelines?
 
 **A**: Best practices include: (1) **Choose appropriate extraction API** (REST, Bulk, CDC based on requirements), (2) **Implement chunking strategy** (per-record or aggregated based on use case), (3) **Include relevant fields** (descriptive, status, relationships), (4) **Respect security model** (FLS, OLS, sharing rules), (5) **Handle errors gracefully** (retry logic, error recovery), (6) **Monitor pipeline health** (extraction metrics, indexing status), (7) **Optimize for retrieval** (chunking, metadata, embeddings).
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Large Object Records with Many Relationships
+
+**Scenario**: Records with extensive relationship data (Account with 100+ Contacts, Cases, Opportunities) creating very large chunks.
+
+**Consideration**:
+- Limit relationship depth in aggregated chunks (e.g., only include primary Contacts)
+- Use separate chunks for different relationship types
+- Implement chunk size limits (e.g., max 2,000 tokens per chunk)
+- Prioritize most relevant relationships based on use case
+- Consider per-record chunks for very large objects
+
+### Edge Case 2: Real-Time Data Freshness Requirements
+
+**Scenario**: LLM system requires real-time data updates, but CDC events have 24-hour retention limits.
+
+**Consideration**:
+- Use Platform Events or custom Change Events for longer retention
+- Implement hybrid approach (CDC for recent changes, periodic full refresh)
+- Use on-demand query pattern for critical real-time data
+- Monitor event retention and implement event replay for missed events
+- Consider event buffering and replay mechanisms
+
+### Edge Case 3: Field-Level Security (FLS) Evaluation Complexity
+
+**Scenario**: Extracting data while respecting FLS requires per-user security evaluation, complicating extraction.
+
+**Consideration**:
+- Extract data with integration user that has appropriate access
+- Evaluate FLS during transformation phase (filter fields per user context)
+- Use separate extraction pipelines for different user contexts
+- Cache FLS evaluation results to improve performance
+- Document FLS assumptions in pipeline configuration
+
+### Edge Case 4: Chunking Strategy Selection for Complex Data Models
+
+**Scenario**: Complex data models with many relationships make chunking strategy selection difficult.
+
+**Consideration**:
+- Test different chunking strategies (per-record vs aggregated) with sample data
+- Measure retrieval quality (precision, recall) for different strategies
+- Consider use case requirements (entity-centric vs relationship-aware)
+- Use hybrid approach (per-record for simple objects, aggregated for complex)
+- Profile chunk sizes and adjust based on embedding model limits
+
+### Edge Case 5: Embedding Model Token Limits
+
+**Scenario**: Chunks exceed embedding model token limits (e.g., 8,192 tokens for some models).
+
+**Consideration**:
+- Implement chunk size limits based on embedding model token limits
+- Split large chunks into smaller sub-chunks
+- Use sliding window approach for very long text fields
+- Truncate or summarize very long fields before chunking
+- Monitor chunk token counts during transformation
+
+### Edge Case 6: Incremental Update Complexity
+
+**Scenario**: Updating RAG index incrementally requires complex change tracking and partial index updates.
+
+**Consideration**:
+- Use CDC events to identify changed records for incremental updates
+- Implement change tracking (timestamp-based or event-based)
+- Handle record deletions (remove chunks from index)
+- Support partial index updates (update specific chunks, not full rebuild)
+- Test incremental update logic thoroughly before production
+
+### Limitations
+
+- **API Rate Limits**: REST API has 24-hour rolling window limits and concurrent request limits
+- **Bulk API Job Limits**: Bulk API jobs have size limits and require asynchronous processing
+- **CDC Event Retention**: Standard CDC events have 24-hour retention limits
+- **Embedding Model Limits**: Embedding models have token limits (typically 512-8,192 tokens)
+- **Vector Database Capacity**: Vector databases have storage and query performance limits
+- **Chunking Strategy Tradeoffs**: Per-record chunks lose relationship context, aggregated chunks may be too large
+- **Security Model Complexity**: FLS/OLS evaluation adds complexity to extraction and transformation
+- **Data Freshness Tradeoffs**: Real-time extraction requires more complex infrastructure, batch extraction may have stale data
+- **On-Demand Query Limits**: Direct API queries are limited by rate limits and governor limits
+- **Metadata Extraction Completeness**: Metadata API may not capture all runtime behaviors or custom logic
 
 ## Related Patterns
 

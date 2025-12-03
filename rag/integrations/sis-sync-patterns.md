@@ -17,6 +17,23 @@ last_reviewed: "2025-01-XX"
 
 High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS). These patterns handle hundreds of thousands of student records daily through ETL platforms with file-based staging and dynamic SQL batching.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of ETL platforms (Dell Boomi, MuleSoft) and their capabilities
+- Knowledge of high-volume batch processing patterns
+- Familiarity with External IDs and composite key strategies
+- Understanding of Bulk API and asynchronous job processing
+- Knowledge of SQL batching and IN-clause query patterns
+- Experience with error handling and retry logic for integrations
+
+**Recommended Reading**:
+- `rag/integrations/integration-platform-patterns.md` - ETL platform patterns
+- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID strategies
+- `rag/integrations/etl-vs-api-vs-events.md` - Integration pattern selection
+- `rag/data-modeling/data-migration-patterns.md` - Data migration strategies
+- `rag/development/asynchronous-apex-patterns.md` - Asynchronous processing patterns
+
 ## Integration Architecture
 
 ### Source System
@@ -385,6 +402,85 @@ Avoid this pattern when:
 ### Q: What are best practices for SIS synchronization?
 
 **A**: Best practices include: (1) **Always use external IDs** for objects receiving integration data, (2) **Break large datasets into chunks** (1,000-10,000 records per batch), (3) **Use file-based staging** for ID lists exceeding 50,000 records, (4) **Implement retry logic** for transient failures, (5) **Monitor integration health** (dashboards, alerts, logging), (6) **Profile performance** and optimize, (7) **Support error recovery** (dead-letter queues, manual retry).
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Very Large ID Lists (Hundreds of Thousands of Records)
+
+**Scenario**: ID lists exceeding 100,000 records that cannot be processed in memory or via single API calls.
+
+**Consideration**:
+- Use file-based staging to write ID lists to disk
+- Split large ID lists into multiple files (50,000-100,000 IDs per file)
+- Process files sequentially to avoid memory issues
+- Implement file cleanup after processing to manage disk space
+- Monitor disk space usage during processing
+
+### Edge Case 2: Database Connection Pool Exhaustion
+
+**Scenario**: High-volume batch processing exhausts database connection pool, causing connection failures.
+
+**Consideration**:
+- Implement connection pooling with appropriate pool size
+- Reuse connections when possible to reduce connection overhead
+- Monitor connection usage and adjust pool size as needed
+- Implement connection retry logic for transient connection failures
+- Use connection timeout settings to prevent hanging connections
+
+### Edge Case 3: SQL IN-Clause Size Limits
+
+**Scenario**: Database systems have limits on SQL IN-clause size (e.g., Oracle limit of 1,000 items per IN clause).
+
+**Consideration**:
+- Split large ID lists into batches of 1,000 IDs per IN clause
+- Use parameterized queries to prevent SQL injection
+- Handle database-specific IN-clause limits (Oracle, SQL Server, etc.)
+- Implement dynamic SQL generation to split large lists
+- Test with database-specific limits before production
+
+### Edge Case 4: Partial Batch Failures
+
+**Scenario**: Some records in a batch fail while others succeed, requiring partial retry logic.
+
+**Consideration**:
+- Track individual record success/failure status
+- Implement partial retry logic for failed records only
+- Use dead-letter queues for records that cannot be processed
+- Log detailed error information for troubleshooting
+- Support manual retry for failed records
+
+### Edge Case 5: External ID Collisions
+
+**Scenario**: Multiple source systems use the same external ID values, causing conflicts.
+
+**Consideration**:
+- Design external IDs to include source system identifier (e.g., "SIS|EMPLID123")
+- Use composite external IDs when source systems use multi-column keys
+- Validate external ID uniqueness before upsert operations
+- Handle external ID conflicts gracefully (log conflicts, skip or update based on business rules)
+- Implement external ID conflict resolution strategies
+
+### Edge Case 6: Time-Versioned Records
+
+**Scenario**: Source system uses time-versioned records (effective dates) requiring composite external IDs.
+
+**Consideration**:
+- Use composite external IDs with effective date components
+- Handle effective date ranges and overlaps
+- Process time-versioned records in chronological order
+- Support record updates when effective dates change
+- Validate effective date logic (start date <= end date)
+
+### Limitations
+
+- **ETL Platform Capacity**: ETL platforms have processing limits (memory, CPU, connection limits)
+- **Database Query Limits**: Database systems have IN-clause size limits (typically 1,000 items)
+- **Salesforce API Limits**: Bulk API has daily limits (varies by org type) and batch size limits (2,000 records per call)
+- **File System Storage**: File-based staging requires sufficient disk space for large ID lists
+- **Event Retention**: Change events have 24-hour retention limits (standard CDC events)
+- **Connection Pool Limits**: Database connection pools have maximum connection limits
+- **Processing Time**: Large batches require extended processing time (hours for millions of records)
+- **Error Recovery Complexity**: Partial failures require complex retry and recovery logic
 
 ## Related Patterns
 

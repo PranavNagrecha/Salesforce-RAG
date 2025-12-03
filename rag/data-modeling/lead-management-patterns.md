@@ -16,6 +16,21 @@ last_reviewed: "2025-01-XX"
 
 A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management. The model handles leads from multiple sources, automated assignment, scoring, conversion to Contacts/Accounts/Opportunities, and data quality management within a single Salesforce org.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce Lead object and lead conversion process
+- Knowledge of duplicate management and matching rules
+- Familiarity with assignment rules and lead routing
+- Understanding of Campaigns and marketing attribution
+- Knowledge of Record Types and their use in lead management
+
+**Recommended Reading**:
+- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID patterns
+- `rag/data-governance/data-quality-stewardship.md` - Duplicate prevention
+- `rag/data-modeling/object-setup-and-configuration.md` - Object configuration
+- `rag/development/flow-patterns.md` - Automation patterns
+
 ## Core Entity Model
 
 ### Lead Object
@@ -659,6 +674,74 @@ Avoid this model when:
 ### Q: What are best practices for lead management?
 
 **A**: Best practices include: (1) **Prevent duplicates** (duplicate rules, matching rules), (2) **Implement lead scoring** (prioritize high-quality leads), (3) **Automate routing** (assignment rules for efficiency), (4) **Track marketing attribution** (LeadSource, Campaigns), (5) **Maintain data quality** (validation rules, data quality checks), (6) **Convert qualified leads** (convert when ready), (7) **Monitor lead metrics** (conversion rates, source performance).
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Lead Conversion with Existing Accounts/Contacts
+
+**Scenario**: Converting a lead when Account or Contact already exists, causing duplicate creation or conversion conflicts.
+
+**Consideration**:
+- Use duplicate rules to prevent duplicate Account/Contact creation during conversion
+- Configure lead conversion settings to use existing Account/Contact when found
+- Test lead conversion with existing records to verify behavior
+- Handle conversion conflicts gracefully (log conflicts, prevent duplicate creation)
+- Use External IDs to match leads to existing Accounts/Contacts
+
+### Edge Case 2: High-Volume Lead Import
+
+**Scenario**: Importing thousands of leads from external systems, causing duplicate creation or assignment rule performance issues.
+
+**Consideration**:
+- Use Bulk API for high-volume lead imports
+- Implement duplicate prevention before import (pre-validate against existing leads)
+- Disable assignment rules during bulk import (assign manually or via batch process)
+- Use External IDs for lead matching and idempotent imports
+- Test import performance with sample data before full import
+
+### Edge Case 3: Lead Assignment Rule Conflicts
+
+**Scenario**: Multiple assignment rules matching the same lead, causing assignment conflicts or unexpected routing.
+
+**Consideration**:
+- Understand assignment rule evaluation order (first matching rule wins)
+- Test assignment rules with sample leads to verify routing
+- Document assignment rule logic for maintenance
+- Use criteria that don't overlap between rules
+- Monitor assignment rule performance and adjust as needed
+
+### Edge Case 4: Lead Scoring with Incomplete Data
+
+**Scenario**: Lead scoring formulas failing or producing incorrect scores when required fields are missing.
+
+**Consideration**:
+- Use ISBLANK() functions in scoring formulas to handle missing data
+- Set default values for scoring fields when data is missing
+- Validate lead data before scoring calculation
+- Test scoring formulas with incomplete data scenarios
+- Document scoring formula logic and field requirements
+
+### Edge Case 5: Lead Conversion with Complex Opportunity Creation
+
+**Scenario**: Converting leads with complex Opportunity creation requirements (multiple products, custom fields, relationships).
+
+**Consideration**:
+- Configure lead conversion settings for Opportunity creation
+- Use Apex triggers or Flows to handle complex Opportunity creation logic
+- Test lead conversion with complex Opportunity requirements
+- Handle conversion errors gracefully (log errors, prevent conversion if needed)
+- Document Opportunity creation logic for maintenance
+
+### Limitations
+
+- **Lead Conversion Limits**: Lead conversion creates one Account, one Contact, and optionally one Opportunity
+- **Converted Lead Editing**: Converted leads become read-only (cannot edit after conversion)
+- **Assignment Rule Limits**: Maximum 300 assignment rules per object (varies by org edition)
+- **Duplicate Rule Limits**: Maximum 5 duplicate rules per object (varies by org edition)
+- **Lead Scoring Complexity**: Lead scoring formulas have complexity limits
+- **Campaign Member Limits**: Campaign members have relationship limits
+- **External ID Matching**: External IDs must be unique and properly formatted
+- **Lead Source Tracking**: Lead Source is a picklist with limited values (may need custom fields)
 
 ## Related Patterns
 

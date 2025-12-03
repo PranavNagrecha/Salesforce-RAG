@@ -15,6 +15,21 @@ last_reviewed: "2025-01-XX"
 
 Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce. This guide covers the complete object configuration process from initial creation through Lightning Experience optimization, ensuring objects are properly configured for production use.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce object model and custom object creation
+- Familiarity with field types, relationships, and validation rules
+- Knowledge of Lightning Experience and page layouts
+- Understanding of profiles, permission sets, and object-level security
+- Basic knowledge of record types and their use cases
+
+**Recommended Reading**:
+- `rag/data-modeling/standard-object-oddities.md` - Standard object considerations
+- `rag/security/permission-set-architecture.md` - Permission set patterns
+- `rag/development/formulas-validation-rules.md` - Validation rule patterns
+- `rag/development/lightning-app-builder.md` - Lightning page configuration
+
 ## Object Setup Checklist
 
 ### Initial Object Creation
@@ -546,6 +561,77 @@ Comprehensive checklist and best practices for setting up custom and standard ob
 ### Q: Should I set Field-Level Security (FLS) during field creation or later?
 
 **A**: Set **FLS permissions as you create fields**. This is easier to configure during creation, prevents security gaps, and ensures proper access control from the start. Don't defer FLS configuration - it's a critical security step.
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Objects with Very Large Record Counts
+
+**Scenario**: Objects with millions of records requiring special configuration considerations.
+
+**Consideration**:
+- Enable "Allow Search" carefully (may impact search performance)
+- Consider deactivating "Track Field History" for high-volume objects (history tracking adds overhead)
+- Use indexed fields for frequently queried fields
+- Consider data archiving strategies for historical records
+- Monitor object performance and adjust configuration as needed
+
+### Edge Case 2: Objects with Complex Relationship Hierarchies
+
+**Scenario**: Objects with many lookup or master-detail relationships creating complex data models.
+
+**Consideration**:
+- Limit master-detail relationships (maximum 2 per object)
+- Use lookup relationships when cascade delete is not required
+- Consider relationship depth when designing data model
+- Test relationship traversal performance with large datasets
+- Document relationship dependencies for maintenance
+
+### Edge Case 3: Multi-Currency Objects
+
+**Scenario**: Objects requiring multi-currency support with currency conversion.
+
+**Consideration**:
+- Enable "Allow Reports" for multi-currency objects (required for currency conversion)
+- Configure currency fields appropriately (Currency data type)
+- Test currency conversion in reports and formulas
+- Understand currency conversion limitations (historical rates, conversion accuracy)
+- Consider currency field requirements for international orgs
+
+### Edge Case 4: Objects with Extensive Field History Tracking
+
+**Scenario**: Objects with many fields tracked for history, creating large history tables.
+
+**Consideration**:
+- Limit field history tracking to essential fields (history tracking adds storage overhead)
+- Monitor history table size and performance impact
+- Consider data retention policies for history data
+- Use field history tracking strategically (not all fields need tracking)
+- Plan for history data archival if needed
+
+### Edge Case 5: Objects Used in Experience Cloud (Communities)
+
+**Scenario**: Objects accessed by community users requiring special configuration.
+
+**Consideration**:
+- Configure Communities-specific settings in Classic (not available in Lightning)
+- Ensure appropriate sharing settings for community users
+- Test object access from community user perspective
+- Verify field visibility and FLS for community users
+- Configure appropriate page layouts for community users
+- Consider Sharing Sets for community user access (Customer Community licenses don't support sharing rules)
+
+### Limitations
+
+- **Master-Detail Relationships**: Maximum 2 master-detail relationships per object
+- **Lookup Relationships**: Maximum 40 lookup relationships per object
+- **Field History Tracking**: Limited to 20 fields per object (Enterprise and above)
+- **Record Types**: Maximum 200 record types per object
+- **Page Layouts**: Maximum 1,000 page layouts per object
+- **Field Count**: Maximum 800 fields per object (varies by org edition)
+- **Object Name Length**: Object API name limited to 40 characters
+- **Tab Visibility**: Tab visibility settings affect all users with access to the tab
+- **Search Layouts**: Limited customization options for search result layouts
+- **Experience Cloud Configuration**: Some object settings must be configured in Classic, not Lightning
 
 ## Related Patterns
 

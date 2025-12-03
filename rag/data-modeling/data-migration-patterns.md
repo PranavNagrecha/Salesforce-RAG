@@ -19,6 +19,21 @@ This guide covers data migration strategies, transformation patterns, validation
 - [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns for migration
 - [ETL vs API vs Events](../integrations/etl-vs-api-vs-events.md) - Integration pattern selection
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce data model and object relationships
+- Familiarity with data import tools (Data Import Wizard, Data Loader, Bulk API)
+- Knowledge of External IDs and their use in record matching
+- Understanding of data validation rules and required fields
+- Basic knowledge of CSV file formats and data transformation
+
+**Recommended Reading**:
+- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID patterns
+- `rag/integrations/etl-vs-api-vs-events.md` - Integration pattern selection
+- `rag/development/large-data-loads.md` - Large data volume handling
+- `rag/integrations/callout-best-practices.md` - API call patterns
+
 ## Consensus Best Practices
 
 - **Plan migrations carefully**: Understand data volume, relationships, and dependencies
@@ -309,6 +324,73 @@ This guide covers data migration strategies, transformation patterns, validation
 ### Q: How do I ensure data migration is idempotent?
 
 **A**: Make migrations idempotent by: (1) **Using External IDs** for record matching, (2) **Using upsert operations** instead of insert/update, (3) **Checking for existing records** before creating, (4) **Logging operations** to track what was done, (5) **Testing with re-runs** to ensure same results.
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Large Data Volumes (Millions of Records)
+
+**Scenario**: Migrating millions of records that exceed Bulk API job limits or require extended processing time.
+
+**Consideration**: 
+- Use Bulk API 2.0 for very large datasets (supports larger job sizes)
+- Implement chunking strategies (split into multiple jobs of 1-10 million records)
+- Consider parallel processing with multiple Bulk API jobs
+- Monitor job status and implement retry logic for failed jobs
+- Use file-based staging for ID lists exceeding 50,000 records
+
+### Edge Case 2: Complex Relationship Dependencies
+
+**Scenario**: Migrating records with complex parent-child relationships where child records must reference parent records that don't exist yet.
+
+**Consideration**:
+- Migrate parent records first, then child records
+- Use External IDs to establish relationships before parent records are fully created
+- Implement dependency resolution logic to handle circular dependencies
+- Use staging objects for complex relationship mapping
+- Validate relationships after migration
+
+### Edge Case 3: Data Type Mismatches and Format Issues
+
+**Scenario**: Source system data types don't match Salesforce field types, or data formats are incompatible.
+
+**Consideration**:
+- Implement data transformation logic to convert data types
+- Handle date/time format conversions and timezone issues
+- Convert text to numbers, handle decimal precision
+- Truncate text fields that exceed Salesforce field length limits
+- Handle null values appropriately (empty strings vs. null)
+
+### Edge Case 4: Validation Rule Failures During Migration
+
+**Scenario**: Records fail validation rules during migration, causing partial failures.
+
+**Consideration**:
+- Review and understand target org validation rules before migration
+- Pre-validate data against validation rules before import
+- Use staging objects to validate data before moving to target objects
+- Handle validation errors gracefully (log errors, continue processing valid records)
+- Consider temporarily disabling validation rules for migration (if approved)
+
+### Edge Case 5: Concurrent Migration Operations
+
+**Scenario**: Multiple migration jobs running concurrently, causing lock contention or data conflicts.
+
+**Consideration**:
+- Coordinate migration jobs to avoid concurrent operations on same objects
+- Use Bulk API job status to ensure jobs complete before starting new ones
+- Implement locking mechanisms for critical migration operations
+- Monitor for lock contention and adjust job scheduling
+- Use serial processing for objects with high contention
+
+### Limitations
+
+- **Data Import Wizard**: Limited to 50,000 records per import, manual process, no automation
+- **Data Loader**: Requires command-line access, limited error handling capabilities
+- **Bulk API**: Not real-time (jobs run asynchronously), requires job status polling
+- **Validation Rules**: Cannot be bypassed during standard data import (except via API with proper permissions)
+- **Relationship Limits**: Master-detail relationships cannot be changed after record creation
+- **Field Length Limits**: Text fields have maximum length limits (255-131,072 characters depending on field type)
+- **API Limits**: Daily API limits constrain migration volume and frequency
 
 ## Related Patterns
 

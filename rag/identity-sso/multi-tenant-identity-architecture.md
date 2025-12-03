@@ -16,6 +16,21 @@ last_reviewed: "2025-01-XX"
 
 Multi-tenant identity architecture enables a single Salesforce org to support multiple distinct user communities with different identity providers, security requirements, and access patterns. This pattern is essential for public sector and higher education implementations where citizens, external partner organizations, and internal staff must coexist in the same org.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of OIDC and SAML authentication protocols
+- Knowledge of Salesforce identity provider configuration
+- Familiarity with Experience Cloud (Communities) and portal architecture
+- Understanding of sharing rules, record types, and data isolation patterns
+- Knowledge of user profiles, permission sets, and access control
+
+**Recommended Reading**:
+- `rag/architecture/portal-architecture.md` - Portal architecture patterns
+- `rag/security/sharing-fundamentals.md` - Sharing model fundamentals
+- `rag/security/sharing-sets-and-portals.md` - Experience Cloud sharing
+- `rag/security/permission-set-architecture.md` - Permission set patterns
+
 ## Architecture Pattern
 
 ### Single-Org Multi-Tenant Model
@@ -287,4 +302,74 @@ Avoid multi-tenant identity architecture when:
 ### Q: What are the tradeoffs of multi-tenant identity architecture?
 
 **A**: Tradeoffs include: (1) **Complexity** - more complex identity provider configuration and sharing rules, (2) **Security** - requires careful sharing rule design to prevent cross-community access, (3) **Maintenance** - more complex to maintain than separate orgs, (4) **Benefits** - lower license costs, unified reporting, shared data model, single integration point.
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Identity Provider GUID Collisions
+
+**Scenario**: Multiple identity providers use the same GUID format, causing potential user matching conflicts.
+
+**Consideration**:
+- Include identity provider identifier in GUID mapping logic
+- Use composite external IDs (e.g., "OIDC|GUID123" vs "SAML|GUID123")
+- Implement GUID validation to ensure uniqueness per identity provider
+- Handle GUID collisions gracefully (log conflicts, prevent duplicate user creation)
+- Test GUID matching logic with sample data from all identity providers
+
+### Edge Case 2: Pre-Created Contacts Without Users
+
+**Scenario**: Contacts created during migration before users exist, requiring first-time login handling.
+
+**Consideration**:
+- Match on external GUID and email during first-time login
+- Create User records automatically when Contact matches identity provider GUID
+- Handle duplicate prevention (check for existing Users with same GUID)
+- Support manual user creation for Contacts without matching identity provider GUIDs
+- Test first-time login flow with pre-created Contacts
+
+### Edge Case 3: Cross-Community Data Access Prevention
+
+**Scenario**: Preventing users from one community (e.g., external citizens) from accessing data from another community (e.g., internal staff).
+
+**Consideration**:
+- Use Record Types to separate data by community (client vs. external partner vs. internal)
+- Implement sharing rules that respect Record Type boundaries
+- Use different Account/Contact Record Types per community
+- Test data isolation from each user community perspective
+- Monitor sharing rule performance with large datasets
+
+### Edge Case 4: Multiple Identity Providers for Same User Type
+
+**Scenario**: Supporting multiple identity providers (e.g., multiple OIDC providers) for the same user community.
+
+**Consideration**:
+- Configure multiple identity providers in Salesforce
+- Implement login handler logic to route users to correct identity provider
+- Use different external ID formats per identity provider
+- Handle identity provider selection during login flow
+- Test login flow with multiple identity providers
+
+### Edge Case 5: Identity Provider Changes or Migrations
+
+**Scenario**: Migrating from one identity provider to another or changing identity provider configuration.
+
+**Consideration**:
+- Plan migration strategy (gradual vs. big bang)
+- Update GUID mapping logic to support new identity provider format
+- Migrate existing user external IDs to new format
+- Test identity provider changes in sandbox first
+- Support rollback plan if migration fails
+
+### Limitations
+
+- **Identity Provider Limits**: Maximum number of identity providers per org (varies by org edition)
+- **GUID Format Constraints**: External identity provider GUID formats may not be compatible with Salesforce external ID requirements
+- **Record Type Limits**: Maximum 200 record types per object (may limit community separation strategies)
+- **Sharing Rule Complexity**: Complex sharing rules may impact performance with large datasets
+- **User License Limits**: Different user license types required for different communities (affects cost)
+- **Experience Cloud Limits**: Experience Cloud site limits and configuration constraints
+- **SSO Configuration Complexity**: Multiple SSO configurations increase maintenance complexity
+- **Data Isolation Verification**: Difficult to verify complete data isolation between communities
+
+## Related Patterns
 

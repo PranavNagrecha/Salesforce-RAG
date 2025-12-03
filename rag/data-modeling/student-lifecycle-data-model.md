@@ -16,6 +16,21 @@ last_reviewed: "2025-01-XX"
 
 The Salesforce Education Cloud (EDA) data model supports higher education institutions, with particular focus on online and adult-learning programs. The model integrates with legacy student information systems (SIS) while supporting CRM workflows for admissions and student engagement.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce Education Cloud (EDA) data model
+- Knowledge of Program Enrollment and Course Enrollment objects
+- Familiarity with SIS integration patterns and batch synchronization
+- Understanding of External IDs and their use in integration
+- Knowledge of Record Types and lifecycle stage tracking
+
+**Recommended Reading**:
+- `rag/integrations/sis-sync-patterns.md` - SIS synchronization patterns
+- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID patterns
+- `rag/data-modeling/data-migration-patterns.md` - Data migration strategies
+- `rag/integrations/etl-vs-api-vs-events.md` - Integration pattern selection
+
 ## Core Data Model Decisions
 
 ### Contact as Core Student/Applicant Record
@@ -334,7 +349,73 @@ Avoid this model when:
 
 **A**: Best practices include: (1) **Use Contact as core student record** (consistent with EDA model), (2) **Use Program Enrollment objects** (Education Cloud standard), (3) **Use external IDs** for SIS integration (mirror SIS primary keys), (4) **Support multiple applications** per student, (5) **Track lifecycle stages** (applicant → student → alumni), (6) **Design for SIS integration** (batch sync, reconciliation), (7) **Maintain data quality** (validation, duplicate prevention).
 
-## Related Patterns
+## Edge Cases and Limitations
+
+### Edge Case 1: High-Volume SIS Synchronization
+
+**Scenario**: Synchronizing hundreds of thousands of student records daily from legacy SIS, causing performance issues.
+
+**Consideration**:
+- Use Bulk API for high-volume synchronization
+- Implement file-based staging for large ID lists (exceeding 50,000 records)
+- Use dynamic SQL batching (1,000 IDs per IN clause)
+- Implement chunking strategies (1,000-10,000 records per batch)
+- Monitor synchronization performance and adjust as needed
+
+### Edge Case 2: Multiple Applications Per Student
+
+**Scenario**: Students applying to multiple programs simultaneously, creating complex application tracking.
+
+**Consideration**:
+- Support multiple Application records per Contact
+- Use Application status fields to track application stage per program
+- Link Applications to Program Enrollment when student enrolls
+- Handle application-to-enrollment conversion logic
+- Test application tracking with multiple applications per student
+
+### Edge Case 3: Program Enrollment Status Changes
+
+**Scenario**: Students changing enrollment status (active, inactive, graduated, withdrawn) requiring status tracking.
+
+**Consideration**:
+- Use Program Enrollment status fields to track enrollment stage
+- Implement status change workflows (automation, validation)
+- Track status change dates and history
+- Handle status change business rules (e.g., can't change from graduated to active)
+- Test status change logic with various scenarios
+
+### Edge Case 4: SIS External ID Format Changes
+
+**Scenario**: SIS system changing external ID formats, causing integration failures or duplicate records.
+
+**Consideration**:
+- Design external IDs to be stable (don't change over time)
+- Handle external ID format changes gracefully (migration strategy)
+- Validate external ID formats before upsert operations
+- Support external ID migration when formats change
+- Test external ID matching logic with various formats
+
+### Edge Case 5: Course Enrollment with Large Class Sizes
+
+**Scenario**: Courses with hundreds or thousands of enrolled students, creating large Course Enrollment record sets.
+
+**Consideration**:
+- Monitor Course Enrollment query performance with large class sizes
+- Use pagination for Course Enrollment queries
+- Consider data archiving for historical Course Enrollments
+- Test Course Enrollment queries with large datasets
+- Optimize Course Enrollment queries for performance
+
+### Limitations
+
+- **Education Cloud License Requirements**: Education Cloud features require Education Cloud licenses
+- **Program Enrollment Limits**: Program Enrollment objects have relationship limits
+- **Course Enrollment Volume**: Large Course Enrollment volumes may impact query performance
+- **SIS Integration Complexity**: SIS integration requires careful design and error handling
+- **External ID Stability**: External IDs must be stable and properly formatted
+- **Lifecycle Stage Tracking**: Lifecycle stage tracking requires careful design and maintenance
+- **Application Tracking**: Multiple applications per student adds complexity to application management
+- **Data Reconciliation**: SIS data reconciliation requires careful design and monitoring
 
 - [SIS Synchronization Patterns](../integrations/sis-sync-patterns.md) - High-volume batch sync patterns
 - [External IDs and Integration Keys](external-ids-and-integration-keys.md) - External ID patterns

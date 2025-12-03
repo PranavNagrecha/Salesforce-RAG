@@ -16,6 +16,22 @@ last_reviewed: "2025-01-XX"
 
 A comprehensive data model for public sector case management, supporting multi-agency public benefits and services portals. The model handles clients, external partner organizations, staff, cases, notices, and transactions within a single Salesforce org.
 
+## Prerequisites
+
+**Required Knowledge**:
+- Understanding of Salesforce Case object and case management workflows
+- Knowledge of multi-tenant data models and data isolation patterns
+- Familiarity with Record Types and their use in data separation
+- Understanding of Experience Cloud (Communities) and portal architecture
+- Knowledge of sharing rules, sharing sets, and data visibility patterns
+
+**Recommended Reading**:
+- `rag/architecture/portal-architecture.md` - Portal architecture patterns
+- `rag/security/sharing-fundamentals.md` - Sharing model fundamentals
+- `rag/security/sharing-sets-and-portals.md` - Experience Cloud sharing
+- `rag/identity-sso/multi-tenant-identity-architecture.md` - Multi-tenant identity
+- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID patterns
+
 ## Core Entity Model
 
 ### Client Accounts/Contacts
@@ -439,6 +455,74 @@ Avoid this model when:
 ### Q: What are best practices for case management data models?
 
 **A**: Best practices include: (1) **Use Record Types** to separate user types, (2) **Implement sharing rules** for data isolation, (3) **Use external IDs** for integration, (4) **Track external system data** (notices, transactions), (5) **Support multiple identity providers** (OIDC, SAML, organization tenant), (6) **Design for scalability** (handle large case volumes), (7) **Maintain data quality** (validation, duplicate prevention).
+
+## Edge Cases and Limitations
+
+### Edge Case 1: Multi-Tenant Data Isolation Verification
+
+**Scenario**: Verifying that data isolation between user types (clients, external partners, staff) is working correctly.
+
+**Consideration**:
+- Test data access from each user type perspective (clients, partners, staff)
+- Verify Record Type-based separation is enforced
+- Test sharing rules and sharing sets for each user type
+- Monitor for cross-community data access issues
+- Implement audit trails to track data access by user type
+
+### Edge Case 2: High-Volume Case Creation
+
+**Scenario**: Creating thousands of cases from external systems or bulk operations, causing performance issues.
+
+**Consideration**:
+- Use Bulk API for high-volume case creation
+- Disable automation during bulk import (re-enable after import)
+- Implement batch processing for case creation
+- Monitor case creation performance and adjust as needed
+- Test case creation with production-like data volumes
+
+### Edge Case 3: Complex Case Relationships
+
+**Scenario**: Cases with many related records (notices, transactions, case comments, attachments) creating large data volumes.
+
+**Consideration**:
+- Limit relationship depth when querying cases
+- Use pagination for related record queries
+- Consider data archiving for historical cases
+- Monitor case-related record performance
+- Test case queries with large related record sets
+
+### Edge Case 4: External System Integration Failures
+
+**Scenario**: Integration failures with external benefits/eligibility systems, causing data inconsistency.
+
+**Consideration**:
+- Implement retry logic for transient integration failures
+- Use dead-letter queues for unprocessable records
+- Track integration job status and errors
+- Implement data reconciliation processes
+- Support manual data correction and reprocessing
+
+### Edge Case 5: Notice and Transaction Volume
+
+**Scenario**: High-volume notices and transactions from external systems, creating large data volumes.
+
+**Consideration**:
+- Use Bulk API for high-volume notice/transaction imports
+- Implement data archiving for historical notices/transactions
+- Monitor notice/transaction table size and performance
+- Consider batch processing for notice/transaction creation
+- Test notice/transaction processing with production-like volumes
+
+### Limitations
+
+- **Record Type Limits**: Maximum 200 record types per object (may limit user type separation)
+- **Sharing Rule Limits**: Maximum 300 sharing rules per object (varies by org edition)
+- **Sharing Set Limits**: Maximum 50 Sharing Sets per Experience Cloud site
+- **Case Relationship Limits**: Cases have relationship limits (lookups, master-detail)
+- **External System Integration**: Integration complexity and error handling requirements
+- **Data Isolation Verification**: Difficult to verify complete data isolation between user types
+- **High-Volume Processing**: High-volume case creation may require special handling
+- **Notice/Transaction Volume**: Large notice/transaction volumes may impact performance
 
 ## Related Patterns
 

@@ -995,6 +995,75 @@ public with sharing class CommunityCaseSharingService {
 - **Sharing Fundamentals**: See `rag/security/sharing-fundamentals.md` for OWD, Role Hierarchy, and View All permissions
 - **Sharing Rules and Manual Sharing**: See `rag/security/sharing-rules-and-manual-sharing.md` for sharing rules and Apex managed sharing
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Sharing Sets with Large Contact/Account Hierarchies
+
+**Scenario**: Sharing Sets processing large numbers of related Contacts or Accounts, causing performance issues.
+
+**Consideration**:
+- Limit Sharing Set complexity (avoid deep relationship traversal)
+- Use Account-based sharing when possible (more efficient than Contact-based)
+- Monitor Sharing Set calculation time with large datasets
+- Test Sharing Set performance with production-like data volumes
+- Consider Apex managed sharing for very complex sharing requirements
+
+### Edge Case 2: Field-Level Sharing with Many Fields
+
+**Scenario**: Objects with many fields requiring field-level sharing configuration, creating maintenance complexity.
+
+**Consideration**:
+- Limit field-level sharing to essential fields (reduces maintenance overhead)
+- Use field sets to group related fields for sharing configuration
+- Document field-level sharing requirements for maintenance
+- Test field-level sharing from community user perspective
+- Consider object-level sharing when field-level sharing becomes too complex
+
+### Edge Case 3: Sharing Sets with Complex Relationship Traversal
+
+**Scenario**: Sharing Sets requiring traversal of multiple relationship levels (e.g., Account → Contact → Case → Case Comments).
+
+**Consideration**:
+- Limit relationship traversal depth in Sharing Sets (performance impact)
+- Use Apex managed sharing for complex relationship traversal
+- Test sharing calculation performance with deep relationships
+- Document relationship traversal logic for maintenance
+- Consider flattening relationships when possible
+
+### Edge Case 4: Multi-Tenant Portal Sharing
+
+**Scenario**: Multiple Experience Cloud sites in same org requiring data isolation between sites.
+
+**Consideration**:
+- Use Record Types to separate data by portal/community
+- Configure separate Sharing Sets per portal/community
+- Test data isolation between portals thoroughly
+- Use different Account/Contact Record Types per portal
+- Monitor sharing calculation performance with multiple portals
+
+### Edge Case 5: Sharing Sets with High-Volume Data Changes
+
+**Scenario**: High-volume data changes (e.g., bulk updates) triggering Sharing Set recalculations, causing performance issues.
+
+**Consideration**:
+- Use bulk API operations to minimize sharing recalculation triggers
+- Implement batch processing for high-volume updates
+- Monitor sharing calculation performance during bulk operations
+- Consider asynchronous sharing calculation for non-critical updates
+- Test sharing performance with bulk data operations
+
+### Limitations
+
+- **Sharing Set Limits**: Maximum 50 Sharing Sets per Experience Cloud site (varies by org edition)
+- **Customer Community License Restrictions**: Customer Community licenses don't support sharing rules (must use Sharing Sets)
+- **Field-Level Sharing Complexity**: Field-level sharing adds maintenance overhead and complexity
+- **Sharing Calculation Performance**: Sharing Set calculation may be slow with very large datasets or complex relationships
+- **Relationship Traversal Limits**: Deep relationship traversal in Sharing Sets may impact performance
+- **Multi-Portal Complexity**: Multiple Experience Cloud sites increase sharing configuration complexity
+- **Sharing Set Evaluation Order**: Sharing Sets evaluated in order, most permissive access wins
+- **Sharing Set Recalculation**: Sharing Sets recalculated when records change, may cause delays
+- **Portal User License Limits**: Different portal user license types have different sharing capabilities
+
 ## When to Use This Document
 
 - Designing Experience Cloud sharing with Sharing Sets

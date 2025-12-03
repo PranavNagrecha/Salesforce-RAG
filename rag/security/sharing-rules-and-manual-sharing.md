@@ -431,6 +431,74 @@ private class CaseSharingServiceTest {
 - **Sharing Sets and Portals**: See `rag/security/sharing-sets-and-portals.md` for Experience Cloud sharing patterns
 - **Permission Set Architecture**: See `rag/security/permission-set-architecture.md` for permission context
 
+## Edge Cases and Limitations
+
+### Edge Case 1: Sharing Rules with Large Data Volumes
+
+**Scenario**: Sharing rules processing millions of records, causing performance issues or calculation delays.
+
+**Consideration**:
+- Use criteria-based sharing rules with indexed fields for better performance
+- Limit sharing rule complexity (avoid complex formula criteria)
+- Monitor sharing rule calculation time and adjust as needed
+- Consider Apex managed sharing for very large datasets (more control over calculation)
+- Test sharing rule performance with production-like data volumes
+
+### Edge Case 2: Sharing Rules with Complex Criteria
+
+**Scenario**: Sharing rules with complex formula criteria or multiple conditions causing calculation issues.
+
+**Consideration**:
+- Simplify sharing rule criteria when possible (avoid nested formulas)
+- Use indexed fields in criteria for better performance
+- Test sharing rule criteria thoroughly before production
+- Monitor sharing rule calculation errors and adjust criteria
+- Consider Apex managed sharing for very complex criteria
+
+### Edge Case 3: Apex Managed Sharing with High Concurrency
+
+**Scenario**: Apex managed sharing code executing during high-concurrency scenarios, causing lock contention.
+
+**Consideration**:
+- Implement bulkification in Apex managed sharing code
+- Use asynchronous processing (Queueable, @future) for non-critical sharing
+- Avoid sharing calculations in triggers (use async processing)
+- Implement retry logic for sharing calculation failures
+- Monitor for lock contention and adjust processing strategy
+
+### Edge Case 4: Manual Sharing with Large User Groups
+
+**Scenario**: Manually sharing records with large public groups or role hierarchies, causing performance issues.
+
+**Consideration**:
+- Limit manual sharing to small groups when possible
+- Use sharing rules instead of manual sharing for large groups
+- Consider Apex managed sharing for programmatic sharing with large groups
+- Monitor manual sharing performance and adjust approach
+- Document manual sharing use cases for maintenance
+
+### Edge Case 5: Sharing Rule Conflicts and Overlaps
+
+**Scenario**: Multiple sharing rules granting different access levels to the same users, causing access conflicts.
+
+**Consideration**:
+- Understand sharing rule evaluation order (most permissive access wins)
+- Document sharing rule interactions and conflicts
+- Test sharing rule combinations to verify access levels
+- Use sharing rule groups to organize related rules
+- Review sharing rule conflicts during security reviews
+
+### Limitations
+
+- **Sharing Rule Limits**: Maximum 300 sharing rules per object (varies by org edition)
+- **Criteria Complexity**: Sharing rule criteria have formula complexity limits
+- **Calculation Performance**: Sharing rule calculation may be slow with very large datasets
+- **Manual Sharing Limits**: Manual sharing not scalable for large user groups
+- **Apex Managed Sharing Complexity**: Apex managed sharing requires code maintenance and testing
+- **Sharing Rule Evaluation Order**: Sharing rules evaluated in order, most permissive access wins
+- **Sharing Rule Recalculation**: Sharing rules recalculated when records change, may cause delays
+- **Public Group Limits**: Public groups have member limits (varies by org edition)
+
 ## When to Use This Document
 
 - Implementing sharing rules for internal users
