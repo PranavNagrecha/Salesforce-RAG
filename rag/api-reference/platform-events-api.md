@@ -251,4 +251,3 @@ public static void handleEvents(List<CustomEvent__e> events) {
 ```
 
 **Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
-

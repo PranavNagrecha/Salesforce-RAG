@@ -413,4 +413,3 @@ Think of estimation as a communication tool, not just a prediction. Good estimat
 **Related Domains**:
 - <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Sprint-based delivery approach
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing time estimation
-

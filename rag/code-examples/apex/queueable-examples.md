@@ -2,7 +2,7 @@
 layout: default
 title: Queueable Apex Code Examples
 description: Queueable Apex is used for lightweight async processing, chaining jobs, and performing callouts after DML operations
-permalink: /rag/development/asynchronous-apex-patterns.html#pattern-1-basic-queueable' | relative_url }}">Basic Queueable</a>
+permalink: /rag/code-examples/apex/queueable-examples.html
 
 **Problem**:
 You need to send email notifications after record updates. The Queueable job sends emails asynchronously without blocking the main transaction.
@@ -601,4 +601,3 @@ Integer queueDepth = QueueableJobMonitor.getQueueDepth();
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/code-examples/templates/apex-queueable-template.html' | relative_url }}">Queueable Template</a> - Queueable Apex template
-

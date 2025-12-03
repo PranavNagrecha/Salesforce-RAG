@@ -415,4 +415,3 @@ Avoid this model when:
 - <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Synchronization Patterns</a> - High-volume batch sync patterns
 - <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
 - <a href="{{ '/rag/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration strategies
-

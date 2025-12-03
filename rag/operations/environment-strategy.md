@@ -394,4 +394,3 @@ This guide covers environment strategy patterns for Salesforce, including org to
 - <a href="{{ '/rag/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 - <a href="{{ '/rag/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection and compliance
 - <a href="{{ '/rag/operations/cicd-patterns.html#sandbox-seeding' | relative_url }}">Sandbox Seeding</a> - Test data management patterns
-

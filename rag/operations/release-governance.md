@@ -355,4 +355,3 @@ This guide covers release governance patterns for Salesforce, including Change A
 - <a href="{{ '/rag/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
 - <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing approaches
-

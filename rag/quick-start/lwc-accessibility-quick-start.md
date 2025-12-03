@@ -608,4 +608,3 @@ export default class AccessibleModal extends LightningElement {
 - <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
 - <a href="{{ '/rag/quick-start/lwc-quick-start.html' | relative_url }}">LWC Quick Start</a> - General LWC quick start
-

@@ -97,4 +97,3 @@ Id jobId = Database.executeBatch(batch, 200);
 **For Batch Chaining**:
 - Call `Database.executeBatch()` from `finish()` method
 - Pass parameters to next batch via constructor
-

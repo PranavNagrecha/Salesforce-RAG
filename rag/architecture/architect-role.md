@@ -389,4 +389,3 @@ When defining architect role:
 **Related Domains**:
 - <a href="{{ '/rag/architecture/diagramming-patterns.html' | relative_url }}">Diagramming Patterns</a> - Creating architectural diagrams
 - <a href="{{ '/rag/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Establishing org governance
-

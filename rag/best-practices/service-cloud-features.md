@@ -427,4 +427,3 @@ When configuring Service Cloud:
 **Q:** How do I configure skill-based routing in Omni-Channel?
 
 **A:** Configure skill-based routing by: (1) Define agent skills and proficiency levels, (2) Configure routing based on case requirements and agent skills, (3) Match case needs to agent skills in routing configuration, (4) Set agent capacity and availability, (5) Monitor routing effectiveness and optimize. Skill-based routing ensures cases are routed to agents with appropriate expertise.
-

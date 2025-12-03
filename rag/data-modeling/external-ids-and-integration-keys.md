@@ -293,4 +293,3 @@ Avoid external IDs when:
 ### Q: What happens if an External ID value changes in the external system?
 
 **A**: If External ID values change in the external system, you'll need to update the External ID field values in Salesforce. This can break record correlation. Design External IDs to be stable - they should mirror external system primary keys that don't change.
-

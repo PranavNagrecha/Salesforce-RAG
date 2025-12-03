@@ -84,4 +84,3 @@ Id jobId = System.schedule('Job Name', cronExpression, scheduledJob);
 - Log errors with context
 - Send error notifications
 - Re-throw exceptions to mark job as failed
-

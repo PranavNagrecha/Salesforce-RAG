@@ -312,4 +312,3 @@ Avoid this framework when:
 - <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX project structure, commands, scratch org patterns, source tracking
 - <a href="{{ '/rag/operations/release-governance.html' | relative_url }}">Release Governance</a> - Change Advisory Boards, approval workflows, risk-based release checklists
 - <a href="{{ '/rag/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD automation, unlocked packages, sandbox seeding, rollback patterns
-

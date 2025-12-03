@@ -320,4 +320,3 @@ private static String formatPhone(String phone) {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
-

@@ -570,4 +570,3 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 - Plan transaction boundaries carefully
 
 **Related Patterns**: <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
-

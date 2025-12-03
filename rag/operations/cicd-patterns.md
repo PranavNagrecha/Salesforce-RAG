@@ -413,4 +413,3 @@ This guide covers comprehensive CI/CD patterns for Salesforce, including metadat
 - <a href="{{ '/rag/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
 - <a href="{{ '/rag/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing approaches
-

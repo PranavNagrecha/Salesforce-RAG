@@ -407,4 +407,3 @@ When evaluating Salesforce products, always ask:
 - <a href="{{ '/rag/architecture/salesforce-pricing-negotiation.html' | relative_url }}">Salesforce Pricing Negotiation</a> - Pricing and negotiation strategies
 - <a href="{{ '/rag/architecture/portal-architecture.html' | relative_url }}">Portal Architecture</a> - Experience Cloud evaluation
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi evaluation
-

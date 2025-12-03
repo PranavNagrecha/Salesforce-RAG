@@ -449,4 +449,3 @@ When configuring Sales Cloud:
 **Q:** What happens when I convert a Lead?
 
 **A:** Lead conversion creates Account, Contact, and optionally Opportunity from Lead data. Field mapping determines which Lead fields map to Account/Contact/Opportunity fields. Lead data and history are preserved. Relationships are created between converted records. Plan lead conversion field mapping carefully to ensure data accuracy.
-

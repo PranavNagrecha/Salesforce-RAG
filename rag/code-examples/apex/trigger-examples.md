@@ -2,7 +2,7 @@
 layout: default
 title: Trigger Handler Code Examples
 description: Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation
-permalink: /rag/development/apex-patterns.html#domain-layer' | relative_url }}">Domain Layer</a>
+permalink: /rag/code-examples/apex/trigger-examples.html
 
 **Problem**: 
 You need a trigger handler that validates Contact records before insert/update.
@@ -293,4 +293,3 @@ for (Contact newContact : newContacts) {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
-

@@ -501,4 +501,3 @@ private class CaseSharingServiceTest {
 - Implementing Apex managed sharing for complex requirements
 - Understanding manual sharing use cases
 - Troubleshooting sharing rule issues
-

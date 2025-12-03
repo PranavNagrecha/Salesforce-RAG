@@ -2,7 +2,7 @@
 layout: default
 title: Custom Settings Code Examples
 description: Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas
-permalink: /rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
+permalink: /rag/code-examples/utilities/custom-settings-examples.html
 
 ## Examples
 
@@ -99,4 +99,3 @@ public class CountryCodeLookup {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Complete patterns guide
-

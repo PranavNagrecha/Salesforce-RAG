@@ -49,4 +49,3 @@ sf project generate --name my-project
 # Create scratch org
 sf org create scratch --definition-file config/project-scratch-def.json
 ```
-

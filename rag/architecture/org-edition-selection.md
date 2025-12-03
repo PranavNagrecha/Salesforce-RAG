@@ -371,4 +371,3 @@ When selecting a Salesforce edition, always ask:
 - <a href="{{ '/rag/architecture/user-license-selection.html' | relative_url }}">User License Selection</a> - License type selection patterns
 - <a href="{{ '/rag/architecture/salesforce-product-evaluation.html' | relative_url }}">Salesforce Product Evaluation</a> - Product selection framework
 - <a href="{{ '/rag/architecture/salesforce-pricing-negotiation.html' | relative_url }}">Salesforce Pricing Negotiation</a> - Pricing and negotiation strategies
-

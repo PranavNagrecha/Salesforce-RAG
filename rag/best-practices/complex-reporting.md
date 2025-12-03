@@ -346,4 +346,3 @@ Think of reporting strategy as starting with simplest option (Salesforce Reports
 **Q: What governance considerations are important for reporting?**
 
 **A**: Establish reporting standards, naming conventions, and access controls. Manage report proliferation. Provide training and support. Monitor report usage and performance. Consider data security and compliance requirements.
-

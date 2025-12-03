@@ -351,4 +351,3 @@ This guide covers automated testing patterns for Salesforce at scale, including 
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing strategies
 - <a href="{{ '/rag/testing/non-functional-requirements.html' | relative_url }}">Non-Functional Requirements</a> - Security, accessibility, and performance testing
 - <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
-

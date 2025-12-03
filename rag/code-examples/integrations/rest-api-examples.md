@@ -549,4 +549,3 @@ System.enqueueJob(new AsyncRestApiService('/api/sync', 'POST', payload, contact.
 ## Related Examples
 
 - <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
-

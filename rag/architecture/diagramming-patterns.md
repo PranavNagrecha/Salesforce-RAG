@@ -378,4 +378,3 @@ When creating diagrams:
 **Related Domains**:
 - <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Architecture diagram examples
 - <a href="{{ '/rag/architecture/portal-architecture.html' | relative_url }}">Portal Architecture</a> - Portal architecture diagrams
-

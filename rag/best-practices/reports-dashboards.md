@@ -442,4 +442,3 @@ When creating reports and dashboards:
 **Q:** Can I use formulas in reports?
 
 **A:** Yes, you can create formula fields in reports that calculate custom values based on other report fields. Report formulas support functions, operators, and conditional logic. Use formulas for custom metrics, calculations, or conditional display. Formulas are calculated when report runs.
-

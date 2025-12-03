@@ -2,7 +2,7 @@
 layout: default
 title: Governor Limit Errors and Solutions
 description: This guide provides solutions for governor limit errors, including error messages, causes, solutions, and prevention strategies
-permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+permalink: /rag/troubleshooting/governor-limit-errors.html
 
 ## Too many SOQL queries
 
@@ -400,4 +400,3 @@ public class ProcessQueueable implements Queueable {
 
 **Related Patterns**: <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
 - <a href="{{ '/rag/troubleshooting/' | relative_url }}">Troubleshooting</a> - Other troubleshooting guides
-

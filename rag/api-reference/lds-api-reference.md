@@ -390,4 +390,3 @@ async handleApexUpdate() {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
-

@@ -51,4 +51,3 @@ jobs:
 - Store SFDX auth URL as GitHub secret
 - Pipeline runs on push to main branch
 - Deploys and runs tests automatically
-

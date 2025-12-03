@@ -2,7 +2,7 @@
 layout: default
 title: Common LWC Errors and Solutions
 description: This guide provides solutions for common LWC errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies
-permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+permalink: /rag/troubleshooting/common-lwc-errors.html
 
 ## Cannot read property 'value' of undefined
 
@@ -561,4 +561,3 @@ A field has proper FLS permissions and object access, but the component still fa
 **Related Patterns**: 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
-

@@ -192,4 +192,3 @@ project-root/
 - <a href="{{ '/rag/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - General deployment patterns
 - <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 - <a href="{{ '/rag/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD automation patterns
-

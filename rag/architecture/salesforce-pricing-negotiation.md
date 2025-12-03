@@ -395,4 +395,3 @@ When negotiating Salesforce pricing, always ask:
 
 **Related Domains**:
 - <a href="{{ '/rag/architecture/org-strategy.html' | relative_url }}">Org Strategy</a> - Multi-org vs single-org cost implications
-

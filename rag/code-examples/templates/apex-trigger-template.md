@@ -83,4 +83,3 @@ trigger [ObjectName]Trigger on [ObjectName] (before insert, before update, after
 
 **Related Patterns**:
 - <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a>
-

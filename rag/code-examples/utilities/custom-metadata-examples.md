@@ -2,7 +2,7 @@
 layout: default
 title: Custom Metadata Code Examples
 description: Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas
-permalink: /rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
+permalink: /rag/code-examples/utilities/custom-metadata-examples.html
 
 ## Examples
 
@@ -156,4 +156,3 @@ public class ConfigMigration {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a> - Complete patterns guide
-

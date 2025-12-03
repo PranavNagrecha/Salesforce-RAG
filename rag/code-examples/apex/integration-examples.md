@@ -2,7 +2,7 @@
 layout: default
 title: Integration Layer Code Examples
 description: The Integration Layer handles external API callouts, data transformation, authentication, and error handling
-permalink: /rag/development/apex-patterns.html#integration-layer' | relative_url }}">Integration Layer</a>
+permalink: /rag/code-examples/apex/integration-examples.html
 
 **Problem**: 
 You need to make HTTP callouts to external systems using Named Credentials for authentication.
@@ -355,4 +355,3 @@ Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(
 ## Related Patterns
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
-

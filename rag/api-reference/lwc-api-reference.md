@@ -2,7 +2,7 @@
 layout: default
 title: LWC API Reference
 description: This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns
-permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+permalink: /rag/api-reference/lwc-api-reference.html
 
 ---
 
@@ -266,4 +266,3 @@ export default class MyComponent extends LightningElement {
 - <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
 - <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 - <a href="{{ '/rag/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns
-

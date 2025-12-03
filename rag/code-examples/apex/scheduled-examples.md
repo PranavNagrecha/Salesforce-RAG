@@ -2,7 +2,7 @@
 layout: default
 title: Scheduled Apex Code Examples
 description: Scheduled Apex provides time-based automation for periodic tasks
-permalink: /rag/development/asynchronous-apex-patterns.html#pattern-1-basic-scheduled-apex' | relative_url }}">Basic Scheduled Apex</a>
+permalink: /rag/code-examples/apex/scheduled-examples.html
 
 **Problem**:
 You need to run a daily cleanup job that deletes old records. The Scheduled Apex job runs every day at 2 AM to perform cleanup.
@@ -497,4 +497,3 @@ List<CronTrigger> allJobs = ScheduledJobMonitor.getAllScheduledJobs();
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/code-examples/templates/apex-scheduled-template.html' | relative_url }}">Scheduled Template</a> - Scheduled Apex template
-

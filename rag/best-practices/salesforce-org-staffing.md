@@ -406,4 +406,3 @@ When planning Salesforce org staffing, always ask:
 **Q:** How do I determine if I'm under-staffed or over-staffed?
 
 **A:** Signs of under-staffing: (1) Team is consistently overwhelmed, (2) Implementations are delayed, (3) Quality issues arise, (4) Team members are handling work beyond their skills. Signs of over-staffing: (1) Team has significant idle time, (2) Roles are duplicated unnecessarily, (3) Costs are high without corresponding value. Right-size team for org size, complexity, and workload. Regularly review team capacity and adjust as needed.
-

@@ -366,4 +366,3 @@ This guide covers data residency and compliance patterns for Salesforce, includi
 - <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
 - <a href="{{ '/rag/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
 - <a href="{{ '/rag/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality & Stewardship</a> - Data quality patterns
-

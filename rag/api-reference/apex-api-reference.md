@@ -2,7 +2,7 @@
 layout: default
 title: Apex API Reference
 description: This reference provides method signatures, parameters, return types, and usage examples for common Apex patterns used in Salesforce implementations
-permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+permalink: /rag/api-reference/apex-api-reference.html
 
 **Best Practices**:
 - ALL exceptions MUST be logged
@@ -100,4 +100,3 @@ static void testMethod() {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - SOQL query patterns
-

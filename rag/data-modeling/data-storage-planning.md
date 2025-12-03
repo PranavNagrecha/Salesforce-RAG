@@ -329,4 +329,3 @@ Think of storage planning as proactive capacity management. Monitor regularly, p
 ### Q: What storage limits apply to different Salesforce editions?
 
 **A**: Storage limits: (1) **Professional** - 1 GB data, 1 GB file, (2) **Enterprise/Performance/Unlimited** - 10 GB data, 10 GB file (can purchase additional), (3) **Big Objects** have separate storage limits (don't count toward data storage). Understand limits for your edition and plan accordingly. Additional storage can be purchased for Enterprise+ editions.
-

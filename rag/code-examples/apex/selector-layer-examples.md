@@ -2,7 +2,7 @@
 layout: default
 title: Selector Layer Code Examples
 description: The Selector Layer provides centralized SOQL queries and data access abstraction
-permalink: /rag/development/apex-patterns.html#selector-layer' | relative_url }}">Selector Layer</a>
+permalink: /rag/code-examples/apex/selector-layer-examples.html
 
 **Problem**: 
 You need to query Contact records with security enforcement and provide reusable query methods.
@@ -381,4 +381,3 @@ public static List<Contact> selectByIdWithCases(Set<Id> ids) {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
-

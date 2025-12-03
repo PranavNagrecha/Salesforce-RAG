@@ -366,4 +366,3 @@ Think of governance as enabling quality, security, and sustainability, not const
 - <a href="{{ '/rag/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and change management
 - <a href="{{ '/rag/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Quality assurance and testing governance
-

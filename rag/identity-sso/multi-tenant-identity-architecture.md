@@ -367,4 +367,3 @@ Avoid multi-tenant identity architecture when:
 - **Data Isolation Verification**: Difficult to verify complete data isolation between communities
 
 ## Related Patterns
-

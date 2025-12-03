@@ -131,4 +131,3 @@ public class DataMigrationService {
 ## Related Patterns
 
 - <a href="{{ '/rag/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Complete migration guide
-

@@ -408,4 +408,3 @@ When selecting user license types, always ask:
 **Q:** How do I optimize licensing costs?
 
 **A:** Optimize licensing costs by: (1) Using Platform licenses for users who don't need standard CRM objects, (2) Using Service Cloud licenses for service-focused users who don't need Sales Cloud functionality, (3) Using Experience Cloud licenses for external portal users, (4) Using free Integration User licenses for all system integrations, (5) Regularly reviewing license assignments to ensure appropriate license types.
-

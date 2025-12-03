@@ -358,4 +358,3 @@ Think of org strategy as starting with simplest approach (single org) and adding
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Multi-org integration patterns
 - <a href="{{ '/rag/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Environment management for multi-org
 - <a href="{{ '/rag/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration for org strategy
-

@@ -73,4 +73,3 @@ public with sharing class [ObjectName]Selector {
 
 **Related Patterns**:
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>
-

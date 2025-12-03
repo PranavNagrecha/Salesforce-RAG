@@ -311,4 +311,3 @@ This guide covers non-functional requirements testing for Salesforce, including 
 - <a href="{{ '/rag/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
 - <a href="{{ '/rag/security/' | relative_url }}">Security Patterns</a> - Security and access control patterns
 - <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Performance monitoring
-

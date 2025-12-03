@@ -334,4 +334,3 @@ Think of yourself as a translator between business language and technical langua
 
 **Related Domains**:
 - <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Stakeholder coordination in sprints
-

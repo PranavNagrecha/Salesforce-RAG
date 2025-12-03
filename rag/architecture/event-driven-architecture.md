@@ -243,4 +243,3 @@ Avoid event-driven architecture when:
 ### Q: How do I test event-driven integrations?
 
 **A**: Publish test events, verify subscribers receive events, test error scenarios and retry logic, test event replay, and verify idempotency. Use test events with known payloads and verify subscriber behavior in different scenarios.
-

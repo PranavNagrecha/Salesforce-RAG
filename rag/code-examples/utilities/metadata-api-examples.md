@@ -84,4 +84,3 @@ public class MetadataApiDeployment {
 
 - <a href="{{ '/rag/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Complete deployment guide
 - <a href="{{ '/rag/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX patterns
-

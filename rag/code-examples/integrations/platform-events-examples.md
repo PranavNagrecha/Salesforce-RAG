@@ -469,4 +469,3 @@ public with sharing class EventErrorHandler {
 ## Related Examples
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-

@@ -2,7 +2,7 @@
 layout: default
 title: Batch Apex Code Examples
 description: Batch Apex is used for processing large data volumes (thousands or millions of records) in batches of 200
-permalink: /rag/development/asynchronous-apex-patterns.html#pattern-1-basic-stateless-batch-apex' | relative_url }}">Basic Stateless Batch</a>
+permalink: /rag/code-examples/apex/batch-examples.html
 
 **Problem**:
 You need to update 100,000 Contact records with a new field value. Each batch of 200 records should process independently without maintaining state.
@@ -681,4 +681,3 @@ AsyncApexJob status = BatchJobMonitor.getJobStatus(jobId);
 
 - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limit management
 - <a href="{{ '/rag/code-examples/templates/apex-batch-template.html' | relative_url }}">Batch Template</a> - Batch Apex template
-

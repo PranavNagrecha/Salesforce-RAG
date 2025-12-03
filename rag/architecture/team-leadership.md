@@ -385,4 +385,3 @@ Think of yourself as an enabler, not a controller. Your job is to:
 **Related Domains**:
 - <a href="{{ '/rag/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Team governance and standards
 - <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Team coordination in sprints
-
