@@ -61,6 +61,18 @@ def fix_development_file_paths(content: str, file_path: Path) -> tuple[str, bool
     modified = False
     new_content = content
     
+    # First, fix any paths with wrong subdirectories (e.g., /rag/code-examples/development/ -> /rag/development/)
+    wrong_pattern = re.compile(r'/rag/([^/]+/)+development/')
+    def fix_wrong_subdir(match):
+        nonlocal modified
+        modified = True
+        # Extract just the filename part
+        full_match = match.group(0)
+        # Replace with correct path
+        return '/rag/development/'
+    
+    new_content = wrong_pattern.sub(fix_wrong_subdir, new_content)
+    
     # Pattern: <a href="{{ '/rag/.../development/file.html' | relative_url }}">
     html_pattern = re.compile(
         r'<a\s+href=["\']\{\{\s*["\']([^"\']+)["\']\s*\|\s*relative_url\s*\}\}["\']\s*>',
@@ -75,12 +87,24 @@ def fix_development_file_paths(content: str, file_path: Path) -> tuple[str, bool
         if not url.startswith("/rag/"):
             return match.group(0)
         
+        # Fix any remaining wrong paths (e.g., code-examples/development/)
+        if "/code-examples/development/" in url or "/flow/development/" in url or "/lwc/development/" in url:
+            modified = True
+            url = url.replace("/code-examples/development/", "/development/")
+            url = url.replace("/flow/development/", "/development/")
+            url = url.replace("/lwc/development/", "/development/")
+            return match.group(0).replace(match.group(1), url)
+        
         # Extract filename
         parts = url.replace("/rag/", "").split("/")
-        filename = parts[-1].replace(".html", ".md")
+        filename = parts[-1].replace(".html", ".md").split("#")[0]  # Remove anchor
         
         if filename in DEVELOPMENT_FILES:
             correct_path = DEVELOPMENT_FILES[filename]
+            # Preserve anchor if present
+            if "#" in url:
+                anchor = "#" + url.split("#", 1)[1]
+                correct_path = correct_path.replace(".html", anchor)
             if url != correct_path:
                 modified = True
                 return match.group(0).replace(url, correct_path)
@@ -88,6 +112,15 @@ def fix_development_file_paths(content: str, file_path: Path) -> tuple[str, bool
         return match.group(0)
     
     new_content = html_pattern.sub(replace_path, new_content)
+    
+    # Fix anchor links with .html extension
+    anchor_pattern = re.compile(r'(#[\w-]+)\.html')
+    def fix_anchor(match):
+        nonlocal modified
+        modified = True
+        return match.group(1)
+    
+    new_content = anchor_pattern.sub(fix_anchor, new_content)
     
     return new_content, modified
 
