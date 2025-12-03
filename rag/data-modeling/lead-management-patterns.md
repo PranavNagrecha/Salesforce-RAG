@@ -2,7 +2,8 @@
 layout: default
 title: Lead Management and Conversion Data Model
 description: A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management
-permalink: /rag/development/flow-patterns.md` - Automation patterns
+permalink: /rag/data-modeling/lead-management-patterns.html
+---
 
 ## Core Entity Model
 

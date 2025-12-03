@@ -3,6 +3,7 @@ layout: default
 title: Validation Code Examples
 description: Data validation ensures data quality and prevents invalid data from entering the system
 permalink: /rag/code-examples/utilities/validation-examples.html
+---
 
 **Problem**:
 You need to validate field values before saving records.

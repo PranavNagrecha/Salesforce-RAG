@@ -3,6 +3,7 @@ layout: default
 title: Bulk API Code Examples
 description: Bulk API enables high-volume data operations in Salesforce
 permalink: /rag/code-examples/integrations/bulk-api-examples.html
+---
 
 **Problem**:
 You need to insert or update large volumes of records using Bulk API.

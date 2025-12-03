@@ -3,6 +3,7 @@ layout: default
 title: Error Handling Code Examples
 description: Robust error handling ensures applications gracefully handle failures and provide meaningful feedback
 permalink: /rag/code-examples/utilities/error-handling-examples.html
+---
 
 **Problem**:
 You need to handle exceptions gracefully in your Apex code.

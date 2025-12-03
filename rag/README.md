@@ -1,3 +1,10 @@
+---
+layout: default
+title: Salesforce RAG Knowledge Repository
+description: Comprehensive Salesforce knowledge, patterns, and best practices organized for use in Retrieval-Augmented Generation (RAG) systems
+permalink: /rag/README.html
+---
+
 # Salesforce RAG Knowledge Repository
 
 This repository contains comprehensive Salesforce knowledge, patterns, and best practices organized for use in Retrieval-Augmented Generation (RAG) systems and as a reference for Salesforce architects, developers, and administrators.

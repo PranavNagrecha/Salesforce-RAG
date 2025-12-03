@@ -2,7 +2,8 @@
 layout: default
 title: Data Migration Patterns
 description: This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce
-permalink: /rag/development/large-data-loads.md` - Large data volume handling
+permalink: /rag/data-modeling/data-migration-patterns.html
+---
 - `rag/integrations/callout-best-practices.md` - API call patterns
 
 ## Consensus Best Practices

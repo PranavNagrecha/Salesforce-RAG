@@ -1,3 +1,10 @@
+---
+layout: default
+title: Maintenance Procedures
+description: Maintenance procedures for the Salesforce RAG repository to ensure content quality, consistency, and currency
+permalink: /rag/MAINTENANCE.html
+---
+
 # Maintenance Procedures
 
 This document outlines maintenance procedures for the Salesforce RAG repository to ensure content quality, consistency, and currency.

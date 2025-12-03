@@ -3,6 +3,7 @@ layout: default
 title: Integration User License Guide
 description: The Salesforce Integration User License is a free API-only license designed for system-to-system integrations
 permalink: /rag/integrations/integration-user-license-guide.html
+---
 
 ## License Details
 

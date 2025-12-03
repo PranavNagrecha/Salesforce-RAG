@@ -2,7 +2,8 @@
 layout: default
 title: Cross-Cutting Design Patterns
 description: This document summarizes reusable patterns that appear across multiple domains in the architecture
-permalink: /rag/development/apex-patterns.md` for Apex testing patterns, detailed pattern implementations, and tradeoffs
+permalink: /rag/patterns/cross-cutting-patterns.html
+---
 - **Troubleshooting**: See `rag/troubleshooting/integration-debugging.md` for testing-related debugging
 
 ### Key Principles

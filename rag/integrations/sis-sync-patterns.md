@@ -2,7 +2,8 @@
 layout: default
 title: SIS Synchronization Patterns
 description: High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS)
-permalink: /rag/development/asynchronous-apex-patterns.md` - Asynchronous processing patterns
+permalink: /rag/integrations/sis-sync-patterns.html
+---
 
 ## Integration Architecture
 

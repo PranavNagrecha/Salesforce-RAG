@@ -3,6 +3,7 @@ layout: default
 title: Integration Platform Patterns
 description: Integration platforms serve as middleware between Salesforce and external systems, handling security, transformation, and orchestration
 permalink: /rag/integrations/integration-platform-patterns.html
+---
 - Environment-specific settings (endpoints, timeouts, headers)
 - Reusable across multiple integrations
 - Version-controlled configuration

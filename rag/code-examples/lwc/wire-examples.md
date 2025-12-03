@@ -3,6 +3,7 @@ layout: default
 title: LWC Wire Service Code Examples
 description: Wire services provide reactive data access in Lightning Web Components
 permalink: /rag/code-examples/lwc/wire-examples.html
+---
 
 **Problem**:
 You need to access object metadata like field labels or picklist values.

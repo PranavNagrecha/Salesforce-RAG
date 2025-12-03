@@ -2,7 +2,8 @@
 layout: default
 title: Object Setup and Configuration
 description: Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
-permalink: /rag/development/lightning-app-builder.md` - Lightning page configuration
+permalink: /rag/data-modeling/object-setup-and-configuration.html
+---
 
 ## Object Setup Checklist
 

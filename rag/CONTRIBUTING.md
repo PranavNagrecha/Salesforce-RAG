@@ -1,3 +1,10 @@
+---
+layout: default
+title: Contributing to Salesforce RAG Repository
+description: Guidelines for contributing content to the Salesforce RAG knowledge repository
+permalink: /rag/CONTRIBUTING.html
+---
+
 # Contributing to Salesforce RAG Repository
 
 Thank you for your interest in contributing to the Salesforce RAG knowledge repository. This document provides guidelines for contributing content, ensuring consistency and quality.
