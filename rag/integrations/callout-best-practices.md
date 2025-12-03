@@ -4,7 +4,7 @@ title: Callout Best Practices
 description: This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring
 permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
+- <a href="{{ '/rag/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
 
 ## Callout Limitations
 
@@ -208,7 +208,7 @@ public static void makeAsyncCallout(String endpoint, String payloadJson) {
 
 **Note**: Prefer Queueable over @future for new development due to better error handling and chaining capabilities.
 
-**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>, <a href="{{ '/rag/integrations/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>, <a href="{{ '/rag/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>
 
 ## Implement Circuit Breaker Pattern
 

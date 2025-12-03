@@ -366,6 +366,6 @@ permalink: /rag/development/large-data-loads.md` - Large data volume handling
 ## Related Patterns
 
 - <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
-- <a href="{{ '/rag/data-modeling/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration patterns
+- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration patterns
 - <a href="{{ '/rag/data-modeling/code-examples/utilities/data-migration-examples.html' | relative_url }}">Data Migration Examples</a> - Complete code examples
 

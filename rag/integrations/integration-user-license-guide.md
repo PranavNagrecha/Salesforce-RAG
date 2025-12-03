@@ -783,7 +783,7 @@ The Salesforce Integration User License provides a cost-effective and secure way
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
+- <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
 - <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns for integration users
 
 **Related Domains**:
@@ -793,7 +793,7 @@ The Salesforce Integration User License provides a cost-effective and secure way
 
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi integration patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection framework
-- <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
+- <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
 - <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns for integration users
 - <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
 

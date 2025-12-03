@@ -147,7 +147,7 @@ Consider dead-letter queues for events that cannot be processed after retries. E
 
 **See Also**:
 - <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC event processing patterns
-- <a href="{{ '/rag/architecture/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Platform Events code examples
+- <a href="{{ '/rag/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Platform Events code examples
 
 **Related Domains**:
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
@@ -157,7 +157,7 @@ Consider dead-letter queues for events that cannot be processed after retries. E
 
 Consider using Change Data Capture (CDC) alongside Platform Events:
 
-**Related**: <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Complete CDC patterns guide, <a href="{{ '/rag/architecture/code-examples/integrations/cdc-examples.html' | relative_url }}">CDC Examples</a>
+**Related**: <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Complete CDC patterns guide, <a href="{{ '/rag/code-examples/integrations/cdc-examples.html' | relative_url }}">CDC Examples</a>
 
 - CDC for high-volume, field-level change tracking
 - Platform Events for business-level events requiring orchestration

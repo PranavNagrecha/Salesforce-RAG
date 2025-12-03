@@ -435,5 +435,5 @@ private class ContactServiceTest {
 ## Related Patterns
 
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
-- <a href="{{ '/rag/testing/code-examples/templates/test-class-template.html' | relative_url }}">Test Class Template</a> - Test class template
+- <a href="{{ '/rag/code-examples/templates/test-class-template.html' | relative_url }}">Test Class Template</a> - Test class template
 

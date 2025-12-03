@@ -12,9 +12,9 @@ permalink: /rag/data-governance/data-residency-compliance.html
 This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices. These patterns are essential for ensuring data protection, regulatory compliance, and maintaining customer trust.
 
 **Related Patterns**:
-- <a href="{{ '/rag/data-governance/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
-- <a href="{{ '/rag/data-governance/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
-- <a href="{{ '/rag/data-governance/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
+- <a href="{{ '/rag/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
+- <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
+- <a href="{{ '/rag/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
 
 ## Consensus Best Practices
 
@@ -362,8 +362,8 @@ This guide covers data residency and compliance patterns for Salesforce, includi
 
 ## Related Patterns
 
-- <a href="{{ '/rag/data-governance/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
-- <a href="{{ '/rag/data-governance/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
-- <a href="{{ '/rag/data-governance/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
+- <a href="{{ '/rag/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
+- <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
+- <a href="{{ '/rag/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
 - <a href="{{ '/rag/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality & Stewardship</a> - Data quality patterns
 

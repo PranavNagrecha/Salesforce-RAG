@@ -456,6 +456,6 @@ Avoid this pattern when:
 
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - MuleSoft and Dell Boomi patterns
-- <a href="{{ '/rag/integrations/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration strategies
-- <a href="{{ '/rag/integrations/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration strategies
+- <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
 

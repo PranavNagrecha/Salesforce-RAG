@@ -15,7 +15,7 @@ This guide provides testing patterns, best practices, and examples for ensuring 
 
 **Related Patterns**:
 - <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
-- <a href="{{ '/rag/testing/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
+- <a href="{{ '/rag/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Overall testing strategy
 
 ## Core Principles
@@ -538,7 +538,7 @@ it('should pass accessibility scan', async () => {
 ## Related Patterns
 
 - <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
-- <a href="{{ '/rag/testing/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
-- <a href="{{ '/rag/testing/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
+- <a href="{{ '/rag/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
+- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Troubleshooting</a> - Common errors and fixes
 - <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Overall testing strategy
 

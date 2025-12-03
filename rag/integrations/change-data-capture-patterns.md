@@ -178,7 +178,7 @@ permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">
 
 ## Related Patterns
 
-- <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events and event-driven patterns
+- <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events and event-driven patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Integration pattern selection
 - <a href="{{ '/rag/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - CDC monitoring and event processing metrics
 
@@ -303,7 +303,7 @@ permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">
 
 ## Related Patterns
 
-- <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
+- <a href="{{ '/rag/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Integration pattern selection
-- <a href="{{ '/rag/integrations/code-examples/integrations/cdc-examples.html' | relative_url }}">CDC Examples</a> - Complete CDC code examples
+- <a href="{{ '/rag/code-examples/integrations/cdc-examples.html' | relative_url }}">CDC Examples</a> - Complete CDC code examples
 

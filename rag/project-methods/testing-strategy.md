@@ -403,8 +403,8 @@ Avoid this strategy when:
 
 ## Related Patterns
 
-- <a href="{{ '/rag/project-methods/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
-- <a href="{{ '/rag/project-methods/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
-- <a href="{{ '/rag/project-methods/testing/automated-testing-patterns.html' | relative_url }}">Automated Testing Patterns</a> - Automated testing approaches
+- <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
+- <a href="{{ '/rag/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
+- <a href="{{ '/rag/testing/automated-testing-patterns.html' | relative_url }}">Automated Testing Patterns</a> - Automated testing approaches
 - <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 

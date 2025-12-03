@@ -12,9 +12,9 @@ permalink: /rag/data-governance/data-quality-stewardship.html
 This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance. These patterns are essential for maintaining data integrity, preventing duplicates, and ensuring consistent data across the organization.
 
 **Related Patterns**:
-- <a href="{{ '/rag/data-governance/data-modeling/lead-management-patterns.html' | relative_url }}">Lead Management Patterns</a> - Lead duplicate prevention
-- <a href="{{ '/rag/data-governance/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data reconciliation patterns
-- <a href="{{ '/rag/data-governance/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-modeling/lead-management-patterns.html' | relative_url }}">Lead Management Patterns</a> - Lead duplicate prevention
+- <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data reconciliation patterns
+- <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
 
 ## Consensus Best Practices
 
@@ -343,8 +343,8 @@ This guide covers data quality and stewardship patterns for Salesforce, includin
 
 ## Related Patterns
 
-- <a href="{{ '/rag/data-governance/data-modeling/lead-management-patterns.html' | relative_url }}">Lead Management Patterns</a> - Lead duplicate prevention
-- <a href="{{ '/rag/data-governance/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data reconciliation patterns
-- <a href="{{ '/rag/data-governance/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
-- <a href="{{ '/rag/data-governance/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration quality patterns
+- <a href="{{ '/rag/data-modeling/lead-management-patterns.html' | relative_url }}">Lead Management Patterns</a> - Lead duplicate prevention
+- <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data reconciliation patterns
+- <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration quality patterns
 

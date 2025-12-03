@@ -333,5 +333,5 @@ Think of yourself as a translator between business language and technical langua
 - <a href="{{ '/rag/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Managing stakeholder expectations
 
 **Related Domains**:
-- <a href="{{ '/rag/architecture/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Stakeholder coordination in sprints
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Stakeholder coordination in sprints
 

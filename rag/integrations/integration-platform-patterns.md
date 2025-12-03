@@ -159,8 +159,8 @@ permalink: /rag/development/custom-settings-metadata-patterns.html' | relative_u
 - <a href="{{ '/rag/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Real-time change notification patterns
 
 **Related Domains**:
-- <a href="{{ '/rag/integrations/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - Data mapping and stable record identification
+- <a href="{{ '/rag/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - Data mapping and stable record identification
 - <a href="{{ '/rag/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
-- <a href="{{ '/rag/integrations/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Troubleshooting integration failures
-- <a href="{{ '/rag/integrations/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Reconciling data between systems
+- <a href="{{ '/rag/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Troubleshooting integration failures
+- <a href="{{ '/rag/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Reconciling data between systems
 

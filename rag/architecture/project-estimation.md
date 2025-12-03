@@ -411,6 +411,6 @@ Think of estimation as a communication tool, not just a prediction. Good estimat
 - <a href="{{ '/rag/architecture/team-leadership.html' | relative_url }}">Team Leadership</a> - Leading development teams
 
 **Related Domains**:
-- <a href="{{ '/rag/architecture/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Sprint-based delivery approach
-- <a href="{{ '/rag/architecture/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing time estimation
+- <a href="{{ '/rag/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Sprint-based delivery approach
+- <a href="{{ '/rag/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing time estimation
 
