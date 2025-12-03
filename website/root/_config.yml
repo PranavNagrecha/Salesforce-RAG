@@ -8,6 +8,10 @@ repository: pranavnagrecha/Salesforce-RAG
 # Build settings
 markdown: kramdown
 highlighter: rouge
+# Kramdown settings for proper link handling with baseurl
+kramdown:
+  auto_ids: true
+  header_offset: 0
 # Using custom layout instead of theme to avoid theme navigation clutter
 plugins:
   - jekyll-feed
