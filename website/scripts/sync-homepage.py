@@ -382,7 +382,7 @@ def build_homepage(files_by_folder):
     lines.append("## Quick Links\n\n")
     lines.append("- 📖 **[Complete Index]({{ '/rag/rag-index.html' | relative_url }})** - Browse all knowledge files by domain\n")
     lines.append("- 📋 **[JSON Metadata]({{ '/rag/rag-library.json' | relative_url }})** - Machine-readable metadata for RAG systems\n")
-    lines.append("- 💡 **[Usage Examples]({{ '/examples/' | relative_url }})** - Integration guides for Cursor, LangChain, and more\n")
+    lines.append("- 💡 **[Code Examples]({{ '/rag/code-examples/code-examples-index.html' | relative_url }})** - Complete, working code examples ready to copy and use\n")
     lines.append("- 🔍 **[Search the Knowledge Base]({{ '/rag/rag-index.html' | relative_url }})** - Find specific patterns and best practices\n\n")
     
     # About section
