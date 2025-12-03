@@ -87,10 +87,14 @@ git push
 
 ### Link Rules
 
-1. **Use Jekyll Filters**: Always use `{{ '/path' | relative_url }}` for internal links
-2. **Baseurl Handling**: All internal links must work with `baseurl: /Salesforce-RAG`
-3. **File Extensions**: Convert `.md` to `.html` in all links
-4. **Anchor Format**: Section anchors use lowercase with hyphens (e.g., `#architecture-patterns`)
+1. **Use Jekyll Filters**: Always use `{{ '/path' | relative_url }}` for internal links in HTML/templates
+2. **Absolute Paths in Markdown**: In markdown files (like rag-index.md), use absolute paths starting with `/` (e.g., `/rag/adoption/org-health-checks.html`)
+3. **Baseurl Handling**: All internal links must work with `baseurl: /Salesforce-RAG`
+4. **File Extensions**: Convert `.md` to `.html` in all links
+5. **Anchor Format**: Section anchors use lowercase with hyphens (e.g., `#architecture-patterns`, `#adoption`, `#api-reference`)
+   - Anchors are generated from section names: "Architecture Patterns" → `#architecture-patterns`
+   - All section headings in rag-index.md automatically get anchor IDs
+   - Homepage category cards link to these anchors (e.g., `{{ '/rag/rag-index.html' | relative_url }}#adoption`)
 
 ## Content Rules
 
@@ -133,9 +137,40 @@ git push
 
 ### Internal Links
 
-1. **Relative Paths**: Use relative paths within `rag/` directory
+1. **Absolute Paths**: Use absolute paths starting with `/rag/` in markdown files (e.g., `/rag/adoption/org-health-checks.html`)
 2. **HTML Extension**: Always use `.html` extension (not `.md`)
-3. **Baseurl Prefix**: Absolute paths starting with `/rag/` need baseurl prefix
+3. **Baseurl Handling**: Jekyll automatically handles baseurl for absolute paths starting with `/`
+4. **Anchor Links**: Use lowercase with hyphens for section anchors (e.g., `#adoption`, `#architecture-patterns`)
+   - Section "Architecture Patterns" → anchor `#architecture-patterns`
+   - Section "API Reference" → anchor `#api-reference`
+   - Section "Code Examples" → anchor `#code-examples`
+
+## Link Formatting Rules
+
+### In rag-index.md
+
+1. **Absolute Paths Required**: All links must use absolute paths starting with `/rag/`
+   - ✅ Correct: `/rag/adoption/org-health-checks.html`
+   - ❌ Wrong: `rag/adoption/org-health-checks.html` (relative path)
+   - ❌ Wrong: `adoption/org-health-checks.html` (relative path)
+2. **HTML Extension**: Always use `.html` extension (Jekyll converts `.md` to `.html`)
+3. **Anchor Links**: Section headings automatically get anchor IDs
+   - Format: Section name → lowercase with hyphens
+   - Example: "Architecture Patterns" → `#architecture-patterns`
+   - Example: "API Reference" → `#api-reference`
+   - Example: "Code Examples" → `#code-examples`
+
+### In Homepage (index.md)
+
+1. **Jekyll Filters**: Use `{{ '/path' | relative_url }}` for all links
+2. **Anchor Links**: Link to sections using format: `{{ '/rag/rag-index.html' | relative_url }}#section-name`
+   - Example: `{{ '/rag/rag-index.html' | relative_url }}#adoption`
+   - Example: `{{ '/rag/rag-index.html' | relative_url }}#architecture-patterns`
+
+### In Navigation (default.html layout)
+
+1. **Jekyll Filters**: Use `{{ '/path' | relative_url }}` for all links
+2. **Consistent Navigation**: All pages use the same navigation from the default layout
 
 ## Deployment Rules
 
@@ -147,6 +182,9 @@ git push
    - Copy `website/_layouts/` and `website/assets/` to root
    - Run Jekyll build
    - Deploy to GitHub Pages
+3. **Link Resolution**: 
+   - Absolute paths starting with `/` are automatically resolved with baseurl
+   - Example: `/rag/adoption/org-health-checks.html` → `/Salesforce-RAG/rag/adoption/org-health-checks.html`
 
 ### Testing Before Deploy
 
