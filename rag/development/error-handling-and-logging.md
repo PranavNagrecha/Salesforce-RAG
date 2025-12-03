@@ -2,27 +2,7 @@
 layout: default
 title: Error Handling and Logging Framework
 description: Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance
-permalink: /rag/development/error-handling-and-logging.html
----
-
-# Error Handling and Logging Framework
-
-## Overview
-
-Comprehensive error handling and logging framework ensures all errors are captured, logged, and traceable for troubleshooting and compliance. The framework uses a custom logging object (`LOG_LogMessage__c`) with utility classes and platform event fallbacks to ensure no errors are lost.
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Apex exception handling (try-catch blocks)
-- Knowledge of DML operations and exception types
-- Understanding of Platform Events (for fallback logging)
-- Familiarity with custom objects and field types
-
-**Recommended Reading**:
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and patterns
-- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable patterns for error handling
-- <a href="{{ '/rag/development/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
+permalink: /rag/development/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 
 ## Logging Architecture
 
@@ -328,11 +308,5 @@ Avoid comprehensive logging when:
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex error handling patterns
-- <a href="{{ '/rag/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow error handling patterns
-
-**Related Domains**:
-- <a href="{{ '/rag/development/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns, log aggregation, and alerting strategies
-- <a href="{{ '/rag/development/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
 - <a href="{{ '/rag/development/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging code examples
 

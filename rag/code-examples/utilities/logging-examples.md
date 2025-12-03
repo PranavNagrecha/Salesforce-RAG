@@ -2,31 +2,7 @@
 layout: default
 title: Logging Code Examples
 description: Structured logging enables consistent, searchable logging across Salesforce applications
-permalink: /rag/code-examples/utilities/logging-examples.html
----
-
-# Logging Code Examples
-
-> This file contains complete, working code examples for structured logging patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Structured logging enables consistent, searchable logging across Salesforce applications. These examples demonstrate custom logging objects, platform event fallbacks, external logging integration, and compliance/audit trail requirements.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
-- <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
-
-## Examples
-
-### Example 1: Basic Logging Utility
-
-**Pattern**: Custom logging object with utility class
-**Use Case**: Structured logging for all operations
-**Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need a consistent logging mechanism across your application.
@@ -381,11 +357,6 @@ ExternalLoggingService.enqueueLogs(logs);
 - Don't block business logic for logging
 
 ## Related Examples
-
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/validation-examples.html' | relative_url }}">Validation Examples</a> - Validation patterns
-
-## See Also
 
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
 - <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns

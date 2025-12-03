@@ -2,29 +2,7 @@
 layout: default
 title: Lead Management and Conversion Data Model
 description: A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management
-permalink: /rag/data-modeling/lead-management-patterns.html
----
-
-# Lead Management and Conversion Data Model
-
-## Overview
-
-A comprehensive data model and process guide for Salesforce lead management, supporting lead capture, qualification, routing, conversion, and duplicate management. The model handles leads from multiple sources, automated assignment, scoring, conversion to Contacts/Accounts/Opportunities, and data quality management within a single Salesforce org.
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Salesforce Lead object and lead conversion process
-- Knowledge of duplicate management and matching rules
-- Familiarity with assignment rules and lead routing
-- Understanding of Campaigns and marketing attribution
-- Knowledge of Record Types and their use in lead management
-
-**Recommended Reading**:
-- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID patterns
-- `rag/data-governance/data-quality-stewardship.md` - Duplicate prevention
-- `rag/data-modeling/object-setup-and-configuration.md` - Object configuration
-- `rag/development/flow-patterns.md` - Automation patterns
+permalink: /rag/development/flow-patterns.md` - Automation patterns
 
 ## Core Entity Model
 

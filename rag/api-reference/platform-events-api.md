@@ -203,7 +203,7 @@ CustomEvent__e event = new CustomEvent__e(
 );
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/architecture/event-driven-architecture.html#event-payload-design.html' | relative_url }}">Event-Driven Architecture</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/architecture/event-driven-architecture.html#event-payload-design' | relative_url }}">Event-Driven Architecture</a>
 
 ---
 
@@ -250,13 +250,5 @@ public static void handleEvents(List<CustomEvent__e> events) {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
-
----
-
-## Related Patterns
-
-- <a href="{{ '/rag/api-reference/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Complete event-driven patterns
-- <a href="{{ '/rag/integrations.html' | relative_url }}">Integration Patterns</a> - Integration with external systems
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 

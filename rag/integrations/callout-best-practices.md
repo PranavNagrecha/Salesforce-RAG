@@ -2,27 +2,7 @@
 layout: default
 title: Callout Best Practices
 description: This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring
-permalink: /rag/integrations/callout-best-practices.html
----
-
-# Callout Best Practices
-
-## Overview
-
-This guide provides comprehensive best practices for implementing HTTP callouts in Salesforce, covering limitations, authentication, error handling, asynchronous patterns, circuit breakers, response optimization, testing, and monitoring. Following these patterns ensures robust, maintainable, and efficient callout implementations.
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of HTTP callouts and REST APIs
-- Basic understanding of Apex programming
-- Familiarity with Salesforce governor limits
-- Knowledge of error handling patterns
-
-**Recommended Reading**:
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
-- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 - <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 - <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
 
@@ -82,7 +62,7 @@ req.setEndpoint('https://api.example.com/endpoint');
 - **Authentication Protocol**: OAuth 2.0, Basic Auth, Certificate
 - **Per-User Callout**: Enable if user-specific authentication required
 
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials.html' | relative_url }}">Integration Examples</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/integration-examples.html#example-1-rest-api-callout-with-named-credentials' | relative_url }}">Integration Examples</a>
 
 ## Implement Proper Error Handling
 
@@ -384,7 +364,7 @@ public class CalloutWithProcessingQueueable implements Queueable, Database.Allow
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/integrations/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a>, <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 ## Optimize Response Processing
 
@@ -739,146 +719,6 @@ private class ComprehensiveCalloutTest {
 - **Test async patterns**: Test Queueable and @future callouts
 - **Achieve 100% coverage**: Cover all code paths
 
-**Related Patterns**: <a href="{{ '/rag/integrations/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a>
-
-## Key Takeaways
-
-Following these best practices will help you build robust, maintainable, and efficient callout solutions:
-
-1. **Always use Named Credentials** for authentication and endpoint management
-2. **Understand callout limitations** (10s sync timeout, 100 callouts, 6MB heap, 120s async timeout)
-3. **Implement comprehensive error handling** with proper status code checking
-4. **Use asynchronous patterns** for non-critical operations and callouts after DML
-5. **Consider circuit breaker patterns** for high-volume integrations
-6. **Optimize response processing** to avoid heap size limits
-7. **Monitor and log** callout performance for troubleshooting
-8. **Avoid DML before callout** - use Queueable or @future
-9. **Write comprehensive tests** with proper mocking
-
-Remember that callouts are often the most fragile part of your Salesforce integrations. Investing time in proper error handling, monitoring, and testing will save you significant troubleshooting time in production.
-
-## Q&A
-
-### Q: What are the callout timeout limits in Salesforce?
-
-**A**: **Synchronous callouts** have a 10-second timeout and must complete within this window. **Asynchronous callouts** (Queueable, @future, Batch) have a 120-second timeout. Use async patterns for long-running callouts or when you need more time.
-
-### Q: Why should I use Named Credentials for callouts?
-
-**A**: Named Credentials provide **centralized endpoint and authentication management**, support OAuth 2.0 and certificate-based authentication, simplify callout code (no hardcoded URLs), enable credential rotation without code changes, and improve security by avoiding hardcoded credentials.
-
-### Q: Can I perform DML operations before a callout?
-
-**A**: **No, Salesforce does not allow DML operations before callouts** in the same transaction. You'll get an error: "You have uncommitted work pending." Use Queueable or @future to separate DML and callouts into different transactions, or make the callout first, then perform DML.
-
-### Q: How do I handle callout failures and retries?
-
-**A**: Implement retry logic with exponential backoff for transient failures (5xx errors, timeouts), use circuit breaker patterns for high-volume integrations, log all failures for troubleshooting, implement idempotent operations to allow safe retries, and monitor failure rates to detect issues early.
-
-### Q: What is a circuit breaker pattern and when should I use it?
-
-**A**: A **circuit breaker** prevents cascading failures by "opening" the circuit after a threshold of failures, failing fast without attempting callouts. Use for high-volume integrations to protect external systems from overload and prevent retry storms. Implement separate circuits for different external systems.
-
-### Q: How do I test callouts in Apex?
-
-**A**: Use `Test.setMock(HttpCalloutMock.class, mockInstance)` to mock HTTP callouts, create mock classes implementing `HttpCalloutMock`, test success and error scenarios, test retry logic and circuit breakers, and never make real callouts in tests. Achieve 100% code coverage.
-
-### Q: What are the governor limits for callouts?
-
-**A**: **Synchronous**: 100 callouts per transaction, 10-second timeout, 6MB heap size. **Asynchronous**: 120-second timeout, higher limits, separate transaction context. Monitor callout counts using `Limits.getCallouts()` to avoid hitting limits.
-
-### Q: How do I optimize callout response processing?
-
-**A**: Process responses incrementally (don't load entire response into memory), use streaming parsers for large JSON responses, extract only needed fields to reduce memory footprint, clear processed data to free memory, and monitor heap size with `Limits.getHeapSize()`. Batch process large responses.
-
-## Edge Cases and Limitations
-
-### Edge Case 1: Callout Timeout with Critical Operations
-
-**Scenario**: Critical operation requiring callout that may timeout, causing business impact.
-
-**Consideration**:
-- Use async patterns for non-critical operations
-- Implement timeout handling with fallback logic
-- Consider circuit breaker pattern for unreliable systems
-- Monitor callout success rates
-- Plan for timeout scenarios
-- Document timeout handling procedures
-
-### Edge Case 2: Large Response Processing
-
-**Scenario**: External system returning very large responses causing heap size exceptions.
-
-**Consideration**:
-- Process responses incrementally
-- Use streaming parsers for large JSON
-- Extract only needed fields
-- Clear processed data to free memory
-- Consider pagination if external system supports it
-- Monitor heap size usage
-
-### Edge Case 3: Callout Retry with Idempotency
-
-**Scenario**: Retrying failed callouts causing duplicate operations in external system.
-
-**Consideration**:
-- Design external APIs to be idempotent
-- Use idempotency keys in callout requests
-- Implement idempotent retry logic
-- Track callout attempts to prevent duplicates
-- Test retry scenarios thoroughly
-- Document idempotency requirements
-
-### Edge Case 4: Callout Authentication Failures
-
-**Scenario**: OAuth token expiration or authentication failures during long-running operations.
-
-**Consideration**:
-- Implement token refresh logic
-- Handle authentication errors gracefully
-- Monitor token expiration times
-- Use Named Credentials for automatic token management
-- Implement fallback authentication mechanisms
-- Test authentication failure scenarios
-
-### Edge Case 5: Callout Rate Limiting
-
-**Scenario**: External system rate-limiting callouts causing integration failures.
-
-**Consideration**:
-- Implement rate limiting and throttling
-- Use exponential backoff for retries
-- Monitor callout rate limit usage
-- Coordinate callouts across integrations
-- Consider async processing to spread load
-- Document rate limit handling
-
-### Limitations
-
-- **Timeout Limits**: Synchronous callouts have 10-second timeout (120s async)
-- **Callout Count Limits**: 100 callouts per synchronous transaction
-- **Heap Size Limits**: Response processing limited by 6MB heap size (sync)
-- **Authentication Complexity**: OAuth token management adds complexity
-- **Error Handling**: External system errors may not be easily handled
-- **Rate Limiting**: External systems may rate-limit callouts
-- **Network Reliability**: Network issues may cause callout failures
-
-## Related Patterns
-
-**See Also**:
-- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
-
-**Related Domains**:
-- <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
-- <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
-
-- <a href="{{ '/rag/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Complete callout code examples
-- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and @future patterns
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
-- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
+**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Performance optimization
 - <a href="{{ '/rag/integrations/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns
 

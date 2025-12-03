@@ -2,31 +2,7 @@
 layout: default
 title: Error Handling Code Examples
 description: Robust error handling ensures applications gracefully handle failures and provide meaningful feedback
-permalink: /rag/code-examples/utilities/error-handling-examples.html
----
-
-# Error Handling Code Examples
-
-> This file contains complete, working code examples for error handling and retry patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Robust error handling ensures applications gracefully handle failures and provide meaningful feedback. These examples demonstrate try-catch patterns, custom exceptions, retry logic, error logging, and user-friendly error messages.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging patterns
-- <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Retry patterns
-
-## Examples
-
-### Example 1: Basic Error Handling with Try-Catch
-
-**Pattern**: Try-catch error handling
-**Use Case**: Handling exceptions in Apex code
-**Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
+permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need to handle exceptions gracefully in your Apex code.
@@ -429,12 +405,5 @@ System.enqueueJob(new QueueableRetryService('updateContacts', params));
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging patterns
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/validation-examples.html' | relative_url }}">Validation Examples</a> - Validation patterns
-
-## See Also
-
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive error handling framework
-- <a href="{{ '/rag/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Retry patterns
 - <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 

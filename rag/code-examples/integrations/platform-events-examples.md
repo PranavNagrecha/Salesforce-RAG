@@ -468,13 +468,5 @@ public with sharing class EventErrorHandler {
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/cdc-examples.html' | relative_url }}">Change Data Capture Examples</a> - CDC event patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/rest-api-examples.html' | relative_url }}">REST API Examples</a> - REST API patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Integration patterns
-
-## See Also
-
-- <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Event-driven architecture patterns
-- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration patterns
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 

@@ -2,29 +2,7 @@
 layout: default
 title: Integration Layer Code Examples
 description: The Integration Layer handles external API callouts, data transformation, authentication, and error handling
-permalink: /rag/code-examples/apex/integration-examples.html
----
-
-# Integration Layer Code Examples
-
-> This file contains complete, working code examples for Apex Integration Layer patterns.  
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-The Integration Layer handles external API callouts, data transformation, authentication, and error handling. It should NOT contain business logic or SOQL queries.
-
-**Related Patterns**:
-- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
-- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer.html' | relative_url }}">Integration Layer Pattern</a>
-
-## Examples
-
-### Example 1: REST API Callout with Named Credentials
-**Pattern**: Integration Layer with Named Credentials  
-**Use Case**: Outbound REST API callout  
-**Complexity**: Basic  
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer.html' | relative_url }}">Integration Layer</a>
+permalink: /rag/development/apex-patterns.html#integration-layer' | relative_url }}">Integration Layer</a>
 
 **Problem**: 
 You need to make HTTP callouts to external systems using Named Credentials for authentication.
@@ -376,7 +354,5 @@ Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
-- <a href="{{ '/rag/integrations.html' | relative_url }}">Integration Patterns</a> - Integration architecture patterns
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 

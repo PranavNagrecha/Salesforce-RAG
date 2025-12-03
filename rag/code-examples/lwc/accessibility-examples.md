@@ -2,21 +2,7 @@
 layout: default
 title: LWC Accessibility Code Examples
 description: Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components
-permalink: /rag/code-examples/lwc/accessibility-examples.html
----
-
-# LWC Accessibility Code Examples
-
-> This file contains complete, working code examples for Lightning Web Component accessibility patterns.
-> All examples are copy-paste ready and follow WCAG 2.2 standards and Salesforce best practices.
-
-## Overview
-
-Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components. These examples demonstrate practical implementation of accessibility patterns.
-
-**Related Patterns**:
-- <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - General LWC patterns
+permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - General LWC patterns
 - <a href="{{ '/rag/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS accessibility
 
 ## Form Accessibility Examples
@@ -1145,7 +1131,7 @@ export default class StatusIndicator extends LightningElement {
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/lwc/code-examples/templates/lwc-accessible-component-template.html' | relative_url }}">Accessible Component Template</a> - Template for accessible components
-- <a href="{{ '/rag/code-examples/lwc/testing/lwc-accessibility-testing.html' | relative_url }}">Accessibility Testing</a> - Testing patterns
-- <a href="{{ '/rag/code-examples/lwc/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">Accessibility Troubleshooting</a> - Common errors and fixes
+- <a href="{{ '/rag/code-examples/lwc/templates/lwc-accessible-component-template.html' | relative_url }}">Accessible Component Template</a> - Template for accessible components
+- <a href="{{ '/rag/testing/lwc-accessibility-testing.html' | relative_url }}">Accessibility Testing</a> - Testing patterns
+- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">Accessibility Troubleshooting</a> - Common errors and fixes
 

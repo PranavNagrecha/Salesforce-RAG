@@ -273,22 +273,6 @@ export default class ContactViewer extends LightningElement {
 
 1. **Learn More Patterns**:
    - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
-   - <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Best practices
-   - <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Data service patterns
-
-2. **Explore Examples**:
-   - <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - API reference
-   - <a href="{{ '/rag/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - LDS reference
-
-3. **Understand Best Practices**:
-   - <a href="{{ '/rag/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility</a> - Accessibility
-   - <a href="{{ '/rag/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns
-
----
-
-## Related Resources
-
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
 - <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Best practices
 - <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - API reference
 

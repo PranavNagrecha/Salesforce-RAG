@@ -2,30 +2,7 @@
 layout: default
 title: LWC Service Layer Code Examples
 description: LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic
-permalink: /rag/code-examples/lwc/service-examples.html
----
-
-# LWC Service Layer Code Examples
-
-> This file contains complete, working code examples for LWC service layer patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic. Service classes help keep component JavaScript clean and maintainable.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
-- <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC API method signatures
-
-## Examples
-
-### Example 1: Data Formatting Service
-
-**Pattern**: Utility service for data formatting
-**Use Case**: Formatting dates, currency, and other data types consistently
-**Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html#data-access-patterns.html' | relative_url }}">LWC Data Access Patterns</a>
+permalink: /rag/development/lwc-patterns.html#data-access-patterns' | relative_url }}">LWC Data Access Patterns</a>
 
 **Problem**:
 You need to format dates, currency, and other data types consistently across multiple components.
@@ -503,12 +480,6 @@ export default class ContactList extends LightningElement {
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/component-examples.html' | relative_url }}">Component Examples</a> - LWC component implementations
-- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/wire-examples.html' | relative_url }}">Wire Examples</a> - Wire service patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/apex/service-layer-examples.html' | relative_url }}">Apex Service Layer Examples</a> - Apex service methods
-
-## See Also
-
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
+- <a href="{{ '/rag/code-examples/lwc/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
 - <a href="{{ '/rag/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference

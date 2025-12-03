@@ -2,31 +2,7 @@
 layout: default
 title: Change Data Capture (CDC) Patterns
 description: Change Data Capture (CDC) provides real-time change notifications for Salesforce records
-permalink: /rag/integrations/change-data-capture-patterns.html
----
-
-# Change Data Capture (CDC) Patterns
-
-## Overview
-
-Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted. This guide covers CDC event processing patterns, error handling, and integration strategies.
-
-**Related Patterns**:
-- <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events and event-driven patterns
-- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Integration pattern selection
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Salesforce event-driven architecture
-- Knowledge of Platform Events and event processing
-- Understanding of integration patterns (ETL, API, Events)
-- Familiarity with error handling and retry patterns
-
-**Recommended Reading**:
-- <a href="{{ '/rag/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
-- <a href="{{ '/rag/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Consensus Best Practices
 

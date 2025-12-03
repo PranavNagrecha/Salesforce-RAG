@@ -2,190 +2,7 @@
 layout: default
 title: LWC API Reference
 description: This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns
-permalink: /rag/api-reference/lwc-api-reference.html
----
-
-# LWC API Reference
-
-> Quick reference for Lightning Web Component modules, decorators, and wire adapters.
-
-## Overview
-
-This reference provides API signatures, parameters, and usage examples for common LWC modules and patterns.
-
-## Core Modules
-
-### lightning/platformShowToastEvent
-
-**Purpose**: Display toast notifications to users
-
-#### Methods
-
-##### showToastEvent(options)
-**Signature**: `dispatchEvent(new ShowToastEvent(options))`
-
-**Parameters**: 
-- `options` (Object): Configuration object with properties:
-  - `title` (String): Toast title
-  - `message` (String): Toast message
-  - `variant` (String): 'success', 'error', 'warning', 'info'
-  - `mode` (String): 'dismissable', 'pester', 'sticky'
-
-**Returns**: `void` (dispatches event)
-
-**Description**: Displays a toast notification to the user.
-
-**Example**:
-```javascript
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-
-handleSuccess() {
-    const evt = new ShowToastEvent({
-        title: 'Success',
-        message: 'Record updated successfully',
-        variant: 'success',
-        mode: 'dismissable'
-    });
-    this.dispatchEvent(evt);
-}
-```
-
-**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>, <a href="{{ '/rag/api-reference/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a>
-
----
-
-### lightning/navigation
-
-**Purpose**: Navigate to pages, records, and URLs
-
-#### Methods
-
-##### NavigationMixin.Navigate(options)
-**Signature**: `this<a href="{{ '/rag/api-reference/options.html' | relative_url }}">NavigationMixin.Navigate</a>`
-
-**Parameters**: 
-- `options` (Object): Navigation configuration:
-  - `type` (String): 'standard__recordPage', 'standard__webPage', etc.
-  - `attributes` (Object): Page-specific attributes (recordId, objectApiName, etc.)
-
-**Returns**: `Promise<void>`
-
-**Description**: Navigates to a Salesforce page or external URL.
-
-**Example**:
-```javascript
-import { NavigationMixin } from 'lightning/navigation';
-
-export default class MyComponent extends NavigationMixin(LightningElement) {
-    handleNavigate() {
-        this[NavigationMixin.Navigate]({
-            type: 'standard__recordPage',
-            attributes: {
-                recordId: this.recordId,
-                objectApiName: 'Contact',
-                actionName: 'view'
-            }
-        });
-    }
-}
-```
-
-**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
-
----
-
-## Lightning Data Service (LDS)
-
-### lightning/uiRecordApi
-
-**Purpose**: Access Salesforce records via Lightning Data Service
-
-#### Wire Adapters
-
-##### getRecord(recordId, fields)
-**Signature**: `@wire(getRecord, { recordId: '$recordId', fields: fields })`
-
-**Parameters**: 
-- `recordId` (String): Record ID (reactive with `$` prefix)
-- `fields` (Array): Array of field API names or schema imports
-
-**Returns**: `{ data, error }`: Object with record data or error
-
-**Description**: Retrieves a single record with specified fields. Automatically caches and updates.
-
-**Example**:
-```javascript
-import { LightningElement, wire, api } from 'lwc';
-import { getRecord } from 'lightning/uiRecordApi';
-import NAME_FIELD from '@salesforce/schema/Contact.Name';
-import EMAIL_FIELD from '@salesforce/schema/Contact.Email';
-
-export default class ContactViewer extends LightningElement {
-    @api recordId;
-    
-    @wire(getRecord, { 
-        recordId: '$recordId', 
-        fields: [NAME_FIELD, EMAIL_FIELD] 
-    })
-    wiredRecord({ data, error }) {
-        if (data) {
-            this.contact = data;
-        } else if (error) {
-            this.error = this.reduceErrors(error);
-        }
-    }
-}
-```
-
-##### updateRecord(fields)
-**Signature**: `updateRecord({ fields })`
-
-**Parameters**: 
-- `fields` (Object): Object with Id and fields to update
-
-**Returns**: `Promise<void>`
-
-**Description**: Updates a record. Must refresh cache after update.
-
-**Example**:
-```javascript
-import { updateRecord } from 'lightning/uiRecordApi';
-import { refreshApex } from '@salesforce/apex';
-
-async handleUpdate() {
-    const fields = {
-        Id: this.recordId,
-        Name: 'Updated Name'
-    };
-    await updateRecord({ fields });
-    await refreshApex(this.wiredRecord);
-}
-```
-
-##### getObjectInfo(objectApiName)
-**Signature**: `@wire(getObjectInfo, { objectApiName: objectApiName })`
-
-**Parameters**: 
-- `objectApiName` (String): API name of the object
-
-**Returns**: `{ data, error }`: Object with object metadata or error
-
-**Description**: Retrieves object metadata including fields, record types, and layouts.
-
-**Example**:
-```javascript
-import { getObjectInfo } from 'lightning/uiObjectInfoApi';
-import ACCOUNT_OBJECT from '@salesforce/schema/Account';
-
-@wire(getObjectInfo, { objectApiName: ACCOUNT_OBJECT })
-wiredObjectInfo({ data, error }) {
-    if (data) {
-        this.objectInfo = data;
-    }
-}
-```
-
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 ---
 
@@ -338,7 +155,7 @@ export default class AccountViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity.html' | relative_url }}">Referential Integrity</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity' | relative_url }}">Referential Integrity</a>
 
 ---
 
@@ -374,7 +191,7 @@ export default class MyComponent extends LightningElement {
 - For getters/setters: Decorate only the getter
 - Do not mutate @api properties internally
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -412,7 +229,7 @@ export default class MyComponent extends LightningElement {
 - Handle both `data` and `error` in wire functions
 - Use `refreshApex()` after mutations
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 ---
 
@@ -445,13 +262,7 @@ export default class MyComponent extends LightningElement {
 - Not needed for primitives (strings, numbers, booleans)
 - Not needed when entire object/array is reassigned
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#track-decorator.html' | relative_url }}">LWC Best Practices</a>
-
----
-
-## Related Patterns
-
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+**Related Patterns**: <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
 - <a href="{{ '/rag/api-reference/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
 - <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 - <a href="{{ '/rag/api-reference/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns

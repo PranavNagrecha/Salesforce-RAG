@@ -2,35 +2,7 @@
 layout: default
 title: SOQL Query Patterns
 description: This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects
-permalink: /rag/development/soql-query-patterns.html
----
-
-# SOQL Query Patterns
-
-## Overview
-
-This document captures SOQL query patterns and practices derived from actual implementation experience across multiple Salesforce projects. All patterns documented here are based on real work, including dynamic SOQL implementations, relationship queries, debugging patterns, and maintenance queries used in production systems.
-
-**When to use this document**:
-- Building dynamic SOQL queries with user input
-- Implementing relationship queries to combine related data
-- Optimizing queries for performance and governor limits
-- Debugging integration failures and data issues
-- Performing org maintenance and cleanup
-- Building cascading load patterns for LWC components
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of SOQL syntax and query structure
-- Basic knowledge of Salesforce data model and relationships
-- Understanding of governor limits (query count, rows returned)
-- Familiarity with Apex or LWC development
-
-**Recommended Reading**:
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and Selector layer patterns
-- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management and optimization
-- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when queries execute
+permalink: /rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when queries execute
 
 ## What Was Actually Done
 
@@ -565,13 +537,6 @@ ORDER BY ApiVersion ASC, Name ASC
 ## Related Patterns
 
 **See Also**:
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class layering and Selector layer patterns
-- <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Query optimization and limit management
-- <a href="{{ '/rag/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk query patterns for large datasets
-
-**Related Domains**:
-- <a href="{{ '/rag/development/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Query patterns for debugging integrations
-- <a href="{{ '/rag/development/api-reference/soql-reference.html' | relative_url }}">SOQL Reference</a> - SOQL syntax reference
 - <a href="{{ '/rag/development/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Query patterns for data validation
 
 ## Q&A

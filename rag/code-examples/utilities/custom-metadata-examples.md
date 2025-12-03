@@ -2,20 +2,7 @@
 layout: default
 title: Custom Metadata Code Examples
 description: Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas
-permalink: /rag/code-examples/utilities/custom-metadata-examples.html
----
-
-# Custom Metadata Code Examples
-
-> Complete, working code examples for Custom Metadata patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Custom Metadata Types provide package-deployable configuration that can be accessed in Apex, Flows, and formulas. They're the modern approach for configuration management.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
+permalink: /rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
 
 ## Examples
 

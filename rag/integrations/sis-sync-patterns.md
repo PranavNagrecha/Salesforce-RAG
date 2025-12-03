@@ -2,31 +2,7 @@
 layout: default
 title: SIS Synchronization Patterns
 description: High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS)
-permalink: /rag/integrations/sis-sync-patterns.html
----
-
-# SIS Synchronization Patterns
-
-## Overview
-
-High-volume batch synchronization patterns for integrating Salesforce Education Cloud with legacy Student Information Systems (SIS). These patterns handle hundreds of thousands of student records daily through ETL platforms with file-based staging and dynamic SQL batching.
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of ETL platforms (Dell Boomi, MuleSoft) and their capabilities
-- Knowledge of high-volume batch processing patterns
-- Familiarity with External IDs and composite key strategies
-- Understanding of Bulk API and asynchronous job processing
-- Knowledge of SQL batching and IN-clause query patterns
-- Experience with error handling and retry logic for integrations
-
-**Recommended Reading**:
-- `rag/integrations/integration-platform-patterns.md` - ETL platform patterns
-- `rag/data-modeling/external-ids-and-integration-keys.md` - External ID strategies
-- `rag/integrations/etl-vs-api-vs-events.md` - Integration pattern selection
-- `rag/data-modeling/data-migration-patterns.md` - Data migration strategies
-- `rag/development/asynchronous-apex-patterns.md` - Asynchronous processing patterns
+permalink: /rag/development/asynchronous-apex-patterns.md` - Asynchronous processing patterns
 
 ## Integration Architecture
 

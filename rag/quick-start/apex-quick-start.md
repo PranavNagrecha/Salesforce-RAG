@@ -268,24 +268,6 @@ private class ContactUpdateServiceTest {
 
 1. **Learn More Patterns**:
    - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
-   - <a href="{{ '/rag/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service examples
-   - <a href="{{ '/rag/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a> - Selector examples
-
-2. **Explore Templates**:
-   - <a href="{{ '/rag/code-examples/templates/apex-service-template.html' | relative_url }}">Service Template</a>
-   - <a href="{{ '/rag/code-examples/templates/apex-selector-template.html' | relative_url }}">Selector Template</a>
-   - <a href="{{ '/rag/code-examples/templates/apex-domain-template.html' | relative_url }}">Domain Template</a>
-
-3. **Understand Best Practices**:
-   - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
-   - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
-   - <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a>
-
----
-
-## Related Resources
-
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 - <a href="{{ '/rag/code-examples.html' | relative_url }}">Code Examples</a> - Working code examples
 - <a href="{{ '/rag/api-reference/apex-api-reference.html' | relative_url }}">API Reference</a> - API reference
 

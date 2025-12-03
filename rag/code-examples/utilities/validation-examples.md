@@ -2,31 +2,7 @@
 layout: default
 title: Validation Code Examples
 description: Data validation ensures data quality and prevents invalid data from entering the system
-permalink: /rag/code-examples/utilities/validation-examples.html
----
-
-# Validation Code Examples
-
-> This file contains complete, working code examples for data validation patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Data validation ensures data quality and prevents invalid data from entering the system. These examples demonstrate field validation, record validation, bulk validation, custom validation rules, and validation error handling.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
-- <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
-
-## Examples
-
-### Example 1: Field-Level Validation
-
-**Pattern**: Validating individual fields
-**Use Case**: Ensuring field values meet business rules
-**Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
+permalink: /rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
 
 **Problem**:
 You need to validate field values before saving records.
@@ -423,11 +399,6 @@ if (!separated.get('invalid').isEmpty()) {
 - Log validation failures for review
 
 ## Related Examples
-
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
-- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging patterns
-
-## See Also
 
 - <a href="{{ '/rag/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
 - <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns

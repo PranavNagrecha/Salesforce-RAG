@@ -2,29 +2,7 @@
 layout: default
 title: Common LWC Errors and Solutions
 description: This guide provides solutions for common LWC errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies
-permalink: /rag/troubleshooting/common-lwc-errors.html
----
-
-# Common LWC Errors and Solutions
-
-> Troubleshooting guide for common Lightning Web Component errors with solutions and prevention strategies.
-
-## Overview
-
-This guide provides solutions for common LWC errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies.
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Lightning Web Component (LWC) development
-- Knowledge of JavaScript and ES6+ features
-- Understanding of Salesforce data access patterns (@wire, imperative Apex)
-- Familiarity with field-level security and object permissions
-
-**Recommended Reading**:
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
-- <a href="{{ '/rag/troubleshooting/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - LWC testing patterns
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+permalink: /rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Cannot read property 'value' of undefined
 
@@ -149,7 +127,7 @@ export default class MyComponent extends LightningElement {
 - Use camelCase in JavaScript, kebab-case in HTML
 - Verify property names match between JS and HTML
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -202,7 +180,7 @@ const event = new CustomEvent('recordupdate', { // Valid
 - Event handlers in HTML: `on` + lowercase event name
 - Follow LWC naming conventions strictly
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#custom-events.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#custom-events' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -256,7 +234,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/lwc-api-reference.html#wire.html' | relative_url }}">LWC API Reference</a>, <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/lwc-api-reference.html#wire' | relative_url }}">LWC API Reference</a>, <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -320,7 +298,7 @@ export default class MyComponent extends LightningElement {
 - Implement `render()` method for multiple templates
 - Return template reference, not string
 
-**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates.html' | relative_url }}">LWC Best Practices</a>
+**Related Patterns**: <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -581,136 +559,6 @@ Result: Field works correctly
 A field has proper FLS permissions and object access, but the component still fails with "Unable to create/update fields". The issue is that the field is not on the page layout. Adding the field to the layout (even in a collapsed section) resolves the issue immediately.
 
 **Related Patterns**: 
-- <a href="{{ '/rag/security/sharing-sets-and-portals.html#field-level-sharing-considerations.html' | relative_url }}">Sharing Sets and Portals</a> - Field-level security patterns
-- <a href="{{ '/rag/data-modeling/object-setup-and-configuration.html#field-level-security.html' | relative_url }}">Object Setup and Configuration</a> - Field configuration best practices
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
-
----
-
-## Q&A
-
-### Q: What are the most common LWC errors?
-
-**A**: Most common errors: (1) **"Cannot read property 'value' of undefined"** (accessing field before data loads), (2) **"Invalid field"** (field not in query, FLS issues), (3) **"Unable to create/update fields"** (field not on page layout, FLS issues), (4) **"Component not found"** (import path errors, component not deployed), (5) **"Wire adapter errors"** (Apex method errors, data access issues), (6) **"Event errors"** (event not dispatched, listener not registered).
-
-### Q: How do I fix "Cannot read property 'value' of undefined" errors?
-
-**A**: Fix by: (1) **Checking if data is loaded** (verify wire adapter returned data), (2) **Using optional chaining** (`record?.field?.value`), (3) **Adding null checks** (check for null/undefined before accessing), (4) **Waiting for data** (use `@wire` reactive properties), (5) **Verifying field exists** (check field is in query, exists on object). Always check data is loaded before accessing properties.
-
-### Q: How do I fix "Invalid field" errors in LWC?
-
-**A**: Fix by: (1) **Verifying field exists** (check field API name, object), (2) **Checking FLS permissions** (user has field access), (3) **Including field in query** (field must be in SOQL query), (4) **Checking field type** (verify field type matches usage), (5) **Verifying object access** (user has object access). Invalid field errors usually indicate field doesn't exist or user lacks access.
-
-### Q: How do I fix "Unable to create/update fields" errors?
-
-**A**: Fix by: (1) **Adding field to page layout** (field must be on layout, even in collapsed section), (2) **Checking FLS permissions** (user has edit access to field), (3) **Verifying object access** (user has object access), (4) **Checking field requirements** (required fields, validation rules), (5) **Verifying field is editable** (not read-only, formula field). Field must be on page layout for create/update operations.
-
-### Q: How do I debug LWC component errors?
-
-**A**: Debug by: (1) **Using browser console** (check JavaScript errors), (2) **Using Salesforce Debug Logs** (check Apex errors, wire adapter errors), (3) **Using Lightning Debug Mode** (enable in Setup), (4) **Checking component markup** (verify HTML structure), (5) **Testing wire adapters** (verify data is returned), (6) **Checking event handling** (verify events are dispatched/received). Browser console and debug logs are primary debugging tools.
-
-### Q: How do I handle wire adapter errors?
-
-**A**: Handle by: (1) **Checking Apex method** (verify method exists, is accessible), (2) **Checking error property** (`@wire` provides error property), (3) **Displaying error messages** (show errors to users), (4) **Handling gracefully** (fallback behavior, retry logic), (5) **Logging errors** (log for debugging), (6) **Testing error scenarios** (test Apex errors, network errors). Wire adapters provide error property for error handling.
-
-### Q: How do I fix component import errors?
-
-**A**: Fix by: (1) **Verifying import path** (check path is correct, component exists), (2) **Checking component is deployed** (verify component is in org), (3) **Verifying component name** (check component name matches file), (4) **Checking namespace** (verify namespace if applicable), (5) **Refreshing metadata** (refresh in VS Code, redeploy). Import errors usually indicate path or component issues.
-
-### Q: How do I prevent LWC errors?
-
-**A**: Prevent by: (1) **Adding null checks** (check for null/undefined), (2) **Using optional chaining** (`?.` operator), (3) **Verifying data is loaded** (check wire adapter data), (4) **Testing thoroughly** (test all scenarios, error cases), (5) **Following best practices** (LWC patterns, error handling), (6) **Code reviews** (catch issues early), (7) **Using TypeScript** (type safety helps prevent errors).
-
-### Q: What are best practices for LWC error handling?
-
-**A**: Best practices include: (1) **Always check data is loaded** (verify wire adapter data before accessing), (2) **Use optional chaining** (prevent undefined errors), (3) **Handle wire adapter errors** (check error property, display errors), (4) **Test error scenarios** (test Apex errors, network errors), (5) **Provide user-friendly messages** (clear error messages), (6) **Log errors for debugging** (structured logging), (7) **Follow LWC patterns** (proven patterns reduce errors).
-
-## Edge Cases and Limitations
-
-### Edge Case 1: Wire Adapter Race Conditions
-
-**Scenario**: Multiple wire adapters loading data simultaneously, causing race conditions and undefined access errors.
-
-**Consideration**:
-- Use reactive properties to handle wire adapter dependencies
-- Check all wire adapter data before accessing
-- Use conditional rendering to wait for data
-- Implement loading states for better UX
-- Test with slow network conditions
-- Consider imperative Apex for complex dependencies
-
-### Edge Case 2: Field-Level Security Errors in Production
-
-**Scenario**: Component works in sandbox but fails in production due to field-level security restrictions.
-
-**Consideration**:
-- Test with different user profiles and permission sets
-- Verify field-level security in production-like environments
-- Use `getRecord` with field-level security awareness
-- Handle FLS errors gracefully with user-friendly messages
-- Document field access requirements
-- Consider permission set assignments for component access
-
-### Edge Case 3: Component Lifecycle Timing Issues
-
-**Scenario**: Component accessing data before lifecycle hooks complete, causing undefined errors.
-
-**Consideration**:
-- Use `connectedCallback` for initialization
-- Check component state before accessing properties
-- Use reactive properties for data dependencies
-- Implement proper lifecycle management
-- Test component initialization scenarios
-- Document component lifecycle expectations
-
-### Edge Case 4: Large Data Sets Causing Performance Issues
-
-**Scenario**: Component loading large datasets causing performance degradation and timeout errors.
-
-**Consideration**:
-- Implement pagination for large datasets
-- Use lazy loading for data-heavy components
-- Optimize SOQL queries (select only needed fields)
-- Consider server-side filtering and sorting
-- Monitor component performance
-- Test with realistic data volumes
-
-### Edge Case 5: Cross-Browser Compatibility Issues
-
-**Scenario**: Component works in one browser but fails in another due to JavaScript compatibility.
-
-**Consideration**:
-- Test in multiple browsers (Chrome, Firefox, Safari, Edge)
-- Use polyfills for older browser support
-- Avoid browser-specific JavaScript features
-- Test with different browser versions
-- Document browser compatibility requirements
-- Consider Salesforce-supported browsers only
-
-### Limitations
-
-- **Wire Adapter Limitations**: Wire adapters have caching and refresh limitations
-- **Field-Level Security**: FLS restrictions may limit component functionality
-- **Browser Compatibility**: Components must work in Salesforce-supported browsers
-- **Performance Limits**: Large datasets may cause performance issues
-- **Lifecycle Complexity**: Component lifecycle can be complex with multiple wire adapters
-- **Error Handling**: Some errors may not be easily caught or handled
-- **Testing Limitations**: Some scenarios are difficult to test (network failures, timing issues)
-
-## Related Patterns
-
-**See Also**:
-- <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
-
-**Related Domains**:
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
-- <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
-- <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
-- <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
-
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
-- <a href="{{ '/rag/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
-- <a href="{{ '/rag/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 - <a href="{{ '/rag/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 

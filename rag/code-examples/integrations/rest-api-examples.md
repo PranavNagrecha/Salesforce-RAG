@@ -548,13 +548,5 @@ System.enqueueJob(new AsyncRestApiService('/api/sync', 'POST', payload, contact.
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/callout-examples.html' | relative_url }}">Callout Examples</a> - HTTP callout patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Event-driven patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Apex integration layer
-
-## See Also
-
-- <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
-- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
 - <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 

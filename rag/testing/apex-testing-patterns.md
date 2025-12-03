@@ -2,20 +2,7 @@
 layout: default
 title: Apex Testing Patterns
 description: This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories
-permalink: /rag/testing/apex-testing-patterns.html
----
-
-# Apex Testing Patterns
-
-> Comprehensive testing patterns and examples for Apex development.
-
-## Overview
-
-This guide provides testing patterns, best practices, and examples for Apex test classes, covering unit testing, integration testing, and test data factories.
-
-**Related Patterns**:
-- <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Overall testing strategy
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+permalink: /rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 
 ## Core Principles
 
@@ -447,7 +434,6 @@ private class ContactServiceTest {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/testing/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Overall testing strategy
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 - <a href="{{ '/rag/testing/code-examples/templates/test-class-template.html' | relative_url }}">Test Class Template</a> - Test class template
 

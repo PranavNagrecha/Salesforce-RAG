@@ -2,22 +2,8 @@
 layout: default
 title: LWC Jest Testing Code Examples
 description: Jest is the testing framework for Lightning Web Components
-permalink: /rag/code-examples/lwc/test-examples.html
----
-
-# LWC Jest Testing Code Examples
-
-> This file contains complete, working code examples for testing Lightning Web Components with Jest.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Jest is the testing framework for Lightning Web Components. These examples demonstrate how to write comprehensive tests for LWC components, including testing wire adapters, Apex calls, events, and user interactions.
-
-**Related Patterns**:
-- <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Complete Jest testing guide
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns
+permalink: /rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
+- <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns
 
 ## Examples
 
@@ -26,7 +12,7 @@ Jest is the testing framework for Lightning Web Components. These examples demon
 **Pattern**: Testing component rendering and properties
 **Use Case**: Verifying component displays correctly
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
+**Related Patterns**: <a href="{{ '/rag/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
 
 **Problem**:
 You need to test that a component renders correctly and displays data.
@@ -169,7 +155,7 @@ describe('c-contact-display', () => {
 **Pattern**: Testing imperative Apex method calls
 **Use Case**: Verifying Apex methods are called correctly
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
+**Related Patterns**: <a href="{{ '/rag/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
 
 **Component** (`contactAction.js`):
 ```javascript
@@ -372,7 +358,7 @@ describe('c-contact-action', () => {
 **Pattern**: Testing reactive wire adapter data
 **Use Case**: Verifying wire adapters work correctly
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
+**Related Patterns**: <a href="{{ '/rag/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
 
 **Component** (`accountContacts.js`):
 ```javascript
@@ -507,7 +493,7 @@ describe('c-account-contacts', () => {
 **Pattern**: Testing user interactions and events
 **Use Case**: Verifying user interactions work correctly
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
+**Related Patterns**: <a href="{{ '/rag/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a>
 
 **Component** (`contactForm.js`):
 ```javascript
@@ -686,12 +672,5 @@ describe('c-contact-form', () => {
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/component-examples.html' | relative_url }}">Component Examples</a> - LWC component implementations
-- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/service-examples.html' | relative_url }}">Service Examples</a> - LWC service layer patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/wire-examples.html' | relative_url }}">Wire Examples</a> - Wire service patterns
-
-## See Also
-
-- <a href="{{ '/rag/code-examples/lwc/code-examples/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Complete Jest testing guide
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns
-- <a href="{{ '/rag/code-examples/lwc/code-examples/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns
+- <a href="{{ '/rag/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex testing patterns

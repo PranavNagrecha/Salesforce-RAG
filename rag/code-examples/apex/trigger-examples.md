@@ -2,29 +2,7 @@
 layout: default
 title: Trigger Handler Code Examples
 description: Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation
-permalink: /rag/code-examples/apex/trigger-examples.html
----
-
-# Trigger Handler Code Examples
-
-> This file contains complete, working code examples for Apex Trigger Handler patterns.  
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation. Triggers should be thin and delegate to Domain or Service layers.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex design patterns
-- <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
-
-## Examples
-
-### Example 1: Basic Trigger Handler
-**Pattern**: Trigger Handler with Domain Layer  
-**Use Case**: Simple validation in triggers  
-**Complexity**: Basic  
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer</a>
+permalink: /rag/development/apex-patterns.html#domain-layer' | relative_url }}">Domain Layer</a>
 
 **Problem**: 
 You need a trigger handler that validates Contact records before insert/update.
@@ -314,8 +292,5 @@ for (Contact newContact : newContacts) {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a> - Domain layer patterns
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 - <a href="{{ '/rag/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
 

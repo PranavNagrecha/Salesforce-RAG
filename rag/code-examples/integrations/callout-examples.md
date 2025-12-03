@@ -2,22 +2,7 @@
 layout: default
 title: HTTP Callout Code Examples
 description: HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs
-permalink: /rag/code-examples/integrations/callout-examples.html
----
-
-# HTTP Callout Code Examples
-
-> This file contains complete, working code examples for HTTP callout patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-HTTP callouts enable Salesforce to communicate with external systems via REST or SOAP APIs. These examples demonstrate Named Credentials, error handling, async patterns, circuit breakers, response optimization, and testing patterns.
-
-**Related Patterns**:
-- <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/rest-api-examples.html' | relative_url }}">REST API Examples</a> - REST API patterns
-- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
+permalink: /rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 
 ## Examples
 
@@ -559,12 +544,4 @@ public with sharing class CircuitBreakerService {
 
 ## Related Examples
 
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/rest-api-examples.html' | relative_url }}">REST API Examples</a> - REST API patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Event-driven patterns
-- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Integration patterns
-
-## See Also
-
-- <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
-- <a href="{{ '/rag/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

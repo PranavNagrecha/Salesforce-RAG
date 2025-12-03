@@ -2,13 +2,7 @@
 layout: default
 title: Lightning Data Service (LDS) Patterns - MCP Knowledge
 description: Guidelines for building, reviewing, and maintaining Lightning Web Components that interact with Salesforce's Lightning Data Service, focusing on data consistency, referential integrity, and choosing UIAPI vs Apex
-permalink: /rag/mcp-knowledge/lds-patterns.html
----
-
-# Lightning Data Service (LDS) Patterns - MCP Knowledge
-
-> This file contains knowledge extracted from Salesforce MCP Service tools.  
-> It complements the lived-experience patterns in `rag/development/` and `rag/patterns/`.
+permalink: /rag/development/` and `rag/patterns/`.
 
 ## Overview
 
@@ -102,8 +96,6 @@ async handleUpdate() {
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
-- <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - When to use Apex vs LDS
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query patterns
 
 **How This Complements Existing RAG**:

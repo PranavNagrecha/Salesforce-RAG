@@ -2,20 +2,7 @@
 layout: default
 title: Custom Settings Code Examples
 description: Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas
-permalink: /rag/code-examples/utilities/custom-settings-examples.html
----
-
-# Custom Settings Code Examples
-
-> Complete, working code examples for Custom Settings patterns.
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-Custom Settings provide configuration data that can be accessed in Apex, Flows, and formulas. Hierarchical Custom Settings support user-level configuration, while List Custom Settings provide simple key-value lookups.
-
-**Related Patterns**:
-- <a href="{{ '/rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
+permalink: /rag/development/custom-settings-metadata-patterns.html' | relative_url }}">Custom Settings and Custom Metadata Patterns</a>
 
 ## Examples
 

@@ -2,48 +2,7 @@
 layout: default
 title: Integration User License Guide
 description: The Salesforce Integration User License is a free API-only license designed for system-to-system integrations
-permalink: /rag/integrations/integration-user-license-guide.html
----
-
-# Integration User License Guide
-
-## Overview
-
-The Salesforce Integration User License is a free API-only license designed for system-to-system integrations. Introduced in March 2023, this license provides a cost-effective and secure way to authenticate external systems with Salesforce without consuming full user licenses.
-
-**Key Features**:
-- API-only access (no Salesforce UI access)
-- Enhanced security through dedicated users per integration
-- Cost-effective (5 free licenses included with Enterprise, Performance, and Unlimited editions)
-- Granular permission control through Permission Sets
-- Improved audit trail and traceability
-
-**When to Use Integration User Licenses**:
-- System-to-system integrations requiring API access
-- External systems authenticating to Salesforce (MuleSoft, Dell Boomi, custom applications)
-- Scheduled jobs and batch processes accessing Salesforce APIs
-- Integration platforms requiring dedicated authentication
-- Scenarios where UI access is not needed
-
-**When NOT to Use Integration User Licenses**:
-- Users requiring Salesforce UI access
-- Portal or Experience Cloud users
-- Users needing mobile app access
-- Interactive user scenarios
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Salesforce user licenses and permissions
-- Knowledge of OAuth 2.0 authentication flows
-- Familiarity with Permission Sets and security models
-- Understanding of API authentication patterns
-
-**Recommended Reading**:
-- <a href="{{ '/rag/integrations/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
-- <a href="{{ '/rag/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - HTTP callout patterns
-- <a href="{{ '/rag/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
-- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management basics
+permalink: /rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management basics
 
 ## License Details
 

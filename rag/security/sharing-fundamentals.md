@@ -2,31 +2,7 @@
 layout: default
 title: Salesforce Sharing Fundamentals
 description: This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions
-permalink: /rag/security/sharing-fundamentals.html
----
-
-# Salesforce Sharing Fundamentals
-
-## Overview
-
-This document covers the fundamental concepts of Salesforce sharing, including Org-Wide Defaults (OWD), Role Hierarchy, and View All/Modify All permissions. These are the foundational mechanisms that control record-level access in Salesforce.
-
-**Related Patterns**: 
-- See `rag/security/sharing-rules-and-manual-sharing.md` for sharing rules and manual sharing
-- See `rag/security/sharing-sets-and-portals.md` for Experience Cloud sharing patterns
-- See `rag/security/permission-set-architecture.md` for permission context
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Salesforce security model (Profiles, Permission Sets)
-- Knowledge of object-level and field-level security
-- Understanding of user management and roles
-- Familiarity with record ownership concepts
-
-**Recommended Reading**:
-- <a href="{{ '/rag/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
-- <a href="{{ '/rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+permalink: /rag/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
 - <a href="{{ '/rag/security/sharing-rules-and-manual-sharing.html' | relative_url }}">Sharing Rules and Manual Sharing</a> - Advanced sharing patterns
 
 ## Sharing Model Fundamentals

@@ -2,29 +2,7 @@
 layout: default
 title: Selector Layer Code Examples
 description: The Selector Layer provides centralized SOQL queries and data access abstraction
-permalink: /rag/code-examples/apex/selector-layer-examples.html
----
-
-# Selector Layer Code Examples
-
-> This file contains complete, working code examples for Apex Selector Layer patterns.  
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-The Selector Layer provides centralized SOQL queries and data access abstraction. It enforces security, optimizes queries, and provides reusable query methods.
-
-**Related Patterns**:
-- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
-- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer.html' | relative_url }}">Selector Layer Pattern</a>
-
-## Examples
-
-### Example 1: Basic Selector Class
-**Pattern**: Selector Layer with Security Enforcement  
-**Use Case**: Centralized data access for Contact object  
-**Complexity**: Basic  
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer.html' | relative_url }}">Selector Layer</a>
+permalink: /rag/development/apex-patterns.html#selector-layer' | relative_url }}">Selector Layer</a>
 
 **Problem**: 
 You need to query Contact records with security enforcement and provide reusable query methods.
@@ -402,8 +380,5 @@ public static List<Contact> selectByIdWithCases(Set<Id> ids) {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a> - Domain layer patterns
-- <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - SOQL query patterns
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 

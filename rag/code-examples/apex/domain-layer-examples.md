@@ -2,29 +2,7 @@
 layout: default
 title: Domain Layer Code Examples
 description: The Domain Layer encapsulates object-specific business logic and validation
-permalink: /rag/code-examples/apex/domain-layer-examples.html
----
-
-# Domain Layer Code Examples
-
-> This file contains complete, working code examples for Apex Domain Layer patterns.  
-> All examples are copy-paste ready and follow Salesforce best practices.
-
-## Overview
-
-The Domain Layer encapsulates object-specific business logic and validation. It can be called from triggers OR from Service layer, and should NOT contain SOQL queries or external callouts.
-
-**Related Patterns**:
-- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
-- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer Pattern</a>
-
-## Examples
-
-### Example 1: Basic Domain Class
-**Pattern**: Domain Layer with Validation  
-**Use Case**: Object-specific validation and business rules  
-**Complexity**: Basic  
-**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer</a>
+permalink: /rag/development/apex-patterns.html#domain-layer' | relative_url }}">Domain Layer</a>
 
 **Problem**: 
 You need to validate Contact records and apply business rules before DML operations. The domain layer encapsulates Contact-specific logic.
@@ -242,7 +220,7 @@ public with sharing class ContactUpdateService {
 }
 ```
 
-**Related Examples**: <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
+**Related Examples**: <a href="{{ '/rag/code-examples/apex/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
 
 ---
 
@@ -329,7 +307,5 @@ private static String formatPhone(String phone) {
 
 ## Related Patterns
 
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
-- <a href="{{ '/rag/code-examples/apex/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a> - Data access patterns
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 

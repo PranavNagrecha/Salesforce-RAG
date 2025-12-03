@@ -2,29 +2,7 @@
 layout: default
 title: Object Setup and Configuration
 description: Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce
-permalink: /rag/data-modeling/object-setup-and-configuration.html
----
-
-# Object Setup and Configuration
-
-## Overview
-
-Comprehensive checklist and best practices for setting up custom and standard objects in Salesforce. This guide covers the complete object configuration process from initial creation through Lightning Experience optimization, ensuring objects are properly configured for production use.
-
-## Prerequisites
-
-**Required Knowledge**:
-- Understanding of Salesforce object model and custom object creation
-- Familiarity with field types, relationships, and validation rules
-- Knowledge of Lightning Experience and page layouts
-- Understanding of profiles, permission sets, and object-level security
-- Basic knowledge of record types and their use cases
-
-**Recommended Reading**:
-- `rag/data-modeling/standard-object-oddities.md` - Standard object considerations
-- `rag/security/permission-set-architecture.md` - Permission set patterns
-- `rag/development/formulas-validation-rules.md` - Validation rule patterns
-- `rag/development/lightning-app-builder.md` - Lightning page configuration
+permalink: /rag/development/lightning-app-builder.md` - Lightning page configuration
 
 ## Object Setup Checklist
 
