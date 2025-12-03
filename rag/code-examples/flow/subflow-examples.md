@@ -32,7 +32,7 @@ Subflows are reusable flow components that can be called from other Flows or Ape
 **Pattern**: Subflow for creating tasks consistently
 **Use Case**: Creating tasks with standard logic across multiple flows
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to create tasks consistently across multiple Record-Triggered Flows. Instead of duplicating the logic, create a reusable Subflow.
@@ -89,7 +89,7 @@ You need to create tasks consistently across multiple Record-Triggered Flows. In
 **Pattern**: Subflow for updating record status
 **Use Case**: Consistent status updates across multiple flows
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to update record status consistently with logging and notifications.
@@ -167,7 +167,7 @@ You need to update record status consistently with logging and notifications.
 **Pattern**: Subflow for calling Apex methods consistently
 **Use Case**: Wrapping Apex calls with error handling and logging
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to call Apex methods from multiple flows with consistent error handling.
@@ -245,7 +245,7 @@ You need to call Apex methods from multiple flows with consistent error handling
 **Pattern**: Subflow for reusable validation logic
 **Use Case**: Validating data consistently across multiple flows
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to validate email addresses and phone numbers consistently across multiple flows.
@@ -316,7 +316,7 @@ You need to validate email addresses and phone numbers consistently across multi
 **Pattern**: Subflow for building notification payloads
 **Use Case**: Consistent notification formatting across flows
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#subflows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to build notification payloads consistently for Platform Events or external systems.

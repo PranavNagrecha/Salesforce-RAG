@@ -29,7 +29,7 @@ Record-Triggered Flows run automatically when records are created or updated. Th
 **Pattern**: Before-save flow for field validation and default values
 **Use Case**: Setting default values or validating data before save
 **Complexity**: Basic
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#record-triggered-flows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#record-triggered-flows' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to set default values for fields and validate data before a record is saved.
@@ -77,7 +77,7 @@ You need to set default values for fields and validate data before a record is s
 **Pattern**: After-save flow for creating related records
 **Use Case**: Creating child records when parent is created
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#record-triggered-flows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#record-triggered-flows' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 When an Account is created, you need to automatically create a default Contact record.
@@ -118,7 +118,7 @@ When an Account is created, you need to automatically create a default Contact r
 **Pattern**: After-save flow for sending notifications
 **Use Case**: Sending email notifications when records are created or updated
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#record-triggered-flows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#record-triggered-flows' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 When a Case is created with high priority, you need to send an email notification to the account owner.
@@ -167,7 +167,7 @@ When a Case is created with high priority, you need to send an email notificatio
 **Pattern**: Before-save flow for calculated fields
 **Use Case**: Calculating field values based on other fields
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#record-triggered-flows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#record-triggered-flows' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to calculate a Contact's full name and set it in a custom field when FirstName or LastName changes.
@@ -204,7 +204,7 @@ You need to calculate a Contact's full name and set it in a custom field when Fi
 **Pattern**: After-save flow for updating related records
 **Use Case**: Updating child records when parent changes
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#record-triggered-flows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#record-triggered-flows' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 When an Account's Industry changes, you need to update all related Contacts' Industry field.
@@ -248,7 +248,7 @@ When an Account's Industry changes, you need to update all related Contacts' Ind
 **Pattern**: Before-save flow for validation
 **Use Case**: Preventing record save when validation fails
 **Complexity**: Intermediate
-**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#record-triggered-flows.html' | relative_url }}">Flow Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/development/flow-patterns.html#record-triggered-flows' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to prevent saving a Contact if the Email domain is not allowed.
