@@ -88,5 +88,5 @@ public with sharing class ContactUpdateService {
 
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/templates/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
-- [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer)
+- <a href="{{ '/rag/code-examples/templates/Salesforce-RAG/rag/development/apex-patterns.html#service-layer.html' | relative_url }}">Apex Patterns</a>
 

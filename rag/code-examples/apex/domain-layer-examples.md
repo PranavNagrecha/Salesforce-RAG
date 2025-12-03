@@ -8,8 +8,8 @@
 The Domain Layer encapsulates object-specific business logic and validation. It can be called from triggers OR from Service layer, and should NOT contain SOQL queries or external callouts.
 
 **Related Patterns**:
-- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
-- [Domain Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer Pattern</a>
 
 ## Examples
 
@@ -17,7 +17,7 @@ The Domain Layer encapsulates object-specific business logic and validation. It 
 **Pattern**: Domain Layer with Validation  
 **Use Case**: Object-specific validation and business rules  
 **Complexity**: Basic  
-**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer</a>
 
 **Problem**: 
 You need to validate Contact records and apply business rules before DML operations. The domain layer encapsulates Contact-specific logic.

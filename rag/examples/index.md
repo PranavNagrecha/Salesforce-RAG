@@ -24,6 +24,6 @@ The code examples directory contains:
 ## Quick Links
 
 - 📖 **<a href="{{ '/rag/examples/rag-index.html' | relative_url }}">Complete Knowledge Index</a>** - Browse all knowledge files by domain
-- 📋 **[JSON Metadata](rag-library.json)** - Machine-readable metadata for RAG systems
+- 📋 **<a href="{{ '/rag/examples/rag-library.json.html' | relative_url }}">JSON Metadata</a>** - Machine-readable metadata for RAG systems
 - 💡 **<a href="{{ '/rag/examples/code-examples/code-examples-index.html' | relative_url }}">Code Examples</a>** - Complete, working code examples
 

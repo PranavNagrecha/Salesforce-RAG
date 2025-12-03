@@ -55,7 +55,7 @@ FROM Contact
 WHERE Account.Industry = 'Technology'
 ```
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#relationship-queries)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/soql-query-patterns.html#relationship-queries.html' | relative_url }}">SOQL Query Patterns</a>
 
 ---
 
@@ -71,7 +71,7 @@ FROM Account
 WHERE Id = '001000000000001'
 ```
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#relationship-queries)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/soql-query-patterns.html#relationship-queries.html' | relative_url }}">SOQL Query Patterns</a>
 
 ---
 
@@ -109,7 +109,7 @@ GROUP BY AccountId
 HAVING COUNT(Id) > 5
 ```
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#aggregate-queries)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/soql-query-patterns.html#aggregate-queries.html' | relative_url }}">SOQL Query Patterns</a>
 
 ---
 
@@ -155,7 +155,7 @@ Common date literals:
 - `THIS_YEAR`
 - `NEXT_YEAR`
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#date-and-time-queries)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/soql-query-patterns.html#date-and-time-queries.html' | relative_url }}">SOQL Query Patterns</a>
 
 ---
 
@@ -180,7 +180,7 @@ WHERE AccountId = :accountId
 - Required for security compliance
 - Fails fast if user lacks access
 
-**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#security-enforcement), [Security Patterns](../security)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/apex-patterns.html#security-enforcement.html' | relative_url }}">Apex Patterns</a>, <a href="{{ '/rag/security.html' | relative_url }}">Security Patterns</a>
 
 ---
 
@@ -311,7 +311,7 @@ List<Contact> nextPage = [
 - `OFFSET` has performance limitations (max 2000)
 - Cursor-based approach scales better
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#cursor-based-pagination), <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/soql-query-patterns.html#cursor-based-pagination.html' | relative_url }}">SOQL Query Patterns</a>, <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
 
 ---
 
@@ -341,7 +341,7 @@ List<SObject> results = Database.query(query);
 - Validate object and field names
 - Use bind variables when possible
 
-**Related Patterns**: [SOQL Query Patterns](/Salesforce-RAG/rag/development/soql-query-patterns.html#dynamic-soql)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/soql-query-patterns.html#dynamic-soql.html' | relative_url }}">SOQL Query Patterns</a>
 
 ---
 

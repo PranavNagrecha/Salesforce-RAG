@@ -153,7 +153,7 @@ export default class MyComponent extends LightningElement {
 - Use camelCase in JavaScript, kebab-case in HTML
 - Verify property names match between JS and HTML
 
-**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#property-and-attribute-naming.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -206,7 +206,7 @@ const event = new CustomEvent('recordupdate', { // Valid
 - Event handlers in HTML: `on` + lowercase event name
 - Follow LWC naming conventions strictly
 
-**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#custom-events)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#custom-events.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -260,7 +260,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: [LWC API Reference](/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire), <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire.html' | relative_url }}">LWC API Reference</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -324,7 +324,7 @@ export default class MyComponent extends LightningElement {
 - Implement `render()` method for multiple templates
 - Return template reference, not string
 
-**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#multiple-templates.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -585,8 +585,8 @@ Result: Field works correctly
 A field has proper FLS permissions and object access, but the component still fails with "Unable to create/update fields". The issue is that the field is not on the page layout. Adding the field to the layout (even in a collapsed section) resolves the issue immediately.
 
 **Related Patterns**: 
-- [Sharing Sets and Portals](../security/sharing-sets-and-portals.html#field-level-sharing-considerations) - Field-level security patterns
-- [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html#field-level-security) - Field configuration best practices
+- <a href="{{ '/rag/security/sharing-sets-and-portals.html#field-level-sharing-considerations.html' | relative_url }}">Sharing Sets and Portals</a> - Field-level security patterns
+- <a href="{{ '/rag/data-modeling/object-setup-and-configuration.html#field-level-security.html' | relative_url }}">Object Setup and Configuration</a> - Field configuration best practices
 - <a href="{{ '/rag/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
 
 ---

@@ -450,7 +450,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor governor limits proactively
 
-**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
+**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/development/apex-patterns.html#bulkification.html' | relative_url }}">Apex Patterns</a>
 
 ---
 
@@ -512,7 +512,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
+**Related Patterns**: <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/development/apex-patterns.html#bulkification.html' | relative_url }}">Apex Patterns</a>
 
 ---
 
@@ -573,7 +573,7 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 - Separate DML and callout operations
 - Plan transaction boundaries carefully
 
-**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns.html' | relative_url }}">Apex Patterns</a>
 
 ---
 

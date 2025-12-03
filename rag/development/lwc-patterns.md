@@ -522,7 +522,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Autocomplete**: Use appropriate autocomplete tokens for personal information fields
 - **Fieldset/Legend**: Use fieldset/legend for grouped form controls
 
-**Example**: See [Accessible Form Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#form-accessibility-examples)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#form-accessibility-examples.html' | relative_url }}">Accessible Form Examples</a>
 
 ### Keyboard Navigation
 
@@ -533,7 +533,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Focus Return**: Focus returns to trigger element after modal close
 - **No Keyboard Traps**: Ensure users can navigate away from all areas
 
-**Example**: See [Keyboard Navigation Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#keyboard-navigation-examples)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#keyboard-navigation-examples.html' | relative_url }}">Keyboard Navigation Examples</a>
 
 ### Semantic HTML
 
@@ -544,7 +544,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - Proper list markup (`<ul>`, `<ol>`, `<dl>`)
 - Proper table structure with headers and scope attributes
 
-**Example**: See [Semantic HTML Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#semantic-html-examples)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#semantic-html-examples.html' | relative_url }}">Semantic HTML Examples</a>
 
 ### ARIA Labels and Attributes
 
@@ -555,7 +555,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **ARIA Descriptions**: Use `aria-describedby` to associate help text and error messages
 - **Modal Dialogs**: Use `role="dialog"` and `aria-modal="true"` for modals
 
-**Example**: See [ARIA Patterns Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#aria-patterns)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#aria-patterns.html' | relative_url }}">ARIA Patterns Examples</a>
 
 ### Image Accessibility
 
@@ -564,7 +564,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Image Links**: Provide `aria-label` on the link, use `alt=""` on the image
 - **Complex Images**: Use `aria-describedby` with `figcaption` for detailed descriptions
 
-**Example**: See [Image Accessibility Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#image-accessibility)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#image-accessibility.html' | relative_url }}">Image Accessibility Examples</a>
 
 ### Color and Contrast
 
@@ -573,7 +573,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Not Color Alone**: Information must not be conveyed by color alone (use icons/text)
 - **SLDS Tokens**: Use SLDS color tokens for proper contrast
 
-**Example**: See [Color and Contrast Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#color-and-contrast)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#color-and-contrast.html' | relative_url }}">Color and Contrast Examples</a>
 
 ### Dynamic Content Accessibility
 
@@ -582,7 +582,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - **Success Messages**: Use `role="status"` and `aria-live="polite"` for success messages
 - **Status Updates**: Announce dynamic content changes to screen readers
 
-**Example**: See [Dynamic Content Examples](/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#dynamic-content-accessibility)
+**Example**: See <a href="{{ '/rag/development/Salesforce-RAG/rag/code-examples/lwc/accessibility-examples.html#dynamic-content-accessibility.html' | relative_url }}">Dynamic Content Examples</a>
 
 ### Testing Accessibility
 
@@ -674,7 +674,7 @@ Accessibility ensures that all users, including those using assistive technologi
 - <a href="{{ '/rag/development/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - Unit testing Lightning Web Components
 - <a href="{{ '/rag/development/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - Troubleshooting LWC issues
 - <a href="{{ '/rag/development/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility error resolution
-- [Code Examples](../code-examples/lwc/) - Complete LWC code examples
+- <a href="{{ '/rag/code-examples/lwc.html' | relative_url }}">Code Examples</a> - Complete LWC code examples
 
 ## Q&A
 

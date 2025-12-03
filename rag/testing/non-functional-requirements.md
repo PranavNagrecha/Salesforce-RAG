@@ -20,7 +20,7 @@ This guide covers non-functional requirements testing for Salesforce, including 
 - <a href="{{ '/rag/testing/automated-testing-patterns.html' | relative_url }}">Automated Testing Patterns</a> - Automated testing approaches
 - <a href="{{ '/rag/testing/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility</a> - LWC accessibility guidelines
 - <a href="{{ '/rag/testing/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
-- [Security Patterns](../security) - Security and access control patterns
+- <a href="{{ '/rag/security.html' | relative_url }}">Security Patterns</a> - Security and access control patterns
 
 ## Consensus Best Practices
 
@@ -314,6 +314,6 @@ This guide covers non-functional requirements testing for Salesforce, including 
 - <a href="{{ '/rag/testing/automated-testing-patterns.html' | relative_url }}">Automated Testing Patterns</a> - Automated testing approaches
 - <a href="{{ '/rag/testing/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility</a> - LWC accessibility guidelines
 - <a href="{{ '/rag/testing/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization
-- [Security Patterns](../security) - Security and access control patterns
+- <a href="{{ '/rag/security.html' | relative_url }}">Security Patterns</a> - Security and access control patterns
 - <a href="{{ '/rag/testing/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Performance monitoring
 

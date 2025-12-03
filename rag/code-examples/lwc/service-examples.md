@@ -29,7 +29,7 @@ LWC service layer patterns provide reusable utility functions for common operati
 **Pattern**: Utility service for data formatting
 **Use Case**: Formatting dates, currency, and other data types consistently
 **Complexity**: Basic
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/lwc-patterns.html#data-access-patterns.html' | relative_url }}">LWC Data Access Patterns</a>
 
 **Problem**:
 You need to format dates, currency, and other data types consistently across multiple components.

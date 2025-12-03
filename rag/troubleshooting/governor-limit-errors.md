@@ -162,7 +162,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification), <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/development/apex-patterns.html#bulkification.html' | relative_url }}">Apex Patterns</a>, <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
 
 ---
 
@@ -216,7 +216,7 @@ public static void processCalloutsAsync(Set<Id> contactIds) {
 - Batch callouts when possible
 - Monitor callout count
 
-**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns.html' | relative_url }}">Apex Patterns</a>
 
 ---
 
@@ -425,7 +425,7 @@ public class ProcessQueueable implements Queueable {
 - Use Queueable for chained async processing
 - Monitor future call count
 
-**Related Patterns**: [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns.html' | relative_url }}">Apex Patterns</a>
 
 ---
 
@@ -556,5 +556,5 @@ public class ProcessQueueable implements Queueable {
 - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Complete governor limits guide
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
 - <a href="{{ '/rag/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - Query optimization
-- [Troubleshooting](.) - Other troubleshooting guides
+- <a href="{{ '/rag/troubleshooting/..html' | relative_url }}">Troubleshooting</a> - Other troubleshooting guides
 

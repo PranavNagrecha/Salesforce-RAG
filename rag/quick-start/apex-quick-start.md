@@ -289,6 +289,6 @@ private class ContactUpdateServiceTest {
 ## Related Resources
 
 - <a href="{{ '/rag/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
-- [Code Examples](../code-examples) - Working code examples
+- <a href="{{ '/rag/code-examples.html' | relative_url }}">Code Examples</a> - Working code examples
 - <a href="{{ '/rag/quick-start/api-reference/apex-api-reference.html' | relative_url }}">API Reference</a> - API reference
 

@@ -18,7 +18,7 @@ Change Data Capture (CDC) provides real-time change notifications for Salesforce
 **Pattern**: Trigger-based CDC processing
 **Use Case**: Processing CDC events directly in Apex triggers
 **Complexity**: Basic
-**Related Patterns**: [Trigger-Based CDC Processing](/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-1-trigger-based-cdc-processing)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-1-trigger-based-cdc-processing.html' | relative_url }}">Trigger-Based CDC Processing</a>
 
 **Problem**:
 You need to process Contact change events to sync data to an external system. Trigger processes events and calls external API for each change.
@@ -154,7 +154,7 @@ CDC events are automatically published when Contact records change. No manual tr
 **Pattern**: Combining CDC with Platform Events
 **Use Case**: Complex event-driven workflows with CDC change detection
 **Complexity**: Intermediate
-**Related Patterns**: [Platform Event Integration with CDC](/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-2-platform-event-integration-with-cdc)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-2-platform-event-integration-with-cdc.html' | relative_url }}">Platform Event Integration with CDC</a>
 
 **Problem**:
 Contact changes trigger CDC events, which publish Platform Events with enriched data. Multiple subscribers process Platform Events for different purposes.
@@ -232,7 +232,7 @@ public class ContactChangeEventHandler {
 **Pattern**: CDC event error handling with retry logic
 **Use Case**: Handling CDC event processing failures
 **Complexity**: Advanced
-**Related Patterns**: [CDC Error Handling and Replay](/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-3-cdc-error-handling-and-replay)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/Salesforce-RAG/rag/integrations/change-data-capture-patterns.html#pattern-3-cdc-error-handling-and-replay.html' | relative_url }}">CDC Error Handling and Replay</a>
 
 **Problem**:
 CDC event processing fails due to external API timeout. Failed events are logged, and replay mechanism processes them after API recovers.

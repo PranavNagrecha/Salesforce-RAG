@@ -8,7 +8,7 @@
 Batch Apex is used for processing large data volumes (thousands or millions of records) in batches of 200. Each batch executes in a separate transaction context with fresh governor limits.
 
 **Related Patterns**:
-- [Asynchronous Apex Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#batch-apex-patterns)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#batch-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 - <a href="{{ '/rag/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a>
 
 ## Examples
@@ -18,7 +18,7 @@ Batch Apex is used for processing large data volumes (thousands or millions of r
 **Pattern**: Stateless Batch Apex with QueryLocator
 **Use Case**: Bulk update of records without maintaining state
 **Complexity**: Basic
-**Related Patterns**: [Basic Stateless Batch](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-1-basic-stateless-batch-apex)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-1-basic-stateless-batch-apex.html' | relative_url }}">Basic Stateless Batch</a>
 
 **Problem**:
 You need to update 100,000 Contact records with a new field value. Each batch of 200 records should process independently without maintaining state.
@@ -154,7 +154,7 @@ private class ContactUpdateBatchTest {
 **Pattern**: Stateful Batch Apex with instance variables
 **Use Case**: Maintaining state across batch executions (counters, aggregations)
 **Complexity**: Intermediate
-**Related Patterns**: [Stateful Batch Apex](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-2-stateful-batch-apex)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-2-stateful-batch-apex.html' | relative_url }}">Stateful Batch Apex</a>
 
 **Problem**:
 You need to calculate total revenue across all Opportunities. Each batch should add to a running total, and the final total should be calculated in finish().
@@ -275,7 +275,7 @@ private class RevenueCalculationBatchTest {
 **Pattern**: Batch chaining - one batch triggers another
 **Use Case**: Multi-step data processing (Job A → Job B → Job C)
 **Complexity**: Intermediate
-**Related Patterns**: [Batch Chaining](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-3-batch-chaining)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-3-batch-chaining.html' | relative_url }}">Batch Chaining</a>
 
 **Problem**:
 You need to perform a multi-step data migration: (1) Import accounts, (2) Import contacts, (3) Link contacts to accounts. Each step should run as a separate batch job.
@@ -424,7 +424,7 @@ Id jobId = Database.executeBatch(firstBatch, 200);
 **Pattern**: Batch with comprehensive error handling and retry logic
 **Use Case**: Processing records where some may fail validation
 **Complexity**: Advanced
-**Related Patterns**: [Batch Error Handling](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-4-batch-error-handling-and-retry)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-4-batch-error-handling-and-retry.html' | relative_url }}">Batch Error Handling</a>
 
 **Problem**:
 You need to process 50,000 records where some may fail validation. Errors should be logged, and failed records should be retried in a separate batch job.
@@ -565,7 +565,7 @@ Id jobId = Database.executeBatch(batch, 200);
 **Pattern**: Batch job monitoring and status tracking
 **Use Case**: Monitoring long-running batch jobs and tracking progress
 **Complexity**: Intermediate
-**Related Patterns**: [Batch Monitoring](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-5-batch-monitoring-and-job-status)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-5-batch-monitoring-and-job-status.html' | relative_url }}">Batch Monitoring</a>
 
 **Problem**:
 You need to monitor a nightly batch job that processes 1 million records. Track progress, send notifications on completion, and alert on failures.

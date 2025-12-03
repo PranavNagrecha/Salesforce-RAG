@@ -18,7 +18,7 @@ Lightning Web Components (LWC) are modern, standards-based web components for bu
 **Pattern**: Display record data using Lightning Data Service
 **Use Case**: Displaying record information on a record page
 **Complexity**: Basic
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/lwc-patterns.html#data-access-patterns.html' | relative_url }}">LWC Data Access Patterns</a>
 
 **Problem**:
 You need to display record data in a custom component on a record page.
@@ -97,7 +97,7 @@ export default class ContactDisplay extends LightningElement {
 **Pattern**: Calling Apex methods imperatively for user actions
 **Use Case**: Performing actions that require user interaction
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/lwc-patterns.html#data-access-patterns.html' | relative_url }}">LWC Data Access Patterns</a>
 
 **Problem**:
 You need to call an Apex method when a user clicks a button.

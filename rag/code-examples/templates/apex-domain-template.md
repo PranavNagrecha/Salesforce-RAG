@@ -95,5 +95,5 @@ public with sharing class [ObjectName]Domain {
 
 **Related Patterns**:
 - <a href="{{ '/rag/code-examples/templates/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a>
-- [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
+- <a href="{{ '/rag/code-examples/templates/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Apex Patterns</a>
 

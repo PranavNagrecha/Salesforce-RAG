@@ -454,7 +454,7 @@ The "Flow User" user permission is being deprecated in Winter '26 (2025). This a
 
 **Related Domains**:
 - <a href="{{ '/rag/development/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing Flow automation
-- [Code Examples](../code-examples/flow/) - Flow pattern examples (coming soon)
+- <a href="{{ '/rag/code-examples/flow.html' | relative_url }}">Code Examples</a> - Flow pattern examples (coming soon)
 
 ### Change Management
 

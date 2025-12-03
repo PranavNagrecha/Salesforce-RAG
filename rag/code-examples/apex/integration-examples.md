@@ -8,8 +8,8 @@
 The Integration Layer handles external API callouts, data transformation, authentication, and error handling. It should NOT contain business logic or SOQL queries.
 
 **Related Patterns**:
-- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
-- [Integration Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer.html' | relative_url }}">Integration Layer Pattern</a>
 
 ## Examples
 
@@ -17,7 +17,7 @@ The Integration Layer handles external API callouts, data transformation, authen
 **Pattern**: Integration Layer with Named Credentials  
 **Use Case**: Outbound REST API callout  
 **Complexity**: Basic  
-**Related Patterns**: [Integration Layer](/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer.html' | relative_url }}">Integration Layer</a>
 
 **Problem**: 
 You need to make HTTP callouts to external systems using Named Credentials for authentication.
@@ -370,6 +370,6 @@ Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(
 ## Related Patterns
 
 - <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
-- [Integration Patterns](../../integrations) - Integration architecture patterns
+- <a href="{{ '/rag/integrations.html' | relative_url }}">Integration Patterns</a> - Integration architecture patterns
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 

@@ -8,8 +8,8 @@
 The Selector Layer provides centralized SOQL queries and data access abstraction. It enforces security, optimizes queries, and provides reusable query methods.
 
 **Related Patterns**:
-- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
-- [Selector Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer.html' | relative_url }}">Selector Layer Pattern</a>
 
 ## Examples
 
@@ -17,7 +17,7 @@ The Selector Layer provides centralized SOQL queries and data access abstraction
 **Pattern**: Selector Layer with Security Enforcement  
 **Use Case**: Centralized data access for Contact object  
 **Complexity**: Basic  
-**Related Patterns**: [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer.html' | relative_url }}">Selector Layer</a>
 
 **Problem**: 
 You need to query Contact records with security enforcement and provide reusable query methods.

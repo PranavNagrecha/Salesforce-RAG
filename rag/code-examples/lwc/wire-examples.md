@@ -30,7 +30,7 @@ Wire services provide reactive data access in Lightning Web Components. The `@wi
 **Pattern**: Reactive record data access
 **Use Case**: Displaying record data that updates automatically
 **Complexity**: Basic
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/lwc-patterns.html#data-access-patterns.html' | relative_url }}">LWC Data Access Patterns</a>
 
 **Problem**:
 You need to display record data that automatically updates when the record changes.
@@ -127,7 +127,7 @@ export default class ContactDisplay extends LightningElement {
 **Pattern**: Accessing related record data
 **Use Case**: Displaying data from parent or child records
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Data Access Patterns](../development/lwc-patterns.html#data-access-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/lwc-patterns.html#data-access-patterns.html' | relative_url }}">LWC Data Access Patterns</a>
 
 **Problem**:
 You need to display data from related records (parent or child objects).

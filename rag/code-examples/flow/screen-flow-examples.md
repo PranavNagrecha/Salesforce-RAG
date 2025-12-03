@@ -29,7 +29,7 @@ Screen Flows provide guided user interactions for multi-step processes. They are
 **Pattern**: Multi-step form for data collection
 **Use Case**: Collecting user information across multiple screens
 **Complexity**: Basic
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#screen-flows)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#screen-flows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to collect contact information across multiple screens with validation and navigation.
@@ -91,7 +91,7 @@ You need to collect contact information across multiple screens with validation 
 **Pattern**: Dynamic flow navigation based on user selections
 **Use Case**: Different paths based on user choices
 **Complexity**: Intermediate
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#screen-flows)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#screen-flows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to show different screens based on user selections (e.g., different application types).
@@ -150,7 +150,7 @@ You need to show different screens based on user selections (e.g., different app
 **Pattern**: Finding existing records and creating related records
 **Use Case**: Looking up accounts and creating contacts
 **Complexity**: Intermediate
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#screen-flows)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#screen-flows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to allow users to search for an Account and then create a Contact for that Account.
@@ -217,7 +217,7 @@ You need to allow users to search for an Account and then create a Contact for t
 **Pattern**: Collecting and validating data before submission
 **Use Case**: Ensuring data quality before record creation
 **Complexity**: Intermediate
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#screen-flows)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#screen-flows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to collect case information with validation before creating the case.
@@ -282,7 +282,7 @@ You need to collect case information with validation before creating the case.
 **Pattern**: Creating multiple related records in one flow
 **Use Case**: Creating Account, Contact, and Opportunity together
 **Complexity**: Advanced
-**Related Patterns**: [Flow Patterns](../development/flow-patterns.html#screen-flows)
+**Related Patterns**: <a href="{{ '/rag/code-examples/development/flow-patterns.html#screen-flows.html' | relative_url }}">Flow Patterns</a>
 
 **Problem**:
 You need to create an Account, Contact, and Opportunity in a single guided process.

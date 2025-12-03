@@ -8,7 +8,7 @@
 Scheduled Apex provides time-based automation for periodic tasks. It's used for maintenance, reporting, and scheduled data processing using cron expressions.
 
 **Related Patterns**:
-- [Asynchronous Apex Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#scheduled-apex-patterns)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#scheduled-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 ## Examples
@@ -18,7 +18,7 @@ Scheduled Apex provides time-based automation for periodic tasks. It's used for 
 **Pattern**: Basic Scheduled Apex with cron expression
 **Use Case**: Daily cleanup or maintenance tasks
 **Complexity**: Basic
-**Related Patterns**: [Basic Scheduled Apex](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-1-basic-scheduled-apex)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-1-basic-scheduled-apex.html' | relative_url }}">Basic Scheduled Apex</a>
 
 **Problem**:
 You need to run a daily cleanup job that deletes old records. The Scheduled Apex job runs every day at 2 AM to perform cleanup.
@@ -119,7 +119,7 @@ private class DailyCleanupScheduledTest {
 **Pattern**: Various cron expressions for different scheduling needs
 **Use Case**: Understanding cron syntax for scheduling
 **Complexity**: Basic
-**Related Patterns**: [Cron Expression Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-2-cron-expression-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-2-cron-expression-patterns.html' | relative_url }}">Cron Expression Patterns</a>
 
 **Common Cron Expressions**:
 
@@ -193,7 +193,7 @@ Id job3 = System.schedule('Frequent Check', CronExpressionExamples.EVERY_15_MINU
 **Pattern**: Scheduled Apex that triggers Batch Apex
 **Use Case**: Running batch jobs on a schedule
 **Complexity**: Intermediate
-**Related Patterns**: [Scheduled Batch Job](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-3-scheduled-batch-job)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-3-scheduled-batch-job.html' | relative_url }}">Scheduled Batch Job</a>
 
 **Problem**:
 You need to run a nightly sync of 500,000 records from an external system. Scheduled Apex triggers Batch Apex job every night at 1 AM.
@@ -270,7 +270,7 @@ Id jobId = System.schedule('Nightly Sync', cronExpression, scheduledJob);
 **Pattern**: Scheduled Apex with comprehensive error handling
 **Use Case**: Scheduled jobs that need robust error handling
 **Complexity**: Intermediate
-**Related Patterns**: [Scheduled Error Handling](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-4-scheduled-error-handling)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-4-scheduled-error-handling.html' | relative_url }}">Scheduled Error Handling</a>
 
 **Problem**:
 You need to run a scheduled job that processes daily reports. Errors should be logged and notifications sent to administrators for manual intervention.
@@ -361,7 +361,7 @@ Id jobId = System.schedule('Daily Report Processor', cronExpression, scheduledJo
 **Pattern**: Monitoring scheduled job execution and status
 **Use Case**: Tracking scheduled automation performance
 **Complexity**: Intermediate
-**Related Patterns**: [Scheduled Job Monitoring](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-5-scheduled-job-monitoring)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-5-scheduled-job-monitoring.html' | relative_url }}">Scheduled Job Monitoring</a>
 
 **Problem**:
 You need to monitor scheduled job execution, track execution time, detect failures, and send alerts on errors.

@@ -66,7 +66,7 @@ handleSuccess() {
 #### Methods
 
 ##### NavigationMixin.Navigate(options)
-**Signature**: `this[NavigationMixin.Navigate](options)`
+**Signature**: `this<a href="{{ '/rag/api-reference/options.html' | relative_url }}">NavigationMixin.Navigate</a>`
 
 **Parameters**: 
 - `options` (Object): Navigation configuration:
@@ -343,7 +343,7 @@ export default class AccountViewer extends LightningElement {
 }
 ```
 
-**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, [Referential Integrity](/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity)
+**Related Patterns**: <a href="{{ '/rag/api-reference/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lds-patterns.html#referential-integrity.html' | relative_url }}">Referential Integrity</a>
 
 ---
 
@@ -379,7 +379,7 @@ export default class MyComponent extends LightningElement {
 - For getters/setters: Decorate only the getter
 - Do not mutate @api properties internally
 
-**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#decorators.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -450,7 +450,7 @@ export default class MyComponent extends LightningElement {
 - Not needed for primitives (strings, numbers, booleans)
 - Not needed when entire object/array is reassigned
 
-**Related Patterns**: [LWC Best Practices](/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#track-decorator)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/mcp-knowledge/lwc-best-practices.html#track-decorator.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 

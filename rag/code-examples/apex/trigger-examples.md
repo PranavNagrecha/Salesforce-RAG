@@ -17,7 +17,7 @@ Trigger handlers process trigger events with bulkification, error handling, and 
 **Pattern**: Trigger Handler with Domain Layer  
 **Use Case**: Simple validation in triggers  
 **Complexity**: Basic  
-**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer</a>
 
 **Problem**: 
 You need a trigger handler that validates Contact records before insert/update.

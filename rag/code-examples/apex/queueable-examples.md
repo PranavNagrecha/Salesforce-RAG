@@ -8,7 +8,7 @@
 Queueable Apex is used for lightweight async processing, chaining jobs, and performing callouts after DML operations. It provides better error handling than @future methods and can process up to 50,000 records.
 
 **Related Patterns**:
-- [Asynchronous Apex Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#queueable-apex-patterns)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#queueable-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 - <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 ## Examples
@@ -18,7 +18,7 @@ Queueable Apex is used for lightweight async processing, chaining jobs, and perf
 **Pattern**: Basic Queueable for async processing
 **Use Case**: Simple async operations without chaining
 **Complexity**: Basic
-**Related Patterns**: [Basic Queueable](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-1-basic-queueable)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-1-basic-queueable.html' | relative_url }}">Basic Queueable</a>
 
 **Problem**:
 You need to send email notifications after record updates. The Queueable job sends emails asynchronously without blocking the main transaction.
@@ -128,7 +128,7 @@ private class EmailNotificationQueueableTest {
 **Pattern**: Queueable chaining - one job triggers another
 **Use Case**: Multi-step async operations (Job A → Job B → Job C)
 **Complexity**: Intermediate
-**Related Patterns**: [Chained Queueable Jobs](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-2-chained-queueable-jobs)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-2-chained-queueable-jobs.html' | relative_url }}">Chained Queueable Jobs</a>
 
 **Problem**:
 You need to perform a multi-step integration: (1) Query external API, (2) Transform data, (3) Update Salesforce records. Each step should run as a chained Queueable job.
@@ -242,7 +242,7 @@ Id jobId = System.enqueueJob(firstJob);
 **Pattern**: Queueable performing callouts after DML
 **Use Case**: Integration scenarios requiring callouts after record updates
 **Complexity**: Intermediate
-**Related Patterns**: [Queueable with Callouts](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-3-queueable-with-callouts)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-3-queueable-with-callouts.html' | relative_url }}">Queueable with Callouts</a>
 
 **Problem**:
 You need to create a record in Salesforce, then call an external API to sync the data. The Queueable job performs the callout after the DML completes.
@@ -338,7 +338,7 @@ Id jobId = System.enqueueJob(syncJob);
 **Pattern**: Queueable with retry logic and exponential backoff
 **Use Case**: Handling transient errors in async operations
 **Complexity**: Advanced
-**Related Patterns**: [Queueable Retry Pattern](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-4-queueable-retry-pattern)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-4-queueable-retry-pattern.html' | relative_url }}">Queueable Retry Pattern</a>
 
 **Problem**:
 You need to call an external API that may be temporarily unavailable. The Queueable job should retry with increasing delays (1s, 2s, 4s) up to 3 attempts.
@@ -469,7 +469,7 @@ Id jobId = System.enqueueJob(job);
 **Pattern**: Queueable job monitoring and status tracking
 **Use Case**: Monitoring async operations and tracking execution
 **Complexity**: Intermediate
-**Related Patterns**: [Queueable Monitoring](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-5-queueable-monitoring)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#pattern-5-queueable-monitoring.html' | relative_url }}">Queueable Monitoring</a>
 
 **Problem**:
 You need to monitor Queueable job execution, track execution time, detect failures, and send alerts on errors.

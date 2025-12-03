@@ -9,8 +9,8 @@ The Service Layer coordinates between domain, selector, and integration layers. 
 
 **Related Patterns**:
 
-- [Apex Class Layering](/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering)
-- [Service Layer Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer)
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#apex-class-layering.html' | relative_url }}">Apex Class Layering</a>
+- <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#service-layer.html' | relative_url }}">Service Layer Pattern</a>
 
 ## Examples
 
@@ -19,7 +19,7 @@ The Service Layer coordinates between domain, selector, and integration layers. 
 **Pattern**: Service Layer with Domain and Selector Delegation
 **Use Case**: Orchestrating a simple update workflow
 **Complexity**: Basic
-**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer), [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer</a>, <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer.html' | relative_url }}">Selector Layer</a>
 
 **Problem**:
 You need to update records with validation and business logic. The service layer orchestrates the workflow by delegating to domain and selector layers.
@@ -171,7 +171,7 @@ private class ContactUpdateServiceTest {
 **Pattern**: Service Layer Orchestrating Multi-Step Workflow
 **Use Case**: Complex business process with multiple steps
 **Complexity**: Intermediate
-**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#service-layer.html' | relative_url }}">Service Layer</a>, <a href="{{ '/rag/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
 
 **Problem**:
 You need to orchestrate a complex workflow: query related records → validate → update multiple objects → send notifications → log results.
@@ -336,7 +336,7 @@ private class AccountContactUpdateServiceTest {
 **Pattern**: Service Layer with Asynchronous Processing
 **Use Case**: Long-running operations that should be async
 **Complexity**: Advanced
-**Related Patterns**: [Queueable Pattern](/Salesforce-RAG/rag/development/apex-patterns.html#queueable), [Asynchronous Apex](/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns)
+**Related Patterns**: <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#queueable.html' | relative_url }}">Queueable Pattern</a>, <a href="{{ '/rag/code-examples/apex/Salesforce-RAG/rag/development/apex-patterns.html#asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex</a>
 
 **Problem**:
 You need to process a large number of records asynchronously, potentially chaining multiple jobs.

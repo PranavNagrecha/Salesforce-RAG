@@ -41,7 +41,7 @@ Set<Id> contactIds = new Set<Id>{ '003000000000001', '003000000000002' };
 List<Id> processedIds = ContactUpdateService.processContacts(contactIds);
 ```
 
-**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), <a href="{{ '/rag/api-reference/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/apex-patterns.html#service-layer.html' | relative_url }}">Service Layer</a>, <a href="{{ '/rag/api-reference/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
 
 **Best Practices**:
 - Always use `with sharing` or `without sharing` explicitly
@@ -77,7 +77,7 @@ ContactDomain.validateAndPrepareForUpdate(contacts);
 update contacts;
 ```
 
-**Related Patterns**: [Domain Layer](/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/apex-patterns.html#domain-layer.html' | relative_url }}">Domain Layer</a>
 
 **Best Practices**:
 - Should NOT contain SOQL queries (delegate to Selector layer)
@@ -127,7 +127,7 @@ Set<String> externalIds = new Set<String>{ 'EXT-001', 'EXT-002' };
 List<Contact> contacts = ContactSelector.selectByExternalId(externalIds);
 ```
 
-**Related Patterns**: [Selector Layer](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer.html' | relative_url }}">Selector Layer</a>
 
 **Best Practices**:
 - ALL SOQL queries MUST use `WITH SECURITY_ENFORCED` or `WITH USER_MODE`
@@ -171,7 +171,7 @@ HttpResponse response = RestIntegrationService.makeCallout(
 );
 ```
 
-**Related Patterns**: [Integration Layer](/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer)
+**Related Patterns**: <a href="{{ '/rag/api-reference/Salesforce-RAG/rag/development/apex-patterns.html#integration-layer.html' | relative_url }}">Integration Layer</a>
 
 **Best Practices**:
 - Use Named Credentials for endpoints (NO hardcoded URLs)
