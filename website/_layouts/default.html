@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  {% seo %}
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="{{ site.author }}">
+  <meta name="keywords" content="Salesforce, RAG, Knowledge Base, Implementation Patterns, Best Practices, Apex, LWC, Lightning Web Components, Salesforce Development, Integration Patterns, Architecture">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  {% if site.twitter.username %}
+  <meta name="twitter:creator" content="@{{ site.twitter.username }}">
+  {% endif %}
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ site.url }}{{ site.baseurl }}/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "{{ page.title | default: site.title }}",
+    "description": "{{ page.description | default: site.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}"
+    }
+  }
+  </script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-brand">
+          <a href="{{ '/' | relative_url }}" class="brand-link" aria-label="Home">
+            <h1 class="site-title">{{ site.title }}</h1>
+          </a>
+        </div>
+        <ul class="navbar-nav">
+          <li><a href="{{ '/rag/rag-index.html' | relative_url }}">Browse All</a></li>
+          <li><a href="{{ '/examples/' | relative_url }}">Examples</a></li>
+          <li><button id="search-toggle" class="search-toggle" aria-label="Search" aria-expanded="false">🔍 Search</button></li>
+          <li><a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Search Container -->
+  <div id="search-container" class="search-container" style="display: none;" role="search" aria-label="Search knowledge base">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search knowledge base... (Ctrl+K)" autocomplete="off" aria-label="Search input">
+      <button id="search-close" class="search-close" aria-label="Close search">×</button>
+    </div>
+    <div id="search-results" class="search-results" role="region" aria-live="polite" aria-label="Search results"></div>
+  </div>
+  
+  <main class="main-content" role="main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer">View on GitHub</a> |
+        <a href="{{ '/rag/rag-index.html' | relative_url }}">Knowledge Index</a> |
+        <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+      </p>
+    </div>
+  </footer>
+  
+  <!-- Search functionality -->
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+</body>
+</html>
+

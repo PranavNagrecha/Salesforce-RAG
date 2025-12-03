@@ -8,20 +8,27 @@
 !/website/
 !/rag/
 
-# Jekyll build artifacts
+# Jekyll build artifacts (only in root, not in website/)
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata/
 vendor/
 _layouts/
+!website/_layouts/
 assets/
+!website/assets/
 _config.yml
+!website/root/_config.yml
 Gemfile
+!website/root/Gemfile
 Gemfile.lock
 index.md
+!website/root/index.md
 robots.txt
+!website/root/robots.txt
 sitemap.xml
+!website/root/sitemap.xml
 .nojekyll
 
 # Dependencies

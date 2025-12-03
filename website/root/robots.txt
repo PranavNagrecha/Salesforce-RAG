@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pranavnagrecha.github.io/Salesforce-RAG/sitemap.xml
+
