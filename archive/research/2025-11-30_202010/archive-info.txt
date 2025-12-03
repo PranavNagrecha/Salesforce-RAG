@@ -1,9 +1,0 @@
-Research Archive
-================
-Archived: Sun Nov 30 20:20:10 EST 2025
-Source Files: 3
-Topic Files: 3
-Total Files: 6
-
-Original Location: /Users/pranavnagrecha/Salesforce for all/Knowledge/research
-Archive Location: /Users/pranavnagrecha/Salesforce for all/archive/research/2025-11-30_202010
