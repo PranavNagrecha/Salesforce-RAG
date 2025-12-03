@@ -32,6 +32,10 @@ LESSONS LEARNED (Don't repeat these mistakes):
    - Check that correct number of cards are generated
    - Ensure closing tags are correct
    - Validate HTML structure
+7. Dependencies: Script requires PyYAML for YAML frontmatter parsing
+   - GitHub Actions needs: pip install pyyaml
+   - Local development: pip install pyyaml or pip install -r requirements.txt
+   - Don't assume dependencies are installed
 """
 
 import re
