@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers release governance patterns for Salesforce, including Change Advisory Boards (CAB), approval workflows, and risk-based release checklists. These patterns are essential for managing complex Salesforce releases with multiple stakeholders, compliance requirements, and risk mitigation.
 
 **Related Patterns**:
-- [CI/CD Patterns](operations/cicd-patterns.html) - CI/CD and deployment automation
-- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
-- [Delivery Framework](project-methods/delivery-framework.html) - Project delivery methodology
+- <a href="{{ '/rag/operations/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD and deployment automation
+- <a href="{{ '/rag/operations/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
+- <a href="{{ '/rag/operations/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 
 ## Prerequisites
 
@@ -347,16 +347,16 @@ This guide covers release governance patterns for Salesforce, including Change A
 ## Related Patterns
 
 **See Also**:
-- [CI/CD Patterns](operations/cicd-patterns.html) - CI/CD and deployment automation
-- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
+- <a href="{{ '/rag/operations/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD and deployment automation
+- <a href="{{ '/rag/operations/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
 
 **Related Domains**:
-- [Delivery Framework](project-methods/delivery-framework.html) - Project delivery methodology
-- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing approaches
-- [Governance Patterns](architecture/governance-patterns.html) - Org governance patterns
+- <a href="{{ '/rag/operations/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
+- <a href="{{ '/rag/operations/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing approaches
+- <a href="{{ '/rag/operations/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Org governance patterns
 
-- [CI/CD Patterns](operations/cicd-patterns.html) - CI/CD and deployment automation
-- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
-- [Delivery Framework](project-methods/delivery-framework.html) - Project delivery methodology
-- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing approaches
+- <a href="{{ '/rag/operations/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD and deployment automation
+- <a href="{{ '/rag/operations/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
+- <a href="{{ '/rag/operations/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
+- <a href="{{ '/rag/operations/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing approaches
 

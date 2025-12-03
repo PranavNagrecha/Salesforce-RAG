@@ -19,8 +19,8 @@ last_reviewed: "2025-01-XX"
 Record-Triggered Flows run automatically when records are created or updated. They can run before save (to modify field values) or after save (to create related records, send notifications, etc.). This document provides practical examples of common Record-Triggered Flow patterns.
 
 **Related Patterns**:
-- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Order of Execution](code-examples/development/order-of-execution.html) - Understanding when Flows execute
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
 
 ## Examples
 
@@ -309,11 +309,11 @@ Handle errors by:
 
 ## Related Examples
 
-- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flows
-- [Subflow Examples](code-examples/flow/subflow-examples.html) - Reusable flow components
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/screen-flow-examples.html' | relative_url }}">Screen Flow Examples</a> - User interaction flows
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/subflow-examples.html' | relative_url }}">Subflow Examples</a> - Reusable flow components
 
 ## See Also
 
-- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Order of Execution](code-examples/development/order-of-execution.html) - Understanding when Flows execute
-- [Error Handling and Logging](code-examples/development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Understanding when Flows execute
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

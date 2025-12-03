@@ -387,11 +387,11 @@ Think of yourself as an enabler, not a controller. Your job is to:
 ## Related Patterns
 
 **See Also**:
-- [Architect Role](architecture/architect-role.html) - Architect leadership responsibilities
-- [Stakeholder Communication](architecture/stakeholder-communication.html) - Communication patterns
-- [Project Estimation](architecture/project-estimation.html) - Team estimation patterns
+- <a href="{{ '/rag/architecture/architecture/architect-role.html' | relative_url }}">Architect Role</a> - Architect leadership responsibilities
+- <a href="{{ '/rag/architecture/architecture/stakeholder-communication.html' | relative_url }}">Stakeholder Communication</a> - Communication patterns
+- <a href="{{ '/rag/architecture/architecture/project-estimation.html' | relative_url }}">Project Estimation</a> - Team estimation patterns
 
 **Related Domains**:
-- [Governance Patterns](architecture/governance-patterns.html) - Team governance and standards
-- [Delivery Framework](project-methods/delivery-framework.html) - Team coordination in sprints
+- <a href="{{ '/rag/architecture/architecture/governance-patterns.html' | relative_url }}">Governance Patterns</a> - Team governance and standards
+- <a href="{{ '/rag/architecture/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Team coordination in sprints
 

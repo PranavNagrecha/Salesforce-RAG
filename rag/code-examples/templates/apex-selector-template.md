@@ -65,7 +65,7 @@ public with sharing class [ObjectName]Selector {
 - Customize WHERE clauses for specific use cases
 
 **Related Patterns**:
-- [Selector Layer Examples](code-examples/apex/selector-layer-examples.html)
+- <a href="{{ '/rag/code-examples/templates/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a>
 - [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#selector-layer)
-- [SOQL Patterns](development/soql-query-patterns.html)
+- <a href="{{ '/rag/code-examples/templates/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>
 

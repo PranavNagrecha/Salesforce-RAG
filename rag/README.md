@@ -87,11 +87,11 @@ Files are tagged with levels to indicate target audience:
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.html) for contribution guidelines.
+See <a href="{{ '/rag/CONTRIBUTING.html' | relative_url }}">CONTRIBUTING.md</a> for contribution guidelines.
 
 ## Maintenance
 
-See [MAINTENANCE.md](MAINTENANCE.html) for maintenance procedures and schedules.
+See <a href="{{ '/rag/MAINTENANCE.html' | relative_url }}">MAINTENANCE.md</a> for maintenance procedures and schedules.
 
 ## License
 

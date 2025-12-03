@@ -24,10 +24,10 @@ Systematic approaches to reconciling data between Salesforce and external system
 - Familiarity with data quality concepts
 
 **Recommended Reading**:
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns
-- [Integration Debugging](troubleshooting/integration-debugging.html) - Debugging integration issues
-- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data validation patterns
+- <a href="{{ '/rag/troubleshooting/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/troubleshooting/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Debugging integration issues
+- <a href="{{ '/rag/troubleshooting/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/troubleshooting/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data validation patterns
 
 ## Reconciliation Patterns
 
@@ -428,16 +428,16 @@ Avoid reconciliation when:
 ## Related Patterns
 
 **See Also**:
-- [Integration Debugging](troubleshooting/integration-debugging.html) - Debugging integration issues
+- <a href="{{ '/rag/troubleshooting/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Debugging integration issues
 
 **Related Domains**:
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration and validation
-- [Data Quality Stewardship](data-governance/data-quality-stewardship.html) - Data quality management
+- <a href="{{ '/rag/troubleshooting/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for reconciliation
+- <a href="{{ '/rag/troubleshooting/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration and validation
+- <a href="{{ '/rag/troubleshooting/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality management
 
-- [Integration Debugging](troubleshooting/integration-debugging.html) - Debugging integration issues
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns for reconciliation
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data validation patterns
-- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [SIS Sync Patterns](integrations/sis-sync-patterns.html) - High-volume synchronization patterns
+- <a href="{{ '/rag/troubleshooting/troubleshooting/integration-debugging.html' | relative_url }}">Integration Debugging</a> - Debugging integration issues
+- <a href="{{ '/rag/troubleshooting/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for reconciliation
+- <a href="{{ '/rag/troubleshooting/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data validation patterns
+- <a href="{{ '/rag/troubleshooting/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/troubleshooting/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume synchronization patterns
 

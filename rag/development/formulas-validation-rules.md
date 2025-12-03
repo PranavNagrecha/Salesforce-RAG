@@ -433,11 +433,11 @@ When creating formulas, validation rules, or lookup filters:
 ## Related Patterns
 
 **See Also**:
-- [Flow Patterns](development/flow-patterns.html) - Automation patterns for business logic
-- [Admin Basics](development/admin-basics.html) - Declarative configuration patterns
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling in validation rules
+- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Automation patterns for business logic
+- <a href="{{ '/rag/development/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Declarative configuration patterns
+- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling in validation rules
 
 **Related Domains**:
-- [Object Setup and Configuration](data-modeling/object-setup-and-configuration.html) - Field and object configuration
-- [Validation Examples](code-examples/utilities/validation-examples.html) - Validation code examples
+- <a href="{{ '/rag/development/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Field and object configuration
+- <a href="{{ '/rag/development/code-examples/utilities/validation-examples.html' | relative_url }}">Validation Examples</a> - Validation code examples
 

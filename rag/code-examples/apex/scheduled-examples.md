@@ -9,7 +9,7 @@ Scheduled Apex provides time-based automation for periodic tasks. It's used for 
 
 **Related Patterns**:
 - [Asynchronous Apex Patterns](/Salesforce-RAG/rag/development/asynchronous-apex-patterns.html#scheduled-apex-patterns)
-- [Error Handling and Logging](development/error-handling-and-logging.html)
+- <a href="{{ '/rag/code-examples/apex/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 ## Examples
 
@@ -511,7 +511,7 @@ List<CronTrigger> allJobs = ScheduledJobMonitor.getAllScheduledJobs();
 
 ## Related Patterns
 
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Complete async patterns guide
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
-- [Scheduled Template](code-examples/templates/apex-scheduled-template.html) - Scheduled Apex template
+- <a href="{{ '/rag/code-examples/apex/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Complete async patterns guide
+- <a href="{{ '/rag/code-examples/apex/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/code-examples/apex/code-examples/templates/apex-scheduled-template.html' | relative_url }}">Scheduled Template</a> - Scheduled Apex template
 

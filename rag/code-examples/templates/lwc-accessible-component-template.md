@@ -7,9 +7,9 @@
 This template provides a complete, accessible LWC component structure with all accessibility best practices built in. Use this as a starting point for new components.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](code-examples/lwc/accessibility-examples.html) - Complete code examples
-- [LWC Accessibility Quick Start](quick-start/lwc-accessibility-quick-start.html) - Quick start guide
+- <a href="{{ '/rag/code-examples/templates/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/code-examples/templates/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
+- <a href="{{ '/rag/code-examples/templates/quick-start/lwc-accessibility-quick-start.html' | relative_url }}">LWC Accessibility Quick Start</a> - Quick start guide
 
 ## Component Structure
 
@@ -517,8 +517,8 @@ textarea:focus-visible,
 
 ## Related Patterns
 
-- [LWC Accessibility Guidelines](mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](code-examples/lwc/accessibility-examples.html) - Complete code examples
-- [LWC Accessibility Quick Start](quick-start/lwc-accessibility-quick-start.html) - Quick start guide
-- [LWC Accessibility Testing](testing/lwc-accessibility-testing.html) - Testing patterns
+- <a href="{{ '/rag/code-examples/templates/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/code-examples/templates/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Complete code examples
+- <a href="{{ '/rag/code-examples/templates/quick-start/lwc-accessibility-quick-start.html' | relative_url }}">LWC Accessibility Quick Start</a> - Quick start guide
+- <a href="{{ '/rag/code-examples/templates/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 

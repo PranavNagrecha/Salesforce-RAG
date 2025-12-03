@@ -30,9 +30,9 @@ This document covers the fundamental concepts of Salesforce sharing, including O
 - Familiarity with record ownership concepts
 
 **Recommended Reading**:
-- [Permission Set Architecture](security/permission-set-architecture.html) - Permission management patterns
-- [Admin Basics](development/admin-basics.html) - User management and basic administration
-- [Sharing Rules and Manual Sharing](security/sharing-rules-and-manual-sharing.html) - Advanced sharing patterns
+- <a href="{{ '/rag/security/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management patterns
+- <a href="{{ '/rag/security/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+- <a href="{{ '/rag/security/security/sharing-rules-and-manual-sharing.html' | relative_url }}">Sharing Rules and Manual Sharing</a> - Advanced sharing patterns
 
 ## Sharing Model Fundamentals
 

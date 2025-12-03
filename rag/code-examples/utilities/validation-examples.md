@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Data validation ensures data quality and prevents invalid data from entering the system. These examples demonstrate field validation, record validation, bulk validation, custom validation rules, and validation error handling.
 
 **Related Patterns**:
-- [Formulas and Validation Rules](development/formulas-validation-rules.html) - Validation rule patterns
-- [Error Handling Examples](code-examples/utilities/error-handling-examples.html) - Error handling patterns
-- [Data Quality Stewardship](data-governance/data-quality-stewardship.html) - Data quality patterns
+- <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
+- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
+- <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Data validation ensures data quality and prevents invalid data from entering the
 **Pattern**: Validating individual fields
 **Use Case**: Ensuring field values meet business rules
 **Complexity**: Basic
-**Related Patterns**: [Formulas and Validation Rules](development/formulas-validation-rules.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
 
 **Problem**:
 You need to validate field values before saving records.
@@ -188,7 +188,7 @@ if (!phoneResult.isValid) {
 **Pattern**: Validating entire records
 **Use Case**: Ensuring records meet business rules
 **Complexity**: Intermediate
-**Related Patterns**: [Formulas and Validation Rules](development/formulas-validation-rules.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a>
 
 **Problem**:
 You need to validate entire records with multiple fields and business rules.
@@ -308,7 +308,7 @@ insert contact;
 **Pattern**: Validating multiple records efficiently
 **Use Case**: Validating bulk data operations
 **Complexity**: Intermediate
-**Related Patterns**: [Data Quality Stewardship](data-governance/data-quality-stewardship.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a>
 
 **Problem**:
 You need to validate multiple records efficiently in bulk operations.
@@ -428,11 +428,11 @@ if (!separated.get('invalid').isEmpty()) {
 
 ## Related Examples
 
-- [Error Handling Examples](code-examples/utilities/error-handling-examples.html) - Error handling patterns
-- [Logging Examples](code-examples/utilities/logging-examples.html) - Logging patterns
+- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
+- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging patterns
 
 ## See Also
 
-- [Formulas and Validation Rules](development/formulas-validation-rules.html) - Validation rule patterns
-- [Data Quality Stewardship](data-governance/data-quality-stewardship.html) - Data quality patterns
+- <a href="{{ '/rag/code-examples/utilities/development/formulas-validation-rules.html' | relative_url }}">Formulas and Validation Rules</a> - Validation rule patterns
+- <a href="{{ '/rag/code-examples/utilities/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality Stewardship</a> - Data quality patterns
 

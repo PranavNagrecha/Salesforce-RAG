@@ -26,9 +26,9 @@ This guide provides solutions for common LWC errors encountered during Salesforc
 - Familiarity with field-level security and object permissions
 
 **Recommended Reading**:
-- [LWC Patterns](development/lwc-patterns.html) - Complete LWC development patterns
-- [LWC Jest Testing](testing/lwc-jest-testing.html) - LWC testing patterns
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
+- <a href="{{ '/rag/troubleshooting/testing/lwc-jest-testing.html' | relative_url }}">LWC Jest Testing</a> - LWC testing patterns
+- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 
 ## Cannot read property 'value' of undefined
 
@@ -97,7 +97,7 @@ wiredRecord({ data, error }) {
 - Check for null/undefined before accessing nested properties
 - Use loading states to prevent access before data loads
 
-**Related Patterns**: [LWC Patterns](development/lwc-patterns.html), [LDS Patterns](mcp-knowledge/lds-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -260,7 +260,7 @@ wiredRecord({ data, error }) { // Method - correct for wire function
 - Use method for wire function: `@wire(adapter) methodName({ data, error }) {}`
 - Don't mix patterns incorrectly
 
-**Related Patterns**: [LWC API Reference](/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire), [LDS Patterns](mcp-knowledge/lds-patterns.html)
+**Related Patterns**: [LWC API Reference](/Salesforce-RAG/rag/api-reference/lwc-api-reference.html#wire), <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>
 
 ---
 
@@ -389,7 +389,7 @@ handleClick() {
 - Bind methods when passing as callbacks
 - Avoid using `this` in unbound callbacks
 
-**Related Patterns**: [LWC Best Practices](mcp-knowledge/lwc-best-practices.html)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a>
 
 ---
 
@@ -452,7 +452,7 @@ wiredRecord({ data, error }) {
 - Validate parameter types
 - Handle parameter changes properly
 
-**Related Patterns**: [LDS Patterns](mcp-knowledge/lds-patterns.html), [LWC API Reference](api-reference/lwc-api-reference.html)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a>, <a href="{{ '/rag/troubleshooting/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a>
 
 ---
 
@@ -587,7 +587,7 @@ A field has proper FLS permissions and object access, but the component still fa
 **Related Patterns**: 
 - [Sharing Sets and Portals](../security/sharing-sets-and-portals.html#field-level-sharing-considerations) - Field-level security patterns
 - [Object Setup and Configuration](../data-modeling/object-setup-and-configuration.html#field-level-security) - Field configuration best practices
-- [LWC Patterns](development/lwc-patterns.html) - LWC component patterns
+- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC component patterns
 
 ---
 
@@ -704,17 +704,17 @@ A field has proper FLS permissions and object access, but the component still fa
 ## Related Patterns
 
 **See Also**:
-- [LWC Accessibility Errors](troubleshooting/lwc-accessibility-errors.html) - Accessibility-specific errors
+- <a href="{{ '/rag/troubleshooting/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 
 **Related Domains**:
-- [LWC Patterns](development/lwc-patterns.html) - Complete LWC patterns
-- [LWC Best Practices](mcp-knowledge/lwc-best-practices.html) - LWC best practices
-- [LDS Patterns](mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
+- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 
-- [LWC Patterns](development/lwc-patterns.html) - Complete LWC patterns
-- [LWC Best Practices](mcp-knowledge/lwc-best-practices.html) - LWC best practices
-- [LDS Patterns](mcp-knowledge/lds-patterns.html) - Lightning Data Service patterns
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
-- [LWC Accessibility Errors](troubleshooting/lwc-accessibility-errors.html) - Accessibility-specific errors
+- <a href="{{ '/rag/troubleshooting/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - LWC best practices
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Lightning Data Service patterns
+- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/troubleshooting/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">LWC Accessibility Errors</a> - Accessibility-specific errors
 

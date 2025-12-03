@@ -8,8 +8,8 @@
 Trigger handlers process trigger events with bulkification, error handling, and proper layer delegation. Triggers should be thin and delegate to Domain or Service layers.
 
 **Related Patterns**:
-- [Apex Patterns](development/apex-patterns.html) - Apex design patterns
-- [Order of Execution](development/order-of-execution.html) - Execution order
+- <a href="{{ '/rag/code-examples/apex/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex design patterns
+- <a href="{{ '/rag/code-examples/apex/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
 
 ## Examples
 
@@ -307,8 +307,8 @@ for (Contact newContact : newContacts) {
 
 ## Related Patterns
 
-- [Service Layer Examples](code-examples/apex/service-layer-examples.html) - Service layer patterns
-- [Domain Layer Examples](code-examples/apex/domain-layer-examples.html) - Domain layer patterns
-- [Apex Patterns](development/apex-patterns.html) - Complete Apex patterns
-- [Order of Execution](development/order-of-execution.html) - Execution order
+- <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
+- <a href="{{ '/rag/code-examples/apex/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a> - Domain layer patterns
+- <a href="{{ '/rag/code-examples/apex/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
+- <a href="{{ '/rag/code-examples/apex/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Execution order
 

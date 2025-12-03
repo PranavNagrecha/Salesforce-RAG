@@ -432,12 +432,12 @@ Think of large data loads as four-phase process: Plan thoroughly, test in sandbo
 ## Related Patterns
 
 **See Also**:
-- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Limit management for large operations
+- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Limit management for large operations
 
 **Related Domains**:
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration strategies and patterns
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns for data loads
-- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection for large loads
-- [Bulk API Examples](code-examples/integrations/bulk-api-examples.html) - Bulk API code examples
-- [SIS Sync Patterns](integrations/sis-sync-patterns.html) - High-volume batch synchronization patterns
+- <a href="{{ '/rag/development/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration strategies and patterns
+- <a href="{{ '/rag/development/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for data loads
+- <a href="{{ '/rag/development/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection for large loads
+- <a href="{{ '/rag/development/code-examples/integrations/bulk-api-examples.html' | relative_url }}">Bulk API Examples</a> - Bulk API code examples
+- <a href="{{ '/rag/development/integrations/sis-sync-patterns.html' | relative_url }}">SIS Sync Patterns</a> - High-volume batch synchronization patterns
 

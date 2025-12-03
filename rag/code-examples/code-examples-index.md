@@ -15,99 +15,99 @@ This directory contains standalone code examples that complement the pattern doc
 ## Apex Examples
 
 ### Service Layer
-- [Service Layer Examples](code-examples/apex/service-layer-examples.html) - Service class implementations with domain and selector delegation
+- <a href="{{ '/rag/code-examples/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service class implementations with domain and selector delegation
 
 ### Domain Layer
-- [Domain Layer Examples](code-examples/apex/domain-layer-examples.html) - Object-specific business logic and validation
+- <a href="{{ '/rag/code-examples/code-examples/apex/domain-layer-examples.html' | relative_url }}">Domain Layer Examples</a> - Object-specific business logic and validation
 
 ### Selector Layer
-- [Selector Layer Examples](code-examples/apex/selector-layer-examples.html) - SOQL queries and data access patterns
+- <a href="{{ '/rag/code-examples/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a> - SOQL queries and data access patterns
 
 ### Integration Layer
-- [Integration Examples](code-examples/apex/integration-examples.html) - External API callouts and transformations
+- <a href="{{ '/rag/code-examples/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - External API callouts and transformations
 
 ### Triggers
-- [Trigger Examples](code-examples/apex/trigger-examples.html) - Trigger handler patterns with bulkification
+- <a href="{{ '/rag/code-examples/code-examples/apex/trigger-examples.html' | relative_url }}">Trigger Examples</a> - Trigger handler patterns with bulkification
 
 ### Asynchronous Processing
-- [Batch Examples](code-examples/apex/batch-examples.html) - Batch Apex implementations: stateless, stateful, chaining, error handling, monitoring
-- [Queueable Examples](code-examples/apex/queueable-examples.html) - Queueable patterns: basic, chaining, callouts, retry logic, monitoring
-- [Scheduled Examples](code-examples/apex/scheduled-examples.html) - Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, monitoring
+- <a href="{{ '/rag/code-examples/code-examples/apex/batch-examples.html' | relative_url }}">Batch Examples</a> - Batch Apex implementations: stateless, stateful, chaining, error handling, monitoring
+- <a href="{{ '/rag/code-examples/code-examples/apex/queueable-examples.html' | relative_url }}">Queueable Examples</a> - Queueable patterns: basic, chaining, callouts, retry logic, monitoring
+- <a href="{{ '/rag/code-examples/code-examples/apex/scheduled-examples.html' | relative_url }}">Scheduled Examples</a> - Scheduled Apex patterns: cron expressions, scheduled batch jobs, error handling, monitoring
 
 ### Testing
-- [Test Examples](code-examples/apex/test-examples.html) - Test class patterns, factories, and mocking
+- <a href="{{ '/rag/code-examples/code-examples/apex/test-examples.html' | relative_url }}">Test Examples</a> - Test class patterns, factories, and mocking
 
 ## LWC Examples
 
 ### Components
-- [Component Examples](code-examples/lwc/component-examples.html) - Lightning Web Component implementations
+- <a href="{{ '/rag/code-examples/code-examples/lwc/component-examples.html' | relative_url }}">Component Examples</a> - Lightning Web Component implementations
 
 ### Services
-- [Service Examples](code-examples/lwc/service-examples.html) - LWC service layer patterns
+- <a href="{{ '/rag/code-examples/code-examples/lwc/service-examples.html' | relative_url }}">Service Examples</a> - LWC service layer patterns
 
 ### Wire and Data
-- [Wire Examples](code-examples/lwc/wire-examples.html) - Wire service and imperative call patterns
+- <a href="{{ '/rag/code-examples/code-examples/lwc/wire-examples.html' | relative_url }}">Wire Examples</a> - Wire service and imperative call patterns
 
 ### Accessibility
-- [Accessibility Examples](code-examples/lwc/accessibility-examples.html) - Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
+- <a href="{{ '/rag/code-examples/code-examples/lwc/accessibility-examples.html' | relative_url }}">Accessibility Examples</a> - Complete accessibility code examples: forms, keyboard navigation, ARIA, images, semantic HTML, dynamic content, color/contrast
 
 ### Testing
-- [Test Examples](code-examples/lwc/test-examples.html) - Jest test examples for LWC
+- <a href="{{ '/rag/code-examples/code-examples/lwc/test-examples.html' | relative_url }}">Test Examples</a> - Jest test examples for LWC
 
 ## Flow Examples
 
 ### Record-Triggered
-- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Before-save and after-save flow patterns
+- <a href="{{ '/rag/code-examples/code-examples/flow/record-triggered-examples.html' | relative_url }}">Record-Triggered Examples</a> - Before-save and after-save flow patterns
 
 ### Screen Flows
-- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flow patterns
+- <a href="{{ '/rag/code-examples/code-examples/flow/screen-flow-examples.html' | relative_url }}">Screen Flow Examples</a> - User interaction flow patterns
 
 ### Subflows
-- [Subflow Examples](code-examples/flow/subflow-examples.html) - Reusable subflow patterns
+- <a href="{{ '/rag/code-examples/code-examples/flow/subflow-examples.html' | relative_url }}">Subflow Examples</a> - Reusable subflow patterns
 
 ## Integration Examples
 
 ### REST API
-- [REST API Examples](code-examples/integrations/rest-api-examples.html) - Outbound and inbound REST API patterns
+- <a href="{{ '/rag/code-examples/code-examples/integrations/rest-api-examples.html' | relative_url }}">REST API Examples</a> - Outbound and inbound REST API patterns
 
 ### Platform Events
-- [Platform Events Examples](code-examples/integrations/platform-events-examples.html) - Event publishing and subscription patterns
+- <a href="{{ '/rag/code-examples/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Event publishing and subscription patterns
 
 ### Callouts
-- [Callout Examples](code-examples/integrations/callout-examples.html) - HTTP callout patterns with error handling
+- <a href="{{ '/rag/code-examples/code-examples/integrations/callout-examples.html' | relative_url }}">Callout Examples</a> - HTTP callout patterns with error handling
 
 ### Bulk API
-- [Bulk API Examples](code-examples/integrations/bulk-api-examples.html) - Bulk data operations
+- <a href="{{ '/rag/code-examples/code-examples/integrations/bulk-api-examples.html' | relative_url }}">Bulk API Examples</a> - Bulk data operations
 
 ## Utility Examples
 
 ### Logging
-- [Logging Examples](code-examples/utilities/logging-examples.html) - Structured logging patterns
+- <a href="{{ '/rag/code-examples/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Structured logging patterns
 
 ### Error Handling
-- [Error Handling Examples](code-examples/utilities/error-handling-examples.html) - Error handling and retry patterns
+- <a href="{{ '/rag/code-examples/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling and retry patterns
 
 ### Validation
-- [Validation Examples](code-examples/utilities/validation-examples.html) - Data validation patterns
+- <a href="{{ '/rag/code-examples/code-examples/utilities/validation-examples.html' | relative_url }}">Validation Examples</a> - Data validation patterns
 
 ## Templates
 
 ### Apex Templates
-- [Service Template](code-examples/templates/apex-service-template.html) - Service class template
-- [Domain Template](code-examples/templates/apex-domain-template.html) - Domain class template
-- [Selector Template](code-examples/templates/apex-selector-template.html) - Selector class template
-- [Trigger Template](code-examples/templates/apex-trigger-template.html) - Trigger handler template
-- [Batch Template](code-examples/templates/apex-batch-template.html) - Batch Apex template
-- [Queueable Template](code-examples/templates/apex-queueable-template.html) - Queueable Apex template
-- [Scheduled Template](code-examples/templates/apex-scheduled-template.html) - Scheduled Apex template
-- [Test Class Template](code-examples/templates/test-class-template.html) - Test class template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-service-template.html' | relative_url }}">Service Template</a> - Service class template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-domain-template.html' | relative_url }}">Domain Template</a> - Domain class template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-selector-template.html' | relative_url }}">Selector Template</a> - Selector class template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-trigger-template.html' | relative_url }}">Trigger Template</a> - Trigger handler template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-batch-template.html' | relative_url }}">Batch Template</a> - Batch Apex template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-queueable-template.html' | relative_url }}">Queueable Template</a> - Queueable Apex template
+- <a href="{{ '/rag/code-examples/code-examples/templates/apex-scheduled-template.html' | relative_url }}">Scheduled Template</a> - Scheduled Apex template
+- <a href="{{ '/rag/code-examples/code-examples/templates/test-class-template.html' | relative_url }}">Test Class Template</a> - Test class template
 
 ### LWC Templates
-- [Accessible Component Template](code-examples/templates/lwc-accessible-component-template.html) - Accessible LWC component template with all accessibility best practices
+- <a href="{{ '/rag/code-examples/code-examples/templates/lwc-accessible-component-template.html' | relative_url }}">Accessible Component Template</a> - Accessible LWC component template with all accessibility best practices
 
 ### Deployment Templates
-- [SFDX Project Template](code-examples/templates/sfdx-project-template.html) - SFDX project setup template
-- [CI/CD Template](code-examples/templates/ci-cd-template.html) - CI/CD pipeline template
+- <a href="{{ '/rag/code-examples/code-examples/templates/sfdx-project-template.html' | relative_url }}">SFDX Project Template</a> - SFDX project setup template
+- <a href="{{ '/rag/code-examples/code-examples/templates/ci-cd-template.html' | relative_url }}">CI/CD Template</a> - CI/CD pipeline template
 
 ## How to Use
 
@@ -119,9 +119,9 @@ This directory contains standalone code examples that complement the pattern doc
 
 ## Related Documentation
 
-- [RAG Index](rag-index.html) - Complete RAG library index
-- [Apex Patterns](development/apex-patterns.html) - Apex design patterns
-- [LWC Patterns](development/lwc-patterns.html) - Lightning Web Component patterns
-- [Flow Patterns](development/flow-patterns.html) - Flow design patterns
+- <a href="{{ '/rag/code-examples/rag-index.html' | relative_url }}">RAG Index</a> - Complete RAG library index
+- <a href="{{ '/rag/code-examples/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex design patterns
+- <a href="{{ '/rag/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Lightning Web Component patterns
+- <a href="{{ '/rag/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow design patterns
 - [Integration Patterns](../integrations/) - Integration patterns
 

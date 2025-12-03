@@ -115,6 +115,6 @@ private class [ClassName]Test {
 - Avoid `@SeeAllData` annotation
 
 **Related Patterns**:
-- [Apex Patterns](development/apex-patterns.html) - Testing strategies
-- [Testing Strategy](project-methods/testing-strategy.html) - Testing best practices
+- <a href="{{ '/rag/code-examples/templates/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Testing strategies
+- <a href="{{ '/rag/code-examples/templates/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Testing best practices
 

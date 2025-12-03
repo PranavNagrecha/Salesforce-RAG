@@ -26,10 +26,10 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 - Familiarity with PII/PHI handling and data masking
 
 **Recommended Reading**:
-- [Salesforce to LLM Data Pipelines](integrations/salesforce-to-llm-data-pipelines.html) - Data pipeline patterns
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Compliance patterns
-- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
-- [Sharing Fundamentals](security/sharing-fundamentals.html) - Security and sharing model
+- <a href="{{ '/rag/security/integrations/salesforce-to-llm-data-pipelines.html' | relative_url }}">Salesforce to LLM Data Pipelines</a> - Data pipeline patterns
+- <a href="{{ '/rag/security/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Compliance patterns
+- <a href="{{ '/rag/security/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
+- <a href="{{ '/rag/security/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Security and sharing model
 
 ## Data Scoping Principles
 
@@ -479,7 +479,7 @@ This document covers how to choose *what* data to expose from Salesforce to LLMs
 
 ## Related Patterns
 
-- [Salesforce to LLM Data Pipelines](integrations/salesforce-to-llm-data-pipelines.html) - Data pipeline patterns
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Compliance patterns
-- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
+- <a href="{{ '/rag/security/integrations/salesforce-to-llm-data-pipelines.html' | relative_url }}">Salesforce to LLM Data Pipelines</a> - Data pipeline patterns
+- <a href="{{ '/rag/security/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Compliance patterns
+- <a href="{{ '/rag/security/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
 

@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 REST API integrations enable real-time, synchronous communication between Salesforce and external systems. These examples demonstrate common REST API patterns including outbound callouts, inbound REST services, authentication, error handling, and response processing.
 
 **Related Patterns**:
-- [Callout Best Practices](integrations/callout-best-practices.html) - Comprehensive callout best practices
-- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - Integration platform patterns
-- [Integration Examples](code-examples/apex/integration-examples.html) - Apex integration layer examples
+- <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
+- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
+- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Apex integration layer examples
 
 ## Examples
 
@@ -30,7 +30,7 @@ REST API integrations enable real-time, synchronous communication between Salesf
 **Pattern**: REST API callout using Named Credentials
 **Use Case**: Calling external REST APIs from Salesforce
 **Complexity**: Basic
-**Related Patterns**: [Callout Best Practices](integrations/callout-best-practices.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a>
 
 **Problem**:
 You need to make HTTP callouts to an external REST API using Named Credentials for authentication.
@@ -201,7 +201,7 @@ Map<String, Object> response = RestApiService.post('/api/users', payload);
 **Pattern**: Exposing REST API endpoints from Salesforce
 **Use Case**: Allowing external systems to call Salesforce
 **Complexity**: Intermediate
-**Related Patterns**: [Integration Platform Patterns](integrations/integration-platform-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a>
 
 **Problem**:
 You need to expose a REST API endpoint that external systems can call to create or update records in Salesforce.
@@ -441,7 +441,7 @@ PUT /services/apexrest/api/contacts
 **Pattern**: Making REST API callouts asynchronously
 **Use Case**: Long-running or high-volume callouts
 **Complexity**: Intermediate
-**Related Patterns**: [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 **Problem**:
 You need to make REST API callouts asynchronously to avoid timeout issues and handle high volumes.
@@ -552,13 +552,13 @@ System.enqueueJob(new AsyncRestApiService('/api/sync', 'POST', payload, contact.
 
 ## Related Examples
 
-- [Callout Examples](code-examples/integrations/callout-examples.html) - HTTP callout patterns
-- [Platform Events Examples](code-examples/integrations/platform-events-examples.html) - Event-driven patterns
-- [Integration Examples](code-examples/apex/integration-examples.html) - Apex integration layer
+- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/callout-examples.html' | relative_url }}">Callout Examples</a> - HTTP callout patterns
+- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/platform-events-examples.html' | relative_url }}">Platform Events Examples</a> - Event-driven patterns
+- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Apex integration layer
 
 ## See Also
 
-- [Callout Best Practices](integrations/callout-best-practices.html) - Comprehensive callout best practices
-- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - Integration platform patterns
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Async patterns
+- <a href="{{ '/rag/code-examples/integrations/integrations/callout-best-practices.html' | relative_url }}">Callout Best Practices</a> - Comprehensive callout best practices
+- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration platform patterns
+- <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 

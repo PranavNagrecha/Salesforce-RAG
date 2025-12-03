@@ -8,8 +8,8 @@
 Change Data Capture (CDC) provides real-time change notifications for Salesforce records. CDC events are published automatically when records are created, updated, deleted, or undeleted.
 
 **Related Patterns**:
-- [Change Data Capture Patterns](integrations/change-data-capture-patterns.html)
-- [Event-Driven Architecture](architecture/event-driven-architecture.html)
+- <a href="{{ '/rag/code-examples/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a>
+- <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 ## Examples
 
@@ -390,6 +390,6 @@ public class ContactSyncRetryQueueable implements Queueable {
 
 ## Related Patterns
 
-- [Change Data Capture Patterns](integrations/change-data-capture-patterns.html) - Complete CDC patterns guide
-- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Platform Events patterns
+- <a href="{{ '/rag/code-examples/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Complete CDC patterns guide
+- <a href="{{ '/rag/code-examples/integrations/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 

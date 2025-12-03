@@ -18,8 +18,8 @@ last_reviewed: "2025-01-XX"
 This guide covers when and how to use Custom Settings and Custom Metadata Types for configuration management in Salesforce. These patterns are essential for externalizing configuration and enabling environment-specific settings.
 
 **Related Patterns**:
-- [Apex Patterns](development/apex-patterns.html) - Apex development patterns
-- [Integration Patterns](integrations/integration-platform-patterns.html) - Integration configuration
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/integrations/integration-platform-patterns.html' | relative_url }}">Integration Patterns</a> - Integration configuration
 
 ## Prerequisites
 
@@ -30,8 +30,8 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 - Familiarity with custom objects and fields
 
 **Recommended Reading**:
-- [Apex Patterns](development/apex-patterns.html) - Apex development patterns
-- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment strategies
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
+- <a href="{{ '/rag/development/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment strategies
 
 ## Consensus Best Practices
 
@@ -263,10 +263,10 @@ This guide covers when and how to use Custom Settings and Custom Metadata Types 
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](development/apex-patterns.html) - Apex development patterns
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex development patterns
 
 **Related Domains**:
-- [Integration Patterns](integrations/integration-platform-patterns.html) - Integration configuration
-- [Custom Settings Examples](code-examples/utilities/custom-settings-examples.html) - Custom Settings code examples
-- [Custom Metadata Examples](code-examples/utilities/custom-metadata-examples.html) - Custom Metadata code examples
+- <a href="{{ '/rag/development/integrations/integration-platform-patterns.html' | relative_url }}">Integration Patterns</a> - Integration configuration
+- <a href="{{ '/rag/development/code-examples/utilities/custom-settings-examples.html' | relative_url }}">Custom Settings Examples</a> - Custom Settings code examples
+- <a href="{{ '/rag/development/code-examples/utilities/custom-metadata-examples.html' | relative_url }}">Custom Metadata Examples</a> - Custom Metadata code examples
 

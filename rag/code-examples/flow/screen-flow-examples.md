@@ -19,8 +19,8 @@ last_reviewed: "2025-01-XX"
 Screen Flows provide guided user interactions for multi-step processes. They are ideal for internal apps, portal UX, guided data capture, and step-by-step case/application handling. This document provides practical examples of common Screen Flow patterns.
 
 **Related Patterns**:
-- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Automated flow patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/record-triggered-examples.html' | relative_url }}">Record-Triggered Examples</a> - Automated flow patterns
 
 ## Examples
 
@@ -390,10 +390,10 @@ Organize Screen Flows with clear stages:
 
 ## Related Examples
 
-- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Automated flow patterns
-- [Subflow Examples](code-examples/flow/subflow-examples.html) - Reusable flow components
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/record-triggered-examples.html' | relative_url }}">Record-Triggered Examples</a> - Automated flow patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/subflow-examples.html' | relative_url }}">Subflow Examples</a> - Reusable flow components
 
 ## See Also
 
-- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Error Handling and Logging](code-examples/development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

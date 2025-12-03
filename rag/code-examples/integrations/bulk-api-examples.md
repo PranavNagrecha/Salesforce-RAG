@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Bulk API enables high-volume data operations in Salesforce. These examples demonstrate creating bulk jobs, uploading data, monitoring job status, and processing results for large-scale data operations.
 
 **Related Patterns**:
-- [Large Data Loads](development/large-data-loads.html) - Large data load patterns
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration patterns
-- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - Integration patterns
+- <a href="{{ '/rag/code-examples/integrations/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Large data load patterns
+- <a href="{{ '/rag/code-examples/integrations/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration patterns
+- <a href="{{ '/rag/code-examples/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - Integration patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Bulk API enables high-volume data operations in Salesforce. These examples demon
 **Pattern**: Creating and executing Bulk API jobs
 **Use Case**: High-volume data operations
 **Complexity**: Intermediate
-**Related Patterns**: [Large Data Loads](development/large-data-loads.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/large-data-loads.html' | relative_url }}">Large Data Loads</a>
 
 **Problem**:
 You need to insert or update large volumes of records using Bulk API.
@@ -216,7 +216,7 @@ public with sharing class BulkApiService {
 **Pattern**: Monitoring Bulk API job and batch status
 **Use Case**: Tracking progress of bulk operations
 **Complexity**: Intermediate
-**Related Patterns**: [Large Data Loads](development/large-data-loads.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/large-data-loads.html' | relative_url }}">Large Data Loads</a>
 
 **Problem**:
 You need to monitor the status of a Bulk API job and retrieve results when complete.
@@ -395,7 +395,7 @@ public with sharing class BulkApiMonitorService {
 **Pattern**: Monitoring Bulk API jobs asynchronously
 **Use Case**: Long-running bulk operations
 **Complexity**: Advanced
-**Related Patterns**: [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a>
 
 **Problem**:
 You need to monitor Bulk API jobs asynchronously and process results when complete.
@@ -506,13 +506,13 @@ System.enqueueJob(new BulkApiMonitorJob(jobId));
 
 ## Related Examples
 
-- [REST API Examples](code-examples/integrations/rest-api-examples.html) - REST API patterns
-- [Integration Examples](code-examples/apex/integration-examples.html) - Integration patterns
-- [Data Migration Examples](code-examples/utilities/data-migration-examples.html) - Data migration patterns
+- <a href="{{ '/rag/code-examples/integrations/code-examples/integrations/rest-api-examples.html' | relative_url }}">REST API Examples</a> - REST API patterns
+- <a href="{{ '/rag/code-examples/integrations/code-examples/apex/integration-examples.html' | relative_url }}">Integration Examples</a> - Integration patterns
+- <a href="{{ '/rag/code-examples/integrations/code-examples/utilities/data-migration-examples.html' | relative_url }}">Data Migration Examples</a> - Data migration patterns
 
 ## See Also
 
-- [Large Data Loads](development/large-data-loads.html) - Large data load patterns
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration patterns
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Async patterns
+- <a href="{{ '/rag/code-examples/integrations/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Large data load patterns
+- <a href="{{ '/rag/code-examples/integrations/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration patterns
+- <a href="{{ '/rag/code-examples/integrations/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async patterns
 

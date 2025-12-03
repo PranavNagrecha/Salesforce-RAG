@@ -83,7 +83,7 @@ The fundamental pipeline consists of four stages:
 - Real-time or near-real-time processing
 - Event stream processing
 
-**Related**: [Change Data Capture Patterns](integrations/change-data-capture-patterns.html) - Complete CDC patterns guide
+**Related**: <a href="{{ '/rag/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - Complete CDC patterns guide
 
 **Pros**:
 - Real-time data freshness
@@ -667,8 +667,8 @@ Manifest-style descriptions are **not sufficient** to define:
 
 ## Related Patterns
 
-- [Change Data Capture Patterns](integrations/change-data-capture-patterns.html) - CDC event processing
-- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
-- [Integration Platform Patterns](integrations/integration-platform-patterns.html) - ETL platform patterns
-- [Salesforce LLM Data Governance](security/salesforce-llm-data-governance.html) - Data governance for LLM systems
+- <a href="{{ '/rag/integrations/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC event processing
+- <a href="{{ '/rag/integrations/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
+- <a href="{{ '/rag/integrations/integrations/integration-platform-patterns.html' | relative_url }}">Integration Platform Patterns</a> - ETL platform patterns
+- <a href="{{ '/rag/integrations/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
 

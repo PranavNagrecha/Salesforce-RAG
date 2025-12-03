@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers data quality and stewardship patterns for Salesforce, including duplicate prevention beyond leads, survivorship rules, and master data governance. These patterns are essential for maintaining data integrity, preventing duplicates, and ensuring consistent data across the organization.
 
 **Related Patterns**:
-- [Lead Management Patterns](data-modeling/lead-management-patterns.html) - Lead duplicate prevention
-- [Data Reconciliation](troubleshooting/data-reconciliation.html) - Data reconciliation patterns
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns
+- <a href="{{ '/rag/data-governance/data-modeling/lead-management-patterns.html' | relative_url }}">Lead Management Patterns</a> - Lead duplicate prevention
+- <a href="{{ '/rag/data-governance/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data reconciliation patterns
+- <a href="{{ '/rag/data-governance/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
 
 ## Consensus Best Practices
 
@@ -347,8 +347,8 @@ This guide covers data quality and stewardship patterns for Salesforce, includin
 
 ## Related Patterns
 
-- [Lead Management Patterns](data-modeling/lead-management-patterns.html) - Lead duplicate prevention
-- [Data Reconciliation](troubleshooting/data-reconciliation.html) - Data reconciliation patterns
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration quality patterns
+- <a href="{{ '/rag/data-governance/data-modeling/lead-management-patterns.html' | relative_url }}">Lead Management Patterns</a> - Lead duplicate prevention
+- <a href="{{ '/rag/data-governance/troubleshooting/data-reconciliation.html' | relative_url }}">Data Reconciliation</a> - Data reconciliation patterns
+- <a href="{{ '/rag/data-governance/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-governance/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration quality patterns
 

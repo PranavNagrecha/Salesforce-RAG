@@ -16,10 +16,10 @@ last_reviewed: "2025-01-XX"
 This guide covers comprehensive CI/CD patterns for Salesforce, including metadata vs. source-tracked orgs, unlocked packages, sandbox seeding, deployment validation strategies, and rollback patterns. These patterns are essential for managing complex Salesforce development lifecycles with multiple teams and environments.
 
 **Related Patterns**:
-- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment methods and best practices
-- [Salesforce DX Patterns](project-methods/sfdx-patterns.html) - SFDX-specific patterns
-- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
-- [Release Governance](operations/release-governance.html) - Release approval and risk management
+- <a href="{{ '/rag/operations/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment methods and best practices
+- <a href="{{ '/rag/operations/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX-specific patterns
+- <a href="{{ '/rag/operations/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
+- <a href="{{ '/rag/operations/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 
 ## Prerequisites
 
@@ -404,17 +404,17 @@ This guide covers comprehensive CI/CD patterns for Salesforce, including metadat
 ## Related Patterns
 
 **See Also**:
-- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
-- [Release Governance](operations/release-governance.html) - Release approval and risk management
+- <a href="{{ '/rag/operations/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
+- <a href="{{ '/rag/operations/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 
 **Related Domains**:
-- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
-- [Salesforce DX Patterns](project-methods/sfdx-patterns.html) - SFDX project structure and commands
-- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing approaches
+- <a href="{{ '/rag/operations/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment methods and Metadata API patterns
+- <a href="{{ '/rag/operations/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX project structure and commands
+- <a href="{{ '/rag/operations/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing approaches
 
-- [Deployment Patterns](project-methods/deployment-patterns.html) - Deployment methods and Metadata API patterns
-- [Salesforce DX Patterns](project-methods/sfdx-patterns.html) - SFDX project structure and commands
-- [Environment Strategy](operations/environment-strategy.html) - Org topology and environment management
-- [Release Governance](operations/release-governance.html) - Release approval and risk management
-- [Testing Strategy](project-methods/testing-strategy.html) - Comprehensive testing approaches
+- <a href="{{ '/rag/operations/project-methods/deployment-patterns.html' | relative_url }}">Deployment Patterns</a> - Deployment methods and Metadata API patterns
+- <a href="{{ '/rag/operations/project-methods/sfdx-patterns.html' | relative_url }}">Salesforce DX Patterns</a> - SFDX project structure and commands
+- <a href="{{ '/rag/operations/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Org topology and environment management
+- <a href="{{ '/rag/operations/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
+- <a href="{{ '/rag/operations/project-methods/testing-strategy.html' | relative_url }}">Testing Strategy</a> - Comprehensive testing approaches
 

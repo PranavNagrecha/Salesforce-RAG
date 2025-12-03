@@ -67,7 +67,7 @@ public with sharing class EventPublisher {
 - Include timestamp and idempotency keys
 - Keep payloads self-contained and minimal
 
-**Related Patterns**: [Event-Driven Architecture](architecture/event-driven-architecture.html)
+**Related Patterns**: <a href="{{ '/rag/api-reference/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a>
 
 ---
 
@@ -255,13 +255,13 @@ public static void handleEvents(List<CustomEvent__e> events) {
 }
 ```
 
-**Related Patterns**: [Error Handling](development/error-handling-and-logging.html)
+**Related Patterns**: <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
 
 ---
 
 ## Related Patterns
 
-- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Complete event-driven patterns
+- <a href="{{ '/rag/api-reference/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Complete event-driven patterns
 - [Integration Patterns](../integrations) - Integration with external systems
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 

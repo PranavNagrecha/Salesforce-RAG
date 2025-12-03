@@ -364,7 +364,7 @@ Think of standard objects as having different capabilities and constraints. Not 
 
 ## Related Patterns
 
-- [Object Setup and Configuration](data-modeling/object-setup-and-configuration.html) - Object configuration patterns
-- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
-- [Sharing Fundamentals](security/sharing-fundamentals.html) - Sharing model patterns
+- <a href="{{ '/rag/data-modeling/data-modeling/object-setup-and-configuration.html' | relative_url }}">Object Setup and Configuration</a> - Object configuration patterns
+- <a href="{{ '/rag/data-modeling/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
+- <a href="{{ '/rag/data-modeling/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Sharing model patterns
 

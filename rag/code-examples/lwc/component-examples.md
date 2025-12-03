@@ -8,8 +8,8 @@
 Lightning Web Components (LWC) are modern, standards-based web components for building custom user interfaces in Salesforce. These examples demonstrate common LWC patterns for data access, user interactions, and business logic.
 
 **Related Patterns**:
-- [LWC Patterns](code-examples/development/lwc-patterns.html) - LWC development patterns and best practices
-- [LWC API Reference](code-examples/api-reference/lwc-api-reference.html) - LWC API method signatures
+- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
+- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC API method signatures
 
 ## Examples
 
@@ -174,7 +174,7 @@ export default class ContactAction extends LightningElement {
 **Pattern**: Collecting user input and updating records
 **Use Case**: Allowing users to edit record data
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](code-examples/development/lwc-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to allow users to edit record fields in a custom component.
@@ -262,13 +262,13 @@ export default class ContactEdit extends LightningElement {
 
 ## Related Examples
 
-- [Service Layer Examples](code-examples/lwc/apex/service-layer-examples.html) - Apex service methods called from LWC
-- [Accessibility Examples](code-examples/lwc/lwc/accessibility-examples.html) - Accessible LWC patterns
-- [LWC API Reference](code-examples/api-reference/lwc-api-reference.html) - Complete LWC API reference
+- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Apex service methods called from LWC
+- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/lwc/accessibility-examples.html' | relative_url }}">Accessibility Examples</a> - Accessible LWC patterns
+- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference
 
 ## See Also
 
-- [LWC Patterns](code-examples/development/lwc-patterns.html) - Complete LWC development patterns
-- [LWC Best Practices](code-examples/mcp-knowledge/lwc-best-practices.html) - Official LWC best practices
-- [LWC Development Guide](code-examples/mcp-knowledge/lwc-development-guide.html) - LWC development guidance
+- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
+- <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
+- <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lwc-development-guide.html' | relative_url }}">LWC Development Guide</a> - LWC development guidance
 

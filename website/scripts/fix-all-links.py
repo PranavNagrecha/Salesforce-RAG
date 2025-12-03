@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Fix all internal links in markdown files to use absolute paths starting with /rag/
+Fix all internal links in markdown files to use HTML links with Jekyll's relative_url filter.
 This ensures all links work correctly with Jekyll's baseurl.
+Jekyll's kramdown doesn't apply baseurl to markdown links, so we use HTML links instead.
 """
 
 import re
@@ -50,19 +51,49 @@ def fix_links_in_file(file_path: Path):
         if "{{" in link_url or "|" in link_url:
             return match.group(0)
         
-        # Skip if already absolute path starting with /rag/ - convert to relative
-        if link_url.startswith("/rag/"):
-            # Convert absolute path to relative path
-            # /rag/adoption/org-health-checks.html -> adoption/org-health-checks.html
-            relative_path = link_url[5:]  # Remove "/rag/" prefix
-            # Convert .md to .html if needed
-            if relative_path.endswith(".md"):
-                relative_path = relative_path[:-3] + ".html"
-            modified = True
-            return f"[{link_text}]({relative_path})"
-        
-        # Keep relative paths as-is (they work correctly with Jekyll baseurl)
+        # Convert all internal links to HTML links with Jekyll relative_url filter
         if link_url.endswith(".html") or link_url.endswith(".md"):
+            # Build absolute path for Jekyll
+            if link_url.startswith("/rag/"):
+                # Already absolute path
+                absolute_path = link_url
+            elif link_url.startswith("../"):
+                # Relative path with parent directory
+                parts = link_url.split("/")
+                up_count = sum(1 for p in parts if p == "..")
+                remaining = "/".join([p for p in parts if p != ".." and p])
+                # Go up from file_dir
+                target_dir = file_dir
+                for _ in range(up_count):
+                    target_dir = target_dir.parent
+                if target_dir == Path("."):
+                    absolute_path = f"/rag/{remaining}"
+                else:
+                    absolute_path = f"/rag/{target_dir}/{remaining}"
+            elif link_url.startswith("./"):
+                # Same directory
+                remaining = link_url[2:]
+                if file_dir == Path("."):
+                    absolute_path = f"/rag/{remaining}"
+                else:
+                    absolute_path = f"/rag/{file_dir}/{remaining}"
+            else:
+                # Same directory or subdirectory
+                if file_dir == Path("."):
+                    absolute_path = f"/rag/{link_url}"
+                else:
+                    absolute_path = f"/rag/{file_dir}/{link_url}"
+            
+            # Convert .md to .html if needed
+            if absolute_path.endswith(".md"):
+                absolute_path = absolute_path[:-3] + ".html"
+            
+            # Normalize path
+            absolute_path = absolute_path.replace("//", "/")
+            
+            # Convert to HTML link with Jekyll filter
+            modified = True
+            return f"<a href=\"{{{{ '{absolute_path}' | relative_url }}}}\">{link_text}</a>"
             # Handle relative paths
             if not link_url.startswith("/"):
                 # This is a relative path - convert to absolute

@@ -270,25 +270,25 @@ private class ContactUpdateServiceTest {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [Apex Patterns](development/apex-patterns.html) - Complete Apex patterns
-   - [Service Layer Examples](code-examples/apex/service-layer-examples.html) - Service examples
-   - [Selector Layer Examples](code-examples/apex/selector-layer-examples.html) - Selector examples
+   - <a href="{{ '/rag/quick-start/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
+   - <a href="{{ '/rag/quick-start/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service examples
+   - <a href="{{ '/rag/quick-start/code-examples/apex/selector-layer-examples.html' | relative_url }}">Selector Layer Examples</a> - Selector examples
 
 2. **Explore Templates**:
-   - [Service Template](code-examples/templates/apex-service-template.html)
-   - [Selector Template](code-examples/templates/apex-selector-template.html)
-   - [Domain Template](code-examples/templates/apex-domain-template.html)
+   - <a href="{{ '/rag/quick-start/code-examples/templates/apex-service-template.html' | relative_url }}">Service Template</a>
+   - <a href="{{ '/rag/quick-start/code-examples/templates/apex-selector-template.html' | relative_url }}">Selector Template</a>
+   - <a href="{{ '/rag/quick-start/code-examples/templates/apex-domain-template.html' | relative_url }}">Domain Template</a>
 
 3. **Understand Best Practices**:
-   - [Error Handling](development/error-handling-and-logging.html)
-   - [Governor Limits](development/governor-limits-and-optimization.html)
-   - [Testing Patterns](testing/apex-testing-patterns.html)
+   - <a href="{{ '/rag/quick-start/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a>
+   - <a href="{{ '/rag/quick-start/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>
+   - <a href="{{ '/rag/quick-start/testing/apex-testing-patterns.html' | relative_url }}">Testing Patterns</a>
 
 ---
 
 ## Related Resources
 
-- [Apex Patterns](development/apex-patterns.html) - Complete Apex patterns
+- <a href="{{ '/rag/quick-start/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex patterns
 - [Code Examples](../code-examples) - Working code examples
-- [API Reference](api-reference/apex-api-reference.html) - API reference
+- <a href="{{ '/rag/quick-start/api-reference/apex-api-reference.html' | relative_url }}">API Reference</a> - API reference
 

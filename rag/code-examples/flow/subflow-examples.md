@@ -21,9 +21,9 @@ Subflows are reusable flow components that can be called from other Flows or Ape
 ⚠️ **Note**: Process Builder is deprecated - use Record-Triggered Flows instead. Subflows can be called from Record-Triggered Flows.
 
 **Related Patterns**:
-- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Automated flow patterns
-- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flows
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/record-triggered-examples.html' | relative_url }}">Record-Triggered Examples</a> - Automated flow patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/screen-flow-examples.html' | relative_url }}">Screen Flow Examples</a> - User interaction flows
 
 ## Examples
 
@@ -391,10 +391,10 @@ Design Subflows for reuse:
 
 ## Related Examples
 
-- [Record-Triggered Examples](code-examples/flow/record-triggered-examples.html) - Automated flow patterns
-- [Screen Flow Examples](code-examples/flow/screen-flow-examples.html) - User interaction flows
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/record-triggered-examples.html' | relative_url }}">Record-Triggered Examples</a> - Automated flow patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/flow/screen-flow-examples.html' | relative_url }}">Screen Flow Examples</a> - User interaction flows
 
 ## See Also
 
-- [Flow Patterns](code-examples/development/flow-patterns.html) - Complete Flow design patterns
-- [Error Handling and Logging](code-examples/development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Complete Flow design patterns
+- <a href="{{ '/rag/code-examples/flow/code-examples/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns

@@ -8,9 +8,9 @@
 Accessibility in Lightning Web Components ensures that all users, including those using assistive technologies, can access and interact with your components. These examples demonstrate practical implementation of accessibility patterns.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Patterns](development/lwc-patterns.html) - General LWC patterns
-- [Design System Patterns](mcp-knowledge/design-system-patterns.html) - SLDS accessibility
+- <a href="{{ '/rag/code-examples/lwc/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/code-examples/lwc/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - General LWC patterns
+- <a href="{{ '/rag/code-examples/lwc/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS accessibility
 
 ## Form Accessibility Examples
 
@@ -1138,7 +1138,7 @@ export default class StatusIndicator extends LightningElement {
 
 ## Related Examples
 
-- [Accessible Component Template](code-examples/templates/lwc-accessible-component-template.html) - Template for accessible components
-- [Accessibility Testing](testing/lwc-accessibility-testing.html) - Testing patterns
-- [Accessibility Troubleshooting](troubleshooting/lwc-accessibility-errors.html) - Common errors and fixes
+- <a href="{{ '/rag/code-examples/lwc/code-examples/templates/lwc-accessible-component-template.html' | relative_url }}">Accessible Component Template</a> - Template for accessible components
+- <a href="{{ '/rag/code-examples/lwc/testing/lwc-accessibility-testing.html' | relative_url }}">Accessibility Testing</a> - Testing patterns
+- <a href="{{ '/rag/code-examples/lwc/troubleshooting/lwc-accessibility-errors.html' | relative_url }}">Accessibility Troubleshooting</a> - Common errors and fixes
 

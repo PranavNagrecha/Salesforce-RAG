@@ -417,7 +417,7 @@ Avoid this model when:
 - **Application Tracking**: Multiple applications per student adds complexity to application management
 - **Data Reconciliation**: SIS data reconciliation requires careful design and monitoring
 
-- [SIS Synchronization Patterns](integrations/sis-sync-patterns.html) - High-volume batch sync patterns
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Data migration strategies
+- <a href="{{ '/rag/data-modeling/integrations/sis-sync-patterns.html' | relative_url }}">SIS Synchronization Patterns</a> - High-volume batch sync patterns
+- <a href="{{ '/rag/data-modeling/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-modeling/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Data migration strategies
 

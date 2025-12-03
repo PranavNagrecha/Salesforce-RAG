@@ -16,8 +16,8 @@ last_reviewed: "2025-01-XX"
 This guide covers data migration strategies, transformation patterns, validation approaches, and rollback strategies for moving data into and within Salesforce. These patterns are essential for data imports, system migrations, and data synchronization.
 
 **Related Patterns**:
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns for migration
-- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration pattern selection
+- <a href="{{ '/rag/data-modeling/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns for migration
+- <a href="{{ '/rag/data-modeling/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration pattern selection
 
 ## Prerequisites
 
@@ -394,7 +394,7 @@ This guide covers data migration strategies, transformation patterns, validation
 
 ## Related Patterns
 
-- [External IDs and Integration Keys](data-modeling/external-ids-and-integration-keys.html) - External ID patterns
-- [ETL vs API vs Events](integrations/etl-vs-api-vs-events.html) - Integration patterns
-- [Data Migration Examples](code-examples/utilities/data-migration-examples.html) - Complete code examples
+- <a href="{{ '/rag/data-modeling/data-modeling/external-ids-and-integration-keys.html' | relative_url }}">External IDs and Integration Keys</a> - External ID patterns
+- <a href="{{ '/rag/data-modeling/integrations/etl-vs-api-vs-events.html' | relative_url }}">ETL vs API vs Events</a> - Integration patterns
+- <a href="{{ '/rag/data-modeling/code-examples/utilities/data-migration-examples.html' | relative_url }}">Data Migration Examples</a> - Complete code examples
 

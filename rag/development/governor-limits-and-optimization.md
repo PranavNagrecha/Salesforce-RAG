@@ -26,10 +26,10 @@ This topic covers Salesforce governor limits, performance optimization strategie
 - Familiarity with DML operations and bulkification
 
 **Recommended Reading**:
-- [Apex Patterns](development/apex-patterns.html) - Apex class structure and bulkification patterns
-- [SOQL Query Patterns](development/soql-query-patterns.html) - Query optimization and selectivity
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Async processing for large operations
-- [Order of Execution](development/order-of-execution.html) - Transaction execution order
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and bulkification patterns
+- <a href="{{ '/rag/development/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization and selectivity
+- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async processing for large operations
+- <a href="{{ '/rag/development/development/order-of-execution.html' | relative_url }}">Order of Execution</a> - Transaction execution order
 
 ## Consensus Best Practices
 
@@ -116,8 +116,8 @@ This topic covers Salesforce governor limits, performance optimization strategie
 
 **Example scenario**: A nightly sync of 500,000 records from an external system uses Batch Apex to process records in batches of 200. Each batch executes in its own context with fresh governor limits, allowing the entire sync to complete successfully.
 
-**Related**: [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Complete guide to Batch, Queueable, and Scheduled Apex patterns
-- [Performance Tuning](observability/performance-tuning.html) - LDV handling, caching strategies, and advanced performance optimization
+**Related**: <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Complete guide to Batch, Queueable, and Scheduled Apex patterns
+- <a href="{{ '/rag/development/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - LDV handling, caching strategies, and advanced performance optimization
 
 ### Pattern 5: Heap Size Optimization
 
@@ -309,10 +309,10 @@ These tradeoffs require human judgment based on specific use cases, data volumes
 ## Related Patterns
 
 **See Also**:
-- [SOQL Query Patterns](development/soql-query-patterns.html) - Query optimization and selectivity
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Batch, Queueable, and Scheduled Apex for large operations
-- [Large Data Loads](development/large-data-loads.html) - Bulk API and data load optimization
-- [Locking and Concurrency Strategies](development/locking-and-concurrency-strategies.html) - Concurrency and resource management
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling for limit exceptions
-- [Apex Patterns](development/apex-patterns.html) - Bulkification and optimization patterns
+- <a href="{{ '/rag/development/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - Query optimization and selectivity
+- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Batch, Queueable, and Scheduled Apex for large operations
+- <a href="{{ '/rag/development/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Bulk API and data load optimization
+- <a href="{{ '/rag/development/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency Strategies</a> - Concurrency and resource management
+- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling for limit exceptions
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Bulkification and optimization patterns
 

@@ -369,7 +369,7 @@ Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(
 
 ## Related Patterns
 
-- [Service Layer Examples](code-examples/apex/service-layer-examples.html) - Service layer patterns
+- <a href="{{ '/rag/code-examples/apex/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer patterns
 - [Integration Patterns](../../integrations) - Integration architecture patterns
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/code-examples/apex/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
 

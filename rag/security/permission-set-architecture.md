@@ -24,9 +24,9 @@ Permission set-driven security architecture transitions from profile-centric to 
 - Familiarity with role hierarchy and sharing rules
 
 **Recommended Reading**:
-- [Sharing Fundamentals](security/sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
-- [Admin Basics](development/admin-basics.html) - User management and basic administration
-- [Integration User License Guide](integrations/integration-user-license-guide.html) - Permission management for integration users
+- <a href="{{ '/rag/security/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Organization-wide defaults and role hierarchy
+- <a href="{{ '/rag/security/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+- <a href="{{ '/rag/security/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Permission management for integration users
 
 ## Architecture Pattern
 
@@ -293,9 +293,9 @@ Avoid permission set-driven security when:
 
 ## Related Patterns
 
-- [Sharing Fundamentals](security/sharing-fundamentals.html) - Organization-wide defaults and role hierarchy
-- [Sharing Rules and Manual Sharing](security/sharing-rules-and-manual-sharing.html) - Sharing rules and manual sharing patterns
-- [Sharing Sets and Portals](security/sharing-sets-and-portals.html) - Experience Cloud sharing patterns
-- [Admin Basics](development/admin-basics.html) - User management and basic administration
-- [Integration User License Guide](integrations/integration-user-license-guide.html) - Permission management for integration users
+- <a href="{{ '/rag/security/security/sharing-fundamentals.html' | relative_url }}">Sharing Fundamentals</a> - Organization-wide defaults and role hierarchy
+- <a href="{{ '/rag/security/security/sharing-rules-and-manual-sharing.html' | relative_url }}">Sharing Rules and Manual Sharing</a> - Sharing rules and manual sharing patterns
+- <a href="{{ '/rag/security/security/sharing-sets-and-portals.html' | relative_url }}">Sharing Sets and Portals</a> - Experience Cloud sharing patterns
+- <a href="{{ '/rag/security/development/admin-basics.html' | relative_url }}">Admin Basics</a> - User management and basic administration
+- <a href="{{ '/rag/security/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Permission management for integration users
 

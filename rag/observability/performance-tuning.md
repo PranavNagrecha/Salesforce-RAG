@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers performance tuning patterns for Salesforce, including query/selectivity tuning, Large Data Volume (LDV) handling, governor limit mitigation, and caching strategies. These patterns are essential for optimizing Salesforce performance, handling large datasets, and ensuring system scalability.
 
 **Related Patterns**:
-- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Governor limits and resource management
-- [SOQL Query Patterns](development/soql-query-patterns.html) - SOQL query best practices
-- [Monitoring and Alerting](observability/monitoring-alerting.html) - Performance monitoring patterns
+- <a href="{{ '/rag/observability/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limits and resource management
+- <a href="{{ '/rag/observability/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices
+- <a href="{{ '/rag/observability/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Performance monitoring patterns
 
 ## Consensus Best Practices
 
@@ -332,8 +332,8 @@ This guide covers performance tuning patterns for Salesforce, including query/se
 
 ## Related Patterns
 
-- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Governor limits and resource management
-- [SOQL Query Patterns](development/soql-query-patterns.html) - SOQL query best practices
-- [Monitoring and Alerting](observability/monitoring-alerting.html) - Performance monitoring
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Async processing for performance
+- <a href="{{ '/rag/observability/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Governor limits and resource management
+- <a href="{{ '/rag/observability/development/soql-query-patterns.html' | relative_url }}">SOQL Query Patterns</a> - SOQL query best practices
+- <a href="{{ '/rag/observability/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Performance monitoring
+- <a href="{{ '/rag/observability/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Async processing for performance
 

@@ -396,9 +396,9 @@ When configuring email in Salesforce:
 ## Related Patterns
 
 **See Also**:
-- [Flow Patterns](development/flow-patterns.html) - Automated email sending through Flows
-- [Admin Basics](development/admin-basics.html) - Email configuration and settings
+- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Automated email sending through Flows
+- <a href="{{ '/rag/development/development/admin-basics.html' | relative_url }}">Admin Basics</a> - Email configuration and settings
 
 **Related Domains**:
-- [Integration Patterns](integrations/etl-vs-api-vs-events.html) - Email in integration scenarios
+- <a href="{{ '/rag/development/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Email in integration scenarios
 

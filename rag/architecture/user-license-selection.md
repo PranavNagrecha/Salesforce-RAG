@@ -284,12 +284,12 @@ Use free Integration User licenses for system-to-system integrations rather than
 ## Related Patterns
 
 **See Also**:
-- [Org Edition Selection](architecture/org-edition-selection.html) - Edition selection and license availability
-- [Salesforce Pricing Negotiation](architecture/salesforce-pricing-negotiation.html) - License cost optimization
+- <a href="{{ '/rag/architecture/architecture/org-edition-selection.html' | relative_url }}">Org Edition Selection</a> - Edition selection and license availability
+- <a href="{{ '/rag/architecture/architecture/salesforce-pricing-negotiation.html' | relative_url }}">Salesforce Pricing Negotiation</a> - License cost optimization
 
 **Related Domains**:
-- [Integration User License Guide](integrations/integration-user-license-guide.html) - Integration User License setup and configuration
-- [Permission Set Architecture](security/permission-set-architecture.html) - Permission management for different license types
+- <a href="{{ '/rag/architecture/integrations/integration-user-license-guide.html' | relative_url }}">Integration User License Guide</a> - Integration User License setup and configuration
+- <a href="{{ '/rag/architecture/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Permission management for different license types
 
 ## Under-Licensing Users
 

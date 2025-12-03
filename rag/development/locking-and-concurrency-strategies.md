@@ -26,9 +26,9 @@ This topic covers Salesforce row locking, concurrency control patterns, UNABLE_T
 - Familiarity with error handling patterns
 
 **Recommended Reading**:
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Queueable and Batch Apex patterns
-- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Resource management
+- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
+- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable and Batch Apex patterns
+- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource management
 
 ## Consensus Best Practices
 
@@ -266,9 +266,9 @@ These tradeoffs require human judgment based on system load, concurrency pattern
 ## Related Patterns
 
 **See Also**:
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns for locking errors
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Queueable patterns for retry operations
-- [Governor Limits and Optimization](development/governor-limits-and-optimization.html) - Resource management and limit handling
-- [Large Data Loads](development/large-data-loads.html) - Concurrency patterns for bulk operations
-- [Integration Patterns](integrations/etl-vs-api-vs-events.html) - Concurrency in integration scenarios
+- <a href="{{ '/rag/development/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns for locking errors
+- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable patterns for retry operations
+- <a href="{{ '/rag/development/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits and Optimization</a> - Resource management and limit handling
+- <a href="{{ '/rag/development/development/large-data-loads.html' | relative_url }}">Large Data Loads</a> - Concurrency patterns for bulk operations
+- <a href="{{ '/rag/development/integrations/etl-vs-api-vs-events.html' | relative_url }}">Integration Patterns</a> - Concurrency in integration scenarios
 

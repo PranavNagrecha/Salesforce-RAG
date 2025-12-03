@@ -41,7 +41,7 @@ Set<Id> contactIds = new Set<Id>{ '003000000000001', '003000000000002' };
 List<Id> processedIds = ContactUpdateService.processContacts(contactIds);
 ```
 
-**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), [Service Layer Examples](code-examples/apex/service-layer-examples.html)
+**Related Patterns**: [Service Layer](/Salesforce-RAG/rag/development/apex-patterns.html#service-layer), <a href="{{ '/rag/api-reference/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a>
 
 **Best Practices**:
 - Always use `with sharing` or `without sharing` explicitly
@@ -239,7 +239,7 @@ try {
 }
 ```
 
-**Related Patterns**: [Error Handling and Logging](development/error-handling-and-logging.html)
+**Related Patterns**: <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Best Practices**:
 - ALL exceptions MUST be logged
@@ -336,8 +336,8 @@ static void testMethod() {
 
 ## Related Patterns
 
-- [Apex Patterns](development/apex-patterns.html) - Complete Apex design patterns
-- [Service Layer Examples](code-examples/apex/service-layer-examples.html) - Service layer code examples
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
-- [SOQL Patterns](development/soql-query-patterns.html) - SOQL query patterns
+- <a href="{{ '/rag/api-reference/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Complete Apex design patterns
+- <a href="{{ '/rag/api-reference/code-examples/apex/service-layer-examples.html' | relative_url }}">Service Layer Examples</a> - Service layer code examples
+- <a href="{{ '/rag/api-reference/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/api-reference/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a> - SOQL query patterns
 

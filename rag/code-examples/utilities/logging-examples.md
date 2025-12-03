@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 Structured logging enables consistent, searchable logging across Salesforce applications. These examples demonstrate custom logging objects, platform event fallbacks, external logging integration, and compliance/audit trail requirements.
 
 **Related Patterns**:
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Comprehensive logging framework
-- [Error Handling Examples](code-examples/utilities/error-handling-examples.html) - Error handling patterns
-- [Observability Patterns](observability/monitoring-alerting.html) - Monitoring patterns
+- <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
+- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
+- <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
 
 ## Examples
 
@@ -30,7 +30,7 @@ Structured logging enables consistent, searchable logging across Salesforce appl
 **Pattern**: Custom logging object with utility class
 **Use Case**: Structured logging for all operations
 **Complexity**: Basic
-**Related Patterns**: [Error Handling and Logging](development/error-handling-and-logging.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need a consistent logging mechanism across your application.
@@ -181,7 +181,7 @@ try {
 **Pattern**: Platform event fallback when DML fails
 **Use Case**: Ensuring logs are captured even when DML fails
 **Complexity**: Intermediate
-**Related Patterns**: [Error Handling and Logging](development/error-handling-and-logging.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a>
 
 **Problem**:
 You need to ensure logs are captured even when DML operations fail (e.g., during trigger failures).
@@ -288,7 +288,7 @@ public with sharing class LOG_LogMessageUtility {
 **Pattern**: Integrating with external logging systems
 **Use Case**: Centralized logging across multiple systems
 **Complexity**: Advanced
-**Related Patterns**: [Observability Patterns](observability/monitoring-alerting.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a>
 
 **Problem**:
 You need to send logs to an external logging system (e.g., Splunk, OpenSearch).
@@ -386,11 +386,11 @@ ExternalLoggingService.enqueueLogs(logs);
 
 ## Related Examples
 
-- [Error Handling Examples](code-examples/utilities/error-handling-examples.html) - Error handling patterns
-- [Validation Examples](code-examples/utilities/validation-examples.html) - Validation patterns
+- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/error-handling-examples.html' | relative_url }}">Error Handling Examples</a> - Error handling patterns
+- <a href="{{ '/rag/code-examples/utilities/code-examples/utilities/validation-examples.html' | relative_url }}">Validation Examples</a> - Validation patterns
 
 ## See Also
 
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Comprehensive logging framework
-- [Observability Patterns](observability/monitoring-alerting.html) - Monitoring patterns
+- <a href="{{ '/rag/code-examples/utilities/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Comprehensive logging framework
+- <a href="{{ '/rag/code-examples/utilities/observability/monitoring-alerting.html' | relative_url }}">Observability Patterns</a> - Monitoring patterns
 

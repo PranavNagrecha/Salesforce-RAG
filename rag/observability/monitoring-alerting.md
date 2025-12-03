@@ -16,10 +16,10 @@ last_reviewed: "2025-01-XX"
 This guide covers monitoring and alerting patterns for Salesforce, including Platform Events monitoring, API health monitoring, async job failure detection, and log aggregation patterns. These patterns are essential for maintaining system reliability, detecting issues early, and ensuring operational excellence.
 
 **Related Patterns**:
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Logging framework and error handling
-- [Performance Tuning](observability/performance-tuning.html) - Performance optimization patterns
-- [Change Data Capture Patterns](integrations/change-data-capture-patterns.html) - CDC event processing
-- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Platform Events patterns
+- <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Logging framework and error handling
+- <a href="{{ '/rag/observability/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
+- <a href="{{ '/rag/observability/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC event processing
+- <a href="{{ '/rag/observability/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 
 ## Consensus Best Practices
 
@@ -322,9 +322,9 @@ This guide covers monitoring and alerting patterns for Salesforce, including Pla
 
 ## Related Patterns
 
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Logging framework implementation
-- [Performance Tuning](observability/performance-tuning.html) - Performance optimization and monitoring
-- [Change Data Capture Patterns](integrations/change-data-capture-patterns.html) - CDC monitoring patterns
-- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Platform Events patterns
-- [High Availability & DR](observability/ha-dr-patterns.html) - Disaster recovery and failover patterns
+- <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Logging framework implementation
+- <a href="{{ '/rag/observability/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization and monitoring
+- <a href="{{ '/rag/observability/integrations/change-data-capture-patterns.html' | relative_url }}">Change Data Capture Patterns</a> - CDC monitoring patterns
+- <a href="{{ '/rag/observability/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
+- <a href="{{ '/rag/observability/observability/ha-dr-patterns.html' | relative_url }}">High Availability & DR</a> - Disaster recovery and failover patterns
 

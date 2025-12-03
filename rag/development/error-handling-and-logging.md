@@ -26,9 +26,9 @@ Comprehensive error handling and logging framework ensures all errors are captur
 - Familiarity with custom objects and field types
 
 **Recommended Reading**:
-- [Apex Patterns](development/apex-patterns.html) - Apex class structure and patterns
-- [Asynchronous Apex Patterns](development/asynchronous-apex-patterns.html) - Queueable patterns for error handling
-- [Event-Driven Architecture](architecture/event-driven-architecture.html) - Platform Events patterns
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex class structure and patterns
+- <a href="{{ '/rag/development/development/asynchronous-apex-patterns.html' | relative_url }}">Asynchronous Apex Patterns</a> - Queueable patterns for error handling
+- <a href="{{ '/rag/development/architecture/event-driven-architecture.html' | relative_url }}">Event-Driven Architecture</a> - Platform Events patterns
 
 ## Logging Architecture
 
@@ -334,11 +334,11 @@ Avoid comprehensive logging when:
 ## Related Patterns
 
 **See Also**:
-- [Apex Patterns](development/apex-patterns.html) - Apex error handling patterns
-- [Flow Patterns](development/flow-patterns.html) - Flow error handling patterns
+- <a href="{{ '/rag/development/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex error handling patterns
+- <a href="{{ '/rag/development/development/flow-patterns.html' | relative_url }}">Flow Patterns</a> - Flow error handling patterns
 
 **Related Domains**:
-- [Monitoring and Alerting](observability/monitoring-alerting.html) - Monitoring patterns, log aggregation, and alerting strategies
-- [Performance Tuning](observability/performance-tuning.html) - Performance optimization patterns
-- [Logging Examples](code-examples/utilities/logging-examples.html) - Logging code examples
+- <a href="{{ '/rag/development/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - Monitoring patterns, log aggregation, and alerting strategies
+- <a href="{{ '/rag/development/observability/performance-tuning.html' | relative_url }}">Performance Tuning</a> - Performance optimization patterns
+- <a href="{{ '/rag/development/code-examples/utilities/logging-examples.html' | relative_url }}">Logging Examples</a> - Logging code examples
 

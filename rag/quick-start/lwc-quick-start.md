@@ -276,23 +276,23 @@ export default class ContactViewer extends LightningElement {
 ## Next Steps
 
 1. **Learn More Patterns**:
-   - [LWC Patterns](development/lwc-patterns.html) - Complete LWC patterns
-   - [LWC Best Practices](mcp-knowledge/lwc-best-practices.html) - Best practices
-   - [LDS Patterns](mcp-knowledge/lds-patterns.html) - Data service patterns
+   - <a href="{{ '/rag/quick-start/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+   - <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Best practices
+   - <a href="{{ '/rag/quick-start/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Patterns</a> - Data service patterns
 
 2. **Explore Examples**:
-   - [LWC API Reference](api-reference/lwc-api-reference.html) - API reference
-   - [LDS API Reference](api-reference/lds-api-reference.html) - LDS reference
+   - <a href="{{ '/rag/quick-start/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - API reference
+   - <a href="{{ '/rag/quick-start/api-reference/lds-api-reference.html' | relative_url }}">LDS API Reference</a> - LDS reference
 
 3. **Understand Best Practices**:
-   - [LWC Accessibility](mcp-knowledge/lwc-accessibility.html) - Accessibility
-   - [Design System Patterns](mcp-knowledge/design-system-patterns.html) - SLDS patterns
+   - <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility</a> - Accessibility
+   - <a href="{{ '/rag/quick-start/mcp-knowledge/design-system-patterns.html' | relative_url }}">Design System Patterns</a> - SLDS patterns
 
 ---
 
 ## Related Resources
 
-- [LWC Patterns](development/lwc-patterns.html) - Complete LWC patterns
-- [LWC Best Practices](mcp-knowledge/lwc-best-practices.html) - Best practices
-- [LWC API Reference](api-reference/lwc-api-reference.html) - API reference
+- <a href="{{ '/rag/quick-start/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC patterns
+- <a href="{{ '/rag/quick-start/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Best practices
+- <a href="{{ '/rag/quick-start/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - API reference
 

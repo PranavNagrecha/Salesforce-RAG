@@ -17,9 +17,9 @@ last_reviewed: "2025-01-XX"
 This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for Salesforce, including backup/restore approaches, failover patterns for integrations, and business continuity drills. These patterns are essential for ensuring system resilience, data protection, and business continuity.
 
 **Related Patterns**:
-- [Monitoring and Alerting](observability/monitoring-alerting.html) - System monitoring and alerting
-- [CI/CD Patterns](operations/cicd-patterns.html) - Deployment and rollback patterns
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Data protection patterns
+- <a href="{{ '/rag/observability/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring and alerting
+- <a href="{{ '/rag/observability/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and rollback patterns
+- <a href="{{ '/rag/observability/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection patterns
 
 ## Consensus Best Practices
 
@@ -306,8 +306,8 @@ This guide covers High Availability (HA) and Disaster Recovery (DR) patterns for
 
 ## Related Patterns
 
-- [Monitoring and Alerting](observability/monitoring-alerting.html) - System monitoring
-- [CI/CD Patterns](operations/cicd-patterns.html) - Deployment and rollback
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Data protection
-- [Error Handling and Logging](development/error-handling-and-logging.html) - Error handling patterns
+- <a href="{{ '/rag/observability/observability/monitoring-alerting.html' | relative_url }}">Monitoring and Alerting</a> - System monitoring
+- <a href="{{ '/rag/observability/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - Deployment and rollback
+- <a href="{{ '/rag/observability/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection
+- <a href="{{ '/rag/observability/development/error-handling-and-logging.html' | relative_url }}">Error Handling and Logging</a> - Error handling patterns
 

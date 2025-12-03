@@ -16,9 +16,9 @@ last_reviewed: "2025-01-XX"
 This guide covers environment strategy patterns for Salesforce, including org topologies for multi-team programs, data masking strategies, and sandbox refresh cadences. These patterns are essential for managing complex Salesforce implementations with multiple teams, compliance requirements, and efficient development workflows.
 
 **Related Patterns**:
-- [CI/CD Patterns](operations/cicd-patterns.html) - CI/CD and deployment automation
-- [Release Governance](operations/release-governance.html) - Release approval and risk management
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Data protection and compliance patterns
+- <a href="{{ '/rag/operations/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD and deployment automation
+- <a href="{{ '/rag/operations/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
+- <a href="{{ '/rag/operations/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection and compliance patterns
 
 ## Prerequisites
 
@@ -386,16 +386,16 @@ This guide covers environment strategy patterns for Salesforce, including org to
 ## Related Patterns
 
 **See Also**:
-- [CI/CD Patterns](operations/cicd-patterns.html) - CI/CD and deployment automation
-- [Release Governance](operations/release-governance.html) - Release approval and risk management
+- <a href="{{ '/rag/operations/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD and deployment automation
+- <a href="{{ '/rag/operations/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
 
 **Related Domains**:
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Data protection and compliance
-- [Org Strategy](architecture/org-strategy.html) - Multi-org vs single-org decisions
+- <a href="{{ '/rag/operations/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection and compliance
+- <a href="{{ '/rag/operations/architecture/org-strategy.html' | relative_url }}">Org Strategy</a> - Multi-org vs single-org decisions
 - [Sandbox Seeding](cicd-patterns.html#sandbox-seeding) - Test data management patterns
 
-- [CI/CD Patterns](operations/cicd-patterns.html) - CI/CD and deployment automation
-- [Release Governance](operations/release-governance.html) - Release approval and risk management
-- [Data Residency & Compliance](data-governance/data-residency-compliance.html) - Data protection and compliance
+- <a href="{{ '/rag/operations/operations/cicd-patterns.html' | relative_url }}">CI/CD Patterns</a> - CI/CD and deployment automation
+- <a href="{{ '/rag/operations/operations/release-governance.html' | relative_url }}">Release Governance</a> - Release approval and risk management
+- <a href="{{ '/rag/operations/data-governance/data-residency-compliance.html' | relative_url }}">Data Residency & Compliance</a> - Data protection and compliance
 - [Sandbox Seeding](/Salesforce-RAG/rag/operations/cicd-patterns.html#sandbox-seeding) - Test data management patterns
 

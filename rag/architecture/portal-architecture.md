@@ -457,11 +457,11 @@ Avoid portal architecture when:
 ## Related Patterns
 
 **See Also**:
-- [Multi-Tenant Identity Architecture](identity-sso/multi-tenant-identity-architecture.html) - Identity and SSO patterns for portals
-- [Sharing Sets and Portals](security/sharing-sets-and-portals.html) - Experience Cloud sharing patterns
+- <a href="{{ '/rag/architecture/identity-sso/multi-tenant-identity-architecture.html' | relative_url }}">Multi-Tenant Identity Architecture</a> - Identity and SSO patterns for portals
+- <a href="{{ '/rag/architecture/security/sharing-sets-and-portals.html' | relative_url }}">Sharing Sets and Portals</a> - Experience Cloud sharing patterns
 
 **Related Domains**:
-- [Mobile Strategy](architecture/mobile-strategy.html) - Mobile portal optimization
-- [LWC Patterns](development/lwc-patterns.html) - Custom component development for portals
-- [OmniStudio Patterns](development/omnistudio-patterns.html) - OmniStudio patterns for portals
+- <a href="{{ '/rag/architecture/architecture/mobile-strategy.html' | relative_url }}">Mobile Strategy</a> - Mobile portal optimization
+- <a href="{{ '/rag/architecture/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Custom component development for portals
+- <a href="{{ '/rag/architecture/development/omnistudio-patterns.html' | relative_url }}">OmniStudio Patterns</a> - OmniStudio patterns for portals
 

@@ -140,12 +140,12 @@ git push
 
 ### Internal Links
 
-1. **Relative Paths Required**: Use **relative paths** in markdown files (e.g., `adoption/org-health-checks.html`)
-   - **IMPORTANT**: Jekyll's kramdown does NOT apply baseurl to absolute paths in markdown links
-   - ✅ Correct: `adoption/org-health-checks.html` (relative path)
-   - ✅ Correct: `../project-methods/delivery-framework.html` (relative with parent)
-   - ❌ Wrong: `/rag/adoption/org-health-checks.html` (absolute path - won't work with baseurl)
-   - ❌ Wrong: `rag/adoption/org-health-checks.html` (absolute path without leading / - still wrong)
+1. **HTML Links with Jekyll Filters Required**: Use **HTML links with `relative_url` filter** in markdown files
+   - **CRITICAL**: Jekyll's kramdown does NOT apply baseurl to markdown links (neither absolute nor relative)
+   - ✅ Correct: `<a href="{{ '/rag/adoption/org-health-checks.html' | relative_url }}">text</a>` (HTML with filter)
+   - ❌ Wrong: `[text](adoption/org-health-checks.html)` (markdown link - won't work with baseurl)
+   - ❌ Wrong: `[text](/rag/adoption/org-health-checks.html)` (markdown absolute - won't work)
+   - **Solution**: All internal links must use HTML format with Jekyll's `relative_url` filter
 2. **HTML Extension**: Always use `.html` extension (not `.md`)
 3. **Baseurl Handling**: Jekyll automatically resolves relative paths with baseurl correctly
 4. **Anchor Links**: Use lowercase with hyphens for section anchors (e.g., `#adoption`, `#architecture-patterns`)
@@ -157,11 +157,12 @@ git push
 
 ### In rag-index.md
 
-1. **Relative Paths Required**: All links must use **relative paths** (rag-index.md is in rag/ folder)
-   - ✅ Correct: `adoption/org-health-checks.html` (relative from rag-index.md location)
-   - ✅ Correct: `api-reference/apex-api-reference.html` (relative path)
-   - ❌ Wrong: `/rag/adoption/org-health-checks.html` (absolute path - kramdown doesn't apply baseurl)
-   - ❌ Wrong: `rag/adoption/org-health-checks.html` (absolute path without leading /)
+1. **HTML Links with Jekyll Filters Required**: All links must use **HTML format with `relative_url` filter**
+   - ✅ Correct: `<a href="{{ '/rag/adoption/org-health-checks.html' | relative_url }}">org-health-checks.md</a>`
+   - ✅ Correct: `<a href="{{ '/rag/api-reference/apex-api-reference.html' | relative_url }}">apex-api-reference.md</a>`
+   - ❌ Wrong: `[text](adoption/org-health-checks.html)` (markdown link - baseurl not applied)
+   - ❌ Wrong: `[text](/rag/adoption/org-health-checks.html)` (markdown absolute - baseurl not applied)
+   - **Why**: Jekyll's kramdown markdown processor does NOT apply baseurl to any markdown links
 2. **HTML Extension**: Always use `.html` extension (Jekyll converts `.md` to `.html`)
 3. **Anchor Links**: Section headings automatically get anchor IDs
    - Format: Section name → lowercase with hyphens

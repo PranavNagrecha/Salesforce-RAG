@@ -101,8 +101,8 @@ force-app/main/default/
 ## Integration with Existing RAG
 
 **Related Patterns**:
-- [LWC Patterns](development/lwc-patterns.html) - Complements with MCP-validated practices
-- [Apex Patterns](development/apex-patterns.html) - Related backend patterns
+- <a href="{{ '/rag/mcp-knowledge/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complements with MCP-validated practices
+- <a href="{{ '/rag/mcp-knowledge/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Related backend patterns
 - [Security Patterns](../security) - Security considerations
 
 **How This Complements Existing RAG**:

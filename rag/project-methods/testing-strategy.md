@@ -407,8 +407,8 @@ Avoid this strategy when:
 
 ## Related Patterns
 
-- [Apex Testing Patterns](testing/apex-testing-patterns.html) - Apex test class patterns
-- [Test Data Factories](testing/test-data-factories.html) - Test data factory patterns
-- [Automated Testing Patterns](testing/automated-testing-patterns.html) - Automated testing approaches
-- [Delivery Framework](project-methods/delivery-framework.html) - Project delivery methodology
+- <a href="{{ '/rag/project-methods/testing/apex-testing-patterns.html' | relative_url }}">Apex Testing Patterns</a> - Apex test class patterns
+- <a href="{{ '/rag/project-methods/testing/test-data-factories.html' | relative_url }}">Test Data Factories</a> - Test data factory patterns
+- <a href="{{ '/rag/project-methods/testing/automated-testing-patterns.html' | relative_url }}">Automated Testing Patterns</a> - Automated testing approaches
+- <a href="{{ '/rag/project-methods/project-methods/delivery-framework.html' | relative_url }}">Delivery Framework</a> - Project delivery methodology
 

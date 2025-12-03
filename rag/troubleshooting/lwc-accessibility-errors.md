@@ -19,9 +19,9 @@ last_reviewed: "2025-01-XX"
 This guide provides solutions for common LWC accessibility errors encountered during Salesforce development, including error messages, causes, solutions, and prevention strategies. All solutions follow WCAG 2.2 standards.
 
 **Related Patterns**:
-- [LWC Accessibility Guidelines](mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](code-examples/lwc/accessibility-examples.html) - Accessibility code examples
-- [LWC Accessibility Testing](testing/lwc-accessibility-testing.html) - Testing patterns
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
+- <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 
 ## Prerequisites
 
@@ -902,15 +902,15 @@ handleClose() {
 ## Related Patterns
 
 **See Also**:
-- [Common LWC Errors](troubleshooting/common-lwc-errors.html) - General LWC troubleshooting
+- <a href="{{ '/rag/troubleshooting/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
 
 **Related Domains**:
-- [LWC Accessibility Guidelines](mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](code-examples/lwc/accessibility-examples.html) - Accessibility code examples
-- [LWC Accessibility Testing](testing/lwc-accessibility-testing.html) - Testing patterns
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
+- <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
 
-- [LWC Accessibility Guidelines](mcp-knowledge/lwc-accessibility.html) - WCAG 2.2 compliance guidance
-- [LWC Accessibility Examples](code-examples/lwc/accessibility-examples.html) - Accessibility code examples
-- [LWC Accessibility Testing](testing/lwc-accessibility-testing.html) - Testing patterns
-- [Common LWC Errors](troubleshooting/common-lwc-errors.html) - General LWC troubleshooting
+- <a href="{{ '/rag/troubleshooting/mcp-knowledge/lwc-accessibility.html' | relative_url }}">LWC Accessibility Guidelines</a> - WCAG 2.2 compliance guidance
+- <a href="{{ '/rag/troubleshooting/code-examples/lwc/accessibility-examples.html' | relative_url }}">LWC Accessibility Examples</a> - Accessibility code examples
+- <a href="{{ '/rag/troubleshooting/testing/lwc-accessibility-testing.html' | relative_url }}">LWC Accessibility Testing</a> - Testing patterns
+- <a href="{{ '/rag/troubleshooting/troubleshooting/common-lwc-errors.html' | relative_url }}">Common LWC Errors</a> - General LWC troubleshooting
 

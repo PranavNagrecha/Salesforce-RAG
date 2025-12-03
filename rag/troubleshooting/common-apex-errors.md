@@ -129,7 +129,7 @@ public static void processContactsInBatches() {
 - Avoid long-running transactions
 - Use Platform Events for decoupled processing
 
-**Related Patterns**: [Locking and Concurrency](development/locking-and-concurrency-strategies.html)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency</a>
 
 ---
 
@@ -320,7 +320,7 @@ if (fields.containsKey('CustomField__c')) {
 - Use `WITH SECURITY_ENFORCED` to catch FLS issues
 - Test queries in developer console first
 
-**Related Patterns**: [SOQL Patterns](development/soql-query-patterns.html), [LDS Referential Integrity](mcp-knowledge/lds-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/soql-query-patterns.html' | relative_url }}">SOQL Patterns</a>, <a href="{{ '/rag/troubleshooting/mcp-knowledge/lds-patterns.html' | relative_url }}">LDS Referential Integrity</a>
 
 ---
 
@@ -450,7 +450,7 @@ List<Contact> contacts = [
 - Use relationship queries when possible
 - Monitor governor limits proactively
 
-**Related Patterns**: [Governor Limits](development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
 
 ---
 
@@ -512,7 +512,7 @@ public class ContactUpdateBatch implements Database.Batchable<SObject> {
 - Use batch processing for large datasets
 - Process collections, not single records
 
-**Related Patterns**: [Governor Limits](development/governor-limits-and-optimization.html), [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
+**Related Patterns**: <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a>, [Apex Patterns](/Salesforce-RAG/rag/development/apex-patterns.html#bulkification)
 
 ---
 
@@ -694,16 +694,16 @@ public class CalloutQueueable implements Queueable, Database.AllowsCallouts {
 ## Related Patterns
 
 **See Also**:
-- [Governor Limit Errors](troubleshooting/governor-limit-errors.html) - Governor limit-specific errors
+- <a href="{{ '/rag/troubleshooting/troubleshooting/governor-limit-errors.html' | relative_url }}">Governor Limit Errors</a> - Governor limit-specific errors
 
 **Related Domains**:
-- [Locking and Concurrency](development/locking-and-concurrency-strategies.html) - Row locking patterns
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
-- [Governor Limits](development/governor-limits-and-optimization.html) - Limit management
-- [Apex Patterns](development/apex-patterns.html) - Apex best practices
+- <a href="{{ '/rag/troubleshooting/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency</a> - Row locking patterns
+- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a> - Limit management
+- <a href="{{ '/rag/troubleshooting/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
 
-- [Locking and Concurrency](development/locking-and-concurrency-strategies.html) - Row locking patterns
-- [Error Handling](development/error-handling-and-logging.html) - Error handling patterns
-- [Governor Limits](development/governor-limits-and-optimization.html) - Limit management
-- [Apex Patterns](development/apex-patterns.html) - Apex best practices
+- <a href="{{ '/rag/troubleshooting/development/locking-and-concurrency-strategies.html' | relative_url }}">Locking and Concurrency</a> - Row locking patterns
+- <a href="{{ '/rag/troubleshooting/development/error-handling-and-logging.html' | relative_url }}">Error Handling</a> - Error handling patterns
+- <a href="{{ '/rag/troubleshooting/development/governor-limits-and-optimization.html' | relative_url }}">Governor Limits</a> - Limit management
+- <a href="{{ '/rag/troubleshooting/development/apex-patterns.html' | relative_url }}">Apex Patterns</a> - Apex best practices
 

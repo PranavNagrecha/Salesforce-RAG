@@ -8,7 +8,7 @@
 Data migration involves importing, transforming, and validating data in Salesforce. These examples cover common migration scenarios and patterns.
 
 **Related Patterns**:
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html)
+- <a href="{{ '/rag/code-examples/utilities/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a>
 
 ## Examples
 
@@ -123,5 +123,5 @@ public class DataMigrationService {
 
 ## Related Patterns
 
-- [Data Migration Patterns](data-modeling/data-migration-patterns.html) - Complete migration guide
+- <a href="{{ '/rag/code-examples/utilities/data-modeling/data-migration-patterns.html' | relative_url }}">Data Migration Patterns</a> - Complete migration guide
 

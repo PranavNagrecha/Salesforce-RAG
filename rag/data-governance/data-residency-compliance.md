@@ -18,9 +18,9 @@ last_reviewed: "2025-01-XX"
 This guide covers data residency and compliance patterns for Salesforce, including PII/PHI handling, GDPR/CCPA/SOC2 controls, field-level encryption, and Shield best practices. These patterns are essential for ensuring data protection, regulatory compliance, and maintaining customer trust.
 
 **Related Patterns**:
-- [Salesforce LLM Data Governance](security/salesforce-llm-data-governance.html) - Data governance for LLM systems
-- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
-- [Environment Strategy](operations/environment-strategy.html) - Data masking patterns
+- <a href="{{ '/rag/data-governance/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
+- <a href="{{ '/rag/data-governance/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
+- <a href="{{ '/rag/data-governance/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
 
 ## Consensus Best Practices
 
@@ -368,8 +368,8 @@ This guide covers data residency and compliance patterns for Salesforce, includi
 
 ## Related Patterns
 
-- [Salesforce LLM Data Governance](security/salesforce-llm-data-governance.html) - Data governance for LLM systems
-- [Permission Set Architecture](security/permission-set-architecture.html) - Access control patterns
-- [Environment Strategy](operations/environment-strategy.html) - Data masking patterns
-- [Data Quality & Stewardship](data-governance/data-quality-stewardship.html) - Data quality patterns
+- <a href="{{ '/rag/data-governance/security/salesforce-llm-data-governance.html' | relative_url }}">Salesforce LLM Data Governance</a> - Data governance for LLM systems
+- <a href="{{ '/rag/data-governance/security/permission-set-architecture.html' | relative_url }}">Permission Set Architecture</a> - Access control patterns
+- <a href="{{ '/rag/data-governance/operations/environment-strategy.html' | relative_url }}">Environment Strategy</a> - Data masking patterns
+- <a href="{{ '/rag/data-governance/data-governance/data-quality-stewardship.html' | relative_url }}">Data Quality & Stewardship</a> - Data quality patterns
 

@@ -19,8 +19,8 @@ last_reviewed: "2025-01-XX"
 LWC service layer patterns provide reusable utility functions for common operations like data transformation, validation, formatting, and business logic. Service classes help keep component JavaScript clean and maintainable.
 
 **Related Patterns**:
-- [LWC Patterns](code-examples/development/lwc-patterns.html) - LWC development patterns and best practices
-- [LWC API Reference](code-examples/api-reference/lwc-api-reference.html) - LWC API method signatures
+- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - LWC development patterns and best practices
+- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - LWC API method signatures
 
 ## Examples
 
@@ -147,7 +147,7 @@ export default class ContactDisplay extends LightningElement {
 **Pattern**: Utility service for data validation
 **Use Case**: Validating user input before submission
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](code-examples/development/lwc-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to validate user input consistently across multiple components.
@@ -336,7 +336,7 @@ export default class ContactForm extends LightningElement {
 **Pattern**: Utility service for data transformation
 **Use Case**: Transforming data between formats (e.g., API response to component data)
 **Complexity**: Intermediate
-**Related Patterns**: [LWC Patterns](code-examples/development/lwc-patterns.html)
+**Related Patterns**: <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a>
 
 **Problem**:
 You need to transform data from Apex responses or API calls into formats suitable for component display.
@@ -507,12 +507,12 @@ export default class ContactList extends LightningElement {
 
 ## Related Examples
 
-- [Component Examples](code-examples/lwc/component-examples.html) - LWC component implementations
-- [Wire Examples](code-examples/lwc/wire-examples.html) - Wire service patterns
-- [Apex Service Layer Examples](code-examples/apex/service-layer-examples.html) - Apex service methods
+- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/component-examples.html' | relative_url }}">Component Examples</a> - LWC component implementations
+- <a href="{{ '/rag/code-examples/lwc/code-examples/lwc/wire-examples.html' | relative_url }}">Wire Examples</a> - Wire service patterns
+- <a href="{{ '/rag/code-examples/lwc/code-examples/apex/service-layer-examples.html' | relative_url }}">Apex Service Layer Examples</a> - Apex service methods
 
 ## See Also
 
-- [LWC Patterns](code-examples/development/lwc-patterns.html) - Complete LWC development patterns
-- [LWC Best Practices](code-examples/mcp-knowledge/lwc-best-practices.html) - Official LWC best practices
-- [LWC API Reference](code-examples/api-reference/lwc-api-reference.html) - Complete LWC API reference
+- <a href="{{ '/rag/code-examples/lwc/code-examples/development/lwc-patterns.html' | relative_url }}">LWC Patterns</a> - Complete LWC development patterns
+- <a href="{{ '/rag/code-examples/lwc/code-examples/mcp-knowledge/lwc-best-practices.html' | relative_url }}">LWC Best Practices</a> - Official LWC best practices
+- <a href="{{ '/rag/code-examples/lwc/code-examples/api-reference/lwc-api-reference.html' | relative_url }}">LWC API Reference</a> - Complete LWC API reference
