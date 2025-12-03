@@ -42,7 +42,14 @@ def fix_duplicate_directory_pattern(content: str, file_path: Path) -> tuple[str,
     modified = False
     new_content = content
     
-    # Pattern: /rag/folder/folder/file.html
+    # First, fix the specific /rag/rag/ pattern (most common issue)
+    # Pattern: /rag/rag/... should be /rag/...
+    rag_duplicate_pattern = r'/rag/rag/'
+    if re.search(rag_duplicate_pattern, new_content):
+        new_content = re.sub(rag_duplicate_pattern, '/rag/', new_content)
+        modified = True
+    
+    # Pattern: /rag/folder/folder/file.html (for other duplicate subdirectories)
     pattern = r'/rag/([^/]+)/\1/'
     
     def replace_duplicate(match):
@@ -333,9 +340,7 @@ def main():
         total_files = 0
         
         for md_file in RAG_DIR.rglob("*.md"):
-            if md_file.name == "rag-index.md":
-                continue
-            
+            # Include rag-index.md in fixes (it has the most broken links)
             total_files += 1
             result = fix_file(md_file, dry_run)
             
